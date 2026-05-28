@@ -1,0 +1,27 @@
+name: Tool compatibility
+description: Report or suggest tool-specific instruction support
+title: "Tool compatibility: "
+labels: [compatibility]
+body:
+  - type: input
+    id: tool
+    attributes:
+      label: Tool name
+      placeholder: Claude Code, Codex, Cursor, Windsurf, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Observed or documented behavior
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: Link official docs or a maintained public repository if available.
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed change

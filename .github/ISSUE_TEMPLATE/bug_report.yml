@@ -1,0 +1,27 @@
+name: Bug report
+description: Report a problem in the standard, templates, docs or examples
+title: "Bug: "
+labels: [bug]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is wrong or unclear?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: affected
+    attributes:
+      label: Affected files
+      description: List files or sections if known.
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context

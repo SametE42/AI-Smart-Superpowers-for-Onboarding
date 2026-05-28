@@ -1,0 +1,18 @@
+# Validation Report
+
+Status: **PASS**
+
+## Summary
+
+- total_files: 19493
+- markdown_files: 19486
+- language_folders: 75
+- languages_alphabetically_sorted: True
+- english_source_markdown_files: 259
+- missing_mirrored_ai_files: 0
+- broken_local_markdown_links: 0
+- markdown_files_without_h1: 0
+- empty_files: 0
+- directories_without_readme: 0
+- legacy_ai_links: 0
+- blocking_placeholder_files: 0

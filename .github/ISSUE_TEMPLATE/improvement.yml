@@ -1,0 +1,27 @@
+name: Improvement
+description: Suggest a focused improvement
+title: "Improvement: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should change?
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason
+      description: What risk, repeated failure or usability problem does this solve?
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Anti-bloat checks
+      options:
+        - label: This is not a generic best practice.
+        - label: This does not duplicate existing content.
+        - label: This has a concrete use case.
