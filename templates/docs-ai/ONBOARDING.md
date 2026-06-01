@@ -10,40 +10,40 @@
 
 | Purpose | Command | When to run | Expected result |
 |---|---|---|---|
-| Runtime / package manager | `[UNBEKANNT]` | Project analysis | Basis for setup and run commands |
-| Install dependencies | `[UNBEKANNT]` | After clone | Dependencies installed |
-| Start dev server | `[UNBEKANNT]` | Local development | App/API runs locally |
-| Run tests | `[UNBEKANNT]` | Before PR | Tests pass |
-| Run linting | `[UNBEKANNT]` | Before commit | No lint errors |
-| Check build | `[UNBEKANNT]` | Before merge/release | Build succeeds |
-| Full check | `[UNBEKANNT]` | Before release | Required checks pass |
+| Runtime / package manager | `[UNKNOWN]` | Project analysis | Basis for setup and run commands |
+| Install dependencies | `[UNKNOWN]` | After clone | Dependencies installed |
+| Start dev server | `[UNKNOWN]` | Local development | App/API runs locally |
+| Run tests | `[UNKNOWN]` | Before PR | Tests pass |
+| Run linting | `[UNKNOWN]` | Before commit | No lint errors |
+| Check build | `[UNKNOWN]` | Before merge/release | Build succeeds |
+| Full check | `[UNKNOWN]` | Before release | Required checks pass |
 
 ## Requirements
 
-- `[UNBEKANNT]`
+- `[UNKNOWN]`
 
 ## Setup
 
 ```bash
-[UNBEKANNT]
+[UNKNOWN]
 ```
 
 ## Local start
 
 ```bash
-[UNBEKANNT]
+[UNKNOWN]
 ```
 
 ## Tests
 
 ```bash
-[UNBEKANNT]
+[UNKNOWN]
 ```
 
 ## Build
 
 ```bash
-[UNBEKANNT]
+[UNKNOWN]
 ```
 
 ## Before first commit
@@ -57,7 +57,7 @@
 
 ## First useful tasks for new contributors
 
-- `[UNBEKANNT]`
+- `[UNKNOWN]`
 
 ## Recommended reading order
 

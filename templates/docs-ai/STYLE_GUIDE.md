@@ -8,25 +8,25 @@
 
 ## Language
 
-- Documentation language: `[UNBEKANNT]`
-- UI language: `[UNBEKANNT]`
-- Code identifiers: `[UNBEKANNT]`
-- Comments: `[UNBEKANNT]`
+- Documentation language: `[UNKNOWN]`
+- UI language: `[UNKNOWN]`
+- Code identifiers: `[UNKNOWN]`
+- Comments: `[UNKNOWN]`
 
 ## File naming and structure
 
 | Type | Convention |
 |---|---|
-| Components | `[UNBEKANNT]` |
-| Pages/routes | `[UNBEKANNT]` |
-| Tests | `[UNBEKANNT]` |
-| Types | `[UNBEKANNT]` |
-| Services | `[UNBEKANNT]` |
-| Repositories | `[UNBEKANNT]` |
+| Components | `[UNKNOWN]` |
+| Pages/routes | `[UNKNOWN]` |
+| Tests | `[UNKNOWN]` |
+| Types | `[UNKNOWN]` |
+| Services | `[UNKNOWN]` |
+| Repositories | `[UNKNOWN]` |
 
 ## Layer rules
 
-- `[UNBEKANNT]`
+- `[UNKNOWN]`
 
 ## UI rules
 
@@ -39,7 +39,7 @@
 ## Domain and validation rules
 
 - Do not implement domain rules without source evidence.
-- Missing rules must be represented as `[UNBEKANNT]`, warning, blocker or `not-configured`.
+- Missing rules must be represented as `[UNKNOWN]`, warning, blocker or `not-configured`.
 - Centralize validation where possible.
 - Document field, code and severity if the local contract requires it.
 

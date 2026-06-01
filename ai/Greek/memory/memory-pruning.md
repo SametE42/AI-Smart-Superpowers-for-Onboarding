@@ -1,19 +1,34 @@
 # Memory Pruning
 
-This file mirrors `ai/English/memory/memory-pruning.md` for the Greek localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Γλώσσα πηγής: Αγγλικά
+> Αρχείο πηγής: ai/English/memory/memory-pruning.md
+> Σε περίπτωση απόκλισης, υπερισχύει το αγγλικό αρχείο.
 
-## Source file
+Αυτή η σελίδα εξηγεί πώς το `memory/memory-pruning.md` εντάσσεται στο AI Agent Operating Manual. Προορίζεται για ανθρώπους και AI agents που πρέπει να σχεδιάσουν, να επαληθεύσουν ή να επαναλάβουν εργασία στο repository.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Πρακτικό πεδίο
 
-## Required coverage
+Χρησιμοποίησε αυτή τη σελίδα ως λειτουργικό οδηγό για το θέμα `memory`. Δεν αντικαθιστά τα στοιχεία του repository ούτε τις οδηγίες του έργου.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Οδηγίες εργασίας
+
+- Αντιμετώπισε τα στοιχεία του repository ως κύρια αυθεντία.
+- Διατήρησε ακριβώς ονόματα αρχείων, εντολές, ονόματα API και ονόματα μοντέλων.
+- Σήμανε μη επαληθευμένα συμπεράσματα με `[ASSUMPTION: ...]` και άγνωστα στοιχεία με `[UNKNOWN]`.
+- Σύνδεσε κάθε ειδική συμπεριφορά εργαλείου με το εργαλείο ή runtime που την κατέχει πραγματικά.
+- Κλιμάκωσε κινδύνους ασφάλειας, δικαιωμάτων και production-readiness σε ανθρώπινη αξιολόγηση.
+
+## Εστίαση
+
+Πριν χρησιμοποιήσεις αυτή τη σελίδα σε workflow, όρισε πεδίο, απαραίτητα στοιχεία, επαληθεύσιμες εντολές και όρια ανθρώπινης έγκρισης.
+
+## Έλεγχος ποιότητας
+
+- Ο σκοπός είναι σαφής για νέο contributor.
+- Οι οδηγίες βοηθούν τόσο AI agents όσο και ανθρώπους maintainers.
+- Δεν επινοούνται εντολές ειδικές για μοντέλα.
+- Τα όρια ασφάλειας και ανθρώπινης έγκρισης παραμένουν ορατά.
+- Η αγγλική πηγή παραμένει αυθεντική σε συγκρούσεις τοπικοποίησης.

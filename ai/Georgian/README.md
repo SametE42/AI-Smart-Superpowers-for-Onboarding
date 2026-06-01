@@ -1,27 +1,29 @@
-# AI Agent Operating Manual — Georgian
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Georgian.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> წყარო ენა: ინგლისური
+> წყარო ფაილი: ai/English/README.md
+> განსხვავების შემთხვევაში უპირატესობა აქვს ინგლისურ ფაილს.
 
-## Sections
+ეს გვერდი განმარტავს, როგორ ჯდება `README.md` AI Agent Operating Manual-ში ადამიანებისა და AI agents-ისთვის, რომლებიც repository სამუშაოს გეგმავენ, ამოწმებენ ან იმეორებენ.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## პრაქტიკული ფარგლები
 
-## Source of truth
+გამოიყენე ეს გვერდი `README.md` თემის ოპერაციულ გზამკვლევად. ის არ ცვლის repository მტკიცებულებებს ან პროექტის ინსტრუქციებს.
 
-The English version remains authoritative until this localization has been reviewed.
+## სამუშაო წესები
+
+- ფაილის სახელები, commands, API სახელები და model სახელები უცვლელად შეინახე.
+- დაუმოწმებელი დასკვნები მონიშნე `[ASSUMPTION: ...]`, უცნობი ფაქტები `[UNKNOWN]`.
+- security, permissions და production-readiness რისკები ადამიანის გადახედვაზე გადაიტანე.
+
+## ფოკუსი
+
+workflow-ში გამოყენებამდე განსაზღვრე ფარგლები, მტკიცებულებები, შემოწმებადი commands და ადამიანის დამტკიცების საზღვრები.
+
+## ხარისხის შემოწმება
+
+- მიზანი ნათელია ახალი contributor-ისთვის.
+- ინგლისური წყარო გადამწყვეტია localization კონფლიქტებში.

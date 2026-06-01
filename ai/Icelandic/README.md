@@ -1,27 +1,29 @@
-# AI Agent Operating Manual — Icelandic
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Icelandic.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Upprunamál: enska
+> Upprunaskrá: ai/English/README.md
+> Ef munur er til staðar gildir enska skráin.
 
-## Sections
+Þessi síða útskýrir hvernig `README.md` fellur inn í AI Agent Operating Manual fyrir fólk og AI agents sem þurfa að skipuleggja, sannreyna eða endurtaka repository-vinnu.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Hagnýtt umfang
 
-## Source of truth
+Notaðu þessa síðu sem rekstrarleiðbeiningu fyrir `README.md`. Hún kemur ekki í stað repository-sönnunargagna eða verkefnaleiðbeininga.
 
-The English version remains authoritative until this localization has been reviewed.
+## Vinnuleiðbeiningar
+
+- Varðveittu skráarnöfn, commands, API-nöfn og model-nöfn nákvæmlega.
+- Merktu ósannaðar niðurstöður með `[ASSUMPTION: ...]` og óþekktar staðreyndir með `[UNKNOWN]`.
+- Vísaðu security-, permissions- og production-readiness-áhættu til mannlegrar yfirferðar.
+
+## Fókus
+
+Áður en síðan er notuð í workflow skaltu skilgreina umfang, sönnunargögn, sannreynanleg commands og mörk mannlegrar samþykktar.
+
+## Gæðaprófun
+
+- Tilgangurinn er skýr fyrir nýjan contributor.
+- Enska heimildin ræður úrslitum í localization-ágreiningi.

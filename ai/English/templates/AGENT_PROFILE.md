@@ -1,26 +1,27 @@
-# Agent Profile
+# Agent_profile
 
-Use this template as a reusable artifact in the AI Agent Operating Manual.
+Step-by-step procedures for real agent work such as onboarding, review and translation.
 
-## Purpose
+## Practical Scope
 
-Describe what this artifact is for.
+This page explains how `templates/AGENT_PROFILE.md` fits into the AI Agent Operating Manual. Use it when an agent or maintainer needs repeatable guidance for this topic without loading the entire repository.
 
-## Inputs
+## Operating Guidance
 
-- Context
-- Constraints
-- Target output
-- Quality criteria
+- Treat repository evidence as authoritative and documentation as secondary.
+- Preserve file names, commands, API names and model names exactly.
+- Mark unverified conclusions as `[ASSUMPTION: ...]` and unknown facts as `[UNKNOWN]`.
+- Keep tool-specific behavior tied to the runtime that actually owns it.
+- Escalate security, permission and production-readiness risks to human review.
 
-## Output format
+## Focus
 
-Define the expected Markdown, JSON or checklist format.
+Step-by-step procedures for real agent work such as onboarding, review and translation.
 
-## Quality checklist
+## Quality Checklist
 
-- Clear scope
-- Reusable structure
-- Testable result
-- Safety notes included
-- Version and owner documented
+- The purpose is clear to a new repository user.
+- The guidance is useful for both AI agents and human maintainers.
+- No model-specific commands are invented unless they belong to the host tool.
+- Safety and human-approval boundaries remain visible.
+- English remains the authoritative source for localization.

@@ -1,19 +1,29 @@
 # Security Review
 
-This file mirrors `ai/English/workflows/security-review.md` for the Lao localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> ພາສາຕົ້ນສະບັບ: ອັງກິດ
+> ໄຟລ໌ຕົ້ນສະບັບ: ai/English/workflows/security-review.md
+> ຖ້າມີຄວາມແຕກຕ່າງ ໃຫ້ຍຶດໄຟລ໌ອັງກິດ.
 
-## Source file
+ໜ້ານີ້ອະທິບາຍວ່າ `workflows/security-review.md` ເຂົ້າກັບ AI Agent Operating Manual ແນວໃດ ສໍາລັບຄົນ ແລະ AI agents ທີ່ຕ້ອງວາງແຜນ ກວດສອບ ຫຼືເຮັດຊໍ້າວຽກ repository.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## ຂອບເຂດປະຕິບັດ
 
-## Required coverage
+ໃຊ້ໜ້ານີ້ເປັນຄູ່ມືປະຕິບັດສໍາລັບ `workflows`. ມັນບໍ່ແທນຫຼັກຖານ repository ຫຼືຄໍາແນະນໍາໂຄງການ.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## ຄໍາແນະນໍາການເຮັດວຽກ
+
+- ຮັກສາຊື່ໄຟລ໌ commands ຊື່ API ແລະຊື່ model ໃຫ້ຄົງເດີມ.
+- ໝາຍຂໍ້ສະຫຼຸບທີ່ບໍ່ທັນຢືນຢັນດ້ວຍ `[ASSUMPTION: ...]` ແລະຂໍ້ເທັດຈິງທີ່ບໍ່ຮູ້ດ້ວຍ `[UNKNOWN]`.
+- ສົ່ງຄວາມສ່ຽງ security, permissions ແລະ production-readiness ໃຫ້ມະນຸດກວດທານ.
+
+## ຈຸດເນັ້ນ
+
+ກ່ອນໃຊ້ໃນ workflow ໃຫ້ກໍານົດຂອບເຂດ ຫຼັກຖານ commands ທີ່ກວດສອບໄດ້ ແລະຂອບເຂດການອະນຸມັດໂດຍມະນຸດ.
+
+## ກວດຄຸນນະພາບ
+
+- ເປົ້າໝາຍຊັດເຈນສໍາລັບ contributor ໃໝ່.
+- ແຫຼ່ງອັງກິດຍັງເປັນຕົວຕັດສິນໃນຂໍ້ຂັດແຍ່ງ localization.

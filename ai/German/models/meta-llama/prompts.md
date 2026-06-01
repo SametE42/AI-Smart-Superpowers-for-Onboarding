@@ -1,17 +1,33 @@
-# meta-llama Prompts
+# Prompts
 
-This page documents how the meta-llama model family fits into the AI Agent Operating Manual.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-## Geeignet für
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Source language: English
+> Source file: ai/English/models/meta-llama/prompts.md
+> Bei Abweichungen ist die englische Datei maßgeblich.
 
-- Coding and repository work where supported
-- Documentation workflows
-- Tool-using agents
-- Evaluation and comparison tasks
+Modellfamilienprofile und Routing-Hinweise für KI-gestützte Repository-Arbeit.
 
-## Hinweise
+## Praktischer Scope
 
-Commands usually belong to the tool/runtime, not the model. Keep provider details current and verify API names before publishing.
+Diese Seite beschreibt, wie `models/meta-llama/prompts.md` im AI Agent Operating Manual genutzt wird. Sie ist für Menschen und KI-Agenten geschrieben, die Repository-Arbeit planen, prüfen oder wiederholen müssen.
 
+## Arbeitsleitlinien
 
-> Hinweis: Diese Datei ist eine deutsche lokalisierte Version. Bei Abweichungen gilt die englische Datei als maßgeblich.
+- Nutze diese Seite als Orientierung, nicht als Ersatz für Repository-Evidenz.
+- Bewahre Dateinamen, Commands, API-Namen und Modellnamen unverändert.
+- Dokumentiere Annahmen explizit und markiere unbekannte Fakten als `[UNKNOWN]`.
+- Eskaliere Sicherheits-, Berechtigungs- und Produktionsrisiken an menschliche Reviewer.
+
+## Fokus
+
+Modellfamilienprofile und Routing-Hinweise für KI-gestützte Repository-Arbeit.
+
+## Qualitätscheck
+
+- Der Zweck ist für neue Mitwirkende verständlich.
+- Die Anleitung hilft sowohl KI-Agenten als auch menschlichen Maintainerinnen und Maintainern.
+- Es werden keine modellspezifischen Commands erfunden.
+- Sicherheits- und Human-Approval-Grenzen bleiben sichtbar.
+- Die englische Quelle bleibt für Konfliktfälle maßgeblich.

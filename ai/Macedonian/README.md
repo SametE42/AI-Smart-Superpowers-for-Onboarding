@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Macedonian
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Macedonian.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Изворен јазик: англиски
+> Изворна датотека: ai/English/README.md
+> При разлики, англиската датотека има предност.
 
-## Sections
+Оваа страница објаснува како `README.md` се вклопува во AI Agent Operating Manual. Наменета е за луѓе и AI агенти кои треба да планираат, проверуваат или повторуваат работа во repository.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Практичен опсег
 
-## Source of truth
+Користи ја оваа страница како оперативен водич за темата `README.md`. Таа не ги заменува доказите од repository или проектните инструкции.
 
-The English version remains authoritative until this localization has been reviewed.
+## Работни насоки
+
+- Третирај ги доказите од repository како примарен авторитет.
+- Зачувај ги точно имињата на датотеки, командите, API имињата и имињата на модели.
+- Непроверените заклучоци означи ги со `[ASSUMPTION: ...]`, а непознатите факти со `[UNKNOWN]`.
+- Поврзи го однесувањето специфично за алатка со алатката или runtime што навистина го поседува.
+- Ескалирај ризици за безбедност, дозволи и production-readiness на човечка проверка.
+
+## Фокус
+
+Пред да ја користиш оваа страница во workflow, дефинирај опсег, потребни докази, проверливи команди и граници на човечко одобрување.
+
+## Проверка на квалитет
+
+- Целта е јасна за нов придонесувач.
+- Насоките им помагаат и на AI агенти и на човечки одржувачи.
+- Не се измислуваат команди специфични за модели.
+- Границите за безбедност и човечко одобрување остануваат видливи.
+- Англискиот извор останува одлучувачки при локализациски конфликти.

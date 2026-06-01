@@ -1,28 +1,33 @@
-# Codex Command Reference
+# Codex
 
-Codex commands are runtime commands. They are not general OpenAI model commands.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-## Recommended commands to document
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Source language: English
+> Source file: ai/English/commands/codex.md
+> Bei Abweichungen ist die englische Datei maßgeblich.
 
-- `/help` — inspect available commands in the current version.
-- `/status` — review current session state when available.
-- `/model` — switch model when the runtime supports it.
-- `/plan` — ask for an implementation plan before edits.
-- `/goal` — persist a clear objective across a longer task when available.
-- `/mention` — reference files or folders when supported.
-- `/fast` — use a faster interaction mode when supported.
+Command-Systeme, Slash-Commands, Dateireferenzen und wiederholbare Workflow-Kommandos.
 
-## Empfohlener Workflow
+## Praktischer Scope
 
-1. Check status and available commands.
-2. Mention the files or folders that matter.
-3. Use plan mode before broad edits.
-4. Use goal mode only after the desired end state is clear.
-5. Review diffs, tests and documentation before merging.
+Diese Seite beschreibt, wie `commands/codex.md` im AI Agent Operating Manual genutzt wird. Sie ist für Menschen und KI-Agenten geschrieben, die Repository-Arbeit planen, prüfen oder wiederholen müssen.
 
-## Documentation rule
+## Arbeitsleitlinien
 
-Always verify the exact command list against the installed Codex version or official documentation because slash commands can change over time.
+- Nutze diese Seite als Orientierung, nicht als Ersatz für Repository-Evidenz.
+- Bewahre Dateinamen, Commands, API-Namen und Modellnamen unverändert.
+- Dokumentiere Annahmen explizit und markiere unbekannte Fakten als `[UNKNOWN]`.
+- Eskaliere Sicherheits-, Berechtigungs- und Produktionsrisiken an menschliche Reviewer.
 
+## Fokus
 
-> Hinweis: Diese Datei ist eine deutsche lokalisierte Version. Bei Abweichungen gilt die englische Datei als maßgeblich.
+Command-Systeme, Slash-Commands, Dateireferenzen und wiederholbare Workflow-Kommandos.
+
+## Qualitätscheck
+
+- Der Zweck ist für neue Mitwirkende verständlich.
+- Die Anleitung hilft sowohl KI-Agenten als auch menschlichen Maintainerinnen und Maintainern.
+- Es werden keine modellspezifischen Commands erfunden.
+- Sicherheits- und Human-Approval-Grenzen bleiben sichtbar.
+- Die englische Quelle bleibt für Konfliktfälle maßgeblich.

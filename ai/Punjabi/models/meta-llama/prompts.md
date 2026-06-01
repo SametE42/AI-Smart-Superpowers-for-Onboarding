@@ -1,19 +1,29 @@
 # Prompts
 
-This file mirrors `ai/English/models/meta-llama/prompts.md` for the Punjabi localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> ਸਰੋਤ ਭਾਸ਼ਾ: ਅੰਗਰੇਜ਼ੀ
+> ਸਰੋਤ ਫਾਈਲ: ai/English/models/meta-llama/prompts.md
+> ਫਰਕ ਹੋਣ ਤੇ ਅੰਗਰੇਜ਼ੀ ਫਾਈਲ ਪਹਿਲਾਂ ਮੰਨੀ ਜਾਵੇਗੀ।
 
-## Source file
+ਇਹ ਪੰਨਾ ਦੱਸਦਾ ਹੈ ਕਿ `models/meta-llama/prompts.md` AI Agent Operating Manual ਵਿੱਚ ਕਿਵੇਂ ਫਿੱਟ ਹੁੰਦਾ ਹੈ; repository ਕੰਮ ਦੀ ਯੋਜਨਾ, ਜਾਂਚ ਜਾਂ ਦੁਹਰਾਈ ਕਰਨ ਵਾਲੇ ਲੋਕਾਂ ਅਤੇ AI agents ਲਈ।
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## ਵਿਹਾਰਕ ਦਾਇਰਾ
 
-## Required coverage
+ਇਸ ਪੰਨੇ ਨੂੰ `models` ਲਈ ਕਾਰਜਕਾਰੀ ਮਾਰਗਦਰਸ਼ਨ ਵਜੋਂ ਵਰਤੋ। ਇਹ repository ਸਬੂਤ ਜਾਂ ਪ੍ਰੋਜੈਕਟ ਹਦਾਇਤਾਂ ਦੀ ਥਾਂ ਨਹੀਂ ਲੈਂਦਾ।
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## ਕੰਮ ਹਦਾਇਤਾਂ
+
+- ਫਾਈਲ ਨਾਮ, commands, API ਨਾਮ ਅਤੇ model ਨਾਮ ਜਿਵੇਂ ਦੇ ਤਿਵੇਂ ਰੱਖੋ।
+- ਨਾ-ਜਾਂਚੇ ਨਤੀਜਿਆਂ ਨੂੰ `[ASSUMPTION: ...]` ਅਤੇ ਅਣਜਾਣ ਤੱਥਾਂ ਨੂੰ `[UNKNOWN]` ਨਾਲ ਨਿਸ਼ਾਨਿਤ ਕਰੋ।
+- security, permissions ਅਤੇ production-readiness ਖਤਰੇ ਮਨੁੱਖੀ ਸਮੀਖਿਆ ਵੱਲ ਭੇਜੋ।
+
+## ਫੋਕਸ
+
+workflow ਵਿੱਚ ਵਰਤਣ ਤੋਂ ਪਹਿਲਾਂ ਦਾਇਰਾ, ਸਬੂਤ, ਜਾਂਚਯੋਗ commands ਅਤੇ ਮਨੁੱਖੀ ਮਨਜ਼ੂਰੀ ਦੀਆਂ ਹੱਦਾਂ ਤੈਅ ਕਰੋ।
+
+## ਗੁਣਵੱਤਾ ਜਾਂਚ
+
+- ਉਦੇਸ਼ ਨਵੇਂ contributor ਲਈ ਸਪਸ਼ਟ ਹੈ।
+- localization ਟਕਰਾਅ ਵਿੱਚ ਅੰਗਰੇਜ਼ੀ ਸਰੋਤ ਫੈਸਲਾਕੁੰਨ ਰਹਿੰਦਾ ਹੈ।

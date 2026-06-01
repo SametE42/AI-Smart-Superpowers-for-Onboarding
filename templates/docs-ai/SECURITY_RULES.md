@@ -1,14 +1,14 @@
 # SECURITY_RULES.md
 
-**Last updated:** YYYY-MM-DD  
-**Status:** DRAFT  
-**Scope:** Security rules, known risks and minimum production requirements.  
-**Created/updated by:** AI Assistant (Model: [MODEL], Run-ID: [RUN-ID])  
+**Last updated:** YYYY-MM-DD
+**Status:** DRAFT
+**Scope:** Security rules, known risks and minimum production requirements.
+**Created/updated by:** AI Assistant (Model: [MODEL], Run-ID: [RUN-ID])
 ***
 
 ## Security assessment
 
-**Current assessment:** `[UNBEKANNT]`
+**Current assessment:** `[UNKNOWN]`
 
 Do not claim the system is production-secure unless access control, persistence, validation, logging, audit and operational requirements are proven.
 
@@ -27,10 +27,10 @@ Do not claim the system is production-secure unless access control, persistence,
 
 | Priority | Risk | Impact | Mitigation |
 |---|---|---|---|
-| critical | `[UNBEKANNT]` | `[UNBEKANNT]` | `[UNBEKANNT]` |
-| high | `[UNBEKANNT]` | `[UNBEKANNT]` | `[UNBEKANNT]` |
-| medium | `[UNBEKANNT]` | `[UNBEKANNT]` | `[UNBEKANNT]` |
-| low | `[UNBEKANNT]` | `[UNBEKANNT]` | `[UNBEKANNT]` |
+| critical | `[UNKNOWN]` | `[UNKNOWN]` | `[UNKNOWN]` |
+| high | `[UNKNOWN]` | `[UNKNOWN]` | `[UNKNOWN]` |
+| medium | `[UNKNOWN]` | `[UNKNOWN]` | `[UNKNOWN]` |
+| low | `[UNKNOWN]` | `[UNKNOWN]` | `[UNKNOWN]` |
 
 ## Authentication and authorization
 
@@ -43,8 +43,8 @@ Document:
 - what must not be inferred from local or prototype mechanisms.
 
 ```markdown
-**Current state:** `[UNBEKANNT]`  
-**Production gap:** `[UNBEKANNT]`  
+**Current state:** `[UNKNOWN]`
+**Production gap:** `[UNKNOWN]`
 ```
 
 ## Sensitive data

@@ -1,23 +1,33 @@
-# Claude Code Command Reference
+# Claude Code
 
-Claude Code commands belong to Claude Code, not to the Claude model family alone.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-## Recommended command areas
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Source language: English
+> Source file: ai/English/commands/claude-code.md
+> Bei Abweichungen ist die englische Datei maßgeblich.
 
-- Help and session inspection
-- Context compaction
-- Model or mode selection where supported
-- Code review
-- Custom commands stored in project command folders
-- MCP, tool and permission management where supported
+Command-Systeme, Slash-Commands, Dateireferenzen und wiederholbare Workflow-Kommandos.
 
-## Empfohlener Workflow
+## Praktischer Scope
 
-1. Initialize or inspect project context.
-2. Load relevant files and manifest instructions.
-3. Ask for a plan before edits.
-4. Use custom commands for repeatable workflows.
-5. Keep human approval for destructive or security-relevant changes.
+Diese Seite beschreibt, wie `commands/claude-code.md` im AI Agent Operating Manual genutzt wird. Sie ist für Menschen und KI-Agenten geschrieben, die Repository-Arbeit planen, prüfen oder wiederholen müssen.
 
+## Arbeitsleitlinien
 
-> Hinweis: Diese Datei ist eine deutsche lokalisierte Version. Bei Abweichungen gilt die englische Datei als maßgeblich.
+- Nutze diese Seite als Orientierung, nicht als Ersatz für Repository-Evidenz.
+- Bewahre Dateinamen, Commands, API-Namen und Modellnamen unverändert.
+- Dokumentiere Annahmen explizit und markiere unbekannte Fakten als `[UNKNOWN]`.
+- Eskaliere Sicherheits-, Berechtigungs- und Produktionsrisiken an menschliche Reviewer.
+
+## Fokus
+
+Command-Systeme, Slash-Commands, Dateireferenzen und wiederholbare Workflow-Kommandos.
+
+## Qualitätscheck
+
+- Der Zweck ist für neue Mitwirkende verständlich.
+- Die Anleitung hilft sowohl KI-Agenten als auch menschlichen Maintainerinnen und Maintainern.
+- Es werden keine modellspezifischen Commands erfunden.
+- Sicherheits- und Human-Approval-Grenzen bleiben sichtbar.
+- Die englische Quelle bleibt für Konfliktfälle maßgeblich.

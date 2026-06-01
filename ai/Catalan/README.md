@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Catalan
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Catalan.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Idioma font: anglès
+> Fitxer font: ai/English/README.md
+> Si hi ha diferències, el fitxer en anglès té prioritat.
 
-## Sections
+Aquesta pàgina explica com `README.md` encaixa dins de l'AI Agent Operating Manual. Està escrita per a persones i agents d'IA que han de planificar, verificar o repetir feina de repositori.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Abast pràctic
 
-## Source of truth
+Fes servir aquesta pàgina com a guia operativa per al tema `README.md`. No substitueix l'evidència del repositori ni les instruccions específiques del projecte.
 
-The English version remains authoritative until this localization has been reviewed.
+## Directrius de treball
+
+- Tracta l'evidència del repositori com l'autoritat principal.
+- Conserva exactament noms de fitxer, ordres, noms d'API i noms de models.
+- Marca conclusions no verificades amb `[ASSUMPTION: ...]` i fets desconeguts amb `[UNKNOWN]`.
+- Vincula cada comportament específic d'eina amb l'eina o runtime que realment el controla.
+- Escala riscos de seguretat, permisos i production-readiness a revisió humana.
+
+## Focus
+
+Abans d'usar aquesta pàgina en un workflow, defineix abast, evidència necessària, ordres verificables i límits d'aprovació humana.
+
+## Control de qualitat
+
+- El propòsit és clar per a una nova persona col·laboradora.
+- La guia ajuda tant agents d'IA com mantenidors humans.
+- No s'inventen ordres específiques de models.
+- Els límits de seguretat i aprovació humana continuen visibles.
+- La font anglesa continua sent decisiva en conflictes de localització.

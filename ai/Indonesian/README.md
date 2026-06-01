@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Indonesian
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Indonesian.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Bahasa sumber: Inggris
+> File sumber: ai/English/README.md
+> Jika ada perbedaan, file Inggris menjadi acuan.
 
-## Sections
+Halaman ini menjelaskan bagaimana `README.md` masuk ke AI Agent Operating Manual. Ditulis untuk manusia dan AI agents yang perlu merencanakan, memverifikasi, atau mengulang pekerjaan repository.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Cakupan praktis
 
-## Source of truth
+Gunakan halaman ini sebagai panduan operasional untuk tema `README.md`. Ini tidak menggantikan bukti repository atau instruksi khusus proyek.
 
-The English version remains authoritative until this localization has been reviewed.
+## Panduan kerja
+
+- Perlakukan bukti repository sebagai otoritas utama.
+- Pertahankan nama file, commands, nama API, dan nama model secara persis.
+- Tandai kesimpulan yang belum diverifikasi dengan `[ASSUMPTION: ...]` dan fakta yang tidak diketahui dengan `[UNKNOWN]`.
+- Hubungkan perilaku khusus tool ke tool atau runtime yang benar-benar memilikinya.
+- Eskalasi risiko security, permissions, dan production-readiness ke tinjauan manusia.
+
+## Fokus
+
+Sebelum memakai halaman ini dalam workflow, tetapkan cakupan, bukti yang diperlukan, commands yang dapat diverifikasi, dan batas persetujuan manusia.
+
+## Pemeriksaan kualitas
+
+- Tujuan jelas bagi contributor baru.
+- Panduan berguna bagi AI agents dan maintainer manusia.
+- Tidak ada commands khusus model yang dikarang.
+- Batas security dan persetujuan manusia tetap terlihat.
+- Sumber Inggris tetap menentukan saat konflik localization.

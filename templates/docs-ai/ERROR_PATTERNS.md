@@ -1,25 +1,25 @@
 # ERROR_PATTERNS.md
 
-**Last updated:** YYYY-MM-DD  
-**Status:** DRAFT  
-**Scope:** Repeated error patterns, unstable areas and recommended debugging order.  
-**Created/updated by:** AI Assistant (Model: [MODEL], Run-ID: [RUN-ID])  
+**Last updated:** YYYY-MM-DD
+**Status:** DRAFT
+**Scope:** Repeated error patterns, unstable areas and recommended debugging order.
+**Created/updated by:** AI Assistant (Model: [MODEL], Run-ID: [RUN-ID])
 ***
 
 ## Known repeated patterns
 
 | Pattern | Cause | Prevention |
 |---|---|---|
-| `[UNBEKANNT]` | `[UNBEKANNT]` | `[UNBEKANNT]` |
+| `[UNKNOWN]` | `[UNKNOWN]` | `[UNKNOWN]` |
 
 ## Unstable areas
 
 ### [Area name]
 
-**Why unstable:** `[UNBEKANNT]`  
-**Affected files:** `[UNBEKANNT]`  
-**Affected flows:** `[UNBEKANNT]`  
-**Prevention:** `[UNBEKANNT]`
+**Why unstable:** `[UNKNOWN]`
+**Affected files:** `[UNKNOWN]`
+**Affected flows:** `[UNKNOWN]`
+**Prevention:** `[UNKNOWN]`
 
 ## Typical debugging order
 
@@ -39,13 +39,13 @@
 ### [Error title]
 
 **Symptom:**  
-`[UNBEKANNT]`
+`[UNKNOWN]`
 
 **Likely cause:**  
-`[ANNAHME: ...]`
+`[ASSUMPTION: ...]`
 
 **Recommended correction:**  
-`[UNBEKANNT]`
+`[UNKNOWN]`
 
 **Risk if ignored:**  
-`[UNBEKANNT]`
+`[UNKNOWN]`

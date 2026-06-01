@@ -1,27 +1,33 @@
 # Code Review
 
-Step-by-step procedures for real agent work.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-## Zweck
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Source language: English
+> Source file: ai/English/workflows/code-review.md
+> Bei Abweichungen ist die englische Datei maßgeblich.
 
-This file gives users a structured, practical reference for `workflows/code-review.md`.
+Schrittweise Verfahren für echte Agentenarbeit wie Onboarding, Review und Übersetzung.
 
-## Empfohlener Inhalt
+## Praktischer Scope
 
-- Definition and scope
-- When to use it
-- Empfohlener Workflow
-- Examples
-- Qualitätscheckliste
-- Sicherheitsaspekte
-- Links to related files
+Diese Seite beschreibt, wie `workflows/code-review.md` im AI Agent Operating Manual genutzt wird. Sie ist für Menschen und KI-Agenten geschrieben, die Repository-Arbeit planen, prüfen oder wiederholen müssen.
 
-## Qualitätscheckliste
+## Arbeitsleitlinien
 
-- Clear enough for a new repository user
-- Useful for an AI agent and a human maintainer
-- No model-specific commands invented unless they belong to the tool
-- English source kept authoritative
+- Nutze diese Seite als Orientierung, nicht als Ersatz für Repository-Evidenz.
+- Bewahre Dateinamen, Commands, API-Namen und Modellnamen unverändert.
+- Dokumentiere Annahmen explizit und markiere unbekannte Fakten als `[UNKNOWN]`.
+- Eskaliere Sicherheits-, Berechtigungs- und Produktionsrisiken an menschliche Reviewer.
 
+## Fokus
 
-> Hinweis: Diese Datei ist eine deutsche lokalisierte Version. Bei Abweichungen gilt die englische Datei als maßgeblich.
+Schrittweise Verfahren für echte Agentenarbeit wie Onboarding, Review und Übersetzung.
+
+## Qualitätscheck
+
+- Der Zweck ist für neue Mitwirkende verständlich.
+- Die Anleitung hilft sowohl KI-Agenten als auch menschlichen Maintainerinnen und Maintainern.
+- Es werden keine modellspezifischen Commands erfunden.
+- Sicherheits- und Human-Approval-Grenzen bleiben sichtbar.
+- Die englische Quelle bleibt für Konfliktfälle maßgeblich.

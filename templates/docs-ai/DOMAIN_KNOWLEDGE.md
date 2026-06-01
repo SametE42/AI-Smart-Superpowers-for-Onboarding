@@ -8,34 +8,34 @@
 
 ## Domain frame
 
-`[UNBEKANNT]`
+`[UNKNOWN]`
 
 ## Important entities
 
 | Entity | Meaning | Current storage/source |
 |---|---|---|
-| `[UNBEKANNT]` | `[UNBEKANNT]` | `[UNBEKANNT]` |
+| `[UNKNOWN]` | `[UNKNOWN]` | `[UNKNOWN]` |
 
 ## Core processes
 
 ### [Process name]
 
-1. `[UNBEKANNT]`
-2. `[UNBEKANNT]`
-3. `[UNBEKANNT]`
+1. `[UNKNOWN]`
+2. `[UNKNOWN]`
+3. `[UNKNOWN]`
 
 ## Business special rules and non-rules
 
-- `[UNBEKANNT]`
+- `[UNKNOWN]`
 
 Use this section to explicitly document what must not be inferred.
 
 ## Critical dependencies between domains
 
-- `[UNBEKANNT]`
+- `[UNKNOWN]`
 
 ## Open business rules
 
-- `[UNBEKANNT]`
-- `[UNBEKANNT]`
-- `[UNBEKANNT]`
+- `[UNKNOWN]`
+- `[UNKNOWN]`
+- `[UNKNOWN]`

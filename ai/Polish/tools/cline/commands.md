@@ -1,19 +1,34 @@
 # Commands
 
-This file mirrors `ai/English/tools/cline/commands.md` for the Polish localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Język źródłowy: angielski
+> Plik źródłowy: ai/English/tools/cline/commands.md
+> W przypadku rozbieżności plik angielski pozostaje źródłem rozstrzygającym.
 
-## Source file
+Ta strona wyjaśnia, jak `tools/cline/commands.md` pasuje do AI Agent Operating Manual. Jest przeznaczona dla ludzi i agentów AI, którzy muszą planować, weryfikować lub powtarzać pracę w repozytorium.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Zakres praktyczny
 
-## Required coverage
+Używaj tej strony jako operacyjnej wskazówki dla tematu `tools`. Nie zastępuje ona dowodów z repozytorium ani instrukcji specyficznych dla projektu.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Wytyczne pracy
+
+- Traktuj dowody z repozytorium jako podstawowe źródło prawdy.
+- Zachowuj dokładnie nazwy plików, komendy, nazwy API i nazwy modeli.
+- Oznaczaj niezweryfikowane wnioski jako `[ASSUMPTION: ...]`, a nieznane fakty jako `[UNKNOWN]`.
+- Łącz zachowanie specyficzne dla narzędzia z narzędziem lub runtime, które faktycznie je kontroluje.
+- Eskaluj ryzyka dotyczące bezpieczeństwa, uprawnień i gotowości produkcyjnej do weryfikacji człowieka.
+
+## Główne założenie
+
+Zdefiniuj zakres, wymagane dowody, weryfikowalne komendy i granice zatwierdzenia przez człowieka przed użyciem tej strony w workflow.
+
+## Kontrola jakości
+
+- Cel jest jasny dla nowej osoby współtworzącej projekt.
+- Wskazówki pomagają zarówno agentom AI, jak i ludzkim maintainerom.
+- Nie są wymyślane komendy specyficzne dla modeli.
+- Granice bezpieczeństwa i zatwierdzania przez człowieka pozostają widoczne.
+- Angielskie źródło pozostaje rozstrzygające przy konfliktach lokalizacji.

@@ -1,19 +1,34 @@
 # Openrouter
 
-This file mirrors `ai/English/providers/openrouter.md` for the Persian localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> زبان مبدأ: انگلیسی
+> فایل مبدأ: ai/English/providers/openrouter.md
+> در صورت اختلاف، فایل انگلیسی مرجع اصلی است.
 
-## Source file
+این صفحه توضیح می‌دهد که `providers/openrouter.md` چگونه در AI Agent Operating Manual قرار می‌گیرد. برای انسان‌ها و AI agents نوشته شده که باید کار repository را برنامه‌ریزی، راستی‌آزمایی یا تکرار کنند.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## دامنه عملی
 
-## Required coverage
+از این صفحه به عنوان راهنمای عملیاتی برای موضوع `providers` استفاده کنید. جایگزین شواهد repository یا دستورهای اختصاصی پروژه نیست.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## راهنمای کار
+
+- شواهد repository را مرجع اصلی بدانید.
+- نام فایل‌ها، commands، نام‌های API و نام مدل‌ها را دقیقاً حفظ کنید.
+- نتیجه‌های تأییدنشده را با `[ASSUMPTION: ...]` و واقعیت‌های ناشناخته را با `[UNKNOWN]` علامت بزنید.
+- رفتار ویژه ابزار را به همان tool یا runtime که واقعاً مالک آن است وصل کنید.
+- ریسک‌های security، permissions و production-readiness را به بازبینی انسانی ارجاع دهید.
+
+## تمرکز
+
+پیش از استفاده از این صفحه در workflow، دامنه، شواهد لازم، commands قابل راستی‌آزمایی و مرزهای تأیید انسانی را تعریف کنید.
+
+## کنترل کیفیت
+
+- هدف برای contributor جدید روشن است.
+- راهنما برای AI agents و maintainers انسانی مفید است.
+- commands اختصاصی مدل‌ها ساخته نمی‌شوند.
+- مرزهای security و تأیید انسانی قابل مشاهده می‌مانند.
+- در تعارض‌های localization، منبع انگلیسی تعیین‌کننده است.

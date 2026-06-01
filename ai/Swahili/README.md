@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Swahili
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Swahili.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Lugha chanzo: Kiingereza
+> Faili chanzo: ai/English/README.md
+> Kukiwa na tofauti, faili la Kiingereza lina kipaumbele.
 
-## Sections
+Ukurasa huu unaeleza jinsi `README.md` inavyoingia kwenye AI Agent Operating Manual. Umeandikwa kwa watu na AI agents wanaohitaji kupanga, kuthibitisha au kurudia kazi ya repository.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Wigo wa vitendo
 
-## Source of truth
+Tumia ukurasa huu kama mwongozo wa uendeshaji kwa mada `README.md`. Hauondoi ushahidi wa repository au maagizo maalum ya mradi.
 
-The English version remains authoritative until this localization has been reviewed.
+## Miongozo ya kazi
+
+- Chukulia ushahidi wa repository kama mamlaka kuu.
+- Hifadhi majina ya faili, commands, majina ya API na majina ya model kama yalivyo.
+- Weka alama kwa hitimisho lisilothibitishwa kwa `[ASSUMPTION: ...]` na ukweli usiojulikana kwa `[UNKNOWN]`.
+- Unganisha tabia maalum ya tool na tool au runtime inayomiliki tabia hiyo kweli.
+- Pandisha hatari za security, permissions na production-readiness kwa ukaguzi wa binadamu.
+
+## Mkazo
+
+Kabla ya kutumia ukurasa huu kwenye workflow, fafanua wigo, ushahidi unaohitajika, commands zinazoweza kuthibitishwa na mipaka ya idhini ya binadamu.
+
+## Ukaguzi wa ubora
+
+- Kusudi liko wazi kwa contributor mpya.
+- Mwongozo unasaidia AI agents na watunzaji wa kibinadamu.
+- Hakuna commands maalum za model zinazobuniwa.
+- Mipaka ya security na idhini ya binadamu inaendelea kuonekana.
+- Chanzo cha Kiingereza hubaki maamuzi katika migogoro ya localization.

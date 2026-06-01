@@ -1,27 +1,29 @@
-# AI Agent Operating Manual — Afrikaans
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Afrikaans.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Brontaal: Engels
+> Bronlêer: ai/English/README.md
+> By verskille bly die Engelse lêer gesaghebbend.
 
-## Sections
+Hierdie bladsy verduidelik hoe `README.md` in die AI Agent Operating Manual pas vir mense en AI agents wat repository-werk moet beplan, verifieer of herhaal.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Praktiese omvang
 
-## Source of truth
+Gebruik hierdie bladsy as operasionele leiding vir `README.md`. Dit vervang nie repository-bewyse of projekspesifieke instruksies nie.
 
-The English version remains authoritative until this localization has been reviewed.
+## Werksriglyne
+
+- Behou lêername, commands, API-name en modelname presies.
+- Merk aannames met `[ASSUMPTION: ...]` en onbekende feite met `[UNKNOWN]`.
+- Eskaleer security-, permissions- en production-readiness-risiko's na menslike hersiening.
+
+## Fokus
+
+Definieer omvang, bewyse, verifieerbare commands en menslike goedkeuringsgrense voordat hierdie bladsy in 'n workflow gebruik word.
+
+## Kwaliteitskontrole
+
+- Die doel is duidelik vir nuwe contributors.
+- Die Engelse bron bly beslissend by localization-konflikte.

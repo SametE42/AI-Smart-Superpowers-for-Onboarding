@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Ukrainian
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Ukrainian.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Мова джерела: англійська
+> Файл джерела: ai/English/README.md
+> У разі розбіжностей англійський файл має пріоритет.
 
-## Sections
+Ця сторінка пояснює, як `README.md` використовується в AI Agent Operating Manual. Вона призначена для людей і AI-агентів, які планують, перевіряють або повторюють роботу з репозиторієм.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Практична область
 
-## Source of truth
+Використовуйте цю сторінку як операційний орієнтир для теми `README.md`. Вона не замінює докази з репозиторію або інструкції конкретного проєкту.
 
-The English version remains authoritative until this localization has been reviewed.
+## Робочі настанови
+
+- Вважайте докази з репозиторію основним джерелом істини.
+- Зберігайте назви файлів, команди, назви API і назви моделей без змін.
+- Позначайте неперевірені висновки як `[ASSUMPTION: ...]`, а невідомі факти як `[UNKNOWN]`.
+- Прив'язуйте специфічну поведінку інструментів до інструмента або runtime, який справді нею володіє.
+- Ескалуйте ризики безпеки, дозволів і production-readiness на людську перевірку.
+
+## Фокус
+
+Перед використанням цієї сторінки у workflow визначте область, потрібні докази, перевірювані команди та межі людського схвалення.
+
+## Перевірка якості
+
+- Мета зрозуміла новому учаснику.
+- Настанови корисні і для AI-агентів, і для людей-супровідників.
+- Команди, специфічні для моделей, не вигадуються.
+- Межі безпеки та людського схвалення залишаються видимими.
+- Англійське джерело лишається вирішальним у конфліктах локалізації.

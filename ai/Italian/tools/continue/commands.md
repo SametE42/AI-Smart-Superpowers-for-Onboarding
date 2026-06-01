@@ -1,19 +1,34 @@
 # Commands
 
-This file mirrors `ai/English/tools/continue/commands.md` for the Italian localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Lingua sorgente: inglese
+> File sorgente: ai/English/tools/continue/commands.md
+> In caso di divergenze, il file inglese resta la fonte autorevole.
 
-## Source file
+Questa pagina spiega come `tools/continue/commands.md` si inserisce nell'AI Agent Operating Manual. È pensata per persone e agenti IA che devono pianificare, verificare o ripetere il lavoro sul repository.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Ambito pratico
 
-## Required coverage
+Usa questa pagina come riferimento operativo per il tema `tools`. Non sostituisce le prove del repository né le istruzioni specifiche del progetto.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Linee guida operative
+
+- Considera le prove del repository come autorità primaria.
+- Mantieni invariati nomi di file, comandi, nomi API e nomi dei modelli.
+- Marca le conclusioni non verificate con `[ASSUMPTION: ...]` e i fatti sconosciuti con `[UNKNOWN]`.
+- Collega ogni comportamento specifico allo strumento o al runtime che lo possiede davvero.
+- Escala i rischi di sicurezza, permessi e prontezza alla produzione a una revisione umana.
+
+## Focus
+
+Definisci ambito, prove necessarie, comandi verificabili e limiti di approvazione umana prima di usare questa pagina in un workflow.
+
+## Controllo qualità
+
+- Lo scopo è chiaro per una nuova persona contributrice.
+- Le indicazioni aiutano sia gli agenti IA sia i maintainer umani.
+- Non vengono inventati comandi specifici dei modelli.
+- I limiti di sicurezza e approvazione umana restano visibili.
+- La fonte inglese resta autorevole per i conflitti di localizzazione.

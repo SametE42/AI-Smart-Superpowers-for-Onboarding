@@ -10,7 +10,7 @@
 Document required commands:
 
 ```bash
-[UNBEKANNT]
+[UNKNOWN]
 ```
 
 Example structure:
@@ -28,11 +28,11 @@ npm run check
 
 | Purpose | Command | Expected result |
 |---|---|---|
-| Install dependencies | `[UNBEKANNT]` | Dependencies installed |
-| Start dev server | `[UNBEKANNT]` | Local app starts |
-| Run tests | `[UNBEKANNT]` | Tests pass |
-| Build | `[UNBEKANNT]` | Build succeeds |
-| Full check | `[UNBEKANNT]` | All required checks pass |
+| Install dependencies | `[UNKNOWN]` | Dependencies installed |
+| Start dev server | `[UNKNOWN]` | Local app starts |
+| Run tests | `[UNKNOWN]` | Tests pass |
+| Build | `[UNKNOWN]` | Build succeeds |
+| Full check | `[UNKNOWN]` | All required checks pass |
 
 ## Local update
 

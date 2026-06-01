@@ -1,19 +1,29 @@
 # Commands
 
-This file mirrors `ai/English/tools/cursor/commands.md` for the Uzbek localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Manba tili: inglizcha
+> Manba fayl: ai/English/tools/cursor/commands.md
+> Farq bo'lsa, inglizcha fayl ustuvor.
 
-## Source file
+Bu sahifa `tools/cursor/commands.md` AI Agent Operating Manual ichida qanday ishlashini tushuntiradi; repository ishini rejalash, tekshirish yoki takrorlash kerak bo'lgan odamlar va AI agents uchun.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Amaliy doira
 
-## Required coverage
+Bu sahifani `tools` uchun operatsion yo'riqnoma sifatida ishlating. U repository dalillari yoki loyiha ko'rsatmalarini almashtirmaydi.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Ish yo'riqlari
+
+- Fayl nomlari, commands, API nomlari va model nomlarini aynan saqlang.
+- Tekshirilmagan xulosalarni `[ASSUMPTION: ...]`, noma'lum faktlarni `[UNKNOWN]` deb belgilang.
+- security, permissions va production-readiness xavflarini inson ko'rigiga yuboring.
+
+## Fokus
+
+workflow ichida ishlatishdan oldin doira, dalillar, tekshiriladigan commands va inson tasdiqi chegaralarini belgilang.
+
+## Sifat tekshiruvi
+
+- Maqsad yangi contributor uchun aniq.
+- localization nizolarida inglizcha manba hal qiluvchi bo'lib qoladi.

@@ -1,68 +1,49 @@
 # AI Repo Onboarding Standard
 
-A structured master prompt and documentation standard for coding projects in multi-model and AI-assisted development workflows.
+<p align="center">
+  <a href="https://github.com/SametE42/Ai-Repo-Onboarding/actions/workflows/validate.yml"><img alt="Validation" src="https://github.com/SametE42/Ai-Repo-Onboarding/actions/workflows/validate.yml/badge.svg"></a>
+  <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-111827">
+  <img alt="Docs first" src="https://img.shields.io/badge/docs-evidence--first-2563eb">
+  <img alt="Languages" src="https://img.shields.io/badge/language%20folders-75-0f766e">
+</p>
 
-Repository: https://github.com/SametE42/Ai-Repo-Onboarding
+<p align="center">
+  A reusable documentation and prompt standard for onboarding AI coding agents into software repositories safely, consistently and with clear human-review boundaries.
+</p>
 
-This repository provides a reusable framework for onboarding AI agents into software repositories safely, consistently and with explicit documentation boundaries.
+---
 
-## Why?
+## What This Is
 
-AI coding agents often fail for the same reasons:
+AI coding agents work better when they receive stable repository context instead of a pile of unrelated files. This project defines a practical onboarding standard built around:
 
-- they miss project context,
-- they infer architecture from incomplete files,
-- they invent business rules,
-- they ignore existing conventions,
-- they mix technical errors with business logs,
-- they create broad changes without verification,
-- they treat local prototypes as production-ready systems.
+- a primary master prompt,
+- a structured `docs/ai/` knowledge base for target repositories,
+- short tool entrypoints such as `AGENTS.md`, `CLAUDE.md`, `GEMINI.md` and Copilot instructions,
+- explicit rules for assumptions, security, production readiness and verification,
+- multilingual AI-agent documentation under `ai/<Language>/`.
 
-This standard solves that by creating a stable `/docs/ai/` knowledge base, a clear workflow for repository analysis, and short tool-specific entrypoint files such as `AGENTS.md`, `CLAUDE.md`, `GEMINI.md` or `.github/copilot-instructions.md`.
-
-## For whom?
-
-This repository is useful for:
-
-- developers using multiple coding agents,
-- teams working with Claude Code, Codex, Cursor, GitHub Copilot, Gemini, Windsurf or similar tools,
-- projects that need repeatable AI onboarding,
-- maintainers who want AI-generated documentation to stay structured,
-- teams that need clear boundaries around security, production readiness and human review.
-
-
-## Languages
-
-English is the primary language and source of truth for this repository. The multilingual AI documentation is organized by language directly under `ai/`.
-
-Main entry points:
-
-- [English AI Manual](ai/English/README.md)
-- [German AI Manual](ai/German/README.md)
-- [Language Index](ai/LANGUAGE_INDEX.md)
-- [Translation Policy](ai/TRANSLATION_POLICY.md)
-
-Legacy translations under `i18n/` are kept only for compatibility. New AI documentation should be maintained under `ai/<Language>/`.
+This repository is documentation-first. It does not ship a production application, backend service or runtime package.
 
 ## Quickstart
 
-1. Copy `templates/MASTER_PROMPT.md`.
-2. Give it to your coding agent.
-3. Point the agent at your target repository.
-4. Let it run Phase 0 to Phase 2 first.
-5. Review the proposed documentation plan before allowing file changes.
-
-For a minimal example, see:
+Use the English prompt as the source-of-truth starting point:
 
 ```text
-examples/minimal/
+templates/MASTER_PROMPT.en.md
 ```
 
-## What gets created?
+1. Copy `templates/MASTER_PROMPT.en.md` into your AI coding agent.
+2. Point the agent at the target repository.
+3. Let it run the interview and repository pre-check first.
+4. Review the analysis report and documentation plan.
+5. Approve file changes only after the plan is clear.
 
-The primary output is a `/docs/ai/` folder inside your target repository.
+Use `templates/MASTER_PROMPT.md` only when you specifically want the German workflow prompt.
 
-The standard defines 10 core documents:
+## What Gets Created
+
+The standard creates or updates a `docs/ai/` folder inside the target repository:
 
 ```text
 docs/ai/
@@ -78,149 +59,166 @@ docs/ai/
 └─ ONBOARDING.md
 ```
 
-These files are designed to give future AI agents a stable, task-focused and verifiable project context.
+These documents give future agents a compact, verifiable working context. `PROJECT_MEMORY.md` acts as the continuity and handover anchor for current state, assumptions, decisions, open tasks, problems, risks and next steps. Tool-specific files should stay short and point back to `docs/ai/`.
 
-
-## Model and agent ecosystem
-
-This standard is tool-neutral and can be used with model families and agent runtimes such as OpenAI/Codex, Claude, Gemini, GitHub Copilot, Cursor, Windsurf, DeepSeek, Qwen, Kimi, Mistral, Grok, Xiaomi MiMo, MiniMax and other OpenAI-compatible or Anthropic-compatible clients.
-
-Detailed guidance is documented in:
-
-```text
-docs/model-and-agent-ecosystem.md
-templates/MODEL_PROFILES.md
-```
-
-Important: model providers change quickly. Verify provider-specific capabilities against official documentation before publishing compatibility claims.
-
-## Supported tools
-
-This standard separates tool support into three layers:
-
-1. **Context files**
-   Short instruction files such as `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, Copilot instructions or Cursor rules.
-
-2. **Agent runtimes and orchestrators**
-   Systems such as OpenAI Codex, Claude Code, OpenCode, OpenClaw, Hermes Agent or similar agent runtimes.
-
-3. **Extension mechanisms**
-   Optional mechanisms such as Skills, Subagents, Hooks, MCP servers or Plugins.
-
-The full compatibility notes are documented in:
-
-```text
-docs/tool-compatibility.md
-```
-
-## Repository structure
+## Repository Map
 
 ```text
 Ai-Repo-Onboarding/
+├─ PROJECT_STATE.md
+├─ AGENTS.md
 ├─ README.md
-├─ LICENSE
 ├─ CHANGELOG.md
 ├─ CONTRIBUTING.md
 ├─ SECURITY.md
-├─ CODE_OF_CONDUCT.md
-├─ CITATION.cff
+├─ LICENSE
 ├─ .github/
 │  ├─ CODEOWNERS
+│  ├─ ISSUE_TEMPLATE/
 │  ├─ PULL_REQUEST_TEMPLATE.md
-│  └─ ISSUE_TEMPLATE/
-├─ templates/
-│  ├─ MASTER_PROMPT.md
-│  ├─ AGENTS.md
-│  ├─ CLAUDE.md
-│  ├─ GEMINI.md
-│  ├─ copilot-instructions.md
-│  ├─ docs-ai/
-│  ├─ optional/
-│  └─ skills/
+│  └─ workflows/
+├─ ai/
+│  ├─ English/
+│  ├─ German/
+│  ├─ ...
+│  ├─ LANGUAGE_INDEX.md
+│  ├─ TRANSLATION_POLICY.md
+│  └─ VALIDATION_REPORT.md
+├─ docs/
 ├─ examples/
-│  ├─ minimal/
-│  ├─ node-typescript/
-│  ├─ python-fastapi/
-│  └─ multi-agent/
-└─ docs/
-   ├─ rationale.md
-   ├─ design-principles.md
-   ├─ tool-compatibility.md
-   ├─ publication-checklist.md
-   └─ faq.md
+├─ i18n/
+├─ scripts/
+├─ templates/
+└─ tests/
 ```
 
-## Design principles
+## Source Of Truth
 
-The standard is built around these principles:
+| Area | Authoritative source |
+|---|---|
+| Project continuity and handover for this repository | `PROJECT_STATE.md` |
+| Primary onboarding prompt | `templates/MASTER_PROMPT.en.md` |
+| German workflow prompt | `templates/MASTER_PROMPT.md` |
+| Public project overview | `README.md` |
+| AI manual source language | `ai/English/` |
+| Translation rules | `ai/TRANSLATION_POLICY.md` |
+| Tool compatibility | `docs/tool-compatibility.md` |
+| Security policy | `SECURITY.md` |
 
-- evidence-first documentation,
-- no hallucinated business rules,
-- human review before impactful changes,
-- strict separation of technical logs, audit logs, change history and export history,
-- minimal but useful AI context,
-- append-only documentation for multi-model work,
-- explicit production-readiness status,
-- short tool entrypoints that link to `/docs/ai/` instead of duplicating it.
+If localized documentation conflicts with English, the English source wins until maintainers explicitly decide otherwise.
 
-## Security model
+## Languages And Translation Status
+
+The multilingual manual is organized directly under `ai/`.
+
+- `ai/English/` is the source of truth.
+- `ai/German/` is an AI-translated localized mirror.
+- Every non-English language folder contains AI-translated pages generated from the shared manual structure.
+- Other language folders mirror the English structure and carry the AI quality-pass status marker.
+- File names, paths, commands, code blocks, API names and model names should remain unchanged across translations.
+
+Start here:
+
+- [English AI Manual](ai/English/README.md)
+- [German AI Manual](ai/German/README.md)
+- [Language Index](ai/LANGUAGE_INDEX.md)
+- [Translation Policy](ai/TRANSLATION_POLICY.md)
+- [Translation Status](ai/TRANSLATION_STATUS.md)
+
+## Supported Agent Ecosystem
+
+The standard is tool-neutral. It can be used with coding-agent runtimes and IDE assistants such as:
+
+- OpenAI Codex
+- Claude Code
+- GitHub Copilot
+- Gemini CLI
+- Cursor
+- Windsurf
+- Continue
+- Aider
+- OpenCode
+
+It also includes guidance for model families and providers such as OpenAI, Anthropic, Google Gemini, DeepSeek, Qwen, Kimi, Mistral, Grok, MiniMax, Xiaomi MiMo, Llama, Cohere, Perplexity and OpenRouter.
+
+Provider capabilities change quickly. Verify compatibility claims against official documentation before publishing provider-specific updates.
+
+## Validation
+
+This repository includes a reproducible validation script and GitHub Actions workflow.
+
+Run the local checks:
+
+```bash
+python -m unittest discover -s tests
+python scripts/validate_repository.py --root .
+```
+
+Generate reports:
+
+```bash
+python scripts/validate_repository.py --root . --json ai/VALIDATION_REPORT.json --markdown ai/VALIDATION_REPORT.md
+```
+
+The validator checks:
+
+- local Markdown links,
+- first-level Markdown headings,
+- empty files,
+- directory README coverage,
+- mirrored files across `ai/<Language>/`,
+- language folder sorting,
+- legacy AI links,
+- common secret patterns,
+- AI translation status markers and legacy unreviewed translation markers.
+
+## Examples
+
+| Example | Use when |
+|---|---|
+| [`examples/minimal/`](examples/minimal/) | You want the smallest useful setup. |
+| [`examples/node-typescript/`](examples/node-typescript/) | You are documenting a Node.js or TypeScript repository. |
+| [`examples/python-fastapi/`](examples/python-fastapi/) | You are documenting a Python FastAPI repository. |
+| [`examples/multi-agent/`](examples/multi-agent/) | You want researcher, architect, writer and reviewer roles. |
+
+## Design Principles
+
+- Evidence before claims.
+- No invented business rules.
+- Human review before impactful changes.
+- Security and production readiness must be explicit, not implied.
+- Tool entrypoints should stay short.
+- Multi-model work should be append-only and conflict-aware.
+- Documentation should be useful, compact and maintained.
+
+## Security Model
 
 This project does not make AI-generated output automatically trusted.
 
-All generated documentation and code changes must be reviewed by humans before being committed, merged or used in production.
-
-The standard explicitly requires:
+The standard requires:
 
 - no secrets in documentation,
-- no personal or production data in examples,
-- no invented security guarantees,
+- no real personal, customer, financial or internal data in examples,
 - no production-readiness claims without evidence,
 - clear marking of assumptions and unknowns,
 - redaction of sensitive values,
-- documentation of open risks.
+- human review before merge or production use.
 
-See:
-
-```text
-SECURITY.md
-templates/docs-ai/SECURITY_RULES.md
-templates/optional/PRODUCTION_READINESS.md
-```
+See [SECURITY.md](SECURITY.md), [templates/docs-ai/SECURITY_RULES.md](templates/docs-ai/SECURITY_RULES.md) and [templates/optional/PRODUCTION_READINESS.md](templates/optional/PRODUCTION_READINESS.md).
 
 ## Contributing
 
-Contributions are welcome if they improve clarity, safety, tool compatibility or real-world usability.
+Contributions are welcome when they improve clarity, safety, tool compatibility, translation quality or real-world usability.
 
-Please read:
+Before opening a pull request:
 
-```text
-CONTRIBUTING.md
+```bash
+python -m unittest discover -s tests
+python scripts/validate_repository.py --root .
 ```
 
-before opening a pull request.
+Read [CONTRIBUTING.md](CONTRIBUTING.md) and use the pull request checklist in [.github/PULL_REQUEST_TEMPLATE.md](.github/PULL_REQUEST_TEMPLATE.md).
 
 ## License
 
-MIT License.
-
-## AI documentation hub
-
-This repository includes a central [`ai/`](ai/) folder for all AI-related documentation. The primary manual is [`ai/English/`](ai/English/), and localized manuals are mirrored under language folders such as [`ai/German/`](ai/German/), [`ai/Spanish/`](ai/Spanish/) and [`ai/French/`](ai/French/).
-
-Key English entry points:
-
-- [`ai/English/models/`](ai/English/models/) — model-family profiles for OpenAI, Claude, Gemini, DeepSeek, Qwen, Kimi, Mistral, Grok, MiniMax, Xiaomi MiMo, Llama, Cohere, Perplexity and OpenRouter.
-- [`ai/English/tools/`](ai/English/tools/) — command and workflow notes for Codex, Claude Code, Gemini CLI, Cursor, Continue, Aider and OpenCode.
-- [`ai/English/commands/`](ai/English/commands/) — command documentation standards and tool-specific command references.
-- [`ai/English/skills/`](ai/English/skills/) — reusable skills, skill lifecycle, testing and self-evolving skills.
-- [`ai/English/memory/`](ai/English/memory/) — three-tier memory, memory schemas and memory safety.
-- [`ai/English/optimization/`](ai/English/optimization/) — GEPA, DSPy, TextGrad and optimization loops.
-- [`ai/English/workflows/`](ai/English/workflows/) — reusable workflows for repo onboarding, documentation, model profiles, translations and security review.
-- [`ai/English/evals/`](ai/English/evals/) — evaluation tasks for comparing model/tool combinations.
-
-## Multilingual language structure
-
-The repository contains a multilingual AI manual organized directly by language under [`ai/`](ai/). The English manual under [`ai/English/`](ai/English/) is the source of truth. Localized folders such as [`ai/German/`](ai/German/), [`ai/Spanish/`](ai/Spanish/) and [`ai/French/`](ai/French/) mirror the same structure for translated documentation.
-
-See [`ai/LANGUAGE_INDEX.md`](ai/LANGUAGE_INDEX.md) and [`ai/TRANSLATION_POLICY.md`](ai/TRANSLATION_POLICY.md).
-
+MIT License. See [LICENSE](LICENSE).

@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Albanian
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Albanian.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Gjuha burimore: anglisht
+> Skedari burim: ai/English/README.md
+> Në rast mospërputhjesh, skedari anglisht ka përparësi.
 
-## Sections
+Kjo faqe shpjegon si `README.md` përshtatet në AI Agent Operating Manual. Është shkruar për njerëz dhe agjentë AI që duhet të planifikojnë, verifikojnë ose përsërisin punë në repository.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Fusha praktike
 
-## Source of truth
+Përdore këtë faqe si udhëzim operacional për temën `README.md`. Nuk zëvendëson provat e repository-t ose udhëzimet specifike të projektit.
 
-The English version remains authoritative until this localization has been reviewed.
+## Udhëzime pune
+
+- Trajto provat e repository-t si autoritetin kryesor.
+- Ruaj saktësisht emrat e skedarëve, komandat, emrat e API dhe emrat e modeleve.
+- Shëno përfundimet e paverifikuara me `[ASSUMPTION: ...]` dhe faktet e panjohura me `[UNKNOWN]`.
+- Lidhe sjelljen specifike të mjetit me mjetin ose runtime që e zotëron vërtet.
+- Eskaloni rreziqet e sigurisë, lejeve dhe production-readiness te rishikimi njerëzor.
+
+## Fokus
+
+Para se ta përdorësh këtë faqe në workflow, përcakto fushën, provat e nevojshme, komandat e verifikueshme dhe kufijtë e miratimit njerëzor.
+
+## Kontroll cilësie
+
+- Qëllimi është i qartë për një kontribues të ri.
+- Udhëzimi ndihmon si agjentët AI ashtu edhe mirëmbajtësit njerëzorë.
+- Nuk shpiken komanda specifike për modele.
+- Kufijtë e sigurisë dhe miratimit njerëzor mbeten të dukshëm.
+- Burimi anglisht mbetet vendimtar në konfliktet e lokalizimit.

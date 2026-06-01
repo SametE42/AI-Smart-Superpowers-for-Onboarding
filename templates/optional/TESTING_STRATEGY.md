@@ -23,28 +23,28 @@ It should distinguish:
 ## Commands
 
 ```bash
-[UNBEKANNT]
+[UNKNOWN]
 ```
 
 Recommended table:
 
 | Purpose | Command | Notes |
 |---|---|---|
-| Typecheck | `[UNBEKANNT]` | `[UNBEKANNT]` |
-| Unit tests | `[UNBEKANNT]` | `[UNBEKANNT]` |
-| E2E smoke | `[UNBEKANNT]` | `[UNBEKANNT]` |
-| Build | `[UNBEKANNT]` | `[UNBEKANNT]` |
-| Full check | `[UNBEKANNT]` | `[UNBEKANNT]` |
+| Typecheck | `[UNKNOWN]` | `[UNKNOWN]` |
+| Unit tests | `[UNKNOWN]` | `[UNKNOWN]` |
+| E2E smoke | `[UNKNOWN]` | `[UNKNOWN]` |
+| Build | `[UNKNOWN]` | `[UNKNOWN]` |
+| Full check | `[UNKNOWN]` | `[UNKNOWN]` |
 
 ## Current test areas
 
-- `[UNBEKANNT]`
+- `[UNKNOWN]`
 
 ## Manual acceptance scenarios
 
-1. `[UNBEKANNT]`
-2. `[UNBEKANNT]`
-3. `[UNBEKANNT]`
+1. `[UNKNOWN]`
+2. `[UNKNOWN]`
+3. `[UNKNOWN]`
 
 ## Test data
 
@@ -82,7 +82,7 @@ Verify:
 
 | Gap | Risk | Recommended test |
 |---|---|---|
-| `[UNBEKANNT]` | `[UNBEKANNT]` | `[UNBEKANNT]` |
+| `[UNKNOWN]` | `[UNKNOWN]` | `[UNKNOWN]` |
 
 ## Production-adjacent test gate
 

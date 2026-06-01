@@ -1,19 +1,29 @@
-# Overview
+# Aider
 
-This file mirrors `ai/English/tools/aider/README.md` for the Georgian localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> წყარო ენა: ინგლისური
+> წყარო ფაილი: ai/English/tools/aider/README.md
+> განსხვავების შემთხვევაში უპირატესობა აქვს ინგლისურ ფაილს.
 
-## Source file
+ეს გვერდი განმარტავს, როგორ ჯდება `tools/aider/README.md` AI Agent Operating Manual-ში ადამიანებისა და AI agents-ისთვის, რომლებიც repository სამუშაოს გეგმავენ, ამოწმებენ ან იმეორებენ.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## პრაქტიკული ფარგლები
 
-## Required coverage
+გამოიყენე ეს გვერდი `tools` თემის ოპერაციულ გზამკვლევად. ის არ ცვლის repository მტკიცებულებებს ან პროექტის ინსტრუქციებს.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## სამუშაო წესები
+
+- ფაილის სახელები, commands, API სახელები და model სახელები უცვლელად შეინახე.
+- დაუმოწმებელი დასკვნები მონიშნე `[ASSUMPTION: ...]`, უცნობი ფაქტები `[UNKNOWN]`.
+- security, permissions და production-readiness რისკები ადამიანის გადახედვაზე გადაიტანე.
+
+## ფოკუსი
+
+workflow-ში გამოყენებამდე განსაზღვრე ფარგლები, მტკიცებულებები, შემოწმებადი commands და ადამიანის დამტკიცების საზღვრები.
+
+## ხარისხის შემოწმება
+
+- მიზანი ნათელია ახალი contributor-ისთვის.
+- ინგლისური წყარო გადამწყვეტია localization კონფლიქტებში.

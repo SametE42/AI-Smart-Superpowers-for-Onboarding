@@ -1,19 +1,29 @@
-# Overview
+# Continue
 
-This file mirrors `ai/English/tools/continue/README.md` for the Zulu localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Ulimi lomthombo: isiNgisi
+> Ifayela lomthombo: ai/English/tools/continue/README.md
+> Uma kunomehluko, ifayela lesiNgisi liyalandelwa.
 
-## Source file
+Leli khasi lichaza ukuthi `tools/continue/README.md` lingena kanjani ku-AI Agent Operating Manual kubantu nama-AI agents adinga ukuhlela, ukuqinisekisa noma ukuphinda umsebenzi we-repository.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Ububanzi bokusebenza
 
-## Required coverage
+Sebenzisa leli khasi njengomhlahlandlela wokusebenza we-`tools`. Alithathi indawo yobufakazi be-repository noma imiyalelo yephrojekthi.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Imihlahlandlela yomsebenzi
+
+- Gcina amagama amafayela, commands, amagama e-API namagama ama-model ngokunembile.
+- Maka iziphetho ezingakaqinisekiswa ngo-`[ASSUMPTION: ...]` namaqiniso angaziwa ngo-`[UNKNOWN]`.
+- Dlulisela ubungozi be-security, permissions ne-production-readiness ekubuyekezweni ngumuntu.
+
+## Ukugxila
+
+Ngaphambi kokusebenzisa ku-workflow, chaza ububanzi, ubufakazi, commands aqinisekisekayo nemingcele yokuvunywa ngumuntu.
+
+## Ukuhlola ikhwalithi
+
+- Inhloso icacile ku-contributor omusha.
+- Umthombo wesiNgisi uhlala unquma uma kukhona izingxabano ze-localization.

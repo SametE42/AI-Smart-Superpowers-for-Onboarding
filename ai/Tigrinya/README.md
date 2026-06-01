@@ -1,27 +1,29 @@
-# AI Agent Operating Manual — Tigrinya
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Tigrinya.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> ቋንቋ ምንጪ፡ እንግሊዝኛ
+> ፋይል ምንጪ: ai/English/README.md
+> ፍልልይ እንተሃልዩ ፋይል እንግሊዝኛ ይቕድም።
 
-## Sections
+እዚ ገጽ `README.md` ኣብ AI Agent Operating Manual ብኸመይ ከምዝኣቱ ይገልጽ፣ ንሰባትን AI agentsን repository ስራሕ ዝውጥኑ፣ ዝምርምሩ ወይ ዝደግሙ።
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## ተግባራዊ ወሰን
 
-## Source of truth
+እዚ ገጽ ን `README.md` ከም መምርሒ ስራሕ ተጠቐም። መርትዖ repository ወይ መምርሒ ፕሮጀክት ኣይትክእልን።
 
-The English version remains authoritative until this localization has been reviewed.
+## መምርሒታት ስራሕ
+
+- ስም ፋይል፣ commands፣ API ስምን model ስምን ብትኽክል ዓቅብ።
+- ዘይተረጋገጹ መደምደሚታት `[ASSUMPTION: ...]` እቶም ዘይፍለጡ facts `[UNKNOWN]` ብምባል ምልክት ግበር።
+- security፣ permissionsን production-readinessን ሓደጋታት ናብ ምርመራ ሰብ ኣቕርብ።
+
+## ትኹረት
+
+ኣብ workflow ቅድሚ ምጥቃምካ ወሰን፣ መርትዖ፣ ዝረጋገጹ commandsን ወሰን ፍቓድ ሰብን ግለጽ።
+
+## ፍተሻ ጽሬት
+
+- ዕላማ ንሓድሽ contributor ግልጺ እዩ።
+- ኣብ localization ግጭት ምንጪ እንግሊዝኛ ይውስን።

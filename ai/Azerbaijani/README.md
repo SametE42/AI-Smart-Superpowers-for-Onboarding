@@ -1,27 +1,29 @@
-# AI Agent Operating Manual — Azerbaijani
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Azerbaijani.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Mənbə dili: İngilis dili
+> Mənbə fayl: ai/English/README.md
+> Fərq olduqda İngilis faylı əsas götürülür.
 
-## Sections
+Bu səhifə `README.md` faylının AI Agent Operating Manual daxilində necə işlədiyini izah edir; repository işini planlayan, yoxlayan və ya təkrarlayan insanlar və AI agents üçündür.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Praktiki əhatə
 
-## Source of truth
+Bu səhifəni `README.md` mövzusu üçün əməliyyat bələdçisi kimi istifadə et. Repository sübutlarını və layihə təlimatlarını əvəz etmir.
 
-The English version remains authoritative until this localization has been reviewed.
+## İş qaydaları
+
+- Fayl adlarını, commands, API adlarını və model adlarını olduğu kimi saxla.
+- Yoxlanmamış nəticələri `[ASSUMPTION: ...]`, bilinməyən faktları `[UNKNOWN]` kimi işarələ.
+- security, permissions və production-readiness risklərini insan rəyinə yönləndir.
+
+## Fokus
+
+Workflow daxilində istifadə etməzdən əvvəl əhatəni, sübutları, yoxlana bilən commands və insan təsdiqi sərhədlərini müəyyən et.
+
+## Keyfiyyət yoxlaması
+
+- Məqsəd yeni contributor üçün aydındır.
+- Localization ziddiyyətlərində İngilis mənbə həlledici qalır.

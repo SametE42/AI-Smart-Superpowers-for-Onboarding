@@ -1,19 +1,27 @@
-# Three-Tier Memory
+# Three Tier Memory
 
-Three-tier memory separates always-available context from retrievable project memory and long-term archives.
+Hot, warm and cold memory patterns plus safety rules for durable agent knowledge.
 
-## Hot memory
+## Practical Scope
 
-Hot memory is always active. It contains the current goal, safety rules, project style, active constraints and the smallest possible operating instructions.
+This page explains how `memory/three-tier-memory.md` fits into the AI Agent Operating Manual. Use it when an agent or maintainer needs repeatable guidance for this topic without loading the entire repository.
 
-## Warm memory
+## Operating Guidance
 
-Warm memory is quickly retrievable. It contains project decisions, current tasks, architecture notes, reusable examples, user preferences and active working knowledge.
+- Treat repository evidence as authoritative and documentation as secondary.
+- Preserve file names, commands, API names and model names exactly.
+- Mark unverified conclusions as `[ASSUMPTION: ...]` and unknown facts as `[UNKNOWN]`.
+- Keep tool-specific behavior tied to the runtime that actually owns it.
+- Escalate security, permission and production-readiness risks to human review.
 
-## Cold memory
+## Focus
 
-Cold memory is long-term storage. It contains old decisions, completed tasks, logs, archived evaluations, deprecated instructions and historical lessons.
+Hot, warm and cold memory patterns plus safety rules for durable agent knowledge.
 
-## Operating rule
+## Quality Checklist
 
-Agents should promote only validated and reusable information into memory. They should prune obsolete or unsafe memory and keep memory updates reviewable.
+- The purpose is clear to a new repository user.
+- The guidance is useful for both AI agents and human maintainers.
+- No model-specific commands are invented unless they belong to the host tool.
+- Safety and human-approval boundaries remain visible.
+- English remains the authoritative source for localization.

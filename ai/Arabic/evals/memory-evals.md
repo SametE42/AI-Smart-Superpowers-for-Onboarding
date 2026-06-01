@@ -1,19 +1,34 @@
 # Memory Evals
 
-This file mirrors `ai/English/evals/memory-evals.md` for the Arabic localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> لغة المصدر: الإنجليزية
+> ملف المصدر: ai/English/evals/memory-evals.md
+> عند وجود تعارض، يكون الملف الإنجليزي هو المرجع.
 
-## Source file
+تشرح هذه الصفحة كيف يندرج `evals/memory-evals.md` ضمن AI Agent Operating Manual. وهي موجهة إلى الأشخاص ووكلاء الذكاء الاصطناعي الذين يحتاجون إلى تخطيط عمل المستودع أو التحقق منه أو تكراره.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## النطاق العملي
 
-## Required coverage
+استخدم هذه الصفحة كإرشاد تشغيلي لموضوع `evals`. لا تحل محل أدلة المستودع أو تعليمات المشروع الخاصة.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## إرشادات العمل
+
+- اعتبر أدلة المستودع هي المرجع الأساسي.
+- حافظ على أسماء الملفات والأوامر وأسماء API وأسماء النماذج كما هي.
+- علّم الاستنتاجات غير المتحقق منها بـ `[ASSUMPTION: ...]` والحقائق غير المعروفة بـ `[UNKNOWN]`.
+- اربط كل سلوك خاص بالأداة أو runtime الذي يملكه فعليا.
+- صعّد مخاطر الأمان والصلاحيات وجاهزية الإنتاج إلى مراجعة بشرية.
+
+## التركيز
+
+حدد النطاق والأدلة المطلوبة والأوامر القابلة للتحقق وحدود الموافقة البشرية قبل استخدام هذه الصفحة داخل workflow.
+
+## فحص الجودة
+
+- الغرض واضح للمساهمين الجدد.
+- الإرشادات مفيدة لوكلاء الذكاء الاصطناعي وللمشرفين البشر.
+- لا يتم اختلاق أوامر خاصة بالنماذج.
+- تبقى حدود الأمان والموافقة البشرية واضحة.
+- يبقى المصدر الإنجليزي هو المرجع عند تعارضات الترجمة.

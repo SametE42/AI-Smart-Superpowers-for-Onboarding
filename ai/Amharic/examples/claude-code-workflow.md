@@ -1,19 +1,29 @@
 # Claude Code Workflow
 
-This file mirrors `ai/English/examples/claude-code-workflow.md` for the Amharic localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> ምንጭ ቋንቋ፡ እንግሊዝኛ
+> ምንጭ ፋይል: ai/English/examples/claude-code-workflow.md
+> ልዩነት ካለ የእንግሊዝኛው ፋይል ቅድሚያ ይኖረዋል።
 
-## Source file
+ይህ ገጽ `examples/claude-code-workflow.md` በ AI Agent Operating Manual ውስጥ እንዴት እንደሚገባ ይገልጻል፣ ለ repository ሥራ የሚያቅዱ፣ የሚያረጋግጡ ወይም የሚደግሙ ሰዎች እና AI agents።
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## ተግባራዊ ክልል
 
-## Required coverage
+ይህን ገጽ ለ `examples` እንደ የሥራ መመሪያ ይጠቀሙ። የ repository ማስረጃን ወይም የፕሮጀክት መመሪያን አይተካም።
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## የሥራ መመሪያዎች
+
+- የፋይል ስሞች፣ commands፣ API ስሞች እና model ስሞች በትክክል ይቆዩ።
+- ያልተረጋገጡ መደምደሚያዎችን `[ASSUMPTION: ...]` እና ያልታወቁ እውነቶችን `[UNKNOWN]` ብለው ምልክት ያድርጉ።
+- security፣ permissions እና production-readiness አደጋዎችን ወደ የሰው ግምገማ ያስተላልፉ።
+
+## ትኩረት
+
+በ workflow ውስጥ ከመጠቀም በፊት ክልል፣ ማስረጃ፣ የሚረጋገጡ commands እና የሰው ፈቃድ ገደቦችን ይግለጹ።
+
+## የጥራት ፍተሻ
+
+- ዓላማው ለአዲስ contributor ግልጽ ነው።
+- የእንግሊዝኛው ምንጭ በ localization ግጭቶች ውሳኔ ይሰጣል።

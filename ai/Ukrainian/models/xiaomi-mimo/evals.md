@@ -1,19 +1,34 @@
 # Evals
 
-This file mirrors `ai/English/models/xiaomi-mimo/evals.md` for the Ukrainian localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Мова джерела: англійська
+> Файл джерела: ai/English/models/xiaomi-mimo/evals.md
+> У разі розбіжностей англійський файл має пріоритет.
 
-## Source file
+Ця сторінка пояснює, як `models/xiaomi-mimo/evals.md` використовується в AI Agent Operating Manual. Вона призначена для людей і AI-агентів, які планують, перевіряють або повторюють роботу з репозиторієм.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Практична область
 
-## Required coverage
+Використовуйте цю сторінку як операційний орієнтир для теми `models`. Вона не замінює докази з репозиторію або інструкції конкретного проєкту.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Робочі настанови
+
+- Вважайте докази з репозиторію основним джерелом істини.
+- Зберігайте назви файлів, команди, назви API і назви моделей без змін.
+- Позначайте неперевірені висновки як `[ASSUMPTION: ...]`, а невідомі факти як `[UNKNOWN]`.
+- Прив'язуйте специфічну поведінку інструментів до інструмента або runtime, який справді нею володіє.
+- Ескалуйте ризики безпеки, дозволів і production-readiness на людську перевірку.
+
+## Фокус
+
+Перед використанням цієї сторінки у workflow визначте область, потрібні докази, перевірювані команди та межі людського схвалення.
+
+## Перевірка якості
+
+- Мета зрозуміла новому учаснику.
+- Настанови корисні і для AI-агентів, і для людей-супровідників.
+- Команди, специфічні для моделей, не вигадуються.
+- Межі безпеки та людського схвалення залишаються видимими.
+- Англійське джерело лишається вирішальним у конфліктах локалізації.

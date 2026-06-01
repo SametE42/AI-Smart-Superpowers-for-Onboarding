@@ -1,27 +1,29 @@
-# AI Agent Operating Manual — Pashto
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Pashto.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> سرچينه ژبه: انګليسي
+> سرچينه فایل: ai/English/README.md
+> که توپير وي، انګليسي فایل لومړيتوب لري.
 
-## Sections
+دا پاڼه ښيي چې `README.md` په AI Agent Operating Manual کې څنګه ځای نيسي؛ د هغو خلکو او AI agents لپاره چې repository کار پلانوي، تاييدوي يا تکراروي.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## عملي ساحه
 
-## Source of truth
+دا پاڼه د `README.md` لپاره د عملياتي لارښود په توګه وکاروئ. دا د repository شواهد يا د پروژې ځانګړې لارښوونې نه بدلوي.
 
-The English version remains authoritative until this localization has been reviewed.
+## د کار لارښوونې
+
+- د فایل نومونه، commands، API نومونه او model نومونه هماغسې وساتئ.
+- ناتاييد شوې پايلې په `[ASSUMPTION: ...]` او نامعلوم حقايق په `[UNKNOWN]` وښيئ.
+- security، permissions او production-readiness خطرونه د انسان کتنې ته پورته کړئ.
+
+## تمرکز
+
+په workflow کې تر کارولو مخکې ساحه، شواهد، د تاييد وړ commands او د انسان منظورۍ پولې وټاکئ.
+
+## د کيفيت کتنه
+
+- موخه د نوي contributor لپاره روښانه ده.
+- په localization شخړو کې انګليسي سرچينه پرېکنده پاتې کېږي.

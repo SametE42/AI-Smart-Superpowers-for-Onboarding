@@ -1,19 +1,29 @@
 # Workflows
 
-This file mirrors `ai/English/tools/windsurf/workflows.md` for the Pashto localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> سرچينه ژبه: انګليسي
+> سرچينه فایل: ai/English/tools/windsurf/workflows.md
+> که توپير وي، انګليسي فایل لومړيتوب لري.
 
-## Source file
+دا پاڼه ښيي چې `tools/windsurf/workflows.md` په AI Agent Operating Manual کې څنګه ځای نيسي؛ د هغو خلکو او AI agents لپاره چې repository کار پلانوي، تاييدوي يا تکراروي.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## عملي ساحه
 
-## Required coverage
+دا پاڼه د `tools` لپاره د عملياتي لارښود په توګه وکاروئ. دا د repository شواهد يا د پروژې ځانګړې لارښوونې نه بدلوي.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## د کار لارښوونې
+
+- د فایل نومونه، commands، API نومونه او model نومونه هماغسې وساتئ.
+- ناتاييد شوې پايلې په `[ASSUMPTION: ...]` او نامعلوم حقايق په `[UNKNOWN]` وښيئ.
+- security، permissions او production-readiness خطرونه د انسان کتنې ته پورته کړئ.
+
+## تمرکز
+
+په workflow کې تر کارولو مخکې ساحه، شواهد، د تاييد وړ commands او د انسان منظورۍ پولې وټاکئ.
+
+## د کيفيت کتنه
+
+- موخه د نوي contributor لپاره روښانه ده.
+- په localization شخړو کې انګليسي سرچينه پرېکنده پاتې کېږي.

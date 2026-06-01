@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Norwegian
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Norwegian.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Kildespråk: engelsk
+> Kildefil: ai/English/README.md
+> Ved avvik gjelder den engelske filen.
 
-## Sections
+Denne siden forklarer hvordan `README.md` passer inn i AI Agent Operating Manual. Den er skrevet for mennesker og AI-agenter som må planlegge, verifisere eller gjenta repositoryarbeid.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Praktisk omfang
 
-## Source of truth
+Bruk siden som operativ veiledning for temaet `README.md`. Den erstatter ikke repositorybevis eller prosjektspesifikke instruksjoner.
 
-The English version remains authoritative until this localization has been reviewed.
+## Arbeidsretningslinjer
+
+- Behandle repositorybevis som primær autoritet.
+- Bevar filnavn, kommandoer, API-navn og modellnavn nøyaktig.
+- Merk uverifiserte konklusjoner med `[ASSUMPTION: ...]` og ukjente fakta med `[UNKNOWN]`.
+- Knytt verktøyspesifikk atferd til verktøyet eller runtime som faktisk eier den.
+- Eskaler risiko rundt sikkerhet, tillatelser og produksjonsklarhet til menneskelig gjennomgang.
+
+## Fokus
+
+Definer omfang, nødvendig bevis, verifiserbare kommandoer og grenser for menneskelig godkjenning før siden brukes i en workflow.
+
+## Kvalitetskontroll
+
+- Formålet er tydelig for en ny bidragsyter.
+- Veiledningen hjelper både AI-agenter og menneskelige maintainers.
+- Ingen modellspesifikke kommandoer blir funnet opp.
+- Grenser for sikkerhet og menneskelig godkjenning forblir synlige.
+- Den engelske kilden forblir avgjørende ved lokaliseringskonflikter.

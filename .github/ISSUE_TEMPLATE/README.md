@@ -1,3 +1,3 @@
 # Issue Templates
 
-Use these templates to collect consistent reports for model requests, documentation updates, bugs and compatibility changes.
+Use these templates to collect consistent reports for bugs, focused improvements and compatibility changes.

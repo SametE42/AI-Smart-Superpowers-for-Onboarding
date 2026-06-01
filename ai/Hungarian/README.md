@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Hungarian
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Hungarian.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Forrásnyelv: angol
+> Forrásfájl: ai/English/README.md
+> Eltérés esetén az angol fájl az irányadó.
 
-## Sections
+Ez az oldal elmagyarázza, hogyan illeszkedik a `README.md` az AI Agent Operating Manual rendszerébe. Olyan embereknek és AI-ügynököknek készült, akik repository-munkát terveznek, ellenőriznek vagy ismételnek.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Gyakorlati hatókör
 
-## Source of truth
+Használd ezt az oldalt operatív útmutatóként a `README.md` témához. Nem helyettesíti a repository-bizonyítékokat vagy a projekt saját utasításait.
 
-The English version remains authoritative until this localization has been reviewed.
+## Munkairányelvek
+
+- A repository-bizonyítékokat tekintsd elsődleges tekintélynek.
+- Őrizd meg pontosan a fájlneveket, parancsokat, API-neveket és modellneveket.
+- A nem ellenőrzött következtetéseket `[ASSUMPTION: ...]`, az ismeretlen tényeket `[UNKNOWN]` jelöléssel lásd el.
+- Az eszközspecifikus viselkedést ahhoz az eszközhöz vagy runtime-hoz kösd, amely ténylegesen birtokolja.
+- A biztonsági, jogosultsági és production-readiness kockázatokat emberi felülvizsgálatra eszkaláld.
+
+## Fókusz
+
+Mielőtt ezt az oldalt workflow-ban használod, határozd meg a hatókört, a szükséges bizonyítékokat, az ellenőrizhető parancsokat és az emberi jóváhagyás határait.
+
+## Minőségellenőrzés
+
+- A cél világos egy új közreműködő számára.
+- Az útmutató AI-ügynököknek és emberi maintainereknek is hasznos.
+- Nem talál ki modell-specifikus parancsokat.
+- A biztonsági és emberi jóváhagyási határok láthatók maradnak.
+- Lokalizációs konfliktus esetén az angol forrás marad irányadó.

@@ -1,27 +1,27 @@
-# Self-Evolving Agents
+# Self Evolving Agents
 
-A self-evolving agent improves its own supporting artifacts without changing safety boundaries automatically.
+AI agent roles, collaboration patterns and human handoff boundaries.
 
-## Evolvable artifacts
+## Practical Scope
 
-- Prompts
-- Skills
-- Tool descriptions
-- Memory schemas
-- Routing policies
-- Evaluation rubrics
-- Workflow instructions
+This page explains how `agents/self-evolving-agents.md` fits into the AI Agent Operating Manual. Use it when an agent or maintainer needs repeatable guidance for this topic without loading the entire repository.
 
-## Non-negotiable controls
+## Operating Guidance
 
-- Human approval for risky changes
-- Regression tests before promotion
-- Versioned changelogs
-- Rollback plan
-- Permission boundaries
-- Secret handling rules
-- Audit logs
+- Treat repository evidence as authoritative and documentation as secondary.
+- Preserve file names, commands, API names and model names exactly.
+- Mark unverified conclusions as `[ASSUMPTION: ...]` and unknown facts as `[UNKNOWN]`.
+- Keep tool-specific behavior tied to the runtime that actually owns it.
+- Escalate security, permission and production-readiness risks to human review.
 
-## Safe loop
+## Focus
 
-Observe → evaluate → reflect → propose change → test → review → promote → monitor.
+AI agent roles, collaboration patterns and human handoff boundaries.
+
+## Quality Checklist
+
+- The purpose is clear to a new repository user.
+- The guidance is useful for both AI agents and human maintainers.
+- No model-specific commands are invented unless they belong to the host tool.
+- Safety and human-approval boundaries remain visible.
+- English remains the authoritative source for localization.

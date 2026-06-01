@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Estonian
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Estonian.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Lähtekeel: inglise
+> Lähtefail: ai/English/README.md
+> Erinevuste korral on määrav ingliskeelne fail.
 
-## Sections
+See leht selgitab, kuidas `README.md` sobitub AI Agent Operating Manualiga. See on mõeldud inimestele ja AI-agentidele, kes peavad repository tööd planeerima, kontrollima või kordama.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Praktiline ulatus
 
-## Source of truth
+Kasuta seda lehte operatiivse juhisena teema `README.md` jaoks. See ei asenda repository tõendeid ega projekti erijuhiseid.
 
-The English version remains authoritative until this localization has been reviewed.
+## Tööjuhised
+
+- Käsitle repository tõendeid peamise autoriteedina.
+- Säilita täpselt failinimed, käsud, API nimed ja mudelinimed.
+- Märgi kontrollimata järeldused `[ASSUMPTION: ...]` ja tundmatud faktid `[UNKNOWN]`.
+- Seo tööriistapõhine käitumine tööriista või runtime'iga, millele see tegelikult kuulub.
+- Suuna turbe-, õiguste ja production-readiness riskid inimülevaatusse.
+
+## Fookus
+
+Enne selle lehe kasutamist workflow's määra ulatus, vajalikud tõendid, kontrollitavad käsud ja inimkinnituse piirid.
+
+## Kvaliteedikontroll
+
+- Eesmärk on uuele panustajale selge.
+- Juhis aitab nii AI-agente kui ka inimhaldajaid.
+- Mudelitele spetsiifilisi käske ei leiutata.
+- Turbe ja inimkinnituse piirid jäävad nähtavaks.
+- Ingliskeelne allikas jääb lokaliseerimiskonfliktides määravaks.

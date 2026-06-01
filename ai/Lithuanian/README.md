@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Lithuanian
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Lithuanian.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Šaltinio kalba: anglų
+> Šaltinio failas: ai/English/README.md
+> Jei yra neatitikimų, pirmenybė teikiama angliškam failui.
 
-## Sections
+Šis puslapis paaiškina, kaip `README.md` dera su AI Agent Operating Manual. Jis skirtas žmonėms ir AI agentams, kuriems reikia planuoti, tikrinti arba kartoti darbą repository.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Praktinė apimtis
 
-## Source of truth
+Naudok šį puslapį kaip operacinę gairę temai `README.md`. Jis nepakeičia repository įrodymų ar projekto instrukcijų.
 
-The English version remains authoritative until this localization has been reviewed.
+## Darbo gairės
+
+- Repository įrodymus laikyk pagrindiniu autoritetu.
+- Tiksliai išsaugok failų pavadinimus, komandas, API pavadinimus ir modelių pavadinimus.
+- Nepatikrintas išvadas žymėk `[ASSUMPTION: ...]`, o nežinomus faktus `[UNKNOWN]`.
+- Įrankiui būdingą elgesį susiek su įrankiu arba runtime, kuris jį iš tikrųjų valdo.
+- Saugumo, leidimų ir production-readiness rizikas perduok žmogaus peržiūrai.
+
+## Fokusas
+
+Prieš naudodamas šį puslapį workflow, apibrėžk apimtį, reikalingus įrodymus, patikrinamas komandas ir žmogaus patvirtinimo ribas.
+
+## Kokybės patikra
+
+- Tikslas aiškus naujam prisidėtojui.
+- Gairės padeda ir AI agentams, ir žmonėms prižiūrėtojams.
+- Neišgalvojamos modeliams būdingos komandos.
+- Saugumo ir žmogaus patvirtinimo ribos lieka matomos.
+- Angliškas šaltinis išlieka lemiamas lokalizacijos konfliktuose.

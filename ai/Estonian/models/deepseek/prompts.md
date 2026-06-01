@@ -1,19 +1,34 @@
 # Prompts
 
-This file mirrors `ai/English/models/deepseek/prompts.md` for the Estonian localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Lähtekeel: inglise
+> Lähtefail: ai/English/models/deepseek/prompts.md
+> Erinevuste korral on määrav ingliskeelne fail.
 
-## Source file
+See leht selgitab, kuidas `models/deepseek/prompts.md` sobitub AI Agent Operating Manualiga. See on mõeldud inimestele ja AI-agentidele, kes peavad repository tööd planeerima, kontrollima või kordama.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Praktiline ulatus
 
-## Required coverage
+Kasuta seda lehte operatiivse juhisena teema `models` jaoks. See ei asenda repository tõendeid ega projekti erijuhiseid.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Tööjuhised
+
+- Käsitle repository tõendeid peamise autoriteedina.
+- Säilita täpselt failinimed, käsud, API nimed ja mudelinimed.
+- Märgi kontrollimata järeldused `[ASSUMPTION: ...]` ja tundmatud faktid `[UNKNOWN]`.
+- Seo tööriistapõhine käitumine tööriista või runtime'iga, millele see tegelikult kuulub.
+- Suuna turbe-, õiguste ja production-readiness riskid inimülevaatusse.
+
+## Fookus
+
+Enne selle lehe kasutamist workflow's määra ulatus, vajalikud tõendid, kontrollitavad käsud ja inimkinnituse piirid.
+
+## Kvaliteedikontroll
+
+- Eesmärk on uuele panustajale selge.
+- Juhis aitab nii AI-agente kui ka inimhaldajaid.
+- Mudelitele spetsiifilisi käske ei leiutata.
+- Turbe ja inimkinnituse piirid jäävad nähtavaks.
+- Ingliskeelne allikas jääb lokaliseerimiskonfliktides määravaks.

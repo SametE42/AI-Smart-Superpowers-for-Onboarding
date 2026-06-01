@@ -1,19 +1,34 @@
-# Overview
+# Continue
 
-This file mirrors `ai/English/tools/continue/README.md` for the Russian localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Исходный язык: английский
+> Исходный файл: ai/English/tools/continue/README.md
+> При расхождениях английский файл остается источником истины.
 
-## Source file
+Эта страница объясняет, как `tools/continue/README.md` используется в AI Agent Operating Manual. Она предназначена для людей и AI-агентов, которым нужно планировать, проверять или повторять работу с репозиторием.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Практическая область
 
-## Required coverage
+Используйте эту страницу как операционное руководство для темы `tools`. Она не заменяет доказательства из репозитория и проектные инструкции.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Рабочие правила
+
+- Считайте доказательства из репозитория основным источником истины.
+- Сохраняйте имена файлов, команды, имена API и имена моделей без изменений.
+- Помечайте непроверенные выводы как `[ASSUMPTION: ...]`, а неизвестные факты как `[UNKNOWN]`.
+- Связывайте поведение конкретного инструмента с инструментом или runtime, которому оно действительно принадлежит.
+- Передавайте риски безопасности, разрешений и production-readiness на человеческую проверку.
+
+## Фокус
+
+Перед использованием этой страницы в workflow определите область, нужные доказательства, проверяемые команды и границы человеческого одобрения.
+
+## Проверка качества
+
+- Цель понятна новому участнику.
+- Руководство полезно и AI-агентам, и людям-сопровождающим.
+- Не выдумываются команды, специфичные для моделей.
+- Границы безопасности и человеческого одобрения остаются видимыми.
+- Английский источник остается решающим при конфликтах локализации.

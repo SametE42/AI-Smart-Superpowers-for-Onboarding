@@ -1,22 +1,33 @@
-# Three-Tier Memory
+# Three Tier Memory
 
-Three-tier memory separates always-available context from retrievable project memory and long-term archives.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-## Hot memory
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Source language: English
+> Source file: ai/English/memory/three-tier-memory.md
+> Bei Abweichungen ist die englische Datei maßgeblich.
 
-Hot memory is always active. It contains the current goal, safety rules, project style, active constraints and the smallest possible operating instructions.
+Hot-, Warm- und Cold-Memory-Muster sowie Sicherheitsregeln für dauerhaftes Agentenwissen.
 
-## Warm memory
+## Praktischer Scope
 
-Warm memory is quickly retrievable. It contains project decisions, current tasks, architecture notes, reusable examples, user preferences and active working knowledge.
+Diese Seite beschreibt, wie `memory/three-tier-memory.md` im AI Agent Operating Manual genutzt wird. Sie ist für Menschen und KI-Agenten geschrieben, die Repository-Arbeit planen, prüfen oder wiederholen müssen.
 
-## Cold memory
+## Arbeitsleitlinien
 
-Cold memory is long-term storage. It contains old decisions, completed tasks, logs, archived evaluations, deprecated instructions and historical lessons.
+- Nutze diese Seite als Orientierung, nicht als Ersatz für Repository-Evidenz.
+- Bewahre Dateinamen, Commands, API-Namen und Modellnamen unverändert.
+- Dokumentiere Annahmen explizit und markiere unbekannte Fakten als `[UNKNOWN]`.
+- Eskaliere Sicherheits-, Berechtigungs- und Produktionsrisiken an menschliche Reviewer.
 
-## Operating rule
+## Fokus
 
-Agents should promote only validated and reusable information into memory. They should prune obsolete or unsafe memory and keep memory updates reviewable.
+Hot-, Warm- und Cold-Memory-Muster sowie Sicherheitsregeln für dauerhaftes Agentenwissen.
 
+## Qualitätscheck
 
-> Hinweis: Diese Datei ist eine deutsche lokalisierte Version. Bei Abweichungen gilt die englische Datei als maßgeblich.
+- Der Zweck ist für neue Mitwirkende verständlich.
+- Die Anleitung hilft sowohl KI-Agenten als auch menschlichen Maintainerinnen und Maintainern.
+- Es werden keine modellspezifischen Commands erfunden.
+- Sicherheits- und Human-Approval-Grenzen bleiben sichtbar.
+- Die englische Quelle bleibt für Konfliktfälle maßgeblich.

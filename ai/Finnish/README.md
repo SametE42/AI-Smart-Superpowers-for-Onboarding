@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Finnish
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Finnish.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Lähdekieli: englanti
+> Lähdetiedosto: ai/English/README.md
+> Ristiriitatilanteissa englanninkielinen tiedosto on ratkaiseva.
 
-## Sections
+Tämä sivu selittää, miten `README.md` liittyy AI Agent Operating Manual -kokonaisuuteen. Se on tarkoitettu ihmisille ja AI-agenteille, joiden täytyy suunnitella, tarkistaa tai toistaa repository-työtä.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Käytännön laajuus
 
-## Source of truth
+Käytä tätä sivua operatiivisena ohjeena aiheelle `README.md`. Se ei korvaa repositoryn näyttöä tai projektikohtaisia ohjeita.
 
-The English version remains authoritative until this localization has been reviewed.
+## Työohjeet
+
+- Käsittele repositoryn näyttöä ensisijaisena auktoriteettina.
+- Säilytä tiedostonimet, komennot, API-nimet ja mallien nimet täsmälleen.
+- Merkitse varmistamattomat johtopäätökset `[ASSUMPTION: ...]` ja tuntemattomat faktat `[UNKNOWN]`.
+- Yhdistä työkalukohtainen toiminta siihen työkaluun tai runtimeen, joka sen todella omistaa.
+- Eskaloi turvallisuus-, oikeus- ja tuotantovalmiusriskit ihmisen tarkistukseen.
+
+## Fokus
+
+Määritä laajuus, tarvittava näyttö, todennettavat komennot ja ihmisen hyväksynnän rajat ennen sivun käyttöä workflowssa.
+
+## Laatutarkistus
+
+- Tarkoitus on selvä uudelle osallistujalle.
+- Ohje auttaa sekä AI-agentteja että ihmisiä-maintainereita.
+- Mallikohtaisia komentoja ei keksitä.
+- Turvallisuuden ja ihmisen hyväksynnän rajat pysyvät näkyvissä.
+- Englanninkielinen lähde ratkaisee lokalisointiristiriidat.

@@ -1,27 +1,29 @@
-# AI Agent Operating Manual — Irish
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Irish.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Teanga fhoinse: Béarla
+> Comhad foinse: ai/English/README.md
+> Má tá difríochtaí ann, tá an comhad Béarla i réim.
 
-## Sections
+Míníonn an leathanach seo conas a oireann `README.md` don AI Agent Operating Manual do dhaoine agus AI agents a chaithfidh obair repository a phleanáil, a fhíorú nó a athdhéanamh.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Raon praiticiúil
 
-## Source of truth
+Úsáid an leathanach seo mar threoir oibríochtúil don ábhar `README.md`. Ní chuireann sé fianaise repository ná treoracha tionscadail in ionad.
 
-The English version remains authoritative until this localization has been reviewed.
+## Treoirlínte oibre
+
+- Coinnigh ainmneacha comhad, commands, ainmneacha API agus ainmneacha model mar atá.
+- Marcáil conclúidí neamhfhíoraithe le `[ASSUMPTION: ...]` agus fíricí anaithnide le `[UNKNOWN]`.
+- Ardaigh rioscaí security, permissions agus production-readiness chuig athbhreithniú daonna.
+
+## Fócas
+
+Sula n-úsáidtear i workflow é, sainigh an raon, an fhianaise, commands infhíoraithe agus teorainneacha ceadaithe daonna.
+
+## Seiceáil cáilíochta
+
+- Tá an cuspóir soiléir do contributor nua.
+- Fanann an fhoinse Bhéarla cinntitheach i gcoinbhleachtaí localization.

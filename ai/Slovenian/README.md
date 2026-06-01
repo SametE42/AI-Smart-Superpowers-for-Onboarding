@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Slovenian
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Slovenian.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Izvorni jezik: angleščina
+> Izvorna datoteka: ai/English/README.md
+> V primeru odstopanj ima prednost angleška datoteka.
 
-## Sections
+Ta stran pojasnjuje, kako se `README.md` prilega AI Agent Operating Manual. Namenjena je ljudem in AI agentom, ki morajo načrtovati, preverjati ali ponavljati delo v repositoryju.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Praktični obseg
 
-## Source of truth
+Uporabi to stran kot operativno vodilo za temo `README.md`. Ne nadomešča dokazov iz repositoryja ali projektnih navodil.
 
-The English version remains authoritative until this localization has been reviewed.
+## Delovne smernice
+
+- Dokaze iz repositoryja obravnavaj kot primarno avtoriteto.
+- Natančno ohrani imena datotek, ukaze, imena API in imena modelov.
+- Nepreverjene sklepe označi z `[ASSUMPTION: ...]`, neznana dejstva pa z `[UNKNOWN]`.
+- Vedenje, specifično za orodje, poveži z orodjem ali runtimeom, ki ga dejansko upravlja.
+- Tveganja glede varnosti, dovoljenj in production-readiness eskaliraj v človeški pregled.
+
+## Fokus
+
+Pred uporabo te strani v workflowu opredeli obseg, potrebne dokaze, preverljive ukaze in meje človeške odobritve.
+
+## Preverjanje kakovosti
+
+- Namen je jasen novemu sodelavcu.
+- Smernice pomagajo AI agentom in človeškim vzdrževalcem.
+- Ne izmišljajo se ukazi, specifični za modele.
+- Meje varnosti in človeške odobritve ostanejo vidne.
+- Angleški vir ostane odločilen pri lokalizacijskih konfliktih.

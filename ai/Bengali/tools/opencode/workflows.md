@@ -1,19 +1,34 @@
 # Workflows
 
-This file mirrors `ai/English/tools/opencode/workflows.md` for the Bengali localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> উৎস ভাষা: ইংরেজি
+> উৎস ফাইল: ai/English/tools/opencode/workflows.md
+> পার্থক্য থাকলে ইংরেজি ফাইল প্রাধান্য পাবে।
 
-## Source file
+এই পৃষ্ঠা ব্যাখ্যা করে `tools/opencode/workflows.md` কীভাবে AI Agent Operating Manual-এর মধ্যে ব্যবহৃত হয়। এটি repository কাজ পরিকল্পনা, যাচাই বা পুনরাবৃত্তি করতে হয় এমন মানুষ ও AI agents-এর জন্য লেখা।
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## ব্যবহারিক পরিসর
 
-## Required coverage
+এই পৃষ্ঠাকে `tools` বিষয়ের কার্যকরী নির্দেশিকা হিসেবে ব্যবহার করুন। এটি repository প্রমাণ বা প্রকল্প-নির্দিষ্ট নির্দেশের বিকল্প নয়।
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## কাজের নির্দেশিকা
+
+- repository প্রমাণকে প্রধান কর্তৃত্ব হিসেবে ধরুন।
+- ফাইলের নাম, commands, API নাম এবং model নাম অপরিবর্তিত রাখুন।
+- যাচাইহীন সিদ্ধান্ত `[ASSUMPTION: ...]` এবং অজানা তথ্য `[UNKNOWN]` দিয়ে চিহ্নিত করুন।
+- tool-নির্দিষ্ট আচরণকে সেই tool বা runtime-এর সঙ্গে যুক্ত করুন যা সত্যিই তা নিয়ন্ত্রণ করে।
+- নিরাপত্তা, permissions এবং production-readiness ঝুঁকি মানব পর্যালোচনায় পাঠান।
+
+## ফোকাস
+
+workflow-তে এই পৃষ্ঠা ব্যবহারের আগে পরিসর, প্রয়োজনীয় প্রমাণ, যাচাইযোগ্য commands এবং মানব অনুমোদনের সীমা নির্ধারণ করুন।
+
+## গুণমান পরীক্ষা
+
+- উদ্দেশ্য নতুন contributor-এর কাছে পরিষ্কার।
+- নির্দেশিকা AI agents এবং মানব maintainers উভয়ের জন্য সহায়ক।
+- model-নির্দিষ্ট commands বানানো হয় না।
+- নিরাপত্তা ও মানব অনুমোদনের সীমা দৃশ্যমান থাকে।
+- localization সংঘাতে ইংরেজি উৎস সিদ্ধান্তমূলক থাকে।

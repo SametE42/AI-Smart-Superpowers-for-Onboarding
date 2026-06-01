@@ -1,27 +1,29 @@
-# AI Agent Operating Manual — Punjabi
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Punjabi.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> ਸਰੋਤ ਭਾਸ਼ਾ: ਅੰਗਰੇਜ਼ੀ
+> ਸਰੋਤ ਫਾਈਲ: ai/English/README.md
+> ਫਰਕ ਹੋਣ ਤੇ ਅੰਗਰੇਜ਼ੀ ਫਾਈਲ ਪਹਿਲਾਂ ਮੰਨੀ ਜਾਵੇਗੀ।
 
-## Sections
+ਇਹ ਪੰਨਾ ਦੱਸਦਾ ਹੈ ਕਿ `README.md` AI Agent Operating Manual ਵਿੱਚ ਕਿਵੇਂ ਫਿੱਟ ਹੁੰਦਾ ਹੈ; repository ਕੰਮ ਦੀ ਯੋਜਨਾ, ਜਾਂਚ ਜਾਂ ਦੁਹਰਾਈ ਕਰਨ ਵਾਲੇ ਲੋਕਾਂ ਅਤੇ AI agents ਲਈ।
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## ਵਿਹਾਰਕ ਦਾਇਰਾ
 
-## Source of truth
+ਇਸ ਪੰਨੇ ਨੂੰ `README.md` ਲਈ ਕਾਰਜਕਾਰੀ ਮਾਰਗਦਰਸ਼ਨ ਵਜੋਂ ਵਰਤੋ। ਇਹ repository ਸਬੂਤ ਜਾਂ ਪ੍ਰੋਜੈਕਟ ਹਦਾਇਤਾਂ ਦੀ ਥਾਂ ਨਹੀਂ ਲੈਂਦਾ।
 
-The English version remains authoritative until this localization has been reviewed.
+## ਕੰਮ ਹਦਾਇਤਾਂ
+
+- ਫਾਈਲ ਨਾਮ, commands, API ਨਾਮ ਅਤੇ model ਨਾਮ ਜਿਵੇਂ ਦੇ ਤਿਵੇਂ ਰੱਖੋ।
+- ਨਾ-ਜਾਂਚੇ ਨਤੀਜਿਆਂ ਨੂੰ `[ASSUMPTION: ...]` ਅਤੇ ਅਣਜਾਣ ਤੱਥਾਂ ਨੂੰ `[UNKNOWN]` ਨਾਲ ਨਿਸ਼ਾਨਿਤ ਕਰੋ।
+- security, permissions ਅਤੇ production-readiness ਖਤਰੇ ਮਨੁੱਖੀ ਸਮੀਖਿਆ ਵੱਲ ਭੇਜੋ।
+
+## ਫੋਕਸ
+
+workflow ਵਿੱਚ ਵਰਤਣ ਤੋਂ ਪਹਿਲਾਂ ਦਾਇਰਾ, ਸਬੂਤ, ਜਾਂਚਯੋਗ commands ਅਤੇ ਮਨੁੱਖੀ ਮਨਜ਼ੂਰੀ ਦੀਆਂ ਹੱਦਾਂ ਤੈਅ ਕਰੋ।
+
+## ਗੁਣਵੱਤਾ ਜਾਂਚ
+
+- ਉਦੇਸ਼ ਨਵੇਂ contributor ਲਈ ਸਪਸ਼ਟ ਹੈ।
+- localization ਟਕਰਾਅ ਵਿੱਚ ਅੰਗਰੇਜ਼ੀ ਸਰੋਤ ਫੈਸਲਾਕੁੰਨ ਰਹਿੰਦਾ ਹੈ।

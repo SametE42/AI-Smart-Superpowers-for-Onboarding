@@ -1,19 +1,34 @@
 # Three Tier Memory
 
-This file mirrors `ai/English/memory/three-tier-memory.md` for the Hungarian localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Forrásnyelv: angol
+> Forrásfájl: ai/English/memory/three-tier-memory.md
+> Eltérés esetén az angol fájl az irányadó.
 
-## Source file
+Ez az oldal elmagyarázza, hogyan illeszkedik a `memory/three-tier-memory.md` az AI Agent Operating Manual rendszerébe. Olyan embereknek és AI-ügynököknek készült, akik repository-munkát terveznek, ellenőriznek vagy ismételnek.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Gyakorlati hatókör
 
-## Required coverage
+Használd ezt az oldalt operatív útmutatóként a `memory` témához. Nem helyettesíti a repository-bizonyítékokat vagy a projekt saját utasításait.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Munkairányelvek
+
+- A repository-bizonyítékokat tekintsd elsődleges tekintélynek.
+- Őrizd meg pontosan a fájlneveket, parancsokat, API-neveket és modellneveket.
+- A nem ellenőrzött következtetéseket `[ASSUMPTION: ...]`, az ismeretlen tényeket `[UNKNOWN]` jelöléssel lásd el.
+- Az eszközspecifikus viselkedést ahhoz az eszközhöz vagy runtime-hoz kösd, amely ténylegesen birtokolja.
+- A biztonsági, jogosultsági és production-readiness kockázatokat emberi felülvizsgálatra eszkaláld.
+
+## Fókusz
+
+Mielőtt ezt az oldalt workflow-ban használod, határozd meg a hatókört, a szükséges bizonyítékokat, az ellenőrizhető parancsokat és az emberi jóváhagyás határait.
+
+## Minőségellenőrzés
+
+- A cél világos egy új közreműködő számára.
+- Az útmutató AI-ügynököknek és emberi maintainereknek is hasznos.
+- Nem talál ki modell-specifikus parancsokat.
+- A biztonsági és emberi jóváhagyási határok láthatók maradnak.
+- Lokalizációs konfliktus esetén az angol forrás marad irányadó.

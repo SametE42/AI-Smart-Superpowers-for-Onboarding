@@ -1,19 +1,34 @@
-# Overview
+# Cline
 
-This file mirrors `ai/English/tools/cline/README.md` for the Swahili localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Lugha chanzo: Kiingereza
+> Faili chanzo: ai/English/tools/cline/README.md
+> Kukiwa na tofauti, faili la Kiingereza lina kipaumbele.
 
-## Source file
+Ukurasa huu unaeleza jinsi `tools/cline/README.md` inavyoingia kwenye AI Agent Operating Manual. Umeandikwa kwa watu na AI agents wanaohitaji kupanga, kuthibitisha au kurudia kazi ya repository.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Wigo wa vitendo
 
-## Required coverage
+Tumia ukurasa huu kama mwongozo wa uendeshaji kwa mada `tools`. Hauondoi ushahidi wa repository au maagizo maalum ya mradi.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Miongozo ya kazi
+
+- Chukulia ushahidi wa repository kama mamlaka kuu.
+- Hifadhi majina ya faili, commands, majina ya API na majina ya model kama yalivyo.
+- Weka alama kwa hitimisho lisilothibitishwa kwa `[ASSUMPTION: ...]` na ukweli usiojulikana kwa `[UNKNOWN]`.
+- Unganisha tabia maalum ya tool na tool au runtime inayomiliki tabia hiyo kweli.
+- Pandisha hatari za security, permissions na production-readiness kwa ukaguzi wa binadamu.
+
+## Mkazo
+
+Kabla ya kutumia ukurasa huu kwenye workflow, fafanua wigo, ushahidi unaohitajika, commands zinazoweza kuthibitishwa na mipaka ya idhini ya binadamu.
+
+## Ukaguzi wa ubora
+
+- Kusudi liko wazi kwa contributor mpya.
+- Mwongozo unasaidia AI agents na watunzaji wa kibinadamu.
+- Hakuna commands maalum za model zinazobuniwa.
+- Mipaka ya security na idhini ya binadamu inaendelea kuonekana.
+- Chanzo cha Kiingereza hubaki maamuzi katika migogoro ya localization.

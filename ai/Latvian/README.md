@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Latvian
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Latvian.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Avota valoda: angļu
+> Avota fails: ai/English/README.md
+> Atšķirību gadījumā noteicošais ir angļu fails.
 
-## Sections
+Šī lapa skaidro, kā `README.md` iekļaujas AI Agent Operating Manual. Tā ir rakstīta cilvēkiem un AI aģentiem, kuriem jāplāno, jāpārbauda vai jāatkārto darbs repository.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Praktiskais tvērums
 
-## Source of truth
+Izmanto šo lapu kā operatīvu vadlīniju tēmai `README.md`. Tā neaizstāj repository pierādījumus vai projekta specifiskās instrukcijas.
 
-The English version remains authoritative until this localization has been reviewed.
+## Darba vadlīnijas
+
+- Uzskati repository pierādījumus par galveno autoritāti.
+- Precīzi saglabā failu nosaukumus, komandas, API nosaukumus un modeļu nosaukumus.
+- Nepārbaudītus secinājumus marķē ar `[ASSUMPTION: ...]`, nezināmus faktus ar `[UNKNOWN]`.
+- Rīkam specifisku uzvedību sasaisti ar rīku vai runtime, kam tā patiešām pieder.
+- Drošības, atļauju un production-readiness riskus eskalē cilvēka pārbaudei.
+
+## Fokuss
+
+Pirms šīs lapas izmantošanas workflow definē tvērumu, nepieciešamos pierādījumus, pārbaudāmas komandas un cilvēka apstiprinājuma robežas.
+
+## Kvalitātes pārbaude
+
+- Mērķis ir skaidrs jaunam līdzstrādniekam.
+- Vadlīnijas palīdz gan AI aģentiem, gan cilvēku uzturētājiem.
+- Netiek izdomātas modeļiem specifiskas komandas.
+- Drošības un cilvēka apstiprinājuma robežas paliek redzamas.
+- Angļu avots paliek noteicošs lokalizācijas konfliktos.

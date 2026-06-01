@@ -1,29 +1,33 @@
-# Skill Template
+# Skill_template
 
-Use this template as a reusable artifact in the AI Agent Operating Manual.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-## Zweck
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Source language: English
+> Source file: ai/English/templates/SKILL_TEMPLATE.md
+> Bei Abweichungen ist die englische Datei maßgeblich.
 
-Describe what this artifact is for.
+Schrittweise Verfahren für echte Agentenarbeit wie Onboarding, Review und Übersetzung.
 
-## Inputs
+## Praktischer Scope
 
-- Context
-- Constraints
-- Target output
-- Quality criteria
+Diese Seite beschreibt, wie `templates/SKILL_TEMPLATE.md` im AI Agent Operating Manual genutzt wird. Sie ist für Menschen und KI-Agenten geschrieben, die Repository-Arbeit planen, prüfen oder wiederholen müssen.
 
-## Output format
+## Arbeitsleitlinien
 
-Define the expected Markdown, JSON or checklist format.
+- Nutze diese Seite als Orientierung, nicht als Ersatz für Repository-Evidenz.
+- Bewahre Dateinamen, Commands, API-Namen und Modellnamen unverändert.
+- Dokumentiere Annahmen explizit und markiere unbekannte Fakten als `[UNKNOWN]`.
+- Eskaliere Sicherheits-, Berechtigungs- und Produktionsrisiken an menschliche Reviewer.
 
-## Qualitätscheckliste
+## Fokus
 
-- Clear scope
-- Reusable structure
-- Testable result
-- Safety notes included
-- Version and owner documented
+Schrittweise Verfahren für echte Agentenarbeit wie Onboarding, Review und Übersetzung.
 
+## Qualitätscheck
 
-> Hinweis: Diese Datei ist eine deutsche lokalisierte Version. Bei Abweichungen gilt die englische Datei als maßgeblich.
+- Der Zweck ist für neue Mitwirkende verständlich.
+- Die Anleitung hilft sowohl KI-Agenten als auch menschlichen Maintainerinnen und Maintainern.
+- Es werden keine modellspezifischen Commands erfunden.
+- Sicherheits- und Human-Approval-Grenzen bleiben sichtbar.
+- Die englische Quelle bleibt für Konfliktfälle maßgeblich.

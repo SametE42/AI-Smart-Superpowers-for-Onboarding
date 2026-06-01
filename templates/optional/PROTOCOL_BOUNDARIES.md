@@ -85,7 +85,7 @@ An audit log requires explicit requirements for:
 - deletion rules,
 - legal or compliance constraints.
 
-If those requirements are missing, document audit as `[UNBEKANNT]` or `not implemented`.
+If those requirements are missing, document audit as `[UNKNOWN]` or `not implemented`.
 
 ## Boundary rule
 

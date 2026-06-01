@@ -120,3 +120,19 @@ Before opening a pull request:
 - [ ] The master prompt was not expanded without strong reason.
 - [ ] README or docs were updated if the public usage changed.
 - [ ] Templates remain reusable and project-neutral.
+- [ ] `PROJECT_STATE.md` is updated if the change affects project state, decisions, risks, open tasks or next step.
+
+## Verification commands
+
+Run these checks before opening a pull request:
+
+```bash
+python -m unittest discover -s tests
+python scripts/validate_repository.py --root .
+```
+
+When the change affects validation output, language folders or release readiness, regenerate the reports too:
+
+```bash
+python scripts/validate_repository.py --root . --json ai/VALIDATION_REPORT.json --markdown ai/VALIDATION_REPORT.md
+```

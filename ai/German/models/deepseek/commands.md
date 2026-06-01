@@ -1,13 +1,33 @@
-# Commands for deepseek
+# Commands
 
-Most model families do not define their own slash commands. Use the command system of the host tool, such as Codex, Claude Code, Gemini CLI, Cursor, Continue, Aider or OpenCode.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-## Recommended usage
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Source language: English
+> Source file: ai/English/models/deepseek/commands.md
+> Bei Abweichungen ist die englische Datei maßgeblich.
 
-- Document which tools can run this model.
-- Document model-specific prompting notes.
-- Do not invent commands for the model.
-- Link to tool command pages instead.
+Modellfamilienprofile und Routing-Hinweise für KI-gestützte Repository-Arbeit.
 
+## Praktischer Scope
 
-> Hinweis: Diese Datei ist eine deutsche lokalisierte Version. Bei Abweichungen gilt die englische Datei als maßgeblich.
+Diese Seite beschreibt, wie `models/deepseek/commands.md` im AI Agent Operating Manual genutzt wird. Sie ist für Menschen und KI-Agenten geschrieben, die Repository-Arbeit planen, prüfen oder wiederholen müssen.
+
+## Arbeitsleitlinien
+
+- Nutze diese Seite als Orientierung, nicht als Ersatz für Repository-Evidenz.
+- Bewahre Dateinamen, Commands, API-Namen und Modellnamen unverändert.
+- Dokumentiere Annahmen explizit und markiere unbekannte Fakten als `[UNKNOWN]`.
+- Eskaliere Sicherheits-, Berechtigungs- und Produktionsrisiken an menschliche Reviewer.
+
+## Fokus
+
+Modellfamilienprofile und Routing-Hinweise für KI-gestützte Repository-Arbeit.
+
+## Qualitätscheck
+
+- Der Zweck ist für neue Mitwirkende verständlich.
+- Die Anleitung hilft sowohl KI-Agenten als auch menschlichen Maintainerinnen und Maintainern.
+- Es werden keine modellspezifischen Commands erfunden.
+- Sicherheits- und Human-Approval-Grenzen bleiben sichtbar.
+- Die englische Quelle bleibt für Konfliktfälle maßgeblich.

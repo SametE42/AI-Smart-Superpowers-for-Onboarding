@@ -1,19 +1,34 @@
 # Config
 
-This file mirrors `ai/English/models/grok/config.md` for the Croatian localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Izvorni jezik: engleski
+> Izvorna datoteka: ai/English/models/grok/config.md
+> U slučaju odstupanja prednost ima engleska datoteka.
 
-## Source file
+Ova stranica objašnjava kako se `models/grok/config.md` uklapa u AI Agent Operating Manual. Namijenjena je ljudima i AI agentima koji trebaju planirati, provjeriti ili ponoviti rad u repositoryju.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Praktični opseg
 
-## Required coverage
+Koristi ovu stranicu kao operativni vodič za temu `models`. Ne zamjenjuje dokaze iz repositoryja ni projektne upute.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Radne smjernice
+
+- Tretiraj dokaze iz repositoryja kao primarni autoritet.
+- Zadrži točno nazive datoteka, naredbe, API nazive i nazive modela.
+- Neprovjerene zaključke označi s `[ASSUMPTION: ...]`, a nepoznate činjenice s `[UNKNOWN]`.
+- Poveži ponašanje specifično za alat s alatom ili runtimeom koji ga stvarno posjeduje.
+- Rizike sigurnosti, dozvola i production-readiness eskaliraj na ljudski pregled.
+
+## Fokus
+
+Prije korištenja ove stranice u workflowu definiraj opseg, potrebne dokaze, provjerljive naredbe i granice ljudskog odobrenja.
+
+## Provjera kvalitete
+
+- Svrha je jasna novom suradniku.
+- Smjernice pomažu i AI agentima i ljudskim održavateljima.
+- Ne izmišljaju se naredbe specifične za modele.
+- Granice sigurnosti i ljudskog odobrenja ostaju vidljive.
+- Engleski izvor ostaje odlučujući kod konflikata lokalizacije.

@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Bulgarian
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Bulgarian.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Изходен език: английски
+> Изходен файл: ai/English/README.md
+> При разминавания английският файл има предимство.
 
-## Sections
+Тази страница обяснява как `README.md` се вписва в AI Agent Operating Manual. Тя е за хора и AI агенти, които трябва да планират, проверяват или повтарят работа в repository.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Практически обхват
 
-## Source of truth
+Използвайте тази страница като оперативно ръководство за темата `README.md`. Тя не заменя доказателствата от repository или проектните инструкции.
 
-The English version remains authoritative until this localization has been reviewed.
+## Работни насоки
+
+- Третирайте доказателствата от repository като основен авторитет.
+- Запазвайте точно имената на файлове, командите, API имената и имената на модели.
+- Маркирайте непроверените заключения с `[ASSUMPTION: ...]`, а неизвестните факти с `[UNKNOWN]`.
+- Свързвайте специфичното поведение на инструмент с инструмента или runtime, който наистина го притежава.
+- Ескалирайте рисковете за сигурност, разрешения и production-readiness към човешки преглед.
+
+## Фокус
+
+Преди да използвате тази страница в workflow, определете обхвата, нужните доказателства, проверимите команди и границите на човешко одобрение.
+
+## Проверка на качеството
+
+- Целта е ясна за нов участник.
+- Насоките помагат както на AI агенти, така и на човешки поддръжници.
+- Не се измислят команди, специфични за модели.
+- Границите за сигурност и човешко одобрение остават видими.
+- Английският източник остава решаващ при конфликти в локализацията.

@@ -1,25 +1,27 @@
-# Codex Command Reference
+# Codex
 
-Codex commands are runtime commands. They are not general OpenAI model commands.
+Command systems, slash commands, file references and repeatable workflow commands.
 
-## Recommended commands to document
+## Practical Scope
 
-- `/help` — inspect available commands in the current version.
-- `/status` — review current session state when available.
-- `/model` — switch model when the runtime supports it.
-- `/plan` — ask for an implementation plan before edits.
-- `/goal` — persist a clear objective across a longer task when available.
-- `/mention` — reference files or folders when supported.
-- `/fast` — use a faster interaction mode when supported.
+This page explains how `commands/codex.md` fits into the AI Agent Operating Manual. Use it when an agent or maintainer needs repeatable guidance for this topic without loading the entire repository.
 
-## Recommended workflow
+## Operating Guidance
 
-1. Check status and available commands.
-2. Mention the files or folders that matter.
-3. Use plan mode before broad edits.
-4. Use goal mode only after the desired end state is clear.
-5. Review diffs, tests and documentation before merging.
+- Treat repository evidence as authoritative and documentation as secondary.
+- Preserve file names, commands, API names and model names exactly.
+- Mark unverified conclusions as `[ASSUMPTION: ...]` and unknown facts as `[UNKNOWN]`.
+- Keep tool-specific behavior tied to the runtime that actually owns it.
+- Escalate security, permission and production-readiness risks to human review.
 
-## Documentation rule
+## Focus
 
-Always verify the exact command list against the installed Codex version or official documentation because slash commands can change over time.
+Command systems, slash commands, file references and repeatable workflow commands.
+
+## Quality Checklist
+
+- The purpose is clear to a new repository user.
+- The guidance is useful for both AI agents and human maintainers.
+- No model-specific commands are invented unless they belong to the host tool.
+- Safety and human-approval boundaries remain visible.
+- English remains the authoritative source for localization.

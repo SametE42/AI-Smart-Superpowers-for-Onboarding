@@ -1,18 +1,27 @@
-# Self-Evolving Skills
+# Self Evolving Skills
 
-Self-evolving skills are reusable capabilities that can improve through evaluation, feedback and controlled updates.
+Reusable skills that define bounded, testable workflows for AI agents.
 
-## Lifecycle
+## Practical Scope
 
-1. Define the skill purpose.
-2. Specify inputs, outputs and constraints.
-3. Add examples and anti-examples.
-4. Run skill evaluations.
-5. Collect failure cases.
-6. Update the skill instructions.
-7. Version the skill and document the change.
-8. Keep human approval for risky behavior changes.
+This page explains how `skills/self-evolving-skills.md` fits into the AI Agent Operating Manual. Use it when an agent or maintainer needs repeatable guidance for this topic without loading the entire repository.
 
-## Safety rule
+## Operating Guidance
 
-A skill may evolve only through measured improvement. Unreviewed automatic changes should not be allowed to alter permissions, secrets handling, external actions or safety boundaries.
+- Treat repository evidence as authoritative and documentation as secondary.
+- Preserve file names, commands, API names and model names exactly.
+- Mark unverified conclusions as `[ASSUMPTION: ...]` and unknown facts as `[UNKNOWN]`.
+- Keep tool-specific behavior tied to the runtime that actually owns it.
+- Escalate security, permission and production-readiness risks to human review.
+
+## Focus
+
+Reusable skills that define bounded, testable workflows for AI agents.
+
+## Quality Checklist
+
+- The purpose is clear to a new repository user.
+- The guidance is useful for both AI agents and human maintainers.
+- No model-specific commands are invented unless they belong to the host tool.
+- Safety and human-approval boundaries remain visible.
+- English remains the authoritative source for localization.

@@ -1,31 +1,27 @@
 # AI Agent Operating Manual
 
-This folder is the English source of truth for the AI documentation. It is designed as a complete operating manual for AI agents, not only as a model list.
+Step-by-step procedures for real agent work such as onboarding, review and translation.
 
-## What is included
+## Practical Scope
 
-- Models and providers
-- AI coding tools and agent runtimes
-- Slash commands, file references and custom command systems
-- Prompting and context engineering
-- Reusable skills and self-evolving skills
-- Three-tier memory and memory safety
-- GEPA, DSPy, TextGrad and other optimization approaches
-- Evaluation, regression tests and quality gates
-- Safety, privacy, permissions and human approval
-- Examples and templates
+This page explains how `README.md` fits into the AI Agent Operating Manual. Use it when an agent or maintainer needs repeatable guidance for this topic without loading the entire repository.
 
-## Core rule
+## Operating Guidance
 
-Models usually do not own commands. Commands belong to the host tool or runtime. For example, Codex, Claude Code and Gemini CLI can expose slash commands, while DeepSeek, Qwen, Kimi, Mistral, Grok, MiniMax and Xiaomi MiMo are normally model families or providers that are used through those tools.
+- Treat repository evidence as authoritative and documentation as secondary.
+- Preserve file names, commands, API names and model names exactly.
+- Mark unverified conclusions as `[ASSUMPTION: ...]` and unknown facts as `[UNKNOWN]`.
+- Keep tool-specific behavior tied to the runtime that actually owns it.
+- Escalate security, permission and production-readiness risks to human review.
 
-## Recommended reading order
+## Focus
 
-1. `agents/agent-architecture.md`
-2. `context-engineering/context-engineering-overview.md`
-3. `commands/command-taxonomy.md`
-4. `skills/skill-design.md`
-5. `memory/three-tier-memory.md`
-6. `optimization/gepa.md`
-7. `evals/evaluation-overview.md`
-8. `safety/human-approval.md`
+Step-by-step procedures for real agent work such as onboarding, review and translation.
+
+## Quality Checklist
+
+- The purpose is clear to a new repository user.
+- The guidance is useful for both AI agents and human maintainers.
+- No model-specific commands are invented unless they belong to the host tool.
+- Safety and human-approval boundaries remain visible.
+- English remains the authoritative source for localization.

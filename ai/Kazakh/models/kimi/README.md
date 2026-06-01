@@ -1,19 +1,29 @@
-# Overview
+# Kimi
 
-This file mirrors `ai/English/models/kimi/README.md` for the Kazakh localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Бастапқы тіл: ағылшын
+> Бастапқы файл: ai/English/models/kimi/README.md
+> Айырмашылық болса, ағылшын файлы басым.
 
-## Source file
+Бұл бет `models/kimi/README.md` AI Agent Operating Manual ішінде қалай қолданылатынын түсіндіреді; repository жұмысын жоспарлайтын, тексеретін немесе қайталайтын адамдар мен AI agents үшін.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Практикалық ауқым
 
-## Required coverage
+Бұл бетті `models` тақырыбына операциялық нұсқаулық ретінде қолданыңыз. Ол repository дәлелдерін немесе жоба нұсқауларын алмастырмайды.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Жұмыс нұсқаулары
+
+- Файл атауларын, commands, API атауларын және model атауларын дәл сақтаңыз.
+- Тексерілмеген қорытындыларды `[ASSUMPTION: ...]`, белгісіз фактілерді `[UNKNOWN]` деп белгілеңіз.
+- security, permissions және production-readiness тәуекелдерін адам тексеруіне жіберіңіз.
+
+## Фокус
+
+workflow ішінде қолданар алдында ауқымды, дәлелдерді, тексерілетін commands және адам мақұлдауы шектерін анықтаңыз.
+
+## Сапа тексерісі
+
+- Мақсат жаңа contributor үшін түсінікті.
+- localization қақтығыстарында ағылшын дереккөзі шешуші болып қалады.

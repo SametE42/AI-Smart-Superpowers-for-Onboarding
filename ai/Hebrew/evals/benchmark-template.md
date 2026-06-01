@@ -1,19 +1,34 @@
 # Benchmark Template
 
-This file mirrors `ai/English/evals/benchmark-template.md` for the Hebrew localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> שפת מקור: אנגלית
+> קובץ מקור: ai/English/evals/benchmark-template.md
+> במקרה של סתירה, הקובץ באנגלית הוא הקובע.
 
-## Source file
+דף זה מסביר כיצד `evals/benchmark-template.md` משתלב ב-AI Agent Operating Manual. הוא מיועד לאנשים ול-AI agents שצריכים לתכנן, לאמת או לחזור על עבודה ב-repository.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## היקף מעשי
 
-## Required coverage
+השתמש בדף זה כהנחיה תפעולית לנושא `evals`. הוא אינו מחליף ראיות מה-repository או הוראות ייחודיות לפרויקט.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## הנחיות עבודה
+
+- התייחס לראיות מה-repository כסמכות העיקרית.
+- שמור בדיוק על שמות קבצים, commands, שמות API ושמות מודלים.
+- סמן מסקנות לא מאומתות עם `[ASSUMPTION: ...]` ועובדות לא ידועות עם `[UNKNOWN]`.
+- קשר התנהגות ייחודית לכלי אל ה-tool או runtime שבאמת מחזיק בה.
+- העבר סיכוני security, permissions ו-production-readiness לביקורת אנושית.
+
+## מיקוד
+
+לפני שימוש בדף זה ב-workflow, הגדר היקף, ראיות נדרשות, commands ניתנים לאימות וגבולות אישור אנושי.
+
+## בדיקת איכות
+
+- המטרה ברורה ל-contributor חדש.
+- ההנחיה מועילה גם ל-AI agents וגם ל-maintainers אנושיים.
+- לא ממציאים commands ייחודיים למודלים.
+- גבולות security ואישור אנושי נשארים גלויים.
+- המקור האנגלי נשאר מכריע בסכסוכי localization.

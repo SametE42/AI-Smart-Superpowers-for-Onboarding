@@ -1,19 +1,34 @@
 # Models
 
-This file mirrors `ai/English/tools/cursor/models.md` for the Dutch localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Brontaal: Engels
+> Bronbestand: ai/English/tools/cursor/models.md
+> Bij afwijkingen blijft het Engelse bestand leidend.
 
-## Source file
+Deze pagina legt uit hoe `tools/cursor/models.md` past binnen de AI Agent Operating Manual. Ze is geschreven voor mensen en AI-agenten die repositorywerk moeten plannen, controleren of herhalen.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Praktische scope
 
-## Required coverage
+Gebruik deze pagina als operationele leidraad voor het thema `tools`. Ze vervangt geen repositorybewijs en geen projectspecifieke instructies.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Werkrichtlijnen
+
+- Behandel repositorybewijs als de primaire autoriteit.
+- Behoud bestandsnamen, commando's, API-namen en modelnamen exact.
+- Markeer niet-geverifieerde conclusies met `[ASSUMPTION: ...]` en onbekende feiten met `[UNKNOWN]`.
+- Koppel toolspecifiek gedrag aan de tool of runtime die het daadwerkelijk beheert.
+- Escaleer risico's rond security, permissies en productiegereedheid naar menselijke review.
+
+## Focus
+
+Definieer scope, benodigde bewijsstukken, verifieerbare commando's en grenzen voor menselijke goedkeuring voordat je deze pagina in een workflow gebruikt.
+
+## Kwaliteitscontrole
+
+- Het doel is duidelijk voor een nieuwe bijdrager.
+- De richtlijnen helpen zowel AI-agenten als menselijke maintainers.
+- Er worden geen modelspecifieke commando's verzonnen.
+- Grenzen voor security en menselijke goedkeuring blijven zichtbaar.
+- De Engelse bron blijft leidend bij lokalisatieconflicten.

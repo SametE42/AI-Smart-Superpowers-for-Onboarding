@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Italian
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Italian.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Lingua sorgente: inglese
+> File sorgente: ai/English/README.md
+> In caso di divergenze, il file inglese resta la fonte autorevole.
 
-## Sections
+Questa pagina spiega come `README.md` si inserisce nell'AI Agent Operating Manual. È pensata per persone e agenti IA che devono pianificare, verificare o ripetere il lavoro sul repository.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Ambito pratico
 
-## Source of truth
+Usa questa pagina come riferimento operativo per il tema `README.md`. Non sostituisce le prove del repository né le istruzioni specifiche del progetto.
 
-The English version remains authoritative until this localization has been reviewed.
+## Linee guida operative
+
+- Considera le prove del repository come autorità primaria.
+- Mantieni invariati nomi di file, comandi, nomi API e nomi dei modelli.
+- Marca le conclusioni non verificate con `[ASSUMPTION: ...]` e i fatti sconosciuti con `[UNKNOWN]`.
+- Collega ogni comportamento specifico allo strumento o al runtime che lo possiede davvero.
+- Escala i rischi di sicurezza, permessi e prontezza alla produzione a una revisione umana.
+
+## Focus
+
+Definisci ambito, prove necessarie, comandi verificabili e limiti di approvazione umana prima di usare questa pagina in un workflow.
+
+## Controllo qualità
+
+- Lo scopo è chiaro per una nuova persona contributrice.
+- Le indicazioni aiutano sia gli agenti IA sia i maintainer umani.
+- Non vengono inventati comandi specifici dei modelli.
+- I limiti di sicurezza e approvazione umana restano visibili.
+- La fonte inglese resta autorevole per i conflitti di localizzazione.

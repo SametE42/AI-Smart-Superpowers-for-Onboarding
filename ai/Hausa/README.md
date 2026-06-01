@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Hausa
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Hausa.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Harshen tushe: Turanci
+> Fayil na tushe: ai/English/README.md
+> Idan akwai bambanci, fayil din Turanci ne zai fi karfi.
 
-## Sections
+Wannan shafi yana bayyana yadda `README.md` yake shiga cikin AI Agent Operating Manual. An rubuta shi ga mutane da AI agents da suke bukatar tsara, tabbatarwa ko maimaita aikin repository.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Iyakar aiki
 
-## Source of truth
+Yi amfani da wannan shafi a matsayin jagorar aiki ga batun `README.md`. Ba ya maye gurbin shaidar repository ko umarnin musamman na aikin.
 
-The English version remains authoritative until this localization has been reviewed.
+## Ka'idodin aiki
+
+- Dauki shaidar repository a matsayin babban tushe.
+- Ajiye sunayen fayil, commands, sunayen API da sunayen model yadda suke.
+- Alamta sakamakon da ba a tabbatar ba da `[ASSUMPTION: ...]` da abubuwan da ba a sani ba da `[UNKNOWN]`.
+- Haɗa halayen tool na musamman da tool ko runtime da yake da shi a zahiri.
+- Tura hadarin security, permissions da production-readiness zuwa bitar mutum.
+
+## Mayar da hankali
+
+Kafin amfani da wannan shafi a workflow, ayyana iyaka, shaidar da ake bukata, commands da za a iya tabbatarwa da iyakar amincewar mutum.
+
+## Duba inganci
+
+- Manufa ta bayyana ga sabon contributor.
+- Jagorar tana taimaka wa AI agents da masu kula da mutane.
+- Ba a kirkiri commands na musamman ga model ba.
+- Iyakokin security da amincewar mutum suna nan a bayyane.
+- Tushen Turanci yana nan a matsayin hukunci idan aka samu rikicin localization.

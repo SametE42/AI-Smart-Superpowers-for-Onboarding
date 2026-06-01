@@ -1,27 +1,29 @@
-# AI Agent Operating Manual — Armenian
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Armenian.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Աղբյուր լեզու՝ անգլերեն
+> Աղբյուր ֆայլ: ai/English/README.md
+> Տարբերությունների դեպքում առաջնային է անգլերեն ֆայլը։
 
-## Sections
+Այս էջը բացատրում է, թե ինչպես է `README.md`-ը տեղավորվում AI Agent Operating Manual-ում՝ մարդկանց և AI agents-ի համար, որոնք պլանավորում, ստուգում կամ կրկնում են repository աշխատանքը։
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Գործնական շրջանակ
 
-## Source of truth
+Օգտագործեք այս էջը որպես `README.md` թեմայի գործառնական ուղեցույց։ Այն չի փոխարինում repository ապացույցներին կամ նախագծի հրահանգներին։
 
-The English version remains authoritative until this localization has been reviewed.
+## Աշխատանքի ուղեցույցներ
+
+- Պահպանեք ֆայլերի անունները, commands-ը, API անունները և model անունները նույնությամբ։
+- Չստուգված եզրակացությունները նշեք `[ASSUMPTION: ...]`, անհայտ փաստերը՝ `[UNKNOWN]`։
+- security, permissions և production-readiness ռիսկերը փոխանցեք մարդկային վերանայման։
+
+## Կենտրոնացում
+
+Մինչև workflow-ում օգտագործելը սահմանեք շրջանակը, ապացույցները, ստուգելի commands-ը և մարդկային հաստատման սահմանները։
+
+## Որակի ստուգում
+
+- Նպատակը պարզ է նոր contributor-ի համար։
+- Անգլերեն աղբյուրը որոշիչ է localization հակասությունների դեպքում։

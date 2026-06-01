@@ -10,42 +10,42 @@
 
 ### Goal
 
-`[UNBEKANNT]`
+`[UNKNOWN]`
 
 ### Read context
 
-- `[UNBEKANNT]`
+- `[UNKNOWN]`
 
 ### Analyzed areas
 
-- `[UNBEKANNT]`
+- `[UNKNOWN]`
 
 ### Updated documents
 
-- `[UNBEKANNT]`
+- `[UNKNOWN]`
 
 ### New findings
 
-- `[UNBEKANNT]`
+- `[UNKNOWN]`
 
 ### New risks
 
 | Severity | Risk | Notes |
 |---|---|---|
-| `[UNBEKANNT]` | `[UNBEKANNT]` | `[UNBEKANNT]` |
+| `[UNKNOWN]` | `[UNKNOWN]` | `[UNKNOWN]` |
 
 ### Defaults used
 
-- `[UNBEKANNT]`
+- `[UNKNOWN]`
 
 ### Conflicts marked
 
-- `[UNBEKANNT]`
+- `[UNKNOWN]`
 
 ### Open points
 
-- `[UNBEKANNT]`
+- `[UNKNOWN]`
 
 ### Verification
 
-- `[UNBEKANNT]`
+- `[UNKNOWN]`

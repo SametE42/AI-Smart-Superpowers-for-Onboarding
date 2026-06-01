@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Dutch
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Dutch.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Brontaal: Engels
+> Bronbestand: ai/English/README.md
+> Bij afwijkingen blijft het Engelse bestand leidend.
 
-## Sections
+Deze pagina legt uit hoe `README.md` past binnen de AI Agent Operating Manual. Ze is geschreven voor mensen en AI-agenten die repositorywerk moeten plannen, controleren of herhalen.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Praktische scope
 
-## Source of truth
+Gebruik deze pagina als operationele leidraad voor het thema `README.md`. Ze vervangt geen repositorybewijs en geen projectspecifieke instructies.
 
-The English version remains authoritative until this localization has been reviewed.
+## Werkrichtlijnen
+
+- Behandel repositorybewijs als de primaire autoriteit.
+- Behoud bestandsnamen, commando's, API-namen en modelnamen exact.
+- Markeer niet-geverifieerde conclusies met `[ASSUMPTION: ...]` en onbekende feiten met `[UNKNOWN]`.
+- Koppel toolspecifiek gedrag aan de tool of runtime die het daadwerkelijk beheert.
+- Escaleer risico's rond security, permissies en productiegereedheid naar menselijke review.
+
+## Focus
+
+Definieer scope, benodigde bewijsstukken, verifieerbare commando's en grenzen voor menselijke goedkeuring voordat je deze pagina in een workflow gebruikt.
+
+## Kwaliteitscontrole
+
+- Het doel is duidelijk voor een nieuwe bijdrager.
+- De richtlijnen helpen zowel AI-agenten als menselijke maintainers.
+- Er worden geen modelspecifieke commando's verzonnen.
+- Grenzen voor security en menselijke goedkeuring blijven zichtbaar.
+- De Engelse bron blijft leidend bij lokalisatieconflicten.

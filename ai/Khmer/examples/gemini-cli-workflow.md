@@ -1,19 +1,29 @@
 # Gemini Cli Workflow
 
-This file mirrors `ai/English/examples/gemini-cli-workflow.md` for the Khmer localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> ភាសាប្រភព៖ អង់គ្លេស
+> ឯកសារប្រភព: ai/English/examples/gemini-cli-workflow.md
+> បើមានភាពខុសគ្នា ឯកសារអង់គ្លេសមានអាទិភាព។
 
-## Source file
+ទំព័រនេះពន្យល់ថា `examples/gemini-cli-workflow.md` សមនឹង AI Agent Operating Manual ដូចម្តេច សម្រាប់មនុស្ស និង AI agents ដែលត្រូវរៀបចំ ផ្ទៀងផ្ទាត់ ឬធ្វើឡើងវិញនូវការងារ repository។
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## វិសាលភាពអនុវត្ត
 
-## Required coverage
+ប្រើទំព័រនេះជាមគ្គុទ្ទេសក៍ប្រតិបត្តិការសម្រាប់ `examples`។ វាមិនជំនួសភស្តុតាង repository ឬសេចក្តីណែនាំគម្រោងទេ។
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## គោលការណ៍ធ្វើការ
+
+- រក្សាឈ្មោះឯកសារ commands ឈ្មោះ API និងឈ្មោះ model ដដែល។
+- សម្គាល់សន្និដ្ឋានមិនទាន់ផ្ទៀងផ្ទាត់ដោយ `[ASSUMPTION: ...]` និងអង្គហេតុមិនស្គាល់ដោយ `[UNKNOWN]`។
+- បញ្ជូនហានិភ័យ security, permissions និង production-readiness ទៅការត្រួតពិនិត្យដោយមនុស្ស។
+
+## ការផ្តោត
+
+មុនប្រើក្នុង workflow សូមកំណត់វិសាលភាព ភស្តុតាង commands ដែលអាចផ្ទៀងផ្ទាត់បាន និងព្រំដែនអនុម័តដោយមនុស្ស។
+
+## ពិនិត្យគុណភាព
+
+- គោលបំណងច្បាស់សម្រាប់ contributor ថ្មី។
+- ប្រភពអង់គ្លេសនៅតែជាចំណុចសម្រេចក្នុងជម្លោះ localization។

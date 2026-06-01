@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Russian
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Russian.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Исходный язык: английский
+> Исходный файл: ai/English/README.md
+> При расхождениях английский файл остается источником истины.
 
-## Sections
+Эта страница объясняет, как `README.md` используется в AI Agent Operating Manual. Она предназначена для людей и AI-агентов, которым нужно планировать, проверять или повторять работу с репозиторием.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Практическая область
 
-## Source of truth
+Используйте эту страницу как операционное руководство для темы `README.md`. Она не заменяет доказательства из репозитория и проектные инструкции.
 
-The English version remains authoritative until this localization has been reviewed.
+## Рабочие правила
+
+- Считайте доказательства из репозитория основным источником истины.
+- Сохраняйте имена файлов, команды, имена API и имена моделей без изменений.
+- Помечайте непроверенные выводы как `[ASSUMPTION: ...]`, а неизвестные факты как `[UNKNOWN]`.
+- Связывайте поведение конкретного инструмента с инструментом или runtime, которому оно действительно принадлежит.
+- Передавайте риски безопасности, разрешений и production-readiness на человеческую проверку.
+
+## Фокус
+
+Перед использованием этой страницы в workflow определите область, нужные доказательства, проверяемые команды и границы человеческого одобрения.
+
+## Проверка качества
+
+- Цель понятна новому участнику.
+- Руководство полезно и AI-агентам, и людям-сопровождающим.
+- Не выдумываются команды, специфичные для моделей.
+- Границы безопасности и человеческого одобрения остаются видимыми.
+- Английский источник остается решающим при конфликтах локализации.

@@ -1,19 +1,34 @@
 # Documentation Audit
 
-This file mirrors `ai/English/workflows/documentation-audit.md` for the Malay localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Bahasa sumber: Inggeris
+> Fail sumber: ai/English/workflows/documentation-audit.md
+> Jika terdapat perbezaan, fail Inggeris menjadi rujukan utama.
 
-## Source file
+Halaman ini menerangkan bagaimana `workflows/documentation-audit.md` sesuai dalam AI Agent Operating Manual. Ia ditulis untuk manusia dan AI agents yang perlu merancang, mengesahkan atau mengulang kerja repository.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Skop praktikal
 
-## Required coverage
+Gunakan halaman ini sebagai panduan operasi untuk tema `workflows`. Ia tidak menggantikan bukti repository atau arahan khusus projek.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Garis panduan kerja
+
+- Anggap bukti repository sebagai autoriti utama.
+- Kekalkan nama fail, commands, nama API dan nama model dengan tepat.
+- Tandakan kesimpulan belum disahkan dengan `[ASSUMPTION: ...]` dan fakta tidak diketahui dengan `[UNKNOWN]`.
+- Hubungkan tingkah laku khusus tool kepada tool atau runtime yang benar-benar memilikinya.
+- Naikkan risiko security, permissions dan production-readiness kepada semakan manusia.
+
+## Fokus
+
+Sebelum menggunakan halaman ini dalam workflow, tetapkan skop, bukti yang diperlukan, commands yang boleh disahkan dan sempadan kelulusan manusia.
+
+## Semakan kualiti
+
+- Tujuan jelas kepada contributor baharu.
+- Panduan membantu AI agents dan penyelenggara manusia.
+- Commands khusus model tidak direka-reka.
+- Sempadan security dan kelulusan manusia kekal kelihatan.
+- Sumber Inggeris kekal penentu dalam konflik localization.

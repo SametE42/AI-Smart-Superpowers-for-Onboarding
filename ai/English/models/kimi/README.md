@@ -1,14 +1,27 @@
-# kimi Overview
+# Kimi
 
-This page documents how the kimi model family fits into the AI Agent Operating Manual.
+Model-family profiles and routing notes for AI-assisted repository work.
 
-## Best fit
+## Practical Scope
 
-- Coding and repository work where supported
-- Documentation workflows
-- Tool-using agents
-- Evaluation and comparison tasks
+This page explains how `models/kimi/README.md` fits into the AI Agent Operating Manual. Use it when an agent or maintainer needs repeatable guidance for this topic without loading the entire repository.
 
-## Notes
+## Operating Guidance
 
-Commands usually belong to the tool/runtime, not the model. Keep provider details current and verify API names before publishing.
+- Treat repository evidence as authoritative and documentation as secondary.
+- Preserve file names, commands, API names and model names exactly.
+- Mark unverified conclusions as `[ASSUMPTION: ...]` and unknown facts as `[UNKNOWN]`.
+- Keep tool-specific behavior tied to the runtime that actually owns it.
+- Escalate security, permission and production-readiness risks to human review.
+
+## Focus
+
+Model-family profiles and routing notes for AI-assisted repository work.
+
+## Quality Checklist
+
+- The purpose is clear to a new repository user.
+- The guidance is useful for both AI agents and human maintainers.
+- No model-specific commands are invented unless they belong to the host tool.
+- Safety and human-approval boundaries remain visible.
+- English remains the authoritative source for localization.

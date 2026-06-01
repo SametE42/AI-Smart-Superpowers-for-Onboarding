@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Hebrew
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Hebrew.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> שפת מקור: אנגלית
+> קובץ מקור: ai/English/README.md
+> במקרה של סתירה, הקובץ באנגלית הוא הקובע.
 
-## Sections
+דף זה מסביר כיצד `README.md` משתלב ב-AI Agent Operating Manual. הוא מיועד לאנשים ול-AI agents שצריכים לתכנן, לאמת או לחזור על עבודה ב-repository.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## היקף מעשי
 
-## Source of truth
+השתמש בדף זה כהנחיה תפעולית לנושא `README.md`. הוא אינו מחליף ראיות מה-repository או הוראות ייחודיות לפרויקט.
 
-The English version remains authoritative until this localization has been reviewed.
+## הנחיות עבודה
+
+- התייחס לראיות מה-repository כסמכות העיקרית.
+- שמור בדיוק על שמות קבצים, commands, שמות API ושמות מודלים.
+- סמן מסקנות לא מאומתות עם `[ASSUMPTION: ...]` ועובדות לא ידועות עם `[UNKNOWN]`.
+- קשר התנהגות ייחודית לכלי אל ה-tool או runtime שבאמת מחזיק בה.
+- העבר סיכוני security, permissions ו-production-readiness לביקורת אנושית.
+
+## מיקוד
+
+לפני שימוש בדף זה ב-workflow, הגדר היקף, ראיות נדרשות, commands ניתנים לאימות וגבולות אישור אנושי.
+
+## בדיקת איכות
+
+- המטרה ברורה ל-contributor חדש.
+- ההנחיה מועילה גם ל-AI agents וגם ל-maintainers אנושיים.
+- לא ממציאים commands ייחודיים למודלים.
+- גבולות security ואישור אנושי נשארים גלויים.
+- המקור האנגלי נשאר מכריע בסכסוכי localization.

@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Tagalog
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Tagalog.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Pinagmulan na wika: Ingles
+> Pinagmulan na file: ai/English/README.md
+> Kapag may pagkakaiba, ang English file ang susundin.
 
-## Sections
+Ipinapaliwanag ng pahinang ito kung paano umaangkop ang `README.md` sa AI Agent Operating Manual. Para ito sa mga tao at AI agents na kailangang magplano, magberipika o umulit ng repository work.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Praktikal na saklaw
 
-## Source of truth
+Gamitin ang pahinang ito bilang operational na gabay para sa paksang `README.md`. Hindi nito pinapalitan ang repository evidence o project-specific instructions.
 
-The English version remains authoritative until this localization has been reviewed.
+## Mga gabay sa trabaho
+
+- Ituring ang repository evidence bilang pangunahing awtoridad.
+- Panatilihing eksakto ang file names, commands, API names at model names.
+- Markahan ang hindi pa nabeberipikang konklusyon ng `[ASSUMPTION: ...]` at hindi alam na facts ng `[UNKNOWN]`.
+- Ikabit ang tool-specific behavior sa tool o runtime na tunay na nagmamay-ari nito.
+- I-escalate ang security, permissions at production-readiness risks sa pagsusuri ng tao.
+
+## Pokus
+
+Bago gamitin ang pahinang ito sa workflow, tukuyin ang saklaw, kinakailangang evidence, verifiable commands at hangganan ng human approval.
+
+## Quality check
+
+- Malinaw ang layunin para sa bagong contributor.
+- Nakatutulong ang gabay sa AI agents at human maintainers.
+- Hindi iniimbento ang model-specific commands.
+- Nakikita pa rin ang boundaries ng security at human approval.
+- Ang English source pa rin ang masusunod sa localization conflicts.

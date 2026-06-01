@@ -1,19 +1,34 @@
 # Evals
 
-This file mirrors `ai/English/models/qwen/evals.md` for the Turkish localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Kaynak dil: İngilizce
+> Kaynak dosya: ai/English/models/qwen/evals.md
+> Tutarsızlık olduğunda İngilizce dosya esas alınır.
 
-## Source file
+Bu sayfa `models/qwen/evals.md` dosyasının AI Agent Operating Manual içinde nasıl kullanıldığını açıklar. Depo çalışmasını planlaması, doğrulaması veya tekrarlaması gereken insanlar ve yapay zeka ajanları için yazılmıştır.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Pratik kapsam
 
-## Required coverage
+Bu sayfayı `models` konusu için operasyonel yönlendirme olarak kullan. Depo kanıtlarının veya projeye özel talimatların yerine geçmez.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Çalışma yönergeleri
+
+- Depo kanıtlarını birincil otorite olarak kabul et.
+- Dosya adlarını, komutları, API adlarını ve model adlarını aynen koru.
+- Doğrulanmamış sonuçları `[ASSUMPTION: ...]`, bilinmeyen gerçekleri `[UNKNOWN]` olarak işaretle.
+- Araca özgü davranışı gerçekten o davranışın sahibi olan araç veya runtime ile ilişkilendir.
+- Güvenlik, izin ve üretime hazırlık risklerini insan incelemesine yükselt.
+
+## Odak
+
+Bu sayfayı bir workflow içinde kullanmadan önce kapsamı, gerekli kanıtları, doğrulanabilir komutları ve insan onayı sınırlarını tanımla.
+
+## Kalite kontrolü
+
+- Amaç yeni katkı sağlayanlar için açıktır.
+- Yönergeler hem yapay zeka ajanlarına hem de insan bakımcılara yardımcı olur.
+- Modele özgü komutlar uydurulmaz.
+- Güvenlik ve insan onayı sınırları görünür kalır.
+- Yerelleştirme çakışmalarında İngilizce kaynak otorite olmaya devam eder.

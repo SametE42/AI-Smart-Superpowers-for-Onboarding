@@ -27,6 +27,41 @@ This file is not a replacement for `/docs/ai/MASTER_SYSTEM.md`. It only adds ope
 | Documentation | concise technical writing | relevant docs, `CHANGELOG_AI.md` |
 | Translation | terminology consistency | English source file, `docs/i18n.md` |
 
+## Tool-calling profiles
+
+Use this section to document model-specific tool behavior observed in the active client or harness. Do not treat these notes as provider-wide truth unless they are verified in this repository.
+
+Default rule for all models:
+
+- Validate tool input before repair.
+- Repair only schema-local shape errors that are explicitly identified by the validator.
+- Re-validate after repair.
+- Log repairs by model, tool and repair type.
+- Return model-readable retry messages instead of raw validator dumps.
+- Keep destructive tools strict.
+
+| Model family | Observed pattern | Recommended mitigation |
+|---|---|---|
+| DeepSeek | May benefit from tolerant schema-local repair for tool-call shape errors in some clients. | Track `null` optionals, stringified arrays, bare strings where arrays are expected and degenerate markdown links in path fields. |
+| Qwen | May show similar shape drift when tool schemas differ from training examples. | Use strict schemas plus narrow repair and clear retry messages. |
+| GLM or similar open models | May require clearer tool affordances and model-readable validation feedback. | Prefer descriptive schema helpers such as `pathString` over generic strings where the runtime supports them. |
+| Claude / GPT-class managed tool runtimes | Often handle common tool schemas well, but still fail on unclear contracts. | Keep the same validation and telemetry path; do not skip repair logging just because the model is usually reliable. |
+| Small or local models | More likely to need explicit examples and forgiving retry loops. | Keep tools simple, reduce nested schemas, add examples and avoid raw validator error blobs. |
+
+Document concrete evidence before adding a new model-specific rule:
+
+```text
+Model:
+Client/runtime:
+Tool:
+Observed invalid input:
+Validator issue:
+Repair attempted:
+Outcome:
+Date:
+Source:
+```
+
 ## Provider profiles
 
 ### DeepSeek
@@ -42,6 +77,7 @@ Constraints:
 - Treat provider/model capabilities as client-dependent.
 - Do not assume repository file loading unless the active tool explicitly provides it.
 - Use `AGENTS.md` as the default entrypoint.
+- If the active harness shows repeated tool-call shape errors, prefer schema-local repair and model-readable retry messages over raw validation errors.
 
 ### Qwen
 
@@ -55,6 +91,7 @@ Constraints:
 
 - Keep instructions tool-neutral unless the project explicitly uses Qwen Code.
 - Use `AGENTS.md` as fallback and add Qwen-specific instructions only where the runtime supports them.
+- If the active harness shows schema drift, document the observed pattern in the tool-calling profile before adding a mitigation.
 
 ### Kimi / Moonshot
 

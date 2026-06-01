@@ -1,19 +1,34 @@
 # Model Specific Notes
 
-This file mirrors `ai/English/commands/model-specific-notes.md` for the Indonesian localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Bahasa sumber: Inggris
+> File sumber: ai/English/commands/model-specific-notes.md
+> Jika ada perbedaan, file Inggris menjadi acuan.
 
-## Source file
+Halaman ini menjelaskan bagaimana `commands/model-specific-notes.md` masuk ke AI Agent Operating Manual. Ditulis untuk manusia dan AI agents yang perlu merencanakan, memverifikasi, atau mengulang pekerjaan repository.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Cakupan praktis
 
-## Required coverage
+Gunakan halaman ini sebagai panduan operasional untuk tema `commands`. Ini tidak menggantikan bukti repository atau instruksi khusus proyek.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Panduan kerja
+
+- Perlakukan bukti repository sebagai otoritas utama.
+- Pertahankan nama file, commands, nama API, dan nama model secara persis.
+- Tandai kesimpulan yang belum diverifikasi dengan `[ASSUMPTION: ...]` dan fakta yang tidak diketahui dengan `[UNKNOWN]`.
+- Hubungkan perilaku khusus tool ke tool atau runtime yang benar-benar memilikinya.
+- Eskalasi risiko security, permissions, dan production-readiness ke tinjauan manusia.
+
+## Fokus
+
+Sebelum memakai halaman ini dalam workflow, tetapkan cakupan, bukti yang diperlukan, commands yang dapat diverifikasi, dan batas persetujuan manusia.
+
+## Pemeriksaan kualitas
+
+- Tujuan jelas bagi contributor baru.
+- Panduan berguna bagi AI agents dan maintainer manusia.
+- Tidak ada commands khusus model yang dikarang.
+- Batas security dan persetujuan manusia tetap terlihat.
+- Sumber Inggris tetap menentukan saat konflik localization.

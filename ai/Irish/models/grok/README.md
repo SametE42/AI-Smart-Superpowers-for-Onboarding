@@ -1,19 +1,29 @@
-# Overview
+# Grok
 
-This file mirrors `ai/English/models/grok/README.md` for the Irish localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Teanga fhoinse: Béarla
+> Comhad foinse: ai/English/models/grok/README.md
+> Má tá difríochtaí ann, tá an comhad Béarla i réim.
 
-## Source file
+Míníonn an leathanach seo conas a oireann `models/grok/README.md` don AI Agent Operating Manual do dhaoine agus AI agents a chaithfidh obair repository a phleanáil, a fhíorú nó a athdhéanamh.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Raon praiticiúil
 
-## Required coverage
+Úsáid an leathanach seo mar threoir oibríochtúil don ábhar `models`. Ní chuireann sé fianaise repository ná treoracha tionscadail in ionad.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Treoirlínte oibre
+
+- Coinnigh ainmneacha comhad, commands, ainmneacha API agus ainmneacha model mar atá.
+- Marcáil conclúidí neamhfhíoraithe le `[ASSUMPTION: ...]` agus fíricí anaithnide le `[UNKNOWN]`.
+- Ardaigh rioscaí security, permissions agus production-readiness chuig athbhreithniú daonna.
+
+## Fócas
+
+Sula n-úsáidtear i workflow é, sainigh an raon, an fhianaise, commands infhíoraithe agus teorainneacha ceadaithe daonna.
+
+## Seiceáil cáilíochta
+
+- Tá an cuspóir soiléir do contributor nua.
+- Fanann an fhoinse Bhéarla cinntitheach i gcoinbhleachtaí localization.

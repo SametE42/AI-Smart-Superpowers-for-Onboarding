@@ -1,20 +1,27 @@
-# Claude Code Command Reference
+# Claude Code
 
-Claude Code commands belong to Claude Code, not to the Claude model family alone.
+Command systems, slash commands, file references and repeatable workflow commands.
 
-## Recommended command areas
+## Practical Scope
 
-- Help and session inspection
-- Context compaction
-- Model or mode selection where supported
-- Code review
-- Custom commands stored in project command folders
-- MCP, tool and permission management where supported
+This page explains how `commands/claude-code.md` fits into the AI Agent Operating Manual. Use it when an agent or maintainer needs repeatable guidance for this topic without loading the entire repository.
 
-## Recommended workflow
+## Operating Guidance
 
-1. Initialize or inspect project context.
-2. Load relevant files and manifest instructions.
-3. Ask for a plan before edits.
-4. Use custom commands for repeatable workflows.
-5. Keep human approval for destructive or security-relevant changes.
+- Treat repository evidence as authoritative and documentation as secondary.
+- Preserve file names, commands, API names and model names exactly.
+- Mark unverified conclusions as `[ASSUMPTION: ...]` and unknown facts as `[UNKNOWN]`.
+- Keep tool-specific behavior tied to the runtime that actually owns it.
+- Escalate security, permission and production-readiness risks to human review.
+
+## Focus
+
+Command systems, slash commands, file references and repeatable workflow commands.
+
+## Quality Checklist
+
+- The purpose is clear to a new repository user.
+- The guidance is useful for both AI agents and human maintainers.
+- No model-specific commands are invented unless they belong to the host tool.
+- Safety and human-approval boundaries remain visible.
+- English remains the authoritative source for localization.

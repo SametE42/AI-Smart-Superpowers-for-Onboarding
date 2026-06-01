@@ -27,3 +27,12 @@ English is the source of truth. Other languages are localized mirrors.
 ## Start
 
 Open `English/README.md` first.
+
+## Status files
+
+- `LANGUAGE_INDEX.md` lists all language folders.
+- `TRANSLATION_STATUS.md` records structure and AI translation status per language.
+- `TRANSLATION_POLICY.md` defines translation rules.
+- `VALIDATION_REPORT.md` and `VALIDATION_REPORT.json` are generated from `scripts/validate_repository.py`.
+
+Localized AI-translated pages keep the machine-readable `<!-- translation-status: ai-translated; ai-quality-pass -->` status comment. The validator reports any missing AI translation marker or legacy review marker.

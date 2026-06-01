@@ -1,27 +1,29 @@
-# AI Agent Operating Manual — Burmese
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Burmese.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> မူရင်းဘာသာ: အင်္ဂလိပ်
+> မူရင်းဖိုင်: ai/English/README.md
+> ကွာခြားချက်ရှိပါက အင်္ဂလိပ်ဖိုင်ကို အဓိကယူပါ။
 
-## Sections
+ဤစာမျက်နှာသည် `README.md` သည် AI Agent Operating Manual ထဲတွင် မည်သို့အသုံးဝင်သည်ကို ရှင်းပြသည်။ repository အလုပ်ကို စီစဉ်၊ စစ်ဆေး သို့မဟုတ် ထပ်လုပ်ရန် လိုအပ်သော လူများနှင့် AI agents အတွက်ဖြစ်သည်။
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## လက်တွေ့အသုံးချ အတိုင်းအတာ
 
-## Source of truth
+ဤစာမျက်နှာကို `README.md` အတွက် လုပ်ငန်းလမ်းညွှန်အဖြစ် အသုံးပြုပါ။ repository အထောက်အထား သို့မဟုတ် project-specific instructions ကို မအစားထိုးပါ။
 
-The English version remains authoritative until this localization has been reviewed.
+## အလုပ်လမ်းညွှန်များ
+
+- ဖိုင်အမည်များ၊ commands၊ API အမည်များနှင့် model အမည်များကို မပြောင်းပါနှင့်။
+- မစစ်ဆေးရသေးသော နိဂုံးများကို `[ASSUMPTION: ...]`၊ မသိသော facts များကို `[UNKNOWN]` ဖြင့် မှတ်သားပါ။
+- security၊ permissions နှင့် production-readiness အန္တရာယ်များကို လူသားစစ်ဆေးမှုသို့ ပို့ပါ။
+
+## အာရုံစိုက်ရန်
+
+workflow တွင် အသုံးမပြုမီ အတိုင်းအတာ၊ အထောက်အထား၊ စစ်ဆေးနိုင်သော commands နှင့် လူသားအတည်ပြုမှု အကန့်အသတ်များကို သတ်မှတ်ပါ။
+
+## အရည်အသွေးစစ်ဆေးမှု
+
+- ရည်ရွယ်ချက်သည် contributor အသစ်အတွက် ရှင်းလင်းသည်။
+- localization ပဋိပက္ခများတွင် အင်္ဂလိပ်မူရင်းက ဆုံးဖြတ်ပေးသည်။

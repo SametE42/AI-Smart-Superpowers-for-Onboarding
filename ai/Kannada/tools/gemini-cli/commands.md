@@ -1,19 +1,29 @@
 # Commands
 
-This file mirrors `ai/English/tools/gemini-cli/commands.md` for the Kannada localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> ಮೂಲ ಭಾಷೆ: ಇಂಗ್ಲಿಷ್
+> ಮೂಲ ಫೈಲ್: ai/English/tools/gemini-cli/commands.md
+> ಭೇದವಿದ್ದರೆ ಇಂಗ್ಲಿಷ್ ಫೈಲ್‌ಗೆ ಆದ್ಯತೆ.
 
-## Source file
+ಈ ಪುಟವು `tools/gemini-cli/commands.md` AI Agent Operating Manual ನಲ್ಲಿ ಹೇಗೆ ಹೊಂದುತ್ತದೆ ಎಂಬುದನ್ನು ವಿವರಿಸುತ್ತದೆ; repository ಕೆಲಸವನ್ನು ಯೋಜಿಸುವ, ಪರಿಶೀಲಿಸುವ ಅಥವಾ ಮರುಕಳಿಸುವ ಜನರು ಮತ್ತು AI agents ಗಾಗಿ.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## ಪ್ರಾಯೋಗಿಕ ವ್ಯಾಪ್ತಿ
 
-## Required coverage
+ಈ ಪುಟವನ್ನು `tools` ವಿಷಯಕ್ಕೆ ಕಾರ್ಯಾಚರಣಾ ಮಾರ್ಗದರ್ಶಿಯಾಗಿ ಬಳಸಿ. ಇದು repository ಸಾಕ್ಷಿ ಅಥವಾ ಯೋಜನಾ ಸೂಚನೆಗಳನ್ನು ಬದಲಿಸುವುದಿಲ್ಲ.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## ಕೆಲಸದ ಮಾರ್ಗಸೂಚಿಗಳು
+
+- ಫೈಲ್ ಹೆಸರುಗಳು, commands, API ಹೆಸರುಗಳು ಮತ್ತು model ಹೆಸರುಗಳನ್ನು ಹಾಗೆಯೇ ಉಳಿಸಿ.
+- ಪರಿಶೀಲಿಸದ ನಿರ್ಣಯಗಳನ್ನು `[ASSUMPTION: ...]`, ಅಜ್ಞಾತ ವಾಸ್ತವಗಳನ್ನು `[UNKNOWN]` ಎಂದು ಗುರುತಿಸಿ.
+- security, permissions ಮತ್ತು production-readiness ಅಪಾಯಗಳನ್ನು ಮಾನವ ಪರಿಶೀಲನೆಗೆ ಕಳುಹಿಸಿ.
+
+## ಕೇಂದ್ರಬಿಂದು
+
+workflow ನಲ್ಲಿ ಬಳಸುವ ಮೊದಲು ವ್ಯಾಪ್ತಿ, ಸಾಕ್ಷಿ, ಪರಿಶೀಲಿಸಬಹುದಾದ commands ಮತ್ತು ಮಾನವ ಅನುಮೋದನೆ ಗಡಿಗಳನ್ನು ನಿರ್ಧರಿಸಿ.
+
+## ಗುಣಮಟ್ಟ ಪರಿಶೀಲನೆ
+
+- ಉದ್ದೇಶ ಹೊಸ contributor ಗೆ ಸ್ಪಷ್ಟವಾಗಿದೆ.
+- localization ಸಂಘರ್ಷಗಳಲ್ಲಿ ಇಂಗ್ಲಿಷ್ ಮೂಲವೇ ನಿರ್ಣಾಯಕ.

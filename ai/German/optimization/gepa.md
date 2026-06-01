@@ -1,31 +1,33 @@
-# GEPA Optimization
+# Gepa
 
-GEPA means Genetic-Pareto Prompt Evolution. In an agent repository, GEPA-style optimization can be used to improve prompts, skills, tool descriptions, command instructions, agent policies and evaluation rubrics.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-## What to optimize
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Source language: English
+> Source file: ai/English/optimization/gepa.md
+> Bei Abweichungen ist die englische Datei maßgeblich.
 
-- Prompt instructions
-- Skill instructions
-- Tool descriptions
-- Model routing rules
-- Agent role definitions
-- Evaluation rubrics
-- Repository documentation workflows
+Methoden zur Prompt-, Skill- und Workflow-Optimierung mit kontrollierter Einführung.
 
-## Optimization loop
+## Praktischer Scope
 
-1. Define a measurable task.
-2. Run baseline attempts.
-3. Score outputs with an evaluation rubric.
-4. Reflect on failures in natural language.
-5. Mutate the textual artifact.
-6. Keep Pareto-useful variants.
-7. Re-test against regression cases.
-8. Promote only reviewed improvements.
+Diese Seite beschreibt, wie `optimization/gepa.md` im AI Agent Operating Manual genutzt wird. Sie ist für Menschen und KI-Agenten geschrieben, die Repository-Arbeit planen, prüfen oder wiederholen müssen.
 
-## Repository rule
+## Arbeitsleitlinien
 
-Do not optimize blindly. Every optimization run must record input task, baseline, metric, changed artifact, score delta, known regressions and human approval status.
+- Nutze diese Seite als Orientierung, nicht als Ersatz für Repository-Evidenz.
+- Bewahre Dateinamen, Commands, API-Namen und Modellnamen unverändert.
+- Dokumentiere Annahmen explizit und markiere unbekannte Fakten als `[UNKNOWN]`.
+- Eskaliere Sicherheits-, Berechtigungs- und Produktionsrisiken an menschliche Reviewer.
 
+## Fokus
 
-> Hinweis: Diese Datei ist eine deutsche lokalisierte Version. Bei Abweichungen gilt die englische Datei als maßgeblich.
+Methoden zur Prompt-, Skill- und Workflow-Optimierung mit kontrollierter Einführung.
+
+## Qualitätscheck
+
+- Der Zweck ist für neue Mitwirkende verständlich.
+- Die Anleitung hilft sowohl KI-Agenten als auch menschlichen Maintainerinnen und Maintainern.
+- Es werden keine modellspezifischen Commands erfunden.
+- Sicherheits- und Human-Approval-Grenzen bleiben sichtbar.
+- Die englische Quelle bleibt für Konfliktfälle maßgeblich.

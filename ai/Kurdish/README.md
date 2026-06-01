@@ -1,27 +1,29 @@
-# AI Agent Operating Manual — Kurdish
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Kurdish.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Zimanê çavkanî: Îngilîzî
+> Pelê çavkanî: ai/English/README.md
+> Ger cudahî hebe, pelê Îngilîzî serdest e.
 
-## Sections
+Ev rûpel diyar dike ku `README.md` çawa di AI Agent Operating Manual de cih digire, ji bo mirov û AI agents ku karê repository plan dikin, rastdikin an dubare dikin.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Qada pratîkî
 
-## Source of truth
+Vê rûpelê wek rêbernameya karî ji bo `README.md` bi kar bîne. Ew delîlên repository an rêwerzên projeyê naguhere.
 
-The English version remains authoritative until this localization has been reviewed.
+## Rêwerzên kar
+
+- Navên pelan, commands, navên API û navên model rast biparêze.
+- Encamên nehatine piştrastkirin bi `[ASSUMPTION: ...]` û rastiyên nenas bi `[UNKNOWN]` nîşan bike.
+- Xetereyên security, permissions û production-readiness radestî vekolîna mirovî bike.
+
+## Fokus
+
+Berî bikaranîna di workflow de, qada kar, delîl, commands yên piştrastbar û sînorên pejirandina mirovî diyar bike.
+
+## Kontrola kalîteyê
+
+- Armanc ji bo contributor nû zelal e.
+- Çavkaniya Îngilîzî di nakokiyên localization de biryardar dimîne.

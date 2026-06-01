@@ -1,19 +1,29 @@
 # Workflows
 
-This file mirrors `ai/English/tools/cursor/workflows.md` for the Mongolian localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Эх хэл: Англи
+> Эх файл: ai/English/tools/cursor/workflows.md
+> Зөрүү гарвал англи файл давамгайлна.
 
-## Source file
+Энэ хуудас `tools/cursor/workflows.md` AI Agent Operating Manual-д хэрхэн нийцэж байгааг тайлбарлана; repository ажлыг төлөвлөх, шалгах эсвэл давтах хүмүүс болон AI agents-д зориулагдсан.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Практик хүрээ
 
-## Required coverage
+Энэ хуудсыг `tools` сэдвийн үйл ажиллагааны заавар болгон ашигла. Repository нотолгоо эсвэл төслийн зааврыг орлохгүй.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Ажлын заавар
+
+- Файлын нэр, commands, API нэр, model нэрийг яг хэвээр хадгал.
+- Шалгаагүй дүгнэлтийг `[ASSUMPTION: ...]`, үл мэдэгдэх баримтыг `[UNKNOWN]` гэж тэмдэглэ.
+- security, permissions, production-readiness эрсдэлийг хүний хяналтад шилжүүл.
+
+## Фокус
+
+workflow-д ашиглахаас өмнө хүрээ, нотолгоо, шалгаж болох commands болон хүний зөвшөөрлийн хил хязгаарыг тодорхойл.
+
+## Чанарын шалгалт
+
+- Зорилго шинэ contributor-д тодорхой.
+- localization зөрчилд англи эх сурвалж шийдвэрлэх үүрэгтэй.

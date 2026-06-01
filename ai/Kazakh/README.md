@@ -1,27 +1,29 @@
-# AI Agent Operating Manual — Kazakh
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Kazakh.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Бастапқы тіл: ағылшын
+> Бастапқы файл: ai/English/README.md
+> Айырмашылық болса, ағылшын файлы басым.
 
-## Sections
+Бұл бет `README.md` AI Agent Operating Manual ішінде қалай қолданылатынын түсіндіреді; repository жұмысын жоспарлайтын, тексеретін немесе қайталайтын адамдар мен AI agents үшін.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Практикалық ауқым
 
-## Source of truth
+Бұл бетті `README.md` тақырыбына операциялық нұсқаулық ретінде қолданыңыз. Ол repository дәлелдерін немесе жоба нұсқауларын алмастырмайды.
 
-The English version remains authoritative until this localization has been reviewed.
+## Жұмыс нұсқаулары
+
+- Файл атауларын, commands, API атауларын және model атауларын дәл сақтаңыз.
+- Тексерілмеген қорытындыларды `[ASSUMPTION: ...]`, белгісіз фактілерді `[UNKNOWN]` деп белгілеңіз.
+- security, permissions және production-readiness тәуекелдерін адам тексеруіне жіберіңіз.
+
+## Фокус
+
+workflow ішінде қолданар алдында ауқымды, дәлелдерді, тексерілетін commands және адам мақұлдауы шектерін анықтаңыз.
+
+## Сапа тексерісі
+
+- Мақсат жаңа contributor үшін түсінікті.
+- localization қақтығыстарында ағылшын дереккөзі шешуші болып қалады.

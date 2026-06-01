@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Serbian
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Serbian.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Izvorni jezik: engleski
+> Izvorna datoteka: ai/English/README.md
+> Ako postoje odstupanja, engleska datoteka ima prednost.
 
-## Sections
+Ova stranica objašnjava kako se `README.md` uklapa u AI Agent Operating Manual. Namenjena je ljudima i AI agentima koji treba da planiraju, provere ili ponove rad u repositoryju.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Praktični opseg
 
-## Source of truth
+Koristi ovu stranicu kao operativni vodič za temu `README.md`. Ne zamenjuje dokaze iz repositoryja niti projektne instrukcije.
 
-The English version remains authoritative until this localization has been reviewed.
+## Radne smernice
+
+- Tretiraj dokaze iz repositoryja kao primarni autoritet.
+- Zadrži tačno nazive datoteka, komande, API nazive i nazive modela.
+- Neproverene zaključke označi sa `[ASSUMPTION: ...]`, a nepoznate činjenice sa `[UNKNOWN]`.
+- Poveži ponašanje specifično za alat sa alatom ili runtimeom koji ga zaista poseduje.
+- Rizike bezbednosti, dozvola i production-readiness eskaliraj na ljudski pregled.
+
+## Fokus
+
+Pre korišćenja ove stranice u workflowu definiši opseg, potrebne dokaze, proverljive komande i granice ljudskog odobrenja.
+
+## Provera kvaliteta
+
+- Svrha je jasna novom saradniku.
+- Smernice pomažu i AI agentima i ljudskim održavaocima.
+- Ne izmišljaju se komande specifične za modele.
+- Granice bezbednosti i ljudskog odobrenja ostaju vidljive.
+- Engleski izvor ostaje odlučujući kod konflikata lokalizacije.

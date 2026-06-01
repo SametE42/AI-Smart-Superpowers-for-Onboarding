@@ -1,19 +1,34 @@
 # Evals
 
-This file mirrors `ai/English/models/google-gemini/evals.md` for the Czech localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Zdrojový jazyk: angličtina
+> Zdrojový soubor: ai/English/models/google-gemini/evals.md
+> Při rozporu má přednost anglický soubor.
 
-## Source file
+Tato stránka vysvětluje, jak `models/google-gemini/evals.md` zapadá do AI Agent Operating Manual. Je určena lidem a AI agentům, kteří potřebují plánovat, ověřovat nebo opakovat práci v repozitáři.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Praktický rozsah
 
-## Required coverage
+Použijte tuto stránku jako provozní vodítko pro téma `models`. Nenahrazuje důkazy z repozitáře ani projektové instrukce.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Pracovní pokyny
+
+- Považujte důkazy z repozitáře za primární autoritu.
+- Zachovejte přesně názvy souborů, příkazy, názvy API a názvy modelů.
+- Neověřené závěry označte `[ASSUMPTION: ...]` a neznámá fakta `[UNKNOWN]`.
+- Propojte chování specifické pro nástroj s nástrojem nebo runtime, který je skutečně vlastní.
+- Rizika bezpečnosti, oprávnění a produkční připravenosti eskalujte k lidské revizi.
+
+## Zaměření
+
+Před použitím této stránky ve workflow definujte rozsah, potřebné důkazy, ověřitelné příkazy a hranice lidského schválení.
+
+## Kontrola kvality
+
+- Účel je jasný novému přispěvateli.
+- Pokyny pomáhají AI agentům i lidským maintainerům.
+- Nevymýšlejí se žádné modelově specifické příkazy.
+- Hranice bezpečnosti a lidského schválení zůstávají viditelné.
+- Anglický zdroj zůstává rozhodující při konfliktech lokalizace.

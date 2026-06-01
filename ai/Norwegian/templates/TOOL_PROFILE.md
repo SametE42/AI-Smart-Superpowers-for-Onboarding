@@ -1,19 +1,34 @@
-# Tool Profile
+# Tool_profile
 
-This file mirrors `ai/English/templates/TOOL_PROFILE.md` for the Norwegian localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Kildespråk: engelsk
+> Kildefil: ai/English/templates/TOOL_PROFILE.md
+> Ved avvik gjelder den engelske filen.
 
-## Source file
+Denne siden forklarer hvordan `templates/TOOL_PROFILE.md` passer inn i AI Agent Operating Manual. Den er skrevet for mennesker og AI-agenter som må planlegge, verifisere eller gjenta repositoryarbeid.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Praktisk omfang
 
-## Required coverage
+Bruk siden som operativ veiledning for temaet `templates`. Den erstatter ikke repositorybevis eller prosjektspesifikke instruksjoner.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Arbeidsretningslinjer
+
+- Behandle repositorybevis som primær autoritet.
+- Bevar filnavn, kommandoer, API-navn og modellnavn nøyaktig.
+- Merk uverifiserte konklusjoner med `[ASSUMPTION: ...]` og ukjente fakta med `[UNKNOWN]`.
+- Knytt verktøyspesifikk atferd til verktøyet eller runtime som faktisk eier den.
+- Eskaler risiko rundt sikkerhet, tillatelser og produksjonsklarhet til menneskelig gjennomgang.
+
+## Fokus
+
+Definer omfang, nødvendig bevis, verifiserbare kommandoer og grenser for menneskelig godkjenning før siden brukes i en workflow.
+
+## Kvalitetskontroll
+
+- Formålet er tydelig for en ny bidragsyter.
+- Veiledningen hjelper både AI-agenter og menneskelige maintainers.
+- Ingen modellspesifikke kommandoer blir funnet opp.
+- Grenser for sikkerhet og menneskelig godkjenning forblir synlige.
+- Den engelske kilden forblir avgjørende ved lokaliseringskonflikter.

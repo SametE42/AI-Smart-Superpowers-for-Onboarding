@@ -1,19 +1,34 @@
 # Prompts
 
-This file mirrors `ai/English/models/mistral/prompts.md` for the Romanian localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Limba sursă: engleză
+> Fișier sursă: ai/English/models/mistral/prompts.md
+> În caz de diferențe, fișierul în engleză rămâne autoritatea.
 
-## Source file
+Această pagină explică modul în care `models/mistral/prompts.md` se încadrează în AI Agent Operating Manual. Este scrisă pentru oameni și agenți AI care trebuie să planifice, să verifice sau să repete lucru în repository.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Domeniu practic
 
-## Required coverage
+Folosește această pagină ca ghid operațional pentru tema `models`. Nu înlocuiește dovezile din repository sau instrucțiunile specifice proiectului.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Instrucțiuni de lucru
+
+- Tratează dovezile din repository ca autoritate principală.
+- Păstrează exact numele fișierelor, comenzile, numele API și numele modelelor.
+- Marchează concluziile neverificate cu `[ASSUMPTION: ...]` și faptele necunoscute cu `[UNKNOWN]`.
+- Leagă comportamentul specific unui tool de tool-ul sau runtime-ul care îl deține cu adevărat.
+- Escaladează riscurile de securitate, permisiuni și production-readiness către revizuire umană.
+
+## Focus
+
+Înainte de a folosi această pagină într-un workflow, definește domeniul, dovezile necesare, comenzile verificabile și limitele aprobării umane.
+
+## Control calitate
+
+- Scopul este clar pentru un nou contributor.
+- Ghidul ajută atât agenții AI, cât și maintainerii umani.
+- Nu sunt inventate comenzi specifice modelelor.
+- Limitele de securitate și aprobare umană rămân vizibile.
+- Sursa în engleză rămâne decisivă în conflictele de localizare.

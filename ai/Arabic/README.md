@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Arabic
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Arabic.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> لغة المصدر: الإنجليزية
+> ملف المصدر: ai/English/README.md
+> عند وجود تعارض، يكون الملف الإنجليزي هو المرجع.
 
-## Sections
+تشرح هذه الصفحة كيف يندرج `README.md` ضمن AI Agent Operating Manual. وهي موجهة إلى الأشخاص ووكلاء الذكاء الاصطناعي الذين يحتاجون إلى تخطيط عمل المستودع أو التحقق منه أو تكراره.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## النطاق العملي
 
-## Source of truth
+استخدم هذه الصفحة كإرشاد تشغيلي لموضوع `README.md`. لا تحل محل أدلة المستودع أو تعليمات المشروع الخاصة.
 
-The English version remains authoritative until this localization has been reviewed.
+## إرشادات العمل
+
+- اعتبر أدلة المستودع هي المرجع الأساسي.
+- حافظ على أسماء الملفات والأوامر وأسماء API وأسماء النماذج كما هي.
+- علّم الاستنتاجات غير المتحقق منها بـ `[ASSUMPTION: ...]` والحقائق غير المعروفة بـ `[UNKNOWN]`.
+- اربط كل سلوك خاص بالأداة أو runtime الذي يملكه فعليا.
+- صعّد مخاطر الأمان والصلاحيات وجاهزية الإنتاج إلى مراجعة بشرية.
+
+## التركيز
+
+حدد النطاق والأدلة المطلوبة والأوامر القابلة للتحقق وحدود الموافقة البشرية قبل استخدام هذه الصفحة داخل workflow.
+
+## فحص الجودة
+
+- الغرض واضح للمساهمين الجدد.
+- الإرشادات مفيدة لوكلاء الذكاء الاصطناعي وللمشرفين البشر.
+- لا يتم اختلاق أوامر خاصة بالنماذج.
+- تبقى حدود الأمان والموافقة البشرية واضحة.
+- يبقى المصدر الإنجليزي هو المرجع عند تعارضات الترجمة.

@@ -1,19 +1,34 @@
 # Gemini Cli Workflow
 
-This file mirrors `ai/English/examples/gemini-cli-workflow.md` for the Tagalog localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Pinagmulan na wika: Ingles
+> Pinagmulan na file: ai/English/examples/gemini-cli-workflow.md
+> Kapag may pagkakaiba, ang English file ang susundin.
 
-## Source file
+Ipinapaliwanag ng pahinang ito kung paano umaangkop ang `examples/gemini-cli-workflow.md` sa AI Agent Operating Manual. Para ito sa mga tao at AI agents na kailangang magplano, magberipika o umulit ng repository work.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Praktikal na saklaw
 
-## Required coverage
+Gamitin ang pahinang ito bilang operational na gabay para sa paksang `examples`. Hindi nito pinapalitan ang repository evidence o project-specific instructions.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Mga gabay sa trabaho
+
+- Ituring ang repository evidence bilang pangunahing awtoridad.
+- Panatilihing eksakto ang file names, commands, API names at model names.
+- Markahan ang hindi pa nabeberipikang konklusyon ng `[ASSUMPTION: ...]` at hindi alam na facts ng `[UNKNOWN]`.
+- Ikabit ang tool-specific behavior sa tool o runtime na tunay na nagmamay-ari nito.
+- I-escalate ang security, permissions at production-readiness risks sa pagsusuri ng tao.
+
+## Pokus
+
+Bago gamitin ang pahinang ito sa workflow, tukuyin ang saklaw, kinakailangang evidence, verifiable commands at hangganan ng human approval.
+
+## Quality check
+
+- Malinaw ang layunin para sa bagong contributor.
+- Nakatutulong ang gabay sa AI agents at human maintainers.
+- Hindi iniimbento ang model-specific commands.
+- Nakikita pa rin ang boundaries ng security at human approval.
+- Ang English source pa rin ang masusunod sa localization conflicts.

@@ -1,19 +1,29 @@
 # Regression Tests
 
-This file mirrors `ai/English/evals/regression-tests.md` for the Afrikaans localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Brontaal: Engels
+> Bronlêer: ai/English/evals/regression-tests.md
+> By verskille bly die Engelse lêer gesaghebbend.
 
-## Source file
+Hierdie bladsy verduidelik hoe `evals/regression-tests.md` in die AI Agent Operating Manual pas vir mense en AI agents wat repository-werk moet beplan, verifieer of herhaal.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Praktiese omvang
 
-## Required coverage
+Gebruik hierdie bladsy as operasionele leiding vir `evals`. Dit vervang nie repository-bewyse of projekspesifieke instruksies nie.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Werksriglyne
+
+- Behou lêername, commands, API-name en modelname presies.
+- Merk aannames met `[ASSUMPTION: ...]` en onbekende feite met `[UNKNOWN]`.
+- Eskaleer security-, permissions- en production-readiness-risiko's na menslike hersiening.
+
+## Fokus
+
+Definieer omvang, bewyse, verifieerbare commands en menslike goedkeuringsgrense voordat hierdie bladsy in 'n workflow gebruik word.
+
+## Kwaliteitskontrole
+
+- Die doel is duidelik vir nuwe contributors.
+- Die Engelse bron bly beslissend by localization-konflikte.

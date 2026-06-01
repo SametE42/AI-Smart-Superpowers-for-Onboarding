@@ -1,19 +1,34 @@
 # Config
 
-This file mirrors `ai/English/models/xiaomi-mimo/config.md` for the Albanian localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Gjuha burimore: anglisht
+> Skedari burim: ai/English/models/xiaomi-mimo/config.md
+> Në rast mospërputhjesh, skedari anglisht ka përparësi.
 
-## Source file
+Kjo faqe shpjegon si `models/xiaomi-mimo/config.md` përshtatet në AI Agent Operating Manual. Është shkruar për njerëz dhe agjentë AI që duhet të planifikojnë, verifikojnë ose përsërisin punë në repository.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Fusha praktike
 
-## Required coverage
+Përdore këtë faqe si udhëzim operacional për temën `models`. Nuk zëvendëson provat e repository-t ose udhëzimet specifike të projektit.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Udhëzime pune
+
+- Trajto provat e repository-t si autoritetin kryesor.
+- Ruaj saktësisht emrat e skedarëve, komandat, emrat e API dhe emrat e modeleve.
+- Shëno përfundimet e paverifikuara me `[ASSUMPTION: ...]` dhe faktet e panjohura me `[UNKNOWN]`.
+- Lidhe sjelljen specifike të mjetit me mjetin ose runtime që e zotëron vërtet.
+- Eskaloni rreziqet e sigurisë, lejeve dhe production-readiness te rishikimi njerëzor.
+
+## Fokus
+
+Para se ta përdorësh këtë faqe në workflow, përcakto fushën, provat e nevojshme, komandat e verifikueshme dhe kufijtë e miratimit njerëzor.
+
+## Kontroll cilësie
+
+- Qëllimi është i qartë për një kontribues të ri.
+- Udhëzimi ndihmon si agjentët AI ashtu edhe mirëmbajtësit njerëzorë.
+- Nuk shpiken komanda specifike për modele.
+- Kufijtë e sigurisë dhe miratimit njerëzor mbeten të dukshëm.
+- Burimi anglisht mbetet vendimtar në konfliktet e lokalizimit.

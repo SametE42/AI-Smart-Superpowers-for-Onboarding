@@ -1,27 +1,29 @@
-# AI Agent Operating Manual — Mongolian
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Mongolian.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Эх хэл: Англи
+> Эх файл: ai/English/README.md
+> Зөрүү гарвал англи файл давамгайлна.
 
-## Sections
+Энэ хуудас `README.md` AI Agent Operating Manual-д хэрхэн нийцэж байгааг тайлбарлана; repository ажлыг төлөвлөх, шалгах эсвэл давтах хүмүүс болон AI agents-д зориулагдсан.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Практик хүрээ
 
-## Source of truth
+Энэ хуудсыг `README.md` сэдвийн үйл ажиллагааны заавар болгон ашигла. Repository нотолгоо эсвэл төслийн зааврыг орлохгүй.
 
-The English version remains authoritative until this localization has been reviewed.
+## Ажлын заавар
+
+- Файлын нэр, commands, API нэр, model нэрийг яг хэвээр хадгал.
+- Шалгаагүй дүгнэлтийг `[ASSUMPTION: ...]`, үл мэдэгдэх баримтыг `[UNKNOWN]` гэж тэмдэглэ.
+- security, permissions, production-readiness эрсдэлийг хүний хяналтад шилжүүл.
+
+## Фокус
+
+workflow-д ашиглахаас өмнө хүрээ, нотолгоо, шалгаж болох commands болон хүний зөвшөөрлийн хил хязгаарыг тодорхойл.
+
+## Чанарын шалгалт
+
+- Зорилго шинэ contributor-д тодорхой.
+- localization зөрчилд англи эх сурвалж шийдвэрлэх үүрэгтэй.

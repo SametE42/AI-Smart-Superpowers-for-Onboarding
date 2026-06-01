@@ -2,78 +2,78 @@
 
 | Language | Structure | Content status |
 |---|---:|---|
-| Afrikaans | yes | pending translation review |
-| Albanian | yes | pending translation review |
-| Amharic | yes | pending translation review |
-| Arabic | yes | pending translation review |
-| Armenian | yes | pending translation review |
-| Azerbaijani | yes | pending translation review |
-| Basque | yes | pending translation review |
-| Bengali | yes | pending translation review |
-| Bosnian | yes | pending translation review |
-| Bulgarian | yes | pending translation review |
-| Burmese | yes | pending translation review |
-| Catalan | yes | pending translation review |
-| Chinese | yes | pending translation review |
-| Croatian | yes | pending translation review |
-| Czech | yes | pending translation review |
-| Danish | yes | pending translation review |
-| Dutch | yes | pending translation review |
+| Afrikaans | yes | AI-translated, AI quality gate passed |
+| Albanian | yes | AI-translated, AI quality gate passed |
+| Amharic | yes | AI-translated, AI quality gate passed |
+| Arabic | yes | AI-translated, AI quality gate passed |
+| Armenian | yes | AI-translated, AI quality gate passed |
+| Azerbaijani | yes | AI-translated, AI quality gate passed |
+| Basque | yes | AI-translated, AI quality gate passed |
+| Bengali | yes | AI-translated, AI quality gate passed |
+| Bosnian | yes | AI-translated, AI quality gate passed |
+| Bulgarian | yes | AI-translated, AI quality gate passed |
+| Burmese | yes | AI-translated, AI quality gate passed |
+| Catalan | yes | AI-translated, AI quality gate passed |
+| Chinese | yes | AI-translated, AI quality gate passed |
+| Croatian | yes | AI-translated, AI quality gate passed |
+| Czech | yes | AI-translated, AI quality gate passed |
+| Danish | yes | AI-translated, AI quality gate passed |
+| Dutch | yes | AI-translated, AI quality gate passed |
 | English | yes | source of truth |
-| Estonian | yes | pending translation review |
-| Finnish | yes | pending translation review |
-| French | yes | pending translation review |
-| Georgian | yes | pending translation review |
-| German | yes | German localized draft |
-| Greek | yes | pending translation review |
-| Gujarati | yes | pending translation review |
-| Hausa | yes | pending translation review |
-| Hebrew | yes | pending translation review |
-| Hindi | yes | pending translation review |
-| Hungarian | yes | pending translation review |
-| Icelandic | yes | pending translation review |
-| Indonesian | yes | pending translation review |
-| Irish | yes | pending translation review |
-| Italian | yes | pending translation review |
-| Japanese | yes | pending translation review |
-| Kannada | yes | pending translation review |
-| Kazakh | yes | pending translation review |
-| Khmer | yes | pending translation review |
-| Korean | yes | pending translation review |
-| Kurdish | yes | pending translation review |
-| Lao | yes | pending translation review |
-| Latvian | yes | pending translation review |
-| Lithuanian | yes | pending translation review |
-| Macedonian | yes | pending translation review |
-| Malay | yes | pending translation review |
-| Malayalam | yes | pending translation review |
-| Marathi | yes | pending translation review |
-| Mongolian | yes | pending translation review |
-| Nepali | yes | pending translation review |
-| Norwegian | yes | pending translation review |
-| Pashto | yes | pending translation review |
-| Persian | yes | pending translation review |
-| Polish | yes | pending translation review |
-| Portuguese | yes | pending translation review |
-| Punjabi | yes | pending translation review |
-| Romanian | yes | pending translation review |
-| Russian | yes | pending translation review |
-| Serbian | yes | pending translation review |
-| Sinhala | yes | pending translation review |
-| Slovak | yes | pending translation review |
-| Slovenian | yes | pending translation review |
-| Somali | yes | pending translation review |
-| Spanish | yes | pending translation review |
-| Swahili | yes | pending translation review |
-| Swedish | yes | pending translation review |
-| Tagalog | yes | pending translation review |
-| Tamil | yes | pending translation review |
-| Telugu | yes | pending translation review |
-| Thai | yes | pending translation review |
-| Tigrinya | yes | pending translation review |
-| Turkish | yes | pending translation review |
-| Ukrainian | yes | pending translation review |
-| Urdu | yes | pending translation review |
-| Uzbek | yes | pending translation review |
-| Vietnamese | yes | pending translation review |
-| Zulu | yes | pending translation review |
+| Estonian | yes | AI-translated, AI quality gate passed |
+| Finnish | yes | AI-translated, AI quality gate passed |
+| French | yes | AI-translated, AI quality gate passed |
+| Georgian | yes | AI-translated, AI quality gate passed |
+| German | yes | AI-translated, AI quality gate passed |
+| Greek | yes | AI-translated, AI quality gate passed |
+| Gujarati | yes | AI-translated, AI quality gate passed |
+| Hausa | yes | AI-translated, AI quality gate passed |
+| Hebrew | yes | AI-translated, AI quality gate passed |
+| Hindi | yes | AI-translated, AI quality gate passed |
+| Hungarian | yes | AI-translated, AI quality gate passed |
+| Icelandic | yes | AI-translated, AI quality gate passed |
+| Indonesian | yes | AI-translated, AI quality gate passed |
+| Irish | yes | AI-translated, AI quality gate passed |
+| Italian | yes | AI-translated, AI quality gate passed |
+| Japanese | yes | AI-translated, AI quality gate passed |
+| Kannada | yes | AI-translated, AI quality gate passed |
+| Kazakh | yes | AI-translated, AI quality gate passed |
+| Khmer | yes | AI-translated, AI quality gate passed |
+| Korean | yes | AI-translated, AI quality gate passed |
+| Kurdish | yes | AI-translated, AI quality gate passed |
+| Lao | yes | AI-translated, AI quality gate passed |
+| Latvian | yes | AI-translated, AI quality gate passed |
+| Lithuanian | yes | AI-translated, AI quality gate passed |
+| Macedonian | yes | AI-translated, AI quality gate passed |
+| Malay | yes | AI-translated, AI quality gate passed |
+| Malayalam | yes | AI-translated, AI quality gate passed |
+| Marathi | yes | AI-translated, AI quality gate passed |
+| Mongolian | yes | AI-translated, AI quality gate passed |
+| Nepali | yes | AI-translated, AI quality gate passed |
+| Norwegian | yes | AI-translated, AI quality gate passed |
+| Pashto | yes | AI-translated, AI quality gate passed |
+| Persian | yes | AI-translated, AI quality gate passed |
+| Polish | yes | AI-translated, AI quality gate passed |
+| Portuguese | yes | AI-translated, AI quality gate passed |
+| Punjabi | yes | AI-translated, AI quality gate passed |
+| Romanian | yes | AI-translated, AI quality gate passed |
+| Russian | yes | AI-translated, AI quality gate passed |
+| Serbian | yes | AI-translated, AI quality gate passed |
+| Sinhala | yes | AI-translated, AI quality gate passed |
+| Slovak | yes | AI-translated, AI quality gate passed |
+| Slovenian | yes | AI-translated, AI quality gate passed |
+| Somali | yes | AI-translated, AI quality gate passed |
+| Spanish | yes | AI-translated, AI quality gate passed |
+| Swahili | yes | AI-translated, AI quality gate passed |
+| Swedish | yes | AI-translated, AI quality gate passed |
+| Tagalog | yes | AI-translated, AI quality gate passed |
+| Tamil | yes | AI-translated, AI quality gate passed |
+| Telugu | yes | AI-translated, AI quality gate passed |
+| Thai | yes | AI-translated, AI quality gate passed |
+| Tigrinya | yes | AI-translated, AI quality gate passed |
+| Turkish | yes | AI-translated, AI quality gate passed |
+| Ukrainian | yes | AI-translated, AI quality gate passed |
+| Urdu | yes | AI-translated, AI quality gate passed |
+| Uzbek | yes | AI-translated, AI quality gate passed |
+| Vietnamese | yes | AI-translated, AI quality gate passed |
+| Zulu | yes | AI-translated, AI quality gate passed |

@@ -3,8 +3,7 @@ title: AI Repo Onboarding Standard
 message: If you use this project, please cite it using this metadata.
 type: software
 authors:
-  - family-names: Erdogan
-    given-names: Samet
+  - name: SametE42
 version: 0.1.0
 date-released: 2026-05-28
 license: MIT

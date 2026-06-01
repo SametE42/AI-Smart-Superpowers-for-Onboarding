@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Spanish
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Spanish.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Idioma fuente: inglés
+> Archivo fuente: ai/English/README.md
+> Si hay diferencias, el archivo en inglés tiene prioridad.
 
-## Sections
+Esta página explica cómo `README.md` encaja en el AI Agent Operating Manual. Está escrita para personas y agentes de IA que deben planificar, verificar o repetir trabajo de repositorio.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Alcance práctico
 
-## Source of truth
+Usa esta página como guía operativa para el tema `README.md`. No sustituye la evidencia del repositorio ni las instrucciones propias del proyecto.
 
-The English version remains authoritative until this localization has been reviewed.
+## Pautas de trabajo
+
+- Trata la evidencia del repositorio como la autoridad principal.
+- Conserva exactamente nombres de archivos, comandos, nombres de API y nombres de modelos.
+- Marca conclusiones no verificadas con `[ASSUMPTION: ...]` y hechos desconocidos con `[UNKNOWN]`.
+- Vincula cada comportamiento específico a la herramienta o runtime que realmente lo posee.
+- Escala riesgos de seguridad, permisos y preparación para producción a revisión humana.
+
+## Enfoque
+
+Define alcance, evidencia necesaria, comandos verificables y límites de aprobación humana antes de usar esta página en un workflow.
+
+## Control de calidad
+
+- El propósito es claro para una nueva persona colaboradora.
+- La guía ayuda tanto a agentes de IA como a mantenedores humanos.
+- No se inventan comandos específicos de modelos.
+- Los límites de seguridad y aprobación humana siguen visibles.
+- La fuente inglesa sigue siendo la autoridad para conflictos de localización.

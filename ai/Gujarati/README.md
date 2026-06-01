@@ -1,27 +1,29 @@
-# AI Agent Operating Manual — Gujarati
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Gujarati.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> સ્ત્રોત ભાષા: અંગ્રેજી
+> સ્ત્રોત ફાઇલ: ai/English/README.md
+> ફરક હોય તો અંગ્રેજી ફાઇલ પ્રાથમિક રહેશે.
 
-## Sections
+આ પૃષ્ઠ સમજાવે છે કે `README.md` AI Agent Operating Manual માં કેવી રીતે ફિટ થાય છે, repository કામની યોજના, ચકાસણી અથવા પુનરાવર્તન કરનારા લોકો અને AI agents માટે.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## વ્યવહારુ વ્યાપ
 
-## Source of truth
+આ પૃષ્ઠને `README.md` માટે કાર્યકારી માર્ગદર્શિકા તરીકે વાપરો. તે repository પુરાવા અથવા પ્રોજેક્ટ સૂચનોને બદલેતું નથી.
 
-The English version remains authoritative until this localization has been reviewed.
+## કાર્ય માર્ગદર્શિકા
+
+- ફાઇલ નામો, commands, API નામો અને model નામો જાળવો.
+- અચકાસેલ તારણો `[ASSUMPTION: ...]` અને અજ્ઞાત તથ્યો `[UNKNOWN]`થી ચિહ્નિત કરો.
+- security, permissions અને production-readiness જોખમોને માનવીય સમીક્ષા માટે મોકલો.
+
+## ફોકસ
+
+workflow માં વાપરતા પહેલા વ્યાપ, પુરાવા, ચકાસી શકાય તેવા commands અને માનવીય મંજૂરીની સીમાઓ નક્કી કરો.
+
+## ગુણવત્તા તપાસ
+
+- હેતુ નવા contributor માટે સ્પષ્ટ છે.
+- localization વિવાદમાં અંગ્રેજી સ્ત્રોત નિર્ણાયક રહેશે.

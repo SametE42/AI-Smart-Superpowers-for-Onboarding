@@ -4,6 +4,27 @@ All notable changes to this project are documented here.
 
 This project follows semantic versioning where practical.
 
+## [Unreleased]
+
+### Added
+
+- Reproducible repository validation script and GitHub Actions workflow.
+- Local unit tests for validation behavior.
+- Reproducible AI manual scaffold refresh script for English source pages and AI-translated localized batches.
+
+### Changed
+
+- Reworked the root README as the primary GitHub entrypoint.
+- Expanded `templates/MASTER_PROMPT.en.md` so it matches the full workflow structure of the German prompt.
+- Standardized English template unknown markers to `[UNKNOWN]` and `[ASSUMPTION: ...]`.
+- Extended CODEOWNERS coverage to AI documentation and validation files.
+- Replaced generic scaffold text in `ai/English/` and matching `ai/German/` pages with practical operating guidance.
+- Replaced mirror placeholders in every non-English language folder with AI-translated pages and stable machine-readable quality-pass markers.
+- Split validation reporting between English source scaffolds, AI-translated localized pages, legacy unreviewed translations and remaining mirror placeholders.
+- Updated publication, contribution, pull request, workflow and i18n documentation to reflect the current validation and reporting workflow.
+- Clarified GitHub commit-readiness checks, optional extension paths and AI translation coverage.
+- Replaced personal author-name metadata with the public repository handle.
+
 ## [0.1.0] - 2026-05-28
 
 ### Added

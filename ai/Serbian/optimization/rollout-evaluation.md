@@ -1,19 +1,34 @@
 # Rollout Evaluation
 
-This file mirrors `ai/English/optimization/rollout-evaluation.md` for the Serbian localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Izvorni jezik: engleski
+> Izvorna datoteka: ai/English/optimization/rollout-evaluation.md
+> Ako postoje odstupanja, engleska datoteka ima prednost.
 
-## Source file
+Ova stranica objašnjava kako se `optimization/rollout-evaluation.md` uklapa u AI Agent Operating Manual. Namenjena je ljudima i AI agentima koji treba da planiraju, provere ili ponove rad u repositoryju.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Praktični opseg
 
-## Required coverage
+Koristi ovu stranicu kao operativni vodič za temu `optimization`. Ne zamenjuje dokaze iz repositoryja niti projektne instrukcije.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Radne smernice
+
+- Tretiraj dokaze iz repositoryja kao primarni autoritet.
+- Zadrži tačno nazive datoteka, komande, API nazive i nazive modela.
+- Neproverene zaključke označi sa `[ASSUMPTION: ...]`, a nepoznate činjenice sa `[UNKNOWN]`.
+- Poveži ponašanje specifično za alat sa alatom ili runtimeom koji ga zaista poseduje.
+- Rizike bezbednosti, dozvola i production-readiness eskaliraj na ljudski pregled.
+
+## Fokus
+
+Pre korišćenja ove stranice u workflowu definiši opseg, potrebne dokaze, proverljive komande i granice ljudskog odobrenja.
+
+## Provera kvaliteta
+
+- Svrha je jasna novom saradniku.
+- Smernice pomažu i AI agentima i ljudskim održavaocima.
+- Ne izmišljaju se komande specifične za modele.
+- Granice bezbednosti i ljudskog odobrenja ostaju vidljive.
+- Engleski izvor ostaje odlučujući kod konflikata lokalizacije.

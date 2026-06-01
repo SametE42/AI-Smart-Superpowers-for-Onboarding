@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Malay
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Malay.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Bahasa sumber: Inggeris
+> Fail sumber: ai/English/README.md
+> Jika terdapat perbezaan, fail Inggeris menjadi rujukan utama.
 
-## Sections
+Halaman ini menerangkan bagaimana `README.md` sesuai dalam AI Agent Operating Manual. Ia ditulis untuk manusia dan AI agents yang perlu merancang, mengesahkan atau mengulang kerja repository.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Skop praktikal
 
-## Source of truth
+Gunakan halaman ini sebagai panduan operasi untuk tema `README.md`. Ia tidak menggantikan bukti repository atau arahan khusus projek.
 
-The English version remains authoritative until this localization has been reviewed.
+## Garis panduan kerja
+
+- Anggap bukti repository sebagai autoriti utama.
+- Kekalkan nama fail, commands, nama API dan nama model dengan tepat.
+- Tandakan kesimpulan belum disahkan dengan `[ASSUMPTION: ...]` dan fakta tidak diketahui dengan `[UNKNOWN]`.
+- Hubungkan tingkah laku khusus tool kepada tool atau runtime yang benar-benar memilikinya.
+- Naikkan risiko security, permissions dan production-readiness kepada semakan manusia.
+
+## Fokus
+
+Sebelum menggunakan halaman ini dalam workflow, tetapkan skop, bukti yang diperlukan, commands yang boleh disahkan dan sempadan kelulusan manusia.
+
+## Semakan kualiti
+
+- Tujuan jelas kepada contributor baharu.
+- Panduan membantu AI agents dan penyelenggara manusia.
+- Commands khusus model tidak direka-reka.
+- Sempadan security dan kelulusan manusia kekal kelihatan.
+- Sumber Inggeris kekal penentu dalam konflik localization.

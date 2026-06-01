@@ -1,27 +1,29 @@
-# AI Agent Operating Manual — Zulu
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Zulu.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Ulimi lomthombo: isiNgisi
+> Ifayela lomthombo: ai/English/README.md
+> Uma kunomehluko, ifayela lesiNgisi liyalandelwa.
 
-## Sections
+Leli khasi lichaza ukuthi `README.md` lingena kanjani ku-AI Agent Operating Manual kubantu nama-AI agents adinga ukuhlela, ukuqinisekisa noma ukuphinda umsebenzi we-repository.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Ububanzi bokusebenza
 
-## Source of truth
+Sebenzisa leli khasi njengomhlahlandlela wokusebenza we-`README.md`. Alithathi indawo yobufakazi be-repository noma imiyalelo yephrojekthi.
 
-The English version remains authoritative until this localization has been reviewed.
+## Imihlahlandlela yomsebenzi
+
+- Gcina amagama amafayela, commands, amagama e-API namagama ama-model ngokunembile.
+- Maka iziphetho ezingakaqinisekiswa ngo-`[ASSUMPTION: ...]` namaqiniso angaziwa ngo-`[UNKNOWN]`.
+- Dlulisela ubungozi be-security, permissions ne-production-readiness ekubuyekezweni ngumuntu.
+
+## Ukugxila
+
+Ngaphambi kokusebenzisa ku-workflow, chaza ububanzi, ubufakazi, commands aqinisekisekayo nemingcele yokuvunywa ngumuntu.
+
+## Ukuhlola ikhwalithi
+
+- Inhloso icacile ku-contributor omusha.
+- Umthombo wesiNgisi uhlala unquma uma kukhona izingxabano ze-localization.

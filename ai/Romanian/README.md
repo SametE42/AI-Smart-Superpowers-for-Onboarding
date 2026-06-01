@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Romanian
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Romanian.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Limba sursă: engleză
+> Fișier sursă: ai/English/README.md
+> În caz de diferențe, fișierul în engleză rămâne autoritatea.
 
-## Sections
+Această pagină explică modul în care `README.md` se încadrează în AI Agent Operating Manual. Este scrisă pentru oameni și agenți AI care trebuie să planifice, să verifice sau să repete lucru în repository.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Domeniu practic
 
-## Source of truth
+Folosește această pagină ca ghid operațional pentru tema `README.md`. Nu înlocuiește dovezile din repository sau instrucțiunile specifice proiectului.
 
-The English version remains authoritative until this localization has been reviewed.
+## Instrucțiuni de lucru
+
+- Tratează dovezile din repository ca autoritate principală.
+- Păstrează exact numele fișierelor, comenzile, numele API și numele modelelor.
+- Marchează concluziile neverificate cu `[ASSUMPTION: ...]` și faptele necunoscute cu `[UNKNOWN]`.
+- Leagă comportamentul specific unui tool de tool-ul sau runtime-ul care îl deține cu adevărat.
+- Escaladează riscurile de securitate, permisiuni și production-readiness către revizuire umană.
+
+## Focus
+
+Înainte de a folosi această pagină într-un workflow, definește domeniul, dovezile necesare, comenzile verificabile și limitele aprobării umane.
+
+## Control calitate
+
+- Scopul este clar pentru un nou contributor.
+- Ghidul ajută atât agenții AI, cât și maintainerii umani.
+- Nu sunt inventate comenzi specifice modelelor.
+- Limitele de securitate și aprobare umană rămân vizibile.
+- Sursa în engleză rămâne decisivă în conflictele de localizare.

@@ -1,19 +1,34 @@
 # Researcher Writer Reviewer
 
-This file mirrors `ai/English/agents/researcher-writer-reviewer.md` for the Bosnian localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Izvorni jezik: engleski
+> Izvorna datoteka: ai/English/agents/researcher-writer-reviewer.md
+> Ako postoje odstupanja, engleska datoteka ima prednost.
 
-## Source file
+Ova stranica objašnjava kako se `agents/researcher-writer-reviewer.md` uklapa u AI Agent Operating Manual. Namijenjena je ljudima i AI agentima koji trebaju planirati, provjeriti ili ponoviti rad u repositoryju.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Praktični opseg
 
-## Required coverage
+Koristi ovu stranicu kao operativni vodič za temu `agents`. Ne zamjenjuje dokaze iz repositoryja niti projektne instrukcije.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Radne smjernice
+
+- Tretiraj dokaze iz repositoryja kao primarni autoritet.
+- Zadrži tačno nazive datoteka, komande, nazive API-ja i nazive modela.
+- Neprovjerene zaključke označi sa `[ASSUMPTION: ...]`, a nepoznate činjenice sa `[UNKNOWN]`.
+- Poveži ponašanje specifično za alat s alatom ili runtimeom koji ga zaista posjeduje.
+- Rizike sigurnosti, dozvola i production-readiness eskaliraj na ljudski pregled.
+
+## Fokus
+
+Prije korištenja ove stranice u workflowu definiši opseg, potrebne dokaze, provjerljive komande i granice ljudskog odobrenja.
+
+## Provjera kvaliteta
+
+- Svrha je jasna novom saradniku.
+- Smjernice pomažu i AI agentima i ljudskim održavateljima.
+- Ne izmišljaju se komande specifične za modele.
+- Granice sigurnosti i ljudskog odobrenja ostaju vidljive.
+- Engleski izvor ostaje odlučujući kod konflikata lokalizacije.

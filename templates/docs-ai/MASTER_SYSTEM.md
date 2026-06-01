@@ -27,7 +27,7 @@ If rules conflict, the stricter rule applies.
 
 ## Project status
 
-**Current status:** `[UNBEKANNT]`
+**Current status:** `[UNKNOWN]`
 
 Allowed status terms:
 
@@ -40,9 +40,9 @@ Allowed status terms:
 
 Document current blockers:
 
-- `[UNBEKANNT]`
-- `[UNBEKANNT]`
-- `[UNBEKANNT]`
+- `[UNKNOWN]`
+- `[UNKNOWN]`
+- `[UNKNOWN]`
 
 Do not claim production readiness while blockers remain open.
 
@@ -50,15 +50,17 @@ Do not claim production readiness while blockers remain open.
 
 For relevant work, follow this order:
 
-1. Read relevant context.
-2. Identify goal and non-goals.
-3. Document assumptions with reason and risk.
-4. Define acceptance criteria.
-5. Add or identify tests/checks.
-6. Implement minimally.
-7. Update documentation.
-8. Run checks or document why they were not run.
-9. State remaining risks and production status.
+1. Read `PROJECT_MEMORY.md`.
+2. Read task-specific context.
+3. Identify goal and non-goals.
+4. Document assumptions with reason and risk.
+5. Define acceptance criteria.
+6. Add or identify tests/checks.
+7. Implement minimally.
+8. Update documentation.
+9. Update `PROJECT_MEMORY.md` with current state, decisions, open tasks and next step.
+10. Run checks or document why they were not run.
+11. State remaining risks and production status.
 
 ## Engineering principles
 
@@ -70,6 +72,7 @@ For relevant work, follow this order:
 - Keep test data synthetic.
 - Do not add new dependencies without documented need, license check, bundle/security impact and human review.
 - Do not mix refactoring, feature work and documentation updates without clear reason.
+- Treat repeated tool-call validation failures as possible contract-design issues. Validate first, repair narrowly only from concrete validator evidence, re-validate, log the repair and report the choice back to the model.
 
 ## Change rules
 
@@ -110,8 +113,8 @@ Every relevant change should check:
 If information is missing:
 
 - Ask at most three critical questions.
-- Mark non-critical gaps as `[UNBEKANNT]`.
-- Mark plausible but unverified conclusions as `[ANNAHME: ...]`.
+- Mark non-critical gaps as `[UNKNOWN]`.
+- Mark plausible but unverified conclusions as `[ASSUMPTION: ...]`.
 - Default to conservative, blocking and documented behavior.
 - For business rules, prefer `not-configured` over invented logic.
 - For security, expose the risk rather than silently accepting it.
@@ -132,6 +135,7 @@ A feature is not complete unless the following are covered or explicitly marked 
 ## Context loading strategy
 
 Load only what is needed for the task.
+For relevant work, `PROJECT_MEMORY.md` is always read first because it contains current state, assumptions, open tasks and handover notes.
 
 | Task type | Required context |
 |---|---|

@@ -1,28 +1,27 @@
-# GEPA Optimization
+# Gepa
 
-GEPA means Genetic-Pareto Prompt Evolution. In an agent repository, GEPA-style optimization can be used to improve prompts, skills, tool descriptions, command instructions, agent policies and evaluation rubrics.
+Prompt, skill and workflow optimization methods with controlled rollout practices.
 
-## What to optimize
+## Practical Scope
 
-- Prompt instructions
-- Skill instructions
-- Tool descriptions
-- Model routing rules
-- Agent role definitions
-- Evaluation rubrics
-- Repository documentation workflows
+This page explains how `optimization/gepa.md` fits into the AI Agent Operating Manual. Use it when an agent or maintainer needs repeatable guidance for this topic without loading the entire repository.
 
-## Optimization loop
+## Operating Guidance
 
-1. Define a measurable task.
-2. Run baseline attempts.
-3. Score outputs with an evaluation rubric.
-4. Reflect on failures in natural language.
-5. Mutate the textual artifact.
-6. Keep Pareto-useful variants.
-7. Re-test against regression cases.
-8. Promote only reviewed improvements.
+- Treat repository evidence as authoritative and documentation as secondary.
+- Preserve file names, commands, API names and model names exactly.
+- Mark unverified conclusions as `[ASSUMPTION: ...]` and unknown facts as `[UNKNOWN]`.
+- Keep tool-specific behavior tied to the runtime that actually owns it.
+- Escalate security, permission and production-readiness risks to human review.
 
-## Repository rule
+## Focus
 
-Do not optimize blindly. Every optimization run must record input task, baseline, metric, changed artifact, score delta, known regressions and human approval status.
+Prompt, skill and workflow optimization methods with controlled rollout practices.
+
+## Quality Checklist
+
+- The purpose is clear to a new repository user.
+- The guidance is useful for both AI agents and human maintainers.
+- No model-specific commands are invented unless they belong to the host tool.
+- Safety and human-approval boundaries remain visible.
+- English remains the authoritative source for localization.

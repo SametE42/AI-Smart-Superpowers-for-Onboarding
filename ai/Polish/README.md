@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Polish
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Polish.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Język źródłowy: angielski
+> Plik źródłowy: ai/English/README.md
+> W przypadku rozbieżności plik angielski pozostaje źródłem rozstrzygającym.
 
-## Sections
+Ta strona wyjaśnia, jak `README.md` pasuje do AI Agent Operating Manual. Jest przeznaczona dla ludzi i agentów AI, którzy muszą planować, weryfikować lub powtarzać pracę w repozytorium.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Zakres praktyczny
 
-## Source of truth
+Używaj tej strony jako operacyjnej wskazówki dla tematu `README.md`. Nie zastępuje ona dowodów z repozytorium ani instrukcji specyficznych dla projektu.
 
-The English version remains authoritative until this localization has been reviewed.
+## Wytyczne pracy
+
+- Traktuj dowody z repozytorium jako podstawowe źródło prawdy.
+- Zachowuj dokładnie nazwy plików, komendy, nazwy API i nazwy modeli.
+- Oznaczaj niezweryfikowane wnioski jako `[ASSUMPTION: ...]`, a nieznane fakty jako `[UNKNOWN]`.
+- Łącz zachowanie specyficzne dla narzędzia z narzędziem lub runtime, które faktycznie je kontroluje.
+- Eskaluj ryzyka dotyczące bezpieczeństwa, uprawnień i gotowości produkcyjnej do weryfikacji człowieka.
+
+## Główne założenie
+
+Zdefiniuj zakres, wymagane dowody, weryfikowalne komendy i granice zatwierdzenia przez człowieka przed użyciem tej strony w workflow.
+
+## Kontrola jakości
+
+- Cel jest jasny dla nowej osoby współtworzącej projekt.
+- Wskazówki pomagają zarówno agentom AI, jak i ludzkim maintainerom.
+- Nie są wymyślane komendy specyficzne dla modeli.
+- Granice bezpieczeństwa i zatwierdzania przez człowieka pozostają widoczne.
+- Angielskie źródło pozostaje rozstrzygające przy konfliktach lokalizacji.

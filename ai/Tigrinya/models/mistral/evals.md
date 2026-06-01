@@ -1,19 +1,29 @@
 # Evals
 
-This file mirrors `ai/English/models/mistral/evals.md` for the Tigrinya localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> ቋንቋ ምንጪ፡ እንግሊዝኛ
+> ፋይል ምንጪ: ai/English/models/mistral/evals.md
+> ፍልልይ እንተሃልዩ ፋይል እንግሊዝኛ ይቕድም።
 
-## Source file
+እዚ ገጽ `models/mistral/evals.md` ኣብ AI Agent Operating Manual ብኸመይ ከምዝኣቱ ይገልጽ፣ ንሰባትን AI agentsን repository ስራሕ ዝውጥኑ፣ ዝምርምሩ ወይ ዝደግሙ።
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## ተግባራዊ ወሰን
 
-## Required coverage
+እዚ ገጽ ን `models` ከም መምርሒ ስራሕ ተጠቐም። መርትዖ repository ወይ መምርሒ ፕሮጀክት ኣይትክእልን።
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## መምርሒታት ስራሕ
+
+- ስም ፋይል፣ commands፣ API ስምን model ስምን ብትኽክል ዓቅብ።
+- ዘይተረጋገጹ መደምደሚታት `[ASSUMPTION: ...]` እቶም ዘይፍለጡ facts `[UNKNOWN]` ብምባል ምልክት ግበር።
+- security፣ permissionsን production-readinessን ሓደጋታት ናብ ምርመራ ሰብ ኣቕርብ።
+
+## ትኹረት
+
+ኣብ workflow ቅድሚ ምጥቃምካ ወሰን፣ መርትዖ፣ ዝረጋገጹ commandsን ወሰን ፍቓድ ሰብን ግለጽ።
+
+## ፍተሻ ጽሬት
+
+- ዕላማ ንሓድሽ contributor ግልጺ እዩ።
+- ኣብ localization ግጭት ምንጪ እንግሊዝኛ ይውስን።

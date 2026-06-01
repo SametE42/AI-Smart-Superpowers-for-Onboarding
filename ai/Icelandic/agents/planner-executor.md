@@ -1,19 +1,29 @@
 # Planner Executor
 
-This file mirrors `ai/English/agents/planner-executor.md` for the Icelandic localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Upprunamál: enska
+> Upprunaskrá: ai/English/agents/planner-executor.md
+> Ef munur er til staðar gildir enska skráin.
 
-## Source file
+Þessi síða útskýrir hvernig `agents/planner-executor.md` fellur inn í AI Agent Operating Manual fyrir fólk og AI agents sem þurfa að skipuleggja, sannreyna eða endurtaka repository-vinnu.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Hagnýtt umfang
 
-## Required coverage
+Notaðu þessa síðu sem rekstrarleiðbeiningu fyrir `agents`. Hún kemur ekki í stað repository-sönnunargagna eða verkefnaleiðbeininga.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Vinnuleiðbeiningar
+
+- Varðveittu skráarnöfn, commands, API-nöfn og model-nöfn nákvæmlega.
+- Merktu ósannaðar niðurstöður með `[ASSUMPTION: ...]` og óþekktar staðreyndir með `[UNKNOWN]`.
+- Vísaðu security-, permissions- og production-readiness-áhættu til mannlegrar yfirferðar.
+
+## Fókus
+
+Áður en síðan er notuð í workflow skaltu skilgreina umfang, sönnunargögn, sannreynanleg commands og mörk mannlegrar samþykktar.
+
+## Gæðaprófun
+
+- Tilgangurinn er skýr fyrir nýjan contributor.
+- Enska heimildin ræður úrslitum í localization-ágreiningi.

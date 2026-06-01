@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Urdu
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Urdu.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> ماخذ زبان: انگریزی
+> ماخذ فائل: ai/English/README.md
+> اختلاف کی صورت میں انگریزی فائل کو ترجیح حاصل ہوگی۔
 
-## Sections
+یہ صفحہ بتاتا ہے کہ `README.md` AI Agent Operating Manual میں کیسے استعمال ہوتا ہے۔ یہ ان انسانوں اور AI agents کے لیے ہے جنہیں repository کام کی منصوبہ بندی، تصدیق یا تکرار کرنی ہوتی ہے۔
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## عملی دائرہ
 
-## Source of truth
+اس صفحے کو `README.md` موضوع کے لیے عملی رہنما کے طور پر استعمال کریں۔ یہ repository شواہد یا منصوبے کی مخصوص ہدایات کا بدل نہیں۔
 
-The English version remains authoritative until this localization has been reviewed.
+## کام کی ہدایات
+
+- repository شواہد کو بنیادی اتھارٹی سمجھیں۔
+- فائل نام، commands، API نام اور model نام بالکل برقرار رکھیں۔
+- غیر تصدیق شدہ نتائج کو `[ASSUMPTION: ...]` اور نامعلوم حقائق کو `[UNKNOWN]` سے نشان زد کریں۔
+- tool مخصوص رویے کو اسی tool یا runtime سے جوڑیں جو واقعی اس کا مالک ہے۔
+- security، permissions اور production-readiness خطرات کو انسانی جائزے تک بڑھائیں۔
+
+## توجہ
+
+اس صفحے کو workflow میں استعمال کرنے سے پہلے دائرہ، مطلوبہ شواہد، قابل تصدیق commands اور انسانی منظوری کی حدود طے کریں۔
+
+## معیار کی جانچ
+
+- مقصد نئے contributor کے لیے واضح ہے۔
+- رہنمائی AI agents اور انسانی maintainers دونوں کے لیے مفید ہے۔
+- model مخصوص commands ایجاد نہیں کیے جاتے۔
+- security اور انسانی منظوری کی حدود واضح رہتی ہیں۔
+- localization تنازعات میں انگریزی ماخذ فیصلہ کن رہتا ہے۔

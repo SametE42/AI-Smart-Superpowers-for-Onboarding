@@ -8,7 +8,7 @@
 
 ## System type
 
-`[UNBEKANNT]`
+`[UNKNOWN]`
 
 Describe what the system is and what it is not.
 
@@ -16,16 +16,16 @@ Describe what the system is and what it is not.
 
 | Area | Technology |
 |---|---|
-| Language | `[UNBEKANNT]` |
-| Framework | `[UNBEKANNT]` |
-| UI | `[UNBEKANNT]` |
-| Backend | `[UNBEKANNT]` |
-| Database | `[UNBEKANNT]` |
-| Tests | `[UNBEKANNT]` |
-| Build | `[UNBEKANNT]` |
-| Package manager | `[UNBEKANNT]` |
-| CI/CD | `[UNBEKANNT]` |
-| Deployment | `[UNBEKANNT]` |
+| Language | `[UNKNOWN]` |
+| Framework | `[UNKNOWN]` |
+| UI | `[UNKNOWN]` |
+| Backend | `[UNKNOWN]` |
+| Database | `[UNKNOWN]` |
+| Tests | `[UNKNOWN]` |
+| Build | `[UNKNOWN]` |
+| Package manager | `[UNKNOWN]` |
+| CI/CD | `[UNKNOWN]` |
+| Deployment | `[UNKNOWN]` |
 
 ## Layer model
 
@@ -41,21 +41,21 @@ flowchart TD
 
 Text explanation:
 
-`[UNBEKANNT]`
+`[UNKNOWN]`
 
 ## Folder responsibilities
 
 | Folder | Responsibility | Must not contain |
 |---|---|---|
-| `[UNBEKANNT]` | `[UNBEKANNT]` | `[UNBEKANNT]` |
+| `[UNKNOWN]` | `[UNKNOWN]` | `[UNKNOWN]` |
 
 ## Routing / entrypoints
 
-`[UNBEKANNT]`
+`[UNKNOWN]`
 
 ## Authentication and authorization
 
-`[UNBEKANNT]`
+`[UNKNOWN]`
 
 Do not infer production security from local or prototype mechanisms.
 
@@ -78,18 +78,18 @@ sequenceDiagram
 
 Text explanation:
 
-`[UNBEKANNT]`
+`[UNKNOWN]`
 
 ## Critical paths
 
 | Path | Files / modules | Risk |
 |---|---|---|
-| `[UNBEKANNT]` | `[UNBEKANNT]` | `[UNBEKANNT]` |
+| `[UNKNOWN]` | `[UNKNOWN]` | `[UNKNOWN]` |
 
 ## Technical decisions
 
-- `[UNBEKANNT]`
+- `[UNKNOWN]`
 
 ## Known weaknesses
 
-- `[UNBEKANNT]`
+- `[UNKNOWN]`

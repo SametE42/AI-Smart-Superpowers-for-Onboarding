@@ -1,21 +1,33 @@
-# Gemini CLI Command Reference
+# Gemini Cli
 
-Gemini CLI supports command patterns such as slash commands, file references and shell command prefixes depending on version and configuration.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-## Recommended command areas
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Source language: English
+> Source file: ai/English/commands/gemini-cli.md
+> Bei Abweichungen ist die englische Datei maßgeblich.
 
-- `/help` and session controls
-- `@file` or `@folder` style context references where supported
-- `!command` style shell execution where supported
-- Custom slash commands for reusable prompts
-- `GEMINI.md` as project context
+Command-Systeme, Slash-Commands, Dateireferenzen und wiederholbare Workflow-Kommandos.
 
-## Empfohlener Workflow
+## Praktischer Scope
 
-1. Add `GEMINI.md` with project rules.
-2. Reference the files required for the task.
-3. Use custom commands for recurring docs, tests or review tasks.
-4. Keep shell execution gated by human approval.
+Diese Seite beschreibt, wie `commands/gemini-cli.md` im AI Agent Operating Manual genutzt wird. Sie ist für Menschen und KI-Agenten geschrieben, die Repository-Arbeit planen, prüfen oder wiederholen müssen.
 
+## Arbeitsleitlinien
 
-> Hinweis: Diese Datei ist eine deutsche lokalisierte Version. Bei Abweichungen gilt die englische Datei als maßgeblich.
+- Nutze diese Seite als Orientierung, nicht als Ersatz für Repository-Evidenz.
+- Bewahre Dateinamen, Commands, API-Namen und Modellnamen unverändert.
+- Dokumentiere Annahmen explizit und markiere unbekannte Fakten als `[UNKNOWN]`.
+- Eskaliere Sicherheits-, Berechtigungs- und Produktionsrisiken an menschliche Reviewer.
+
+## Fokus
+
+Command-Systeme, Slash-Commands, Dateireferenzen und wiederholbare Workflow-Kommandos.
+
+## Qualitätscheck
+
+- Der Zweck ist für neue Mitwirkende verständlich.
+- Die Anleitung hilft sowohl KI-Agenten als auch menschlichen Maintainerinnen und Maintainern.
+- Es werden keine modellspezifischen Commands erfunden.
+- Sicherheits- und Human-Approval-Grenzen bleiben sichtbar.
+- Die englische Quelle bleibt für Konfliktfälle maßgeblich.

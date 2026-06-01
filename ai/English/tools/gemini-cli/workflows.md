@@ -1,16 +1,27 @@
-# gemini-cli Workflows
+# Workflows
 
-This page documents gemini-cli as an agent tool or coding environment.
+Tool and runtime profiles for coding agents, IDE assistants and CLI workflows.
 
-## What to document
+## Practical Scope
 
-- Supported models
-- Context files
-- Built-in commands
-- Custom command mechanism
-- Permissions and safety controls
-- Recommended workflows
+This page explains how `tools/gemini-cli/workflows.md` fits into the AI Agent Operating Manual. Use it when an agent or maintainer needs repeatable guidance for this topic without loading the entire repository.
 
-## Rule
+## Operating Guidance
 
-Tool behavior changes frequently. Verify command syntax in the installed version before relying on it.
+- Treat repository evidence as authoritative and documentation as secondary.
+- Preserve file names, commands, API names and model names exactly.
+- Mark unverified conclusions as `[ASSUMPTION: ...]` and unknown facts as `[UNKNOWN]`.
+- Keep tool-specific behavior tied to the runtime that actually owns it.
+- Escalate security, permission and production-readiness risks to human review.
+
+## Focus
+
+Tool and runtime profiles for coding agents, IDE assistants and CLI workflows.
+
+## Quality Checklist
+
+- The purpose is clear to a new repository user.
+- The guidance is useful for both AI agents and human maintainers.
+- No model-specific commands are invented unless they belong to the host tool.
+- Safety and human-approval boundaries remain visible.
+- English remains the authoritative source for localization.

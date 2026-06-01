@@ -31,6 +31,10 @@ Affected files:
 - [ ] README updated if public usage changed.
 - [ ] CHANGELOG updated if release-relevant.
 - [ ] Templates remain reusable.
+- [ ] `PROJECT_STATE.md` updated if state, decisions, risks, open tasks or next step changed.
+- [ ] `python -m unittest discover -s tests` passed.
+- [ ] `python scripts/validate_repository.py --root .` passed.
+- [ ] `ai/VALIDATION_REPORT.md` and `ai/VALIDATION_REPORT.json` regenerated if validation output changed.
 
 ## Master prompt impact
 

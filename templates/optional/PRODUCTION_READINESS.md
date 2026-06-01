@@ -13,7 +13,7 @@ It does not replace business approval and does not invent domain rules.
 
 ## Current classification
 
-**Current status:** `[UNBEKANNT]`
+**Current status:** `[UNKNOWN]`
 
 Allowed status terms:
 
@@ -35,7 +35,7 @@ Acceptance criteria:
 - [ ] Migration, backup, restore and deletion are documented.
 - [ ] Tests cover adapter contracts without production data.
 
-Status: `[UNBEKANNT]`
+Status: `[UNKNOWN]`
 
 ## Gate 2: Server-side validation
 
@@ -48,7 +48,7 @@ Acceptance criteria:
 - [ ] Error responses are neutral for users and loggable for operators.
 - [ ] Tests cover valid input, invalid input and conflicts.
 
-Status: `[UNBEKANNT]`
+Status: `[UNKNOWN]`
 
 ## Gate 3: Business-rule approval
 
@@ -60,7 +60,7 @@ Acceptance criteria:
 - [ ] Missing rules block affected outputs.
 - [ ] Exports remain disabled if required rules are missing.
 
-Status: `[UNBEKANNT]`
+Status: `[UNKNOWN]`
 
 ## Gate 4: Access control and operational frame
 
@@ -73,7 +73,7 @@ Acceptance criteria:
 - [ ] Secret scanning is enabled in CI or has been checked manually.
 - [ ] Operational ownership, support path and rollback are documented.
 
-Status: `[UNBEKANNT]`
+Status: `[UNKNOWN]`
 
 ## Gate 5: Logging, audit and export history
 
@@ -85,7 +85,7 @@ Acceptance criteria:
 - [ ] Sensitive values are redacted before log storage.
 - [ ] Tests cover redaction, error codes and protocol boundaries.
 
-Status: `[UNBEKANNT]`
+Status: `[UNKNOWN]`
 
 ## Gate 6: Production-adjacent test and acceptance basis
 
@@ -97,7 +97,7 @@ Acceptance criteria:
 - [ ] Test data is synthetic and isolated.
 - [ ] Acceptance report lists status, risks and untested areas.
 
-Status: `[UNBEKANNT]`
+Status: `[UNKNOWN]`
 
 ## Final production status rule
 

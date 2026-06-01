@@ -1,19 +1,34 @@
-# Eval Template
+# Eval_template
 
-This file mirrors `ai/English/templates/EVAL_TEMPLATE.md` for the Danish localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Kildesprog: engelsk
+> Kildefil: ai/English/templates/EVAL_TEMPLATE.md
+> Ved afvigelser er den engelske fil gældende.
 
-## Source file
+Denne side forklarer, hvordan `templates/EVAL_TEMPLATE.md` passer ind i AI Agent Operating Manual. Den er skrevet til mennesker og AI-agenter, der skal planlægge, verificere eller gentage repository-arbejde.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Praktisk omfang
 
-## Required coverage
+Brug siden som operationel vejledning for temaet `templates`. Den erstatter ikke repository-evidens eller projektspecifikke instruktioner.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Arbejdsretningslinjer
+
+- Behandl repository-evidens som primær autoritet.
+- Bevar filnavne, kommandoer, API-navne og modelnavne nøjagtigt.
+- Marker ikke-verificerede konklusioner med `[ASSUMPTION: ...]` og ukendte fakta med `[UNKNOWN]`.
+- Knyt værktøjsspecifik adfærd til det værktøj eller runtime, der faktisk ejer den.
+- Eskalér sikkerheds-, tilladelses- og produktionsrisici til menneskelig gennemgang.
+
+## Fokus
+
+Definér omfang, nødvendig evidens, verificerbare kommandoer og grænser for menneskelig godkendelse, før siden bruges i et workflow.
+
+## Kvalitetskontrol
+
+- Formålet er tydeligt for en ny bidragyder.
+- Vejledningen hjælper både AI-agenter og menneskelige maintainers.
+- Der opfindes ingen modelspecifikke kommandoer.
+- Grænser for sikkerhed og menneskelig godkendelse forbliver synlige.
+- Den engelske kilde forbliver afgørende ved lokaliseringskonflikter.

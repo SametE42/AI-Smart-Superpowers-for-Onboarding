@@ -1,24 +1,27 @@
 # Ai Starter Stack
 
-Step-by-step procedures for real agent work.
+Step-by-step procedures for real agent work such as onboarding, review and translation.
 
-## Purpose
+## Practical Scope
 
-This file gives users a structured, practical reference for `workflows/ai-starter-stack.md`.
+This page explains how `workflows/ai-starter-stack.md` fits into the AI Agent Operating Manual. Use it when an agent or maintainer needs repeatable guidance for this topic without loading the entire repository.
 
-## Recommended content
+## Operating Guidance
 
-- Definition and scope
-- When to use it
-- Recommended workflow
-- Examples
-- Quality checklist
-- Safety considerations
-- Links to related files
+- Treat repository evidence as authoritative and documentation as secondary.
+- Preserve file names, commands, API names and model names exactly.
+- Mark unverified conclusions as `[ASSUMPTION: ...]` and unknown facts as `[UNKNOWN]`.
+- Keep tool-specific behavior tied to the runtime that actually owns it.
+- Escalate security, permission and production-readiness risks to human review.
 
-## Quality checklist
+## Focus
 
-- Clear enough for a new repository user
-- Useful for an AI agent and a human maintainer
-- No model-specific commands invented unless they belong to the tool
-- English source kept authoritative
+Step-by-step procedures for real agent work such as onboarding, review and translation.
+
+## Quality Checklist
+
+- The purpose is clear to a new repository user.
+- The guidance is useful for both AI agents and human maintainers.
+- No model-specific commands are invented unless they belong to the host tool.
+- Safety and human-approval boundaries remain visible.
+- English remains the authoritative source for localization.

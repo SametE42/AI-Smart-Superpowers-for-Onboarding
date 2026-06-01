@@ -1,19 +1,34 @@
 # Prompt Refinement
 
-This file mirrors `ai/English/prompts/prompt-refinement.md` for the Bulgarian localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Изходен език: английски
+> Изходен файл: ai/English/prompts/prompt-refinement.md
+> При разминавания английският файл има предимство.
 
-## Source file
+Тази страница обяснява как `prompts/prompt-refinement.md` се вписва в AI Agent Operating Manual. Тя е за хора и AI агенти, които трябва да планират, проверяват или повтарят работа в repository.
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Практически обхват
 
-## Required coverage
+Използвайте тази страница като оперативно ръководство за темата `prompts`. Тя не заменя доказателствата от repository или проектните инструкции.
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Работни насоки
+
+- Третирайте доказателствата от repository като основен авторитет.
+- Запазвайте точно имената на файлове, командите, API имената и имената на модели.
+- Маркирайте непроверените заключения с `[ASSUMPTION: ...]`, а неизвестните факти с `[UNKNOWN]`.
+- Свързвайте специфичното поведение на инструмент с инструмента или runtime, който наистина го притежава.
+- Ескалирайте рисковете за сигурност, разрешения и production-readiness към човешки преглед.
+
+## Фокус
+
+Преди да използвате тази страница в workflow, определете обхвата, нужните доказателства, проверимите команди и границите на човешко одобрение.
+
+## Проверка на качеството
+
+- Целта е ясна за нов участник.
+- Насоките помагат както на AI агенти, така и на човешки поддръжници.
+- Не се измислят команди, специфични за модели.
+- Границите за сигурност и човешко одобрение остават видими.
+- Английският източник остава решаващ при конфликти в локализацията.

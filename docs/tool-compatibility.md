@@ -63,6 +63,32 @@ Priority order:
 
 Conflicts must be marked and reviewed by a human.
 
+## Tool contract robustness
+
+Many apparent model failures are tool-contract failures. Treat invalid tool input as a harness design signal before assuming the model is incapable.
+
+Recommended validation flow:
+
+1. Validate the tool input exactly as received.
+2. If validation succeeds, do not rewrite the input.
+3. If validation fails, inspect the validator issue path and attempt only narrow repairs at that path.
+4. Re-validate after repair.
+5. Log successful repairs, for example `tool_input_repaired:<toolName>`.
+6. On failure, return a short model-readable retry message instead of a raw validator dump.
+
+Common safe shape repairs:
+
+- omit `null` for optional fields when the schema expects absence,
+- parse a JSON array that was emitted as a string,
+- wrap a bare string in a one-item array when the schema requires an array,
+- unwrap degenerate markdown links in path fields only when link text and URL identify the same local path.
+
+Do not apply broad preprocessing before validation. It can silently corrupt valid input, especially file content that happens to look like JSON.
+
+Relational invariants need separate handling. If fields are individually valid but incomplete together, either return a clear retry message or choose a conservative default and report it back to the model. Example: `limit` without `offset` may default to `offset = 0` if the tool documents that behavior.
+
+High-impact tools such as shell, write-file, delete, network and deployment tools require stricter repair rules. Never silently change commands, destructive paths, deployment targets or security-relevant values.
+
 ## 4. Model families and provider APIs
 
 The following model families can be used with this standard when they are accessed through an agent runtime, IDE assistant, API wrapper or orchestration layer that loads repository context files.

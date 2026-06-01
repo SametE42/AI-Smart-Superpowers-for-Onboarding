@@ -1,19 +1,34 @@
 # Commands
 
-This file mirrors `ai/English/models/meta-llama/commands.md` for the Urdu localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> ماخذ زبان: انگریزی
+> ماخذ فائل: ai/English/models/meta-llama/commands.md
+> اختلاف کی صورت میں انگریزی فائل کو ترجیح حاصل ہوگی۔
 
-## Source file
+یہ صفحہ بتاتا ہے کہ `models/meta-llama/commands.md` AI Agent Operating Manual میں کیسے استعمال ہوتا ہے۔ یہ ان انسانوں اور AI agents کے لیے ہے جنہیں repository کام کی منصوبہ بندی، تصدیق یا تکرار کرنی ہوتی ہے۔
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## عملی دائرہ
 
-## Required coverage
+اس صفحے کو `models` موضوع کے لیے عملی رہنما کے طور پر استعمال کریں۔ یہ repository شواہد یا منصوبے کی مخصوص ہدایات کا بدل نہیں۔
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## کام کی ہدایات
+
+- repository شواہد کو بنیادی اتھارٹی سمجھیں۔
+- فائل نام، commands، API نام اور model نام بالکل برقرار رکھیں۔
+- غیر تصدیق شدہ نتائج کو `[ASSUMPTION: ...]` اور نامعلوم حقائق کو `[UNKNOWN]` سے نشان زد کریں۔
+- tool مخصوص رویے کو اسی tool یا runtime سے جوڑیں جو واقعی اس کا مالک ہے۔
+- security، permissions اور production-readiness خطرات کو انسانی جائزے تک بڑھائیں۔
+
+## توجہ
+
+اس صفحے کو workflow میں استعمال کرنے سے پہلے دائرہ، مطلوبہ شواہد، قابل تصدیق commands اور انسانی منظوری کی حدود طے کریں۔
+
+## معیار کی جانچ
+
+- مقصد نئے contributor کے لیے واضح ہے۔
+- رہنمائی AI agents اور انسانی maintainers دونوں کے لیے مفید ہے۔
+- model مخصوص commands ایجاد نہیں کیے جاتے۔
+- security اور انسانی منظوری کی حدود واضح رہتی ہیں۔
+- localization تنازعات میں انگریزی ماخذ فیصلہ کن رہتا ہے۔

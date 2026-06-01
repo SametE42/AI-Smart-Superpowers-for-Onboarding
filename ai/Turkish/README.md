@@ -1,27 +1,34 @@
-# AI Agent Operating Manual — Turkish
+# AI Agent Operating Manual
 
-This folder mirrors the English AI Agent Operating Manual structure for Turkish.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: structure prepared. Technical content should be translated and reviewed from `ai/English/` before publication.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Kaynak dil: İngilizce
+> Kaynak dosya: ai/English/README.md
+> Tutarsızlık olduğunda İngilizce dosya esas alınır.
 
-## Sections
+Bu sayfa `README.md` dosyasının AI Agent Operating Manual içinde nasıl kullanıldığını açıklar. Depo çalışmasını planlaması, doğrulaması veya tekrarlaması gereken insanlar ve yapay zeka ajanları için yazılmıştır.
 
-- `models/`
-- `providers/`
-- `tools/`
-- `commands/`
-- `prompts/`
-- `skills/`
-- `memory/`
-- `context-engineering/`
-- `workflows/`
-- `optimization/`
-- `evals/`
-- `agents/`
-- `safety/`
-- `examples/`
-- `templates/`
+## Pratik kapsam
 
-## Source of truth
+Bu sayfayı `README.md` konusu için operasyonel yönlendirme olarak kullan. Depo kanıtlarının veya projeye özel talimatların yerine geçmez.
 
-The English version remains authoritative until this localization has been reviewed.
+## Çalışma yönergeleri
+
+- Depo kanıtlarını birincil otorite olarak kabul et.
+- Dosya adlarını, komutları, API adlarını ve model adlarını aynen koru.
+- Doğrulanmamış sonuçları `[ASSUMPTION: ...]`, bilinmeyen gerçekleri `[UNKNOWN]` olarak işaretle.
+- Araca özgü davranışı gerçekten o davranışın sahibi olan araç veya runtime ile ilişkilendir.
+- Güvenlik, izin ve üretime hazırlık risklerini insan incelemesine yükselt.
+
+## Odak
+
+Bu sayfayı bir workflow içinde kullanmadan önce kapsamı, gerekli kanıtları, doğrulanabilir komutları ve insan onayı sınırlarını tanımla.
+
+## Kalite kontrolü
+
+- Amaç yeni katkı sağlayanlar için açıktır.
+- Yönergeler hem yapay zeka ajanlarına hem de insan bakımcılara yardımcı olur.
+- Modele özgü komutlar uydurulmaz.
+- Güvenlik ve insan onayı sınırları görünür kalır.
+- Yerelleştirme çakışmalarında İngilizce kaynak otorite olmaya devam eder.

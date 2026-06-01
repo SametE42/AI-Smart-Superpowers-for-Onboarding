@@ -1,18 +1,27 @@
-# Gemini CLI Command Reference
+# Gemini Cli
 
-Gemini CLI supports command patterns such as slash commands, file references and shell command prefixes depending on version and configuration.
+Command systems, slash commands, file references and repeatable workflow commands.
 
-## Recommended command areas
+## Practical Scope
 
-- `/help` and session controls
-- `@file` or `@folder` style context references where supported
-- `!command` style shell execution where supported
-- Custom slash commands for reusable prompts
-- `GEMINI.md` as project context
+This page explains how `commands/gemini-cli.md` fits into the AI Agent Operating Manual. Use it when an agent or maintainer needs repeatable guidance for this topic without loading the entire repository.
 
-## Recommended workflow
+## Operating Guidance
 
-1. Add `GEMINI.md` with project rules.
-2. Reference the files required for the task.
-3. Use custom commands for recurring docs, tests or review tasks.
-4. Keep shell execution gated by human approval.
+- Treat repository evidence as authoritative and documentation as secondary.
+- Preserve file names, commands, API names and model names exactly.
+- Mark unverified conclusions as `[ASSUMPTION: ...]` and unknown facts as `[UNKNOWN]`.
+- Keep tool-specific behavior tied to the runtime that actually owns it.
+- Escalate security, permission and production-readiness risks to human review.
+
+## Focus
+
+Command systems, slash commands, file references and repeatable workflow commands.
+
+## Quality Checklist
+
+- The purpose is clear to a new repository user.
+- The guidance is useful for both AI agents and human maintainers.
+- No model-specific commands are invented unless they belong to the host tool.
+- Safety and human-approval boundaries remain visible.
+- English remains the authoritative source for localization.

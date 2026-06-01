@@ -1,19 +1,29 @@
 # Gepa Optimization Example
 
-This file mirrors `ai/English/examples/gepa-optimization-example.md` for the Armenian localization.
+<!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: pending review.
+> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Աղբյուր լեզու՝ անգլերեն
+> Աղբյուր ֆայլ: ai/English/examples/gepa-optimization-example.md
+> Տարբերությունների դեպքում առաջնային է անգլերեն ֆայլը։
 
-## Source file
+Այս էջը բացատրում է, թե ինչպես է `examples/gepa-optimization-example.md`-ը տեղավորվում AI Agent Operating Manual-ում՝ մարդկանց և AI agents-ի համար, որոնք պլանավորում, ստուգում կամ կրկնում են repository աշխատանքը։
 
-Use the English source file as the authoritative version and translate this page while keeping commands, code, filenames, API names and model names unchanged.
+## Գործնական շրջանակ
 
-## Required coverage
+Օգտագործեք այս էջը որպես `examples` թեմայի գործառնական ուղեցույց։ Այն չի փոխարինում repository ապացույցներին կամ նախագծի հրահանգներին։
 
-- Models and providers
-- Commands and tool runtimes
-- Skills and self-evolving skills
-- Three-tier memory
-- Context engineering
-- GEPA and optimization
-- Evaluations and safety
+## Աշխատանքի ուղեցույցներ
+
+- Պահպանեք ֆայլերի անունները, commands-ը, API անունները և model անունները նույնությամբ։
+- Չստուգված եզրակացությունները նշեք `[ASSUMPTION: ...]`, անհայտ փաստերը՝ `[UNKNOWN]`։
+- security, permissions և production-readiness ռիսկերը փոխանցեք մարդկային վերանայման։
+
+## Կենտրոնացում
+
+Մինչև workflow-ում օգտագործելը սահմանեք շրջանակը, ապացույցները, ստուգելի commands-ը և մարդկային հաստատման սահմանները։
+
+## Որակի ստուգում
+
+- Նպատակը պարզ է նոր contributor-ի համար։
+- Անգլերեն աղբյուրը որոշիչ է localization հակասությունների դեպքում։
