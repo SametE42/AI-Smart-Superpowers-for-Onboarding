@@ -162,6 +162,11 @@ def _relative(path: Path, root: Path) -> str:
     return path.relative_to(root).as_posix()
 
 
+def _relative_sort_key(path: Path, root: Path) -> tuple[str, str]:
+    relative = _relative(path, root)
+    return relative.casefold(), relative
+
+
 def _read_text(path: Path) -> str:
     return path.read_text(encoding="utf-8", errors="replace")
 
@@ -267,7 +272,7 @@ def _find_files_with_markers(
     text_by_path: dict[Path, str],
 ) -> list[str]:
     matched_files = []
-    for path in markdown_files:
+    for path in sorted(markdown_files, key=lambda item: _relative_sort_key(item, root)):
         text = text_by_path[path]
         if any(marker in text for marker in markers):
             matched_files.append(_relative(path, root))
@@ -329,7 +334,7 @@ def _find_language_readme_issues(
 def validate_repository(root: str | Path = ".") -> ValidationReport:
     root_path = Path(root).resolve()
     files = _git_files(root_path) or _filesystem_files(root_path)
-    files = sorted(path for path in files if path.exists() and path.is_file())
+    files = sorted((path for path in files if path.exists() and path.is_file()), key=lambda item: _relative_sort_key(item, root_path))
     all_file_relatives = {_relative(path, root_path) for path in files}
     text_by_path = {path: _read_text(path) for path in files}
     markdown_files = [path for path in files if path.suffix.lower() == ".md"]
