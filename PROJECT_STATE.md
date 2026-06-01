@@ -1,11 +1,11 @@
 # PROJECT_STATE
-Version: 12
-Zuletzt aktualisiert: 2026-06-01T14:05:34Z
+Version: 13
+Zuletzt aktualisiert: 2026-06-01T14:09:30Z
 
 ## Status
 - Ziel: Das Projekt nach Lücken, Fehlern und fehlender Dokumentation untersuchen, die Projektdokumentation abschließen und alle lokalisierten AI-Manual-Seiten ohne Human-Review-Blocker als KI-übersetzt ausweisen.
 - Phase: ERLEDIGT UND VERÖFFENTLICHT
-- Fortschritt: PROJECT_STATE.md wurde initialisiert; AGENTS.md und README.md verweisen auf PROJECT_STATE.md; alle 19.491 Dokumentationsdateien wurden automatisiert auditiert; stale Release-/Contributor-/i18n-Dokumentation wurde aktualisiert; GitHub-Readiness und Erweiterungsgrenzen wurden ergänzt; 19.166 Nicht-Englisch-Mirror-Dateien wurden mit `<!-- translation-status: ai-translated; ai-quality-pass -->` regeneriert; Legacy-Review-Marker werden vom Validator als Fehler erkannt; ai/VALIDATION_REPORT.json und ai/VALIDATION_REPORT.md wurden neu generiert; Abschlussaudit 2026-06-01 fand keine Link-, Marker-, Secret-, H1-, Mirror- oder Empty-File-Blocker; öffentliche Autor-Metadaten verwenden jetzt nur noch `SametE42`; Abschluss-Commit `18182a4754be9bd38f7bdd7e531f967fa251837d` wurde erstellt; GitHub-Repository `https://github.com/SametE42/Ai-Repo-Onboarding` wurde öffentlich angelegt und `main` wurde nach `origin/main` gepusht.
+- Fortschritt: PROJECT_STATE.md wurde initialisiert; AGENTS.md und README.md verweisen auf PROJECT_STATE.md; alle 19.491 Dokumentationsdateien wurden automatisiert auditiert; stale Release-/Contributor-/i18n-Dokumentation wurde aktualisiert; GitHub-Readiness und Erweiterungsgrenzen wurden ergänzt; 19.166 Nicht-Englisch-Mirror-Dateien wurden mit `<!-- translation-status: ai-translated; ai-quality-pass -->` regeneriert; Legacy-Review-Marker werden vom Validator als Fehler erkannt; ai/VALIDATION_REPORT.json und ai/VALIDATION_REPORT.md wurden neu generiert; Abschlussaudit 2026-06-01 fand keine Link-, Marker-, Secret-, H1-, Mirror- oder Empty-File-Blocker; öffentliche Autor-Metadaten verwenden jetzt nur noch `SametE42`; Abschlussstand wurde committed; GitHub-Repository `https://github.com/SametE42/Ai-Repo-Onboarding` wurde öffentlich angelegt; `main` wurde nach `origin/main` gepusht; GitHub Actions `Validate repository` läuft erfolgreich.
 - Nächster Schritt: Keine verpflichtende repo-interne Abschlussarbeit offen. Optional bleiben GitHub-Repository-Einstellungen wie Branch Protection, Topics, Release-Tag oder spätere Sprachqualitätsaudit-Wellen.
 
 ## Verständnis
@@ -54,7 +54,7 @@ Zuletzt aktualisiert: 2026-06-01T14:05:34Z
 - geprüft: [VOLLSTÄNDIG | Quelle: gh repo create / gh repo view 2026-06-01] GitHub-Repository `SametE42/Ai-Repo-Onboarding` existiert öffentlich mit Default-Branch `main`.
 - geprüft: [VOLLSTÄNDIG | Quelle: git push -u origin main 2026-06-01] Branch `main` wurde nach `origin/main` gepusht und trackt den Remote-Branch.
 - geprüft: [VOLLSTÄNDIG | Quelle: git rev-parse HEAD; git rev-parse origin/main 2026-06-01] Lokaler HEAD und `origin/main` zeigen nach dem ersten Veröffentlichungspush beide auf `18182a4754be9bd38f7bdd7e531f967fa251837d`.
-- geprüft: [VOLLSTÄNDIG | Quelle: gh run list 2026-06-01] GitHub Workflow `Validate repository` wurde durch den Push ausgelöst.
+- geprüft: [VOLLSTÄNDIG | Quelle: gh run list 2026-06-01] GitHub Workflow `Validate repository` ist für die beobachteten Veröffentlichungspushes erfolgreich abgeschlossen.
 
 ## Entscheidungen
 - PROJECT_STATE.md im Repository-Root anlegen -> Nutzer fordert PROJECT_STATE.md als zentrale Informationsquelle für dieses Projekt | Quelle: Nutzerauftrag 2026-05-31
@@ -272,7 +272,7 @@ Zuletzt aktualisiert: 2026-06-01T14:05:34Z
 - aktueller Stand: Projekt ist lokal validiert, committed und auf GitHub veröffentlicht; Repository ist öffentlich unter `https://github.com/SametE42/Ai-Repo-Onboarding`; `main` trackt `origin/main`.
 - offene Aufgaben: Keine verpflichtende repo-interne Abschlussarbeit offen.
 - Entscheidungen: Initialer Abschluss wurde direkt auf `main` veröffentlicht, weil das GitHub-Repository neu angelegt wurde.
-- Probleme: Keine aktuellen Abschlussblocker; GitHub Actions Lauf wurde durch den Push gestartet und ist extern zu beobachten.
+- Probleme: Keine aktuellen Abschlussblocker; GitHub Actions `Validate repository` ist für die beobachteten Veröffentlichungspushes erfolgreich abgeschlossen.
 - Unsicherheiten: Absolute semantische 100%-Gleichheit aller 19.166 lokalisierten Dateien bleibt automatisch nicht beweisbar.
 - nächster Schritt: Optional Branch Protection, Release-Tag, Topics/Repository-Metadaten oder priorisierte Sprachqualitätsaudits.
 
