@@ -1,4 +1,4 @@
-# AI Repo Onboarding Standard
+# AI Repo Onboarding 
 
 <p align="center">
   <strong>Evidence-first onboarding docs and prompts for AI coding agents.</strong><br>
