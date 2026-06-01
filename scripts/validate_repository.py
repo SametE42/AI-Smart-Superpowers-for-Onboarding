@@ -77,6 +77,41 @@ LANGUAGE_README_STANDARD_SUBFOLDERS = [
     "templates/",
     "tools/",
 ]
+OLD_REPOSITORY_REFERENCE_TEXTS = sorted(
+    {
+        "".join(parts)
+        for parts in (
+            ("AI Repo ", "Onboarding Standard"),
+            ("Ai-", "Repo-", "Onboarding"),
+            ("ai-", "repo-", "onboarding"),
+            ("Repo ", "Onboarding Standard"),
+            ("repo ", "onboarding standard"),
+            ("Repository ", "Onboarding Standard"),
+            ("repository ", "onboarding standard"),
+            ("SametE42/", "Ai-", "Repo-", "Onboarding"),
+            ("https://github.com/", "SametE42/", "Ai-", "Repo-", "Onboarding"),
+            ("https://github.com/", "SametE42/", "Ai-", "Repo-", "Onboarding", ".git"),
+            ("git@github.com:", "SametE42/", "Ai-", "Repo-", "Onboarding", ".git"),
+        )
+    },
+    key=len,
+    reverse=True,
+)
+OLD_REPOSITORY_REFERENCE_PATTERN = re.compile(
+    "|".join(re.escape(reference) for reference in OLD_REPOSITORY_REFERENCE_TEXTS),
+    re.IGNORECASE,
+)
+OLD_REPOSITORY_REFERENCE_REPORTS = {
+    "ai/VALIDATION_REPORT.json",
+    "ai/VALIDATION_REPORT.md",
+}
+CHANGELOG_HISTORICAL_REFERENCE_HINTS = (
+    "former",
+    "historical",
+    "legacy",
+    "previous",
+    "renamed from",
+)
 
 
 @dataclass(frozen=True)
@@ -331,6 +366,34 @@ def _find_language_readme_issues(
     return missing_sections, missing_subfolders, missing_translation_markers
 
 
+def _is_allowed_historical_old_repository_reference(relative_path: str, line: str) -> bool:
+    if relative_path != "CHANGELOG.md":
+        return False
+
+    normalized = line.casefold()
+    return any(hint in normalized for hint in CHANGELOG_HISTORICAL_REFERENCE_HINTS)
+
+
+def _find_old_repository_reference_hits(
+    files: Iterable[Path],
+    root: Path,
+    text_by_path: dict[Path, str],
+) -> list[dict]:
+    hits: list[dict] = []
+    for path in files:
+        relative = _relative(path, root)
+        if relative in OLD_REPOSITORY_REFERENCE_REPORTS:
+            continue
+
+        text = text_by_path[path]
+        for line_number, line in enumerate(text.splitlines(), start=1):
+            for match in OLD_REPOSITORY_REFERENCE_PATTERN.finditer(line):
+                if _is_allowed_historical_old_repository_reference(relative, line):
+                    continue
+                hits.append({"file": relative, "line": line_number, "match": match.group(0)})
+    return hits
+
+
 def validate_repository(root: str | Path = ".") -> ValidationReport:
     root_path = Path(root).resolve()
     files = _git_files(root_path) or _filesystem_files(root_path)
@@ -349,6 +412,7 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
     missing_mirrors, language_count, english_count, languages_sorted = _find_missing_mirrors(root_path)
     directories_without_readme = _find_directories_without_readme(files, root_path)
     secret_hits = _find_secret_patterns(files, root_path, text_by_path)
+    old_repository_reference_hits = _find_old_repository_reference_hits(files, root_path, text_by_path)
     english_markdown_files = [path for path in markdown_files if _relative(path, root_path).startswith("ai/English/")]
     localized_markdown_files = _localized_language_markdown_files(root_path, markdown_files)
     language_readmes = _language_readme_files(root_path)
@@ -416,6 +480,7 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         "directories_without_readme": len(directories_without_readme),
         "legacy_ai_links": len(legacy_ai_links),
         "secret_pattern_hits": len(secret_hits),
+        "old_repository_reference_hits": len(old_repository_reference_hits),
         "english_source_scaffold_files": len(english_scaffold_files),
         "ai_translated_files": len(ai_translated_files),
         "missing_ai_translation_marker_files": len(missing_ai_translation_marker_files),
@@ -434,6 +499,7 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         "dirs_without_readme": directories_without_readme,
         "legacy_links": legacy_ai_links,
         "secret_pattern_hits": secret_hits,
+        "old_repository_reference_hits": old_repository_reference_hits[:200],
         "english_source_scaffold_files_sample": english_scaffold_files[:200],
         "ai_translated_files_sample": ai_translated_files[:200],
         "missing_ai_translation_marker_files_sample": missing_ai_translation_marker_files[:200],
@@ -452,6 +518,7 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         "directories_without_readme",
         "legacy_ai_links",
         "secret_pattern_hits",
+        "old_repository_reference_hits",
         "missing_ai_translation_marker_files",
         "unreviewed_translation_files",
         "incomplete_language_readmes",

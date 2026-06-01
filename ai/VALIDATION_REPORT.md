@@ -16,6 +16,7 @@ Status: **PASS**
 - directories_without_readme: 0
 - legacy_ai_links: 0
 - secret_pattern_hits: 0
+- old_repository_reference_hits: 0
 - english_source_scaffold_files: 0
 - ai_translated_files: 19166
 - missing_ai_translation_marker_files: 0
@@ -35,6 +36,7 @@ Status: **PASS**
 - dirs_without_readme: 0
 - legacy_links: 0
 - secret_pattern_hits: 0
+- old_repository_reference_hits: 0
 - english_source_scaffold_files_sample: 0
 - ai_translated_files_sample: 200
 - missing_ai_translation_marker_files_sample: 0

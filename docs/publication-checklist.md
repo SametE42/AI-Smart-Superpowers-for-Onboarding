@@ -25,6 +25,7 @@ Use this before publishing or releasing the repository.
 - [ ] No real personal data is included.
 - [ ] No internal URLs are included.
 - [ ] No secrets are included.
+- [ ] No old public repository names or repository URLs remain outside clearly scoped changelog history.
 - [ ] Local machine paths are removed or anonymized.
 
 ## Required commands
@@ -40,7 +41,8 @@ Expected result:
 
 - unit tests pass,
 - validator status is `PASS`,
-- generated validation reports reflect the current file counts and findings.
+- generated validation reports reflect the current file counts and findings,
+- old public repository reference hits are `0`.
 
 ## Translation status gate
 

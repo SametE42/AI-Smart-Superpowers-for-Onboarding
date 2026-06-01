@@ -11,6 +11,7 @@ This project follows semantic versioning where practical.
 - Reproducible repository validation script and GitHub Actions workflow.
 - Local unit tests for validation behavior.
 - Reproducible AI manual scaffold refresh script for English source pages and AI-translated localized batches.
+- Blocking validator coverage and tests for old public repository references.
 
 ### Changed
 

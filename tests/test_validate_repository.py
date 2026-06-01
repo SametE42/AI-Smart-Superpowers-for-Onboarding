@@ -1,4 +1,6 @@
+import json
 import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -202,6 +204,21 @@ File names, folder names, commands, APIs and model names stay unchanged. English
             self.assertEqual(report.summary["missing_ai_translation_marker_files"], 1)
             self.assertEqual(report.summary["incomplete_language_readmes"], 1)
 
+    def test_old_repository_url_is_blocking(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            old_url = "https://github.com/" + "SametE42/" + "Ai-" + "Repo-" + "Onboarding"
+            self.write(root, "README.md", f"# Root\n\nClone from {old_url}.\n")
+
+            report = validate_repository(root)
+
+            self.assertEqual(report.status, "FAIL")
+            self.assertEqual(report.summary["old_repository_reference_hits"], 1)
+            self.assertEqual(
+                report.details["old_repository_reference_hits"],
+                [{"file": "README.md", "line": 3, "match": old_url}],
+            )
+
     def test_report_root_uses_origin_repository_name_when_available(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -216,6 +233,35 @@ File names, folder names, commands, APIs and model names stay unchanged. English
             report = validate_repository(root)
 
             self.assertEqual(report.root, "AI-Smart-Superpowers-for-Onboarding")
+
+    def test_validation_reports_can_be_generated(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            json_report = root / "validation.json"
+            markdown_report = root / "validation.md"
+            self.write(root, "README.md", "# Root\n")
+
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    "scripts/validate_repository.py",
+                    "--root",
+                    str(root),
+                    "--json",
+                    str(json_report),
+                    "--markdown",
+                    str(markdown_report),
+                ],
+                cwd=Path(__file__).resolve().parents[1],
+                text=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                check=False,
+            )
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertEqual(json.loads(json_report.read_text(encoding="utf-8"))["status"], "PASS")
+            self.assertIn("- old_repository_reference_hits: 0", markdown_report.read_text(encoding="utf-8"))
 
     def test_separates_source_scaffolds_from_ai_translations(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
