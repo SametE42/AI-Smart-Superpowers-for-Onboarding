@@ -2,7 +2,15 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.refresh_ai_manual import refresh_manual_pair, refresh_scaffold_pages, render_manual_page
+from scripts.refresh_ai_manual import LOCALIZED_LANGUAGE_TEXT, refresh_manual_pair, refresh_scaffold_pages, render_manual_page
+
+
+MAGICAL_PROMPT_ENGLISH_BODY_MARKERS = (
+    "Use this page when a user request",
+    "Run a short intake check on every user request",
+    "Return a compact intake when the request needs clarification",
+    "Use this structure for substantial repository work",
+)
 
 
 class RefreshAiManualTests(unittest.TestCase):
@@ -25,8 +33,12 @@ class RefreshAiManualTests(unittest.TestCase):
         self.assertIn("Verification Mode", content)
         self.assertIn("Commit/Push Readiness Mode", content)
         self.assertIn("## Decision Tree", content)
+        self.assertIn("## Best Workflow Order", content)
         self.assertIn("## Anti-Hallucination Rules", content)
         self.assertIn("## Verification Criteria", content)
+        self.assertIn("## Examples", content)
+        self.assertIn("Small status request", content)
+        self.assertIn("Repository change request", content)
         self.assertNotIn("This page explains how `prompts/magical-prompt-improver.md` fits", content)
 
     def test_render_french_magical_prompt_improver_is_localized_and_quality_passed(self) -> None:
@@ -35,7 +47,10 @@ class RefreshAiManualTests(unittest.TestCase):
         self.assertIn("# Magical Prompt Improver", content)
         self.assertIn("<!-- translation-status: ai-translated; ai-quality-pass -->", content)
         self.assertIn("ai/English/prompts/magical-prompt-improver.md", content)
-        self.assertIn("## Activation Rules", content)
+        self.assertIn("## Portée pratique", content)
+        self.assertIn("## Consignes de travail", content)
+        self.assertIn("## Ordre de workflow recommandé", content)
+        self.assertIn("## Exemples", content)
         self.assertIn("Intake Mode", content)
         self.assertIn("Full Rewrite Mode", content)
         self.assertIn("Verification Mode", content)
@@ -43,6 +58,37 @@ class RefreshAiManualTests(unittest.TestCase):
         self.assertIn("AI-translated from the English source", content)
         self.assertNotIn("révision humaine requise", content)
         self.assertNotIn("This file mirrors `ai/English/", content)
+        for marker in MAGICAL_PROMPT_ENGLISH_BODY_MARKERS:
+            self.assertNotIn(marker, content)
+
+    def test_render_german_magical_prompt_improver_is_localized_with_order_and_examples(self) -> None:
+        content = render_manual_page("German", Path("prompts/magical-prompt-improver.md"))
+
+        self.assertIn("# Magical Prompt Improver", content)
+        self.assertIn("## Praktischer Scope", content)
+        self.assertIn("## Arbeitsleitlinien", content)
+        self.assertIn("## Beste Workflow-Reihenfolge", content)
+        self.assertIn("## Beispiele", content)
+        self.assertIn("Intake Mode", content)
+        self.assertIn("Commit/Push Readiness Mode", content)
+        self.assertIn("Kleine Statusanfrage", content)
+        self.assertIn("Repository-Änderungsanfrage", content)
+        for marker in MAGICAL_PROMPT_ENGLISH_BODY_MARKERS:
+            self.assertNotIn(marker, content)
+
+    def test_render_all_localized_magical_prompt_improver_pages_avoid_english_body_markers(self) -> None:
+        for language, profile in LOCALIZED_LANGUAGE_TEXT.items():
+            with self.subTest(language=language):
+                content = render_manual_page(language, Path("prompts/magical-prompt-improver.md"))
+
+                self.assertIn(f"## {profile['scope_heading']}", content)
+                self.assertIn(f"## {profile['guidance_heading']}", content)
+                self.assertIn("Intake Mode", content)
+                self.assertIn("Full Rewrite Mode", content)
+                self.assertIn("Verification Mode", content)
+                self.assertIn("Commit/Push Readiness Mode", content)
+                for marker in MAGICAL_PROMPT_ENGLISH_BODY_MARKERS:
+                    self.assertNotIn(marker, content)
 
     def test_render_root_readme_has_non_empty_title(self) -> None:
         content = render_manual_page("Arabic", Path("README.md"))

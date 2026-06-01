@@ -109,6 +109,166 @@ PROMPT_MANUAL_PAGES = [
     ("security-review.md", "Security Review"),
     ("translation.md", "Translation"),
 ]
+MAGICAL_PROMPT_MODE_ROWS = [
+    ("Intake Mode", "Ambiguous or incomplete request.", "Clarified objective, risks, missing context and safe assumptions."),
+    ("Full Rewrite Mode", "Substantial repository work.", "Role, scope, workflow, verification and final report rules."),
+    ("Verification Mode", "Success or readiness claim.", "Concrete evidence required before completion can be claimed."),
+    ("Commit/Push Readiness Mode", "Git, release or PR action.", "Scope confirmation, diff review, checks and final Git action list."),
+]
+MAGICAL_PROMPT_LOCALIZED_LABELS = {
+    "German": {
+        "intro": "Nutze diese Seite, wenn eine Benutzeranfrage, ein wiederverwendbarer Prompt oder eine Agenten-Übergabe vor Repository-Arbeit präziser werden muss.",
+        "scope_heading": "Praktischer Scope",
+        "scope": "Der Magical Prompt Improver reduziert Mehrdeutigkeit, macht fehlenden Kontext sichtbar, setzt Sicherheitsgrenzen und definiert prüfbare Abschlusskriterien.",
+        "guidance_heading": "Arbeitsleitlinien",
+        "guidance": [
+            "Wähle immer den leichtesten Modus, der das Risiko der Anfrage zuverlässig abdeckt.",
+            "Bewahre Dateipfade, Commands, Modellnamen, API-Namen und Nutzergrenzen unverändert.",
+            "Markiere unbekannte Fakten mit `[UNKNOWN]` und unbestätigte Annahmen mit `[ASSUMPTION: ...]`.",
+            "Verlange konkrete Evidenz, bevor Tests, Release-Reife, Commit, Push oder Produktionsstatus behauptet werden.",
+        ],
+        "mode_headers": ("Modus", "Wann nutzen", "Ausgabe"),
+        "mode_rows": [
+            ("Intake Mode", "Mehrdeutige oder unvollständige Anfrage.", "Geklärtes Ziel, Risiken, fehlender Kontext und sichere Annahmen."),
+            ("Full Rewrite Mode", "Umfangreiche Repository-Arbeit.", "Rolle, Scope, Workflow, Verifikation und Regeln für den Abschlussbericht."),
+            ("Verification Mode", "Erfolgs- oder Bereitschaftsaussage.", "Konkrete Evidenz, bevor Abschluss behauptet werden darf."),
+            ("Commit/Push Readiness Mode", "Git-, Release- oder PR-Aktion.", "Scope-Bestätigung, Diff-Review, Checks und finale Git-Aktionsliste."),
+        ],
+        "activation_heading": "Aktivierungsregeln",
+        "order_heading": "Beste Workflow-Reihenfolge",
+        "decision_heading": "Entscheidungsbaum",
+        "decision_steps": [
+            "Status, Liste oder kurze Erklärung -> direkt antworten, außer die Anfrage ist unklar.",
+            "Unklares Ziel, Scope oder Erfolgskriterium -> Intake Mode.",
+            "Datei-, Dokumentations-, Test-, Script-, CI- oder Strukturänderung -> Scope und Verifikation vor dem Editieren festlegen.",
+            "Security, Privacy, Secrets, Produktion, Release, Commit, Push oder PR -> Full Rewrite Mode plus Verification Mode.",
+            "Wiederverwendbarer Prompt oder Agenten-Übergabe -> Full Rewrite Mode.",
+        ],
+        "order_steps": [
+            "Originalanfrage und explizite Grenzen erhalten.",
+            "Den leichtesten sicheren Aktivierungsmodus auswählen.",
+            "Ziel, Scope, Nicht-Ziele, Risiken und fehlenden Kontext definieren.",
+            "Nur bei breiter, riskanter oder wiederverwendbarer Arbeit vollständig neu schreiben.",
+            "Verifikationsevidenz vor der Ausführung festlegen.",
+            "Abschlussbericht an Diff und Command-Output binden.",
+        ],
+        "intake_heading": "Intake-Ausgabe",
+        "rewrite_heading": "Full-Rewrite-Ausgabe",
+        "anti_hallucination_heading": "Anti-Halluzinationsregeln",
+        "anti_hallucination": [
+            "Nutze Dateien, Command-Output, Issue-Text oder zitierte Quellen als Evidenz.",
+            "Markiere unbekannte Fakten mit `[UNKNOWN]`.",
+            "Markiere unbestätigte Schlüsse mit `[ASSUMPTION: ...]`.",
+            "Erfinde keine Tool-Fähigkeiten, Modell-Fähigkeiten, APIs, Business-Regeln oder Repository-URLs.",
+            "Behaupte keine bestandenen Tests ohne exakten Command-Output.",
+            "Füge keine Secrets, echten Nutzerdaten, internen URLs oder Produktionslogs hinzu.",
+            "Bewahre Pfade, Commands, Modellnamen und API-Namen, außer die Aufgabe verlangt eine Änderung.",
+        ],
+        "verification_heading": "Verifikationskriterien",
+        "verification_headers": ("Anforderung", "Evidenz"),
+        "verification_rows": [
+            ("Absichtliche Dateiänderungen", "`git diff --name-only` geprüft"),
+            ("Tests bestehen", "Exakter Command und Exit-Code"),
+            ("Dokumentationslinks sind gültig", "Repository-Validator oder Link-Checker-Output"),
+            ("Keine Secrets ergänzt", "Secret-Scan oder Validator-Output"),
+            ("Abschlussantwort ist korrekt", "Zusammenfassung passt zu Diff und Command-Output"),
+        ],
+        "unavailable_check": "Wenn ein Check nicht verfügbar ist, muss der Abschlussbericht das sagen.",
+        "examples_heading": "Beispiele",
+        "focus_heading": "Fokus",
+        "focus": "Vor der Ausführung müssen Ziel, Scope, Nicht-Ziele, Risiken und verifizierbare Checks klar sein.",
+        "quality_heading": "Qualitätscheck",
+        "quality": [
+            "Der ursprüngliche Zweck bleibt erhalten.",
+            "Erfolgskriterien sind messbar.",
+            "Risiken, Annahmen und unbekannte Fakten sind sichtbar.",
+            "Der gewählte Modus passt zur Anfrage.",
+            "Die finale Antwort darf keine ungeprüften Erfolgsaussagen enthalten.",
+        ],
+        "small_example": "Kleine Statusanfrage",
+        "small_example_mode": "Modus: direkte Antwort oder Intake Mode.",
+        "small_example_output": "Ausgabe: kurze Antwort, Evidenz und keine Dateiänderungen.",
+        "repo_example": "Repository-Änderungsanfrage",
+        "repo_example_mode": "Modus: Intake Mode, danach Full Rewrite Mode, wenn der Scope breit bleibt.",
+        "repo_example_output": "Ausgabe: abgegrenzter Workflow, zu prüfende Dateien, Verifikationscommands und Regeln für den Abschlussbericht.",
+    },
+    "French": {
+        "intro": "Utilise cette page lorsqu'une demande, un prompt réutilisable ou un transfert d'agent doit être clarifié avant un travail de dépôt.",
+        "scope_heading": "Portée pratique",
+        "scope": "Le Magical Prompt Improver réduit l'ambiguïté, rend le contexte manquant visible, fixe les limites de sécurité et définit les preuves nécessaires pour terminer.",
+        "guidance_heading": "Consignes de travail",
+        "guidance": [
+            "Choisis toujours le mode le plus léger qui couvre correctement le risque de la demande.",
+            "Conserve exactement les chemins, commandes, noms de modèles, noms d'API et contraintes utilisateur.",
+            "Marque les faits inconnus avec `[UNKNOWN]` et les hypothèses non vérifiées avec `[ASSUMPTION: ...]`.",
+            "Exige des preuves concrètes avant toute affirmation sur les tests, la livraison, le commit, le push ou la production.",
+        ],
+        "mode_headers": ("Mode", "Quand l'utiliser", "Sortie"),
+        "mode_rows": [
+            ("Intake Mode", "Demande ambiguë ou incomplète.", "Objectif clarifié, risques, contexte manquant et hypothèses sûres."),
+            ("Full Rewrite Mode", "Travail de dépôt substantiel.", "Rôle, périmètre, workflow, vérification et règles de rapport final."),
+            ("Verification Mode", "Affirmation de réussite ou de préparation.", "Preuves concrètes requises avant de déclarer l'achèvement."),
+            ("Commit/Push Readiness Mode", "Action Git, release ou PR.", "Confirmation du périmètre, revue du diff, contrôles et liste d'actions Git finale."),
+        ],
+        "activation_heading": "Règles d'activation",
+        "order_heading": "Ordre de workflow recommandé",
+        "decision_heading": "Arbre de décision",
+        "decision_steps": [
+            "Statut, liste ou courte explication -> répondre directement sauf si la demande est floue.",
+            "Objectif, périmètre ou critère de réussite flou -> Intake Mode.",
+            "Modification de fichiers, documentation, tests, scripts, CI ou structure -> définir périmètre et vérification avant édition.",
+            "Sécurité, confidentialité, secrets, production, release, commit, push ou PR -> Full Rewrite Mode plus Verification Mode.",
+            "Prompt réutilisable ou transfert d'agent -> Full Rewrite Mode.",
+        ],
+        "order_steps": [
+            "Conserver la demande d'origine et les contraintes explicites.",
+            "Choisir le mode d'activation sûr le plus léger.",
+            "Définir objectif, périmètre, exclusions, risques et contexte manquant.",
+            "Réécrire complètement seulement pour un travail large, risqué ou réutilisable.",
+            "Définir les preuves de vérification avant l'exécution.",
+            "Aligner le rapport final sur le diff et la sortie des commandes.",
+        ],
+        "intake_heading": "Sortie d'intake",
+        "rewrite_heading": "Sortie Full Rewrite",
+        "anti_hallucination_heading": "Règles anti-hallucination",
+        "anti_hallucination": [
+            "Utilise les fichiers, sorties de commande, textes d'issue ou sources citées comme preuves.",
+            "Marque les faits inconnus avec `[UNKNOWN]`.",
+            "Marque les conclusions non vérifiées avec `[ASSUMPTION: ...]`.",
+            "N'invente pas de capacités d'outil, de modèle, d'API, de règles métier ou d'URL de dépôt.",
+            "N'affirme pas que les tests passent sans sortie de commande exacte.",
+            "N'ajoute pas de secrets, données réelles, URL internes ou logs de production.",
+            "Préserve les chemins, commandes, noms de modèles et noms d'API sauf demande contraire.",
+        ],
+        "verification_heading": "Critères de vérification",
+        "verification_headers": ("Exigence", "Preuve"),
+        "verification_rows": [
+            ("Modifications intentionnelles", "`git diff --name-only` relu"),
+            ("Tests réussis", "Commande exacte et code de sortie"),
+            ("Liens de documentation valides", "Sortie du validateur ou d'un link checker"),
+            ("Aucun secret ajouté", "Sortie d'un scan de secrets ou du validateur"),
+            ("Réponse finale exacte", "Résumé cohérent avec le diff et les sorties de commandes"),
+        ],
+        "unavailable_check": "Si un contrôle n'est pas disponible, le rapport final doit le dire.",
+        "examples_heading": "Exemples",
+        "focus_heading": "Point d'attention",
+        "focus": "Avant l'exécution, l'objectif, le périmètre, les exclusions, les risques et les contrôles vérifiables doivent être explicites.",
+        "quality_heading": "Contrôle qualité",
+        "quality": [
+            "L'intention d'origine est conservée.",
+            "Les critères de réussite sont mesurables.",
+            "Les risques, hypothèses et faits inconnus sont visibles.",
+            "Le mode choisi correspond à la demande.",
+            "La réponse finale ne contient pas d'affirmation de réussite non vérifiée.",
+        ],
+        "small_example": "Petite demande de statut",
+        "small_example_mode": "Mode : réponse directe ou Intake Mode.",
+        "small_example_output": "Sortie : réponse courte, preuves et aucune modification de fichier.",
+        "repo_example": "Demande de modification du dépôt",
+        "repo_example_mode": "Mode : Intake Mode, puis Full Rewrite Mode si le périmètre reste large.",
+        "repo_example_output": "Sortie : workflow cadré, fichiers à inspecter, commandes de vérification et règles de rapport final.",
+    },
+}
 
 TOPIC_FOCUS = {
     "agent-architecture": {
@@ -2298,12 +2458,27 @@ def _render_language_root_readme(language: str) -> str:
 """
 
 
-def _render_magical_prompt_improver_page(language: str) -> str:
-    title = "Magical Prompt Improver"
-    source_path = f"ai/English/{MAGICAL_PROMPT_IMPROVER_PATH.as_posix()}"
-    template_link = f"[`{MAGICAL_PROMPT_IMPROVER_TEMPLATE}`](../../../{MAGICAL_PROMPT_IMPROVER_TEMPLATE})"
+def _render_magical_mode_table() -> str:
+    rows = "\n".join(f"| {mode} | {use_when} | {output} |" for mode, use_when, output in MAGICAL_PROMPT_MODE_ROWS)
+    return f"""| Mode | Use when | Output |
+|---|---|---|
+{rows}"""
 
-    body = f"""Use this page when a user request, reusable prompt or agent handoff needs to become clearer before repository work starts. The full source protocol is {template_link}.
+
+def _render_mode_table(
+    headers: tuple[str, str, str] = ("Mode", "Use when", "Output"),
+    rows: list[tuple[str, str, str]] | None = None,
+) -> str:
+    table_rows = rows or MAGICAL_PROMPT_MODE_ROWS
+    rendered_rows = "\n".join(f"| {mode} | {use_when} | {output} |" for mode, use_when, output in table_rows)
+    return f"""| {headers[0]} | {headers[1]} | {headers[2]} |
+|---|---|---|
+{rendered_rows}"""
+
+
+def _render_english_magical_prompt_body(template_link: str) -> str:
+    mode_table = _render_magical_mode_table()
+    return f"""Use this page when a user request, reusable prompt or agent handoff needs to become clearer before repository work starts. The full source protocol is {template_link}.
 
 The improver does not make a prompt automatically correct. It reduces ambiguity, exposes missing context, adds safety boundaries and defines evidence that can prove the task is complete.
 
@@ -2320,12 +2495,7 @@ Run a short intake check on every user request before deciding how much prompt i
 
 ## Activation Modes
 
-| Mode | Use when | Output |
-|---|---|---|
-| Intake Mode | The request may be ambiguous, incomplete or risky. | Clarified objective, risks, missing context and safe assumptions. |
-| Full Rewrite Mode | The prompt will drive substantial repository work. | A complete rewritten prompt with role, scope, workflow, verification and final report rules. |
-| Verification Mode | The task is near completion or makes success claims. | Concrete evidence required before completion can be claimed. |
-| Commit/Push Readiness Mode | The task includes Git staging, commit, push, release or PR work. | Scope confirmation, changed-file review, verification commands and final Git action checklist. |
+{mode_table}
 
 ## Decision Tree
 
@@ -2334,6 +2504,15 @@ Run a short intake check on every user request before deciding how much prompt i
 3. If the work changes files, documentation, tests, scripts, CI or repository structure, define scope and verification before editing.
 4. If the work involves security, privacy, secrets, production claims, release, commit, push or PR creation, use Full Rewrite Mode plus Verification Mode.
 5. If the prompt is meant to be reused by another agent or human, use Full Rewrite Mode and output the final improved prompt.
+
+## Best Workflow Order
+
+1. Capture the original request exactly.
+2. Classify the lightest safe activation mode.
+3. Clarify objective, scope, non-goals, risks and missing context.
+4. Rewrite only when the task is broad, high-impact or reusable.
+5. Define verification evidence before execution.
+6. Require a final report that matches the diff and command output.
 
 ## Intake Output
 
@@ -2406,6 +2585,18 @@ Final report:
 
 If a check is not available, the final report must say so.
 
+## Examples
+
+### Small status request
+
+- Mode: direct answer or Intake Mode.
+- Output: short answer, relevant evidence and no file edits.
+
+### Repository change request
+
+- Mode: Intake Mode, then Full Rewrite Mode if scope remains broad.
+- Output: scoped workflow, required files to inspect, verification commands and final report rules.
+
 ## Quality Checklist
 
 - Original intent and explicit constraints are preserved.
@@ -2418,11 +2609,208 @@ If a check is not available, the final report must say so.
 - Activation mode matches the request.
 """
 
+
+def _localized_magical_prompt_labels(language: str) -> dict[str, str | list[str]]:
+    if language in MAGICAL_PROMPT_LOCALIZED_LABELS:
+        return MAGICAL_PROMPT_LOCALIZED_LABELS[language]
+
+    profile = LOCALIZED_LANGUAGE_TEXT[language]
+    guidance = list(profile["guidance"])
+    guidance.append("Keep `Intake Mode`, `Full Rewrite Mode`, `Verification Mode` and `Commit/Push Readiness Mode` as stable mode names.")
+    guidance.append("Use concrete evidence before success, release, commit or push claims.")
+    quality = list(profile["quality"])
+    quality.append("The selected activation mode matches the request risk.")
+    quality.append("Verification evidence is defined before execution.")
+    return {
+        "intro": profile["intro"].format(path=MAGICAL_PROMPT_IMPROVER_PATH.as_posix()),
+        "scope_heading": profile["scope_heading"],
+        "scope": profile["scope"].format(category="prompt improvement"),
+        "guidance_heading": profile["guidance_heading"],
+        "guidance": guidance,
+        "activation_heading": "Activation Modes",
+        "order_heading": "Workflow order",
+        "decision_heading": "Decision Tree",
+        "intake_heading": "Intake Output",
+        "rewrite_heading": "Full Rewrite Output",
+        "anti_hallucination_heading": "Anti-Hallucination Rules",
+        "verification_heading": "Verification Criteria",
+        "examples_heading": "Examples",
+        "focus_heading": profile["focus_heading"],
+        "focus": profile["focus"],
+        "quality_heading": profile["quality_heading"],
+        "quality": quality,
+        "small_example": "Status/list request",
+        "repo_example": "Repository change request",
+    }
+
+
+def _render_localized_magical_prompt_body(language: str, template_link: str) -> str:
+    labels = _localized_magical_prompt_labels(language)
+    guidance = "\n".join(f"- {item}" for item in labels["guidance"])
+    quality = "\n".join(f"- {item}" for item in labels["quality"])
+    mode_table = _render_mode_table(labels.get("mode_headers", ("Mode", "Use when", "Output")), labels.get("mode_rows"))
+    decision_steps = labels.get(
+        "decision_steps",
+        [
+            "status/list/explanation -> direct answer unless the request is unclear.",
+            "unclear objective/scope/success criterion -> Intake Mode.",
+            "file, documentation, test, script, CI or structure change -> scope and verification before editing.",
+            "security, privacy, secrets, production, release, commit, push or PR -> Full Rewrite Mode plus Verification Mode.",
+            "reusable prompt or agent handoff -> Full Rewrite Mode.",
+        ],
+    )
+    order_steps = labels.get(
+        "order_steps",
+        [
+            "Preserve the original request and explicit constraints.",
+            "Select the lightest safe activation mode.",
+            "Define objective, scope, non-goals, risks and missing context.",
+            "Rewrite only when the work is broad, high-impact or reusable.",
+            "Define verification evidence before execution.",
+            "Make the final report match the diff and command output.",
+        ],
+    )
+    anti_hallucination = labels.get(
+        "anti_hallucination",
+        [
+            "Use files, command output, issue text or cited sources as evidence.",
+            "Mark unknown facts as `[UNKNOWN]`.",
+            "Mark unverified conclusions as `[ASSUMPTION: ...]`.",
+            "Do not invent tool capabilities, model capabilities, APIs, business rules or repository URLs.",
+            "Do not claim tests passed without the exact command output.",
+            "Do not add secrets, real user data, internal URLs or production logs.",
+            "Preserve paths, commands, model names and API names unless the task asks to change them.",
+        ],
+    )
+    verification_rows = labels.get(
+        "verification_rows",
+        [
+            ("Intentional file changes", "`git diff --name-only` reviewed"),
+            ("Tests pass", "Exact command and exit code"),
+            ("Documentation links are valid", "Repository validator or link checker output"),
+            ("No secrets added", "Secret scan or validator output"),
+            ("Final answer is accurate", "Summary matches diff and command output"),
+        ],
+    )
+    verification_headers = labels.get("verification_headers", ("Requirement", "Evidence"))
+    decision_list = "\n".join(f"{index}. {step}" for index, step in enumerate(decision_steps, start=1))
+    order_list = "\n".join(f"{index}. {step}" for index, step in enumerate(order_steps, start=1))
+    anti_hallucination_list = "\n".join(f"- {item}" for item in anti_hallucination)
+    verification_table = "\n".join(f"| {requirement} | {evidence} |" for requirement, evidence in verification_rows)
+
+    return f"""{labels["intro"]} Source protocol: {template_link}.
+
+## {labels["scope_heading"]}
+
+{labels["scope"]}
+
+## {labels["guidance_heading"]}
+
+{guidance}
+
+## {labels["activation_heading"]}
+
+{mode_table}
+
+## {labels["decision_heading"]}
+
+{decision_list}
+
+## {labels["order_heading"]}
+
+{order_list}
+
+## {labels["intake_heading"]}
+
+```text
+Objective:
+[Concrete end state]
+
+Risks and ambiguities:
+- [Risk or missing detail]
+
+Safe assumptions:
+- [Assumption with reason]
+
+Verification:
+[Command, check or evidence required]
+```
+
+## {labels["rewrite_heading"]}
+
+```text
+Role:
+[Who the agent should be]
+
+Objective:
+[Concrete end state]
+
+Repository context:
+[Files, directories, docs or commands to inspect first]
+
+Scope:
+[What is in scope]
+
+Out of scope:
+[What must not be changed or claimed]
+
+Workflow:
+1. [First action]
+2. [Next action]
+
+Verification:
+[Commands, manual checks or evidence required]
+
+Final report:
+[What to summarize]
+```
+
+## {labels["anti_hallucination_heading"]}
+
+{anti_hallucination_list}
+
+## {labels["verification_heading"]}
+
+| {verification_headers[0]} | {verification_headers[1]} |
+|---|---|
+{verification_table}
+
+{labels.get("unavailable_check", "If a check is unavailable, the final report must say so.")}
+
+## {labels["focus_heading"]}
+
+{labels["focus"]}
+
+## {labels["examples_heading"]}
+
+### {labels["small_example"]}
+
+- {labels.get("small_example_mode", "Mode: direct answer or Intake Mode.")}
+- {labels.get("small_example_output", "Output: short answer, evidence and no file edits.")}
+
+### {labels["repo_example"]}
+
+- {labels.get("repo_example_mode", "Mode: Intake Mode, then Full Rewrite Mode when scope remains broad.")}
+- {labels.get("repo_example_output", "Output: scoped workflow, files to inspect, verification commands and final report rules.")}
+
+## {labels["quality_heading"]}
+
+{quality}
+"""
+
+
+def _render_magical_prompt_improver_page(language: str) -> str:
+    title = "Magical Prompt Improver"
+    source_path = f"ai/English/{MAGICAL_PROMPT_IMPROVER_PATH.as_posix()}"
+    template_link = f"[`{MAGICAL_PROMPT_IMPROVER_TEMPLATE}`](../../../{MAGICAL_PROMPT_IMPROVER_TEMPLATE})"
+
     if language == "English":
+        body = _render_english_magical_prompt_body(template_link)
         return f"""# {title}
 
 {body}"""
 
+    body = _render_localized_magical_prompt_body(language, template_link)
     if language == "German":
         note = (
             f"{AI_TRANSLATION_STATUS}\n"

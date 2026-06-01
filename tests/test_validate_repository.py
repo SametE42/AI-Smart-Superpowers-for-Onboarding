@@ -335,6 +335,82 @@ File names, folder names, commands, APIs and model names stay unchanged. English
             self.assertEqual(report.summary["translation_mirror_placeholder_files"], 1)
             self.assertEqual(report.summary["missing_ai_translation_marker_files"], 3)
 
+    def test_prompt_readme_manual_link_mismatch_fails(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.write(root, "README.md", "# Root\n")
+            self.write(root, "ai/README.md", "# AI\n")
+            self.write(root, "ai/English/README.md", self.complete_language_readme())
+            self.write(root, "ai/German/README.md", self.complete_language_readme(translated=True))
+            self.write(
+                root,
+                "ai/English/prompts/README.md",
+                "# Prompts\n\n## Manual Pages\n\n"
+                "- [Magical Prompt Improver](magical-prompt-improver.md)\n"
+                "- [Prompt Refinement](prompt-refinement.md)\n",
+            )
+            self.write(
+                root,
+                "ai/German/prompts/README.md",
+                "# Prompts\n\n<!-- translation-status: ai-translated; ai-quality-pass -->\n\n"
+                "## Manual Pages\n\n"
+                "- [Magical Prompt Improver](magical-prompt-improver.md)\n",
+            )
+            self.write(root, "ai/English/prompts/magical-prompt-improver.md", "# Magical Prompt Improver\n")
+            self.write(root, "ai/English/prompts/prompt-refinement.md", "# Prompt Refinement\n")
+            self.write(
+                root,
+                "ai/German/prompts/magical-prompt-improver.md",
+                "# Magical Prompt Improver\n\n<!-- translation-status: ai-translated; ai-quality-pass -->\n",
+            )
+            self.write(
+                root,
+                "ai/German/prompts/prompt-refinement.md",
+                "# Prompt Refinement\n\n<!-- translation-status: ai-translated; ai-quality-pass -->\n",
+            )
+
+            report = validate_repository(root)
+
+            self.assertEqual(report.status, "FAIL")
+            self.assertEqual(report.summary["prompt_readme_link_mismatches"], 1)
+            self.assertEqual(report.details["prompt_readme_link_mismatches"][0]["language"], "German")
+
+    def test_unlocalized_magical_prompt_improver_body_fails(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.write(root, "README.md", "# Root\n")
+            self.write(root, "ai/README.md", "# AI\n")
+            self.write(root, "ai/English/README.md", self.complete_language_readme())
+            self.write(root, "ai/German/README.md", self.complete_language_readme(translated=True))
+            prompt_readme = (
+                "# Prompts\n\n## Manual Pages\n\n"
+                "- [Magical Prompt Improver](magical-prompt-improver.md)\n"
+            )
+            self.write(root, "ai/English/prompts/README.md", prompt_readme)
+            self.write(
+                root,
+                "ai/German/prompts/README.md",
+                "# Prompts\n\n<!-- translation-status: ai-translated; ai-quality-pass -->\n\n"
+                "## Manual Pages\n\n"
+                "- [Magical Prompt Improver](magical-prompt-improver.md)\n",
+            )
+            self.write(root, "ai/English/prompts/magical-prompt-improver.md", "# Magical Prompt Improver\n")
+            self.write(
+                root,
+                "ai/German/prompts/magical-prompt-improver.md",
+                "# Magical Prompt Improver\n\n<!-- translation-status: ai-translated; ai-quality-pass -->\n\n"
+                "Use this page when a user request, reusable prompt or agent handoff needs to become clearer before repository work starts.\n",
+            )
+
+            report = validate_repository(root)
+
+            self.assertEqual(report.status, "FAIL")
+            self.assertEqual(report.summary["magical_prompt_improver_unlocalized_files"], 1)
+            self.assertEqual(
+                report.details["magical_prompt_improver_unlocalized_files"],
+                ["ai/German/prompts/magical-prompt-improver.md"],
+            )
+
 
 class TemplateDocumentationTests(unittest.TestCase):
     def test_magical_prompt_improver_has_activation_structure(self) -> None:

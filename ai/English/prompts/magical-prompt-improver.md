@@ -19,10 +19,10 @@ Run a short intake check on every user request before deciding how much prompt i
 
 | Mode | Use when | Output |
 |---|---|---|
-| Intake Mode | The request may be ambiguous, incomplete or risky. | Clarified objective, risks, missing context and safe assumptions. |
-| Full Rewrite Mode | The prompt will drive substantial repository work. | A complete rewritten prompt with role, scope, workflow, verification and final report rules. |
-| Verification Mode | The task is near completion or makes success claims. | Concrete evidence required before completion can be claimed. |
-| Commit/Push Readiness Mode | The task includes Git staging, commit, push, release or PR work. | Scope confirmation, changed-file review, verification commands and final Git action checklist. |
+| Intake Mode | Ambiguous or incomplete request. | Clarified objective, risks, missing context and safe assumptions. |
+| Full Rewrite Mode | Substantial repository work. | Role, scope, workflow, verification and final report rules. |
+| Verification Mode | Success or readiness claim. | Concrete evidence required before completion can be claimed. |
+| Commit/Push Readiness Mode | Git, release or PR action. | Scope confirmation, diff review, checks and final Git action list. |
 
 ## Decision Tree
 
@@ -31,6 +31,15 @@ Run a short intake check on every user request before deciding how much prompt i
 3. If the work changes files, documentation, tests, scripts, CI or repository structure, define scope and verification before editing.
 4. If the work involves security, privacy, secrets, production claims, release, commit, push or PR creation, use Full Rewrite Mode plus Verification Mode.
 5. If the prompt is meant to be reused by another agent or human, use Full Rewrite Mode and output the final improved prompt.
+
+## Best Workflow Order
+
+1. Capture the original request exactly.
+2. Classify the lightest safe activation mode.
+3. Clarify objective, scope, non-goals, risks and missing context.
+4. Rewrite only when the task is broad, high-impact or reusable.
+5. Define verification evidence before execution.
+6. Require a final report that matches the diff and command output.
 
 ## Intake Output
 
@@ -102,6 +111,18 @@ Final report:
 | Final answer is accurate | Summary matches diff and command output |
 
 If a check is not available, the final report must say so.
+
+## Examples
+
+### Small status request
+
+- Mode: direct answer or Intake Mode.
+- Output: short answer, relevant evidence and no file edits.
+
+### Repository change request
+
+- Mode: Intake Mode, then Full Rewrite Mode if scope remains broad.
+- Output: scoped workflow, required files to inspect, verification commands and final report rules.
 
 ## Quality Checklist
 

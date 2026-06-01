@@ -7,41 +7,49 @@
 > ไฟล์ต้นฉบับ: ai/English/prompts/magical-prompt-improver.md
 > หากมีความแตกต่าง ให้ยึดไฟล์ภาษาอังกฤษเป็นหลัก
 
-Use this page when a user request, reusable prompt or agent handoff needs to become clearer before repository work starts. The full source protocol is [`templates/optional/MAGICAL_PROMPT_IMPROVER.md`](../../../templates/optional/MAGICAL_PROMPT_IMPROVER.md).
+หน้านี้อธิบายว่า `prompts/magical-prompt-improver.md` อยู่ใน AI Agent Operating Manual อย่างไร เขียนไว้สำหรับมนุษย์และ AI agents ที่ต้องวางแผน ตรวจสอบ หรือทำซ้ำงานใน repository Source protocol: [`templates/optional/MAGICAL_PROMPT_IMPROVER.md`](../../../templates/optional/MAGICAL_PROMPT_IMPROVER.md).
 
-The improver does not make a prompt automatically correct. It reduces ambiguity, exposes missing context, adds safety boundaries and defines evidence that can prove the task is complete.
+## ขอบเขตเชิงปฏิบัติ
 
-## Activation Rules
+ใช้หน้านี้เป็นแนวทางปฏิบัติสำหรับหัวข้อ `prompt improvement` ไม่ใช่สิ่งทดแทนหลักฐานใน repository หรือคำสั่งเฉพาะของโครงการ
 
-Run a short intake check on every user request before deciding how much prompt improvement is needed.
+## แนวทางการทำงาน
 
-- Answer directly when the request is clear, low-risk and does not ask for file changes.
-- Use Intake Mode when the request has unclear goals, missing success criteria or broad wording.
-- Use Full Rewrite Mode before large work, multi-step repository changes or work that crosses documentation, code, tests and Git.
-- Use Verification Mode before claiming completion, passing tests, release readiness or production readiness.
-- Use Commit/Push Readiness Mode before staging, committing, pushing or opening a pull request.
-- Do not run the full protocol for simple status, listing, explanation or lookup requests unless the user asks for prompt improvement.
+- ถือว่าหลักฐานใน repository เป็นแหล่งอ้างอิงหลัก
+- รักษาชื่อไฟล์ commands ชื่อ API และชื่อ model ให้ตรงเดิม
+- ทำเครื่องหมายข้อสรุปที่ยังไม่ยืนยันด้วย `[ASSUMPTION: ...]` และข้อเท็จจริงที่ไม่ทราบด้วย `[UNKNOWN]`
+- เชื่อมพฤติกรรมเฉพาะของ tool กับ tool หรือ runtime ที่เป็นเจ้าของจริง
+- ส่งต่อความเสี่ยงด้าน security, permissions และ production-readiness ให้มนุษย์ตรวจทาน
+- Keep `Intake Mode`, `Full Rewrite Mode`, `Verification Mode` and `Commit/Push Readiness Mode` as stable mode names.
+- Use concrete evidence before success, release, commit or push claims.
 
 ## Activation Modes
 
 | Mode | Use when | Output |
 |---|---|---|
-| Intake Mode | The request may be ambiguous, incomplete or risky. | Clarified objective, risks, missing context and safe assumptions. |
-| Full Rewrite Mode | The prompt will drive substantial repository work. | A complete rewritten prompt with role, scope, workflow, verification and final report rules. |
-| Verification Mode | The task is near completion or makes success claims. | Concrete evidence required before completion can be claimed. |
-| Commit/Push Readiness Mode | The task includes Git staging, commit, push, release or PR work. | Scope confirmation, changed-file review, verification commands and final Git action checklist. |
+| Intake Mode | Ambiguous or incomplete request. | Clarified objective, risks, missing context and safe assumptions. |
+| Full Rewrite Mode | Substantial repository work. | Role, scope, workflow, verification and final report rules. |
+| Verification Mode | Success or readiness claim. | Concrete evidence required before completion can be claimed. |
+| Commit/Push Readiness Mode | Git, release or PR action. | Scope confirmation, diff review, checks and final Git action list. |
 
 ## Decision Tree
 
-1. If the user asks only for status, a list or a short explanation, answer directly unless the request is unclear.
-2. If the requested outcome, scope or success criterion is unclear, use Intake Mode.
-3. If the work changes files, documentation, tests, scripts, CI or repository structure, define scope and verification before editing.
-4. If the work involves security, privacy, secrets, production claims, release, commit, push or PR creation, use Full Rewrite Mode plus Verification Mode.
-5. If the prompt is meant to be reused by another agent or human, use Full Rewrite Mode and output the final improved prompt.
+1. status/list/explanation -> direct answer unless the request is unclear.
+2. unclear objective/scope/success criterion -> Intake Mode.
+3. file, documentation, test, script, CI or structure change -> scope and verification before editing.
+4. security, privacy, secrets, production, release, commit, push or PR -> Full Rewrite Mode plus Verification Mode.
+5. reusable prompt or agent handoff -> Full Rewrite Mode.
+
+## Workflow order
+
+1. Preserve the original request and explicit constraints.
+2. Select the lightest safe activation mode.
+3. Define objective, scope, non-goals, risks and missing context.
+4. Rewrite only when the work is broad, high-impact or reusable.
+5. Define verification evidence before execution.
+6. Make the final report match the diff and command output.
 
 ## Intake Output
-
-Return a compact intake when the request needs clarification but can still move forward:
 
 ```text
 Objective:
@@ -58,8 +66,6 @@ Verification:
 ```
 
 ## Full Rewrite Output
-
-Use this structure for substantial repository work:
 
 ```text
 Role:
@@ -90,33 +96,48 @@ Final report:
 
 ## Anti-Hallucination Rules
 
-- Work from files, command output, issue text or cited sources.
-- Mark unknown facts as `[UNKNOWN]` instead of guessing.
-- Mark plausible but unverified conclusions as `[ASSUMPTION: ...]`.
+- Use files, command output, issue text or cited sources as evidence.
+- Mark unknown facts as `[UNKNOWN]`.
+- Mark unverified conclusions as `[ASSUMPTION: ...]`.
 - Do not invent tool capabilities, model capabilities, APIs, business rules or repository URLs.
-- Do not claim tests passed unless the exact command was run and read.
+- Do not claim tests passed without the exact command output.
 - Do not add secrets, real user data, internal URLs or production logs.
-- Preserve paths, commands, model names and API names exactly unless the task asks to change them.
+- Preserve paths, commands, model names and API names unless the task asks to change them.
 
 ## Verification Criteria
 
 | Requirement | Evidence |
 |---|---|
-| Files changed intentionally | `git diff --name-only` reviewed |
-| Tests pass | Exact test command and exit code |
+| Intentional file changes | `git diff --name-only` reviewed |
+| Tests pass | Exact command and exit code |
 | Documentation links are valid | Repository validator or link checker output |
 | No secrets added | Secret scan or validator output |
 | Final answer is accurate | Summary matches diff and command output |
 
-If a check is not available, the final report must say so.
+If a check is unavailable, the final report must say so.
 
-## Quality Checklist
+## จุดเน้น
 
-- Original intent and explicit constraints are preserved.
-- Success criteria are measurable.
-- Risks and ambiguities are visible.
-- Missing context is requested or safe assumptions are stated.
-- Workflow is ordered.
-- Anti-hallucination rules are included.
-- Verification criteria are concrete.
-- Activation mode matches the request.
+ก่อนใช้หน้านี้ใน workflow ให้กำหนดขอบเขต หลักฐานที่ต้องใช้ commands ที่ตรวจสอบได้ และขอบเขตการอนุมัติโดยมนุษย์
+
+## Examples
+
+### Status/list request
+
+- Mode: direct answer or Intake Mode.
+- Output: short answer, evidence and no file edits.
+
+### Repository change request
+
+- Mode: Intake Mode, then Full Rewrite Mode when scope remains broad.
+- Output: scoped workflow, files to inspect, verification commands and final report rules.
+
+## การตรวจคุณภาพ
+
+- เป้าหมายชัดเจนสำหรับ contributor ใหม่
+- แนวทางช่วยทั้ง AI agents และ maintainer ที่เป็นมนุษย์
+- ไม่แต่ง commands เฉพาะ model ขึ้นมาเอง
+- ขอบเขต security และการอนุมัติโดยมนุษย์ยังมองเห็นได้
+- ต้นฉบับภาษาอังกฤษยังเป็นตัวตัดสินเมื่อเกิดข้อขัดแย้งด้าน localization
+- The selected activation mode matches the request risk.
+- Verification evidence is defined before execution.

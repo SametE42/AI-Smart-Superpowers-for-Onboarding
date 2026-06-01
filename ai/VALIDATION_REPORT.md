@@ -18,6 +18,8 @@ Status: **PASS**
 - secret_pattern_hits: 0
 - old_repository_reference_hits: 0
 - optional_template_files_missing_readme_entries: 0
+- prompt_readme_link_mismatches: 0
+- magical_prompt_improver_unlocalized_files: 0
 - english_source_scaffold_files: 0
 - ai_translated_files: 19240
 - missing_ai_translation_marker_files: 0
@@ -39,6 +41,8 @@ Status: **PASS**
 - secret_pattern_hits: 0
 - old_repository_reference_hits: 0
 - optional_template_files_missing_readme_entries: 0
+- prompt_readme_link_mismatches: 0
+- magical_prompt_improver_unlocalized_files: 0
 - english_source_scaffold_files_sample: 0
 - ai_translated_files_sample: 200
 - missing_ai_translation_marker_files_sample: 0

@@ -7,41 +7,46 @@
 > Fichier source: ai/English/prompts/magical-prompt-improver.md
 > En cas de divergence, le fichier anglais fait autorité.
 
-Use this page when a user request, reusable prompt or agent handoff needs to become clearer before repository work starts. The full source protocol is [`templates/optional/MAGICAL_PROMPT_IMPROVER.md`](../../../templates/optional/MAGICAL_PROMPT_IMPROVER.md).
+Utilise cette page lorsqu'une demande, un prompt réutilisable ou un transfert d'agent doit être clarifié avant un travail de dépôt. Source protocol: [`templates/optional/MAGICAL_PROMPT_IMPROVER.md`](../../../templates/optional/MAGICAL_PROMPT_IMPROVER.md).
 
-The improver does not make a prompt automatically correct. It reduces ambiguity, exposes missing context, adds safety boundaries and defines evidence that can prove the task is complete.
+## Portée pratique
 
-## Activation Rules
+Le Magical Prompt Improver réduit l'ambiguïté, rend le contexte manquant visible, fixe les limites de sécurité et définit les preuves nécessaires pour terminer.
 
-Run a short intake check on every user request before deciding how much prompt improvement is needed.
+## Consignes de travail
 
-- Answer directly when the request is clear, low-risk and does not ask for file changes.
-- Use Intake Mode when the request has unclear goals, missing success criteria or broad wording.
-- Use Full Rewrite Mode before large work, multi-step repository changes or work that crosses documentation, code, tests and Git.
-- Use Verification Mode before claiming completion, passing tests, release readiness or production readiness.
-- Use Commit/Push Readiness Mode before staging, committing, pushing or opening a pull request.
-- Do not run the full protocol for simple status, listing, explanation or lookup requests unless the user asks for prompt improvement.
+- Choisis toujours le mode le plus léger qui couvre correctement le risque de la demande.
+- Conserve exactement les chemins, commandes, noms de modèles, noms d'API et contraintes utilisateur.
+- Marque les faits inconnus avec `[UNKNOWN]` et les hypothèses non vérifiées avec `[ASSUMPTION: ...]`.
+- Exige des preuves concrètes avant toute affirmation sur les tests, la livraison, le commit, le push ou la production.
 
-## Activation Modes
+## Règles d'activation
 
-| Mode | Use when | Output |
+| Mode | Quand l'utiliser | Sortie |
 |---|---|---|
-| Intake Mode | The request may be ambiguous, incomplete or risky. | Clarified objective, risks, missing context and safe assumptions. |
-| Full Rewrite Mode | The prompt will drive substantial repository work. | A complete rewritten prompt with role, scope, workflow, verification and final report rules. |
-| Verification Mode | The task is near completion or makes success claims. | Concrete evidence required before completion can be claimed. |
-| Commit/Push Readiness Mode | The task includes Git staging, commit, push, release or PR work. | Scope confirmation, changed-file review, verification commands and final Git action checklist. |
+| Intake Mode | Demande ambiguë ou incomplète. | Objectif clarifié, risques, contexte manquant et hypothèses sûres. |
+| Full Rewrite Mode | Travail de dépôt substantiel. | Rôle, périmètre, workflow, vérification et règles de rapport final. |
+| Verification Mode | Affirmation de réussite ou de préparation. | Preuves concrètes requises avant de déclarer l'achèvement. |
+| Commit/Push Readiness Mode | Action Git, release ou PR. | Confirmation du périmètre, revue du diff, contrôles et liste d'actions Git finale. |
 
-## Decision Tree
+## Arbre de décision
 
-1. If the user asks only for status, a list or a short explanation, answer directly unless the request is unclear.
-2. If the requested outcome, scope or success criterion is unclear, use Intake Mode.
-3. If the work changes files, documentation, tests, scripts, CI or repository structure, define scope and verification before editing.
-4. If the work involves security, privacy, secrets, production claims, release, commit, push or PR creation, use Full Rewrite Mode plus Verification Mode.
-5. If the prompt is meant to be reused by another agent or human, use Full Rewrite Mode and output the final improved prompt.
+1. Statut, liste ou courte explication -> répondre directement sauf si la demande est floue.
+2. Objectif, périmètre ou critère de réussite flou -> Intake Mode.
+3. Modification de fichiers, documentation, tests, scripts, CI ou structure -> définir périmètre et vérification avant édition.
+4. Sécurité, confidentialité, secrets, production, release, commit, push ou PR -> Full Rewrite Mode plus Verification Mode.
+5. Prompt réutilisable ou transfert d'agent -> Full Rewrite Mode.
 
-## Intake Output
+## Ordre de workflow recommandé
 
-Return a compact intake when the request needs clarification but can still move forward:
+1. Conserver la demande d'origine et les contraintes explicites.
+2. Choisir le mode d'activation sûr le plus léger.
+3. Définir objectif, périmètre, exclusions, risques et contexte manquant.
+4. Réécrire complètement seulement pour un travail large, risqué ou réutilisable.
+5. Définir les preuves de vérification avant l'exécution.
+6. Aligner le rapport final sur le diff et la sortie des commandes.
+
+## Sortie d'intake
 
 ```text
 Objective:
@@ -57,9 +62,7 @@ Verification:
 [Command, check or evidence required]
 ```
 
-## Full Rewrite Output
-
-Use this structure for substantial repository work:
+## Sortie Full Rewrite
 
 ```text
 Role:
@@ -88,35 +91,48 @@ Final report:
 [What to summarize]
 ```
 
-## Anti-Hallucination Rules
+## Règles anti-hallucination
 
-- Work from files, command output, issue text or cited sources.
-- Mark unknown facts as `[UNKNOWN]` instead of guessing.
-- Mark plausible but unverified conclusions as `[ASSUMPTION: ...]`.
-- Do not invent tool capabilities, model capabilities, APIs, business rules or repository URLs.
-- Do not claim tests passed unless the exact command was run and read.
-- Do not add secrets, real user data, internal URLs or production logs.
-- Preserve paths, commands, model names and API names exactly unless the task asks to change them.
+- Utilise les fichiers, sorties de commande, textes d'issue ou sources citées comme preuves.
+- Marque les faits inconnus avec `[UNKNOWN]`.
+- Marque les conclusions non vérifiées avec `[ASSUMPTION: ...]`.
+- N'invente pas de capacités d'outil, de modèle, d'API, de règles métier ou d'URL de dépôt.
+- N'affirme pas que les tests passent sans sortie de commande exacte.
+- N'ajoute pas de secrets, données réelles, URL internes ou logs de production.
+- Préserve les chemins, commandes, noms de modèles et noms d'API sauf demande contraire.
 
-## Verification Criteria
+## Critères de vérification
 
-| Requirement | Evidence |
+| Exigence | Preuve |
 |---|---|
-| Files changed intentionally | `git diff --name-only` reviewed |
-| Tests pass | Exact test command and exit code |
-| Documentation links are valid | Repository validator or link checker output |
-| No secrets added | Secret scan or validator output |
-| Final answer is accurate | Summary matches diff and command output |
+| Modifications intentionnelles | `git diff --name-only` relu |
+| Tests réussis | Commande exacte et code de sortie |
+| Liens de documentation valides | Sortie du validateur ou d'un link checker |
+| Aucun secret ajouté | Sortie d'un scan de secrets ou du validateur |
+| Réponse finale exacte | Résumé cohérent avec le diff et les sorties de commandes |
 
-If a check is not available, the final report must say so.
+Si un contrôle n'est pas disponible, le rapport final doit le dire.
 
-## Quality Checklist
+## Point d'attention
 
-- Original intent and explicit constraints are preserved.
-- Success criteria are measurable.
-- Risks and ambiguities are visible.
-- Missing context is requested or safe assumptions are stated.
-- Workflow is ordered.
-- Anti-hallucination rules are included.
-- Verification criteria are concrete.
-- Activation mode matches the request.
+Avant l'exécution, l'objectif, le périmètre, les exclusions, les risques et les contrôles vérifiables doivent être explicites.
+
+## Exemples
+
+### Petite demande de statut
+
+- Mode : réponse directe ou Intake Mode.
+- Sortie : réponse courte, preuves et aucune modification de fichier.
+
+### Demande de modification du dépôt
+
+- Mode : Intake Mode, puis Full Rewrite Mode si le périmètre reste large.
+- Sortie : workflow cadré, fichiers à inspecter, commandes de vérification et règles de rapport final.
+
+## Contrôle qualité
+
+- L'intention d'origine est conservée.
+- Les critères de réussite sont mesurables.
+- Les risques, hypothèses et faits inconnus sont visibles.
+- Le mode choisi correspond à la demande.
+- La réponse finale ne contient pas d'affirmation de réussite non vérifiée.

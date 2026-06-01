@@ -14,6 +14,7 @@ from typing import Iterable
 
 
 LOCAL_MARKDOWN_LINK = re.compile(r"(?<!!)\[[^\]]+\]\(([^)]+)\)")
+MANUAL_PAGE_LINK = re.compile(r"^-\s+\[[^\]]+\]\(([^)]+\.md)\)$", re.MULTILINE)
 SECRET_PATTERNS = [
     re.compile(r"sk-[A-Za-z0-9_-]{20,}"),
     re.compile(r"(?:ghp_|github_pat_)[A-Za-z0-9_]{20,}"),
@@ -49,6 +50,13 @@ UNREVIEWED_TRANSLATION_MARKERS = [
 ]
 TRANSLATION_MIRROR_PLACEHOLDER_MARKERS = [
     "This file mirrors `ai/English/",
+]
+MAGICAL_PROMPT_IMPROVER_RELATIVE = "prompts/magical-prompt-improver.md"
+MAGICAL_PROMPT_IMPROVER_ENGLISH_BODY_MARKERS = [
+    "Use this page when a user request",
+    "Run a short intake check on every user request",
+    "Return a compact intake when the request needs clarification",
+    "Use this structure for substantial repository work",
 ]
 LANGUAGE_README_REQUIRED_SECTIONS = [
     "# AI Agent Operating Manual",
@@ -419,6 +427,58 @@ def _find_optional_template_files_missing_readme_entries(root: Path, text_by_pat
     return missing
 
 
+def _manual_page_links(text: str) -> list[str]:
+    return MANUAL_PAGE_LINK.findall(text)
+
+
+def _find_prompt_readme_link_mismatches(root: Path, text_by_path: dict[Path, str]) -> list[dict]:
+    ai_dir = root / "ai"
+    english_prompt_readme = ai_dir / "English" / "prompts" / "README.md"
+    if not english_prompt_readme.exists():
+        return []
+
+    expected_links = _manual_page_links(text_by_path.get(english_prompt_readme, ""))
+    if not expected_links:
+        return []
+
+    mismatches: list[dict] = []
+    for language_dir in sorted((path for path in ai_dir.iterdir() if path.is_dir()), key=lambda item: item.name.casefold()):
+        if language_dir.name == "English":
+            continue
+        prompt_readme = language_dir / "prompts" / "README.md"
+        if not prompt_readme.exists():
+            continue
+        actual_links = _manual_page_links(text_by_path.get(prompt_readme, ""))
+        if actual_links != expected_links:
+            mismatches.append(
+                {
+                    "language": language_dir.name,
+                    "file": _relative(prompt_readme, root),
+                    "expected_links": expected_links,
+                    "actual_links": actual_links,
+                }
+            )
+    return mismatches
+
+
+def _find_magical_prompt_improver_unlocalized_files(root: Path, text_by_path: dict[Path, str]) -> list[str]:
+    ai_dir = root / "ai"
+    if not ai_dir.exists():
+        return []
+
+    unlocalized: list[str] = []
+    for language_dir in sorted((path for path in ai_dir.iterdir() if path.is_dir()), key=lambda item: item.name.casefold()):
+        if language_dir.name == "English":
+            continue
+        path = language_dir / MAGICAL_PROMPT_IMPROVER_RELATIVE
+        if not path.exists():
+            continue
+        text = text_by_path.get(path, "")
+        if any(marker in text for marker in MAGICAL_PROMPT_IMPROVER_ENGLISH_BODY_MARKERS):
+            unlocalized.append(_relative(path, root))
+    return unlocalized
+
+
 def validate_repository(root: str | Path = ".") -> ValidationReport:
     root_path = Path(root).resolve()
     files = _git_files(root_path) or _filesystem_files(root_path)
@@ -439,6 +499,8 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
     secret_hits = _find_secret_patterns(files, root_path, text_by_path)
     old_repository_reference_hits = _find_old_repository_reference_hits(files, root_path, text_by_path)
     optional_template_files_missing_readme_entries = _find_optional_template_files_missing_readme_entries(root_path, text_by_path)
+    prompt_readme_link_mismatches = _find_prompt_readme_link_mismatches(root_path, text_by_path)
+    magical_prompt_improver_unlocalized_files = _find_magical_prompt_improver_unlocalized_files(root_path, text_by_path)
     english_markdown_files = [path for path in markdown_files if _relative(path, root_path).startswith("ai/English/")]
     localized_markdown_files = _localized_language_markdown_files(root_path, markdown_files)
     language_readmes = _language_readme_files(root_path)
@@ -508,6 +570,8 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         "secret_pattern_hits": len(secret_hits),
         "old_repository_reference_hits": len(old_repository_reference_hits),
         "optional_template_files_missing_readme_entries": len(optional_template_files_missing_readme_entries),
+        "prompt_readme_link_mismatches": len(prompt_readme_link_mismatches),
+        "magical_prompt_improver_unlocalized_files": len(magical_prompt_improver_unlocalized_files),
         "english_source_scaffold_files": len(english_scaffold_files),
         "ai_translated_files": len(ai_translated_files),
         "missing_ai_translation_marker_files": len(missing_ai_translation_marker_files),
@@ -528,6 +592,8 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         "secret_pattern_hits": secret_hits,
         "old_repository_reference_hits": old_repository_reference_hits[:200],
         "optional_template_files_missing_readme_entries": optional_template_files_missing_readme_entries[:200],
+        "prompt_readme_link_mismatches": prompt_readme_link_mismatches[:200],
+        "magical_prompt_improver_unlocalized_files": magical_prompt_improver_unlocalized_files[:200],
         "english_source_scaffold_files_sample": english_scaffold_files[:200],
         "ai_translated_files_sample": ai_translated_files[:200],
         "missing_ai_translation_marker_files_sample": missing_ai_translation_marker_files[:200],
@@ -548,6 +614,8 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         "secret_pattern_hits",
         "old_repository_reference_hits",
         "optional_template_files_missing_readme_entries",
+        "prompt_readme_link_mismatches",
+        "magical_prompt_improver_unlocalized_files",
         "missing_ai_translation_marker_files",
         "unreviewed_translation_files",
         "incomplete_language_readmes",

@@ -207,7 +207,7 @@ Generate validation reports:
 python scripts/validate_repository.py --root . --json ai/VALIDATION_REPORT.json --markdown ai/VALIDATION_REPORT.md
 ```
 
-The validator checks local Markdown file targets, H1 headings, empty files, directory README coverage, mirrored AI language files, language sorting, legacy AI links, old public repository references, optional template README coverage, common secret patterns, translation status markers and language README completeness. It does not currently validate external URLs or heading anchors.
+The validator checks local Markdown file targets, H1 headings, empty files, directory README coverage, mirrored AI language files, language sorting, legacy AI links, old public repository references, optional template README coverage, prompt README link consistency, Magical Prompt Improver localization markers, common secret patterns, translation status markers and language README completeness. It does not currently validate external URLs or heading anchors.
 
 ## Examples
 
