@@ -120,7 +120,7 @@ Before opening a pull request:
 - [ ] The master prompt was not expanded without strong reason.
 - [ ] README or docs were updated if the public usage changed.
 - [ ] Templates remain reusable and project-neutral.
-- [ ] `PROJECT_STATE.md` is updated if the change affects project state, decisions, risks, open tasks or next step.
+- [ ] Repository-specific progress notes are not committed.
 
 ## Verification commands
 

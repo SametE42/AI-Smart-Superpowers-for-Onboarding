@@ -26,6 +26,7 @@ This project follows semantic versioning where practical.
 - Replaced personal author-name metadata with the public repository handle.
 - Published the validated initial repository to GitHub.
 - Updated validation workflow actions to current major versions to avoid Node.js 20 deprecation warnings.
+- Removed repository-specific completion progress notes from the public tracked tree.
 
 ## [0.1.0] - 2026-05-28
 

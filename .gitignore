@@ -5,3 +5,6 @@ __pycache__/
 # Local worktrees
 .worktrees/
 worktrees/
+
+# Local progress notes
+PROJECT_STATE.md

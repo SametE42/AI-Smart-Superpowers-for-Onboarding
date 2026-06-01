@@ -9,8 +9,7 @@ Use this before publishing or releasing the repository.
 - [ ] `CHANGELOG.md` includes the release-relevant changes.
 - [ ] `CONTRIBUTING.md` exists.
 - [ ] `SECURITY.md` exists.
-- [ ] `PROJECT_STATE.md` is current and contains the next handover step.
-- [ ] `AGENTS.md` points agents to `PROJECT_STATE.md`.
+- [ ] Repository-specific progress notes are not committed.
 - [ ] `templates/MASTER_PROMPT.md` is present.
 - [ ] `templates/MASTER_PROMPT.en.md` is present and treated as the primary English prompt.
 - [ ] `templates/docs-ai/` contains all 10 core document templates.
@@ -22,7 +21,7 @@ Use this before publishing or releasing the repository.
 - [ ] GitHub validation workflow exists at `.github/workflows/validate.yml`.
 - [ ] `ai/VALIDATION_REPORT.md` and `ai/VALIDATION_REPORT.json` are regenerated from the current tree.
 - [ ] `git status --short` was reviewed and every new or modified file is intentionally included or intentionally left out.
-- [ ] All GitHub-critical files are staged and committed before pushing: `.github/`, `AGENTS.md`, `PROJECT_STATE.md`, `scripts/`, `tests/`, `README.md`, `CHANGELOG.md`, `CONTRIBUTING.md`, `SECURITY.md` and `LICENSE`.
+- [ ] All GitHub-critical files are staged and committed before pushing: `.github/`, `AGENTS.md`, `scripts/`, `tests/`, `README.md`, `CHANGELOG.md`, `CONTRIBUTING.md`, `SECURITY.md` and `LICENSE`.
 - [ ] No real personal data is included.
 - [ ] No internal URLs are included.
 - [ ] No secrets are included.

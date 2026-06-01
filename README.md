@@ -65,7 +65,6 @@ These documents give future agents a compact, verifiable working context. `PROJE
 
 ```text
 Ai-Repo-Onboarding/
-├─ PROJECT_STATE.md
 ├─ AGENTS.md
 ├─ README.md
 ├─ CHANGELOG.md
@@ -96,7 +95,6 @@ Ai-Repo-Onboarding/
 
 | Area | Authoritative source |
 |---|---|
-| Project continuity and handover for this repository | `PROJECT_STATE.md` |
 | Primary onboarding prompt | `templates/MASTER_PROMPT.en.md` |
 | German workflow prompt | `templates/MASTER_PROMPT.md` |
 | Public project overview | `README.md` |
