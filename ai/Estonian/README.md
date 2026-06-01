@@ -7,28 +7,66 @@
 > Lähtefail: ai/English/README.md
 > Erinevuste korral on määrav ingliskeelne fail.
 
-See leht selgitab, kuidas `README.md` sobitub AI Agent Operating Manualiga. See on mõeldud inimestele ja AI-agentidele, kes peavad repository tööd planeerima, kontrollima või kordama.
+## Purpose of this language folder
 
-## Praktiline ulatus
+See leht selgitab, kuidas `README.md` sobitub AI Agent Operating Manualiga. See on mõeldud inimestele ja AI-agentidele, kes peavad repository tööd planeerima, kontrollima või kordama. This language folder contains the localized AI Agent Operating Manual and mirrors the English folder structure for onboarding, review, prompts, safety, tools, models and templates.
 
-Kasuta seda lehte operatiivse juhisena teema `README.md` jaoks. See ei asenda repository tõendeid ega projekti erijuhiseid.
+## English source of truth
 
-## Tööjuhised
+Erinevuste korral on määrav ingliskeelne fail. The English source [`ai/English/README.md`](../English/README.md) remains authoritative, and localized files mirror the English structure.
 
-- Käsitle repository tõendeid peamise autoriteedina.
-- Säilita täpselt failinimed, käsud, API nimed ja mudelinimed.
-- Märgi kontrollimata järeldused `[ASSUMPTION: ...]` ja tundmatud faktid `[UNKNOWN]`.
-- Seo tööriistapõhine käitumine tööriista või runtime'iga, millele see tegelikult kuulub.
-- Suuna turbe-, õiguste ja production-readiness riskid inimülevaatusse.
+## How to use this folder
 
-## Fookus
+Kasuta seda lehte operatiivse juhisena teema `language folder` jaoks. See ei asenda repository tõendeid ega projekti erijuhiseid. Use this folder to load the language-specific entrypoint before reading safety guidance, agent patterns, context engineering notes, prompt templates, tool guidance and reusable templates.
 
-Enne selle lehe kasutamist workflow's määra ulatus, vajalikud tõendid, kontrollitavad käsud ja inimkinnituse piirid.
+## Folder overview
 
-## Kvaliteedikontroll
+| Folder | Purpose |
+|---|---|
+| `agents/` | Agent patterns and operating models. |
+| `commands/` | Command usage and CLI workflows. |
+| `context-engineering/` | Context loading, pruning, retrieval and handoff. |
+| `evals/` | Evaluation, benchmark and regression testing guidance. |
+| `examples/` | Practical workflow examples. |
+| `memory/` | Memory models, schemas and safety rules. |
+| `models/` | Model-family specific notes. |
+| `optimization/` | Prompt, workflow and skill optimization. |
+| `prompts/` | Prompt templates and review prompts. |
+| `providers/` | Provider-specific documentation. |
+| `safety/` | Safety, privacy, approval and prompt-injection rules. |
+| `skills/` | Skill design, lifecycle and transfer guidance. |
+| `templates/` | Reusable templates. |
+| `tools/` | Tool-specific guidance. |
 
-- Eesmärk on uuele panustajale selge.
-- Juhis aitab nii AI-agente kui ka inimhaldajaid.
-- Mudelitele spetsiifilisi käske ei leiutata.
-- Turbe ja inimkinnituse piirid jäävad nähtavaks.
-- Ingliskeelne allikas jääb lokaliseerimiskonfliktides määravaks.
+## Recommended reading order
+
+1. `README.md`
+2. `safety/README.md`
+3. `agents/README.md`
+4. `context-engineering/README.md`
+5. `prompts/README.md`
+6. `tools/README.md`
+7. `templates/README.md`
+
+## Safety and human review rules
+
+- Repository evidence is authoritative.
+- Do not invent commands, model capabilities or provider behavior.
+- Preserve file names, commands, API names and model names.
+- Mark assumptions and unknowns.
+- Escalate security, permissions and production-readiness risks to human review.
+
+## Localization notes
+
+- File names, folder names, commands, APIs and model names stay unchanged.
+- Localized prose may be translated naturally.
+- English wins when localized content conflicts with English.
+
+## Quality checklist
+
+- [ ] Purpose is clear.
+- [ ] Folder overview is complete.
+- [ ] All standard subfolders are listed.
+- [ ] Safety boundaries are visible.
+- [ ] No unsupported model/tool claims are added.
+- [ ] English remains authoritative.

@@ -14,6 +14,11 @@ This project follows semantic versioning where practical.
 
 ### Changed
 
+- Renamed the public project to AI Smart Superpowers for Onboarding after the GitHub repository rename.
+- Replaced old public repository URLs with `https://github.com/SametE42/AI-Smart-Superpowers-for-Onboarding`.
+- Expanded all language-folder `README.md` files into complete AI manual entrypoints.
+- Added blocking validator checks for language README required sections and standard subfolder coverage.
+- Regenerated validation reports after the rebrand and validator update.
 - Reworked the root README as the primary GitHub entrypoint.
 - Expanded `templates/MASTER_PROMPT.en.md` so it matches the full workflow structure of the German prompt.
 - Standardized English template unknown markers to `[UNKNOWN]` and `[ASSUMPTION: ...]`.
@@ -32,7 +37,7 @@ This project follows semantic versioning where practical.
 
 ### Added
 
-- Initial public version of AI Repo Onboarding Standard.
+- Initial public version of AI Smart Superpowers for Onboarding.
 - Master prompt for multi-model repository onboarding.
 - `/docs/ai/` 10-document documentation contract.
 - Tool-specific entrypoint strategy for `AGENTS.md`, `CLAUDE.md`, `GEMINI.md` and Copilot instructions.

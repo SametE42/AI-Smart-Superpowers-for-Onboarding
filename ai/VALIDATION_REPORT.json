@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "root": "Ai-Repo-Onboarding",
+  "root": "AI-Smart-Superpowers-for-Onboarding",
   "total_files": 19503,
   "markdown_files": 19490,
   "language_folders": 75,
@@ -19,6 +19,9 @@
   "unreviewed_translation_files": 0,
   "translation_mirror_placeholder_files": 0,
   "scaffold_or_unreviewed_translation_files": 0,
+  "incomplete_language_readmes": 0,
+  "language_readmes_missing_required_sections": 0,
+  "language_readmes_missing_standard_subfolders": 0,
   "details": {
     "missing_mirrors": [],
     "broken_links": [],
@@ -232,6 +235,10 @@
     ],
     "missing_ai_translation_marker_files_sample": [],
     "unreviewed_translation_files_sample": [],
-    "translation_mirror_placeholder_files_sample": []
+    "translation_mirror_placeholder_files_sample": [],
+    "incomplete_language_readmes": [],
+    "language_readmes_missing_required_sections": [],
+    "language_readmes_missing_standard_subfolders": [],
+    "language_readmes_missing_translation_marker": []
   }
 }

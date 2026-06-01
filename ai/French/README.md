@@ -7,28 +7,66 @@
 > Fichier source: ai/English/README.md
 > En cas de divergence, le fichier anglais fait autorité.
 
-Cette page explique comment `README.md` s'inscrit dans l'AI Agent Operating Manual. Elle s'adresse aux personnes et aux agents d'IA qui doivent planifier, vérifier ou répéter un travail de dépôt.
+## Purpose of this language folder
 
-## Portée pratique
+Cette page explique comment `README.md` s'inscrit dans l'AI Agent Operating Manual. Elle s'adresse aux personnes et aux agents d'IA qui doivent planifier, vérifier ou répéter un travail de dépôt. This language folder contains the localized AI Agent Operating Manual and mirrors the English folder structure for onboarding, review, prompts, safety, tools, models and templates.
 
-Utilise cette page comme repère opérationnel pour le thème `README.md`. Elle ne remplace pas les preuves du dépôt ni les consignes propres au projet.
+## English source of truth
 
-## Consignes de travail
+En cas de divergence, le fichier anglais fait autorité. The English source [`ai/English/README.md`](../English/README.md) remains authoritative, and localized files mirror the English structure.
 
-- Traite les preuves du dépôt comme l'autorité principale.
-- Conserve exactement les noms de fichiers, commandes, noms d'API et noms de modèles.
-- Marque les conclusions non vérifiées avec `[ASSUMPTION: ...]` et les faits inconnus avec `[UNKNOWN]`.
-- Relie chaque comportement spécifique à l'outil ou au runtime qui le possède réellement.
-- Fais remonter les risques de sécurité, de permissions et de mise en production à une révision humaine.
+## How to use this folder
 
-## Point d'attention
+Utilise cette page comme repère opérationnel pour le thème `language folder`. Elle ne remplace pas les preuves du dépôt ni les consignes propres au projet. Use this folder to load the language-specific entrypoint before reading safety guidance, agent patterns, context engineering notes, prompt templates, tool guidance and reusable templates.
 
-Définis le périmètre, les preuves nécessaires, les commandes vérifiables et les limites d'approbation humaine avant d'utiliser cette page dans un workflow.
+## Folder overview
 
-## Contrôle qualité
+| Folder | Purpose |
+|---|---|
+| `agents/` | Agent patterns and operating models. |
+| `commands/` | Command usage and CLI workflows. |
+| `context-engineering/` | Context loading, pruning, retrieval and handoff. |
+| `evals/` | Evaluation, benchmark and regression testing guidance. |
+| `examples/` | Practical workflow examples. |
+| `memory/` | Memory models, schemas and safety rules. |
+| `models/` | Model-family specific notes. |
+| `optimization/` | Prompt, workflow and skill optimization. |
+| `prompts/` | Prompt templates and review prompts. |
+| `providers/` | Provider-specific documentation. |
+| `safety/` | Safety, privacy, approval and prompt-injection rules. |
+| `skills/` | Skill design, lifecycle and transfer guidance. |
+| `templates/` | Reusable templates. |
+| `tools/` | Tool-specific guidance. |
 
-- Le but est clair pour une nouvelle personne contributrice.
-- Les consignes aident à la fois les agents d'IA et les mainteneurs humains.
-- Aucune commande spécifique à un modèle n'est inventée.
-- Les limites de sécurité et d'approbation humaine restent visibles.
-- La source anglaise reste l'autorité pour les conflits de localisation.
+## Recommended reading order
+
+1. `README.md`
+2. `safety/README.md`
+3. `agents/README.md`
+4. `context-engineering/README.md`
+5. `prompts/README.md`
+6. `tools/README.md`
+7. `templates/README.md`
+
+## Safety and human review rules
+
+- Repository evidence is authoritative.
+- Do not invent commands, model capabilities or provider behavior.
+- Preserve file names, commands, API names and model names.
+- Mark assumptions and unknowns.
+- Escalate security, permissions and production-readiness risks to human review.
+
+## Localization notes
+
+- File names, folder names, commands, APIs and model names stay unchanged.
+- Localized prose may be translated naturally.
+- English wins when localized content conflicts with English.
+
+## Quality checklist
+
+- [ ] Purpose is clear.
+- [ ] Folder overview is complete.
+- [ ] All standard subfolders are listed.
+- [ ] Safety boundaries are visible.
+- [ ] No unsupported model/tool claims are added.
+- [ ] English remains authoritative.

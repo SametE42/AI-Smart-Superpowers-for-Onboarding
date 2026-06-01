@@ -7,28 +7,66 @@
 > Faili chanzo: ai/English/README.md
 > Kukiwa na tofauti, faili la Kiingereza lina kipaumbele.
 
-Ukurasa huu unaeleza jinsi `README.md` inavyoingia kwenye AI Agent Operating Manual. Umeandikwa kwa watu na AI agents wanaohitaji kupanga, kuthibitisha au kurudia kazi ya repository.
+## Purpose of this language folder
 
-## Wigo wa vitendo
+Ukurasa huu unaeleza jinsi `README.md` inavyoingia kwenye AI Agent Operating Manual. Umeandikwa kwa watu na AI agents wanaohitaji kupanga, kuthibitisha au kurudia kazi ya repository. This language folder contains the localized AI Agent Operating Manual and mirrors the English folder structure for onboarding, review, prompts, safety, tools, models and templates.
 
-Tumia ukurasa huu kama mwongozo wa uendeshaji kwa mada `README.md`. Hauondoi ushahidi wa repository au maagizo maalum ya mradi.
+## English source of truth
 
-## Miongozo ya kazi
+Kukiwa na tofauti, faili la Kiingereza lina kipaumbele. The English source [`ai/English/README.md`](../English/README.md) remains authoritative, and localized files mirror the English structure.
 
-- Chukulia ushahidi wa repository kama mamlaka kuu.
-- Hifadhi majina ya faili, commands, majina ya API na majina ya model kama yalivyo.
-- Weka alama kwa hitimisho lisilothibitishwa kwa `[ASSUMPTION: ...]` na ukweli usiojulikana kwa `[UNKNOWN]`.
-- Unganisha tabia maalum ya tool na tool au runtime inayomiliki tabia hiyo kweli.
-- Pandisha hatari za security, permissions na production-readiness kwa ukaguzi wa binadamu.
+## How to use this folder
 
-## Mkazo
+Tumia ukurasa huu kama mwongozo wa uendeshaji kwa mada `language folder`. Hauondoi ushahidi wa repository au maagizo maalum ya mradi. Use this folder to load the language-specific entrypoint before reading safety guidance, agent patterns, context engineering notes, prompt templates, tool guidance and reusable templates.
 
-Kabla ya kutumia ukurasa huu kwenye workflow, fafanua wigo, ushahidi unaohitajika, commands zinazoweza kuthibitishwa na mipaka ya idhini ya binadamu.
+## Folder overview
 
-## Ukaguzi wa ubora
+| Folder | Purpose |
+|---|---|
+| `agents/` | Agent patterns and operating models. |
+| `commands/` | Command usage and CLI workflows. |
+| `context-engineering/` | Context loading, pruning, retrieval and handoff. |
+| `evals/` | Evaluation, benchmark and regression testing guidance. |
+| `examples/` | Practical workflow examples. |
+| `memory/` | Memory models, schemas and safety rules. |
+| `models/` | Model-family specific notes. |
+| `optimization/` | Prompt, workflow and skill optimization. |
+| `prompts/` | Prompt templates and review prompts. |
+| `providers/` | Provider-specific documentation. |
+| `safety/` | Safety, privacy, approval and prompt-injection rules. |
+| `skills/` | Skill design, lifecycle and transfer guidance. |
+| `templates/` | Reusable templates. |
+| `tools/` | Tool-specific guidance. |
 
-- Kusudi liko wazi kwa contributor mpya.
-- Mwongozo unasaidia AI agents na watunzaji wa kibinadamu.
-- Hakuna commands maalum za model zinazobuniwa.
-- Mipaka ya security na idhini ya binadamu inaendelea kuonekana.
-- Chanzo cha Kiingereza hubaki maamuzi katika migogoro ya localization.
+## Recommended reading order
+
+1. `README.md`
+2. `safety/README.md`
+3. `agents/README.md`
+4. `context-engineering/README.md`
+5. `prompts/README.md`
+6. `tools/README.md`
+7. `templates/README.md`
+
+## Safety and human review rules
+
+- Repository evidence is authoritative.
+- Do not invent commands, model capabilities or provider behavior.
+- Preserve file names, commands, API names and model names.
+- Mark assumptions and unknowns.
+- Escalate security, permissions and production-readiness risks to human review.
+
+## Localization notes
+
+- File names, folder names, commands, APIs and model names stay unchanged.
+- Localized prose may be translated naturally.
+- English wins when localized content conflicts with English.
+
+## Quality checklist
+
+- [ ] Purpose is clear.
+- [ ] Folder overview is complete.
+- [ ] All standard subfolders are listed.
+- [ ] Safety boundaries are visible.
+- [ ] No unsupported model/tool claims are added.
+- [ ] English remains authoritative.

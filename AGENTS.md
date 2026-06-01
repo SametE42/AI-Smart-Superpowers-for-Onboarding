@@ -1,6 +1,6 @@
 # AGENTS.md
 
-This repository contains the AI Repo Onboarding Standard.
+This repository contains the AI Smart Superpowers for Onboarding.
 
 Before changing files:
 

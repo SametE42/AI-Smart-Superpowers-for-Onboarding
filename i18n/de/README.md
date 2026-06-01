@@ -1,4 +1,4 @@
-# AI Repo Onboarding Standard
+# AI Smart Superpowers for Onboarding
 
 > Translation status: Initial German translation
 > Source file: ../../README.md
@@ -55,7 +55,7 @@ Der Standard ist tool-neutral. Er kann mit OpenAI/Codex, Claude, Gemini, GitHub 
 Details stehen in:
 
 ```text
-docs/model-and-agent-ecosystem.md
+docs/tool-compatibility.md
 ```
 
 ## Sicherheit

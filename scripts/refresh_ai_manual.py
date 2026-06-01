@@ -80,6 +80,22 @@ CATEGORY_DESCRIPTIONS = {
         "de": "Schrittweise Verfahren für echte Agentenarbeit wie Onboarding, Review und Übersetzung.",
     },
 }
+STANDARD_FOLDER_OVERVIEW = [
+    ("agents/", "Agent patterns and operating models."),
+    ("commands/", "Command usage and CLI workflows."),
+    ("context-engineering/", "Context loading, pruning, retrieval and handoff."),
+    ("evals/", "Evaluation, benchmark and regression testing guidance."),
+    ("examples/", "Practical workflow examples."),
+    ("memory/", "Memory models, schemas and safety rules."),
+    ("models/", "Model-family specific notes."),
+    ("optimization/", "Prompt, workflow and skill optimization."),
+    ("prompts/", "Prompt templates and review prompts."),
+    ("providers/", "Provider-specific documentation."),
+    ("safety/", "Safety, privacy, approval and prompt-injection rules."),
+    ("skills/", "Skill design, lifecycle and transfer guidance."),
+    ("templates/", "Reusable templates."),
+    ("tools/", "Tool-specific guidance."),
+]
 
 TOPIC_FOCUS = {
     "agent-architecture": {
@@ -2123,10 +2139,145 @@ def _render_profile_page(language: str, relative_path: Path) -> str:
 """
 
 
+def _render_folder_overview_table() -> str:
+    rows = "\n".join(f"| `{folder}` | {purpose} |" for folder, purpose in STANDARD_FOLDER_OVERVIEW)
+    return f"""| Folder | Purpose |
+|---|---|
+{rows}"""
+
+
+def _render_language_root_readme(language: str) -> str:
+    source_path = "ai/English/README.md"
+    folder_table = _render_folder_overview_table()
+    reading_order = """1. `README.md`
+2. `safety/README.md`
+3. `agents/README.md`
+4. `context-engineering/README.md`
+5. `prompts/README.md`
+6. `tools/README.md`
+7. `templates/README.md`"""
+    safety_rules = """- Repository evidence is authoritative.
+- Do not invent commands, model capabilities or provider behavior.
+- Preserve file names, commands, API names and model names.
+- Mark assumptions and unknowns.
+- Escalate security, permissions and production-readiness risks to human review."""
+    localization_notes = """- File names, folder names, commands, APIs and model names stay unchanged.
+- Localized prose may be translated naturally.
+- English wins when localized content conflicts with English."""
+    quality_checklist = """- [ ] Purpose is clear.
+- [ ] Folder overview is complete.
+- [ ] All standard subfolders are listed.
+- [ ] Safety boundaries are visible.
+- [ ] No unsupported model/tool claims are added.
+- [ ] English remains authoritative."""
+
+    if language == "English":
+        note = "This English README is the canonical source for localized language-folder entrypoints."
+        purpose = (
+            "This language folder contains the canonical English AI Agent Operating Manual. It explains the "
+            "standard folder layout and gives humans and AI agents a stable entrypoint for repository onboarding, "
+            "review, prompts, safety, tools, models and reusable templates."
+        )
+        source_truth = (
+            "English is the source of truth. Non-English language folders mirror this structure and should preserve "
+            "the same paths, filenames, commands, APIs and model names."
+        )
+        usage = (
+            "Start here when auditing the manual structure, updating source guidance or checking whether localized "
+            "folders remain aligned with the canonical English content."
+        )
+        marker = ""
+    elif language == "German":
+        note = (
+            f"{AI_TRANSLATION_STATUS}\n"
+            f"Source language: English\n"
+            f"Source file: {source_path}\n"
+            "Bei Abweichungen ist die englische Datei maßgeblich."
+        )
+        purpose = (
+            "Dieser Sprachordner enthält das deutsch lokalisierte AI Agent Operating Manual. Er erklärt die "
+            "Standardordner und hilft Menschen sowie KI-Agenten bei Onboarding, Review, Prompts, Safety, Tools, "
+            "Modellen und wiederverwendbaren Templates."
+        )
+        source_truth = (
+            f"Die englische Quelle [`{source_path}`](../English/README.md) ist maßgeblich. Die deutsche Fassung "
+            "spiegelt die englische Struktur und bewahrt Pfade, Dateinamen, Commands, APIs und Modellnamen."
+        )
+        usage = (
+            "Nutze diesen Ordner als deutschsprachigen Einstieg in die Betriebsanleitung. Lade zuerst Safety, "
+            "Agentenrollen, Kontextregeln, Prompt-Muster, Tool-Hinweise und Templates, bevor du projektspezifische "
+            "Schlüsse ziehst."
+        )
+        marker = f"{AI_TRANSLATION_MARKER}\n\n"
+    else:
+        profile = LOCALIZED_LANGUAGE_TEXT[language]
+        note = (
+            f"{AI_TRANSLATION_STATUS}\n"
+            f"{profile['source_language']}\n"
+            f"{profile['source_file']}: {source_path}\n"
+            f"{profile['authority']}"
+        )
+        purpose = (
+            f"{profile['intro'].format(path='README.md')} This language folder contains the localized AI Agent "
+            "Operating Manual and mirrors the English folder structure for onboarding, review, prompts, safety, "
+            "tools, models and templates."
+        )
+        source_truth = (
+            f"{profile['authority']} The English source [`{source_path}`](../English/README.md) remains "
+            "authoritative, and localized files mirror the English structure."
+        )
+        usage = (
+            f"{profile['scope'].format(category='language folder')} Use this folder to load the language-specific "
+            "entrypoint before reading safety guidance, agent patterns, context engineering notes, prompt templates, "
+            "tool guidance and reusable templates."
+        )
+        marker = f"{AI_TRANSLATION_MARKER}\n\n"
+
+    return f"""# AI Agent Operating Manual
+
+{marker}> {note.replace(chr(10), chr(10) + '> ')}
+
+## Purpose of this language folder
+
+{purpose}
+
+## English source of truth
+
+{source_truth}
+
+## How to use this folder
+
+{usage}
+
+## Folder overview
+
+{folder_table}
+
+## Recommended reading order
+
+{reading_order}
+
+## Safety and human review rules
+
+{safety_rules}
+
+## Localization notes
+
+{localization_notes}
+
+## Quality checklist
+
+{quality_checklist}
+"""
+
+
 def render_manual_page(language: str, relative_path: Path) -> str:
     title = title_from_path(relative_path)
     category = _category(relative_path)
     source_path = f"ai/English/{relative_path.as_posix()}"
+
+    if relative_path.as_posix() == "README.md":
+        return _render_language_root_readme(language)
 
     if language in LOCALIZED_LANGUAGE_TEXT:
         return _render_profile_page(language, relative_path)

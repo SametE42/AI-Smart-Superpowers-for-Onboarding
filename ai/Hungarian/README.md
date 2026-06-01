@@ -7,28 +7,66 @@
 > Forrásfájl: ai/English/README.md
 > Eltérés esetén az angol fájl az irányadó.
 
-Ez az oldal elmagyarázza, hogyan illeszkedik a `README.md` az AI Agent Operating Manual rendszerébe. Olyan embereknek és AI-ügynököknek készült, akik repository-munkát terveznek, ellenőriznek vagy ismételnek.
+## Purpose of this language folder
 
-## Gyakorlati hatókör
+Ez az oldal elmagyarázza, hogyan illeszkedik a `README.md` az AI Agent Operating Manual rendszerébe. Olyan embereknek és AI-ügynököknek készült, akik repository-munkát terveznek, ellenőriznek vagy ismételnek. This language folder contains the localized AI Agent Operating Manual and mirrors the English folder structure for onboarding, review, prompts, safety, tools, models and templates.
 
-Használd ezt az oldalt operatív útmutatóként a `README.md` témához. Nem helyettesíti a repository-bizonyítékokat vagy a projekt saját utasításait.
+## English source of truth
 
-## Munkairányelvek
+Eltérés esetén az angol fájl az irányadó. The English source [`ai/English/README.md`](../English/README.md) remains authoritative, and localized files mirror the English structure.
 
-- A repository-bizonyítékokat tekintsd elsődleges tekintélynek.
-- Őrizd meg pontosan a fájlneveket, parancsokat, API-neveket és modellneveket.
-- A nem ellenőrzött következtetéseket `[ASSUMPTION: ...]`, az ismeretlen tényeket `[UNKNOWN]` jelöléssel lásd el.
-- Az eszközspecifikus viselkedést ahhoz az eszközhöz vagy runtime-hoz kösd, amely ténylegesen birtokolja.
-- A biztonsági, jogosultsági és production-readiness kockázatokat emberi felülvizsgálatra eszkaláld.
+## How to use this folder
 
-## Fókusz
+Használd ezt az oldalt operatív útmutatóként a `language folder` témához. Nem helyettesíti a repository-bizonyítékokat vagy a projekt saját utasításait. Use this folder to load the language-specific entrypoint before reading safety guidance, agent patterns, context engineering notes, prompt templates, tool guidance and reusable templates.
 
-Mielőtt ezt az oldalt workflow-ban használod, határozd meg a hatókört, a szükséges bizonyítékokat, az ellenőrizhető parancsokat és az emberi jóváhagyás határait.
+## Folder overview
 
-## Minőségellenőrzés
+| Folder | Purpose |
+|---|---|
+| `agents/` | Agent patterns and operating models. |
+| `commands/` | Command usage and CLI workflows. |
+| `context-engineering/` | Context loading, pruning, retrieval and handoff. |
+| `evals/` | Evaluation, benchmark and regression testing guidance. |
+| `examples/` | Practical workflow examples. |
+| `memory/` | Memory models, schemas and safety rules. |
+| `models/` | Model-family specific notes. |
+| `optimization/` | Prompt, workflow and skill optimization. |
+| `prompts/` | Prompt templates and review prompts. |
+| `providers/` | Provider-specific documentation. |
+| `safety/` | Safety, privacy, approval and prompt-injection rules. |
+| `skills/` | Skill design, lifecycle and transfer guidance. |
+| `templates/` | Reusable templates. |
+| `tools/` | Tool-specific guidance. |
 
-- A cél világos egy új közreműködő számára.
-- Az útmutató AI-ügynököknek és emberi maintainereknek is hasznos.
-- Nem talál ki modell-specifikus parancsokat.
-- A biztonsági és emberi jóváhagyási határok láthatók maradnak.
-- Lokalizációs konfliktus esetén az angol forrás marad irányadó.
+## Recommended reading order
+
+1. `README.md`
+2. `safety/README.md`
+3. `agents/README.md`
+4. `context-engineering/README.md`
+5. `prompts/README.md`
+6. `tools/README.md`
+7. `templates/README.md`
+
+## Safety and human review rules
+
+- Repository evidence is authoritative.
+- Do not invent commands, model capabilities or provider behavior.
+- Preserve file names, commands, API names and model names.
+- Mark assumptions and unknowns.
+- Escalate security, permissions and production-readiness risks to human review.
+
+## Localization notes
+
+- File names, folder names, commands, APIs and model names stay unchanged.
+- Localized prose may be translated naturally.
+- English wins when localized content conflicts with English.
+
+## Quality checklist
+
+- [ ] Purpose is clear.
+- [ ] Folder overview is complete.
+- [ ] All standard subfolders are listed.
+- [ ] Safety boundaries are visible.
+- [ ] No unsupported model/tool claims are added.
+- [ ] English remains authoritative.

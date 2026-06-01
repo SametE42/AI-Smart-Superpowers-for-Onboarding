@@ -7,28 +7,66 @@
 > Kildefil: ai/English/README.md
 > Ved avvik gjelder den engelske filen.
 
-Denne siden forklarer hvordan `README.md` passer inn i AI Agent Operating Manual. Den er skrevet for mennesker og AI-agenter som må planlegge, verifisere eller gjenta repositoryarbeid.
+## Purpose of this language folder
 
-## Praktisk omfang
+Denne siden forklarer hvordan `README.md` passer inn i AI Agent Operating Manual. Den er skrevet for mennesker og AI-agenter som må planlegge, verifisere eller gjenta repositoryarbeid. This language folder contains the localized AI Agent Operating Manual and mirrors the English folder structure for onboarding, review, prompts, safety, tools, models and templates.
 
-Bruk siden som operativ veiledning for temaet `README.md`. Den erstatter ikke repositorybevis eller prosjektspesifikke instruksjoner.
+## English source of truth
 
-## Arbeidsretningslinjer
+Ved avvik gjelder den engelske filen. The English source [`ai/English/README.md`](../English/README.md) remains authoritative, and localized files mirror the English structure.
 
-- Behandle repositorybevis som primær autoritet.
-- Bevar filnavn, kommandoer, API-navn og modellnavn nøyaktig.
-- Merk uverifiserte konklusjoner med `[ASSUMPTION: ...]` og ukjente fakta med `[UNKNOWN]`.
-- Knytt verktøyspesifikk atferd til verktøyet eller runtime som faktisk eier den.
-- Eskaler risiko rundt sikkerhet, tillatelser og produksjonsklarhet til menneskelig gjennomgang.
+## How to use this folder
 
-## Fokus
+Bruk siden som operativ veiledning for temaet `language folder`. Den erstatter ikke repositorybevis eller prosjektspesifikke instruksjoner. Use this folder to load the language-specific entrypoint before reading safety guidance, agent patterns, context engineering notes, prompt templates, tool guidance and reusable templates.
 
-Definer omfang, nødvendig bevis, verifiserbare kommandoer og grenser for menneskelig godkjenning før siden brukes i en workflow.
+## Folder overview
 
-## Kvalitetskontroll
+| Folder | Purpose |
+|---|---|
+| `agents/` | Agent patterns and operating models. |
+| `commands/` | Command usage and CLI workflows. |
+| `context-engineering/` | Context loading, pruning, retrieval and handoff. |
+| `evals/` | Evaluation, benchmark and regression testing guidance. |
+| `examples/` | Practical workflow examples. |
+| `memory/` | Memory models, schemas and safety rules. |
+| `models/` | Model-family specific notes. |
+| `optimization/` | Prompt, workflow and skill optimization. |
+| `prompts/` | Prompt templates and review prompts. |
+| `providers/` | Provider-specific documentation. |
+| `safety/` | Safety, privacy, approval and prompt-injection rules. |
+| `skills/` | Skill design, lifecycle and transfer guidance. |
+| `templates/` | Reusable templates. |
+| `tools/` | Tool-specific guidance. |
 
-- Formålet er tydelig for en ny bidragsyter.
-- Veiledningen hjelper både AI-agenter og menneskelige maintainers.
-- Ingen modellspesifikke kommandoer blir funnet opp.
-- Grenser for sikkerhet og menneskelig godkjenning forblir synlige.
-- Den engelske kilden forblir avgjørende ved lokaliseringskonflikter.
+## Recommended reading order
+
+1. `README.md`
+2. `safety/README.md`
+3. `agents/README.md`
+4. `context-engineering/README.md`
+5. `prompts/README.md`
+6. `tools/README.md`
+7. `templates/README.md`
+
+## Safety and human review rules
+
+- Repository evidence is authoritative.
+- Do not invent commands, model capabilities or provider behavior.
+- Preserve file names, commands, API names and model names.
+- Mark assumptions and unknowns.
+- Escalate security, permissions and production-readiness risks to human review.
+
+## Localization notes
+
+- File names, folder names, commands, APIs and model names stay unchanged.
+- Localized prose may be translated naturally.
+- English wins when localized content conflicts with English.
+
+## Quality checklist
+
+- [ ] Purpose is clear.
+- [ ] Folder overview is complete.
+- [ ] All standard subfolders are listed.
+- [ ] Safety boundaries are visible.
+- [ ] No unsupported model/tool claims are added.
+- [ ] English remains authoritative.

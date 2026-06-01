@@ -7,28 +7,66 @@
 > ملف المصدر: ai/English/README.md
 > عند وجود تعارض، يكون الملف الإنجليزي هو المرجع.
 
-تشرح هذه الصفحة كيف يندرج `README.md` ضمن AI Agent Operating Manual. وهي موجهة إلى الأشخاص ووكلاء الذكاء الاصطناعي الذين يحتاجون إلى تخطيط عمل المستودع أو التحقق منه أو تكراره.
+## Purpose of this language folder
 
-## النطاق العملي
+تشرح هذه الصفحة كيف يندرج `README.md` ضمن AI Agent Operating Manual. وهي موجهة إلى الأشخاص ووكلاء الذكاء الاصطناعي الذين يحتاجون إلى تخطيط عمل المستودع أو التحقق منه أو تكراره. This language folder contains the localized AI Agent Operating Manual and mirrors the English folder structure for onboarding, review, prompts, safety, tools, models and templates.
 
-استخدم هذه الصفحة كإرشاد تشغيلي لموضوع `README.md`. لا تحل محل أدلة المستودع أو تعليمات المشروع الخاصة.
+## English source of truth
 
-## إرشادات العمل
+عند وجود تعارض، يكون الملف الإنجليزي هو المرجع. The English source [`ai/English/README.md`](../English/README.md) remains authoritative, and localized files mirror the English structure.
 
-- اعتبر أدلة المستودع هي المرجع الأساسي.
-- حافظ على أسماء الملفات والأوامر وأسماء API وأسماء النماذج كما هي.
-- علّم الاستنتاجات غير المتحقق منها بـ `[ASSUMPTION: ...]` والحقائق غير المعروفة بـ `[UNKNOWN]`.
-- اربط كل سلوك خاص بالأداة أو runtime الذي يملكه فعليا.
-- صعّد مخاطر الأمان والصلاحيات وجاهزية الإنتاج إلى مراجعة بشرية.
+## How to use this folder
 
-## التركيز
+استخدم هذه الصفحة كإرشاد تشغيلي لموضوع `language folder`. لا تحل محل أدلة المستودع أو تعليمات المشروع الخاصة. Use this folder to load the language-specific entrypoint before reading safety guidance, agent patterns, context engineering notes, prompt templates, tool guidance and reusable templates.
 
-حدد النطاق والأدلة المطلوبة والأوامر القابلة للتحقق وحدود الموافقة البشرية قبل استخدام هذه الصفحة داخل workflow.
+## Folder overview
 
-## فحص الجودة
+| Folder | Purpose |
+|---|---|
+| `agents/` | Agent patterns and operating models. |
+| `commands/` | Command usage and CLI workflows. |
+| `context-engineering/` | Context loading, pruning, retrieval and handoff. |
+| `evals/` | Evaluation, benchmark and regression testing guidance. |
+| `examples/` | Practical workflow examples. |
+| `memory/` | Memory models, schemas and safety rules. |
+| `models/` | Model-family specific notes. |
+| `optimization/` | Prompt, workflow and skill optimization. |
+| `prompts/` | Prompt templates and review prompts. |
+| `providers/` | Provider-specific documentation. |
+| `safety/` | Safety, privacy, approval and prompt-injection rules. |
+| `skills/` | Skill design, lifecycle and transfer guidance. |
+| `templates/` | Reusable templates. |
+| `tools/` | Tool-specific guidance. |
 
-- الغرض واضح للمساهمين الجدد.
-- الإرشادات مفيدة لوكلاء الذكاء الاصطناعي وللمشرفين البشر.
-- لا يتم اختلاق أوامر خاصة بالنماذج.
-- تبقى حدود الأمان والموافقة البشرية واضحة.
-- يبقى المصدر الإنجليزي هو المرجع عند تعارضات الترجمة.
+## Recommended reading order
+
+1. `README.md`
+2. `safety/README.md`
+3. `agents/README.md`
+4. `context-engineering/README.md`
+5. `prompts/README.md`
+6. `tools/README.md`
+7. `templates/README.md`
+
+## Safety and human review rules
+
+- Repository evidence is authoritative.
+- Do not invent commands, model capabilities or provider behavior.
+- Preserve file names, commands, API names and model names.
+- Mark assumptions and unknowns.
+- Escalate security, permissions and production-readiness risks to human review.
+
+## Localization notes
+
+- File names, folder names, commands, APIs and model names stay unchanged.
+- Localized prose may be translated naturally.
+- English wins when localized content conflicts with English.
+
+## Quality checklist
+
+- [ ] Purpose is clear.
+- [ ] Folder overview is complete.
+- [ ] All standard subfolders are listed.
+- [ ] Safety boundaries are visible.
+- [ ] No unsupported model/tool claims are added.
+- [ ] English remains authoritative.

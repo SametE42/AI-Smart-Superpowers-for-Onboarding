@@ -7,28 +7,66 @@
 > 原文ファイル: ai/English/README.md
 > 差異がある場合は英語ファイルを優先します。
 
-このページは `README.md` が AI Agent Operating Manual の中でどのように使われるかを説明します。リポジトリ作業を計画、検証、または再実行する人と AI エージェント向けです。
+## Purpose of this language folder
 
-## 実用範囲
+このページは `README.md` が AI Agent Operating Manual の中でどのように使われるかを説明します。リポジトリ作業を計画、検証、または再実行する人と AI エージェント向けです。 This language folder contains the localized AI Agent Operating Manual and mirrors the English folder structure for onboarding, review, prompts, safety, tools, models and templates.
 
-このページを `README.md` テーマの運用ガイドとして使ってください。リポジトリの証拠やプロジェクト固有の指示の代わりにはなりません。
+## English source of truth
 
-## 作業ガイドライン
+差異がある場合は英語ファイルを優先します。 The English source [`ai/English/README.md`](../English/README.md) remains authoritative, and localized files mirror the English structure.
 
-- リポジトリの証拠を第一の根拠として扱います。
-- ファイル名、コマンド、API 名、モデル名は正確に保持します。
-- 未検証の結論は `[ASSUMPTION: ...]`、不明な事実は `[UNKNOWN]` として示します。
-- ツール固有の挙動は、それを実際に所有するツールまたは runtime に結び付けます。
-- 安全性、権限、本番準備に関するリスクは人間のレビューにエスカレーションします。
+## How to use this folder
 
-## 焦点
+このページを `language folder` テーマの運用ガイドとして使ってください。リポジトリの証拠やプロジェクト固有の指示の代わりにはなりません。 Use this folder to load the language-specific entrypoint before reading safety guidance, agent patterns, context engineering notes, prompt templates, tool guidance and reusable templates.
 
-このページを workflow で使う前に、範囲、必要な証拠、検証可能なコマンド、人間の承認境界を定義します。
+## Folder overview
 
-## 品質チェック
+| Folder | Purpose |
+|---|---|
+| `agents/` | Agent patterns and operating models. |
+| `commands/` | Command usage and CLI workflows. |
+| `context-engineering/` | Context loading, pruning, retrieval and handoff. |
+| `evals/` | Evaluation, benchmark and regression testing guidance. |
+| `examples/` | Practical workflow examples. |
+| `memory/` | Memory models, schemas and safety rules. |
+| `models/` | Model-family specific notes. |
+| `optimization/` | Prompt, workflow and skill optimization. |
+| `prompts/` | Prompt templates and review prompts. |
+| `providers/` | Provider-specific documentation. |
+| `safety/` | Safety, privacy, approval and prompt-injection rules. |
+| `skills/` | Skill design, lifecycle and transfer guidance. |
+| `templates/` | Reusable templates. |
+| `tools/` | Tool-specific guidance. |
 
-- 新しい共同作業者に目的が明確です。
-- AI エージェントと人間のメンテナーの両方に役立ちます。
-- モデル固有のコマンドを作りません。
-- 安全性と人間の承認境界が見える状態です。
-- ローカライズの衝突では英語ソースが権威を持ちます。
+## Recommended reading order
+
+1. `README.md`
+2. `safety/README.md`
+3. `agents/README.md`
+4. `context-engineering/README.md`
+5. `prompts/README.md`
+6. `tools/README.md`
+7. `templates/README.md`
+
+## Safety and human review rules
+
+- Repository evidence is authoritative.
+- Do not invent commands, model capabilities or provider behavior.
+- Preserve file names, commands, API names and model names.
+- Mark assumptions and unknowns.
+- Escalate security, permissions and production-readiness risks to human review.
+
+## Localization notes
+
+- File names, folder names, commands, APIs and model names stay unchanged.
+- Localized prose may be translated naturally.
+- English wins when localized content conflicts with English.
+
+## Quality checklist
+
+- [ ] Purpose is clear.
+- [ ] Folder overview is complete.
+- [ ] All standard subfolders are listed.
+- [ ] Safety boundaries are visible.
+- [ ] No unsupported model/tool claims are added.
+- [ ] English remains authoritative.

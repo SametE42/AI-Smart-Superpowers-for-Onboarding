@@ -7,28 +7,66 @@
 > File sumber: ai/English/README.md
 > Jika ada perbedaan, file Inggris menjadi acuan.
 
-Halaman ini menjelaskan bagaimana `README.md` masuk ke AI Agent Operating Manual. Ditulis untuk manusia dan AI agents yang perlu merencanakan, memverifikasi, atau mengulang pekerjaan repository.
+## Purpose of this language folder
 
-## Cakupan praktis
+Halaman ini menjelaskan bagaimana `README.md` masuk ke AI Agent Operating Manual. Ditulis untuk manusia dan AI agents yang perlu merencanakan, memverifikasi, atau mengulang pekerjaan repository. This language folder contains the localized AI Agent Operating Manual and mirrors the English folder structure for onboarding, review, prompts, safety, tools, models and templates.
 
-Gunakan halaman ini sebagai panduan operasional untuk tema `README.md`. Ini tidak menggantikan bukti repository atau instruksi khusus proyek.
+## English source of truth
 
-## Panduan kerja
+Jika ada perbedaan, file Inggris menjadi acuan. The English source [`ai/English/README.md`](../English/README.md) remains authoritative, and localized files mirror the English structure.
 
-- Perlakukan bukti repository sebagai otoritas utama.
-- Pertahankan nama file, commands, nama API, dan nama model secara persis.
-- Tandai kesimpulan yang belum diverifikasi dengan `[ASSUMPTION: ...]` dan fakta yang tidak diketahui dengan `[UNKNOWN]`.
-- Hubungkan perilaku khusus tool ke tool atau runtime yang benar-benar memilikinya.
-- Eskalasi risiko security, permissions, dan production-readiness ke tinjauan manusia.
+## How to use this folder
 
-## Fokus
+Gunakan halaman ini sebagai panduan operasional untuk tema `language folder`. Ini tidak menggantikan bukti repository atau instruksi khusus proyek. Use this folder to load the language-specific entrypoint before reading safety guidance, agent patterns, context engineering notes, prompt templates, tool guidance and reusable templates.
 
-Sebelum memakai halaman ini dalam workflow, tetapkan cakupan, bukti yang diperlukan, commands yang dapat diverifikasi, dan batas persetujuan manusia.
+## Folder overview
 
-## Pemeriksaan kualitas
+| Folder | Purpose |
+|---|---|
+| `agents/` | Agent patterns and operating models. |
+| `commands/` | Command usage and CLI workflows. |
+| `context-engineering/` | Context loading, pruning, retrieval and handoff. |
+| `evals/` | Evaluation, benchmark and regression testing guidance. |
+| `examples/` | Practical workflow examples. |
+| `memory/` | Memory models, schemas and safety rules. |
+| `models/` | Model-family specific notes. |
+| `optimization/` | Prompt, workflow and skill optimization. |
+| `prompts/` | Prompt templates and review prompts. |
+| `providers/` | Provider-specific documentation. |
+| `safety/` | Safety, privacy, approval and prompt-injection rules. |
+| `skills/` | Skill design, lifecycle and transfer guidance. |
+| `templates/` | Reusable templates. |
+| `tools/` | Tool-specific guidance. |
 
-- Tujuan jelas bagi contributor baru.
-- Panduan berguna bagi AI agents dan maintainer manusia.
-- Tidak ada commands khusus model yang dikarang.
-- Batas security dan persetujuan manusia tetap terlihat.
-- Sumber Inggris tetap menentukan saat konflik localization.
+## Recommended reading order
+
+1. `README.md`
+2. `safety/README.md`
+3. `agents/README.md`
+4. `context-engineering/README.md`
+5. `prompts/README.md`
+6. `tools/README.md`
+7. `templates/README.md`
+
+## Safety and human review rules
+
+- Repository evidence is authoritative.
+- Do not invent commands, model capabilities or provider behavior.
+- Preserve file names, commands, API names and model names.
+- Mark assumptions and unknowns.
+- Escalate security, permissions and production-readiness risks to human review.
+
+## Localization notes
+
+- File names, folder names, commands, APIs and model names stay unchanged.
+- Localized prose may be translated naturally.
+- English wins when localized content conflicts with English.
+
+## Quality checklist
+
+- [ ] Purpose is clear.
+- [ ] Folder overview is complete.
+- [ ] All standard subfolders are listed.
+- [ ] Safety boundaries are visible.
+- [ ] No unsupported model/tool claims are added.
+- [ ] English remains authoritative.

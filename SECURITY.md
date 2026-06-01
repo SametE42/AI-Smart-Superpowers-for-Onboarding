@@ -86,6 +86,8 @@ Example Organization
 
 ## Supported versions
 
-Security fixes apply to the latest released version.
+Security fixes apply to the latest tagged release.
+
+Until the first public release after the repository rename is published, security fixes apply to the default branch `main`.
 
 Early versions below `1.0.0` may change structure as the standard stabilizes.

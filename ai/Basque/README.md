@@ -7,28 +7,66 @@
 > Jatorrizko fitxategia: ai/English/README.md
 > Aldeak badaude, ingelesezko fitxategiak du lehentasuna.
 
-Orrialde honek azaltzen du `README.md` nola sartzen den AI Agent Operating Manual barruan. Repository-lana planifikatu, egiaztatu edo errepikatu behar duten pertsonentzat eta AI agenteentzat idatzita dago.
+## Purpose of this language folder
 
-## Eremu praktikoa
+Orrialde honek azaltzen du `README.md` nola sartzen den AI Agent Operating Manual barruan. Repository-lana planifikatu, egiaztatu edo errepikatu behar duten pertsonentzat eta AI agenteentzat idatzita dago. This language folder contains the localized AI Agent Operating Manual and mirrors the English folder structure for onboarding, review, prompts, safety, tools, models and templates.
 
-Erabili orrialde hau `README.md` gaiaren gida operatibo gisa. Ez du ordezkatzen repository-ko ebidentzia edo proiektuaren instrukzio espezifikoak.
+## English source of truth
 
-## Lan jarraibideak
+Aldeak badaude, ingelesezko fitxategiak du lehentasuna. The English source [`ai/English/README.md`](../English/README.md) remains authoritative, and localized files mirror the English structure.
 
-- Hartu repository-ko ebidentzia autoritate nagusitzat.
-- Gorde fitxategi-izenak, komandoak, API izenak eta modelo-izenak zehazki.
-- Markatu egiaztatu gabeko ondorioak `[ASSUMPTION: ...]` gisa eta ezagutzen ez diren datuak `[UNKNOWN]` gisa.
-- Lotu tresna-espezifikoko portaera benetan jabe den tresnarekin edo runtime-rekin.
-- Eskalatu segurtasun, baimen eta production-readiness arriskuak gizakiaren berrikuspenera.
+## How to use this folder
 
-## Fokua
+Erabili orrialde hau `language folder` gaiaren gida operatibo gisa. Ez du ordezkatzen repository-ko ebidentzia edo proiektuaren instrukzio espezifikoak. Use this folder to load the language-specific entrypoint before reading safety guidance, agent patterns, context engineering notes, prompt templates, tool guidance and reusable templates.
 
-Orrialde hau workflow batean erabili aurretik, definitu eremua, beharrezko ebidentzia, egiaztagarriak diren komandoak eta gizakiaren onarpen mugak.
+## Folder overview
 
-## Kalitate kontrola
+| Folder | Purpose |
+|---|---|
+| `agents/` | Agent patterns and operating models. |
+| `commands/` | Command usage and CLI workflows. |
+| `context-engineering/` | Context loading, pruning, retrieval and handoff. |
+| `evals/` | Evaluation, benchmark and regression testing guidance. |
+| `examples/` | Practical workflow examples. |
+| `memory/` | Memory models, schemas and safety rules. |
+| `models/` | Model-family specific notes. |
+| `optimization/` | Prompt, workflow and skill optimization. |
+| `prompts/` | Prompt templates and review prompts. |
+| `providers/` | Provider-specific documentation. |
+| `safety/` | Safety, privacy, approval and prompt-injection rules. |
+| `skills/` | Skill design, lifecycle and transfer guidance. |
+| `templates/` | Reusable templates. |
+| `tools/` | Tool-specific guidance. |
 
-- Helburua argia da ekarle berri batentzat.
-- Gidak AI agenteei eta giza mantentzaileei laguntzen die.
-- Ez dira modeloei lotutako komandoak asmatzen.
-- Segurtasunaren eta gizakiaren onarpenaren mugak ikusgai daude.
-- Ingelesezko iturria erabakigarria da lokalizazio gatazketan.
+## Recommended reading order
+
+1. `README.md`
+2. `safety/README.md`
+3. `agents/README.md`
+4. `context-engineering/README.md`
+5. `prompts/README.md`
+6. `tools/README.md`
+7. `templates/README.md`
+
+## Safety and human review rules
+
+- Repository evidence is authoritative.
+- Do not invent commands, model capabilities or provider behavior.
+- Preserve file names, commands, API names and model names.
+- Mark assumptions and unknowns.
+- Escalate security, permissions and production-readiness risks to human review.
+
+## Localization notes
+
+- File names, folder names, commands, APIs and model names stay unchanged.
+- Localized prose may be translated naturally.
+- English wins when localized content conflicts with English.
+
+## Quality checklist
+
+- [ ] Purpose is clear.
+- [ ] Folder overview is complete.
+- [ ] All standard subfolders are listed.
+- [ ] Safety boundaries are visible.
+- [ ] No unsupported model/tool claims are added.
+- [ ] English remains authoritative.

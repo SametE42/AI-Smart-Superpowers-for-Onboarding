@@ -7,28 +7,66 @@
 > 源文件: ai/English/README.md
 > 如有差异，以英文文件为准。
 
-本页说明 `README.md` 如何用于 AI Agent Operating Manual。它面向需要规划、验证或重复仓库工作的人员和 AI 代理。
+## Purpose of this language folder
 
-## 实用范围
+本页说明 `README.md` 如何用于 AI Agent Operating Manual。它面向需要规划、验证或重复仓库工作的人员和 AI 代理。 This language folder contains the localized AI Agent Operating Manual and mirrors the English folder structure for onboarding, review, prompts, safety, tools, models and templates.
 
-将本页作为 `README.md` 主题的操作指引。它不能替代仓库证据或项目专用说明。
+## English source of truth
 
-## 工作指引
+如有差异，以英文文件为准。 The English source [`ai/English/README.md`](../English/README.md) remains authoritative, and localized files mirror the English structure.
 
-- 将仓库证据视为主要权威来源。
-- 保持文件名、命令、API 名称和模型名称完全不变。
-- 用 `[ASSUMPTION: ...]` 标记未验证结论，用 `[UNKNOWN]` 标记未知事实。
-- 把工具特定行为关联到真正拥有该行为的工具或 runtime。
-- 将安全、权限和生产就绪风险升级给人工审核。
+## How to use this folder
 
-## 重点
+将本页作为 `language folder` 主题的操作指引。它不能替代仓库证据或项目专用说明。 Use this folder to load the language-specific entrypoint before reading safety guidance, agent patterns, context engineering notes, prompt templates, tool guidance and reusable templates.
 
-在 workflow 中使用本页之前，先定义范围、所需证据、可验证命令和人工批准边界。
+## Folder overview
 
-## 质量检查
+| Folder | Purpose |
+|---|---|
+| `agents/` | Agent patterns and operating models. |
+| `commands/` | Command usage and CLI workflows. |
+| `context-engineering/` | Context loading, pruning, retrieval and handoff. |
+| `evals/` | Evaluation, benchmark and regression testing guidance. |
+| `examples/` | Practical workflow examples. |
+| `memory/` | Memory models, schemas and safety rules. |
+| `models/` | Model-family specific notes. |
+| `optimization/` | Prompt, workflow and skill optimization. |
+| `prompts/` | Prompt templates and review prompts. |
+| `providers/` | Provider-specific documentation. |
+| `safety/` | Safety, privacy, approval and prompt-injection rules. |
+| `skills/` | Skill design, lifecycle and transfer guidance. |
+| `templates/` | Reusable templates. |
+| `tools/` | Tool-specific guidance. |
 
-- 新贡献者能够理解本页目的。
-- 指引同时帮助 AI 代理和人工维护者。
-- 不编造模型专用命令。
-- 安全和人工批准边界保持可见。
-- 发生本地化冲突时，英文来源仍为权威。
+## Recommended reading order
+
+1. `README.md`
+2. `safety/README.md`
+3. `agents/README.md`
+4. `context-engineering/README.md`
+5. `prompts/README.md`
+6. `tools/README.md`
+7. `templates/README.md`
+
+## Safety and human review rules
+
+- Repository evidence is authoritative.
+- Do not invent commands, model capabilities or provider behavior.
+- Preserve file names, commands, API names and model names.
+- Mark assumptions and unknowns.
+- Escalate security, permissions and production-readiness risks to human review.
+
+## Localization notes
+
+- File names, folder names, commands, APIs and model names stay unchanged.
+- Localized prose may be translated naturally.
+- English wins when localized content conflicts with English.
+
+## Quality checklist
+
+- [ ] Purpose is clear.
+- [ ] Folder overview is complete.
+- [ ] All standard subfolders are listed.
+- [ ] Safety boundaries are visible.
+- [ ] No unsupported model/tool claims are added.
+- [ ] English remains authoritative.

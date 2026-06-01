@@ -50,6 +50,33 @@ UNREVIEWED_TRANSLATION_MARKERS = [
 TRANSLATION_MIRROR_PLACEHOLDER_MARKERS = [
     "This file mirrors `ai/English/",
 ]
+LANGUAGE_README_REQUIRED_SECTIONS = [
+    "# AI Agent Operating Manual",
+    "## Purpose of this language folder",
+    "## English source of truth",
+    "## How to use this folder",
+    "## Folder overview",
+    "## Recommended reading order",
+    "## Safety and human review rules",
+    "## Localization notes",
+    "## Quality checklist",
+]
+LANGUAGE_README_STANDARD_SUBFOLDERS = [
+    "agents/",
+    "commands/",
+    "context-engineering/",
+    "evals/",
+    "examples/",
+    "memory/",
+    "models/",
+    "optimization/",
+    "prompts/",
+    "providers/",
+    "safety/",
+    "skills/",
+    "templates/",
+    "tools/",
+]
 
 
 @dataclass(frozen=True)
@@ -89,6 +116,26 @@ def _git_files(root: Path) -> list[Path] | None:
                 continue
             files.append(root / path)
     return files
+
+
+def _repository_name(root: Path) -> str:
+    try:
+        result = subprocess.run(
+            ["git", "remote", "get-url", "origin"],
+            cwd=root,
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            check=True,
+        )
+    except (FileNotFoundError, subprocess.CalledProcessError):
+        return root.name
+
+    remote_url = result.stdout.strip().removesuffix(".git")
+    if not remote_url:
+        return root.name
+
+    return remote_url.rstrip("/").rsplit("/", 1)[-1] or root.name
 
 
 def _filesystem_files(root: Path) -> list[Path]:
@@ -246,6 +293,39 @@ def _localized_language_markdown_files(root: Path, markdown_files: Iterable[Path
     return localized_files
 
 
+def _language_readme_files(root: Path) -> list[Path]:
+    ai_dir = root / "ai"
+    if not ai_dir.exists():
+        return []
+
+    return sorted(path / "README.md" for path in ai_dir.iterdir() if path.is_dir() and (path / "README.md").exists())
+
+
+def _find_language_readme_issues(
+    language_readmes: Iterable[Path],
+    root: Path,
+    text_by_path: dict[Path, str],
+) -> tuple[list[dict], list[dict], list[dict]]:
+    missing_sections: list[dict] = []
+    missing_subfolders: list[dict] = []
+    missing_translation_markers: list[dict] = []
+
+    for path in language_readmes:
+        text = text_by_path[path]
+        relative = _relative(path, root)
+        language = path.parent.name
+        section_gaps = [section for section in LANGUAGE_README_REQUIRED_SECTIONS if section not in text]
+        subfolder_gaps = [subfolder for subfolder in LANGUAGE_README_STANDARD_SUBFOLDERS if subfolder not in text]
+        if section_gaps:
+            missing_sections.append({"file": relative, "missing_sections": section_gaps})
+        if subfolder_gaps:
+            missing_subfolders.append({"file": relative, "missing_subfolders": subfolder_gaps})
+        if language != "English" and AI_TRANSLATION_MARKERS[0] not in text:
+            missing_translation_markers.append({"file": relative})
+
+    return missing_sections, missing_subfolders, missing_translation_markers
+
+
 def validate_repository(root: str | Path = ".") -> ValidationReport:
     root_path = Path(root).resolve()
     files = _git_files(root_path) or _filesystem_files(root_path)
@@ -266,6 +346,7 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
     secret_hits = _find_secret_patterns(files, root_path, text_by_path)
     english_markdown_files = [path for path in markdown_files if _relative(path, root_path).startswith("ai/English/")]
     localized_markdown_files = _localized_language_markdown_files(root_path, markdown_files)
+    language_readmes = _language_readme_files(root_path)
     english_scaffold_files = _find_files_with_markers(
         english_markdown_files,
         root_path,
@@ -296,6 +377,21 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         for path in localized_markdown_files
         if _relative(path, root_path) not in ai_translated_file_set
     ]
+    (
+        language_readmes_missing_required_sections,
+        language_readmes_missing_standard_subfolders,
+        language_readmes_missing_translation_markers,
+    ) = _find_language_readme_issues(language_readmes, root_path, text_by_path)
+    incomplete_language_readmes = sorted(
+        {
+            item["file"]
+            for item in (
+                language_readmes_missing_required_sections
+                + language_readmes_missing_standard_subfolders
+                + language_readmes_missing_translation_markers
+            )
+        }
+    )
     legacy_ai_links = [
         item
         for item in broken_links
@@ -321,6 +417,9 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         "unreviewed_translation_files": len(unreviewed_translation_files),
         "translation_mirror_placeholder_files": len(translation_mirror_placeholder_files),
         "scaffold_or_unreviewed_translation_files": len(english_scaffold_files) + len(unreviewed_translation_files),
+        "incomplete_language_readmes": len(incomplete_language_readmes),
+        "language_readmes_missing_required_sections": len(language_readmes_missing_required_sections),
+        "language_readmes_missing_standard_subfolders": len(language_readmes_missing_standard_subfolders),
     }
     details = {
         "missing_mirrors": missing_mirrors,
@@ -335,6 +434,10 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         "missing_ai_translation_marker_files_sample": missing_ai_translation_marker_files[:200],
         "unreviewed_translation_files_sample": unreviewed_translation_files[:200],
         "translation_mirror_placeholder_files_sample": translation_mirror_placeholder_files[:200],
+        "incomplete_language_readmes": incomplete_language_readmes[:200],
+        "language_readmes_missing_required_sections": language_readmes_missing_required_sections[:200],
+        "language_readmes_missing_standard_subfolders": language_readmes_missing_standard_subfolders[:200],
+        "language_readmes_missing_translation_marker": language_readmes_missing_translation_markers[:200],
     }
     blocking_keys = [
         "missing_mirrored_ai_files",
@@ -346,9 +449,12 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         "secret_pattern_hits",
         "missing_ai_translation_marker_files",
         "unreviewed_translation_files",
+        "incomplete_language_readmes",
+        "language_readmes_missing_required_sections",
+        "language_readmes_missing_standard_subfolders",
     ]
     status = "PASS" if all(summary[key] == 0 for key in blocking_keys) else "FAIL"
-    return ValidationReport(status=status, root=root_path.name, summary=summary, details=details)
+    return ValidationReport(status=status, root=_repository_name(root_path), summary=summary, details=details)
 
 
 def main() -> int:

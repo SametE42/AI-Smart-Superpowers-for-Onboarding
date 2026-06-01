@@ -22,6 +22,9 @@ Status: **PASS**
 - unreviewed_translation_files: 0
 - translation_mirror_placeholder_files: 0
 - scaffold_or_unreviewed_translation_files: 0
+- incomplete_language_readmes: 0
+- language_readmes_missing_required_sections: 0
+- language_readmes_missing_standard_subfolders: 0
 
 ## Details
 
@@ -37,3 +40,7 @@ Status: **PASS**
 - missing_ai_translation_marker_files_sample: 0
 - unreviewed_translation_files_sample: 0
 - translation_mirror_placeholder_files_sample: 0
+- incomplete_language_readmes: 0
+- language_readmes_missing_required_sections: 0
+- language_readmes_missing_standard_subfolders: 0
+- language_readmes_missing_translation_marker: 0

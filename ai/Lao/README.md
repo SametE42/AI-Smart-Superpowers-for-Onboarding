@@ -7,23 +7,66 @@
 > ໄຟລ໌ຕົ້ນສະບັບ: ai/English/README.md
 > ຖ້າມີຄວາມແຕກຕ່າງ ໃຫ້ຍຶດໄຟລ໌ອັງກິດ.
 
-ໜ້ານີ້ອະທິບາຍວ່າ `README.md` ເຂົ້າກັບ AI Agent Operating Manual ແນວໃດ ສໍາລັບຄົນ ແລະ AI agents ທີ່ຕ້ອງວາງແຜນ ກວດສອບ ຫຼືເຮັດຊໍ້າວຽກ repository.
+## Purpose of this language folder
 
-## ຂອບເຂດປະຕິບັດ
+ໜ້ານີ້ອະທິບາຍວ່າ `README.md` ເຂົ້າກັບ AI Agent Operating Manual ແນວໃດ ສໍາລັບຄົນ ແລະ AI agents ທີ່ຕ້ອງວາງແຜນ ກວດສອບ ຫຼືເຮັດຊໍ້າວຽກ repository. This language folder contains the localized AI Agent Operating Manual and mirrors the English folder structure for onboarding, review, prompts, safety, tools, models and templates.
 
-ໃຊ້ໜ້ານີ້ເປັນຄູ່ມືປະຕິບັດສໍາລັບ `README.md`. ມັນບໍ່ແທນຫຼັກຖານ repository ຫຼືຄໍາແນະນໍາໂຄງການ.
+## English source of truth
 
-## ຄໍາແນະນໍາການເຮັດວຽກ
+ຖ້າມີຄວາມແຕກຕ່າງ ໃຫ້ຍຶດໄຟລ໌ອັງກິດ. The English source [`ai/English/README.md`](../English/README.md) remains authoritative, and localized files mirror the English structure.
 
-- ຮັກສາຊື່ໄຟລ໌ commands ຊື່ API ແລະຊື່ model ໃຫ້ຄົງເດີມ.
-- ໝາຍຂໍ້ສະຫຼຸບທີ່ບໍ່ທັນຢືນຢັນດ້ວຍ `[ASSUMPTION: ...]` ແລະຂໍ້ເທັດຈິງທີ່ບໍ່ຮູ້ດ້ວຍ `[UNKNOWN]`.
-- ສົ່ງຄວາມສ່ຽງ security, permissions ແລະ production-readiness ໃຫ້ມະນຸດກວດທານ.
+## How to use this folder
 
-## ຈຸດເນັ້ນ
+ໃຊ້ໜ້ານີ້ເປັນຄູ່ມືປະຕິບັດສໍາລັບ `language folder`. ມັນບໍ່ແທນຫຼັກຖານ repository ຫຼືຄໍາແນະນໍາໂຄງການ. Use this folder to load the language-specific entrypoint before reading safety guidance, agent patterns, context engineering notes, prompt templates, tool guidance and reusable templates.
 
-ກ່ອນໃຊ້ໃນ workflow ໃຫ້ກໍານົດຂອບເຂດ ຫຼັກຖານ commands ທີ່ກວດສອບໄດ້ ແລະຂອບເຂດການອະນຸມັດໂດຍມະນຸດ.
+## Folder overview
 
-## ກວດຄຸນນະພາບ
+| Folder | Purpose |
+|---|---|
+| `agents/` | Agent patterns and operating models. |
+| `commands/` | Command usage and CLI workflows. |
+| `context-engineering/` | Context loading, pruning, retrieval and handoff. |
+| `evals/` | Evaluation, benchmark and regression testing guidance. |
+| `examples/` | Practical workflow examples. |
+| `memory/` | Memory models, schemas and safety rules. |
+| `models/` | Model-family specific notes. |
+| `optimization/` | Prompt, workflow and skill optimization. |
+| `prompts/` | Prompt templates and review prompts. |
+| `providers/` | Provider-specific documentation. |
+| `safety/` | Safety, privacy, approval and prompt-injection rules. |
+| `skills/` | Skill design, lifecycle and transfer guidance. |
+| `templates/` | Reusable templates. |
+| `tools/` | Tool-specific guidance. |
 
-- ເປົ້າໝາຍຊັດເຈນສໍາລັບ contributor ໃໝ່.
-- ແຫຼ່ງອັງກິດຍັງເປັນຕົວຕັດສິນໃນຂໍ້ຂັດແຍ່ງ localization.
+## Recommended reading order
+
+1. `README.md`
+2. `safety/README.md`
+3. `agents/README.md`
+4. `context-engineering/README.md`
+5. `prompts/README.md`
+6. `tools/README.md`
+7. `templates/README.md`
+
+## Safety and human review rules
+
+- Repository evidence is authoritative.
+- Do not invent commands, model capabilities or provider behavior.
+- Preserve file names, commands, API names and model names.
+- Mark assumptions and unknowns.
+- Escalate security, permissions and production-readiness risks to human review.
+
+## Localization notes
+
+- File names, folder names, commands, APIs and model names stay unchanged.
+- Localized prose may be translated naturally.
+- English wins when localized content conflicts with English.
+
+## Quality checklist
+
+- [ ] Purpose is clear.
+- [ ] Folder overview is complete.
+- [ ] All standard subfolders are listed.
+- [ ] Safety boundaries are visible.
+- [ ] No unsupported model/tool claims are added.
+- [ ] English remains authoritative.

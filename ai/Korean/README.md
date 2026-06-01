@@ -7,28 +7,66 @@
 > 원본 파일: ai/English/README.md
 > 차이가 있으면 영어 파일을 기준으로 합니다.
 
-이 페이지는 `README.md`가 AI Agent Operating Manual 안에서 어떻게 쓰이는지 설명합니다. 저장소 작업을 계획, 검증 또는 반복해야 하는 사람과 AI 에이전트를 위한 문서입니다.
+## Purpose of this language folder
 
-## 실무 범위
+이 페이지는 `README.md`가 AI Agent Operating Manual 안에서 어떻게 쓰이는지 설명합니다. 저장소 작업을 계획, 검증 또는 반복해야 하는 사람과 AI 에이전트를 위한 문서입니다. This language folder contains the localized AI Agent Operating Manual and mirrors the English folder structure for onboarding, review, prompts, safety, tools, models and templates.
 
-이 페이지를 `README.md` 주제의 운영 지침으로 사용하세요. 저장소 증거나 프로젝트 고유 지침을 대체하지 않습니다.
+## English source of truth
 
-## 작업 지침
+차이가 있으면 영어 파일을 기준으로 합니다. The English source [`ai/English/README.md`](../English/README.md) remains authoritative, and localized files mirror the English structure.
 
-- 저장소 증거를 기본 권위로 다룹니다.
-- 파일 이름, 명령, API 이름, 모델 이름을 정확히 보존합니다.
-- 검증되지 않은 결론은 `[ASSUMPTION: ...]`, 알 수 없는 사실은 `[UNKNOWN]`으로 표시합니다.
-- 도구별 동작은 실제로 그 동작을 소유한 도구 또는 runtime에 연결합니다.
-- 보안, 권한, 프로덕션 준비 위험은 사람 검토로 에스컬레이션합니다.
+## How to use this folder
 
-## 초점
+이 페이지를 `language folder` 주제의 운영 지침으로 사용하세요. 저장소 증거나 프로젝트 고유 지침을 대체하지 않습니다. Use this folder to load the language-specific entrypoint before reading safety guidance, agent patterns, context engineering notes, prompt templates, tool guidance and reusable templates.
 
-이 페이지를 workflow에서 사용하기 전에 범위, 필요한 증거, 검증 가능한 명령, 사람 승인 경계를 정의하세요.
+## Folder overview
 
-## 품질 점검
+| Folder | Purpose |
+|---|---|
+| `agents/` | Agent patterns and operating models. |
+| `commands/` | Command usage and CLI workflows. |
+| `context-engineering/` | Context loading, pruning, retrieval and handoff. |
+| `evals/` | Evaluation, benchmark and regression testing guidance. |
+| `examples/` | Practical workflow examples. |
+| `memory/` | Memory models, schemas and safety rules. |
+| `models/` | Model-family specific notes. |
+| `optimization/` | Prompt, workflow and skill optimization. |
+| `prompts/` | Prompt templates and review prompts. |
+| `providers/` | Provider-specific documentation. |
+| `safety/` | Safety, privacy, approval and prompt-injection rules. |
+| `skills/` | Skill design, lifecycle and transfer guidance. |
+| `templates/` | Reusable templates. |
+| `tools/` | Tool-specific guidance. |
 
-- 새 기여자가 목적을 이해할 수 있습니다.
-- 지침이 AI 에이전트와 사람 유지관리자 모두에게 유용합니다.
-- 모델별 명령을 만들어내지 않습니다.
-- 보안과 사람 승인 경계가 계속 보입니다.
-- 현지화 충돌에서는 영어 원본이 권위를 가집니다.
+## Recommended reading order
+
+1. `README.md`
+2. `safety/README.md`
+3. `agents/README.md`
+4. `context-engineering/README.md`
+5. `prompts/README.md`
+6. `tools/README.md`
+7. `templates/README.md`
+
+## Safety and human review rules
+
+- Repository evidence is authoritative.
+- Do not invent commands, model capabilities or provider behavior.
+- Preserve file names, commands, API names and model names.
+- Mark assumptions and unknowns.
+- Escalate security, permissions and production-readiness risks to human review.
+
+## Localization notes
+
+- File names, folder names, commands, APIs and model names stay unchanged.
+- Localized prose may be translated naturally.
+- English wins when localized content conflicts with English.
+
+## Quality checklist
+
+- [ ] Purpose is clear.
+- [ ] Folder overview is complete.
+- [ ] All standard subfolders are listed.
+- [ ] Safety boundaries are visible.
+- [ ] No unsupported model/tool claims are added.
+- [ ] English remains authoritative.

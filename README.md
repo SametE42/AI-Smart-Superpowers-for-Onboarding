@@ -1,4 +1,4 @@
-# AI Repo Onboarding Standard
+# AI Smart Superpowers for Onboarding
 
 <p align="center">
   <strong>Evidence-first onboarding docs and prompts for AI coding agents.</strong><br>
@@ -6,8 +6,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/SametE42/Ai-Repo-Onboarding/actions/workflows/validate.yml"><img alt="Validate repository" src="https://github.com/SametE42/Ai-Repo-Onboarding/actions/workflows/validate.yml/badge.svg"></a>
-  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/github/license/SametE42/Ai-Repo-Onboarding"></a>
+  <a href="https://github.com/SametE42/AI-Smart-Superpowers-for-Onboarding/actions/workflows/validate.yml"><img alt="Validate repository" src="https://github.com/SametE42/AI-Smart-Superpowers-for-Onboarding/actions/workflows/validate.yml/badge.svg"></a>
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/github/license/SametE42/AI-Smart-Superpowers-for-Onboarding"></a>
   <img alt="Master prompt: v12" src="https://img.shields.io/badge/master%20prompt-v12-7c3aed">
   <img alt="Language folders: 75" src="https://img.shields.io/badge/language%20folders-75-0f766e">
   <img alt="AI translated files: 19166" src="https://img.shields.io/badge/AI%20translated%20files-19166-2563eb">
@@ -21,7 +21,7 @@
   <a href="templates/MASTER_PROMPT.en.md">Master Prompt</a> ·
   <a href="ai/English/README.md">AI Manual</a> ·
   <a href="docs/">Docs</a> ·
-  <a href="https://github.com/SametE42/Ai-Repo-Onboarding/issues">Issues</a>
+  <a href="https://github.com/SametE42/AI-Smart-Superpowers-for-Onboarding/issues">Issues</a>
 </p>
 
 ---
@@ -205,7 +205,7 @@ Generate validation reports:
 python scripts/validate_repository.py --root . --json ai/VALIDATION_REPORT.json --markdown ai/VALIDATION_REPORT.md
 ```
 
-The validator checks Markdown links, H1 headings, empty files, directory README coverage, mirrored AI language files, language sorting, legacy AI links, common secret patterns and translation status markers.
+The validator checks local Markdown file targets, H1 headings, empty files, directory README coverage, mirrored AI language files, language sorting, legacy AI links, common secret patterns, translation status markers and language README completeness. It does not currently validate external URLs or heading anchors.
 
 ## Examples
 

@@ -1,13 +1,13 @@
-# AI Repo Onboarding Standard
+# AI Smart Superpowers for Onboarding
 
 <p align="center">
   <strong>Evidence-first onboarding docs and prompts for AI coding agents.</strong><br>
-  Repository governance, issue intake, pull request guidance and validation workflows for the AI Repo Onboarding Standard.
+  Repository governance, issue intake, pull request guidance and validation workflows for this standard.
 </p>
 
 <p align="center">
-  <a href="https://github.com/SametE42/Ai-Repo-Onboarding/actions/workflows/validate.yml"><img alt="Validate repository" src="https://github.com/SametE42/Ai-Repo-Onboarding/actions/workflows/validate.yml/badge.svg"></a>
-  <a href="../LICENSE"><img alt="License: MIT" src="https://img.shields.io/github/license/SametE42/Ai-Repo-Onboarding"></a>
+  <a href="https://github.com/SametE42/AI-Smart-Superpowers-for-Onboarding/actions/workflows/validate.yml"><img alt="Validate repository" src="https://github.com/SametE42/AI-Smart-Superpowers-for-Onboarding/actions/workflows/validate.yml/badge.svg"></a>
+  <a href="../LICENSE"><img alt="License: MIT" src="https://img.shields.io/github/license/SametE42/AI-Smart-Superpowers-for-Onboarding"></a>
   <img alt="Master prompt: v12" src="https://img.shields.io/badge/master%20prompt-v12-7c3aed">
   <img alt="Language folders: 75" src="https://img.shields.io/badge/language%20folders-75-0f766e">
   <img alt="AI translated files: 19166" src="https://img.shields.io/badge/AI%20translated%20files-19166-2563eb">
@@ -39,7 +39,7 @@
 
 ## Overview
 
-AI Repo Onboarding Standard is a reusable documentation and prompt standard for onboarding AI coding agents into software repositories safely, consistently and with clear human-review boundaries.
+AI Smart Superpowers for Onboarding is a reusable documentation and prompt standard for onboarding AI coding agents into software repositories safely, consistently and with clear human-review boundaries.
 
 For the complete public project page, open the root [README](../README.md). This `.github/` directory is the repository operations layer: it keeps contribution intake structured, review ownership explicit and validation automatic.
 
@@ -68,9 +68,11 @@ For the complete public project page, open the root [README](../README.md). This
 ```bash
 python -m unittest discover -s tests
 python scripts/validate_repository.py --root .
+python scripts/validate_repository.py --root . --json ai/VALIDATION_REPORT.json --markdown ai/VALIDATION_REPORT.md
+git diff --exit-code ai/VALIDATION_REPORT.json ai/VALIDATION_REPORT.md
 ```
 
-The validator checks Markdown structure, local links, mirrored AI language files, README coverage, empty files, common secret patterns and AI translation status markers.
+The validator checks Markdown structure, local file links, mirrored AI language files, README coverage, language README completeness, empty files, common secret patterns and AI translation status markers. It does not currently validate external URLs or heading anchors.
 
 ## Maintenance Rules
 

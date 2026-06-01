@@ -7,28 +7,66 @@
 > Zdrojový soubor: ai/English/README.md
 > Při rozporu má přednost anglický soubor.
 
-Tato stránka vysvětluje, jak `README.md` zapadá do AI Agent Operating Manual. Je určena lidem a AI agentům, kteří potřebují plánovat, ověřovat nebo opakovat práci v repozitáři.
+## Purpose of this language folder
 
-## Praktický rozsah
+Tato stránka vysvětluje, jak `README.md` zapadá do AI Agent Operating Manual. Je určena lidem a AI agentům, kteří potřebují plánovat, ověřovat nebo opakovat práci v repozitáři. This language folder contains the localized AI Agent Operating Manual and mirrors the English folder structure for onboarding, review, prompts, safety, tools, models and templates.
 
-Použijte tuto stránku jako provozní vodítko pro téma `README.md`. Nenahrazuje důkazy z repozitáře ani projektové instrukce.
+## English source of truth
 
-## Pracovní pokyny
+Při rozporu má přednost anglický soubor. The English source [`ai/English/README.md`](../English/README.md) remains authoritative, and localized files mirror the English structure.
 
-- Považujte důkazy z repozitáře za primární autoritu.
-- Zachovejte přesně názvy souborů, příkazy, názvy API a názvy modelů.
-- Neověřené závěry označte `[ASSUMPTION: ...]` a neznámá fakta `[UNKNOWN]`.
-- Propojte chování specifické pro nástroj s nástrojem nebo runtime, který je skutečně vlastní.
-- Rizika bezpečnosti, oprávnění a produkční připravenosti eskalujte k lidské revizi.
+## How to use this folder
 
-## Zaměření
+Použijte tuto stránku jako provozní vodítko pro téma `language folder`. Nenahrazuje důkazy z repozitáře ani projektové instrukce. Use this folder to load the language-specific entrypoint before reading safety guidance, agent patterns, context engineering notes, prompt templates, tool guidance and reusable templates.
 
-Před použitím této stránky ve workflow definujte rozsah, potřebné důkazy, ověřitelné příkazy a hranice lidského schválení.
+## Folder overview
 
-## Kontrola kvality
+| Folder | Purpose |
+|---|---|
+| `agents/` | Agent patterns and operating models. |
+| `commands/` | Command usage and CLI workflows. |
+| `context-engineering/` | Context loading, pruning, retrieval and handoff. |
+| `evals/` | Evaluation, benchmark and regression testing guidance. |
+| `examples/` | Practical workflow examples. |
+| `memory/` | Memory models, schemas and safety rules. |
+| `models/` | Model-family specific notes. |
+| `optimization/` | Prompt, workflow and skill optimization. |
+| `prompts/` | Prompt templates and review prompts. |
+| `providers/` | Provider-specific documentation. |
+| `safety/` | Safety, privacy, approval and prompt-injection rules. |
+| `skills/` | Skill design, lifecycle and transfer guidance. |
+| `templates/` | Reusable templates. |
+| `tools/` | Tool-specific guidance. |
 
-- Účel je jasný novému přispěvateli.
-- Pokyny pomáhají AI agentům i lidským maintainerům.
-- Nevymýšlejí se žádné modelově specifické příkazy.
-- Hranice bezpečnosti a lidského schválení zůstávají viditelné.
-- Anglický zdroj zůstává rozhodující při konfliktech lokalizace.
+## Recommended reading order
+
+1. `README.md`
+2. `safety/README.md`
+3. `agents/README.md`
+4. `context-engineering/README.md`
+5. `prompts/README.md`
+6. `tools/README.md`
+7. `templates/README.md`
+
+## Safety and human review rules
+
+- Repository evidence is authoritative.
+- Do not invent commands, model capabilities or provider behavior.
+- Preserve file names, commands, API names and model names.
+- Mark assumptions and unknowns.
+- Escalate security, permissions and production-readiness risks to human review.
+
+## Localization notes
+
+- File names, folder names, commands, APIs and model names stay unchanged.
+- Localized prose may be translated naturally.
+- English wins when localized content conflicts with English.
+
+## Quality checklist
+
+- [ ] Purpose is clear.
+- [ ] Folder overview is complete.
+- [ ] All standard subfolders are listed.
+- [ ] Safety boundaries are visible.
+- [ ] No unsupported model/tool claims are added.
+- [ ] English remains authoritative.

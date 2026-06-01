@@ -21,6 +21,38 @@ class RefreshAiManualTests(unittest.TestCase):
         self.assertNotIn("# \n", content)
         self.assertIn("ai/English/README.md", content)
 
+    def test_render_root_readme_has_required_entrypoint_structure(self) -> None:
+        content = render_manual_page("French", Path("README.md"))
+
+        for section in (
+            "## Purpose of this language folder",
+            "## English source of truth",
+            "## How to use this folder",
+            "## Folder overview",
+            "## Recommended reading order",
+            "## Safety and human review rules",
+            "## Localization notes",
+            "## Quality checklist",
+        ):
+            self.assertIn(section, content)
+        for folder in (
+            "agents/",
+            "commands/",
+            "context-engineering/",
+            "evals/",
+            "examples/",
+            "memory/",
+            "models/",
+            "optimization/",
+            "prompts/",
+            "providers/",
+            "safety/",
+            "skills/",
+            "templates/",
+            "tools/",
+        ):
+            self.assertIn(folder, content)
+
     def test_render_german_page_is_localized_and_keeps_source_note(self) -> None:
         content = render_manual_page("German", Path("agents/agent-architecture.md"))
 

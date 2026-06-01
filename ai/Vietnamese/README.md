@@ -7,28 +7,66 @@
 > Tệp nguồn: ai/English/README.md
 > Nếu có khác biệt, tệp tiếng Anh là nguồn ưu tiên.
 
-Trang này giải thích cách `README.md` phù hợp với AI Agent Operating Manual. Nó dành cho con người và AI agents cần lập kế hoạch, xác minh hoặc lặp lại công việc repository.
+## Purpose of this language folder
 
-## Phạm vi thực tế
+Trang này giải thích cách `README.md` phù hợp với AI Agent Operating Manual. Nó dành cho con người và AI agents cần lập kế hoạch, xác minh hoặc lặp lại công việc repository. This language folder contains the localized AI Agent Operating Manual and mirrors the English folder structure for onboarding, review, prompts, safety, tools, models and templates.
 
-Dùng trang này như hướng dẫn vận hành cho chủ đề `README.md`. Nó không thay thế bằng chứng repository hoặc hướng dẫn riêng của dự án.
+## English source of truth
 
-## Hướng dẫn làm việc
+Nếu có khác biệt, tệp tiếng Anh là nguồn ưu tiên. The English source [`ai/English/README.md`](../English/README.md) remains authoritative, and localized files mirror the English structure.
 
-- Xem bằng chứng repository là thẩm quyền chính.
-- Giữ nguyên tên tệp, commands, tên API và tên model.
-- Đánh dấu kết luận chưa xác minh bằng `[ASSUMPTION: ...]` và sự kiện chưa biết bằng `[UNKNOWN]`.
-- Liên kết hành vi riêng của tool với tool hoặc runtime thực sự sở hữu nó.
-- Chuyển rủi ro security, permissions và production-readiness cho con người rà soát.
+## How to use this folder
 
-## Trọng tâm
+Dùng trang này như hướng dẫn vận hành cho chủ đề `language folder`. Nó không thay thế bằng chứng repository hoặc hướng dẫn riêng của dự án. Use this folder to load the language-specific entrypoint before reading safety guidance, agent patterns, context engineering notes, prompt templates, tool guidance and reusable templates.
 
-Trước khi dùng trang này trong workflow, hãy xác định phạm vi, bằng chứng cần có, commands có thể xác minh và ranh giới phê duyệt của con người.
+## Folder overview
 
-## Kiểm tra chất lượng
+| Folder | Purpose |
+|---|---|
+| `agents/` | Agent patterns and operating models. |
+| `commands/` | Command usage and CLI workflows. |
+| `context-engineering/` | Context loading, pruning, retrieval and handoff. |
+| `evals/` | Evaluation, benchmark and regression testing guidance. |
+| `examples/` | Practical workflow examples. |
+| `memory/` | Memory models, schemas and safety rules. |
+| `models/` | Model-family specific notes. |
+| `optimization/` | Prompt, workflow and skill optimization. |
+| `prompts/` | Prompt templates and review prompts. |
+| `providers/` | Provider-specific documentation. |
+| `safety/` | Safety, privacy, approval and prompt-injection rules. |
+| `skills/` | Skill design, lifecycle and transfer guidance. |
+| `templates/` | Reusable templates. |
+| `tools/` | Tool-specific guidance. |
 
-- Mục đích rõ ràng với contributor mới.
-- Hướng dẫn hữu ích cho cả AI agents và maintainer con người.
-- Không bịa ra commands riêng cho model.
-- Ranh giới security và phê duyệt con người vẫn hiển thị.
-- Nguồn tiếng Anh vẫn quyết định khi có xung đột localization.
+## Recommended reading order
+
+1. `README.md`
+2. `safety/README.md`
+3. `agents/README.md`
+4. `context-engineering/README.md`
+5. `prompts/README.md`
+6. `tools/README.md`
+7. `templates/README.md`
+
+## Safety and human review rules
+
+- Repository evidence is authoritative.
+- Do not invent commands, model capabilities or provider behavior.
+- Preserve file names, commands, API names and model names.
+- Mark assumptions and unknowns.
+- Escalate security, permissions and production-readiness risks to human review.
+
+## Localization notes
+
+- File names, folder names, commands, APIs and model names stay unchanged.
+- Localized prose may be translated naturally.
+- English wins when localized content conflicts with English.
+
+## Quality checklist
+
+- [ ] Purpose is clear.
+- [ ] Folder overview is complete.
+- [ ] All standard subfolders are listed.
+- [ ] Safety boundaries are visible.
+- [ ] No unsupported model/tool claims are added.
+- [ ] English remains authoritative.

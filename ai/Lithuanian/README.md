@@ -7,28 +7,66 @@
 > Šaltinio failas: ai/English/README.md
 > Jei yra neatitikimų, pirmenybė teikiama angliškam failui.
 
-Šis puslapis paaiškina, kaip `README.md` dera su AI Agent Operating Manual. Jis skirtas žmonėms ir AI agentams, kuriems reikia planuoti, tikrinti arba kartoti darbą repository.
+## Purpose of this language folder
 
-## Praktinė apimtis
+Šis puslapis paaiškina, kaip `README.md` dera su AI Agent Operating Manual. Jis skirtas žmonėms ir AI agentams, kuriems reikia planuoti, tikrinti arba kartoti darbą repository. This language folder contains the localized AI Agent Operating Manual and mirrors the English folder structure for onboarding, review, prompts, safety, tools, models and templates.
 
-Naudok šį puslapį kaip operacinę gairę temai `README.md`. Jis nepakeičia repository įrodymų ar projekto instrukcijų.
+## English source of truth
 
-## Darbo gairės
+Jei yra neatitikimų, pirmenybė teikiama angliškam failui. The English source [`ai/English/README.md`](../English/README.md) remains authoritative, and localized files mirror the English structure.
 
-- Repository įrodymus laikyk pagrindiniu autoritetu.
-- Tiksliai išsaugok failų pavadinimus, komandas, API pavadinimus ir modelių pavadinimus.
-- Nepatikrintas išvadas žymėk `[ASSUMPTION: ...]`, o nežinomus faktus `[UNKNOWN]`.
-- Įrankiui būdingą elgesį susiek su įrankiu arba runtime, kuris jį iš tikrųjų valdo.
-- Saugumo, leidimų ir production-readiness rizikas perduok žmogaus peržiūrai.
+## How to use this folder
 
-## Fokusas
+Naudok šį puslapį kaip operacinę gairę temai `language folder`. Jis nepakeičia repository įrodymų ar projekto instrukcijų. Use this folder to load the language-specific entrypoint before reading safety guidance, agent patterns, context engineering notes, prompt templates, tool guidance and reusable templates.
 
-Prieš naudodamas šį puslapį workflow, apibrėžk apimtį, reikalingus įrodymus, patikrinamas komandas ir žmogaus patvirtinimo ribas.
+## Folder overview
 
-## Kokybės patikra
+| Folder | Purpose |
+|---|---|
+| `agents/` | Agent patterns and operating models. |
+| `commands/` | Command usage and CLI workflows. |
+| `context-engineering/` | Context loading, pruning, retrieval and handoff. |
+| `evals/` | Evaluation, benchmark and regression testing guidance. |
+| `examples/` | Practical workflow examples. |
+| `memory/` | Memory models, schemas and safety rules. |
+| `models/` | Model-family specific notes. |
+| `optimization/` | Prompt, workflow and skill optimization. |
+| `prompts/` | Prompt templates and review prompts. |
+| `providers/` | Provider-specific documentation. |
+| `safety/` | Safety, privacy, approval and prompt-injection rules. |
+| `skills/` | Skill design, lifecycle and transfer guidance. |
+| `templates/` | Reusable templates. |
+| `tools/` | Tool-specific guidance. |
 
-- Tikslas aiškus naujam prisidėtojui.
-- Gairės padeda ir AI agentams, ir žmonėms prižiūrėtojams.
-- Neišgalvojamos modeliams būdingos komandos.
-- Saugumo ir žmogaus patvirtinimo ribos lieka matomos.
-- Angliškas šaltinis išlieka lemiamas lokalizacijos konfliktuose.
+## Recommended reading order
+
+1. `README.md`
+2. `safety/README.md`
+3. `agents/README.md`
+4. `context-engineering/README.md`
+5. `prompts/README.md`
+6. `tools/README.md`
+7. `templates/README.md`
+
+## Safety and human review rules
+
+- Repository evidence is authoritative.
+- Do not invent commands, model capabilities or provider behavior.
+- Preserve file names, commands, API names and model names.
+- Mark assumptions and unknowns.
+- Escalate security, permissions and production-readiness risks to human review.
+
+## Localization notes
+
+- File names, folder names, commands, APIs and model names stay unchanged.
+- Localized prose may be translated naturally.
+- English wins when localized content conflicts with English.
+
+## Quality checklist
+
+- [ ] Purpose is clear.
+- [ ] Folder overview is complete.
+- [ ] All standard subfolders are listed.
+- [ ] Safety boundaries are visible.
+- [ ] No unsupported model/tool claims are added.
+- [ ] English remains authoritative.

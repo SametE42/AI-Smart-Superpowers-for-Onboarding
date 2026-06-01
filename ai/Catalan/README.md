@@ -7,28 +7,66 @@
 > Fitxer font: ai/English/README.md
 > Si hi ha diferències, el fitxer en anglès té prioritat.
 
-Aquesta pàgina explica com `README.md` encaixa dins de l'AI Agent Operating Manual. Està escrita per a persones i agents d'IA que han de planificar, verificar o repetir feina de repositori.
+## Purpose of this language folder
 
-## Abast pràctic
+Aquesta pàgina explica com `README.md` encaixa dins de l'AI Agent Operating Manual. Està escrita per a persones i agents d'IA que han de planificar, verificar o repetir feina de repositori. This language folder contains the localized AI Agent Operating Manual and mirrors the English folder structure for onboarding, review, prompts, safety, tools, models and templates.
 
-Fes servir aquesta pàgina com a guia operativa per al tema `README.md`. No substitueix l'evidència del repositori ni les instruccions específiques del projecte.
+## English source of truth
 
-## Directrius de treball
+Si hi ha diferències, el fitxer en anglès té prioritat. The English source [`ai/English/README.md`](../English/README.md) remains authoritative, and localized files mirror the English structure.
 
-- Tracta l'evidència del repositori com l'autoritat principal.
-- Conserva exactament noms de fitxer, ordres, noms d'API i noms de models.
-- Marca conclusions no verificades amb `[ASSUMPTION: ...]` i fets desconeguts amb `[UNKNOWN]`.
-- Vincula cada comportament específic d'eina amb l'eina o runtime que realment el controla.
-- Escala riscos de seguretat, permisos i production-readiness a revisió humana.
+## How to use this folder
 
-## Focus
+Fes servir aquesta pàgina com a guia operativa per al tema `language folder`. No substitueix l'evidència del repositori ni les instruccions específiques del projecte. Use this folder to load the language-specific entrypoint before reading safety guidance, agent patterns, context engineering notes, prompt templates, tool guidance and reusable templates.
 
-Abans d'usar aquesta pàgina en un workflow, defineix abast, evidència necessària, ordres verificables i límits d'aprovació humana.
+## Folder overview
 
-## Control de qualitat
+| Folder | Purpose |
+|---|---|
+| `agents/` | Agent patterns and operating models. |
+| `commands/` | Command usage and CLI workflows. |
+| `context-engineering/` | Context loading, pruning, retrieval and handoff. |
+| `evals/` | Evaluation, benchmark and regression testing guidance. |
+| `examples/` | Practical workflow examples. |
+| `memory/` | Memory models, schemas and safety rules. |
+| `models/` | Model-family specific notes. |
+| `optimization/` | Prompt, workflow and skill optimization. |
+| `prompts/` | Prompt templates and review prompts. |
+| `providers/` | Provider-specific documentation. |
+| `safety/` | Safety, privacy, approval and prompt-injection rules. |
+| `skills/` | Skill design, lifecycle and transfer guidance. |
+| `templates/` | Reusable templates. |
+| `tools/` | Tool-specific guidance. |
 
-- El propòsit és clar per a una nova persona col·laboradora.
-- La guia ajuda tant agents d'IA com mantenidors humans.
-- No s'inventen ordres específiques de models.
-- Els límits de seguretat i aprovació humana continuen visibles.
-- La font anglesa continua sent decisiva en conflictes de localització.
+## Recommended reading order
+
+1. `README.md`
+2. `safety/README.md`
+3. `agents/README.md`
+4. `context-engineering/README.md`
+5. `prompts/README.md`
+6. `tools/README.md`
+7. `templates/README.md`
+
+## Safety and human review rules
+
+- Repository evidence is authoritative.
+- Do not invent commands, model capabilities or provider behavior.
+- Preserve file names, commands, API names and model names.
+- Mark assumptions and unknowns.
+- Escalate security, permissions and production-readiness risks to human review.
+
+## Localization notes
+
+- File names, folder names, commands, APIs and model names stay unchanged.
+- Localized prose may be translated naturally.
+- English wins when localized content conflicts with English.
+
+## Quality checklist
+
+- [ ] Purpose is clear.
+- [ ] Folder overview is complete.
+- [ ] All standard subfolders are listed.
+- [ ] Safety boundaries are visible.
+- [ ] No unsupported model/tool claims are added.
+- [ ] English remains authoritative.

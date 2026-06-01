@@ -7,28 +7,66 @@
 > Lähdetiedosto: ai/English/README.md
 > Ristiriitatilanteissa englanninkielinen tiedosto on ratkaiseva.
 
-Tämä sivu selittää, miten `README.md` liittyy AI Agent Operating Manual -kokonaisuuteen. Se on tarkoitettu ihmisille ja AI-agenteille, joiden täytyy suunnitella, tarkistaa tai toistaa repository-työtä.
+## Purpose of this language folder
 
-## Käytännön laajuus
+Tämä sivu selittää, miten `README.md` liittyy AI Agent Operating Manual -kokonaisuuteen. Se on tarkoitettu ihmisille ja AI-agenteille, joiden täytyy suunnitella, tarkistaa tai toistaa repository-työtä. This language folder contains the localized AI Agent Operating Manual and mirrors the English folder structure for onboarding, review, prompts, safety, tools, models and templates.
 
-Käytä tätä sivua operatiivisena ohjeena aiheelle `README.md`. Se ei korvaa repositoryn näyttöä tai projektikohtaisia ohjeita.
+## English source of truth
 
-## Työohjeet
+Ristiriitatilanteissa englanninkielinen tiedosto on ratkaiseva. The English source [`ai/English/README.md`](../English/README.md) remains authoritative, and localized files mirror the English structure.
 
-- Käsittele repositoryn näyttöä ensisijaisena auktoriteettina.
-- Säilytä tiedostonimet, komennot, API-nimet ja mallien nimet täsmälleen.
-- Merkitse varmistamattomat johtopäätökset `[ASSUMPTION: ...]` ja tuntemattomat faktat `[UNKNOWN]`.
-- Yhdistä työkalukohtainen toiminta siihen työkaluun tai runtimeen, joka sen todella omistaa.
-- Eskaloi turvallisuus-, oikeus- ja tuotantovalmiusriskit ihmisen tarkistukseen.
+## How to use this folder
 
-## Fokus
+Käytä tätä sivua operatiivisena ohjeena aiheelle `language folder`. Se ei korvaa repositoryn näyttöä tai projektikohtaisia ohjeita. Use this folder to load the language-specific entrypoint before reading safety guidance, agent patterns, context engineering notes, prompt templates, tool guidance and reusable templates.
 
-Määritä laajuus, tarvittava näyttö, todennettavat komennot ja ihmisen hyväksynnän rajat ennen sivun käyttöä workflowssa.
+## Folder overview
 
-## Laatutarkistus
+| Folder | Purpose |
+|---|---|
+| `agents/` | Agent patterns and operating models. |
+| `commands/` | Command usage and CLI workflows. |
+| `context-engineering/` | Context loading, pruning, retrieval and handoff. |
+| `evals/` | Evaluation, benchmark and regression testing guidance. |
+| `examples/` | Practical workflow examples. |
+| `memory/` | Memory models, schemas and safety rules. |
+| `models/` | Model-family specific notes. |
+| `optimization/` | Prompt, workflow and skill optimization. |
+| `prompts/` | Prompt templates and review prompts. |
+| `providers/` | Provider-specific documentation. |
+| `safety/` | Safety, privacy, approval and prompt-injection rules. |
+| `skills/` | Skill design, lifecycle and transfer guidance. |
+| `templates/` | Reusable templates. |
+| `tools/` | Tool-specific guidance. |
 
-- Tarkoitus on selvä uudelle osallistujalle.
-- Ohje auttaa sekä AI-agentteja että ihmisiä-maintainereita.
-- Mallikohtaisia komentoja ei keksitä.
-- Turvallisuuden ja ihmisen hyväksynnän rajat pysyvät näkyvissä.
-- Englanninkielinen lähde ratkaisee lokalisointiristiriidat.
+## Recommended reading order
+
+1. `README.md`
+2. `safety/README.md`
+3. `agents/README.md`
+4. `context-engineering/README.md`
+5. `prompts/README.md`
+6. `tools/README.md`
+7. `templates/README.md`
+
+## Safety and human review rules
+
+- Repository evidence is authoritative.
+- Do not invent commands, model capabilities or provider behavior.
+- Preserve file names, commands, API names and model names.
+- Mark assumptions and unknowns.
+- Escalate security, permissions and production-readiness risks to human review.
+
+## Localization notes
+
+- File names, folder names, commands, APIs and model names stay unchanged.
+- Localized prose may be translated naturally.
+- English wins when localized content conflicts with English.
+
+## Quality checklist
+
+- [ ] Purpose is clear.
+- [ ] Folder overview is complete.
+- [ ] All standard subfolders are listed.
+- [ ] Safety boundaries are visible.
+- [ ] No unsupported model/tool claims are added.
+- [ ] English remains authoritative.

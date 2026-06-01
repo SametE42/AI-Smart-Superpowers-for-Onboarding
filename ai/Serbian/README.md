@@ -7,28 +7,66 @@
 > Izvorna datoteka: ai/English/README.md
 > Ako postoje odstupanja, engleska datoteka ima prednost.
 
-Ova stranica objašnjava kako se `README.md` uklapa u AI Agent Operating Manual. Namenjena je ljudima i AI agentima koji treba da planiraju, provere ili ponove rad u repositoryju.
+## Purpose of this language folder
 
-## Praktični opseg
+Ova stranica objašnjava kako se `README.md` uklapa u AI Agent Operating Manual. Namenjena je ljudima i AI agentima koji treba da planiraju, provere ili ponove rad u repositoryju. This language folder contains the localized AI Agent Operating Manual and mirrors the English folder structure for onboarding, review, prompts, safety, tools, models and templates.
 
-Koristi ovu stranicu kao operativni vodič za temu `README.md`. Ne zamenjuje dokaze iz repositoryja niti projektne instrukcije.
+## English source of truth
 
-## Radne smernice
+Ako postoje odstupanja, engleska datoteka ima prednost. The English source [`ai/English/README.md`](../English/README.md) remains authoritative, and localized files mirror the English structure.
 
-- Tretiraj dokaze iz repositoryja kao primarni autoritet.
-- Zadrži tačno nazive datoteka, komande, API nazive i nazive modela.
-- Neproverene zaključke označi sa `[ASSUMPTION: ...]`, a nepoznate činjenice sa `[UNKNOWN]`.
-- Poveži ponašanje specifično za alat sa alatom ili runtimeom koji ga zaista poseduje.
-- Rizike bezbednosti, dozvola i production-readiness eskaliraj na ljudski pregled.
+## How to use this folder
 
-## Fokus
+Koristi ovu stranicu kao operativni vodič za temu `language folder`. Ne zamenjuje dokaze iz repositoryja niti projektne instrukcije. Use this folder to load the language-specific entrypoint before reading safety guidance, agent patterns, context engineering notes, prompt templates, tool guidance and reusable templates.
 
-Pre korišćenja ove stranice u workflowu definiši opseg, potrebne dokaze, proverljive komande i granice ljudskog odobrenja.
+## Folder overview
 
-## Provera kvaliteta
+| Folder | Purpose |
+|---|---|
+| `agents/` | Agent patterns and operating models. |
+| `commands/` | Command usage and CLI workflows. |
+| `context-engineering/` | Context loading, pruning, retrieval and handoff. |
+| `evals/` | Evaluation, benchmark and regression testing guidance. |
+| `examples/` | Practical workflow examples. |
+| `memory/` | Memory models, schemas and safety rules. |
+| `models/` | Model-family specific notes. |
+| `optimization/` | Prompt, workflow and skill optimization. |
+| `prompts/` | Prompt templates and review prompts. |
+| `providers/` | Provider-specific documentation. |
+| `safety/` | Safety, privacy, approval and prompt-injection rules. |
+| `skills/` | Skill design, lifecycle and transfer guidance. |
+| `templates/` | Reusable templates. |
+| `tools/` | Tool-specific guidance. |
 
-- Svrha je jasna novom saradniku.
-- Smernice pomažu i AI agentima i ljudskim održavaocima.
-- Ne izmišljaju se komande specifične za modele.
-- Granice bezbednosti i ljudskog odobrenja ostaju vidljive.
-- Engleski izvor ostaje odlučujući kod konflikata lokalizacije.
+## Recommended reading order
+
+1. `README.md`
+2. `safety/README.md`
+3. `agents/README.md`
+4. `context-engineering/README.md`
+5. `prompts/README.md`
+6. `tools/README.md`
+7. `templates/README.md`
+
+## Safety and human review rules
+
+- Repository evidence is authoritative.
+- Do not invent commands, model capabilities or provider behavior.
+- Preserve file names, commands, API names and model names.
+- Mark assumptions and unknowns.
+- Escalate security, permissions and production-readiness risks to human review.
+
+## Localization notes
+
+- File names, folder names, commands, APIs and model names stay unchanged.
+- Localized prose may be translated naturally.
+- English wins when localized content conflicts with English.
+
+## Quality checklist
+
+- [ ] Purpose is clear.
+- [ ] Folder overview is complete.
+- [ ] All standard subfolders are listed.
+- [ ] Safety boundaries are visible.
+- [ ] No unsupported model/tool claims are added.
+- [ ] English remains authoritative.
