@@ -1,11 +1,11 @@
 # PROJECT_STATE
-Version: 13
-Zuletzt aktualisiert: 2026-06-01T14:09:30Z
+Version: 14
+Zuletzt aktualisiert: 2026-06-01T14:12:53Z
 
 ## Status
 - Ziel: Das Projekt nach Lücken, Fehlern und fehlender Dokumentation untersuchen, die Projektdokumentation abschließen und alle lokalisierten AI-Manual-Seiten ohne Human-Review-Blocker als KI-übersetzt ausweisen.
 - Phase: ERLEDIGT UND VERÖFFENTLICHT
-- Fortschritt: PROJECT_STATE.md wurde initialisiert; AGENTS.md und README.md verweisen auf PROJECT_STATE.md; alle 19.491 Dokumentationsdateien wurden automatisiert auditiert; stale Release-/Contributor-/i18n-Dokumentation wurde aktualisiert; GitHub-Readiness und Erweiterungsgrenzen wurden ergänzt; 19.166 Nicht-Englisch-Mirror-Dateien wurden mit `<!-- translation-status: ai-translated; ai-quality-pass -->` regeneriert; Legacy-Review-Marker werden vom Validator als Fehler erkannt; ai/VALIDATION_REPORT.json und ai/VALIDATION_REPORT.md wurden neu generiert; Abschlussaudit 2026-06-01 fand keine Link-, Marker-, Secret-, H1-, Mirror- oder Empty-File-Blocker; öffentliche Autor-Metadaten verwenden jetzt nur noch `SametE42`; Abschlussstand wurde committed; GitHub-Repository `https://github.com/SametE42/Ai-Repo-Onboarding` wurde öffentlich angelegt; `main` wurde nach `origin/main` gepusht; GitHub Actions `Validate repository` läuft erfolgreich.
+- Fortschritt: PROJECT_STATE.md wurde initialisiert; AGENTS.md und README.md verweisen auf PROJECT_STATE.md; alle 19.491 Dokumentationsdateien wurden automatisiert auditiert; stale Release-/Contributor-/i18n-Dokumentation wurde aktualisiert; GitHub-Readiness und Erweiterungsgrenzen wurden ergänzt; 19.166 Nicht-Englisch-Mirror-Dateien wurden mit `<!-- translation-status: ai-translated; ai-quality-pass -->` regeneriert; Legacy-Review-Marker werden vom Validator als Fehler erkannt; ai/VALIDATION_REPORT.json und ai/VALIDATION_REPORT.md wurden neu generiert; Abschlussaudit 2026-06-01 fand keine Link-, Marker-, Secret-, H1-, Mirror- oder Empty-File-Blocker; öffentliche Autor-Metadaten verwenden jetzt nur noch `SametE42`; Abschlussstand wurde committed; GitHub-Repository `https://github.com/SametE42/Ai-Repo-Onboarding` wurde öffentlich angelegt; `main` wurde nach `origin/main` gepusht; GitHub Actions `Validate repository` läuft erfolgreich; Workflow-Actions wurden auf aktuelle v6-Major-Versionen aktualisiert, um Node.js-20-Deprecation-Warnungen zu vermeiden.
 - Nächster Schritt: Keine verpflichtende repo-interne Abschlussarbeit offen. Optional bleiben GitHub-Repository-Einstellungen wie Branch Protection, Topics, Release-Tag oder spätere Sprachqualitätsaudit-Wellen.
 
 ## Verständnis
@@ -55,6 +55,7 @@ Zuletzt aktualisiert: 2026-06-01T14:09:30Z
 - geprüft: [VOLLSTÄNDIG | Quelle: git push -u origin main 2026-06-01] Branch `main` wurde nach `origin/main` gepusht und trackt den Remote-Branch.
 - geprüft: [VOLLSTÄNDIG | Quelle: git rev-parse HEAD; git rev-parse origin/main 2026-06-01] Lokaler HEAD und `origin/main` zeigen nach dem ersten Veröffentlichungspush beide auf `18182a4754be9bd38f7bdd7e531f967fa251837d`.
 - geprüft: [VOLLSTÄNDIG | Quelle: gh run list 2026-06-01] GitHub Workflow `Validate repository` ist für die beobachteten Veröffentlichungspushes erfolgreich abgeschlossen.
+- geprüft: [VOLLSTÄNDIG | Quelle: gh release view actions/checkout und actions/setup-python 2026-06-01] Aktuelle offizielle Major-Versionen sind `actions/checkout@v6` und `actions/setup-python@v6`; Workflow wurde entsprechend aktualisiert.
 
 ## Entscheidungen
 - PROJECT_STATE.md im Repository-Root anlegen -> Nutzer fordert PROJECT_STATE.md als zentrale Informationsquelle für dieses Projekt | Quelle: Nutzerauftrag 2026-05-31
@@ -67,6 +68,7 @@ Zuletzt aktualisiert: 2026-06-01T14:09:30Z
 - GitHub-ready bedeutet commit-ready plus committed -> Lokale Dateien und Workflows existieren, sind aber erst nach Staging/Commit/Push für GitHub wirksam | Quelle: git status --short
 - Öffentliche Autor-Metadaten verwenden nur noch `SametE42` -> LICENSE und CITATION.cff sollen keine private Personenname-Schreibweise mehr enthalten | Quelle: Nutzerauftrag 2026-06-01
 - Öffentliches GitHub-Repository anlegen und `main` pushen -> Der Nutzer fordert Projektvollendung; die letzte operative Lücke war Veröffentlichung des validierten Abschlussstands | Quelle: Nutzerauftrag 2026-06-01, PROJECT_STATE.md v11
+- GitHub Actions auf aktuelle Major-Versionen anheben -> CI meldete Node.js-20-Deprecation-Warnungen für alte Action-Majors; Abschlussstand soll ohne bekannte baldige CI-Warnung veröffentlicht werden | Quelle: gh run watch 2026-06-01, gh release view
 
 ## Unsicherheiten
 - [UNSICHER] Absolute semantische 100%-Gleichheit aller 19.166 lokalisierten Dateien -> Auswirkung: Struktur, Marker, Links und KI-Qualitätsgate sind grün; eine mathematische Semantikgarantie ist automatisch nicht beweisbar.
@@ -98,6 +100,7 @@ Zuletzt aktualisiert: 2026-06-01T14:09:30Z
 - [P9] [ERLEDIGT] Abschlussaudit 2026-06-01 auf Lücken, Widersprüche, stale Hinweise, Namensreste und sprachliche Kleinigkeiten durchführen | Abhängigkeiten: README.md, docs/, .github/, scripts/, tests/, ai/
 - [P10] [ERLEDIGT] Öffentliche Autor-Metadaten auf `SametE42` umstellen | Abhängigkeiten: LICENSE, CITATION.cff, CHANGELOG.md
 - [P11] [ERLEDIGT] Validierten Abschlussstand stagen, committen, GitHub-Repository anlegen und `main` pushen | Abhängigkeiten: git, gh, origin
+- [P12] [ERLEDIGT] GitHub-Workflow auf aktuelle Action-Majors aktualisieren und Deprecation-Warnung beseitigen | Abhängigkeiten: .github/workflows/validate.yml, GitHub Actions
 
 ## Nächster Schritt
 - Keine verpflichtende repo-interne Abschlussarbeit offen. Optional danach GitHub-Repository-Einstellungen härten, Release-Tag erstellen oder Sprachqualitätsaudit-Wellen für besonders wichtige Sprachen planen.
@@ -116,6 +119,7 @@ Zuletzt aktualisiert: 2026-06-01T14:09:30Z
 - AI-Übersetzungsstatus umgesetzt | warum: Nutzer möchte lokalisierten Content ohne Human-Review-Blocker als KI-basiert fertigstellen | wann: 2026-05-31T22:14:38Z
 - Abschlussaudit und Namensmetadaten bereinigt | warum: Nutzer fordert umfassende Lücken-/Fehlerprüfung und Umstellung öffentlicher Namensnennung auf Handle | wann: 2026-06-01T13:51:55Z
 - Abschlussstand veröffentlicht | warum: Nutzer fordert Projektvollendung und PROJECT_STATE.md v11 nannte Staging/Commit/Push als letzte operative Aufgabe | wann: 2026-06-01T14:05:34Z
+- GitHub Actions Deprecation-Warnung adressiert | warum: finaler CI-Lauf warnte vor Node.js-20-basierten alten Action-Majors | wann: 2026-06-01T14:12:53Z
 
 ## DECISIONS
 
@@ -174,6 +178,14 @@ Zuletzt aktualisiert: 2026-06-01T14:09:30Z
 - Begruendung: Das Projekt ist erst dann wirklich abgeschlossen, wenn die validierten Dateien nicht nur lokal existieren, sondern auch im Ziel-Repository verfügbar sind.
 - Alternativen: Nur lokal committen; verworfen, weil PROJECT_STATE.md v11 Push als nächsten Schritt nannte. Separaten PR-Branch erstellen; verworfen, weil das Ziel-Repository neu angelegt wurde und `main` der initiale Veröffentlichungsbranch ist.
 - Auswirkungen: GitHub Actions Workflow wurde ausgelöst; optionale Folgearbeit betrifft nur Repository-Einstellungen, Release-Tags oder zusätzliche Qualitätsaudits.
+
+### 2026-06-01T14:12:53Z - GitHub Actions nutzt aktuelle Action-Majors
+
+- Kontext: Der finale GitHub-Actions-Lauf war erfolgreich, meldete aber eine Node.js-20-Deprecation-Warnung für ältere Action-Majors.
+- Entscheidung: `actions/checkout` und `actions/setup-python` werden im Validierungsworkflow auf `v6` angehoben.
+- Begruendung: Das reduziert ein absehbares CI-Wartungsrisiko und hält die veröffentlichte Abschlussprüfung aktueller.
+- Alternativen: Warnung ignorieren; verworfen, weil sie kurz nach Veröffentlichung wieder Wartungsarbeit erzeugen würde.
+- Auswirkungen: Der nächste Push verifiziert den aktualisierten Workflow.
 
 ## HANDOVER
 
@@ -273,6 +285,15 @@ Zuletzt aktualisiert: 2026-06-01T14:09:30Z
 - offene Aufgaben: Keine verpflichtende repo-interne Abschlussarbeit offen.
 - Entscheidungen: Initialer Abschluss wurde direkt auf `main` veröffentlicht, weil das GitHub-Repository neu angelegt wurde.
 - Probleme: Keine aktuellen Abschlussblocker; GitHub Actions `Validate repository` ist für die beobachteten Veröffentlichungspushes erfolgreich abgeschlossen.
+- Unsicherheiten: Absolute semantische 100%-Gleichheit aller 19.166 lokalisierten Dateien bleibt automatisch nicht beweisbar.
+- nächster Schritt: Optional Branch Protection, Release-Tag, Topics/Repository-Metadaten oder priorisierte Sprachqualitätsaudits.
+
+### Handover 2026-06-01T14:12:53Z
+
+- aktueller Stand: GitHub-Actions-Deprecation-Warnung wurde adressiert; Validierungsworkflow nutzt `actions/checkout@v6` und `actions/setup-python@v6`.
+- offene Aufgaben: Keine verpflichtende repo-interne Abschlussarbeit offen.
+- Entscheidungen: Workflow-Major-Versionen werden aktualisiert, weil offizielle Releases verfügbar sind und der bisherige CI-Lauf eine Node.js-20-Warnung gemeldet hat.
+- Probleme: Keine aktuellen Abschlussblocker.
 - Unsicherheiten: Absolute semantische 100%-Gleichheit aller 19.166 lokalisierten Dateien bleibt automatisch nicht beweisbar.
 - nächster Schritt: Optional Branch Protection, Release-Tag, Topics/Repository-Metadaten oder priorisierte Sprachqualitätsaudits.
 
