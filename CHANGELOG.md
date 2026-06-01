@@ -24,6 +24,7 @@ This project follows semantic versioning where practical.
 - Updated publication, contribution, pull request, workflow and i18n documentation to reflect the current validation and reporting workflow.
 - Clarified GitHub commit-readiness checks, optional extension paths and AI translation coverage.
 - Replaced personal author-name metadata with the public repository handle.
+- Published the validated initial repository to GitHub.
 
 ## [0.1.0] - 2026-05-28
 
