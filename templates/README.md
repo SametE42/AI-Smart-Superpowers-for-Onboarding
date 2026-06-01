@@ -54,7 +54,8 @@ Optional templates are available in:
 templates/optional/
 ```
 
-Use them only when the project needs that level of operational detail.
+Use them only when the project needs that level of operational, testing, prompt-refinement or governance detail.
+Use `optional/MAGICAL_PROMPT_IMPROVER.md` when a broad or ambiguous user request must be converted into safe, scoped and verifiable instructions before execution.
 
 ## Skills and subagents
 

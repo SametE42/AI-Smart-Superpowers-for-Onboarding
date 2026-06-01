@@ -31,6 +31,7 @@ Affected files:
 - [ ] README updated if public usage changed.
 - [ ] CHANGELOG updated if release-relevant.
 - [ ] Templates remain reusable.
+- [ ] New optional templates are listed in `templates/optional/README.md`.
 - [ ] Repository-specific progress, session, handover or completion notes are not committed.
 - [ ] `python -m unittest discover -s tests` passed.
 - [ ] `python scripts/validate_repository.py --root .` passed.

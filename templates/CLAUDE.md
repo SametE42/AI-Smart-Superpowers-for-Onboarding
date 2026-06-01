@@ -18,6 +18,7 @@ Start with:
 ## Working rules
 
 - Explore before editing.
+- Apply the prompt-intake rule in `docs/ai/MASTER_SYSTEM.md` before acting on ambiguous or high-impact prompts.
 - Plan before code changes.
 - Do not invent missing business or security rules.
 - Use existing project conventions.

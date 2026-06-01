@@ -4,8 +4,8 @@ Status: **PASS**
 
 ## Summary
 
-- total_files: 19503
-- markdown_files: 19490
+- total_files: 19504
+- markdown_files: 19491
 - language_folders: 75
 - languages_alphabetically_sorted: True
 - english_source_markdown_files: 259
@@ -17,6 +17,7 @@ Status: **PASS**
 - legacy_ai_links: 0
 - secret_pattern_hits: 0
 - old_repository_reference_hits: 0
+- optional_template_files_missing_readme_entries: 0
 - english_source_scaffold_files: 0
 - ai_translated_files: 19166
 - missing_ai_translation_marker_files: 0
@@ -37,6 +38,7 @@ Status: **PASS**
 - legacy_links: 0
 - secret_pattern_hits: 0
 - old_repository_reference_hits: 0
+- optional_template_files_missing_readme_entries: 0
 - english_source_scaffold_files_sample: 0
 - ai_translated_files_sample: 200
 - missing_ai_translation_marker_files_sample: 0

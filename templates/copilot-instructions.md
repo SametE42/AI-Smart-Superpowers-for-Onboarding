@@ -25,6 +25,7 @@ Use these documents as the primary source of truth:
 ## Rules
 
 - Follow existing code style and architecture.
+- Apply the prompt-intake rule in `docs/ai/MASTER_SYSTEM.md` for ambiguous or high-impact suggestions.
 - Do not invent business logic.
 - Do not add dependencies without review.
 - Do not expose secrets or private data.

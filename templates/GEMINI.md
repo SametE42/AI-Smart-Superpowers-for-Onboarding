@@ -14,6 +14,7 @@ Recommended read order:
 
 Rules:
 
+- Apply the prompt-intake rule in `docs/ai/MASTER_SYSTEM.md` before acting on ambiguous or high-impact prompts.
 - Keep changes scoped.
 - Do not invent missing rules.
 - Do not expose secrets.

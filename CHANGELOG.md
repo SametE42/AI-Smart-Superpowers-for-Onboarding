@@ -12,6 +12,9 @@ This project follows semantic versioning where practical.
 - Local unit tests for validation behavior.
 - Reproducible AI manual scaffold refresh script for English source pages and AI-translated localized batches.
 - Blocking validator coverage and tests for old public repository references.
+- Optional `MAGICAL_PROMPT_IMPROVER.md` template for safe, verifiable prompt refinement.
+- Prompt-intake activation guidance across target-repository system and tool entrypoint templates.
+- Blocking validator coverage and tests for unlisted optional template files.
 
 ### Changed
 

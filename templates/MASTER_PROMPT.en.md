@@ -95,6 +95,8 @@ Ask at most 3 targeted questions if the following information is missing:
 
 If the user does not answer or writes "continue", use defaults and document them in `CHANGELOG_AI.md`.
 
+If the user's request is broad, ambiguous or high-impact, first apply the optional `templates/optional/MAGICAL_PROMPT_IMPROVER.md` intake pattern: clarify objective, scope, risks and verification. Do not run the full improver for simple status, listing or short explanation requests.
+
 ---
 
 # INPUTS

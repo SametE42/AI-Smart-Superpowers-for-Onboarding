@@ -50,6 +50,7 @@ AI coding agents work best when they receive stable repository context, explicit
 |---|---|
 | **Master prompt** | A structured interview, repository pre-check, analysis flow and output contract. |
 | **`docs/ai/` templates** | Ten target-repository documents for architecture, memory, style, review, security and onboarding. |
+| **Magical Prompt Improver** | An optional prompt-refinement protocol for turning unclear requests into safe, verifiable instructions. |
 | **Tool entrypoint guidance** | Short references for agent files such as `AGENTS.md`, `CLAUDE.md`, `GEMINI.md` and Copilot instructions. |
 | **Multilingual AI manual** | A mirrored AI-agent operating manual under `ai/<Language>/`. |
 | **Validation tooling** | Unit tests and a repository validator for Markdown, links, language mirrors, secrets and translation markers. |
@@ -163,6 +164,7 @@ The multilingual manual is organized under `ai/`. English is authoritative. Non-
 | Primary onboarding prompt | [`templates/MASTER_PROMPT.en.md`](templates/MASTER_PROMPT.en.md) |
 | German workflow prompt | [`templates/MASTER_PROMPT.md`](templates/MASTER_PROMPT.md) |
 | Target-repository document templates | [`templates/docs-ai/`](templates/docs-ai/) |
+| Optional prompt-refinement template | [`templates/optional/MAGICAL_PROMPT_IMPROVER.md`](templates/optional/MAGICAL_PROMPT_IMPROVER.md) |
 | Public project overview | [`README.md`](README.md) |
 | AI manual source language | [`ai/English/`](ai/English/) |
 | Language index | [`ai/LANGUAGE_INDEX.md`](ai/LANGUAGE_INDEX.md) |
@@ -205,7 +207,7 @@ Generate validation reports:
 python scripts/validate_repository.py --root . --json ai/VALIDATION_REPORT.json --markdown ai/VALIDATION_REPORT.md
 ```
 
-The validator checks local Markdown file targets, H1 headings, empty files, directory README coverage, mirrored AI language files, language sorting, legacy AI links, old public repository references, common secret patterns, translation status markers and language README completeness. It does not currently validate external URLs or heading anchors.
+The validator checks local Markdown file targets, H1 headings, empty files, directory README coverage, mirrored AI language files, language sorting, legacy AI links, old public repository references, optional template README coverage, common secret patterns, translation status markers and language README completeness. It does not currently validate external URLs or heading anchors.
 
 ## Examples
 

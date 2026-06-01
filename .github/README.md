@@ -72,7 +72,7 @@ python scripts/validate_repository.py --root . --json ai/VALIDATION_REPORT.json 
 git diff --exit-code ai/VALIDATION_REPORT.json ai/VALIDATION_REPORT.md
 ```
 
-The validator checks Markdown structure, local file links, mirrored AI language files, README coverage, language README completeness, old public repository references, empty files, common secret patterns and AI translation status markers. It does not currently validate external URLs or heading anchors.
+The validator checks Markdown structure, local file links, mirrored AI language files, README coverage, language README completeness, optional template README coverage, old public repository references, empty files, common secret patterns and AI translation status markers. It does not currently validate external URLs or heading anchors.
 
 ## Maintenance Rules
 

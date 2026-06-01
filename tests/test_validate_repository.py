@@ -263,6 +263,24 @@ File names, folder names, commands, APIs and model names stay unchanged. English
             self.assertEqual(json.loads(json_report.read_text(encoding="utf-8"))["status"], "PASS")
             self.assertIn("- old_repository_reference_hits: 0", markdown_report.read_text(encoding="utf-8"))
 
+    def test_optional_template_missing_readme_entry_fails(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.write(root, "README.md", "# Root\n")
+            self.write(
+                root,
+                "templates/optional/README.md",
+                "# Optional Templates\n\n| Template | Use when |\n|---|---|\n| `LISTED.md` | Listed template. |\n",
+            )
+            self.write(root, "templates/optional/LISTED.md", "# Listed\n")
+            self.write(root, "templates/optional/UNLISTED.md", "# Unlisted\n")
+
+            report = validate_repository(root)
+
+            self.assertEqual(report.status, "FAIL")
+            self.assertEqual(report.summary["optional_template_files_missing_readme_entries"], 1)
+            self.assertEqual(report.details["optional_template_files_missing_readme_entries"], ["templates/optional/UNLISTED.md"])
+
     def test_separates_source_scaffolds_from_ai_translations(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -316,6 +334,27 @@ File names, folder names, commands, APIs and model names stay unchanged. English
             self.assertEqual(report.summary["unreviewed_translation_files"], 3)
             self.assertEqual(report.summary["translation_mirror_placeholder_files"], 1)
             self.assertEqual(report.summary["missing_ai_translation_marker_files"], 3)
+
+
+class TemplateDocumentationTests(unittest.TestCase):
+    def test_magical_prompt_improver_has_activation_structure(self) -> None:
+        root = Path(__file__).resolve().parents[1]
+        text = (root / "templates/optional/MAGICAL_PROMPT_IMPROVER.md").read_text(encoding="utf-8")
+
+        for section in (
+            "## Activation Rules",
+            "## Activation Modes",
+            "## Decision Tree",
+            "## Example",
+        ):
+            self.assertIn(section, text)
+        for mode in (
+            "Intake Mode",
+            "Full Rewrite Mode",
+            "Verification Mode",
+            "Commit/Push Readiness Mode",
+        ):
+            self.assertIn(mode, text)
 
 
 if __name__ == "__main__":

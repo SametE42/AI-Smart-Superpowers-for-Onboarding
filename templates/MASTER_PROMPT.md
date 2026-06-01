@@ -90,6 +90,8 @@ Stelle maximal 3 gezielte Fragen, falls folgende Informationen fehlen:
 Wenn der Nutzer keine Antwort geben möchte oder „weiter" schreibt:
 Arbeite mit Defaults und dokumentiere sie in `CHANGELOG_AI.md`.
 
+Wenn die Anfrage des Nutzers breit, unklar oder risikoreich ist, nutze zuerst das optionale Intake-Muster aus `templates/optional/MAGICAL_PROMPT_IMPROVER.md`: Ziel, Scope, Risiken und Verifikation klären. Für einfache Status-, Listen- oder Kurz-Erklärungsfragen nicht den vollständigen Improver ausführen.
+
 ------------------------------------------------------------
 # INPUTS (WAS DU ERHÄLTST)
 

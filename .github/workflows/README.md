@@ -9,4 +9,4 @@ This directory contains GitHub Actions workflows for repository validation.
 - `validate.yml` regenerates `ai/VALIDATION_REPORT.md` and `ai/VALIDATION_REPORT.json`.
 - `validate.yml` fails if regenerated validation reports differ from committed reports.
 
-The validator blocks broken local Markdown links, missing mirrored AI files, incomplete language README files, old public repository references, common secret patterns and missing translation markers. Generated validation reports are maintained in `ai/VALIDATION_REPORT.md` and `ai/VALIDATION_REPORT.json`; regenerate them locally when validation output changes.
+The validator blocks broken local Markdown links, missing mirrored AI files, incomplete language README files, unlisted optional templates, old public repository references, common secret patterns and missing translation markers. Generated validation reports are maintained in `ai/VALIDATION_REPORT.md` and `ai/VALIDATION_REPORT.json`; regenerate them locally when validation output changes.

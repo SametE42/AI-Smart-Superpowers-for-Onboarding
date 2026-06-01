@@ -14,6 +14,7 @@ It defines:
 
 - project status,
 - work order,
+- prompt-intake rules,
 - engineering principles,
 - change rules,
 - review expectations,
@@ -45,6 +46,18 @@ Document current blockers:
 - `[UNKNOWN]`
 
 Do not claim production readiness while blockers remain open.
+
+## Prompt intake rule
+
+Before acting on a user request, run a short intake check:
+
+1. Determine whether the request is clear, low-risk and directly executable.
+2. If it is clear and low-risk, proceed with the normal work order.
+3. If it is ambiguous, broad, high-impact or missing success criteria, clarify the objective, scope, risks and verification first.
+4. Before file changes, define scope, out-of-scope items and expected checks.
+5. Before completion, commit, push, release or production-readiness claims, verify with concrete evidence.
+
+If the project includes the optional `MAGICAL_PROMPT_IMPROVER.md` protocol, use its Intake Mode, Full Rewrite Mode, Verification Mode or Commit/Push Readiness Mode as appropriate. Do not run the full protocol for simple status, listing or short explanation requests unless the user explicitly asks for prompt improvement.
 
 ## Required work order
 

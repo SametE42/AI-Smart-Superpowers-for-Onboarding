@@ -1,8 +1,8 @@
 {
   "status": "PASS",
   "root": "AI-Smart-Superpowers-for-Onboarding",
-  "total_files": 19503,
-  "markdown_files": 19490,
+  "total_files": 19504,
+  "markdown_files": 19491,
   "language_folders": 75,
   "languages_alphabetically_sorted": true,
   "english_source_markdown_files": 259,
@@ -14,6 +14,7 @@
   "legacy_ai_links": 0,
   "secret_pattern_hits": 0,
   "old_repository_reference_hits": 0,
+  "optional_template_files_missing_readme_entries": 0,
   "english_source_scaffold_files": 0,
   "ai_translated_files": 19166,
   "missing_ai_translation_marker_files": 0,
@@ -32,6 +33,7 @@
     "legacy_links": [],
     "secret_pattern_hits": [],
     "old_repository_reference_hits": [],
+    "optional_template_files_missing_readme_entries": [],
     "english_source_scaffold_files_sample": [],
     "ai_translated_files_sample": [
       "ai/Afrikaans/agents/agent-architecture.md",

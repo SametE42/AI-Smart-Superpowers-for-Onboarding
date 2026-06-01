@@ -14,6 +14,7 @@ docs/ai/ONBOARDING.md
 ## Core rules
 
 - Follow `/docs/ai/` as the source of truth.
+- For ambiguous or high-impact prompts, apply the prompt-intake rule in `docs/ai/MASTER_SYSTEM.md` before acting.
 - Do not invent business rules.
 - Do not expose secrets or sensitive data.
 - Do not make destructive changes without explicit human approval.

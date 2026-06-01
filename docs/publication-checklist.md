@@ -13,6 +13,7 @@ Use this before publishing or releasing the repository.
 - [ ] `templates/MASTER_PROMPT.md` is present.
 - [ ] `templates/MASTER_PROMPT.en.md` is present and treated as the primary English prompt.
 - [ ] `templates/docs-ai/` contains all 10 core document templates.
+- [ ] Every file in `templates/optional/` is listed in `templates/optional/README.md`.
 - [ ] `docs/tool-compatibility.md` is present.
 - [ ] `examples/minimal/` exists.
 - [ ] `scripts/validate_repository.py` is present.
@@ -42,6 +43,7 @@ Expected result:
 - unit tests pass,
 - validator status is `PASS`,
 - generated validation reports reflect the current file counts and findings,
+- optional template README coverage is complete,
 - old public repository reference hits are `0`.
 
 ## Translation status gate

@@ -394,6 +394,31 @@ def _find_old_repository_reference_hits(
     return hits
 
 
+def _find_optional_template_files_missing_readme_entries(root: Path, text_by_path: dict[Path, str]) -> list[str]:
+    optional_dir = root / "templates" / "optional"
+    optional_readme = optional_dir / "README.md"
+    if not optional_dir.exists():
+        return []
+
+    template_files = sorted(
+        (
+            path
+            for path in optional_dir.glob("*.md")
+            if path.name != "README.md" and path.is_file()
+        ),
+        key=lambda item: item.name.casefold(),
+    )
+    if not template_files:
+        return []
+
+    readme_text = text_by_path.get(optional_readme, "")
+    missing = []
+    for path in template_files:
+        if path.name not in readme_text:
+            missing.append(_relative(path, root))
+    return missing
+
+
 def validate_repository(root: str | Path = ".") -> ValidationReport:
     root_path = Path(root).resolve()
     files = _git_files(root_path) or _filesystem_files(root_path)
@@ -413,6 +438,7 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
     directories_without_readme = _find_directories_without_readme(files, root_path)
     secret_hits = _find_secret_patterns(files, root_path, text_by_path)
     old_repository_reference_hits = _find_old_repository_reference_hits(files, root_path, text_by_path)
+    optional_template_files_missing_readme_entries = _find_optional_template_files_missing_readme_entries(root_path, text_by_path)
     english_markdown_files = [path for path in markdown_files if _relative(path, root_path).startswith("ai/English/")]
     localized_markdown_files = _localized_language_markdown_files(root_path, markdown_files)
     language_readmes = _language_readme_files(root_path)
@@ -481,6 +507,7 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         "legacy_ai_links": len(legacy_ai_links),
         "secret_pattern_hits": len(secret_hits),
         "old_repository_reference_hits": len(old_repository_reference_hits),
+        "optional_template_files_missing_readme_entries": len(optional_template_files_missing_readme_entries),
         "english_source_scaffold_files": len(english_scaffold_files),
         "ai_translated_files": len(ai_translated_files),
         "missing_ai_translation_marker_files": len(missing_ai_translation_marker_files),
@@ -500,6 +527,7 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         "legacy_links": legacy_ai_links,
         "secret_pattern_hits": secret_hits,
         "old_repository_reference_hits": old_repository_reference_hits[:200],
+        "optional_template_files_missing_readme_entries": optional_template_files_missing_readme_entries[:200],
         "english_source_scaffold_files_sample": english_scaffold_files[:200],
         "ai_translated_files_sample": ai_translated_files[:200],
         "missing_ai_translation_marker_files_sample": missing_ai_translation_marker_files[:200],
@@ -519,6 +547,7 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         "legacy_ai_links",
         "secret_pattern_hits",
         "old_repository_reference_hits",
+        "optional_template_files_missing_readme_entries",
         "missing_ai_translation_marker_files",
         "unreviewed_translation_files",
         "incomplete_language_readmes",
