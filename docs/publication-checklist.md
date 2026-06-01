@@ -9,7 +9,7 @@ Use this before publishing or releasing the repository.
 - [ ] `CHANGELOG.md` includes the release-relevant changes.
 - [ ] `CONTRIBUTING.md` exists.
 - [ ] `SECURITY.md` exists.
-- [ ] Repository-specific progress notes are not committed.
+- [ ] Repository-specific progress, session, handover or completion notes are deleted or left untracked before commit and push.
 - [ ] `templates/MASTER_PROMPT.md` is present.
 - [ ] `templates/MASTER_PROMPT.en.md` is present and treated as the primary English prompt.
 - [ ] `templates/docs-ai/` contains all 10 core document templates.

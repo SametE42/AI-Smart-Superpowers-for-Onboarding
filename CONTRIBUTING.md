@@ -120,7 +120,7 @@ Before opening a pull request:
 - [ ] The master prompt was not expanded without strong reason.
 - [ ] README or docs were updated if the public usage changed.
 - [ ] Templates remain reusable and project-neutral.
-- [ ] Repository-specific progress notes are not committed.
+- [ ] Repository-specific progress, session, handover or completion notes are not committed.
 
 ## Verification commands
 
