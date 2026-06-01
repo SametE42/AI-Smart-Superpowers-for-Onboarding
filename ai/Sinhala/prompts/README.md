@@ -23,6 +23,19 @@
 
 workflow තුළ භාවිතයට පෙර විෂය පථය, සාක්ෂි, සත්‍යාපනය කළ හැකි commands සහ මිනිස් අනුමැතියේ සීමා නිර්වචනය කරන්න.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## ගුණාත්මක පරීක්ෂාව
 
 - අරමුණ නව contributor සඳහා පැහැදිලිය.

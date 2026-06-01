@@ -25,6 +25,19 @@ Fes servir aquesta pàgina com a guia operativa per al tema `prompts`. No substi
 
 Abans d'usar aquesta pàgina en un workflow, defineix abast, evidència necessària, ordres verificables i límits d'aprovació humana.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Control de qualitat
 
 - El propòsit és clar per a una nova persona col·laboradora.

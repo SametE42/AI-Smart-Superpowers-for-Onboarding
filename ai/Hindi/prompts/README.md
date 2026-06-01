@@ -25,6 +25,19 @@
 
 इस पृष्ठ को workflow में उपयोग करने से पहले दायरा, आवश्यक प्रमाण, सत्यापनीय commands और मानवीय स्वीकृति की सीमाएँ परिभाषित करें।
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## गुणवत्ता जाँच
 
 - उद्देश्य नए contributor के लिए स्पष्ट है।

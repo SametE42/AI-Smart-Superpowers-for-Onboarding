@@ -25,6 +25,19 @@ Gamitin ang pahinang ito bilang operational na gabay para sa paksang `prompts`. 
 
 Bago gamitin ang pahinang ito sa workflow, tukuyin ang saklaw, kinakailangang evidence, verifiable commands at hangganan ng human approval.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Quality check
 
 - Malinaw ang layunin para sa bagong contributor.

@@ -23,6 +23,19 @@
 
 workflow တွင် အသုံးမပြုမီ အတိုင်းအတာ၊ အထောက်အထား၊ စစ်ဆေးနိုင်သော commands နှင့် လူသားအတည်ပြုမှု အကန့်အသတ်များကို သတ်မှတ်ပါ။
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## အရည်အသွေးစစ်ဆေးမှု
 
 - ရည်ရွယ်ချက်သည် contributor အသစ်အတွက် ရှင်းလင်းသည်။

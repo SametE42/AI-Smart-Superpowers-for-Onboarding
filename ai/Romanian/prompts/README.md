@@ -25,6 +25,19 @@ Folosește această pagină ca ghid operațional pentru tema `prompts`. Nu înlo
 
 Înainte de a folosi această pagină într-un workflow, definește domeniul, dovezile necesare, comenzile verificabile și limitele aprobării umane.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Control calitate
 
 - Scopul este clar pentru un nou contributor.

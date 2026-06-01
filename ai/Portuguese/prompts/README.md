@@ -25,6 +25,19 @@ Use esta página como orientação operacional para o tema `prompts`. Ela não s
 
 Defina escopo, evidências necessárias, comandos verificáveis e limites de aprovação humana antes de usar esta página em um workflow.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Controle de qualidade
 
 - O propósito é claro para uma nova pessoa colaboradora.

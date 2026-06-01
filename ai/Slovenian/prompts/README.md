@@ -25,6 +25,19 @@ Uporabi to stran kot operativno vodilo za temo `prompts`. Ne nadomešča dokazov
 
 Pred uporabo te strani v workflowu opredeli obseg, potrebne dokaze, preverljive ukaze in meje človeške odobritve.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Preverjanje kakovosti
 
 - Namen je jasen novemu sodelavcu.

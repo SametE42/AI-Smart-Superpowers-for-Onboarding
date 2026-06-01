@@ -23,6 +23,19 @@ Gebruik hierdie bladsy as operasionele leiding vir `prompts`. Dit vervang nie re
 
 Definieer omvang, bewyse, verifieerbare commands en menslike goedkeuringsgrense voordat hierdie bladsy in 'n workflow gebruik word.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Kwaliteitskontrole
 
 - Die doel is duidelik vir nuwe contributors.

@@ -23,6 +23,19 @@ Vê rûpelê wek rêbernameya karî ji bo `prompts` bi kar bîne. Ew delîlên r
 
 Berî bikaranîna di workflow de, qada kar, delîl, commands yên piştrastbar û sînorên pejirandina mirovî diyar bike.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Kontrola kalîteyê
 
 - Armanc ji bo contributor nû zelal e.

@@ -23,6 +23,19 @@
 
 workflow ನಲ್ಲಿ ಬಳಸುವ ಮೊದಲು ವ್ಯಾಪ್ತಿ, ಸಾಕ್ಷಿ, ಪರಿಶೀಲಿಸಬಹುದಾದ commands ಮತ್ತು ಮಾನವ ಅನುಮೋದನೆ ಗಡಿಗಳನ್ನು ನಿರ್ಧರಿಸಿ.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## ಗುಣಮಟ್ಟ ಪರಿಶೀಲನೆ
 
 - ಉದ್ದೇಶ ಹೊಸ contributor ಗೆ ಸ್ಪಷ್ಟವಾಗಿದೆ.

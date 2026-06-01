@@ -25,6 +25,19 @@ Käytä tätä sivua operatiivisena ohjeena aiheelle `prompts`. Se ei korvaa rep
 
 Määritä laajuus, tarvittava näyttö, todennettavat komennot ja ihmisen hyväksynnän rajat ennen sivun käyttöä workflowssa.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Laatutarkistus
 
 - Tarkoitus on selvä uudelle osallistujalle.

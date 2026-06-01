@@ -25,6 +25,19 @@ Tumia ukurasa huu kama mwongozo wa uendeshaji kwa mada `prompts`. Hauondoi ushah
 
 Kabla ya kutumia ukurasa huu kwenye workflow, fafanua wigo, ushahidi unaohitajika, commands zinazoweza kuthibitishwa na mipaka ya idhini ya binadamu.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Ukaguzi wa ubora
 
 - Kusudi liko wazi kwa contributor mpya.

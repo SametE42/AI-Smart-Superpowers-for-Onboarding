@@ -25,6 +25,19 @@
 
 Πριν χρησιμοποιήσεις αυτή τη σελίδα σε workflow, όρισε πεδίο, απαραίτητα στοιχεία, επαληθεύσιμες εντολές και όρια ανθρώπινης έγκρισης.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Έλεγχος ποιότητας
 
 - Ο σκοπός είναι σαφής για νέο contributor.

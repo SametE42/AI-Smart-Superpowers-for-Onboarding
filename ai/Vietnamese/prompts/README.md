@@ -25,6 +25,19 @@ Dùng trang này như hướng dẫn vận hành cho chủ đề `prompts`. Nó 
 
 Trước khi dùng trang này trong workflow, hãy xác định phạm vi, bằng chứng cần có, commands có thể xác minh và ranh giới phê duyệt của con người.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Kiểm tra chất lượng
 
 - Mục đích rõ ràng với contributor mới.

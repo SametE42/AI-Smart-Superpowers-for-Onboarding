@@ -13,6 +13,7 @@ This project follows semantic versioning where practical.
 - Reproducible AI manual scaffold refresh script for English source pages and AI-translated localized batches.
 - Blocking validator coverage and tests for old public repository references.
 - Optional `MAGICAL_PROMPT_IMPROVER.md` template for safe, verifiable prompt refinement.
+- Multilingual AI manual page for the Magical Prompt Improver across all language folders.
 - Prompt-intake activation guidance across target-repository system and tool entrypoint templates.
 - Blocking validator coverage and tests for unlisted optional template files.
 
@@ -36,6 +37,7 @@ This project follows semantic versioning where practical.
 - Published the validated initial repository to GitHub.
 - Updated validation workflow actions to current major versions to avoid Node.js 20 deprecation warnings.
 - Removed repository-specific completion progress notes from the public tracked tree.
+- Linked prompt manual pages from every language's `prompts/README.md` for easier discovery.
 
 ## [0.1.0] - 2026-05-28
 

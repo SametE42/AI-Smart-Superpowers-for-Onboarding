@@ -25,6 +25,19 @@
 
 このページを workflow で使う前に、範囲、必要な証拠、検証可能なコマンド、人間の承認境界を定義します。
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## 品質チェック
 
 - 新しい共同作業者に目的が明確です。

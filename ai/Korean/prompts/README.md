@@ -25,6 +25,19 @@
 
 이 페이지를 workflow에서 사용하기 전에 범위, 필요한 증거, 검증 가능한 명령, 사람 승인 경계를 정의하세요.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## 품질 점검
 
 - 새 기여자가 목적을 이해할 수 있습니다.

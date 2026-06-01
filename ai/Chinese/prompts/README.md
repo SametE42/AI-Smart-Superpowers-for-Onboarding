@@ -25,6 +25,19 @@
 
 在 workflow 中使用本页之前，先定义范围、所需证据、可验证命令和人工批准边界。
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## 质量检查
 
 - 新贡献者能够理解本页目的。

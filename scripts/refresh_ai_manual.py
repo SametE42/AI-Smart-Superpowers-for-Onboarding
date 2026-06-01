@@ -21,6 +21,8 @@ SCAFFOLD_MARKERS = (
 DEFAULT_TARGET_LANGUAGES = ("English", "German")
 AI_TRANSLATION_MARKER = "<!-- translation-status: ai-translated; ai-quality-pass -->"
 AI_TRANSLATION_STATUS = "Translation status: AI-translated from the English source; AI quality gate passed; no human review required."
+MAGICAL_PROMPT_IMPROVER_PATH = Path("prompts/magical-prompt-improver.md")
+MAGICAL_PROMPT_IMPROVER_TEMPLATE = "templates/optional/MAGICAL_PROMPT_IMPROVER.md"
 
 CATEGORY_DESCRIPTIONS = {
     "agents": {
@@ -95,6 +97,17 @@ STANDARD_FOLDER_OVERVIEW = [
     ("skills/", "Skill design, lifecycle and transfer guidance."),
     ("templates/", "Reusable templates."),
     ("tools/", "Tool-specific guidance."),
+]
+PROMPT_MANUAL_PAGES = [
+    ("accuracy-clause.md", "Accuracy Clause"),
+    ("code-review.md", "Code Review"),
+    ("documentation-update.md", "Documentation Update"),
+    ("magical-prompt-improver.md", "Magical Prompt Improver"),
+    ("master-prompt.md", "Master Prompt"),
+    ("prompt-refinement.md", "Prompt Refinement"),
+    ("prompt-structure.md", "Prompt Structure"),
+    ("security-review.md", "Security Review"),
+    ("translation.md", "Translation"),
 ]
 
 TOPIC_FOCUS = {
@@ -2102,6 +2115,18 @@ def _focus(relative_path: Path, language: str) -> str:
     return CATEGORY_DESCRIPTIONS.get(category, CATEGORY_DESCRIPTIONS["workflows"])[lang_key]
 
 
+def _manual_pages_section(relative_path: Path) -> str:
+    if relative_path.as_posix() != "prompts/README.md":
+        return ""
+
+    links = "\n".join(f"- [{title}]({filename})" for filename, title in PROMPT_MANUAL_PAGES)
+    return f"""
+## Manual Pages
+
+{links}
+"""
+
+
 def _render_profile_page(language: str, relative_path: Path) -> str:
     profile = LOCALIZED_LANGUAGE_TEXT[language]
     title = title_from_path(relative_path)
@@ -2109,6 +2134,7 @@ def _render_profile_page(language: str, relative_path: Path) -> str:
     source_path = f"ai/English/{relative_path.as_posix()}"
     guidance = "\n".join(f"- {item}" for item in profile["guidance"])
     quality = "\n".join(f"- {item}" for item in profile["quality"])
+    manual_pages = _manual_pages_section(relative_path)
 
     return f"""# {title}
 
@@ -2132,6 +2158,7 @@ def _render_profile_page(language: str, relative_path: Path) -> str:
 ## {profile["focus_heading"]}
 
 {profile["focus"]}
+{manual_pages}
 
 ## {profile["quality_heading"]}
 
@@ -2271,6 +2298,164 @@ def _render_language_root_readme(language: str) -> str:
 """
 
 
+def _render_magical_prompt_improver_page(language: str) -> str:
+    title = "Magical Prompt Improver"
+    source_path = f"ai/English/{MAGICAL_PROMPT_IMPROVER_PATH.as_posix()}"
+    template_link = f"[`{MAGICAL_PROMPT_IMPROVER_TEMPLATE}`](../../../{MAGICAL_PROMPT_IMPROVER_TEMPLATE})"
+
+    body = f"""Use this page when a user request, reusable prompt or agent handoff needs to become clearer before repository work starts. The full source protocol is {template_link}.
+
+The improver does not make a prompt automatically correct. It reduces ambiguity, exposes missing context, adds safety boundaries and defines evidence that can prove the task is complete.
+
+## Activation Rules
+
+Run a short intake check on every user request before deciding how much prompt improvement is needed.
+
+- Answer directly when the request is clear, low-risk and does not ask for file changes.
+- Use Intake Mode when the request has unclear goals, missing success criteria or broad wording.
+- Use Full Rewrite Mode before large work, multi-step repository changes or work that crosses documentation, code, tests and Git.
+- Use Verification Mode before claiming completion, passing tests, release readiness or production readiness.
+- Use Commit/Push Readiness Mode before staging, committing, pushing or opening a pull request.
+- Do not run the full protocol for simple status, listing, explanation or lookup requests unless the user asks for prompt improvement.
+
+## Activation Modes
+
+| Mode | Use when | Output |
+|---|---|---|
+| Intake Mode | The request may be ambiguous, incomplete or risky. | Clarified objective, risks, missing context and safe assumptions. |
+| Full Rewrite Mode | The prompt will drive substantial repository work. | A complete rewritten prompt with role, scope, workflow, verification and final report rules. |
+| Verification Mode | The task is near completion or makes success claims. | Concrete evidence required before completion can be claimed. |
+| Commit/Push Readiness Mode | The task includes Git staging, commit, push, release or PR work. | Scope confirmation, changed-file review, verification commands and final Git action checklist. |
+
+## Decision Tree
+
+1. If the user asks only for status, a list or a short explanation, answer directly unless the request is unclear.
+2. If the requested outcome, scope or success criterion is unclear, use Intake Mode.
+3. If the work changes files, documentation, tests, scripts, CI or repository structure, define scope and verification before editing.
+4. If the work involves security, privacy, secrets, production claims, release, commit, push or PR creation, use Full Rewrite Mode plus Verification Mode.
+5. If the prompt is meant to be reused by another agent or human, use Full Rewrite Mode and output the final improved prompt.
+
+## Intake Output
+
+Return a compact intake when the request needs clarification but can still move forward:
+
+```text
+Objective:
+[Concrete end state]
+
+Risks and ambiguities:
+- [Risk or missing detail]
+
+Safe assumptions:
+- [Assumption with reason]
+
+Verification:
+[Command, check or evidence required]
+```
+
+## Full Rewrite Output
+
+Use this structure for substantial repository work:
+
+```text
+Role:
+[Who the agent should be]
+
+Objective:
+[Concrete end state]
+
+Repository context:
+[Files, directories, docs or commands to inspect first]
+
+Scope:
+[What is in scope]
+
+Out of scope:
+[What must not be changed or claimed]
+
+Workflow:
+1. [First action]
+2. [Next action]
+
+Verification:
+[Commands, manual checks or evidence required]
+
+Final report:
+[What to summarize]
+```
+
+## Anti-Hallucination Rules
+
+- Work from files, command output, issue text or cited sources.
+- Mark unknown facts as `[UNKNOWN]` instead of guessing.
+- Mark plausible but unverified conclusions as `[ASSUMPTION: ...]`.
+- Do not invent tool capabilities, model capabilities, APIs, business rules or repository URLs.
+- Do not claim tests passed unless the exact command was run and read.
+- Do not add secrets, real user data, internal URLs or production logs.
+- Preserve paths, commands, model names and API names exactly unless the task asks to change them.
+
+## Verification Criteria
+
+| Requirement | Evidence |
+|---|---|
+| Files changed intentionally | `git diff --name-only` reviewed |
+| Tests pass | Exact test command and exit code |
+| Documentation links are valid | Repository validator or link checker output |
+| No secrets added | Secret scan or validator output |
+| Final answer is accurate | Summary matches diff and command output |
+
+If a check is not available, the final report must say so.
+
+## Quality Checklist
+
+- Original intent and explicit constraints are preserved.
+- Success criteria are measurable.
+- Risks and ambiguities are visible.
+- Missing context is requested or safe assumptions are stated.
+- Workflow is ordered.
+- Anti-hallucination rules are included.
+- Verification criteria are concrete.
+- Activation mode matches the request.
+"""
+
+    if language == "English":
+        return f"""# {title}
+
+{body}"""
+
+    if language == "German":
+        note = (
+            f"{AI_TRANSLATION_STATUS}\n"
+            "Source language: English\n"
+            f"Source file: {source_path}\n"
+            "Bei Abweichungen ist die englische Datei maßgeblich."
+        )
+    else:
+        profile = LOCALIZED_LANGUAGE_TEXT.get(language)
+        if profile is None:
+            note = (
+                f"{AI_TRANSLATION_STATUS}\n"
+                "Source language: English\n"
+                f"Source file: {source_path}\n"
+                "If localized content differs from English, the English source is authoritative."
+            )
+        else:
+            note = (
+                f"{AI_TRANSLATION_STATUS}\n"
+                f"{profile['source_language']}\n"
+                f"{profile['source_file']}: {source_path}\n"
+                f"{profile['authority']}"
+            )
+
+    return f"""# {title}
+
+{AI_TRANSLATION_MARKER}
+
+> {note.replace(chr(10), chr(10) + '> ')}
+
+{body}"""
+
+
 def render_manual_page(language: str, relative_path: Path) -> str:
     title = title_from_path(relative_path)
     category = _category(relative_path)
@@ -2279,12 +2464,16 @@ def render_manual_page(language: str, relative_path: Path) -> str:
     if relative_path.as_posix() == "README.md":
         return _render_language_root_readme(language)
 
+    if relative_path == MAGICAL_PROMPT_IMPROVER_PATH:
+        return _render_magical_prompt_improver_page(language)
+
     if language in LOCALIZED_LANGUAGE_TEXT:
         return _render_profile_page(language, relative_path)
 
     if language == "German":
         description = CATEGORY_DESCRIPTIONS.get(category, CATEGORY_DESCRIPTIONS["workflows"])["de"]
         focus = _focus(relative_path, "German")
+        manual_pages = _manual_pages_section(relative_path)
         return f"""# {title}
 
 {AI_TRANSLATION_MARKER}
@@ -2310,6 +2499,7 @@ Diese Seite beschreibt, wie `{relative_path.as_posix()}` im AI Agent Operating M
 ## Fokus
 
 {focus}
+{manual_pages}
 
 ## Qualitätscheck
 
@@ -2322,6 +2512,7 @@ Diese Seite beschreibt, wie `{relative_path.as_posix()}` im AI Agent Operating M
 
     description = CATEGORY_DESCRIPTIONS.get(category, CATEGORY_DESCRIPTIONS["workflows"])["en"]
     focus = _focus(relative_path, "English")
+    manual_pages = _manual_pages_section(relative_path)
     return f"""# {title}
 
 {description}
@@ -2341,6 +2532,7 @@ This page explains how `{relative_path.as_posix()}` fits into the AI Agent Opera
 ## Focus
 
 {focus}
+{manual_pages}
 
 ## Quality Checklist
 
@@ -2359,8 +2551,14 @@ def _is_scaffold(text: str) -> bool:
 def refresh_manual_languages(root: Path, relative_path: Path, languages: Iterable[str], force: bool = False) -> int:
     changed = 0
     for language in languages:
-        path = root / "ai" / language / relative_path
+        language_dir = root / "ai" / language
+        if not language_dir.exists():
+            continue
+        path = language_dir / relative_path
         if not path.exists():
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(render_manual_page(language, relative_path), encoding="utf-8")
+            changed += 1
             continue
         current = path.read_text(encoding="utf-8", errors="replace")
         if not force and not _is_scaffold(current):

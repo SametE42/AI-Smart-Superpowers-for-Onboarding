@@ -25,6 +25,19 @@ Erabili orrialde hau `prompts` gaiaren gida operatibo gisa. Ez du ordezkatzen re
 
 Orrialde hau workflow batean erabili aurretik, definitu eremua, beharrezko ebidentzia, egiaztagarriak diren komandoak eta gizakiaren onarpen mugak.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Kalitate kontrola
 
 - Helburua argia da ekarle berri batentzat.

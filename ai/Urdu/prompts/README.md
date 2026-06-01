@@ -25,6 +25,19 @@
 
 اس صفحے کو workflow میں استعمال کرنے سے پہلے دائرہ، مطلوبہ شواہد، قابل تصدیق commands اور انسانی منظوری کی حدود طے کریں۔
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## معیار کی جانچ
 
 - مقصد نئے contributor کے لیے واضح ہے۔

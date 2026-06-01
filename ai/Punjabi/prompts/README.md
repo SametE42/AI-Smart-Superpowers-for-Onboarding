@@ -23,6 +23,19 @@
 
 workflow ਵਿੱਚ ਵਰਤਣ ਤੋਂ ਪਹਿਲਾਂ ਦਾਇਰਾ, ਸਬੂਤ, ਜਾਂਚਯੋਗ commands ਅਤੇ ਮਨੁੱਖੀ ਮਨਜ਼ੂਰੀ ਦੀਆਂ ਹੱਦਾਂ ਤੈਅ ਕਰੋ।
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## ਗੁਣਵੱਤਾ ਜਾਂਚ
 
 - ਉਦੇਸ਼ ਨਵੇਂ contributor ਲਈ ਸਪਸ਼ਟ ਹੈ।

@@ -25,6 +25,19 @@ Përdore këtë faqe si udhëzim operacional për temën `prompts`. Nuk zëvend�
 
 Para se ta përdorësh këtë faqe në workflow, përcakto fushën, provat e nevojshme, komandat e verifikueshme dhe kufijtë e miratimit njerëzor.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Kontroll cilësie
 
 - Qëllimi është i qartë për një kontribues të ri.

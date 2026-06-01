@@ -25,6 +25,19 @@
 
 workflow-তে এই পৃষ্ঠা ব্যবহারের আগে পরিসর, প্রয়োজনীয় প্রমাণ, যাচাইযোগ্য commands এবং মানব অনুমোদনের সীমা নির্ধারণ করুন।
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## গুণমান পরীক্ষা
 
 - উদ্দেশ্য নতুন contributor-এর কাছে পরিষ্কার।

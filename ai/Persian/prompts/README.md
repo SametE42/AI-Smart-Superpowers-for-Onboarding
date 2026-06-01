@@ -25,6 +25,19 @@
 
 پیش از استفاده از این صفحه در workflow، دامنه، شواهد لازم، commands قابل راستی‌آزمایی و مرزهای تأیید انسانی را تعریف کنید.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## کنترل کیفیت
 
 - هدف برای contributor جدید روشن است.

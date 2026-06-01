@@ -25,6 +25,19 @@ Használd ezt az oldalt operatív útmutatóként a `prompts` témához. Nem hel
 
 Mielőtt ezt az oldalt workflow-ban használod, határozd meg a hatókört, a szükséges bizonyítékokat, az ellenőrizhető parancsokat és az emberi jóváhagyás határait.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Minőségellenőrzés
 
 - A cél világos egy új közreműködő számára.

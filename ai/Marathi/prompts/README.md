@@ -23,6 +23,19 @@
 
 workflow मध्ये वापरण्यापूर्वी व्याप्ती, पुरावे, पडताळण्याजोगे commands आणि मानवी मंजुरीच्या सीमा ठरवा.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## गुणवत्ता तपासणी
 
 - नवीन contributor साठी उद्देश स्पष्ट आहे.

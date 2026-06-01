@@ -23,6 +23,19 @@
 
 workflow-இல் பயன்படுத்துவதற்கு முன் வரம்பு, ஆதாரம், சரிபார்க்கக்கூடிய commands மற்றும் மனித ஒப்புதல் எல்லைகளை வரையறுக்கவும்.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## தரச் சரிபார்ப்பு
 
 - புதிய contributor-க்கு நோக்கம் தெளிவாக உள்ளது.

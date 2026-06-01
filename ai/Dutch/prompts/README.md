@@ -25,6 +25,19 @@ Gebruik deze pagina als operationele leidraad voor het thema `prompts`. Ze verva
 
 Definieer scope, benodigde bewijsstukken, verifieerbare commando's en grenzen voor menselijke goedkeuring voordat je deze pagina in een workflow gebruikt.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Kwaliteitscontrole
 
 - Het doel is duidelijk voor een nieuwe bijdrager.

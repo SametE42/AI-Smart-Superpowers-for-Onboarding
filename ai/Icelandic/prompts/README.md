@@ -23,6 +23,19 @@ Notaðu þessa síðu sem rekstrarleiðbeiningu fyrir `prompts`. Hún kemur ekki
 
 Áður en síðan er notuð í workflow skaltu skilgreina umfang, sönnunargögn, sannreynanleg commands og mörk mannlegrar samþykktar.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Gæðaprófun
 
 - Tilgangurinn er skýr fyrir nýjan contributor.

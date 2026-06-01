@@ -14,6 +14,36 @@ class RefreshAiManualTests(unittest.TestCase):
         self.assertIn("## Operating Guidance", content)
         self.assertNotIn("This file gives users a structured, practical reference", content)
 
+    def test_render_english_magical_prompt_improver_has_activation_protocol(self) -> None:
+        content = render_manual_page("English", Path("prompts/magical-prompt-improver.md"))
+
+        self.assertIn("# Magical Prompt Improver", content)
+        self.assertIn("templates/optional/MAGICAL_PROMPT_IMPROVER.md", content)
+        self.assertIn("## Activation Rules", content)
+        self.assertIn("Intake Mode", content)
+        self.assertIn("Full Rewrite Mode", content)
+        self.assertIn("Verification Mode", content)
+        self.assertIn("Commit/Push Readiness Mode", content)
+        self.assertIn("## Decision Tree", content)
+        self.assertIn("## Anti-Hallucination Rules", content)
+        self.assertIn("## Verification Criteria", content)
+        self.assertNotIn("This page explains how `prompts/magical-prompt-improver.md` fits", content)
+
+    def test_render_french_magical_prompt_improver_is_localized_and_quality_passed(self) -> None:
+        content = render_manual_page("French", Path("prompts/magical-prompt-improver.md"))
+
+        self.assertIn("# Magical Prompt Improver", content)
+        self.assertIn("<!-- translation-status: ai-translated; ai-quality-pass -->", content)
+        self.assertIn("ai/English/prompts/magical-prompt-improver.md", content)
+        self.assertIn("## Activation Rules", content)
+        self.assertIn("Intake Mode", content)
+        self.assertIn("Full Rewrite Mode", content)
+        self.assertIn("Verification Mode", content)
+        self.assertIn("Commit/Push Readiness Mode", content)
+        self.assertIn("AI-translated from the English source", content)
+        self.assertNotIn("révision humaine requise", content)
+        self.assertNotIn("This file mirrors `ai/English/", content)
+
     def test_render_root_readme_has_non_empty_title(self) -> None:
         content = render_manual_page("Arabic", Path("README.md"))
 
@@ -52,6 +82,21 @@ class RefreshAiManualTests(unittest.TestCase):
             "tools/",
         ):
             self.assertIn(folder, content)
+
+    def test_render_prompts_readme_links_magical_prompt_improver(self) -> None:
+        content = render_manual_page("English", Path("prompts/README.md"))
+
+        self.assertIn("## Manual Pages", content)
+        self.assertIn("[Magical Prompt Improver](magical-prompt-improver.md)", content)
+        self.assertIn("[Prompt Refinement](prompt-refinement.md)", content)
+
+    def test_render_localized_prompts_readme_keeps_same_manual_page_links(self) -> None:
+        content = render_manual_page("French", Path("prompts/README.md"))
+
+        self.assertIn("## Manual Pages", content)
+        self.assertIn("[Magical Prompt Improver](magical-prompt-improver.md)", content)
+        self.assertIn("[Prompt Refinement](prompt-refinement.md)", content)
+        self.assertIn("<!-- translation-status: ai-translated; ai-quality-pass -->", content)
 
     def test_render_german_page_is_localized_and_keeps_source_note(self) -> None:
         content = render_manual_page("German", Path("agents/agent-architecture.md"))
@@ -170,6 +215,22 @@ class RefreshAiManualTests(unittest.TestCase):
             self.assertEqual(changed, 1)
             self.assertIn("## Portée pratique", french.read_text(encoding="utf-8"))
             self.assertNotIn("This file mirrors", french.read_text(encoding="utf-8"))
+
+    def test_refresh_scaffold_pages_creates_missing_requested_localization_mirrors(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            english = root / "ai/English/prompts/magical-prompt-improver.md"
+            french = root / "ai/French/prompts/magical-prompt-improver.md"
+            english.parent.mkdir(parents=True)
+            french.parent.mkdir(parents=True)
+            english.write_text("# Magical Prompt Improver\n\nReal English source.\n", encoding="utf-8")
+
+            changed = refresh_scaffold_pages(root, force=True, languages=("French",))
+
+            self.assertEqual(changed, 1)
+            self.assertTrue(french.exists())
+            self.assertIn("<!-- translation-status: ai-translated; ai-quality-pass -->", french.read_text(encoding="utf-8"))
+            self.assertIn("ai/English/prompts/magical-prompt-improver.md", french.read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

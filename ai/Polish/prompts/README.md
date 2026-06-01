@@ -25,6 +25,19 @@ Używaj tej strony jako operacyjnej wskazówki dla tematu `prompts`. Nie zastęp
 
 Zdefiniuj zakres, wymagane dowody, weryfikowalne komendy i granice zatwierdzenia przez człowieka przed użyciem tej strony w workflow.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Kontrola jakości
 
 - Cel jest jasny dla nowej osoby współtworzącej projekt.

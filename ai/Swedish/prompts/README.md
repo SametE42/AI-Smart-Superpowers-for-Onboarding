@@ -25,6 +25,19 @@ Använd sidan som operativ vägledning för temat `prompts`. Den ersätter inte 
 
 Definiera omfattning, nödvändiga bevis, verifierbara kommandon och gränser för mänskligt godkännande innan sidan används i ett workflow.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Kvalitetskontroll
 
 - Syftet är tydligt för en ny bidragsgivare.

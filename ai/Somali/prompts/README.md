@@ -23,6 +23,19 @@ U isticmaal boggan hagitaan hawlgal oo loogu talagalay `prompts`. Ma beddelayo c
 
 Ka hor isticmaalka workflow, qeex baaxadda, caddaynta, commands la xaqiijin karo iyo xuduudaha oggolaanshaha bini'aadan.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Hubinta tayada
 
 - Ujeeddadu way u caddahay contributor cusub.

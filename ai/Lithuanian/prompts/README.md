@@ -25,6 +25,19 @@ Naudok šį puslapį kaip operacinę gairę temai `prompts`. Jis nepakeičia rep
 
 Prieš naudodamas šį puslapį workflow, apibrėžk apimtį, reikalingus įrodymus, patikrinamas komandas ir žmogaus patvirtinimo ribas.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Kokybės patikra
 
 - Tikslas aiškus naujam prisidėtojui.

@@ -25,6 +25,19 @@ Použijte tuto stránku jako provozní vodítko pro téma `prompts`. Nenahrazuje
 
 Před použitím této stránky ve workflow definujte rozsah, potřebné důkazy, ověřitelné příkazy a hranice lidského schválení.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Kontrola kvality
 
 - Účel je jasný novému přispěvateli.

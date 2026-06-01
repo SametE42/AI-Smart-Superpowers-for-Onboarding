@@ -25,6 +25,19 @@ Koristi ovu stranicu kao operativni vodič za temu `prompts`. Ne zamjenjuje doka
 
 Prije korištenja ove stranice u workflowu definiraj opseg, potrebne dokaze, provjerljive naredbe i granice ljudskog odobrenja.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Provjera kvalitete
 
 - Svrha je jasna novom suradniku.

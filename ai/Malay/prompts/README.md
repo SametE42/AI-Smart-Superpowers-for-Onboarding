@@ -25,6 +25,19 @@ Gunakan halaman ini sebagai panduan operasi untuk tema `prompts`. Ia tidak mengg
 
 Sebelum menggunakan halaman ini dalam workflow, tetapkan skop, bukti yang diperlukan, commands yang boleh disahkan dan sempadan kelulusan manusia.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Semakan kualiti
 
 - Tujuan jelas kepada contributor baharu.

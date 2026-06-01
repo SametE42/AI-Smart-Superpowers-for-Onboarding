@@ -25,6 +25,19 @@
 
 Пред да ја користиш оваа страница во workflow, дефинирај опсег, потребни докази, проверливи команди и граници на човечко одобрување.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Проверка на квалитет
 
 - Целта е јасна за нов придонесувач.

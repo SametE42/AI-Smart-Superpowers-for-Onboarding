@@ -23,6 +23,19 @@ Bu sahifani `prompts` uchun operatsion yo'riqnoma sifatida ishlating. U reposito
 
 workflow ichida ishlatishdan oldin doira, dalillar, tekshiriladigan commands va inson tasdiqi chegaralarini belgilang.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Sifat tekshiruvi
 
 - Maqsad yangi contributor uchun aniq.

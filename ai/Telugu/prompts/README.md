@@ -23,6 +23,19 @@
 
 workflow లో ఉపయోగించే ముందు పరిధి, ఆధారాలు, ధృవీకరించగల commands మరియు మానవ ఆమోద హద్దులను నిర్వచించండి.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## నాణ్యత తనిఖీ
 
 - కొత్త contributor కు ఉద్దేశ్యం స్పష్టంగా ఉంటుంది.

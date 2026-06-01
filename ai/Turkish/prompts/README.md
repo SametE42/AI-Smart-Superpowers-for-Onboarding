@@ -25,6 +25,19 @@ Bu sayfayı `prompts` konusu için operasyonel yönlendirme olarak kullan. Depo 
 
 Bu sayfayı bir workflow içinde kullanmadan önce kapsamı, gerekli kanıtları, doğrulanabilir komutları ve insan onayı sınırlarını tanımla.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Kalite kontrolü
 
 - Amaç yeni katkı sağlayanlar için açıktır.

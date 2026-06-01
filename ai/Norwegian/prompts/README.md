@@ -25,6 +25,19 @@ Bruk siden som operativ veiledning for temaet `prompts`. Den erstatter ikke repo
 
 Definer omfang, nødvendig bevis, verifiserbare kommandoer og grenser for menneskelig godkjenning før siden brukes i en workflow.
 
+## Manual Pages
+
+- [Accuracy Clause](accuracy-clause.md)
+- [Code Review](code-review.md)
+- [Documentation Update](documentation-update.md)
+- [Magical Prompt Improver](magical-prompt-improver.md)
+- [Master Prompt](master-prompt.md)
+- [Prompt Refinement](prompt-refinement.md)
+- [Prompt Structure](prompt-structure.md)
+- [Security Review](security-review.md)
+- [Translation](translation.md)
+
+
 ## Kvalitetskontroll
 
 - Formålet er tydelig for en ny bidragsyter.
