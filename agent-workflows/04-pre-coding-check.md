@@ -38,6 +38,7 @@ Confirm that repository context is ready before planning, implementation, testin
 - Stop before coding if the request conflicts with documented security boundaries.
 - Do not bypass human approval for high-risk, destructive, production or sensitive-data changes.
 - Keep unknowns visible instead of converting them into assumptions.
+- Do not expose sensitive details, secrets or credentials; document relevant boundaries in `SECURITY_RULES.md`.
 
 ## Human Review Checkpoint
 

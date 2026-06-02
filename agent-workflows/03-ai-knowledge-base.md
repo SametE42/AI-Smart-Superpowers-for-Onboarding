@@ -16,16 +16,19 @@ Create or update the target repository's reviewed `docs/ai/` knowledge base.
 - Evidence summary from repository onboarding.
 - Target `docs/ai/` templates or existing `docs/ai/` files.
 - Repository security and review constraints.
+- README `docs/ai/` overview for conceptual target output.
 
 ## Process Steps
 
 1. Create or update only the `docs/ai/` files approved in the plan.
-2. Prefer the target repository's existing documentation style.
-3. Ground architecture, workflow and security claims in repository evidence.
-4. Preserve `[UNKNOWN]`, `[ASSUMPTION: ...]` and `[PARTIALLY REVIEWED: ...]` markers where facts remain unverified.
-5. Keep tool entrypoints short and link them to `docs/ai/` instead of duplicating long guidance.
-6. Update `CHANGELOG_AI.md` when AI documentation changes are significant.
-7. Run available documentation validation or link checks when the repository provides them.
+2. Treat the README file list as a conceptual overview of the target output, not a mandatory creation order.
+3. Choose the safest creation or update order for the current repository and reviewed plan.
+4. Prefer the target repository's existing documentation style.
+5. Ground architecture, workflow and security claims in repository evidence.
+6. Preserve `[UNKNOWN]`, `[ASSUMPTION: ...]` and `[PARTIALLY REVIEWED: ...]` markers where facts remain unverified.
+7. Keep tool entrypoints short and link them to `docs/ai/` instead of duplicating long guidance.
+8. Update `CHANGELOG_AI.md` when AI documentation changes are significant.
+9. Run available documentation validation or link checks when the repository provides them.
 
 ## Expected Output
 

@@ -25,7 +25,7 @@ Explain how to use this onboarding standard with AI coding agents and IDE assist
 
 - Do not start implementation before onboarding is reviewed.
 - Mark unknowns as `[UNKNOWN]`.
-- Mark inferences as `[ASSUMPTION: ...]`.
+- Mark inferences as `[ASSUMPTION]` or `[ASSUMPTION: ...]`.
 - Never expose secrets, credentials, certificates, private keys or sensitive data.
 - Human review remains required before AI-generated documentation is trusted.
 
@@ -33,6 +33,11 @@ Explain how to use this onboarding standard with AI coding agents and IDE assist
 
 Use [`agent-workflows/`](../../agent-workflows/README.md) when you want short runbooks for repository onboarding, evidence gathering, `docs/ai/` updates, pre-coding checks and handover refreshes.
 
+## Additional Guides
+
+- [`tool-context-loading.md`](tool-context-loading.md) explains which `docs/ai/` files to load first by task type.
+- [`human-review-gates.md`](human-review-gates.md) defines the human checkpoints before documentation, coding and memory refreshes are trusted.
+
 ## Not An Integration
 
-This guide describes how to use the onboarding standard with AI coding tools. It does not imply official integration, endorsement or compatibility certification with any specific tool.
+This guide describes how to use the onboarding standard with AI coding tools. It does not imply official integration, endorsement, compatibility certification or plugin support for any tool.

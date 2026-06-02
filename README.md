@@ -131,7 +131,9 @@ This repository is tool-neutral. Use the master prompt and `docs/ai/` knowledge 
 
 Start with [`templates/MASTER_PROMPT.en.md`](templates/MASTER_PROMPT.en.md), then use `docs/ai/` as reviewed context before future coding tasks.
 
-For a compact runbook, see [`docs/usage/README.md`](docs/usage/README.md). For structured agent workflows, see [`agent-workflows/`](agent-workflows/README.md).
+See [`docs/usage/README.md`](docs/usage/README.md) for the tool-neutral usage guide. For structured agent workflows, see [`agent-workflows/`](agent-workflows/README.md).
+
+This does not imply official integration, endorsement or compatibility certification with any AI coding tool.
 
 ## Workflow
 
@@ -230,11 +232,11 @@ If localized documentation conflicts with English, the English source wins until
 .
 ├─ AGENTS.md                     # Short repository instructions for coding agents
 ├─ README.md                     # Public GitHub entrypoint
-├─ agent-workflows/              # Short structured workflows for AI agents
+├─ agent-workflows/              # Operational workflows for onboarding, evidence analysis and handover
 ├─ templates/                    # Master prompts and target-repository templates
 ├─ ai/                           # Multilingual AI-agent manual
 ├─ docs/                         # Supporting project documentation
-│  └─ usage/                     # Tool-neutral usage guide for AI coding tools
+├─ docs/usage/                   # Tool-neutral usage and review guides for AI coding agents
 ├─ examples/                     # Minimal, stack-specific and multi-agent examples
 ├─ scripts/                      # Validation and AI manual refresh scripts
 ├─ tests/                        # Unit tests for maintenance scripts
