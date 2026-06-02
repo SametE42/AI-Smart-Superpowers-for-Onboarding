@@ -21,15 +21,16 @@ Refresh handover notes and project memory after significant changes so future AI
 
 1. Confirm the change is significant enough to update memory; skip tiny corrections unless they affect future sessions.
 2. Review the final diff and validation output.
-3. Update `PROJECT_MEMORY.md` with durable context, decisions, open questions and next steps.
+3. Update `PROJECT_MEMORY.md` with durable context, decisions, open points, assumptions, risks and next steps.
 4. Update `CHANGELOG_AI.md` with the documentation or onboarding change and rationale.
 5. Remove temporary progress notes before staging or sharing changes.
-6. Preserve unresolved facts as `[UNKNOWN]` or `[ASSUMPTION: ...]`.
+6. Preserve unresolved facts as `[UNKNOWN]`, `[ASSUMPTION]` or `[ASSUMPTION: ...]`.
 
 ## Expected Output
 
 - Updated project memory and AI changelog when warranted.
 - Clear handover notes for future AI sessions.
+- Visible open points, decisions, assumptions, risks and next steps.
 - No temporary progress, session or completion notes left in committed files.
 
 ## Security Rules

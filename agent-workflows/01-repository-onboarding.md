@@ -24,11 +24,13 @@ Initialize repository awareness before larger AI-assisted work begins, using `te
 2. Use `templates/MASTER_PROMPT.en.md` to guide the repository pre-check and documentation plan.
 3. Read the README and existing documentation entrypoints.
 4. Map the repository structure from tracked files and important directories.
-5. Identify build, test, validation and review commands from evidence.
-6. Identify security boundaries, sensitive-data rules and permission limits.
-7. Summarize confirmed facts, `[UNKNOWN]` gaps and `[ASSUMPTION: ...]` inferences.
-8. Propose the `docs/ai/` documentation plan before writing files.
-9. After human approval, create or update `docs/ai/` according to the reviewed plan.
+5. For large repositories, prioritize entrypoints, configuration, tests, central modules and existing documentation.
+6. Mark any unreviewed or only sampled areas as `[PARTIALLY REVIEWED]`.
+7. Identify build, test, validation and review commands from evidence.
+8. Identify security boundaries, sensitive-data rules and permission limits.
+9. Summarize confirmed facts, `[UNKNOWN]` gaps and `[ASSUMPTION: ...]` inferences.
+10. Propose the `docs/ai/` documentation plan before writing files.
+11. After human approval, create or update `docs/ai/` according to the reviewed plan.
 
 ## Expected Output
 
@@ -37,6 +39,7 @@ Initialize repository awareness before larger AI-assisted work begins, using `te
 - A proposed `docs/ai/` creation or update plan.
 - Created or updated `docs/ai/` files after human approval.
 - Open questions and blockers marked as `[UNKNOWN]`.
+- Large-repository coverage gaps marked as `[PARTIALLY REVIEWED]`.
 
 ## Security Rules
 

@@ -20,7 +20,11 @@ Approve the `docs/ai/` creation or update plan before the agent writes durable r
 ### What Humans Check
 
 - The plan matches the repository and current user goal.
+- All relevant target files are named.
+- Sensitive areas are recognized.
+- Uncertainties are visible.
 - The proposed files are necessary and not duplicative.
+- The scope is realistic.
 - Security-sensitive areas are handled conservatively.
 
 ### Pass Criteria
@@ -49,6 +53,8 @@ Review generated or updated `docs/ai/` files before future sessions use them as 
 
 - Claims are supported by repository evidence.
 - `[UNKNOWN]`, `[ASSUMPTION]` and `[PARTIALLY REVIEWED]` markers are accurate.
+- No secrets are documented.
+- Architecture and security statements are not overstated.
 - Security rules, review boundaries and sensitive-data handling are explicit.
 
 ### Pass Criteria
@@ -80,6 +86,9 @@ Decide whether planning, implementation, tests or review can begin.
 
 - The request fits documented architecture and ownership boundaries.
 - Required context has been loaded.
+- Security boundaries are clear.
+- Review criteria are known.
+- Blocking unknowns are visible.
 - Security or privacy-sensitive work has explicit approval.
 
 ### Pass Criteria
@@ -109,7 +118,10 @@ Confirm durable memory is refreshed after significant changes before the session
 
 - The memory update captures only durable, reusable context.
 - Temporary session notes are not committed.
+- `PROJECT_MEMORY.md` and `CHANGELOG_AI.md` were updated when warranted.
+- New decisions are documented.
 - New risks, decisions and open questions are visible.
+- Assumptions and risks are current.
 
 ### Pass Criteria
 
@@ -120,3 +132,12 @@ Confirm durable memory is refreshed after significant changes before the session
 ### Fail / Revise Criteria
 
 - The update includes temporary progress notes, omits important decisions or treats unreviewed AI output as trusted truth.
+
+## Review Outcomes
+
+| Outcome | Meaning |
+|---|---|
+| Pass | The agent may proceed to the next workflow step. |
+| Revise | The agent must update the plan, documentation or memory and return for review. |
+| Block | Work must stop until the blocking issue is resolved. |
+| Escalate to human owner | A repository owner or accountable maintainer must decide before work continues. |

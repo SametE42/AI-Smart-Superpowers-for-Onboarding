@@ -9,6 +9,7 @@ Confirm that repository context is ready before planning, implementation, testin
 - Immediately before coding starts.
 - Before reviewing code in a repository with new or stale `docs/ai/` context.
 - Before executing an implementation plan created by an AI agent.
+- Before Superpowers-style workflows or other structured agent workflows begin.
 
 ## Required Inputs
 
@@ -19,12 +20,13 @@ Confirm that repository context is ready before planning, implementation, testin
 
 ## Process Steps
 
-1. Load the relevant `docs/ai/` files before proposing implementation steps.
-2. Check whether the user request fits documented architecture, ownership and security boundaries.
-3. Identify required evidence for the requested change.
-4. List unresolved `[UNKNOWN]` or `[ASSUMPTION: ...]` items that could affect the work.
-5. Confirm which tests, validators or manual checks should run.
-6. Decide whether coding can begin or whether more onboarding is required.
+1. Confirm `docs/ai/` exists and has been reviewed.
+2. Load the relevant `docs/ai/` files before proposing implementation steps.
+3. Check whether the user request fits documented architecture, ownership and security boundaries.
+4. Identify required evidence for the requested change.
+5. List unresolved `[UNKNOWN]`, `[ASSUMPTION]` and security boundary items that could affect the work.
+6. Confirm which tests, validators or manual checks should run.
+7. Decide whether coding can begin or whether more onboarding is required.
 
 ## Expected Output
 
@@ -36,6 +38,7 @@ Confirm that repository context is ready before planning, implementation, testin
 ## Security Rules
 
 - Stop before coding if the request conflicts with documented security boundaries.
+- Stop before coding if `docs/ai/` is missing or has not been reviewed.
 - Do not bypass human approval for high-risk, destructive, production or sensitive-data changes.
 - Keep unknowns visible instead of converting them into assumptions.
 - Do not expose sensitive details, secrets or credentials; document relevant boundaries in `SECURITY_RULES.md`.

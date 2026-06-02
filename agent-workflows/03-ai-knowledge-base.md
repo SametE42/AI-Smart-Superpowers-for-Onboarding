@@ -30,6 +30,26 @@ Create or update the target repository's reviewed `docs/ai/` knowledge base.
 8. Update `CHANGELOG_AI.md` when AI documentation changes are significant.
 9. Run available documentation validation or link checks when the repository provides them.
 
+## Target Structure
+
+Consider at least this target `docs/ai/` structure:
+
+```text
+docs/ai/
+├─ MASTER_SYSTEM.md
+├─ ARCHITECTURE.md
+├─ PROJECT_MEMORY.md
+├─ STYLE_GUIDE.md
+├─ REVIEW_CHECKLIST.md
+├─ DOMAIN_KNOWLEDGE.md
+├─ SECURITY_RULES.md
+├─ ERROR_PATTERNS.md
+├─ CHANGELOG_AI.md
+└─ ONBOARDING.md
+```
+
+The reviewed plan may create or update these files in a different order when that is safer for the repository.
+
 ## Expected Output
 
 - A reviewed `docs/ai/` knowledge base, commonly including `ONBOARDING.md`, `PROJECT_MEMORY.md`, `SECURITY_RULES.md`, `ARCHITECTURE.md` and `REVIEW_CHECKLIST.md`.
@@ -39,9 +59,10 @@ Create or update the target repository's reviewed `docs/ai/` knowledge base.
 ## Security Rules
 
 - Never document secrets, credentials, private keys, certificates or real user data.
+- Never write out tokens or sensitive values.
 - Do not make unsupported production-readiness or compliance claims.
 - Keep security boundaries explicit and conservative.
 
 ## Human Review Checkpoint
 
-A human reviews the generated or updated `docs/ai/` files before they are treated as reusable context for future coding sessions.
+AI-generated documentation remains proposal-quality until a human reviews it. A human reviews the generated or updated `docs/ai/` files before they are treated as reusable context for future coding sessions.
