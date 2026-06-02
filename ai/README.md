@@ -1,6 +1,8 @@
 # AI Documentation Hub
 
-This repository organizes AI-agent documentation by language.
+This repository organizes the multilingual AI Manual for AI Smart Superpowers for Onboarding.
+
+The manual supports an evidence-first Pre-Development Onboarding layer for AI coding agents. Language folders help agents and maintainers prepare repository context, safety boundaries, prompts and workflows before planning, coding, testing or review begins.
 
 ## Language folders
 
@@ -22,11 +24,11 @@ Each language folder mirrors the same structure:
 - `examples/`
 - `templates/`
 
-English is the source of truth. Other languages are localized mirrors.
+English is the source of truth. Other languages are localized mirrors. Each language `README.md` must keep the same core structure: Overview, Where This Fits, Target Output, Quickstart, Source Of Truth And Links, Workflow, When To Use, When Not To Use, Manual Structure, safety rules, localization notes and quality checklist.
 
 ## Start
 
-Open `English/README.md` first.
+Open `English/README.md` first. It links the primary master prompt, `docs/ai/` templates, the AI Manual entrypoint and the Magical Prompt Improver.
 
 ## Status files
 

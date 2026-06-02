@@ -1,7 +1,7 @@
 # AI Smart Superpowers for Onboarding
 
 <p align="center">
-  <strong>Evidence-first onboarding docs and prompts for AI coding agents.</strong><br>
+  <strong>Evidence-first Pre-Development Onboarding docs and prompts for AI coding agents.</strong><br>
   Repository governance, issue intake, pull request guidance and validation workflows for this standard.
 </p>
 
@@ -17,7 +17,7 @@
 <p align="center">
   <a href="../README.md#start-here">Start Here</a> ·
   <a href="../README.md#quickstart">Quickstart</a> ·
-  <a href="../README.md#language-gateway">Languages</a> ·
+  <a href="../README.md#multilingual-ai-manual">Languages</a> ·
   <a href="../templates/MASTER_PROMPT.en.md">Master Prompt</a> ·
   <a href="../ai/English/README.md">AI Manual</a> ·
   <a href="../docs/">Docs</a>
@@ -39,7 +39,7 @@
 
 ## Overview
 
-AI Smart Superpowers for Onboarding is a reusable documentation and prompt standard for onboarding AI coding agents into software repositories safely, consistently and with clear human-review boundaries.
+AI Smart Superpowers for Onboarding is a reusable evidence-first Pre-Development Onboarding layer for preparing AI coding agents to work in software repositories safely, consistently and with clear human-review boundaries.
 
 For the complete public project page, open the root [README](../README.md). This `.github/` directory is the repository operations layer: it keeps contribution intake structured, review ownership explicit and validation automatic.
 
@@ -72,7 +72,7 @@ python scripts/validate_repository.py --root . --json ai/VALIDATION_REPORT.json 
 git diff --exit-code ai/VALIDATION_REPORT.json ai/VALIDATION_REPORT.md
 ```
 
-The validator checks Markdown structure, local file links, mirrored AI language files, README coverage, language README completeness, optional template README coverage, prompt README link consistency, Magical Prompt Improver localization markers, old public repository references, empty files, common secret patterns and AI translation status markers. It does not currently validate external URLs or heading anchors.
+The validator checks Markdown structure, local Markdown links, local HTML links, local heading anchors, mirrored AI language files, README coverage, language README completeness, optional template README coverage, prompt README link consistency, Magical Prompt Improver localization markers, old public repository references, empty files, common secret patterns and AI translation status markers. It does not currently validate external URLs.
 
 ## Maintenance Rules
 

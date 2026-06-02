@@ -93,7 +93,7 @@ class RefreshAiManualTests(unittest.TestCase):
     def test_render_root_readme_has_non_empty_title(self) -> None:
         content = render_manual_page("Arabic", Path("README.md"))
 
-        self.assertTrue(content.startswith("# AI Agent Operating Manual\n"))
+        self.assertTrue(content.startswith("# AI Smart Superpowers for Onboarding Manual\n"))
         self.assertNotIn("# \n", content)
         self.assertIn("ai/English/README.md", content)
 
@@ -101,16 +101,35 @@ class RefreshAiManualTests(unittest.TestCase):
         content = render_manual_page("French", Path("README.md"))
 
         for section in (
+            "## Overview",
             "## Purpose of this language folder",
+            "## Where This Fits",
+            "## Target Output",
+            "## Quickstart",
+            "## Source Of Truth And Links",
+            "## Workflow",
+            "## When To Use",
+            "## When Not To Use",
             "## English source of truth",
             "## How to use this folder",
-            "## Folder overview",
+            "## Manual Structure",
             "## Recommended reading order",
             "## Safety and human review rules",
             "## Localization notes",
             "## Quality checklist",
         ):
             self.assertIn(section, content)
+        for marker in (
+            "evidence-first Pre-Development Onboarding layer",
+            "`docs/ai/`",
+            "Superpowers-style",
+            "does not imply compatibility, endorsement or integration",
+            "templates/MASTER_PROMPT.en.md",
+            "templates/docs-ai/",
+            "prompts/magical-prompt-improver.md",
+            "templates/optional/MAGICAL_PROMPT_IMPROVER.md",
+        ):
+            self.assertIn(marker, content)
         for folder in (
             "agents/",
             "commands/",
@@ -126,6 +145,7 @@ class RefreshAiManualTests(unittest.TestCase):
             "skills/",
             "templates/",
             "tools/",
+            "workflows/",
         ):
             self.assertIn(folder, content)
 

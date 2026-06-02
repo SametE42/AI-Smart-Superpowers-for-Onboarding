@@ -24,6 +24,7 @@ class RepositoryValidationTests(unittest.TestCase):
         "skills/",
         "templates/",
         "tools/",
+        "workflows/",
     )
 
     def write(self, root: Path, relative_path: str, content: str) -> None:
@@ -34,11 +35,52 @@ class RepositoryValidationTests(unittest.TestCase):
     def complete_language_readme(self, translated: bool = False) -> str:
         marker = "<!-- translation-status: ai-translated; ai-quality-pass -->\n\n" if translated else ""
         rows = "\n".join(f"| `{folder}` | Purpose for {folder} |" for folder in self.STANDARD_SUBFOLDERS)
-        return f"""# AI Agent Operating Manual
+        return f"""# AI Smart Superpowers for Onboarding Manual
 
-{marker}## Purpose of this language folder
+{marker}## Overview
 
-This folder contains the localized AI operating manual for repository onboarding work.
+AI Smart Superpowers for Onboarding is an evidence-first Pre-Development Onboarding layer for AI coding agents. It turns repository evidence into persistent `docs/ai/` context before execution workflows begin.
+
+## Purpose of this language folder
+
+This folder contains the localized AI Manual for repository onboarding work.
+
+## Where This Fits
+
+Use this manual before structured coding-agent workflows, Superpowers-style workflows or multi-model development setups. `Superpowers-style` is used descriptively and does not imply compatibility, endorsement or integration with `obra/superpowers`.
+
+## Target Output
+
+The standard creates or updates a reviewed `docs/ai/` knowledge base inside the target repository.
+
+## Quickstart
+
+1. Open `templates/MASTER_PROMPT.en.md`.
+2. Give it to your coding agent.
+3. Point the agent at the target repository.
+4. Review the proposed documentation plan.
+5. Approve creation or update of `docs/ai/`.
+6. Use `docs/ai/` as context for future AI-agent sessions.
+
+## Source Of Truth And Links
+
+- Primary master prompt: `templates/MASTER_PROMPT.en.md`
+- Target `docs/ai/` templates: `templates/docs-ai/`
+- Magical Prompt Improver manual page: `prompts/magical-prompt-improver.md`
+- Magical Prompt Improver source template: `templates/optional/MAGICAL_PROMPT_IMPROVER.md`
+- Canonical AI Manual source: `ai/English/README.md`
+
+## Workflow
+
+Unknown repository -> evidence-first onboarding -> `docs/ai/` knowledge base -> implementation and review.
+
+## When To Use
+
+- Before asking an AI agent to modify an unfamiliar repository.
+
+## When Not To Use
+
+- When you only need a short explanation.
 
 ## English source of truth
 
@@ -48,7 +90,7 @@ English is authoritative and localized files mirror `ai/English/README.md`.
 
 Use this folder for onboarding, review, prompts, safety, tools, models and templates.
 
-## Folder overview
+## Manual Structure
 
 | Folder | Purpose |
 |---|---|
@@ -79,7 +121,7 @@ File names, folder names, commands, APIs and model names stay unchanged. English
 ## Quality checklist
 
 - Purpose is clear.
-- Folder overview is complete.
+- Manual structure is complete.
 - All standard subfolders are listed.
 - Safety boundaries are visible.
 - No unsupported model/tool claims are added.
@@ -101,6 +143,8 @@ File names, folder names, commands, APIs and model names stay unchanged. English
 
             self.assertEqual(report.status, "PASS")
             self.assertEqual(report.summary["broken_local_markdown_links"], 0)
+            self.assertEqual(report.summary["broken_local_html_links"], 0)
+            self.assertEqual(report.summary["broken_local_heading_anchors"], 0)
             self.assertEqual(report.summary["missing_mirrored_ai_files"], 0)
             self.assertEqual(report.summary["markdown_files_without_h1"], 0)
             self.assertEqual(report.summary["directories_without_readme"], 0)
@@ -123,6 +167,56 @@ File names, folder names, commands, APIs and model names stay unchanged. English
             self.assertEqual(report.summary["markdown_files_without_h1"], 1)
             self.assertGreaterEqual(report.summary["directories_without_readme"], 1)
 
+    def test_local_heading_anchor_links_are_validated(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.write(
+                root,
+                "README.md",
+                "# Root\n\n"
+                "[Good](#good-section)\n"
+                "[Bad](#missing-section)\n\n"
+                "## Good Section\n",
+            )
+
+            report = validate_repository(root)
+
+            self.assertEqual(report.status, "FAIL")
+            self.assertEqual(report.summary["broken_local_heading_anchors"], 1)
+            self.assertEqual(
+                report.details["broken_heading_anchors"],
+                [
+                    {
+                        "file": "README.md",
+                        "line": 4,
+                        "target": "#missing-section",
+                        "anchor": "missing-section",
+                        "source": "markdown",
+                    }
+                ],
+            )
+
+    def test_local_html_href_targets_and_anchors_are_validated(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.write(
+                root,
+                "README.md",
+                "# Root\n\n"
+                '<a href="docs/README.md#docs">Docs</a>\n'
+                '<a href="missing.md">Missing</a>\n'
+                '<a href="#missing-anchor">Missing anchor</a>\n',
+            )
+            self.write(root, "docs/README.md", "# Docs\n")
+
+            report = validate_repository(root)
+
+            self.assertEqual(report.status, "FAIL")
+            self.assertEqual(report.summary["broken_local_html_links"], 1)
+            self.assertEqual(report.summary["broken_local_heading_anchors"], 1)
+            self.assertEqual(report.details["broken_html_links"][0]["target"], "missing.md")
+            self.assertEqual(report.details["broken_heading_anchors"][0]["target"], "#missing-anchor")
+
     def test_complete_language_readme_passes(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -136,6 +230,8 @@ File names, folder names, commands, APIs and model names stay unchanged. English
             self.assertEqual(report.status, "PASS")
             self.assertEqual(report.summary["incomplete_language_readmes"], 0)
             self.assertEqual(report.summary["language_readmes_missing_required_sections"], 0)
+            self.assertEqual(report.summary["language_readme_heading_mismatches"], 0)
+            self.assertEqual(report.summary["language_readmes_missing_required_concepts"], 0)
             self.assertEqual(report.summary["language_readmes_missing_standard_subfolders"], 0)
 
     def test_language_readme_missing_required_section_fails(self) -> None:
@@ -143,13 +239,14 @@ File names, folder names, commands, APIs and model names stay unchanged. English
             root = Path(tmp)
             self.write(root, "README.md", "# Root\n")
             self.write(root, "ai/README.md", "# AI\n")
-            self.write(root, "ai/English/README.md", self.complete_language_readme().replace("## Folder overview", "## Folder list"))
+            self.write(root, "ai/English/README.md", self.complete_language_readme().replace("## Manual Structure", "## Folder list"))
 
             report = validate_repository(root)
 
             self.assertEqual(report.status, "FAIL")
             self.assertEqual(report.summary["incomplete_language_readmes"], 1)
             self.assertEqual(report.summary["language_readmes_missing_required_sections"], 1)
+            self.assertEqual(report.summary["language_readme_heading_mismatches"], 1)
 
     def test_language_readme_missing_translation_marker_fails(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

@@ -11,9 +11,13 @@ import subprocess
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
+from urllib.parse import unquote
 
 
 LOCAL_MARKDOWN_LINK = re.compile(r"(?<!!)\[[^\]]+\]\(([^)]+)\)")
+LOCAL_HTML_HREF = re.compile(r"<a\b[^>]*\bhref=[\"']([^\"']+)[\"']", re.IGNORECASE)
+HTML_ANCHOR_ID = re.compile(r"\b(?:id|name)=[\"']([^\"']+)[\"']", re.IGNORECASE)
+MARKDOWN_HEADING = re.compile(r"^(#{1,6})\s+(.+?)\s*#*\s*$")
 MANUAL_PAGE_LINK = re.compile(r"^-\s+\[[^\]]+\]\(([^)]+\.md)\)$", re.MULTILINE)
 SECRET_PATTERNS = [
     re.compile(r"sk-[A-Za-z0-9_-]{20,}"),
@@ -59,15 +63,37 @@ MAGICAL_PROMPT_IMPROVER_ENGLISH_BODY_MARKERS = [
     "Use this structure for substantial repository work",
 ]
 LANGUAGE_README_REQUIRED_SECTIONS = [
-    "# AI Agent Operating Manual",
+    "# AI Smart Superpowers for Onboarding Manual",
+    "## Overview",
     "## Purpose of this language folder",
+    "## Where This Fits",
+    "## Target Output",
+    "## Quickstart",
+    "## Source Of Truth And Links",
+    "## Workflow",
+    "## When To Use",
+    "## When Not To Use",
     "## English source of truth",
     "## How to use this folder",
-    "## Folder overview",
+    "## Manual Structure",
     "## Recommended reading order",
     "## Safety and human review rules",
     "## Localization notes",
     "## Quality checklist",
+]
+LANGUAGE_README_HEADING_SEQUENCE = LANGUAGE_README_REQUIRED_SECTIONS
+LANGUAGE_README_REQUIRED_CONCEPTS = [
+    "evidence-first",
+    "Pre-Development Onboarding layer",
+    "`docs/ai/`",
+    "Superpowers-style",
+    "does not imply compatibility, endorsement or integration",
+    "`obra/superpowers`",
+    "templates/MASTER_PROMPT.en.md",
+    "templates/docs-ai/",
+    "prompts/magical-prompt-improver.md",
+    "templates/optional/MAGICAL_PROMPT_IMPROVER.md",
+    "workflows/",
 ]
 LANGUAGE_README_STANDARD_SUBFOLDERS = [
     "agents/",
@@ -84,6 +110,7 @@ LANGUAGE_README_STANDARD_SUBFOLDERS = [
     "skills/",
     "templates/",
     "tools/",
+    "workflows/",
 ]
 OLD_REPOSITORY_REFERENCE_TEXTS = sorted(
     {
@@ -225,11 +252,19 @@ def _is_external_or_anchor(target: str) -> bool:
     return bool(re.match(r"^(?:https?:|mailto:|#)", target))
 
 
+def _is_external(target: str) -> bool:
+    return bool(re.match(r"^(?:https?:|mailto:)", target))
+
+
 def _normalize_link_target(raw_target: str) -> str:
     target = raw_target.strip()
     if " " in target and not target.startswith("<"):
         target = target.split(" ", 1)[0]
     return target.strip("<>")
+
+
+def _local_html_href_targets(text: str) -> Iterable[re.Match[str]]:
+    return LOCAL_HTML_HREF.finditer(text)
 
 
 def _find_broken_local_links(
@@ -259,6 +294,118 @@ def _find_broken_local_links(
             if resolved_relative not in all_files and not resolved.exists():
                 line_number = text.count("\n", 0, match.start()) + 1
                 broken.append({"file": _relative(markdown_file, root), "line": line_number, "target": target})
+    return broken
+
+
+def _find_broken_local_html_links(
+    markdown_files: Iterable[Path],
+    all_files: set[str],
+    root: Path,
+    text_by_path: dict[Path, str],
+) -> list[dict]:
+    broken: list[dict] = []
+    for markdown_file in markdown_files:
+        text = text_by_path[markdown_file]
+        base_dir = markdown_file.parent
+        for match in _local_html_href_targets(text):
+            target = _normalize_link_target(match.group(1))
+            if not target or _is_external(target) or target.startswith("#"):
+                continue
+            target_path = target.split("#", 1)[0]
+            if not target_path:
+                continue
+            resolved = (base_dir / target_path).resolve()
+            try:
+                resolved_relative = resolved.relative_to(root.resolve()).as_posix()
+            except ValueError:
+                line_number = text.count("\n", 0, match.start()) + 1
+                broken.append({"file": _relative(markdown_file, root), "line": line_number, "target": target})
+                continue
+            if resolved_relative not in all_files and not resolved.exists():
+                line_number = text.count("\n", 0, match.start()) + 1
+                broken.append({"file": _relative(markdown_file, root), "line": line_number, "target": target})
+    return broken
+
+
+def _slugify_heading(heading: str) -> str:
+    heading = re.sub(r"`([^`]*)`", r"\1", heading)
+    heading = re.sub(r"<[^>]+>", "", heading)
+    heading = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", heading)
+    heading = heading.strip().lower()
+    heading = re.sub(r"[^\w\s-]", "", heading, flags=re.UNICODE)
+    heading = re.sub(r"\s+", "-", heading)
+    return heading.strip("-")
+
+
+def _markdown_heading_anchors(text: str) -> set[str]:
+    anchors: set[str] = set()
+    counts: dict[str, int] = {}
+    for line in text.splitlines():
+        match = MARKDOWN_HEADING.match(line)
+        if not match:
+            continue
+        slug = _slugify_heading(match.group(2))
+        if not slug:
+            continue
+        count = counts.get(slug, 0)
+        counts[slug] = count + 1
+        anchors.add(slug if count == 0 else f"{slug}-{count}")
+
+    for match in HTML_ANCHOR_ID.finditer(text):
+        anchor = match.group(1).strip()
+        if anchor:
+            anchors.add(anchor)
+    return anchors
+
+
+def _find_broken_local_heading_anchors(
+    markdown_files: Iterable[Path],
+    root: Path,
+    text_by_path: dict[Path, str],
+) -> list[dict]:
+    broken: list[dict] = []
+    root_resolved = root.resolve()
+    anchors_by_path = {path: _markdown_heading_anchors(text_by_path[path]) for path in markdown_files}
+
+    for markdown_file in markdown_files:
+        text = text_by_path[markdown_file]
+        references = [
+            ("markdown", match, _normalize_link_target(match.group(1)))
+            for match in LOCAL_MARKDOWN_LINK.finditer(text)
+        ] + [
+            ("html", match, _normalize_link_target(match.group(1)))
+            for match in _local_html_href_targets(text)
+        ]
+
+        for source, match, target in references:
+            if not target or _is_external(target) or "#" not in target:
+                continue
+            target_path, raw_anchor = target.split("#", 1)
+            anchor = unquote(raw_anchor).strip()
+            if not anchor:
+                continue
+            target_file = markdown_file if not target_path else (markdown_file.parent / target_path).resolve()
+            try:
+                target_file.relative_to(root_resolved)
+            except ValueError:
+                continue
+            if target_file.suffix.lower() != ".md" or not target_file.exists():
+                continue
+            available_anchors = anchors_by_path.get(target_file)
+            if available_anchors is None:
+                available_anchors = _markdown_heading_anchors(target_file.read_text(encoding="utf-8", errors="replace"))
+                anchors_by_path[target_file] = available_anchors
+            if anchor not in available_anchors:
+                line_number = text.count("\n", 0, match.start()) + 1
+                broken.append(
+                    {
+                        "file": _relative(markdown_file, root),
+                        "line": line_number,
+                        "target": target,
+                        "anchor": anchor,
+                        "source": source,
+                    }
+                )
     return broken
 
 
@@ -349,12 +496,22 @@ def _language_readme_files(root: Path) -> list[Path]:
     return sorted(path / "README.md" for path in ai_dir.iterdir() if path.is_dir() and (path / "README.md").exists())
 
 
+def _h1_h2_sequence(text: str) -> list[str]:
+    return [
+        line.strip()
+        for line in text.splitlines()
+        if line.startswith("# ") or line.startswith("## ")
+    ]
+
+
 def _find_language_readme_issues(
     language_readmes: Iterable[Path],
     root: Path,
     text_by_path: dict[Path, str],
-) -> tuple[list[dict], list[dict], list[dict]]:
+) -> tuple[list[dict], list[dict], list[dict], list[dict], list[dict]]:
     missing_sections: list[dict] = []
+    heading_mismatches: list[dict] = []
+    missing_concepts: list[dict] = []
     missing_subfolders: list[dict] = []
     missing_translation_markers: list[dict] = []
 
@@ -363,15 +520,27 @@ def _find_language_readme_issues(
         relative = _relative(path, root)
         language = path.parent.name
         section_gaps = [section for section in LANGUAGE_README_REQUIRED_SECTIONS if section not in text]
+        heading_sequence = _h1_h2_sequence(text)
+        concept_gaps = [concept for concept in LANGUAGE_README_REQUIRED_CONCEPTS if concept not in text]
         subfolder_gaps = [subfolder for subfolder in LANGUAGE_README_STANDARD_SUBFOLDERS if subfolder not in text]
         if section_gaps:
             missing_sections.append({"file": relative, "missing_sections": section_gaps})
+        if heading_sequence != LANGUAGE_README_HEADING_SEQUENCE:
+            heading_mismatches.append(
+                {
+                    "file": relative,
+                    "expected_headings": LANGUAGE_README_HEADING_SEQUENCE,
+                    "actual_headings": heading_sequence,
+                }
+            )
+        if concept_gaps:
+            missing_concepts.append({"file": relative, "missing_concepts": concept_gaps})
         if subfolder_gaps:
             missing_subfolders.append({"file": relative, "missing_subfolders": subfolder_gaps})
         if language != "English" and AI_TRANSLATION_MARKERS[0] not in text:
             missing_translation_markers.append({"file": relative})
 
-    return missing_sections, missing_subfolders, missing_translation_markers
+    return missing_sections, heading_mismatches, missing_concepts, missing_subfolders, missing_translation_markers
 
 
 def _is_allowed_historical_old_repository_reference(relative_path: str, line: str) -> bool:
@@ -494,6 +663,8 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
     ]
     empty_files = [_relative(path, root_path) for path in files if path.stat().st_size == 0]
     broken_links = _find_broken_local_links(markdown_files, all_file_relatives, root_path, text_by_path)
+    broken_html_links = _find_broken_local_html_links(markdown_files, all_file_relatives, root_path, text_by_path)
+    broken_heading_anchors = _find_broken_local_heading_anchors(markdown_files, root_path, text_by_path)
     missing_mirrors, language_count, english_count, languages_sorted = _find_missing_mirrors(root_path)
     directories_without_readme = _find_directories_without_readme(files, root_path)
     secret_hits = _find_secret_patterns(files, root_path, text_by_path)
@@ -536,6 +707,8 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
     ]
     (
         language_readmes_missing_required_sections,
+        language_readme_heading_mismatches,
+        language_readmes_missing_required_concepts,
         language_readmes_missing_standard_subfolders,
         language_readmes_missing_translation_markers,
     ) = _find_language_readme_issues(language_readmes, root_path, text_by_path)
@@ -544,6 +717,8 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
             item["file"]
             for item in (
                 language_readmes_missing_required_sections
+                + language_readme_heading_mismatches
+                + language_readmes_missing_required_concepts
                 + language_readmes_missing_standard_subfolders
                 + language_readmes_missing_translation_markers
             )
@@ -563,6 +738,8 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         "english_source_markdown_files": english_count,
         "missing_mirrored_ai_files": len(missing_mirrors),
         "broken_local_markdown_links": len(broken_links),
+        "broken_local_html_links": len(broken_html_links),
+        "broken_local_heading_anchors": len(broken_heading_anchors),
         "markdown_files_without_h1": len(missing_h1),
         "empty_files": len(empty_files),
         "directories_without_readme": len(directories_without_readme),
@@ -580,11 +757,15 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         "scaffold_or_unreviewed_translation_files": len(english_scaffold_files) + len(unreviewed_translation_files),
         "incomplete_language_readmes": len(incomplete_language_readmes),
         "language_readmes_missing_required_sections": len(language_readmes_missing_required_sections),
+        "language_readme_heading_mismatches": len(language_readme_heading_mismatches),
+        "language_readmes_missing_required_concepts": len(language_readmes_missing_required_concepts),
         "language_readmes_missing_standard_subfolders": len(language_readmes_missing_standard_subfolders),
     }
     details = {
         "missing_mirrors": missing_mirrors,
         "broken_links": broken_links,
+        "broken_html_links": broken_html_links,
+        "broken_heading_anchors": broken_heading_anchors,
         "missing_h1": missing_h1,
         "empty_files": empty_files,
         "dirs_without_readme": directories_without_readme,
@@ -601,12 +782,16 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         "translation_mirror_placeholder_files_sample": translation_mirror_placeholder_files[:200],
         "incomplete_language_readmes": incomplete_language_readmes[:200],
         "language_readmes_missing_required_sections": language_readmes_missing_required_sections[:200],
+        "language_readme_heading_mismatches": language_readme_heading_mismatches[:200],
+        "language_readmes_missing_required_concepts": language_readmes_missing_required_concepts[:200],
         "language_readmes_missing_standard_subfolders": language_readmes_missing_standard_subfolders[:200],
         "language_readmes_missing_translation_marker": language_readmes_missing_translation_markers[:200],
     }
     blocking_keys = [
         "missing_mirrored_ai_files",
         "broken_local_markdown_links",
+        "broken_local_html_links",
+        "broken_local_heading_anchors",
         "markdown_files_without_h1",
         "empty_files",
         "directories_without_readme",
@@ -620,6 +805,8 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         "unreviewed_translation_files",
         "incomplete_language_readmes",
         "language_readmes_missing_required_sections",
+        "language_readme_heading_mismatches",
+        "language_readmes_missing_required_concepts",
         "language_readmes_missing_standard_subfolders",
     ]
     status = "PASS" if all(summary[key] == 0 for key in blocking_keys) else "FAIL"

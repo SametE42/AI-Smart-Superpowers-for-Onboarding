@@ -8,4 +8,4 @@ Run them with:
 python -m unittest discover -s tests
 ```
 
-The tests cover validator behavior, language README completeness, translation markers, old public repository reference detection, optional template README coverage, Magical Prompt Improver structure and validation report generation.
+The tests cover validator behavior, local link and heading-anchor checks, language README completeness, translation markers, old public repository reference detection, optional template README coverage, Magical Prompt Improver structure and validation report generation.

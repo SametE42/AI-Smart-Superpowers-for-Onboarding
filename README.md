@@ -1,26 +1,25 @@
 # AI Smart Superpowers for Onboarding
 
-<p align="center">
-  <strong>Evidence-first onboarding docs and prompts for AI coding agents.</strong><br>
-  A reusable standard for turning an unfamiliar repository into a safe, reviewable working context for humans and AI agents.
-</p>
+**Prepare repositories before AI agents build.**
+
+This project creates an evidence-first Pre-Development Onboarding layer for AI coding agents. It helps agents understand repository structure, architecture, constraints, risks and project-specific rules before they start planning, coding, testing or reviewing changes.
+
+It turns repository evidence into a persistent `docs/ai/` knowledge base so future AI sessions can work from reviewed project context instead of assumptions.
 
 <p align="center">
   <a href="https://github.com/SametE42/AI-Smart-Superpowers-for-Onboarding/actions/workflows/validate.yml"><img alt="Validate repository" src="https://github.com/SametE42/AI-Smart-Superpowers-for-Onboarding/actions/workflows/validate.yml/badge.svg"></a>
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/github/license/SametE42/AI-Smart-Superpowers-for-Onboarding"></a>
   <img alt="Master prompt: v12" src="https://img.shields.io/badge/master%20prompt-v12-7c3aed">
-  <img alt="Language folders: 75" src="https://img.shields.io/badge/language%20folders-75-0f766e">
-  <img alt="AI translated files: 19240" src="https://img.shields.io/badge/AI%20translated%20files-19240-2563eb">
   <img alt="Python: 3.x validation" src="https://img.shields.io/badge/python-3.x%20validation-3776ab">
 </p>
 
 <p align="center">
-  <a href="#start-here">Start Here</a> ·
+  <a href="#overview">Overview</a> ·
+  <a href="#target-output">Target Output</a> ·
   <a href="#quickstart">Quickstart</a> ·
-  <a href="#language-gateway">Languages</a> ·
+  <a href="#where-this-fits">Where This Fits</a> ·
+  <a href="#multilingual-ai-manual">Languages</a> ·
   <a href="templates/MASTER_PROMPT.en.md">Master Prompt</a> ·
-  <a href="ai/English/README.md">AI Manual</a> ·
-  <a href="docs/">Docs</a> ·
   <a href="https://github.com/SametE42/AI-Smart-Superpowers-for-Onboarding/issues">Issues</a>
 </p>
 
@@ -30,77 +29,42 @@
 
 <table>
   <tr>
-    <td width="20%"><a href="ai/English/README.md"><strong>English AI Manual</strong></a><br>Canonical AI-agent operating manual.</td>
-    <td width="20%"><a href="ai/German/README.md"><strong>German AI Manual</strong></a><br>Localized German mirror.</td>
-    <td width="20%"><a href="ai/LANGUAGE_INDEX.md"><strong>Language Index</strong></a><br>All available language folders.</td>
-    <td width="20%"><a href="ai/TRANSLATION_POLICY.md"><strong>Translation Policy</strong></a><br>Source-of-truth and mirror rules.</td>
-    <td width="20%"><a href="ai/TRANSLATION_STATUS.md"><strong>Translation Status</strong></a><br>Coverage and quality-pass status.</td>
+    <td width="25%"><a href="templates/MASTER_PROMPT.en.md"><strong>Master Prompt</strong></a><br>Primary English onboarding prompt.</td>
+    <td width="25%"><a href="templates/docs-ai/"><strong><code>docs/ai/</code> templates</strong></a><br>Target knowledge-base files.</td>
+    <td width="25%"><a href="templates/MASTER_PROMPT.md"><strong>German Prompt</strong></a><br>German workflow prompt.</td>
+    <td width="25%"><a href="ai/English/README.md"><strong>AI Manual</strong></a><br>Canonical operating manual.</td>
   </tr>
 </table>
 
 ## Contents
 
-[`Overview`](#overview) · [`Quickstart`](#quickstart) · [`Workflow`](#workflow) · [`Target Output`](#what-gets-created-in-target-repositories) · [`Languages`](#language-gateway) · [`Validation`](#validation) · [`Examples`](#examples) · [`Security`](#security-model) · [`Contributing`](#contributing)
+[`Overview`](#overview) · [`Where This Fits`](#where-this-fits) · [`Target Output`](#target-output) · [`Quickstart`](#quickstart) · [`Workflow`](#workflow) · [`When To Use`](#when-to-use) · [`Languages`](#multilingual-ai-manual) · [`Validation`](#validation) · [`Security`](#security-model)
 
 ## Overview
 
-AI coding agents work best when they receive stable repository context, explicit boundaries and verifiable documentation instead of scattered files and guesses. This repository provides a documentation-first onboarding standard built around:
+AI coding agents work best when they receive stable repository context, explicit boundaries and verifiable documentation instead of scattered files and guesses. This repository provides a pre-development onboarding layer built around:
 
 | Standard layer | What it gives you |
 |---|---|
-| **Master prompt** | A structured interview, repository pre-check, analysis flow and output contract. |
-| **`docs/ai/` templates** | Ten target-repository documents for architecture, memory, style, review, security and onboarding. |
-| **Magical Prompt Improver** | An optional prompt-refinement protocol for turning unclear requests into safe, verifiable instructions. |
-| **Tool entrypoint guidance** | Short references for agent files such as `AGENTS.md`, `CLAUDE.md`, `GEMINI.md` and Copilot instructions. |
-| **Multilingual AI manual** | A mirrored AI-agent operating manual under `ai/<Language>/`. |
-| **Validation tooling** | Unit tests and a repository validator for Markdown, links, language mirrors, secrets and translation markers. |
+| **Evidence-first analysis** | Repository facts are gathered from files, tests, configuration and existing documentation. |
+| **Persistent AI knowledge base** | The output is a reviewed `docs/ai/` folder that future AI sessions can load. |
+| **Short tool entrypoints** | Files such as `AGENTS.md`, `CLAUDE.md`, `GEMINI.md` and Copilot instructions stay compact and point to `docs/ai/`. |
+| **Safety and review boundaries** | Unknowns, assumptions, secrets, production claims and human-review gates stay explicit. |
+| **Reusable onboarding prompt** | `templates/MASTER_PROMPT.en.md` guides the initial interview, repository pre-check and documentation plan. |
 
 This is not a production app, backend service, SDK, runtime package or replacement for human review. It is a reusable standard for making AI-assisted repository work safer and easier to audit.
 
-## Quickstart
+## Where This Fits
 
-<table>
-  <tr>
-    <td width="33%">
-      <strong>1. Start with the prompt</strong><br>
-      Use <a href="templates/MASTER_PROMPT.en.md"><code>templates/MASTER_PROMPT.en.md</code></a> as the primary English onboarding prompt.
-    </td>
-    <td width="33%">
-      <strong>2. Point it at a repository</strong><br>
-      Let the agent run the interview, repository pre-check and analysis report before it edits files.
-    </td>
-    <td width="33%">
-      <strong>3. Review before changes</strong><br>
-      Approve the documentation plan before generated files are created or updated.
-    </td>
-  </tr>
-</table>
+AI coding agents do better work when they follow structured workflows. But structured workflows depend on accurate project context.
 
-Use [`templates/MASTER_PROMPT.md`](templates/MASTER_PROMPT.md) when you specifically want the German workflow prompt.
+This repository provides the preparation step before execution workflows begin: it turns repository evidence into a reviewed AI knowledge base before agents start coding work.
 
-```text
-Primary prompt:  templates/MASTER_PROMPT.en.md
-German prompt:   templates/MASTER_PROMPT.md
-Target output:   docs/ai/
-Local checks:    python -m unittest discover -s tests
-                 python scripts/validate_repository.py --root .
-```
+Use it before structured coding-agent workflows, Superpowers-style workflows or multi-model development setups. Superpowers-style workflows describe how an agent plans, implements, tests and reviews. This repository describes what an agent should know about a concrete repository before those workflows start.
 
-No package installation is required to use the prompt standard. Python is only needed for this repository's maintenance checks.
+`Superpowers-style` is used descriptively and does not imply compatibility, endorsement or integration with `obra/superpowers`.
 
-## Workflow
-
-```mermaid
-flowchart LR
-    A["Master prompt"] --> B["Interview + repo pre-check"]
-    B --> C["Evidence-based analysis"]
-    C --> D["Documentation plan"]
-    D --> E["Human approval"]
-    E --> F["docs/ai/ knowledge base"]
-    F --> G["Validation + review"]
-```
-
-## What Gets Created In Target Repositories
+## Target Output
 
 The standard creates or updates a `docs/ai/` folder inside the target repository:
 
@@ -118,9 +82,73 @@ docs/ai/
 └─ ONBOARDING.md
 ```
 
-`PROJECT_MEMORY.md` is the target repository's continuity and handover anchor for current state, assumptions, decisions, open tasks, problems, risks and next steps. Tool-specific entrypoint files should stay short and point back to `docs/ai/`.
+Key files:
 
-## Language Gateway
+| File | Purpose |
+|---|---|
+| `PROJECT_MEMORY.md` | Continuity, handover notes, open tasks, assumptions, decisions and next steps. |
+| `ARCHITECTURE.md` | Evidence-based architecture observations, boundaries and constraints. |
+| `SECURITY_RULES.md` | Security boundaries, risk notes, redaction rules and sensitive-data handling. |
+| `REVIEW_CHECKLIST.md` | Human and AI review checkpoints before work is trusted. |
+| `CHANGELOG_AI.md` | Log of AI-assisted documentation changes and rationale. |
+
+The README shows the conceptual output. Workflow prompts and templates may use a different creation or update order when that is easier for an agent to execute safely.
+
+## Quickstart
+
+1. Open [`templates/MASTER_PROMPT.en.md`](templates/MASTER_PROMPT.en.md).
+2. Give it to your coding agent.
+3. Point the agent at the target repository.
+4. Review the proposed documentation plan.
+5. Approve creation or update of `docs/ai/`.
+6. Use `docs/ai/` as context for future AI-agent sessions.
+
+`templates/MASTER_PROMPT.en.md` is the primary English onboarding prompt. Use [`templates/MASTER_PROMPT.md`](templates/MASTER_PROMPT.md) when you specifically want the German workflow prompt.
+
+```text
+Primary prompt:  templates/MASTER_PROMPT.en.md
+German prompt:   templates/MASTER_PROMPT.md
+Target output:   docs/ai/
+Local checks:    python -m unittest discover -s tests
+                 python scripts/validate_repository.py --root .
+```
+
+No package installation is required to use the prompt standard. Python is only needed for this repository's maintenance checks.
+
+## Workflow
+
+```mermaid
+flowchart LR
+    A["Unknown repository"] --> B["Evidence-first onboarding"]
+    B --> C["docs/ai/ knowledge base"]
+    C --> D["Planning / implementation / testing / review"]
+    D --> E["Updated project memory"]
+```
+
+## When To Use
+
+- Before asking an AI agent to modify an unfamiliar repository.
+- Before a larger AI-assisted feature.
+- Before multiple AI tools work on the same codebase.
+- When project knowledge is scattered across files, issues or prior conversations.
+- When architecture assumptions must be explicit.
+- When security, review boundaries and traceability matter.
+- When future AI sessions need reusable project memory.
+
+## When Not To Use
+
+- When you only need a short explanation.
+- When the repository is already fully documented and current.
+- When you want immediate code changes without documentation or review.
+- When generated AI documentation cannot be reviewed by a human.
+- When sensitive data cannot be safely inspected or summarized.
+
+## Multilingual AI Manual
+
+<p>
+  <img alt="Language folders: 75" src="https://img.shields.io/badge/language%20folders-75-0f766e">
+  <img alt="AI translated files: 19240" src="https://img.shields.io/badge/AI%20translated%20files-19240-2563eb">
+</p>
 
 <table>
   <tr>
@@ -207,9 +235,11 @@ Generate validation reports:
 python scripts/validate_repository.py --root . --json ai/VALIDATION_REPORT.json --markdown ai/VALIDATION_REPORT.md
 ```
 
-The validator checks local Markdown file targets, H1 headings, empty files, directory README coverage, mirrored AI language files, language sorting, legacy AI links, old public repository references, optional template README coverage, prompt README link consistency, Magical Prompt Improver localization markers, common secret patterns, translation status markers and language README completeness. It does not currently validate external URLs or heading anchors.
+The validator checks local Markdown file targets, local HTML links, local heading anchors, H1 headings, empty files, directory README coverage, mirrored AI language files, language sorting, legacy AI links, old public repository references, optional template README coverage, prompt README link consistency, Magical Prompt Improver localization markers, common secret patterns, translation status markers and language README completeness. It does not currently validate external URLs.
 
 ## Examples
+
+Example use case: A developer wants Codex, Claude Code, Cursor or another AI coding agent to work on an unfamiliar repository. Before the first code change, they run the master prompt, review the evidence-based documentation plan, create or update `docs/ai/`, and use those files as reviewed context for future AI sessions.
 
 | Example | Use when |
 |---|---|
@@ -242,10 +272,11 @@ It also includes cautious guidance for model families and providers such as Open
 | Principle | Meaning |
 |---|---|
 | Evidence before claims | Ground facts in files, tests, configuration or existing documentation. |
-| No invented business rules | Mark unknowns instead of filling gaps with guesses. |
+| Unknowns are better than hallucinations | Mark missing facts as `[UNKNOWN]` and unverified conclusions as `[ASSUMPTION: ...]`. |
 | Human review before impact | AI output is a proposal until reviewed and approved. |
-| Explicit security boundaries | Do not imply production readiness or safety without evidence. |
+| Persistent context beats rediscovery | Future agents should inherit reviewed project context instead of guessing it again. |
 | Short tool entrypoints | Keep agent-specific files compact and point to `docs/ai/`. |
+| Explicit security boundaries | Do not imply production readiness, safety or permission to expose sensitive data without evidence. |
 | Maintained documentation | Prefer compact, useful docs over duplicated long-form guidance. |
 
 ## Security Model

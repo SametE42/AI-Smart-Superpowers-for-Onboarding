@@ -97,6 +97,7 @@ STANDARD_FOLDER_OVERVIEW = [
     ("skills/", "Skill design, lifecycle and transfer guidance."),
     ("templates/", "Reusable templates."),
     ("tools/", "Tool-specific guidance."),
+    ("workflows/", "Step-by-step onboarding, review, memory and translation workflows."),
 ]
 PROMPT_MANUAL_PAGES = [
     ("accuracy-clause.md", "Accuracy Clause"),
@@ -2255,7 +2256,7 @@ LOCALIZED_LANGUAGE_TEXT.update(
 
 def title_from_path(relative_path: Path) -> str:
     if relative_path.as_posix() == "README.md":
-        return "AI Agent Operating Manual"
+        return "AI Smart Superpowers for Onboarding Manual"
     stem = " ".join(relative_path.stem.split("-"))
     if relative_path.name == "README.md":
         stem = relative_path.parent.name.replace("-", " ")
@@ -2337,23 +2338,74 @@ def _render_language_root_readme(language: str) -> str:
     source_path = "ai/English/README.md"
     folder_table = _render_folder_overview_table()
     reading_order = """1. `README.md`
-2. `safety/README.md`
-3. `agents/README.md`
-4. `context-engineering/README.md`
-5. `prompts/README.md`
-6. `tools/README.md`
-7. `templates/README.md`"""
+2. `prompts/magical-prompt-improver.md`
+3. `prompts/README.md`
+4. `workflows/repo-onboarding.md`
+5. `safety/README.md`
+6. `agents/README.md`
+7. `context-engineering/README.md`
+8. `tools/README.md`
+9. `templates/README.md`"""
+    target_output = """The standard creates or updates a reviewed `docs/ai/` knowledge base inside the target repository:
+
+| File | Purpose |
+|---|---|
+| `PROJECT_MEMORY.md` | Continuity, handover notes, open tasks, assumptions, decisions and next steps. |
+| `ARCHITECTURE.md` | Evidence-based architecture observations, boundaries and constraints. |
+| `SECURITY_RULES.md` | Security boundaries, risk notes, redaction rules and sensitive-data handling. |
+| `REVIEW_CHECKLIST.md` | Human and AI review checkpoints before work is trusted. |
+| `CHANGELOG_AI.md` | Log of AI-assisted documentation changes and rationale. |"""
+    quickstart = """1. Open [`templates/MASTER_PROMPT.en.md`](../../templates/MASTER_PROMPT.en.md).
+2. Give it to your coding agent.
+3. Point the agent at the target repository.
+4. Review the proposed documentation plan.
+5. Approve creation or update of `docs/ai/`.
+6. Use `docs/ai/` as context for future AI-agent sessions."""
+    source_links = """| Area | Link |
+|---|---|
+| Primary master prompt | [`templates/MASTER_PROMPT.en.md`](../../templates/MASTER_PROMPT.en.md) |
+| German workflow prompt | [`templates/MASTER_PROMPT.md`](../../templates/MASTER_PROMPT.md) |
+| Target `docs/ai/` templates | [`templates/docs-ai/`](../../templates/docs-ai/) |
+| Magical Prompt Improver manual page | [`prompts/magical-prompt-improver.md`](prompts/magical-prompt-improver.md) |
+| Magical Prompt Improver source template | [`templates/optional/MAGICAL_PROMPT_IMPROVER.md`](../../templates/optional/MAGICAL_PROMPT_IMPROVER.md) |
+| Canonical AI Manual source | [`ai/English/README.md`](../English/README.md) |"""
+    workflow = """```mermaid
+flowchart LR
+    A["Unknown repository"] --> B["Evidence-first onboarding"]
+    B --> C["docs/ai/ knowledge base"]
+    C --> D["Planning / implementation / testing / review"]
+    D --> E["Updated project memory"]
+```"""
+    when_to_use = """- Before asking an AI agent to modify an unfamiliar repository.
+- Before a larger AI-assisted feature.
+- Before multiple AI tools work on the same codebase.
+- When project knowledge is scattered across files, issues or prior conversations.
+- When architecture assumptions must be explicit.
+- When security, review boundaries and traceability matter.
+- When future AI sessions need reusable project memory."""
+    when_not_to_use = """- When you only need a short explanation.
+- When the repository is already fully documented and current.
+- When you want immediate code changes without documentation or review.
+- When generated AI documentation cannot be reviewed by a human.
+- When sensitive data cannot be safely inspected or summarized."""
     safety_rules = """- Repository evidence is authoritative.
 - Do not invent commands, model capabilities or provider behavior.
 - Preserve file names, commands, API names and model names.
 - Mark assumptions and unknowns.
-- Escalate security, permissions and production-readiness risks to human review."""
+- Escalate security, permissions and production-readiness risks to human review.
+- Do not claim tests, release readiness, production readiness, compatibility or integration without evidence."""
     localization_notes = """- File names, folder names, commands, APIs and model names stay unchanged.
 - Localized prose may be translated naturally.
-- English wins when localized content conflicts with English."""
+- English wins when localized content conflicts with English.
+- Keep these invariant terms visible across languages: `evidence-first`, `Pre-Development Onboarding layer`, `docs/ai/`, `Superpowers-style`, `Magical Prompt Improver`, `obra/superpowers`."""
     quality_checklist = """- [ ] Purpose is clear.
-- [ ] Folder overview is complete.
-- [ ] All standard subfolders are listed.
+- [ ] Evidence-first Pre-Development Onboarding layer is visible.
+- [ ] `docs/ai/` target output is linked and explained.
+- [ ] Master Prompt, AI Manual and Magical Prompt Improver links are present.
+- [ ] Superpowers-style wording is descriptive and makes no integration or compatibility claim.
+- [ ] Use and Not-Use cases are visible.
+- [ ] Manual structure is complete.
+- [ ] All standard subfolders are listed, including `workflows/`.
 - [ ] Safety boundaries are visible.
 - [ ] No unsupported model/tool claims are added.
 - [ ] English remains authoritative."""
@@ -2361,17 +2413,26 @@ def _render_language_root_readme(language: str) -> str:
     if language == "English":
         note = "This English README is the canonical source for localized language-folder entrypoints."
         purpose = (
-            "This language folder contains the canonical English AI Agent Operating Manual. It explains the "
-            "standard folder layout and gives humans and AI agents a stable entrypoint for repository onboarding, "
-            "review, prompts, safety, tools, models and reusable templates."
+            "This language folder contains the canonical English AI Manual for AI Smart Superpowers for Onboarding. "
+            "It gives humans and AI coding agents a stable language-specific entrypoint before repository planning, "
+            "coding, testing or review begins."
+        )
+        overview = (
+            "AI Smart Superpowers for Onboarding is an evidence-first Pre-Development Onboarding layer for AI coding "
+            "agents. It turns repository evidence into persistent `docs/ai/` context before execution workflows begin."
+        )
+        fit = (
+            "Use this manual before structured coding-agent workflows, Superpowers-style workflows or multi-model "
+            "development setups. Superpowers-style describes how an agent plans, implements, tests and reviews; this "
+            "repository describes what an agent should know about a concrete repository before those workflows start."
         )
         source_truth = (
             "English is the source of truth. Non-English language folders mirror this structure and should preserve "
             "the same paths, filenames, commands, APIs and model names."
         )
         usage = (
-            "Start here when auditing the manual structure, updating source guidance or checking whether localized "
-            "folders remain aligned with the canonical English content."
+            "Start here when auditing the manual structure, checking localization alignment or loading reusable "
+            "guidance for prompts, safety, tools, models, workflows and templates."
         )
         marker = ""
     elif language == "German":
@@ -2382,18 +2443,28 @@ def _render_language_root_readme(language: str) -> str:
             "Bei Abweichungen ist die englische Datei maßgeblich."
         )
         purpose = (
-            "Dieser Sprachordner enthält das deutsch lokalisierte AI Agent Operating Manual. Er erklärt die "
-            "Standardordner und hilft Menschen sowie KI-Agenten bei Onboarding, Review, Prompts, Safety, Tools, "
-            "Modellen und wiederverwendbaren Templates."
+            "Dieser Sprachordner enthält das deutsch lokalisierte AI Manual für AI Smart Superpowers for Onboarding. "
+            "Er gibt Menschen und KI-Coding-Agenten einen stabilen sprachspezifischen Einstieg, bevor Planung, "
+            "Coding, Tests oder Reviews beginnen."
+        )
+        overview = (
+            "AI Smart Superpowers for Onboarding ist ein evidence-first Pre-Development Onboarding layer für AI "
+            "coding agents. Der Standard macht Repository-Evidenz zu dauerhaftem `docs/ai/`-Kontext, bevor "
+            "Ausführungs-Workflows starten."
+        )
+        fit = (
+            "Nutze dieses Manual vor strukturierten Coding-Agent-Workflows, Superpowers-style Workflows oder "
+            "Multi-Model-Setups. Superpowers-style beschreibt, wie ein Agent plant, implementiert, testet und "
+            "reviewt; dieses Repository beschreibt, was ein Agent über ein konkretes Repository wissen sollte, "
+            "bevor diese Workflows starten."
         )
         source_truth = (
             f"Die englische Quelle [`{source_path}`](../English/README.md) ist maßgeblich. Die deutsche Fassung "
             "spiegelt die englische Struktur und bewahrt Pfade, Dateinamen, Commands, APIs und Modellnamen."
         )
         usage = (
-            "Nutze diesen Ordner als deutschsprachigen Einstieg in die Betriebsanleitung. Lade zuerst Safety, "
-            "Agentenrollen, Kontextregeln, Prompt-Muster, Tool-Hinweise und Templates, bevor du projektspezifische "
-            "Schlüsse ziehst."
+            "Nutze diesen Ordner, wenn du die Manual-Struktur prüfst, Lokalisierung abgleichst oder wiederverwendbare "
+            "Guidance für Prompts, Safety, Tools, Modelle, Workflows und Templates laden willst."
         )
         marker = f"{AI_TRANSLATION_MARKER}\n\n"
     else:
@@ -2405,28 +2476,70 @@ def _render_language_root_readme(language: str) -> str:
             f"{profile['authority']}"
         )
         purpose = (
-            f"{profile['intro'].format(path='README.md')} This language folder contains the localized AI Agent "
-            "Operating Manual and mirrors the English folder structure for onboarding, review, prompts, safety, "
-            "tools, models and templates."
+            "This language folder contains the localized AI Manual for AI Smart Superpowers for Onboarding. It mirrors "
+            "the English structure so humans and AI coding agents can prepare repositories before planning, coding, "
+            "testing or review begins."
+        )
+        overview = (
+            "AI Smart Superpowers for Onboarding is an evidence-first Pre-Development Onboarding layer for AI coding "
+            "agents. It turns repository evidence into persistent `docs/ai/` context before execution workflows begin."
+        )
+        fit = (
+            "Use this manual before structured coding-agent workflows, Superpowers-style workflows or multi-model "
+            "development setups. Superpowers-style describes how an agent plans, implements, tests and reviews; this "
+            "repository describes what an agent should know about a concrete repository before those workflows start."
         )
         source_truth = (
             f"{profile['authority']} The English source [`{source_path}`](../English/README.md) remains "
             "authoritative, and localized files mirror the English structure."
         )
         usage = (
-            f"{profile['scope'].format(category='language folder')} Use this folder to load the language-specific "
-            "entrypoint before reading safety guidance, agent patterns, context engineering notes, prompt templates, "
-            "tool guidance and reusable templates."
+            "Use this folder to load the language-specific entrypoint before reading safety guidance, agent patterns, "
+            "context engineering notes, prompt templates, tool guidance, workflows and reusable templates."
         )
         marker = f"{AI_TRANSLATION_MARKER}\n\n"
 
-    return f"""# AI Agent Operating Manual
+    return f"""# AI Smart Superpowers for Onboarding Manual
 
 {marker}> {note.replace(chr(10), chr(10) + '> ')}
+
+## Overview
+
+{overview}
 
 ## Purpose of this language folder
 
 {purpose}
+
+## Where This Fits
+
+{fit}
+
+`Superpowers-style` is used descriptively and does not imply compatibility, endorsement or integration with `obra/superpowers`.
+
+## Target Output
+
+{target_output}
+
+## Quickstart
+
+{quickstart}
+
+## Source Of Truth And Links
+
+{source_links}
+
+## Workflow
+
+{workflow}
+
+## When To Use
+
+{when_to_use}
+
+## When Not To Use
+
+{when_not_to_use}
 
 ## English source of truth
 
@@ -2436,7 +2549,7 @@ def _render_language_root_readme(language: str) -> str:
 
 {usage}
 
-## Folder overview
+## Manual Structure
 
 {folder_table}
 

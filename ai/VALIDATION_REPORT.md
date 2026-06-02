@@ -11,6 +11,8 @@ Status: **PASS**
 - english_source_markdown_files: 260
 - missing_mirrored_ai_files: 0
 - broken_local_markdown_links: 0
+- broken_local_html_links: 0
+- broken_local_heading_anchors: 0
 - markdown_files_without_h1: 0
 - empty_files: 0
 - directories_without_readme: 0
@@ -28,12 +30,16 @@ Status: **PASS**
 - scaffold_or_unreviewed_translation_files: 0
 - incomplete_language_readmes: 0
 - language_readmes_missing_required_sections: 0
+- language_readme_heading_mismatches: 0
+- language_readmes_missing_required_concepts: 0
 - language_readmes_missing_standard_subfolders: 0
 
 ## Details
 
 - missing_mirrors: 0
 - broken_links: 0
+- broken_html_links: 0
+- broken_heading_anchors: 0
 - missing_h1: 0
 - empty_files: 0
 - dirs_without_readme: 0
@@ -50,5 +56,7 @@ Status: **PASS**
 - translation_mirror_placeholder_files_sample: 0
 - incomplete_language_readmes: 0
 - language_readmes_missing_required_sections: 0
+- language_readme_heading_mismatches: 0
+- language_readmes_missing_required_concepts: 0
 - language_readmes_missing_standard_subfolders: 0
 - language_readmes_missing_translation_marker: 0

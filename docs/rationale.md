@@ -1,8 +1,8 @@
 # Rationale
 
-AI-assisted coding works best when agents have stable, verifiable and scoped repository context.
+AI-assisted coding works best when agents have stable, verifiable and scoped repository context before they start planning, coding, testing or reviewing changes.
 
-This standard exists because many AI coding failures are not caused by model capability alone. They are caused by missing project context, unclear boundaries, weak verification and overloaded instruction files.
+This standard exists as an evidence-first Pre-Development Onboarding layer because many AI coding failures are not caused by model capability alone. They are caused by missing project context, unclear boundaries, weak verification and overloaded instruction files.
 
 ## Goals
 
