@@ -38,7 +38,7 @@ It turns repository evidence into a persistent `docs/ai/` knowledge base so futu
 
 ## Contents
 
-[`Overview`](#overview) · [`Where This Fits`](#where-this-fits) · [`Target Output`](#target-output) · [`Quickstart`](#quickstart) · [`Workflow`](#workflow) · [`When To Use`](#when-to-use) · [`Languages`](#multilingual-ai-manual) · [`Validation`](#validation) · [`Security`](#security-model)
+[`Overview`](#overview) · [`Where This Fits`](#where-this-fits) · [`Target Output`](#target-output) · [`Quickstart`](#quickstart) · [`Typical Session`](#typical-session) · [`Tool Usage`](#use-with-your-ai-coding-tool) · [`Workflow`](#workflow) · [`When To Use`](#when-to-use) · [`Languages`](#multilingual-ai-manual) · [`Validation`](#validation) · [`Security`](#security-model)
 
 ## Overview
 
@@ -114,6 +114,24 @@ Local checks:    python -m unittest discover -s tests
 ```
 
 No package installation is required to use the prompt standard. Python is only needed for this repository's maintenance checks.
+
+## Typical Session
+
+1. Start with an unfamiliar or outdated repository.
+2. Give `templates/MASTER_PROMPT.en.md` to your AI coding agent.
+3. The agent inspects repository evidence and proposes a `docs/ai/` documentation plan.
+4. A human reviews the plan.
+5. The agent creates or updates `docs/ai/`.
+6. Future AI sessions load `docs/ai/` before planning or coding.
+7. After significant changes, update `PROJECT_MEMORY.md` and `CHANGELOG_AI.md`.
+
+## Use With Your AI Coding Tool
+
+This repository is tool-neutral. Use the master prompt and `docs/ai/` knowledge base with the coding agent or IDE assistant of your choice.
+
+Start with [`templates/MASTER_PROMPT.en.md`](templates/MASTER_PROMPT.en.md), then use `docs/ai/` as reviewed context before future coding tasks.
+
+For a compact runbook, see [`docs/usage/README.md`](docs/usage/README.md). For structured agent workflows, see [`agent-workflows/`](agent-workflows/README.md).
 
 ## Workflow
 
@@ -192,6 +210,8 @@ The multilingual manual is organized under `ai/`. English is authoritative. Non-
 | Primary onboarding prompt | [`templates/MASTER_PROMPT.en.md`](templates/MASTER_PROMPT.en.md) |
 | German workflow prompt | [`templates/MASTER_PROMPT.md`](templates/MASTER_PROMPT.md) |
 | Target-repository document templates | [`templates/docs-ai/`](templates/docs-ai/) |
+| Structured agent workflows | [`agent-workflows/`](agent-workflows/README.md) |
+| Tool usage guide | [`docs/usage/README.md`](docs/usage/README.md) |
 | Optional prompt-refinement template | [`templates/optional/MAGICAL_PROMPT_IMPROVER.md`](templates/optional/MAGICAL_PROMPT_IMPROVER.md) |
 | Public project overview | [`README.md`](README.md) |
 | AI manual source language | [`ai/English/`](ai/English/) |
@@ -210,9 +230,11 @@ If localized documentation conflicts with English, the English source wins until
 .
 ├─ AGENTS.md                     # Short repository instructions for coding agents
 ├─ README.md                     # Public GitHub entrypoint
+├─ agent-workflows/              # Short structured workflows for AI agents
 ├─ templates/                    # Master prompts and target-repository templates
 ├─ ai/                           # Multilingual AI-agent manual
 ├─ docs/                         # Supporting project documentation
+│  └─ usage/                     # Tool-neutral usage guide for AI coding tools
 ├─ examples/                     # Minimal, stack-specific and multi-agent examples
 ├─ scripts/                      # Validation and AI manual refresh scripts
 ├─ tests/                        # Unit tests for maintenance scripts
