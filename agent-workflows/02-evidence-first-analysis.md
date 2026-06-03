@@ -42,6 +42,7 @@ Gather repository facts from evidence and keep uncertainty visible.
 
 - Do not expose secret values found during inspection.
 - Summarize sensitive patterns without copying sensitive data.
+- Do not make architecture, security or production-readiness claims without evidence.
 - Treat private, customer, financial or personal data as out of scope unless the user explicitly approves safe redacted handling.
 
 ## Human Review Checkpoint

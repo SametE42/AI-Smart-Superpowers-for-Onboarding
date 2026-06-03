@@ -25,6 +25,7 @@ Approve the `docs/ai/` creation or update plan before the agent writes durable r
 - Uncertainties are visible.
 - The proposed files are necessary and not duplicative.
 - The scope is realistic.
+- The proposed documentation scope is not unnecessarily large.
 - Security-sensitive areas are handled conservatively.
 
 ### Pass Criteria
@@ -55,6 +56,7 @@ Review generated or updated `docs/ai/` files before future sessions use them as 
 - `[UNKNOWN]`, `[ASSUMPTION]` and `[PARTIALLY REVIEWED]` markers are accurate.
 - No secrets are documented.
 - Architecture and security statements are not overstated.
+- Unreviewed areas are visibly marked.
 - Security rules, review boundaries and sensitive-data handling are explicit.
 
 ### Pass Criteria
@@ -89,6 +91,7 @@ Decide whether planning, implementation, tests or review can begin.
 - Security boundaries are clear.
 - Review criteria are known.
 - Blocking unknowns are visible.
+- Coding remains reasonable despite any unresolved uncertainty.
 - Security or privacy-sensitive work has explicit approval.
 
 ### Pass Criteria
@@ -122,6 +125,7 @@ Confirm durable memory is refreshed after significant changes before the session
 - New decisions are documented.
 - New risks, decisions and open questions are visible.
 - Assumptions and risks are current.
+- Relevant intentionally unchanged areas are documented.
 
 ### Pass Criteria
 

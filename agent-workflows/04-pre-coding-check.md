@@ -30,7 +30,7 @@ Confirm that repository context is ready before planning, implementation, testin
 
 ## Expected Output
 
-- A short go/no-go decision for coding.
+- A clear result: `Pass`, `Revise`, `Block` or `Escalate`.
 - Required context files and evidence sources.
 - Test and validation commands to run.
 - Any blockers requiring human decision.

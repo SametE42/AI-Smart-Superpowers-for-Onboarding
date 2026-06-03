@@ -4,7 +4,7 @@
 
 Explain how to use this tool-neutral onboarding standard with AI coding agents and IDE assistants.
 
-This guide is not a plugin, official integration, compatibility certification or tool endorsement.
+This guide is not a plugin, official integration, compatibility certification, tool endorsement or tool-specific feature claim.
 
 ## Minimal Flow
 
