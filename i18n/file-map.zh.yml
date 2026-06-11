@@ -1,0 +1,34 @@
+schema_version: 1
+language: zh
+language_name: Chinese
+source_folder: ai/Chinese
+docs_directory: docs/ai-zh
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: ZH_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: ZH_MASTER_SYSTEM.md
+  ONBOARDING.md: ZH_ONBOARDING.md
+  ARCHITECTURE.md: ZH_ARCHITECTURE.md
+  TECH_STACK.md: ZH_TECH_STACK.md
+  BUILD_AND_TEST.md: ZH_BUILD_AND_TEST.md
+  DEPENDENCIES.md: ZH_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: ZH_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: ZH_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: ZH_PROJECT_MEMORY.md
+  DECISIONS.md: ZH_DECISIONS.md
+  STYLE_GUIDE.md: ZH_STYLE_GUIDE.md
+  SECURITY_RULES.md: ZH_SECURITY_RULES.md
+  RISK_REGISTER.md: ZH_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: ZH_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: ZH_ERROR_PATTERNS.md
+  TASK_SCOPING.md: ZH_TASK_SCOPING.md
+  FRESHNESS.md: ZH_FRESHNESS.md
+  AGENT_ROLES.md: ZH_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: ZH_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: ZH_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

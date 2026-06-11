@@ -1,0 +1,34 @@
+schema_version: 1
+language: ur
+language_name: Urdu
+source_folder: ai/Urdu
+docs_directory: docs/ai-ur
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: UR_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: UR_MASTER_SYSTEM.md
+  ONBOARDING.md: UR_ONBOARDING.md
+  ARCHITECTURE.md: UR_ARCHITECTURE.md
+  TECH_STACK.md: UR_TECH_STACK.md
+  BUILD_AND_TEST.md: UR_BUILD_AND_TEST.md
+  DEPENDENCIES.md: UR_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: UR_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: UR_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: UR_PROJECT_MEMORY.md
+  DECISIONS.md: UR_DECISIONS.md
+  STYLE_GUIDE.md: UR_STYLE_GUIDE.md
+  SECURITY_RULES.md: UR_SECURITY_RULES.md
+  RISK_REGISTER.md: UR_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: UR_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: UR_ERROR_PATTERNS.md
+  TASK_SCOPING.md: UR_TASK_SCOPING.md
+  FRESHNESS.md: UR_FRESHNESS.md
+  AGENT_ROLES.md: UR_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: UR_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: UR_HUMAN_REVIEW_GATES.md
+review_notes:
+  - RTL language uses ASCII-safe filenames for Markdown and tooling stability.
+  - Linguistic filename review is still required.

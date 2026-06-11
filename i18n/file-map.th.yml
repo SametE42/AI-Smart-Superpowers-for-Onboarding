@@ -1,0 +1,34 @@
+schema_version: 1
+language: th
+language_name: Thai
+source_folder: ai/Thai
+docs_directory: docs/ai-th
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: TH_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: TH_MASTER_SYSTEM.md
+  ONBOARDING.md: TH_ONBOARDING.md
+  ARCHITECTURE.md: TH_ARCHITECTURE.md
+  TECH_STACK.md: TH_TECH_STACK.md
+  BUILD_AND_TEST.md: TH_BUILD_AND_TEST.md
+  DEPENDENCIES.md: TH_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: TH_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: TH_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: TH_PROJECT_MEMORY.md
+  DECISIONS.md: TH_DECISIONS.md
+  STYLE_GUIDE.md: TH_STYLE_GUIDE.md
+  SECURITY_RULES.md: TH_SECURITY_RULES.md
+  RISK_REGISTER.md: TH_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: TH_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: TH_ERROR_PATTERNS.md
+  TASK_SCOPING.md: TH_TASK_SCOPING.md
+  FRESHNESS.md: TH_FRESHNESS.md
+  AGENT_ROLES.md: TH_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: TH_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: TH_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

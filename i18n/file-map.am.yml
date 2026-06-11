@@ -1,0 +1,34 @@
+schema_version: 1
+language: am
+language_name: Amharic
+source_folder: ai/Amharic
+docs_directory: docs/ai-am
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: AM_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: AM_MASTER_SYSTEM.md
+  ONBOARDING.md: AM_ONBOARDING.md
+  ARCHITECTURE.md: AM_ARCHITECTURE.md
+  TECH_STACK.md: AM_TECH_STACK.md
+  BUILD_AND_TEST.md: AM_BUILD_AND_TEST.md
+  DEPENDENCIES.md: AM_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: AM_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: AM_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: AM_PROJECT_MEMORY.md
+  DECISIONS.md: AM_DECISIONS.md
+  STYLE_GUIDE.md: AM_STYLE_GUIDE.md
+  SECURITY_RULES.md: AM_SECURITY_RULES.md
+  RISK_REGISTER.md: AM_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: AM_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: AM_ERROR_PATTERNS.md
+  TASK_SCOPING.md: AM_TASK_SCOPING.md
+  FRESHNESS.md: AM_FRESHNESS.md
+  AGENT_ROLES.md: AM_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: AM_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: AM_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

@@ -1,0 +1,34 @@
+schema_version: 1
+language: zu
+language_name: Zulu
+source_folder: ai/Zulu
+docs_directory: docs/ai-zu
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: ZU_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: ZU_MASTER_SYSTEM.md
+  ONBOARDING.md: ZU_ONBOARDING.md
+  ARCHITECTURE.md: ZU_ARCHITECTURE.md
+  TECH_STACK.md: ZU_TECH_STACK.md
+  BUILD_AND_TEST.md: ZU_BUILD_AND_TEST.md
+  DEPENDENCIES.md: ZU_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: ZU_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: ZU_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: ZU_PROJECT_MEMORY.md
+  DECISIONS.md: ZU_DECISIONS.md
+  STYLE_GUIDE.md: ZU_STYLE_GUIDE.md
+  SECURITY_RULES.md: ZU_SECURITY_RULES.md
+  RISK_REGISTER.md: ZU_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: ZU_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: ZU_ERROR_PATTERNS.md
+  TASK_SCOPING.md: ZU_TASK_SCOPING.md
+  FRESHNESS.md: ZU_FRESHNESS.md
+  AGENT_ROLES.md: ZU_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: ZU_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: ZU_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

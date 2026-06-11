@@ -1,0 +1,34 @@
+schema_version: 1
+language: ga
+language_name: Irish
+source_folder: ai/Irish
+docs_directory: docs/ai-ga
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: GA_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: GA_MASTER_SYSTEM.md
+  ONBOARDING.md: GA_ONBOARDING.md
+  ARCHITECTURE.md: GA_ARCHITECTURE.md
+  TECH_STACK.md: GA_TECH_STACK.md
+  BUILD_AND_TEST.md: GA_BUILD_AND_TEST.md
+  DEPENDENCIES.md: GA_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: GA_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: GA_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: GA_PROJECT_MEMORY.md
+  DECISIONS.md: GA_DECISIONS.md
+  STYLE_GUIDE.md: GA_STYLE_GUIDE.md
+  SECURITY_RULES.md: GA_SECURITY_RULES.md
+  RISK_REGISTER.md: GA_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: GA_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: GA_ERROR_PATTERNS.md
+  TASK_SCOPING.md: GA_TASK_SCOPING.md
+  FRESHNESS.md: GA_FRESHNESS.md
+  AGENT_ROLES.md: GA_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: GA_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: GA_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

@@ -2,80 +2,44 @@
 
 **Last updated:** YYYY-MM-DD  
 **Status:** DRAFT  
-**Scope:** Code style, architecture style, naming, UI, logging, tests and documentation conventions.  
-**Created/updated by:** AI Assistant (Model: [MODEL], Run-ID: [RUN-ID])  
-***
+**Scope:** Project style and conventions.
 
-## Language
+## Naming
 
-- Documentation language: `[UNKNOWN]`
-- UI language: `[UNKNOWN]`
-- Code identifiers: `[UNKNOWN]`
-- Comments: `[UNKNOWN]`
+| Area | Convention | Evidence |
+|---|---|---|
+| Files | `[UNKNOWN]` | `[UNKNOWN]` |
+| Types/classes | `[UNKNOWN]` | `[UNKNOWN]` |
+| Functions | `[UNKNOWN]` | `[UNKNOWN]` |
+| Tests | `[UNKNOWN]` | `[UNKNOWN]` |
 
-## File naming and structure
+## Formatting
 
-| Type | Convention |
-|---|---|
-| Components | `[UNKNOWN]` |
-| Pages/routes | `[UNKNOWN]` |
-| Tests | `[UNKNOWN]` |
-| Types | `[UNKNOWN]` |
-| Services | `[UNKNOWN]` |
-| Repositories | `[UNKNOWN]` |
+- Formatter: `[UNKNOWN]`
+- Config file: `[UNKNOWN]`
+- Command: `[UNKNOWN]`
 
-## Layer rules
+## Code organization
 
-- `[UNKNOWN]`
-
-## UI rules
-
-- Empty states must be handled.
-- Destructive actions should require confirmation.
-- Disabled functions should be visibly unavailable.
-- User-facing errors should be neutral.
-- Technical stacktraces should not be shown to end users.
-
-## Domain and validation rules
-
-- Do not implement domain rules without source evidence.
-- Missing rules must be represented as `[UNKNOWN]`, warning, blocker or `not-configured`.
-- Centralize validation where possible.
-- Document field, code and severity if the local contract requires it.
-
-## Logging rules
-
-- Use central logging mechanisms where present.
-- Do not scatter debug output in production-adjacent code.
-- Do not log secrets, tokens, personal data or raw payloads.
-- Keep user-facing error messages neutral.
-
-## Export rules
-
-- Use central export helpers where present.
-- Export only approved columns.
-- Protect against spreadsheet formula injection.
-- Document encoding assumptions.
-- Log export errors without storing export payloads.
-
-## Test rules
-
-- Prefer test-first for risky changes.
-- Add unit/service tests for domain, data and shared logic.
-- Add UI tests for validation, dialogs, destructive actions and empty states.
-- Add E2E smoke tests for core user flows where relevant.
-- Test data must be synthetic.
-
-## DTO and API conventions
-
-- Keep transport DTOs separate from UI/domain types when applicable.
-- Model adapter results explicitly: success, not-found, validation, conflict and technical error.
-- Treat server-side validation as authoritative in production systems.
+- Source layout: `[UNKNOWN]`
+- Module boundaries: `[UNKNOWN]`
+- Shared utilities: `[UNKNOWN]`
+- Generated files: `[UNKNOWN]`
 
 ## Documentation style
 
-- Name concrete files, risks and decisions.
+- Keep claims evidence-based.
+- Mark missing facts as `[UNKNOWN]`.
+- Mark plausible but unverified conclusions as `[ASSUMPTION: ...]`.
 - Avoid generic filler.
-- Document assumptions with reason and risk.
-- State production status explicitly.
-- Check attribution/license docs when adding external material.
+
+## Test style
+
+- Test framework: `[UNKNOWN]`
+- Test file naming: `[UNKNOWN]`
+- Fixture strategy: `[UNKNOWN]`
+- Required checks before merge: `[UNKNOWN]`
+
+## Commit or PR style
+
+`[UNKNOWN]`

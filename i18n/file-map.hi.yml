@@ -1,0 +1,34 @@
+schema_version: 1
+language: hi
+language_name: Hindi
+source_folder: ai/Hindi
+docs_directory: docs/ai-hi
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: HI_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: HI_MASTER_SYSTEM.md
+  ONBOARDING.md: HI_ONBOARDING.md
+  ARCHITECTURE.md: HI_ARCHITECTURE.md
+  TECH_STACK.md: HI_TECH_STACK.md
+  BUILD_AND_TEST.md: HI_BUILD_AND_TEST.md
+  DEPENDENCIES.md: HI_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: HI_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: HI_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: HI_PROJECT_MEMORY.md
+  DECISIONS.md: HI_DECISIONS.md
+  STYLE_GUIDE.md: HI_STYLE_GUIDE.md
+  SECURITY_RULES.md: HI_SECURITY_RULES.md
+  RISK_REGISTER.md: HI_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: HI_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: HI_ERROR_PATTERNS.md
+  TASK_SCOPING.md: HI_TASK_SCOPING.md
+  FRESHNESS.md: HI_FRESHNESS.md
+  AGENT_ROLES.md: HI_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: HI_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: HI_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

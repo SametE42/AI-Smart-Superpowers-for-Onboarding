@@ -1,0 +1,47 @@
+name: Validate AI docs
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate-ai-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.x"
+
+      - name: Run unit tests
+        run: python -m unittest discover -s tests
+
+      - name: Validate repository
+        run: python scripts/validate_repository.py --root .
+
+      - name: Validate language support
+        run: python scripts/check_language_support.py --root .
+
+      - name: Validate localized output
+        run: python scripts/check_localized_output.py --root .
+
+      - name: Validate file maps
+        run: python scripts/check_file_map_schema.py --root .
+
+      - name: Validate stack context
+        run: python scripts/check_stack_context.py --root .
+
+      - name: Validate tool entrypoints
+        run: python scripts/check_tool_entrypoints.py --root .
+
+      - name: Check context budget
+        run: python scripts/check_context_budget.py --root .

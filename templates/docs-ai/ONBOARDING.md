@@ -2,71 +2,71 @@
 
 **Last updated:** YYYY-MM-DD  
 **Status:** DRAFT  
-**Scope:** Setup, local operation, commands and first steps for new contributors and AI agents.  
-**Created/updated by:** AI Assistant (Model: [MODEL], Run-ID: [RUN-ID])  
-***
+**Scope:** First-pass repository scan and setup notes.
 
-## Project commands
+## Repository scan checklist
 
-| Purpose | Command | When to run | Expected result |
+- [ ] Identify repository purpose from README, docs and source layout.
+- [ ] Identify important entrypoints.
+- [ ] Identify generated, vendor or build output folders.
+- [ ] Identify security-sensitive files and configuration.
+- [ ] Record unknowns instead of guessing.
+
+## Architecture discovery
+
+| Area | Evidence source | Notes |
+|---|---|---|
+| System overview | `[UNKNOWN]` | `[UNKNOWN]` |
+| Main modules | `[UNKNOWN]` | `[UNKNOWN]` |
+| Boundaries | `[UNKNOWN]` | `[UNKNOWN]` |
+| Data flow | `[UNKNOWN]` | `[UNKNOWN]` |
+
+## Language and stack discovery
+
+Look for evidence for Python, JavaScript, TypeScript, Java, C#, Go, Rust, PHP, Ruby, Kotlin, Swift, C/C++, frontend, backend, fullstack, monorepo, Infrastructure-as-Code and documentation-only projects.
+
+| Signal | Evidence | Interpretation |
+|---|---|---|
+| Programming languages | `[UNKNOWN]` | `[UNKNOWN]` |
+| Frameworks | `[UNKNOWN]` | `[UNKNOWN]` |
+| Package managers | `[UNKNOWN]` | `[UNKNOWN]` |
+| Build systems | `[UNKNOWN]` | `[UNKNOWN]` |
+| Test tools | `[UNKNOWN]` | `[UNKNOWN]` |
+
+## Dependencies
+
+- Dependency files: `[UNKNOWN]`
+- Lockfiles: `[UNKNOWN]`
+- Internal dependencies: `[UNKNOWN]`
+- External dependencies: `[UNKNOWN]`
+- Risky dependencies: `[UNKNOWN]`
+
+## Tests and checks
+
+| Purpose | Command | Evidence | Status |
 |---|---|---|---|
-| Runtime / package manager | `[UNKNOWN]` | Project analysis | Basis for setup and run commands |
-| Install dependencies | `[UNKNOWN]` | After clone | Dependencies installed |
-| Start dev server | `[UNKNOWN]` | Local development | App/API runs locally |
-| Run tests | `[UNKNOWN]` | Before PR | Tests pass |
-| Run linting | `[UNKNOWN]` | Before commit | No lint errors |
-| Check build | `[UNKNOWN]` | Before merge/release | Build succeeds |
-| Full check | `[UNKNOWN]` | Before release | Required checks pass |
+| Install | `[UNKNOWN]` | `[UNKNOWN]` | Unknown |
+| Build | `[UNKNOWN]` | `[UNKNOWN]` | Unknown |
+| Test | `[UNKNOWN]` | `[UNKNOWN]` | Unknown |
+| Lint | `[UNKNOWN]` | `[UNKNOWN]` | Unknown |
+| Format | `[UNKNOWN]` | `[UNKNOWN]` | Unknown |
 
-## Requirements
+## Configuration
 
-- `[UNKNOWN]`
+- Runtime configuration: `[UNKNOWN]`
+- Environment variables: `[UNKNOWN]`
+- CI/CD files: `[UNKNOWN]`
+- Deployment hints: `[UNKNOWN]`
 
-## Setup
+## Risks
 
-```bash
-[UNKNOWN]
-```
+- Security risks: `[UNKNOWN]`
+- Data risks: `[UNKNOWN]`
+- Runtime risks: `[UNKNOWN]`
+- Documentation freshness risks: `[UNKNOWN]`
 
-## Local start
+## Unknowns
 
-```bash
-[UNKNOWN]
-```
-
-## Tests
-
-```bash
-[UNKNOWN]
-```
-
-## Build
-
-```bash
-[UNKNOWN]
-```
-
-## Before first commit
-
-- [ ] Linter/checks green or reason documented.
-- [ ] Tests green or reason documented.
-- [ ] No secrets in diff.
-- [ ] No generated artifacts committed.
-- [ ] PR template can be filled.
-- [ ] AI-assisted changes marked if relevant.
-
-## First useful tasks for new contributors
+List unknowns that must not be guessed.
 
 - `[UNKNOWN]`
-
-## Recommended reading order
-
-1. `MASTER_SYSTEM.md`
-2. `ARCHITECTURE.md`
-3. `STYLE_GUIDE.md`
-4. `REVIEW_CHECKLIST.md`
-5. `DOMAIN_KNOWLEDGE.md`
-6. `SECURITY_RULES.md`
-7. `ERROR_PATTERNS.md`
-8. `PROJECT_MEMORY.md`
-9. `CHANGELOG_AI.md`

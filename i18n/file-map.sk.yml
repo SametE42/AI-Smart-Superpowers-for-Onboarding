@@ -1,0 +1,34 @@
+schema_version: 1
+language: sk
+language_name: Slovak
+source_folder: ai/Slovak
+docs_directory: docs/ai-sk
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: SK_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: SK_MASTER_SYSTEM.md
+  ONBOARDING.md: SK_ONBOARDING.md
+  ARCHITECTURE.md: SK_ARCHITECTURE.md
+  TECH_STACK.md: SK_TECH_STACK.md
+  BUILD_AND_TEST.md: SK_BUILD_AND_TEST.md
+  DEPENDENCIES.md: SK_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: SK_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: SK_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: SK_PROJECT_MEMORY.md
+  DECISIONS.md: SK_DECISIONS.md
+  STYLE_GUIDE.md: SK_STYLE_GUIDE.md
+  SECURITY_RULES.md: SK_SECURITY_RULES.md
+  RISK_REGISTER.md: SK_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: SK_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: SK_ERROR_PATTERNS.md
+  TASK_SCOPING.md: SK_TASK_SCOPING.md
+  FRESHNESS.md: SK_FRESHNESS.md
+  AGENT_ROLES.md: SK_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: SK_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: SK_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

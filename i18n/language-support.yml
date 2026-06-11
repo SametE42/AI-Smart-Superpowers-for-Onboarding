@@ -1,0 +1,828 @@
+# Generated from existing ai/<Language>/ folders.
+# Functional support and linguistic review quality are tracked separately.
+languages:
+  af:
+    name: Afrikaans
+    source_folder: Afrikaans
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.af.yml
+    docs_directory: docs/ai-af
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  sq:
+    name: Albanian
+    source_folder: Albanian
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.sq.yml
+    docs_directory: docs/ai-sq
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  am:
+    name: Amharic
+    source_folder: Amharic
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.am.yml
+    docs_directory: docs/ai-am
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  ar:
+    name: Arabic
+    source_folder: Arabic
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.ar.yml
+    docs_directory: docs/ai-ar
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required. Uses ASCII-safe filenames for tooling stability.
+  hy:
+    name: Armenian
+    source_folder: Armenian
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.hy.yml
+    docs_directory: docs/ai-hy
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  az:
+    name: Azerbaijani
+    source_folder: Azerbaijani
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.az.yml
+    docs_directory: docs/ai-az
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  eu:
+    name: Basque
+    source_folder: Basque
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.eu.yml
+    docs_directory: docs/ai-eu
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  bn:
+    name: Bengali
+    source_folder: Bengali
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.bn.yml
+    docs_directory: docs/ai-bn
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  bs:
+    name: Bosnian
+    source_folder: Bosnian
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.bs.yml
+    docs_directory: docs/ai-bs
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  bg:
+    name: Bulgarian
+    source_folder: Bulgarian
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.bg.yml
+    docs_directory: docs/ai-bg
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  my:
+    name: Burmese
+    source_folder: Burmese
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.my.yml
+    docs_directory: docs/ai-my
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  ca:
+    name: Catalan
+    source_folder: Catalan
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.ca.yml
+    docs_directory: docs/ai-ca
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  zh:
+    name: Chinese
+    source_folder: Chinese
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.zh.yml
+    docs_directory: docs/ai-zh
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  hr:
+    name: Croatian
+    source_folder: Croatian
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.hr.yml
+    docs_directory: docs/ai-hr
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  cs:
+    name: Czech
+    source_folder: Czech
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.cs.yml
+    docs_directory: docs/ai-cs
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  da:
+    name: Danish
+    source_folder: Danish
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.da.yml
+    docs_directory: docs/ai-da
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  nl:
+    name: Dutch
+    source_folder: Dutch
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.nl.yml
+    docs_directory: docs/ai-nl
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  en:
+    name: English
+    source_folder: English
+    output_support: complete
+    translation_review_status: reviewed
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.en.yml
+    docs_directory: docs/ai
+    agents_filename: AGENTS.md
+    notes: Canonical reference language.
+  et:
+    name: Estonian
+    source_folder: Estonian
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.et.yml
+    docs_directory: docs/ai-et
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  fi:
+    name: Finnish
+    source_folder: Finnish
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.fi.yml
+    docs_directory: docs/ai-fi
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  fr:
+    name: French
+    source_folder: French
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.fr.yml
+    docs_directory: docs/ai-fr
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  ka:
+    name: Georgian
+    source_folder: Georgian
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.ka.yml
+    docs_directory: docs/ai-ka
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  de:
+    name: German
+    source_folder: German
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.de.yml
+    docs_directory: docs/ki
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  el:
+    name: Greek
+    source_folder: Greek
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.el.yml
+    docs_directory: docs/ai-el
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  gu:
+    name: Gujarati
+    source_folder: Gujarati
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.gu.yml
+    docs_directory: docs/ai-gu
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  ha:
+    name: Hausa
+    source_folder: Hausa
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.ha.yml
+    docs_directory: docs/ai-ha
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  he:
+    name: Hebrew
+    source_folder: Hebrew
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.he.yml
+    docs_directory: docs/ai-he
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required. Uses ASCII-safe filenames for tooling stability.
+  hi:
+    name: Hindi
+    source_folder: Hindi
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.hi.yml
+    docs_directory: docs/ai-hi
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  hu:
+    name: Hungarian
+    source_folder: Hungarian
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.hu.yml
+    docs_directory: docs/ai-hu
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  is:
+    name: Icelandic
+    source_folder: Icelandic
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.is.yml
+    docs_directory: docs/ai-is
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  id:
+    name: Indonesian
+    source_folder: Indonesian
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.id.yml
+    docs_directory: docs/ai-id
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  ga:
+    name: Irish
+    source_folder: Irish
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.ga.yml
+    docs_directory: docs/ai-ga
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  it:
+    name: Italian
+    source_folder: Italian
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.it.yml
+    docs_directory: docs/ai-it
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  ja:
+    name: Japanese
+    source_folder: Japanese
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.ja.yml
+    docs_directory: docs/ai-ja
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  kn:
+    name: Kannada
+    source_folder: Kannada
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.kn.yml
+    docs_directory: docs/ai-kn
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  kk:
+    name: Kazakh
+    source_folder: Kazakh
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.kk.yml
+    docs_directory: docs/ai-kk
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  km:
+    name: Khmer
+    source_folder: Khmer
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.km.yml
+    docs_directory: docs/ai-km
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  ko:
+    name: Korean
+    source_folder: Korean
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.ko.yml
+    docs_directory: docs/ai-ko
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  ku:
+    name: Kurdish
+    source_folder: Kurdish
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.ku.yml
+    docs_directory: docs/ai-ku
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  lo:
+    name: Lao
+    source_folder: Lao
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.lo.yml
+    docs_directory: docs/ai-lo
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  lv:
+    name: Latvian
+    source_folder: Latvian
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.lv.yml
+    docs_directory: docs/ai-lv
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  lt:
+    name: Lithuanian
+    source_folder: Lithuanian
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.lt.yml
+    docs_directory: docs/ai-lt
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  mk:
+    name: Macedonian
+    source_folder: Macedonian
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.mk.yml
+    docs_directory: docs/ai-mk
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  ms:
+    name: Malay
+    source_folder: Malay
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.ms.yml
+    docs_directory: docs/ai-ms
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  ml:
+    name: Malayalam
+    source_folder: Malayalam
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.ml.yml
+    docs_directory: docs/ai-ml
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  mr:
+    name: Marathi
+    source_folder: Marathi
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.mr.yml
+    docs_directory: docs/ai-mr
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  mn:
+    name: Mongolian
+    source_folder: Mongolian
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.mn.yml
+    docs_directory: docs/ai-mn
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  ne:
+    name: Nepali
+    source_folder: Nepali
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.ne.yml
+    docs_directory: docs/ai-ne
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  no:
+    name: Norwegian
+    source_folder: Norwegian
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.no.yml
+    docs_directory: docs/ai-no
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  ps:
+    name: Pashto
+    source_folder: Pashto
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.ps.yml
+    docs_directory: docs/ai-ps
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required. Uses ASCII-safe filenames for tooling stability.
+  fa:
+    name: Persian
+    source_folder: Persian
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.fa.yml
+    docs_directory: docs/ai-fa
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required. Uses ASCII-safe filenames for tooling stability.
+  pl:
+    name: Polish
+    source_folder: Polish
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.pl.yml
+    docs_directory: docs/ai-pl
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  pt:
+    name: Portuguese
+    source_folder: Portuguese
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.pt.yml
+    docs_directory: docs/ai-pt
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  pa:
+    name: Punjabi
+    source_folder: Punjabi
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.pa.yml
+    docs_directory: docs/ai-pa
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  ro:
+    name: Romanian
+    source_folder: Romanian
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.ro.yml
+    docs_directory: docs/ai-ro
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  ru:
+    name: Russian
+    source_folder: Russian
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.ru.yml
+    docs_directory: docs/ai-ru
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  sr:
+    name: Serbian
+    source_folder: Serbian
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.sr.yml
+    docs_directory: docs/ai-sr
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  si:
+    name: Sinhala
+    source_folder: Sinhala
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.si.yml
+    docs_directory: docs/ai-si
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  sk:
+    name: Slovak
+    source_folder: Slovak
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.sk.yml
+    docs_directory: docs/ai-sk
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  sl:
+    name: Slovenian
+    source_folder: Slovenian
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.sl.yml
+    docs_directory: docs/ai-sl
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  so:
+    name: Somali
+    source_folder: Somali
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.so.yml
+    docs_directory: docs/ai-so
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  es:
+    name: Spanish
+    source_folder: Spanish
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.es.yml
+    docs_directory: docs/ai-es
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  sw:
+    name: Swahili
+    source_folder: Swahili
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.sw.yml
+    docs_directory: docs/ai-sw
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  sv:
+    name: Swedish
+    source_folder: Swedish
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.sv.yml
+    docs_directory: docs/ai-sv
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  tl:
+    name: Tagalog
+    source_folder: Tagalog
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.tl.yml
+    docs_directory: docs/ai-tl
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  ta:
+    name: Tamil
+    source_folder: Tamil
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.ta.yml
+    docs_directory: docs/ai-ta
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  te:
+    name: Telugu
+    source_folder: Telugu
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.te.yml
+    docs_directory: docs/ai-te
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  th:
+    name: Thai
+    source_folder: Thai
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.th.yml
+    docs_directory: docs/ai-th
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  ti:
+    name: Tigrinya
+    source_folder: Tigrinya
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.ti.yml
+    docs_directory: docs/ai-ti
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  tr:
+    name: Turkish
+    source_folder: Turkish
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.tr.yml
+    docs_directory: docs/ai-tr
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  uk:
+    name: Ukrainian
+    source_folder: Ukrainian
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.uk.yml
+    docs_directory: docs/ai-uk
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  ur:
+    name: Urdu
+    source_folder: Urdu
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.ur.yml
+    docs_directory: docs/ai-ur
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required. Uses ASCII-safe filenames for tooling stability.
+  uz:
+    name: Uzbek
+    source_folder: Uzbek
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.uz.yml
+    docs_directory: docs/ai-uz
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  vi:
+    name: Vietnamese
+    source_folder: Vietnamese
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.vi.yml
+    docs_directory: docs/ai-vi
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.
+  zu:
+    name: Zulu
+    source_folder: Zulu
+    output_support: complete
+    translation_review_status: machine_generated
+    canonical_structure: true
+    localized_structure: true
+    file_map: i18n/file-map.zu.yml
+    docs_directory: docs/ai-zu
+    agents_filename: AGENTS.md
+    notes: Functional output support complete. Linguistic review still required.

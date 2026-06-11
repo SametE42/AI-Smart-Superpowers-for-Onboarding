@@ -1,0 +1,34 @@
+schema_version: 1
+language: bg
+language_name: Bulgarian
+source_folder: ai/Bulgarian
+docs_directory: docs/ai-bg
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: BG_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: BG_MASTER_SYSTEM.md
+  ONBOARDING.md: BG_ONBOARDING.md
+  ARCHITECTURE.md: BG_ARCHITECTURE.md
+  TECH_STACK.md: BG_TECH_STACK.md
+  BUILD_AND_TEST.md: BG_BUILD_AND_TEST.md
+  DEPENDENCIES.md: BG_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: BG_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: BG_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: BG_PROJECT_MEMORY.md
+  DECISIONS.md: BG_DECISIONS.md
+  STYLE_GUIDE.md: BG_STYLE_GUIDE.md
+  SECURITY_RULES.md: BG_SECURITY_RULES.md
+  RISK_REGISTER.md: BG_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: BG_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: BG_ERROR_PATTERNS.md
+  TASK_SCOPING.md: BG_TASK_SCOPING.md
+  FRESHNESS.md: BG_FRESHNESS.md
+  AGENT_ROLES.md: BG_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: BG_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: BG_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

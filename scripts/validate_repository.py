@@ -242,7 +242,13 @@ def _read_text(path: Path) -> str:
 
 
 def _first_non_empty_line(text: str) -> str:
-    for line in text.splitlines():
+    lines = text.splitlines()
+    if lines and lines[0].lstrip("\ufeff") == "---":
+        for index, line in enumerate(lines[1:], start=1):
+            if line == "---":
+                lines = lines[index + 1 :]
+                break
+    for line in lines:
         if line.strip():
             return line.lstrip("\ufeff")
     return ""

@@ -1,0 +1,34 @@
+schema_version: 1
+language: tr
+language_name: Turkish
+source_folder: ai/Turkish
+docs_directory: docs/ai-tr
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: TR_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: TR_MASTER_SYSTEM.md
+  ONBOARDING.md: TR_ONBOARDING.md
+  ARCHITECTURE.md: TR_ARCHITECTURE.md
+  TECH_STACK.md: TR_TECH_STACK.md
+  BUILD_AND_TEST.md: TR_BUILD_AND_TEST.md
+  DEPENDENCIES.md: TR_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: TR_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: TR_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: TR_PROJECT_MEMORY.md
+  DECISIONS.md: TR_DECISIONS.md
+  STYLE_GUIDE.md: TR_STYLE_GUIDE.md
+  SECURITY_RULES.md: TR_SECURITY_RULES.md
+  RISK_REGISTER.md: TR_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: TR_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: TR_ERROR_PATTERNS.md
+  TASK_SCOPING.md: TR_TASK_SCOPING.md
+  FRESHNESS.md: TR_FRESHNESS.md
+  AGENT_ROLES.md: TR_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: TR_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: TR_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

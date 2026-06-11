@@ -1,0 +1,34 @@
+schema_version: 1
+language: ja
+language_name: Japanese
+source_folder: ai/Japanese
+docs_directory: docs/ai-ja
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: JA_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: JA_MASTER_SYSTEM.md
+  ONBOARDING.md: JA_ONBOARDING.md
+  ARCHITECTURE.md: JA_ARCHITECTURE.md
+  TECH_STACK.md: JA_TECH_STACK.md
+  BUILD_AND_TEST.md: JA_BUILD_AND_TEST.md
+  DEPENDENCIES.md: JA_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: JA_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: JA_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: JA_PROJECT_MEMORY.md
+  DECISIONS.md: JA_DECISIONS.md
+  STYLE_GUIDE.md: JA_STYLE_GUIDE.md
+  SECURITY_RULES.md: JA_SECURITY_RULES.md
+  RISK_REGISTER.md: JA_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: JA_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: JA_ERROR_PATTERNS.md
+  TASK_SCOPING.md: JA_TASK_SCOPING.md
+  FRESHNESS.md: JA_FRESHNESS.md
+  AGENT_ROLES.md: JA_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: JA_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: JA_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

@@ -29,8 +29,19 @@ Copy only the entrypoints that match the tools used in your project:
 | `CLAUDE.md` | `CLAUDE.md` |
 | `GEMINI.md` | `GEMINI.md` |
 | `copilot-instructions.md` | `.github/copilot-instructions.md` |
+| `tool-entrypoints/AGENTS.md` | `AGENTS.md` |
+| `tool-entrypoints/CLAUDE.md` | `CLAUDE.md` |
+| `tool-entrypoints/GEMINI.md` | `GEMINI.md` |
+| `tool-entrypoints/COPILOT_INSTRUCTIONS.md` | `.github/copilot-instructions.md` |
+| `tool-entrypoints/CURSOR_RULES.md` | `.cursor/rules/ai-onboarding.md` |
+| `tool-entrypoints/CLINE_RULES.md` | Cline project rules |
+| `tool-entrypoints/AIDER_NOTES.md` | Aider repository notes |
+| `tool-entrypoints/OPENCODE.md` | `OPENCODE.md` |
+| `tool-entrypoints/COMMANDCODE_SKILL.md` | Skill-style workflow template |
 
 Tool entrypoints should stay short. They should link to `/docs/ai/` instead of duplicating long documentation.
+
+The grouped templates live in `templates/tool-entrypoints/` and include localized-structure guidance through File-Maps.
 
 ## AI documentation templates
 
@@ -63,6 +74,7 @@ See:
 
 ```text
 templates/skills/README.md
+skills/README.md
 ```
 
 Skills, subagents, hooks, MCP servers and plugins are optional extensions, not baseline requirements.

@@ -1,0 +1,34 @@
+schema_version: 1
+language: mn
+language_name: Mongolian
+source_folder: ai/Mongolian
+docs_directory: docs/ai-mn
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: MN_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: MN_MASTER_SYSTEM.md
+  ONBOARDING.md: MN_ONBOARDING.md
+  ARCHITECTURE.md: MN_ARCHITECTURE.md
+  TECH_STACK.md: MN_TECH_STACK.md
+  BUILD_AND_TEST.md: MN_BUILD_AND_TEST.md
+  DEPENDENCIES.md: MN_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: MN_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: MN_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: MN_PROJECT_MEMORY.md
+  DECISIONS.md: MN_DECISIONS.md
+  STYLE_GUIDE.md: MN_STYLE_GUIDE.md
+  SECURITY_RULES.md: MN_SECURITY_RULES.md
+  RISK_REGISTER.md: MN_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: MN_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: MN_ERROR_PATTERNS.md
+  TASK_SCOPING.md: MN_TASK_SCOPING.md
+  FRESHNESS.md: MN_FRESHNESS.md
+  AGENT_ROLES.md: MN_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: MN_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: MN_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

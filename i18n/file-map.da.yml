@@ -1,0 +1,34 @@
+schema_version: 1
+language: da
+language_name: Danish
+source_folder: ai/Danish
+docs_directory: docs/ai-da
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: DA_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: DA_MASTER_SYSTEM.md
+  ONBOARDING.md: DA_ONBOARDING.md
+  ARCHITECTURE.md: DA_ARCHITECTURE.md
+  TECH_STACK.md: DA_TECH_STACK.md
+  BUILD_AND_TEST.md: DA_BUILD_AND_TEST.md
+  DEPENDENCIES.md: DA_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: DA_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: DA_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: DA_PROJECT_MEMORY.md
+  DECISIONS.md: DA_DECISIONS.md
+  STYLE_GUIDE.md: DA_STYLE_GUIDE.md
+  SECURITY_RULES.md: DA_SECURITY_RULES.md
+  RISK_REGISTER.md: DA_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: DA_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: DA_ERROR_PATTERNS.md
+  TASK_SCOPING.md: DA_TASK_SCOPING.md
+  FRESHNESS.md: DA_FRESHNESS.md
+  AGENT_ROLES.md: DA_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: DA_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: DA_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

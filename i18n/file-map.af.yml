@@ -1,0 +1,34 @@
+schema_version: 1
+language: af
+language_name: Afrikaans
+source_folder: ai/Afrikaans
+docs_directory: docs/ai-af
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: AF_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: AF_MASTER_SYSTEM.md
+  ONBOARDING.md: AF_ONBOARDING.md
+  ARCHITECTURE.md: AF_ARCHITECTURE.md
+  TECH_STACK.md: AF_TECH_STACK.md
+  BUILD_AND_TEST.md: AF_BUILD_AND_TEST.md
+  DEPENDENCIES.md: AF_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: AF_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: AF_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: AF_PROJECT_MEMORY.md
+  DECISIONS.md: AF_DECISIONS.md
+  STYLE_GUIDE.md: AF_STYLE_GUIDE.md
+  SECURITY_RULES.md: AF_SECURITY_RULES.md
+  RISK_REGISTER.md: AF_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: AF_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: AF_ERROR_PATTERNS.md
+  TASK_SCOPING.md: AF_TASK_SCOPING.md
+  FRESHNESS.md: AF_FRESHNESS.md
+  AGENT_ROLES.md: AF_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: AF_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: AF_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

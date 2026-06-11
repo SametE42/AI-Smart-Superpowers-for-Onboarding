@@ -1,0 +1,34 @@
+schema_version: 1
+language: gu
+language_name: Gujarati
+source_folder: ai/Gujarati
+docs_directory: docs/ai-gu
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: GU_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: GU_MASTER_SYSTEM.md
+  ONBOARDING.md: GU_ONBOARDING.md
+  ARCHITECTURE.md: GU_ARCHITECTURE.md
+  TECH_STACK.md: GU_TECH_STACK.md
+  BUILD_AND_TEST.md: GU_BUILD_AND_TEST.md
+  DEPENDENCIES.md: GU_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: GU_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: GU_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: GU_PROJECT_MEMORY.md
+  DECISIONS.md: GU_DECISIONS.md
+  STYLE_GUIDE.md: GU_STYLE_GUIDE.md
+  SECURITY_RULES.md: GU_SECURITY_RULES.md
+  RISK_REGISTER.md: GU_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: GU_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: GU_ERROR_PATTERNS.md
+  TASK_SCOPING.md: GU_TASK_SCOPING.md
+  FRESHNESS.md: GU_FRESHNESS.md
+  AGENT_ROLES.md: GU_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: GU_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: GU_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

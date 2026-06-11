@@ -1,0 +1,34 @@
+schema_version: 1
+language: es
+language_name: Spanish
+source_folder: ai/Spanish
+docs_directory: docs/ai-es
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: ES_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: ES_MASTER_SYSTEM.md
+  ONBOARDING.md: ES_ONBOARDING.md
+  ARCHITECTURE.md: ES_ARCHITECTURE.md
+  TECH_STACK.md: ES_TECH_STACK.md
+  BUILD_AND_TEST.md: ES_BUILD_AND_TEST.md
+  DEPENDENCIES.md: ES_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: ES_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: ES_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: ES_PROJECT_MEMORY.md
+  DECISIONS.md: ES_DECISIONS.md
+  STYLE_GUIDE.md: ES_STYLE_GUIDE.md
+  SECURITY_RULES.md: ES_SECURITY_RULES.md
+  RISK_REGISTER.md: ES_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: ES_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: ES_ERROR_PATTERNS.md
+  TASK_SCOPING.md: ES_TASK_SCOPING.md
+  FRESHNESS.md: ES_FRESHNESS.md
+  AGENT_ROLES.md: ES_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: ES_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: ES_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

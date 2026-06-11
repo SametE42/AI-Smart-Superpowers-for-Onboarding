@@ -1,0 +1,34 @@
+schema_version: 1
+language: ha
+language_name: Hausa
+source_folder: ai/Hausa
+docs_directory: docs/ai-ha
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: HA_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: HA_MASTER_SYSTEM.md
+  ONBOARDING.md: HA_ONBOARDING.md
+  ARCHITECTURE.md: HA_ARCHITECTURE.md
+  TECH_STACK.md: HA_TECH_STACK.md
+  BUILD_AND_TEST.md: HA_BUILD_AND_TEST.md
+  DEPENDENCIES.md: HA_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: HA_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: HA_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: HA_PROJECT_MEMORY.md
+  DECISIONS.md: HA_DECISIONS.md
+  STYLE_GUIDE.md: HA_STYLE_GUIDE.md
+  SECURITY_RULES.md: HA_SECURITY_RULES.md
+  RISK_REGISTER.md: HA_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: HA_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: HA_ERROR_PATTERNS.md
+  TASK_SCOPING.md: HA_TASK_SCOPING.md
+  FRESHNESS.md: HA_FRESHNESS.md
+  AGENT_ROLES.md: HA_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: HA_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: HA_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

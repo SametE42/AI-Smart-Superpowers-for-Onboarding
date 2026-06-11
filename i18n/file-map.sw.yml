@@ -1,0 +1,34 @@
+schema_version: 1
+language: sw
+language_name: Swahili
+source_folder: ai/Swahili
+docs_directory: docs/ai-sw
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: SW_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: SW_MASTER_SYSTEM.md
+  ONBOARDING.md: SW_ONBOARDING.md
+  ARCHITECTURE.md: SW_ARCHITECTURE.md
+  TECH_STACK.md: SW_TECH_STACK.md
+  BUILD_AND_TEST.md: SW_BUILD_AND_TEST.md
+  DEPENDENCIES.md: SW_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: SW_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: SW_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: SW_PROJECT_MEMORY.md
+  DECISIONS.md: SW_DECISIONS.md
+  STYLE_GUIDE.md: SW_STYLE_GUIDE.md
+  SECURITY_RULES.md: SW_SECURITY_RULES.md
+  RISK_REGISTER.md: SW_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: SW_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: SW_ERROR_PATTERNS.md
+  TASK_SCOPING.md: SW_TASK_SCOPING.md
+  FRESHNESS.md: SW_FRESHNESS.md
+  AGENT_ROLES.md: SW_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: SW_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: SW_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

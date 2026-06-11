@@ -1,0 +1,34 @@
+schema_version: 1
+language: ne
+language_name: Nepali
+source_folder: ai/Nepali
+docs_directory: docs/ai-ne
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: NE_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: NE_MASTER_SYSTEM.md
+  ONBOARDING.md: NE_ONBOARDING.md
+  ARCHITECTURE.md: NE_ARCHITECTURE.md
+  TECH_STACK.md: NE_TECH_STACK.md
+  BUILD_AND_TEST.md: NE_BUILD_AND_TEST.md
+  DEPENDENCIES.md: NE_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: NE_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: NE_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: NE_PROJECT_MEMORY.md
+  DECISIONS.md: NE_DECISIONS.md
+  STYLE_GUIDE.md: NE_STYLE_GUIDE.md
+  SECURITY_RULES.md: NE_SECURITY_RULES.md
+  RISK_REGISTER.md: NE_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: NE_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: NE_ERROR_PATTERNS.md
+  TASK_SCOPING.md: NE_TASK_SCOPING.md
+  FRESHNESS.md: NE_FRESHNESS.md
+  AGENT_ROLES.md: NE_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: NE_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: NE_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

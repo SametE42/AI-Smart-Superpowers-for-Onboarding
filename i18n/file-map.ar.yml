@@ -1,0 +1,34 @@
+schema_version: 1
+language: ar
+language_name: Arabic
+source_folder: ai/Arabic
+docs_directory: docs/ai-ar
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: AR_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: AR_MASTER_SYSTEM.md
+  ONBOARDING.md: AR_ONBOARDING.md
+  ARCHITECTURE.md: AR_ARCHITECTURE.md
+  TECH_STACK.md: AR_TECH_STACK.md
+  BUILD_AND_TEST.md: AR_BUILD_AND_TEST.md
+  DEPENDENCIES.md: AR_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: AR_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: AR_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: AR_PROJECT_MEMORY.md
+  DECISIONS.md: AR_DECISIONS.md
+  STYLE_GUIDE.md: AR_STYLE_GUIDE.md
+  SECURITY_RULES.md: AR_SECURITY_RULES.md
+  RISK_REGISTER.md: AR_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: AR_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: AR_ERROR_PATTERNS.md
+  TASK_SCOPING.md: AR_TASK_SCOPING.md
+  FRESHNESS.md: AR_FRESHNESS.md
+  AGENT_ROLES.md: AR_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: AR_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: AR_HUMAN_REVIEW_GATES.md
+review_notes:
+  - RTL language uses ASCII-safe filenames for Markdown and tooling stability.
+  - Linguistic filename review is still required.

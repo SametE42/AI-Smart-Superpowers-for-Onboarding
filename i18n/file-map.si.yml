@@ -1,0 +1,34 @@
+schema_version: 1
+language: si
+language_name: Sinhala
+source_folder: ai/Sinhala
+docs_directory: docs/ai-si
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: SI_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: SI_MASTER_SYSTEM.md
+  ONBOARDING.md: SI_ONBOARDING.md
+  ARCHITECTURE.md: SI_ARCHITECTURE.md
+  TECH_STACK.md: SI_TECH_STACK.md
+  BUILD_AND_TEST.md: SI_BUILD_AND_TEST.md
+  DEPENDENCIES.md: SI_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: SI_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: SI_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: SI_PROJECT_MEMORY.md
+  DECISIONS.md: SI_DECISIONS.md
+  STYLE_GUIDE.md: SI_STYLE_GUIDE.md
+  SECURITY_RULES.md: SI_SECURITY_RULES.md
+  RISK_REGISTER.md: SI_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: SI_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: SI_ERROR_PATTERNS.md
+  TASK_SCOPING.md: SI_TASK_SCOPING.md
+  FRESHNESS.md: SI_FRESHNESS.md
+  AGENT_ROLES.md: SI_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: SI_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: SI_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

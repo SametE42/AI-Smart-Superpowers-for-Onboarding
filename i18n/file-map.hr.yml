@@ -1,0 +1,34 @@
+schema_version: 1
+language: hr
+language_name: Croatian
+source_folder: ai/Croatian
+docs_directory: docs/ai-hr
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: HR_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: HR_MASTER_SYSTEM.md
+  ONBOARDING.md: HR_ONBOARDING.md
+  ARCHITECTURE.md: HR_ARCHITECTURE.md
+  TECH_STACK.md: HR_TECH_STACK.md
+  BUILD_AND_TEST.md: HR_BUILD_AND_TEST.md
+  DEPENDENCIES.md: HR_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: HR_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: HR_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: HR_PROJECT_MEMORY.md
+  DECISIONS.md: HR_DECISIONS.md
+  STYLE_GUIDE.md: HR_STYLE_GUIDE.md
+  SECURITY_RULES.md: HR_SECURITY_RULES.md
+  RISK_REGISTER.md: HR_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: HR_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: HR_ERROR_PATTERNS.md
+  TASK_SCOPING.md: HR_TASK_SCOPING.md
+  FRESHNESS.md: HR_FRESHNESS.md
+  AGENT_ROLES.md: HR_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: HR_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: HR_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

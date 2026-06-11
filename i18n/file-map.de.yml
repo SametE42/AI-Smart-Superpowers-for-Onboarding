@@ -1,0 +1,33 @@
+schema_version: 1
+language: de
+language_name: German
+source_folder: ai/German
+docs_directory: docs/ki
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: KONTEXT_INDEX.md
+  MASTER_SYSTEM.md: SYSTEMREGELN.md
+  ONBOARDING.md: EINARBEITUNG.md
+  ARCHITECTURE.md: ARCHITEKTUR.md
+  TECH_STACK.md: TECHNOLOGIE_STACK.md
+  BUILD_AND_TEST.md: BUILD_UND_TESTS.md
+  DEPENDENCIES.md: ABHAENGIGKEITEN.md
+  RUNTIME_ENVIRONMENT.md: LAUFZEITUMGEBUNG.md
+  EVIDENCE_MAP.md: NACHWEISUEBERSICHT.md
+  PROJECT_MEMORY.md: PROJEKTWISSEN.md
+  DECISIONS.md: ENTSCHEIDUNGEN.md
+  STYLE_GUIDE.md: STILRICHTLINIEN.md
+  SECURITY_RULES.md: SICHERHEITSREGELN.md
+  RISK_REGISTER.md: RISIKOREGISTER.md
+  REVIEW_CHECKLIST.md: PRUEFCHECKLISTE.md
+  ERROR_PATTERNS.md: FEHLERMUSTER.md
+  TASK_SCOPING.md: AUFGABENABGRENZUNG.md
+  FRESHNESS.md: AKTUALITAET.md
+  AGENT_ROLES.md: AGENTENROLLEN.md
+  SAFETY_BOUNDARIES.md: SICHERHEITSGRENZEN.md
+  HUMAN_REVIEW_GATES.md: MENSCHLICHE_PRUEFPUNKTE.md
+review_notes:
+  - German localized filenames are ASCII-safe and require linguistic review before reviewed status.

@@ -1,0 +1,34 @@
+schema_version: 1
+language: te
+language_name: Telugu
+source_folder: ai/Telugu
+docs_directory: docs/ai-te
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: TE_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: TE_MASTER_SYSTEM.md
+  ONBOARDING.md: TE_ONBOARDING.md
+  ARCHITECTURE.md: TE_ARCHITECTURE.md
+  TECH_STACK.md: TE_TECH_STACK.md
+  BUILD_AND_TEST.md: TE_BUILD_AND_TEST.md
+  DEPENDENCIES.md: TE_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: TE_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: TE_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: TE_PROJECT_MEMORY.md
+  DECISIONS.md: TE_DECISIONS.md
+  STYLE_GUIDE.md: TE_STYLE_GUIDE.md
+  SECURITY_RULES.md: TE_SECURITY_RULES.md
+  RISK_REGISTER.md: TE_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: TE_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: TE_ERROR_PATTERNS.md
+  TASK_SCOPING.md: TE_TASK_SCOPING.md
+  FRESHNESS.md: TE_FRESHNESS.md
+  AGENT_ROLES.md: TE_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: TE_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: TE_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

@@ -1,0 +1,34 @@
+schema_version: 1
+language: pt
+language_name: Portuguese
+source_folder: ai/Portuguese
+docs_directory: docs/ai-pt
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: PT_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: PT_MASTER_SYSTEM.md
+  ONBOARDING.md: PT_ONBOARDING.md
+  ARCHITECTURE.md: PT_ARCHITECTURE.md
+  TECH_STACK.md: PT_TECH_STACK.md
+  BUILD_AND_TEST.md: PT_BUILD_AND_TEST.md
+  DEPENDENCIES.md: PT_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: PT_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: PT_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: PT_PROJECT_MEMORY.md
+  DECISIONS.md: PT_DECISIONS.md
+  STYLE_GUIDE.md: PT_STYLE_GUIDE.md
+  SECURITY_RULES.md: PT_SECURITY_RULES.md
+  RISK_REGISTER.md: PT_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: PT_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: PT_ERROR_PATTERNS.md
+  TASK_SCOPING.md: PT_TASK_SCOPING.md
+  FRESHNESS.md: PT_FRESHNESS.md
+  AGENT_ROLES.md: PT_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: PT_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: PT_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

@@ -1,0 +1,34 @@
+schema_version: 1
+language: ms
+language_name: Malay
+source_folder: ai/Malay
+docs_directory: docs/ai-ms
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: MS_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: MS_MASTER_SYSTEM.md
+  ONBOARDING.md: MS_ONBOARDING.md
+  ARCHITECTURE.md: MS_ARCHITECTURE.md
+  TECH_STACK.md: MS_TECH_STACK.md
+  BUILD_AND_TEST.md: MS_BUILD_AND_TEST.md
+  DEPENDENCIES.md: MS_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: MS_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: MS_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: MS_PROJECT_MEMORY.md
+  DECISIONS.md: MS_DECISIONS.md
+  STYLE_GUIDE.md: MS_STYLE_GUIDE.md
+  SECURITY_RULES.md: MS_SECURITY_RULES.md
+  RISK_REGISTER.md: MS_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: MS_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: MS_ERROR_PATTERNS.md
+  TASK_SCOPING.md: MS_TASK_SCOPING.md
+  FRESHNESS.md: MS_FRESHNESS.md
+  AGENT_ROLES.md: MS_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: MS_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: MS_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

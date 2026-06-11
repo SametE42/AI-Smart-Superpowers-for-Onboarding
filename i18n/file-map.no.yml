@@ -1,0 +1,34 @@
+schema_version: 1
+language: no
+language_name: Norwegian
+source_folder: ai/Norwegian
+docs_directory: docs/ai-no
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: NO_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: NO_MASTER_SYSTEM.md
+  ONBOARDING.md: NO_ONBOARDING.md
+  ARCHITECTURE.md: NO_ARCHITECTURE.md
+  TECH_STACK.md: NO_TECH_STACK.md
+  BUILD_AND_TEST.md: NO_BUILD_AND_TEST.md
+  DEPENDENCIES.md: NO_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: NO_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: NO_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: NO_PROJECT_MEMORY.md
+  DECISIONS.md: NO_DECISIONS.md
+  STYLE_GUIDE.md: NO_STYLE_GUIDE.md
+  SECURITY_RULES.md: NO_SECURITY_RULES.md
+  RISK_REGISTER.md: NO_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: NO_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: NO_ERROR_PATTERNS.md
+  TASK_SCOPING.md: NO_TASK_SCOPING.md
+  FRESHNESS.md: NO_FRESHNESS.md
+  AGENT_ROLES.md: NO_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: NO_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: NO_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

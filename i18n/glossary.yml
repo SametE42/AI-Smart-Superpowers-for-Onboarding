@@ -1,0 +1,1741 @@
+# Machine-readable localization glossary.
+# Non-English entries are placeholders unless reviewed elsewhere.
+terms:
+  agent:
+    notes: Use consistently for AI actor roles.
+    needs_review: true
+    translations:
+      af: Agent
+      sq: Agent
+      am: Agent
+      ar: Agent
+      hy: Agent
+      az: Agent
+      eu: Agent
+      bn: Agent
+      bs: Agent
+      bg: Agent
+      my: Agent
+      ca: Agent
+      zh: Agent
+      hr: Agent
+      cs: Agent
+      da: Agent
+      nl: Agent
+      en: Agent
+      et: Agent
+      fi: Agent
+      fr: Agent
+      ka: Agent
+      de: Agent
+      el: Agent
+      gu: Agent
+      ha: Agent
+      he: Agent
+      hi: Agent
+      hu: Agent
+      is: Agent
+      id: Agent
+      ga: Agent
+      it: Agent
+      ja: Agent
+      kn: Agent
+      kk: Agent
+      km: Agent
+      ko: Agent
+      ku: Agent
+      lo: Agent
+      lv: Agent
+      lt: Agent
+      mk: Agent
+      ms: Agent
+      ml: Agent
+      mr: Agent
+      mn: Agent
+      ne: Agent
+      no: Agent
+      ps: Agent
+      fa: Agent
+      pl: Agent
+      pt: Agent
+      pa: Agent
+      ro: Agent
+      ru: Agent
+      sr: Agent
+      si: Agent
+      sk: Agent
+      sl: Agent
+      so: Agent
+      es: Agent
+      sw: Agent
+      sv: Agent
+      tl: Agent
+      ta: Agent
+      te: Agent
+      th: Agent
+      ti: Agent
+      tr: Agent
+      uk: Agent
+      ur: Agent
+      uz: Agent
+      vi: Agent
+      zu: Agent
+  ai:
+    notes: Keep AI visible as a technical term.
+    needs_review: true
+    translations:
+      af: AI
+      sq: AI
+      am: AI
+      ar: AI
+      hy: AI
+      az: AI
+      eu: AI
+      bn: AI
+      bs: AI
+      bg: AI
+      my: AI
+      ca: AI
+      zh: AI
+      hr: AI
+      cs: AI
+      da: AI
+      nl: AI
+      en: AI
+      et: AI
+      fi: AI
+      fr: AI
+      ka: AI
+      de: AI
+      el: AI
+      gu: AI
+      ha: AI
+      he: AI
+      hi: AI
+      hu: AI
+      is: AI
+      id: AI
+      ga: AI
+      it: AI
+      ja: AI
+      kn: AI
+      kk: AI
+      km: AI
+      ko: AI
+      ku: AI
+      lo: AI
+      lv: AI
+      lt: AI
+      mk: AI
+      ms: AI
+      ml: AI
+      mr: AI
+      mn: AI
+      ne: AI
+      no: AI
+      ps: AI
+      fa: AI
+      pl: AI
+      pt: AI
+      pa: AI
+      ro: AI
+      ru: AI
+      sr: AI
+      si: AI
+      sk: AI
+      sl: AI
+      so: AI
+      es: AI
+      sw: AI
+      sv: AI
+      tl: AI
+      ta: AI
+      te: AI
+      th: AI
+      ti: AI
+      tr: AI
+      uk: AI
+      ur: AI
+      uz: AI
+      vi: AI
+      zu: AI
+  context:
+    notes: Use for loaded repository information.
+    needs_review: true
+    translations:
+      af: Context
+      sq: Context
+      am: Context
+      ar: Context
+      hy: Context
+      az: Context
+      eu: Context
+      bn: Context
+      bs: Context
+      bg: Context
+      my: Context
+      ca: Context
+      zh: Context
+      hr: Context
+      cs: Context
+      da: Context
+      nl: Context
+      en: Context
+      et: Context
+      fi: Context
+      fr: Context
+      ka: Context
+      de: Context
+      el: Context
+      gu: Context
+      ha: Context
+      he: Context
+      hi: Context
+      hu: Context
+      is: Context
+      id: Context
+      ga: Context
+      it: Context
+      ja: Context
+      kn: Context
+      kk: Context
+      km: Context
+      ko: Context
+      ku: Context
+      lo: Context
+      lv: Context
+      lt: Context
+      mk: Context
+      ms: Context
+      ml: Context
+      mr: Context
+      mn: Context
+      ne: Context
+      no: Context
+      ps: Context
+      fa: Context
+      pl: Context
+      pt: Context
+      pa: Context
+      ro: Context
+      ru: Context
+      sr: Context
+      si: Context
+      sk: Context
+      sl: Context
+      so: Context
+      es: Context
+      sw: Context
+      sv: Context
+      tl: Context
+      ta: Context
+      te: Context
+      th: Context
+      ti: Context
+      tr: Context
+      uk: Context
+      ur: Context
+      uz: Context
+      vi: Context
+      zu: Context
+  evidence:
+    notes: Use consistently for EVIDENCE_MAP.
+    needs_review: true
+    translations:
+      af: Evidence
+      sq: Evidence
+      am: Evidence
+      ar: Evidence
+      hy: Evidence
+      az: Evidence
+      eu: Evidence
+      bn: Evidence
+      bs: Evidence
+      bg: Evidence
+      my: Evidence
+      ca: Evidence
+      zh: Evidence
+      hr: Evidence
+      cs: Evidence
+      da: Evidence
+      nl: Evidence
+      en: Evidence
+      et: Evidence
+      fi: Evidence
+      fr: Evidence
+      ka: Evidence
+      de: Nachweis
+      el: Evidence
+      gu: Evidence
+      ha: Evidence
+      he: Evidence
+      hi: Evidence
+      hu: Evidence
+      is: Evidence
+      id: Evidence
+      ga: Evidence
+      it: Evidence
+      ja: Evidence
+      kn: Evidence
+      kk: Evidence
+      km: Evidence
+      ko: Evidence
+      ku: Evidence
+      lo: Evidence
+      lv: Evidence
+      lt: Evidence
+      mk: Evidence
+      ms: Evidence
+      ml: Evidence
+      mr: Evidence
+      mn: Evidence
+      ne: Evidence
+      no: Evidence
+      ps: Evidence
+      fa: Evidence
+      pl: Evidence
+      pt: Evidence
+      pa: Evidence
+      ro: Evidence
+      ru: Evidence
+      sr: Evidence
+      si: Evidence
+      sk: Evidence
+      sl: Evidence
+      so: Evidence
+      es: Evidence
+      sw: Evidence
+      sv: Evidence
+      tl: Evidence
+      ta: Evidence
+      te: Evidence
+      th: Evidence
+      ti: Evidence
+      tr: Evidence
+      uk: Evidence
+      ur: Evidence
+      uz: Evidence
+      vi: Evidence
+      zu: Evidence
+  review:
+    notes: Use for human or structured AI checks.
+    needs_review: true
+    translations:
+      af: Review
+      sq: Review
+      am: Review
+      ar: Review
+      hy: Review
+      az: Review
+      eu: Review
+      bn: Review
+      bs: Review
+      bg: Review
+      my: Review
+      ca: Review
+      zh: Review
+      hr: Review
+      cs: Review
+      da: Review
+      nl: Review
+      en: Review
+      et: Review
+      fi: Review
+      fr: Review
+      ka: Review
+      de: Review
+      el: Review
+      gu: Review
+      ha: Review
+      he: Review
+      hi: Review
+      hu: Review
+      is: Review
+      id: Review
+      ga: Review
+      it: Review
+      ja: Review
+      kn: Review
+      kk: Review
+      km: Review
+      ko: Review
+      ku: Review
+      lo: Review
+      lv: Review
+      lt: Review
+      mk: Review
+      ms: Review
+      ml: Review
+      mr: Review
+      mn: Review
+      ne: Review
+      no: Review
+      ps: Review
+      fa: Review
+      pl: Review
+      pt: Review
+      pa: Review
+      ro: Review
+      ru: Review
+      sr: Review
+      si: Review
+      sk: Review
+      sl: Review
+      so: Review
+      es: Review
+      sw: Review
+      sv: Review
+      tl: Review
+      ta: Review
+      te: Review
+      th: Review
+      ti: Review
+      tr: Review
+      uk: Review
+      ur: Review
+      uz: Review
+      vi: Review
+      zu: Review
+  security:
+    notes: Use for safety and protection boundaries.
+    needs_review: true
+    translations:
+      af: Security
+      sq: Security
+      am: Security
+      ar: Security
+      hy: Security
+      az: Security
+      eu: Security
+      bn: Security
+      bs: Security
+      bg: Security
+      my: Security
+      ca: Security
+      zh: Security
+      hr: Security
+      cs: Security
+      da: Security
+      nl: Security
+      en: Security
+      et: Security
+      fi: Security
+      fr: Security
+      ka: Security
+      de: Sicherheit
+      el: Security
+      gu: Security
+      ha: Security
+      he: Security
+      hi: Security
+      hu: Security
+      is: Security
+      id: Security
+      ga: Security
+      it: Security
+      ja: Security
+      kn: Security
+      kk: Security
+      km: Security
+      ko: Security
+      ku: Security
+      lo: Security
+      lv: Security
+      lt: Security
+      mk: Security
+      ms: Security
+      ml: Security
+      mr: Security
+      mn: Security
+      ne: Security
+      no: Security
+      ps: Security
+      fa: Security
+      pl: Security
+      pt: Security
+      pa: Security
+      ro: Security
+      ru: Security
+      sr: Security
+      si: Security
+      sk: Security
+      sl: Security
+      so: Security
+      es: Security
+      sw: Security
+      sv: Security
+      tl: Security
+      ta: Security
+      te: Security
+      th: Security
+      ti: Security
+      tr: Security
+      uk: Security
+      ur: Security
+      uz: Security
+      vi: Security
+      zu: Security
+  risk:
+    notes: Use for risk register entries.
+    needs_review: true
+    translations:
+      af: Risk
+      sq: Risk
+      am: Risk
+      ar: Risk
+      hy: Risk
+      az: Risk
+      eu: Risk
+      bn: Risk
+      bs: Risk
+      bg: Risk
+      my: Risk
+      ca: Risk
+      zh: Risk
+      hr: Risk
+      cs: Risk
+      da: Risk
+      nl: Risk
+      en: Risk
+      et: Risk
+      fi: Risk
+      fr: Risk
+      ka: Risk
+      de: Risiko
+      el: Risk
+      gu: Risk
+      ha: Risk
+      he: Risk
+      hi: Risk
+      hu: Risk
+      is: Risk
+      id: Risk
+      ga: Risk
+      it: Risk
+      ja: Risk
+      kn: Risk
+      kk: Risk
+      km: Risk
+      ko: Risk
+      ku: Risk
+      lo: Risk
+      lv: Risk
+      lt: Risk
+      mk: Risk
+      ms: Risk
+      ml: Risk
+      mr: Risk
+      mn: Risk
+      ne: Risk
+      no: Risk
+      ps: Risk
+      fa: Risk
+      pl: Risk
+      pt: Risk
+      pa: Risk
+      ro: Risk
+      ru: Risk
+      sr: Risk
+      si: Risk
+      sk: Risk
+      sl: Risk
+      so: Risk
+      es: Risk
+      sw: Risk
+      sv: Risk
+      tl: Risk
+      ta: Risk
+      te: Risk
+      th: Risk
+      ti: Risk
+      tr: Risk
+      uk: Risk
+      ur: Risk
+      uz: Risk
+      vi: Risk
+      zu: Risk
+  runtime:
+    notes: Keep as technical runtime term where common.
+    needs_review: true
+    translations:
+      af: Runtime
+      sq: Runtime
+      am: Runtime
+      ar: Runtime
+      hy: Runtime
+      az: Runtime
+      eu: Runtime
+      bn: Runtime
+      bs: Runtime
+      bg: Runtime
+      my: Runtime
+      ca: Runtime
+      zh: Runtime
+      hr: Runtime
+      cs: Runtime
+      da: Runtime
+      nl: Runtime
+      en: Runtime
+      et: Runtime
+      fi: Runtime
+      fr: Runtime
+      ka: Runtime
+      de: Runtime
+      el: Runtime
+      gu: Runtime
+      ha: Runtime
+      he: Runtime
+      hi: Runtime
+      hu: Runtime
+      is: Runtime
+      id: Runtime
+      ga: Runtime
+      it: Runtime
+      ja: Runtime
+      kn: Runtime
+      kk: Runtime
+      km: Runtime
+      ko: Runtime
+      ku: Runtime
+      lo: Runtime
+      lv: Runtime
+      lt: Runtime
+      mk: Runtime
+      ms: Runtime
+      ml: Runtime
+      mr: Runtime
+      mn: Runtime
+      ne: Runtime
+      no: Runtime
+      ps: Runtime
+      fa: Runtime
+      pl: Runtime
+      pt: Runtime
+      pa: Runtime
+      ro: Runtime
+      ru: Runtime
+      sr: Runtime
+      si: Runtime
+      sk: Runtime
+      sl: Runtime
+      so: Runtime
+      es: Runtime
+      sw: Runtime
+      sv: Runtime
+      tl: Runtime
+      ta: Runtime
+      te: Runtime
+      th: Runtime
+      ti: Runtime
+      tr: Runtime
+      uk: Runtime
+      ur: Runtime
+      uz: Runtime
+      vi: Runtime
+      zu: Runtime
+  dependency:
+    notes: Use for package or module dependencies.
+    needs_review: true
+    translations:
+      af: Dependency
+      sq: Dependency
+      am: Dependency
+      ar: Dependency
+      hy: Dependency
+      az: Dependency
+      eu: Dependency
+      bn: Dependency
+      bs: Dependency
+      bg: Dependency
+      my: Dependency
+      ca: Dependency
+      zh: Dependency
+      hr: Dependency
+      cs: Dependency
+      da: Dependency
+      nl: Dependency
+      en: Dependency
+      et: Dependency
+      fi: Dependency
+      fr: Dependency
+      ka: Dependency
+      de: Abhaengigkeit
+      el: Dependency
+      gu: Dependency
+      ha: Dependency
+      he: Dependency
+      hi: Dependency
+      hu: Dependency
+      is: Dependency
+      id: Dependency
+      ga: Dependency
+      it: Dependency
+      ja: Dependency
+      kn: Dependency
+      kk: Dependency
+      km: Dependency
+      ko: Dependency
+      ku: Dependency
+      lo: Dependency
+      lv: Dependency
+      lt: Dependency
+      mk: Dependency
+      ms: Dependency
+      ml: Dependency
+      mr: Dependency
+      mn: Dependency
+      ne: Dependency
+      no: Dependency
+      ps: Dependency
+      fa: Dependency
+      pl: Dependency
+      pt: Dependency
+      pa: Dependency
+      ro: Dependency
+      ru: Dependency
+      sr: Dependency
+      si: Dependency
+      sk: Dependency
+      sl: Dependency
+      so: Dependency
+      es: Dependency
+      sw: Dependency
+      sv: Dependency
+      tl: Dependency
+      ta: Dependency
+      te: Dependency
+      th: Dependency
+      ti: Dependency
+      tr: Dependency
+      uk: Dependency
+      ur: Dependency
+      uz: Dependency
+      vi: Dependency
+      zu: Dependency
+  build:
+    notes: Use for build commands and systems.
+    needs_review: true
+    translations:
+      af: Build
+      sq: Build
+      am: Build
+      ar: Build
+      hy: Build
+      az: Build
+      eu: Build
+      bn: Build
+      bs: Build
+      bg: Build
+      my: Build
+      ca: Build
+      zh: Build
+      hr: Build
+      cs: Build
+      da: Build
+      nl: Build
+      en: Build
+      et: Build
+      fi: Build
+      fr: Build
+      ka: Build
+      de: Build
+      el: Build
+      gu: Build
+      ha: Build
+      he: Build
+      hi: Build
+      hu: Build
+      is: Build
+      id: Build
+      ga: Build
+      it: Build
+      ja: Build
+      kn: Build
+      kk: Build
+      km: Build
+      ko: Build
+      ku: Build
+      lo: Build
+      lv: Build
+      lt: Build
+      mk: Build
+      ms: Build
+      ml: Build
+      mr: Build
+      mn: Build
+      ne: Build
+      no: Build
+      ps: Build
+      fa: Build
+      pl: Build
+      pt: Build
+      pa: Build
+      ro: Build
+      ru: Build
+      sr: Build
+      si: Build
+      sk: Build
+      sl: Build
+      so: Build
+      es: Build
+      sw: Build
+      sv: Build
+      tl: Build
+      ta: Build
+      te: Build
+      th: Build
+      ti: Build
+      tr: Build
+      uk: Build
+      ur: Build
+      uz: Build
+      vi: Build
+      zu: Build
+  test:
+    notes: Use for verification commands.
+    needs_review: true
+    translations:
+      af: Test
+      sq: Test
+      am: Test
+      ar: Test
+      hy: Test
+      az: Test
+      eu: Test
+      bn: Test
+      bs: Test
+      bg: Test
+      my: Test
+      ca: Test
+      zh: Test
+      hr: Test
+      cs: Test
+      da: Test
+      nl: Test
+      en: Test
+      et: Test
+      fi: Test
+      fr: Test
+      ka: Test
+      de: Test
+      el: Test
+      gu: Test
+      ha: Test
+      he: Test
+      hi: Test
+      hu: Test
+      is: Test
+      id: Test
+      ga: Test
+      it: Test
+      ja: Test
+      kn: Test
+      kk: Test
+      km: Test
+      ko: Test
+      ku: Test
+      lo: Test
+      lv: Test
+      lt: Test
+      mk: Test
+      ms: Test
+      ml: Test
+      mr: Test
+      mn: Test
+      ne: Test
+      no: Test
+      ps: Test
+      fa: Test
+      pl: Test
+      pt: Test
+      pa: Test
+      ro: Test
+      ru: Test
+      sr: Test
+      si: Test
+      sk: Test
+      sl: Test
+      so: Test
+      es: Test
+      sw: Test
+      sv: Test
+      tl: Test
+      ta: Test
+      te: Test
+      th: Test
+      ti: Test
+      tr: Test
+      uk: Test
+      ur: Test
+      uz: Test
+      vi: Test
+      zu: Test
+  freshness:
+    notes: Use for review cadence and staleness.
+    needs_review: true
+    translations:
+      af: Freshness
+      sq: Freshness
+      am: Freshness
+      ar: Freshness
+      hy: Freshness
+      az: Freshness
+      eu: Freshness
+      bn: Freshness
+      bs: Freshness
+      bg: Freshness
+      my: Freshness
+      ca: Freshness
+      zh: Freshness
+      hr: Freshness
+      cs: Freshness
+      da: Freshness
+      nl: Freshness
+      en: Freshness
+      et: Freshness
+      fi: Freshness
+      fr: Freshness
+      ka: Freshness
+      de: Freshness
+      el: Freshness
+      gu: Freshness
+      ha: Freshness
+      he: Freshness
+      hi: Freshness
+      hu: Freshness
+      is: Freshness
+      id: Freshness
+      ga: Freshness
+      it: Freshness
+      ja: Freshness
+      kn: Freshness
+      kk: Freshness
+      km: Freshness
+      ko: Freshness
+      ku: Freshness
+      lo: Freshness
+      lv: Freshness
+      lt: Freshness
+      mk: Freshness
+      ms: Freshness
+      ml: Freshness
+      mr: Freshness
+      mn: Freshness
+      ne: Freshness
+      no: Freshness
+      ps: Freshness
+      fa: Freshness
+      pl: Freshness
+      pt: Freshness
+      pa: Freshness
+      ro: Freshness
+      ru: Freshness
+      sr: Freshness
+      si: Freshness
+      sk: Freshness
+      sl: Freshness
+      so: Freshness
+      es: Freshness
+      sw: Freshness
+      sv: Freshness
+      tl: Freshness
+      ta: Freshness
+      te: Freshness
+      th: Freshness
+      ti: Freshness
+      tr: Freshness
+      uk: Freshness
+      ur: Freshness
+      uz: Freshness
+      vi: Freshness
+      zu: Freshness
+  project_memory:
+    notes: Use for durable project knowledge.
+    needs_review: true
+    translations:
+      af: Project Memory
+      sq: Project Memory
+      am: Project Memory
+      ar: Project Memory
+      hy: Project Memory
+      az: Project Memory
+      eu: Project Memory
+      bn: Project Memory
+      bs: Project Memory
+      bg: Project Memory
+      my: Project Memory
+      ca: Project Memory
+      zh: Project Memory
+      hr: Project Memory
+      cs: Project Memory
+      da: Project Memory
+      nl: Project Memory
+      en: Project Memory
+      et: Project Memory
+      fi: Project Memory
+      fr: Project Memory
+      ka: Project Memory
+      de: Project Memory
+      el: Project Memory
+      gu: Project Memory
+      ha: Project Memory
+      he: Project Memory
+      hi: Project Memory
+      hu: Project Memory
+      is: Project Memory
+      id: Project Memory
+      ga: Project Memory
+      it: Project Memory
+      ja: Project Memory
+      kn: Project Memory
+      kk: Project Memory
+      km: Project Memory
+      ko: Project Memory
+      ku: Project Memory
+      lo: Project Memory
+      lv: Project Memory
+      lt: Project Memory
+      mk: Project Memory
+      ms: Project Memory
+      ml: Project Memory
+      mr: Project Memory
+      mn: Project Memory
+      ne: Project Memory
+      no: Project Memory
+      ps: Project Memory
+      fa: Project Memory
+      pl: Project Memory
+      pt: Project Memory
+      pa: Project Memory
+      ro: Project Memory
+      ru: Project Memory
+      sr: Project Memory
+      si: Project Memory
+      sk: Project Memory
+      sl: Project Memory
+      so: Project Memory
+      es: Project Memory
+      sw: Project Memory
+      sv: Project Memory
+      tl: Project Memory
+      ta: Project Memory
+      te: Project Memory
+      th: Project Memory
+      ti: Project Memory
+      tr: Project Memory
+      uk: Project Memory
+      ur: Project Memory
+      uz: Project Memory
+      vi: Project Memory
+      zu: Project Memory
+  human_review:
+    notes: Use for mandatory human trust boundary.
+    needs_review: true
+    translations:
+      af: Human Review
+      sq: Human Review
+      am: Human Review
+      ar: Human Review
+      hy: Human Review
+      az: Human Review
+      eu: Human Review
+      bn: Human Review
+      bs: Human Review
+      bg: Human Review
+      my: Human Review
+      ca: Human Review
+      zh: Human Review
+      hr: Human Review
+      cs: Human Review
+      da: Human Review
+      nl: Human Review
+      en: Human Review
+      et: Human Review
+      fi: Human Review
+      fr: Human Review
+      ka: Human Review
+      de: Menschliche Pruefung
+      el: Human Review
+      gu: Human Review
+      ha: Human Review
+      he: Human Review
+      hi: Human Review
+      hu: Human Review
+      is: Human Review
+      id: Human Review
+      ga: Human Review
+      it: Human Review
+      ja: Human Review
+      kn: Human Review
+      kk: Human Review
+      km: Human Review
+      ko: Human Review
+      ku: Human Review
+      lo: Human Review
+      lv: Human Review
+      lt: Human Review
+      mk: Human Review
+      ms: Human Review
+      ml: Human Review
+      mr: Human Review
+      mn: Human Review
+      ne: Human Review
+      no: Human Review
+      ps: Human Review
+      fa: Human Review
+      pl: Human Review
+      pt: Human Review
+      pa: Human Review
+      ro: Human Review
+      ru: Human Review
+      sr: Human Review
+      si: Human Review
+      sk: Human Review
+      sl: Human Review
+      so: Human Review
+      es: Human Review
+      sw: Human Review
+      sv: Human Review
+      tl: Human Review
+      ta: Human Review
+      te: Human Review
+      th: Human Review
+      ti: Human Review
+      tr: Human Review
+      uk: Human Review
+      ur: Human Review
+      uz: Human Review
+      vi: Human Review
+      zu: Human Review
+  task_scoping:
+    notes: Use for pre-implementation scope control.
+    needs_review: true
+    translations:
+      af: Task Scoping
+      sq: Task Scoping
+      am: Task Scoping
+      ar: Task Scoping
+      hy: Task Scoping
+      az: Task Scoping
+      eu: Task Scoping
+      bn: Task Scoping
+      bs: Task Scoping
+      bg: Task Scoping
+      my: Task Scoping
+      ca: Task Scoping
+      zh: Task Scoping
+      hr: Task Scoping
+      cs: Task Scoping
+      da: Task Scoping
+      nl: Task Scoping
+      en: Task Scoping
+      et: Task Scoping
+      fi: Task Scoping
+      fr: Task Scoping
+      ka: Task Scoping
+      de: Task Scoping
+      el: Task Scoping
+      gu: Task Scoping
+      ha: Task Scoping
+      he: Task Scoping
+      hi: Task Scoping
+      hu: Task Scoping
+      is: Task Scoping
+      id: Task Scoping
+      ga: Task Scoping
+      it: Task Scoping
+      ja: Task Scoping
+      kn: Task Scoping
+      kk: Task Scoping
+      km: Task Scoping
+      ko: Task Scoping
+      ku: Task Scoping
+      lo: Task Scoping
+      lv: Task Scoping
+      lt: Task Scoping
+      mk: Task Scoping
+      ms: Task Scoping
+      ml: Task Scoping
+      mr: Task Scoping
+      mn: Task Scoping
+      ne: Task Scoping
+      no: Task Scoping
+      ps: Task Scoping
+      fa: Task Scoping
+      pl: Task Scoping
+      pt: Task Scoping
+      pa: Task Scoping
+      ro: Task Scoping
+      ru: Task Scoping
+      sr: Task Scoping
+      si: Task Scoping
+      sk: Task Scoping
+      sl: Task Scoping
+      so: Task Scoping
+      es: Task Scoping
+      sw: Task Scoping
+      sv: Task Scoping
+      tl: Task Scoping
+      ta: Task Scoping
+      te: Task Scoping
+      th: Task Scoping
+      ti: Task Scoping
+      tr: Task Scoping
+      uk: Task Scoping
+      ur: Task Scoping
+      uz: Task Scoping
+      vi: Task Scoping
+      zu: Task Scoping
+  safety_boundaries:
+    notes: Use for actions requiring approval.
+    needs_review: true
+    translations:
+      af: Safety Boundaries
+      sq: Safety Boundaries
+      am: Safety Boundaries
+      ar: Safety Boundaries
+      hy: Safety Boundaries
+      az: Safety Boundaries
+      eu: Safety Boundaries
+      bn: Safety Boundaries
+      bs: Safety Boundaries
+      bg: Safety Boundaries
+      my: Safety Boundaries
+      ca: Safety Boundaries
+      zh: Safety Boundaries
+      hr: Safety Boundaries
+      cs: Safety Boundaries
+      da: Safety Boundaries
+      nl: Safety Boundaries
+      en: Safety Boundaries
+      et: Safety Boundaries
+      fi: Safety Boundaries
+      fr: Safety Boundaries
+      ka: Safety Boundaries
+      de: Safety Boundaries
+      el: Safety Boundaries
+      gu: Safety Boundaries
+      ha: Safety Boundaries
+      he: Safety Boundaries
+      hi: Safety Boundaries
+      hu: Safety Boundaries
+      is: Safety Boundaries
+      id: Safety Boundaries
+      ga: Safety Boundaries
+      it: Safety Boundaries
+      ja: Safety Boundaries
+      kn: Safety Boundaries
+      kk: Safety Boundaries
+      km: Safety Boundaries
+      ko: Safety Boundaries
+      ku: Safety Boundaries
+      lo: Safety Boundaries
+      lv: Safety Boundaries
+      lt: Safety Boundaries
+      mk: Safety Boundaries
+      ms: Safety Boundaries
+      ml: Safety Boundaries
+      mr: Safety Boundaries
+      mn: Safety Boundaries
+      ne: Safety Boundaries
+      no: Safety Boundaries
+      ps: Safety Boundaries
+      fa: Safety Boundaries
+      pl: Safety Boundaries
+      pt: Safety Boundaries
+      pa: Safety Boundaries
+      ro: Safety Boundaries
+      ru: Safety Boundaries
+      sr: Safety Boundaries
+      si: Safety Boundaries
+      sk: Safety Boundaries
+      sl: Safety Boundaries
+      so: Safety Boundaries
+      es: Safety Boundaries
+      sw: Safety Boundaries
+      sv: Safety Boundaries
+      tl: Safety Boundaries
+      ta: Safety Boundaries
+      te: Safety Boundaries
+      th: Safety Boundaries
+      ti: Safety Boundaries
+      tr: Safety Boundaries
+      uk: Safety Boundaries
+      ur: Safety Boundaries
+      uz: Safety Boundaries
+      vi: Safety Boundaries
+      zu: Safety Boundaries
+  repository:
+    notes: Use for source workspace or codebase.
+    needs_review: true
+    translations:
+      af: Repository
+      sq: Repository
+      am: Repository
+      ar: Repository
+      hy: Repository
+      az: Repository
+      eu: Repository
+      bn: Repository
+      bs: Repository
+      bg: Repository
+      my: Repository
+      ca: Repository
+      zh: Repository
+      hr: Repository
+      cs: Repository
+      da: Repository
+      nl: Repository
+      en: Repository
+      et: Repository
+      fi: Repository
+      fr: Repository
+      ka: Repository
+      de: Repository
+      el: Repository
+      gu: Repository
+      ha: Repository
+      he: Repository
+      hi: Repository
+      hu: Repository
+      is: Repository
+      id: Repository
+      ga: Repository
+      it: Repository
+      ja: Repository
+      kn: Repository
+      kk: Repository
+      km: Repository
+      ko: Repository
+      ku: Repository
+      lo: Repository
+      lv: Repository
+      lt: Repository
+      mk: Repository
+      ms: Repository
+      ml: Repository
+      mr: Repository
+      mn: Repository
+      ne: Repository
+      no: Repository
+      ps: Repository
+      fa: Repository
+      pl: Repository
+      pt: Repository
+      pa: Repository
+      ro: Repository
+      ru: Repository
+      sr: Repository
+      si: Repository
+      sk: Repository
+      sl: Repository
+      so: Repository
+      es: Repository
+      sw: Repository
+      sv: Repository
+      tl: Repository
+      ta: Repository
+      te: Repository
+      th: Repository
+      ti: Repository
+      tr: Repository
+      uk: Repository
+      ur: Repository
+      uz: Repository
+      vi: Repository
+      zu: Repository
+  onboarding:
+    notes: Use for repository preflight preparation.
+    needs_review: true
+    translations:
+      af: Onboarding
+      sq: Onboarding
+      am: Onboarding
+      ar: Onboarding
+      hy: Onboarding
+      az: Onboarding
+      eu: Onboarding
+      bn: Onboarding
+      bs: Onboarding
+      bg: Onboarding
+      my: Onboarding
+      ca: Onboarding
+      zh: Onboarding
+      hr: Onboarding
+      cs: Onboarding
+      da: Onboarding
+      nl: Onboarding
+      en: Onboarding
+      et: Onboarding
+      fi: Onboarding
+      fr: Onboarding
+      ka: Onboarding
+      de: Einarbeitung
+      el: Onboarding
+      gu: Onboarding
+      ha: Onboarding
+      he: Onboarding
+      hi: Onboarding
+      hu: Onboarding
+      is: Onboarding
+      id: Onboarding
+      ga: Onboarding
+      it: Onboarding
+      ja: Onboarding
+      kn: Onboarding
+      kk: Onboarding
+      km: Onboarding
+      ko: Onboarding
+      ku: Onboarding
+      lo: Onboarding
+      lv: Onboarding
+      lt: Onboarding
+      mk: Onboarding
+      ms: Onboarding
+      ml: Onboarding
+      mr: Onboarding
+      mn: Onboarding
+      ne: Onboarding
+      no: Onboarding
+      ps: Onboarding
+      fa: Onboarding
+      pl: Onboarding
+      pt: Onboarding
+      pa: Onboarding
+      ro: Onboarding
+      ru: Onboarding
+      sr: Onboarding
+      si: Onboarding
+      sk: Onboarding
+      sl: Onboarding
+      so: Onboarding
+      es: Onboarding
+      sw: Onboarding
+      sv: Onboarding
+      tl: Onboarding
+      ta: Onboarding
+      te: Onboarding
+      th: Onboarding
+      ti: Onboarding
+      tr: Onboarding
+      uk: Onboarding
+      ur: Onboarding
+      uz: Onboarding
+      vi: Onboarding
+      zu: Onboarding
+  architecture:
+    notes: Use for system structure.
+    needs_review: true
+    translations:
+      af: Architecture
+      sq: Architecture
+      am: Architecture
+      ar: Architecture
+      hy: Architecture
+      az: Architecture
+      eu: Architecture
+      bn: Architecture
+      bs: Architecture
+      bg: Architecture
+      my: Architecture
+      ca: Architecture
+      zh: Architecture
+      hr: Architecture
+      cs: Architecture
+      da: Architecture
+      nl: Architecture
+      en: Architecture
+      et: Architecture
+      fi: Architecture
+      fr: Architecture
+      ka: Architecture
+      de: Architektur
+      el: Architecture
+      gu: Architecture
+      ha: Architecture
+      he: Architecture
+      hi: Architecture
+      hu: Architecture
+      is: Architecture
+      id: Architecture
+      ga: Architecture
+      it: Architecture
+      ja: Architecture
+      kn: Architecture
+      kk: Architecture
+      km: Architecture
+      ko: Architecture
+      ku: Architecture
+      lo: Architecture
+      lv: Architecture
+      lt: Architecture
+      mk: Architecture
+      ms: Architecture
+      ml: Architecture
+      mr: Architecture
+      mn: Architecture
+      ne: Architecture
+      no: Architecture
+      ps: Architecture
+      fa: Architecture
+      pl: Architecture
+      pt: Architecture
+      pa: Architecture
+      ro: Architecture
+      ru: Architecture
+      sr: Architecture
+      si: Architecture
+      sk: Architecture
+      sl: Architecture
+      so: Architecture
+      es: Architecture
+      sw: Architecture
+      sv: Architecture
+      tl: Architecture
+      ta: Architecture
+      te: Architecture
+      th: Architecture
+      ti: Architecture
+      tr: Architecture
+      uk: Architecture
+      ur: Architecture
+      uz: Architecture
+      vi: Architecture
+      zu: Architecture
+  decision:
+    notes: Use for durable decision records.
+    needs_review: true
+    translations:
+      af: Decision
+      sq: Decision
+      am: Decision
+      ar: Decision
+      hy: Decision
+      az: Decision
+      eu: Decision
+      bn: Decision
+      bs: Decision
+      bg: Decision
+      my: Decision
+      ca: Decision
+      zh: Decision
+      hr: Decision
+      cs: Decision
+      da: Decision
+      nl: Decision
+      en: Decision
+      et: Decision
+      fi: Decision
+      fr: Decision
+      ka: Decision
+      de: Entscheidung
+      el: Decision
+      gu: Decision
+      ha: Decision
+      he: Decision
+      hi: Decision
+      hu: Decision
+      is: Decision
+      id: Decision
+      ga: Decision
+      it: Decision
+      ja: Decision
+      kn: Decision
+      kk: Decision
+      km: Decision
+      ko: Decision
+      ku: Decision
+      lo: Decision
+      lv: Decision
+      lt: Decision
+      mk: Decision
+      ms: Decision
+      ml: Decision
+      mr: Decision
+      mn: Decision
+      ne: Decision
+      no: Decision
+      ps: Decision
+      fa: Decision
+      pl: Decision
+      pt: Decision
+      pa: Decision
+      ro: Decision
+      ru: Decision
+      sr: Decision
+      si: Decision
+      sk: Decision
+      sl: Decision
+      so: Decision
+      es: Decision
+      sw: Decision
+      sv: Decision
+      tl: Decision
+      ta: Decision
+      te: Decision
+      th: Decision
+      ti: Decision
+      tr: Decision
+      uk: Decision
+      ur: Decision
+      uz: Decision
+      vi: Decision
+      zu: Decision
+  validation:
+    notes: Use for automated or manual checks.
+    needs_review: true
+    translations:
+      af: Validation
+      sq: Validation
+      am: Validation
+      ar: Validation
+      hy: Validation
+      az: Validation
+      eu: Validation
+      bn: Validation
+      bs: Validation
+      bg: Validation
+      my: Validation
+      ca: Validation
+      zh: Validation
+      hr: Validation
+      cs: Validation
+      da: Validation
+      nl: Validation
+      en: Validation
+      et: Validation
+      fi: Validation
+      fr: Validation
+      ka: Validation
+      de: Validierung
+      el: Validation
+      gu: Validation
+      ha: Validation
+      he: Validation
+      hi: Validation
+      hu: Validation
+      is: Validation
+      id: Validation
+      ga: Validation
+      it: Validation
+      ja: Validation
+      kn: Validation
+      kk: Validation
+      km: Validation
+      ko: Validation
+      ku: Validation
+      lo: Validation
+      lv: Validation
+      lt: Validation
+      mk: Validation
+      ms: Validation
+      ml: Validation
+      mr: Validation
+      mn: Validation
+      ne: Validation
+      no: Validation
+      ps: Validation
+      fa: Validation
+      pl: Validation
+      pt: Validation
+      pa: Validation
+      ro: Validation
+      ru: Validation
+      sr: Validation
+      si: Validation
+      sk: Validation
+      sl: Validation
+      so: Validation
+      es: Validation
+      sw: Validation
+      sv: Validation
+      tl: Validation
+      ta: Validation
+      te: Validation
+      th: Validation
+      ti: Validation
+      tr: Validation
+      uk: Validation
+      ur: Validation
+      uz: Validation
+      vi: Validation
+      zu: Validation
+  tool_entrypoint:
+    notes: Use for AGENTS.md and similar files.
+    needs_review: true
+    translations:
+      af: Tool Entrypoint
+      sq: Tool Entrypoint
+      am: Tool Entrypoint
+      ar: Tool Entrypoint
+      hy: Tool Entrypoint
+      az: Tool Entrypoint
+      eu: Tool Entrypoint
+      bn: Tool Entrypoint
+      bs: Tool Entrypoint
+      bg: Tool Entrypoint
+      my: Tool Entrypoint
+      ca: Tool Entrypoint
+      zh: Tool Entrypoint
+      hr: Tool Entrypoint
+      cs: Tool Entrypoint
+      da: Tool Entrypoint
+      nl: Tool Entrypoint
+      en: Tool Entrypoint
+      et: Tool Entrypoint
+      fi: Tool Entrypoint
+      fr: Tool Entrypoint
+      ka: Tool Entrypoint
+      de: Tool-Einstiegspunkt
+      el: Tool Entrypoint
+      gu: Tool Entrypoint
+      ha: Tool Entrypoint
+      he: Tool Entrypoint
+      hi: Tool Entrypoint
+      hu: Tool Entrypoint
+      is: Tool Entrypoint
+      id: Tool Entrypoint
+      ga: Tool Entrypoint
+      it: Tool Entrypoint
+      ja: Tool Entrypoint
+      kn: Tool Entrypoint
+      kk: Tool Entrypoint
+      km: Tool Entrypoint
+      ko: Tool Entrypoint
+      ku: Tool Entrypoint
+      lo: Tool Entrypoint
+      lv: Tool Entrypoint
+      lt: Tool Entrypoint
+      mk: Tool Entrypoint
+      ms: Tool Entrypoint
+      ml: Tool Entrypoint
+      mr: Tool Entrypoint
+      mn: Tool Entrypoint
+      ne: Tool Entrypoint
+      no: Tool Entrypoint
+      ps: Tool Entrypoint
+      fa: Tool Entrypoint
+      pl: Tool Entrypoint
+      pt: Tool Entrypoint
+      pa: Tool Entrypoint
+      ro: Tool Entrypoint
+      ru: Tool Entrypoint
+      sr: Tool Entrypoint
+      si: Tool Entrypoint
+      sk: Tool Entrypoint
+      sl: Tool Entrypoint
+      so: Tool Entrypoint
+      es: Tool Entrypoint
+      sw: Tool Entrypoint
+      sv: Tool Entrypoint
+      tl: Tool Entrypoint
+      ta: Tool Entrypoint
+      te: Tool Entrypoint
+      th: Tool Entrypoint
+      ti: Tool Entrypoint
+      tr: Tool Entrypoint
+      uk: Tool Entrypoint
+      ur: Tool Entrypoint
+      uz: Tool Entrypoint
+      vi: Tool Entrypoint
+      zu: Tool Entrypoint

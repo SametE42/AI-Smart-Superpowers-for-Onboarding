@@ -1,0 +1,34 @@
+schema_version: 1
+language: uz
+language_name: Uzbek
+source_folder: ai/Uzbek
+docs_directory: docs/ai-uz
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: UZ_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: UZ_MASTER_SYSTEM.md
+  ONBOARDING.md: UZ_ONBOARDING.md
+  ARCHITECTURE.md: UZ_ARCHITECTURE.md
+  TECH_STACK.md: UZ_TECH_STACK.md
+  BUILD_AND_TEST.md: UZ_BUILD_AND_TEST.md
+  DEPENDENCIES.md: UZ_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: UZ_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: UZ_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: UZ_PROJECT_MEMORY.md
+  DECISIONS.md: UZ_DECISIONS.md
+  STYLE_GUIDE.md: UZ_STYLE_GUIDE.md
+  SECURITY_RULES.md: UZ_SECURITY_RULES.md
+  RISK_REGISTER.md: UZ_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: UZ_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: UZ_ERROR_PATTERNS.md
+  TASK_SCOPING.md: UZ_TASK_SCOPING.md
+  FRESHNESS.md: UZ_FRESHNESS.md
+  AGENT_ROLES.md: UZ_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: UZ_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: UZ_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

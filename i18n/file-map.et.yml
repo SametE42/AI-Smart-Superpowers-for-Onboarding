@@ -1,0 +1,34 @@
+schema_version: 1
+language: et
+language_name: Estonian
+source_folder: ai/Estonian
+docs_directory: docs/ai-et
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: ET_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: ET_MASTER_SYSTEM.md
+  ONBOARDING.md: ET_ONBOARDING.md
+  ARCHITECTURE.md: ET_ARCHITECTURE.md
+  TECH_STACK.md: ET_TECH_STACK.md
+  BUILD_AND_TEST.md: ET_BUILD_AND_TEST.md
+  DEPENDENCIES.md: ET_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: ET_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: ET_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: ET_PROJECT_MEMORY.md
+  DECISIONS.md: ET_DECISIONS.md
+  STYLE_GUIDE.md: ET_STYLE_GUIDE.md
+  SECURITY_RULES.md: ET_SECURITY_RULES.md
+  RISK_REGISTER.md: ET_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: ET_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: ET_ERROR_PATTERNS.md
+  TASK_SCOPING.md: ET_TASK_SCOPING.md
+  FRESHNESS.md: ET_FRESHNESS.md
+  AGENT_ROLES.md: ET_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: ET_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: ET_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

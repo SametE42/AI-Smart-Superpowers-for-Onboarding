@@ -1,0 +1,34 @@
+schema_version: 1
+language: bs
+language_name: Bosnian
+source_folder: ai/Bosnian
+docs_directory: docs/ai-bs
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: BS_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: BS_MASTER_SYSTEM.md
+  ONBOARDING.md: BS_ONBOARDING.md
+  ARCHITECTURE.md: BS_ARCHITECTURE.md
+  TECH_STACK.md: BS_TECH_STACK.md
+  BUILD_AND_TEST.md: BS_BUILD_AND_TEST.md
+  DEPENDENCIES.md: BS_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: BS_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: BS_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: BS_PROJECT_MEMORY.md
+  DECISIONS.md: BS_DECISIONS.md
+  STYLE_GUIDE.md: BS_STYLE_GUIDE.md
+  SECURITY_RULES.md: BS_SECURITY_RULES.md
+  RISK_REGISTER.md: BS_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: BS_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: BS_ERROR_PATTERNS.md
+  TASK_SCOPING.md: BS_TASK_SCOPING.md
+  FRESHNESS.md: BS_FRESHNESS.md
+  AGENT_ROLES.md: BS_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: BS_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: BS_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

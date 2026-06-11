@@ -1,0 +1,44 @@
+schema_version: 1
+description: Schema for language-specific AI onboarding file maps.
+required_fields:
+  - schema_version
+  - language
+  - language_name
+  - docs_directory
+  - agents_filename
+  - translation_review_status
+  - files
+allowed_translation_review_status:
+  - reviewed
+  - needs_review
+  - machine_generated
+  - unknown
+filename_rules:
+  extension: .md
+  agents_filename: AGENTS.md
+  no_path_separators_in_files: true
+  no_empty_filenames: true
+  no_duplicate_targets: true
+  no_reserved_windows_names: true
+canonical_files:
+  - CONTEXT_INDEX.md
+  - MASTER_SYSTEM.md
+  - ONBOARDING.md
+  - ARCHITECTURE.md
+  - TECH_STACK.md
+  - BUILD_AND_TEST.md
+  - DEPENDENCIES.md
+  - RUNTIME_ENVIRONMENT.md
+  - EVIDENCE_MAP.md
+  - PROJECT_MEMORY.md
+  - DECISIONS.md
+  - STYLE_GUIDE.md
+  - SECURITY_RULES.md
+  - RISK_REGISTER.md
+  - REVIEW_CHECKLIST.md
+  - ERROR_PATTERNS.md
+  - TASK_SCOPING.md
+  - FRESHNESS.md
+  - AGENT_ROLES.md
+  - SAFETY_BOUNDARIES.md
+  - HUMAN_REVIEW_GATES.md

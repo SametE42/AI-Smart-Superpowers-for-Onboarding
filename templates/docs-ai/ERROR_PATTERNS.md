@@ -2,50 +2,24 @@
 
 **Last updated:** YYYY-MM-DD
 **Status:** DRAFT
-**Scope:** Repeated error patterns, unstable areas and recommended debugging order.
-**Created/updated by:** AI Assistant (Model: [MODEL], Run-ID: [RUN-ID])
-***
+**Scope:** Known errors and misinterpretation patterns.
 
-## Known repeated patterns
+## Error pattern table
 
-| Pattern | Cause | Prevention |
-|---|---|---|
-| `[UNKNOWN]` | `[UNKNOWN]` | `[UNKNOWN]` |
+| Pattern | Symptom | Likely cause | Safe response | Evidence |
+|---|---|---|---|---|
+| `[UNKNOWN]` | `[UNKNOWN]` | `[UNKNOWN]` | `[UNKNOWN]` | `[UNKNOWN]` |
 
-## Unstable areas
+## Repeated agent mistakes
 
-### [Area name]
+- `[UNKNOWN]`
 
-**Why unstable:** `[UNKNOWN]`
-**Affected files:** `[UNKNOWN]`
-**Affected flows:** `[UNKNOWN]`
-**Prevention:** `[UNKNOWN]`
+## Debugging order
 
-## Typical debugging order
-
-1. Formulate a reproducible test or manual step.
-2. Classify the error: UI, routing, validation, export, import, data, auth, logging, build or test.
-3. Identify the affected architecture layer.
-4. Read existing tests.
-5. Add a minimal failing test or correct an outdated test.
-6. Document the cause.
-7. Fix minimally.
-8. Run the narrowest relevant test first.
-9. Run broader verification if the area is risky.
-10. Update documentation if behavior or risk changed.
-
-## Known open errors
-
-### [Error title]
-
-**Symptom:**  
-`[UNKNOWN]`
-
-**Likely cause:**  
-`[ASSUMPTION: ...]`
-
-**Recommended correction:**  
-`[UNKNOWN]`
-
-**Risk if ignored:**  
-`[UNKNOWN]`
+1. Reproduce the symptom.
+2. Identify the affected area.
+3. Read relevant tests and docs.
+4. Add or update a focused test when appropriate.
+5. Fix minimally.
+6. Run relevant verification.
+7. Update this file if the pattern is durable.

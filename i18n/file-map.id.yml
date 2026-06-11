@@ -1,0 +1,34 @@
+schema_version: 1
+language: id
+language_name: Indonesian
+source_folder: ai/Indonesian
+docs_directory: docs/ai-id
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: ID_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: ID_MASTER_SYSTEM.md
+  ONBOARDING.md: ID_ONBOARDING.md
+  ARCHITECTURE.md: ID_ARCHITECTURE.md
+  TECH_STACK.md: ID_TECH_STACK.md
+  BUILD_AND_TEST.md: ID_BUILD_AND_TEST.md
+  DEPENDENCIES.md: ID_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: ID_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: ID_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: ID_PROJECT_MEMORY.md
+  DECISIONS.md: ID_DECISIONS.md
+  STYLE_GUIDE.md: ID_STYLE_GUIDE.md
+  SECURITY_RULES.md: ID_SECURITY_RULES.md
+  RISK_REGISTER.md: ID_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: ID_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: ID_ERROR_PATTERNS.md
+  TASK_SCOPING.md: ID_TASK_SCOPING.md
+  FRESHNESS.md: ID_FRESHNESS.md
+  AGENT_ROLES.md: ID_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: ID_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: ID_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

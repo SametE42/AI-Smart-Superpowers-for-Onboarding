@@ -1,0 +1,34 @@
+schema_version: 1
+language: km
+language_name: Khmer
+source_folder: ai/Khmer
+docs_directory: docs/ai-km
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: KM_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: KM_MASTER_SYSTEM.md
+  ONBOARDING.md: KM_ONBOARDING.md
+  ARCHITECTURE.md: KM_ARCHITECTURE.md
+  TECH_STACK.md: KM_TECH_STACK.md
+  BUILD_AND_TEST.md: KM_BUILD_AND_TEST.md
+  DEPENDENCIES.md: KM_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: KM_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: KM_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: KM_PROJECT_MEMORY.md
+  DECISIONS.md: KM_DECISIONS.md
+  STYLE_GUIDE.md: KM_STYLE_GUIDE.md
+  SECURITY_RULES.md: KM_SECURITY_RULES.md
+  RISK_REGISTER.md: KM_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: KM_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: KM_ERROR_PATTERNS.md
+  TASK_SCOPING.md: KM_TASK_SCOPING.md
+  FRESHNESS.md: KM_FRESHNESS.md
+  AGENT_ROLES.md: KM_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: KM_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: KM_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

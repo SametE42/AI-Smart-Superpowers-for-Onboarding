@@ -1,0 +1,34 @@
+schema_version: 1
+language: hu
+language_name: Hungarian
+source_folder: ai/Hungarian
+docs_directory: docs/ai-hu
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: HU_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: HU_MASTER_SYSTEM.md
+  ONBOARDING.md: HU_ONBOARDING.md
+  ARCHITECTURE.md: HU_ARCHITECTURE.md
+  TECH_STACK.md: HU_TECH_STACK.md
+  BUILD_AND_TEST.md: HU_BUILD_AND_TEST.md
+  DEPENDENCIES.md: HU_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: HU_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: HU_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: HU_PROJECT_MEMORY.md
+  DECISIONS.md: HU_DECISIONS.md
+  STYLE_GUIDE.md: HU_STYLE_GUIDE.md
+  SECURITY_RULES.md: HU_SECURITY_RULES.md
+  RISK_REGISTER.md: HU_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: HU_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: HU_ERROR_PATTERNS.md
+  TASK_SCOPING.md: HU_TASK_SCOPING.md
+  FRESHNESS.md: HU_FRESHNESS.md
+  AGENT_ROLES.md: HU_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: HU_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: HU_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

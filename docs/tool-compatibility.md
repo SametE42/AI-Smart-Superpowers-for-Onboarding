@@ -8,6 +8,8 @@ This project separates agent support into three layers:
 
 `/docs/ai/` remains the source of truth. Tool-specific files are short references.
 
+Reusable entrypoint templates live in `templates/tool-entrypoints/`. They are copyable guidance for target repositories, not claims of partnership, endorsement or guaranteed behavior by any tool vendor.
+
 ## 1. Context files
 
 | Tool / Agent | File | Notes |

@@ -1,0 +1,34 @@
+schema_version: 1
+language: cs
+language_name: Czech
+source_folder: ai/Czech
+docs_directory: docs/ai-cs
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: CS_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: CS_MASTER_SYSTEM.md
+  ONBOARDING.md: CS_ONBOARDING.md
+  ARCHITECTURE.md: CS_ARCHITECTURE.md
+  TECH_STACK.md: CS_TECH_STACK.md
+  BUILD_AND_TEST.md: CS_BUILD_AND_TEST.md
+  DEPENDENCIES.md: CS_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: CS_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: CS_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: CS_PROJECT_MEMORY.md
+  DECISIONS.md: CS_DECISIONS.md
+  STYLE_GUIDE.md: CS_STYLE_GUIDE.md
+  SECURITY_RULES.md: CS_SECURITY_RULES.md
+  RISK_REGISTER.md: CS_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: CS_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: CS_ERROR_PATTERNS.md
+  TASK_SCOPING.md: CS_TASK_SCOPING.md
+  FRESHNESS.md: CS_FRESHNESS.md
+  AGENT_ROLES.md: CS_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: CS_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: CS_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

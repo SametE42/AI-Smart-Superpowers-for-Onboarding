@@ -1,0 +1,34 @@
+schema_version: 1
+language: hy
+language_name: Armenian
+source_folder: ai/Armenian
+docs_directory: docs/ai-hy
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: HY_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: HY_MASTER_SYSTEM.md
+  ONBOARDING.md: HY_ONBOARDING.md
+  ARCHITECTURE.md: HY_ARCHITECTURE.md
+  TECH_STACK.md: HY_TECH_STACK.md
+  BUILD_AND_TEST.md: HY_BUILD_AND_TEST.md
+  DEPENDENCIES.md: HY_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: HY_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: HY_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: HY_PROJECT_MEMORY.md
+  DECISIONS.md: HY_DECISIONS.md
+  STYLE_GUIDE.md: HY_STYLE_GUIDE.md
+  SECURITY_RULES.md: HY_SECURITY_RULES.md
+  RISK_REGISTER.md: HY_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: HY_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: HY_ERROR_PATTERNS.md
+  TASK_SCOPING.md: HY_TASK_SCOPING.md
+  FRESHNESS.md: HY_FRESHNESS.md
+  AGENT_ROLES.md: HY_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: HY_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: HY_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

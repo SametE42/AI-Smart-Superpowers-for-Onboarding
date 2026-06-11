@@ -1,0 +1,34 @@
+schema_version: 1
+language: is
+language_name: Icelandic
+source_folder: ai/Icelandic
+docs_directory: docs/ai-is
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: IS_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: IS_MASTER_SYSTEM.md
+  ONBOARDING.md: IS_ONBOARDING.md
+  ARCHITECTURE.md: IS_ARCHITECTURE.md
+  TECH_STACK.md: IS_TECH_STACK.md
+  BUILD_AND_TEST.md: IS_BUILD_AND_TEST.md
+  DEPENDENCIES.md: IS_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: IS_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: IS_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: IS_PROJECT_MEMORY.md
+  DECISIONS.md: IS_DECISIONS.md
+  STYLE_GUIDE.md: IS_STYLE_GUIDE.md
+  SECURITY_RULES.md: IS_SECURITY_RULES.md
+  RISK_REGISTER.md: IS_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: IS_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: IS_ERROR_PATTERNS.md
+  TASK_SCOPING.md: IS_TASK_SCOPING.md
+  FRESHNESS.md: IS_FRESHNESS.md
+  AGENT_ROLES.md: IS_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: IS_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: IS_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

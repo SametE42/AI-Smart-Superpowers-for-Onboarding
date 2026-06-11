@@ -1,0 +1,34 @@
+schema_version: 1
+language: ml
+language_name: Malayalam
+source_folder: ai/Malayalam
+docs_directory: docs/ai-ml
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: ML_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: ML_MASTER_SYSTEM.md
+  ONBOARDING.md: ML_ONBOARDING.md
+  ARCHITECTURE.md: ML_ARCHITECTURE.md
+  TECH_STACK.md: ML_TECH_STACK.md
+  BUILD_AND_TEST.md: ML_BUILD_AND_TEST.md
+  DEPENDENCIES.md: ML_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: ML_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: ML_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: ML_PROJECT_MEMORY.md
+  DECISIONS.md: ML_DECISIONS.md
+  STYLE_GUIDE.md: ML_STYLE_GUIDE.md
+  SECURITY_RULES.md: ML_SECURITY_RULES.md
+  RISK_REGISTER.md: ML_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: ML_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: ML_ERROR_PATTERNS.md
+  TASK_SCOPING.md: ML_TASK_SCOPING.md
+  FRESHNESS.md: ML_FRESHNESS.md
+  AGENT_ROLES.md: ML_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: ML_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: ML_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

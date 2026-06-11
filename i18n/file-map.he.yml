@@ -1,0 +1,34 @@
+schema_version: 1
+language: he
+language_name: Hebrew
+source_folder: ai/Hebrew
+docs_directory: docs/ai-he
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: HE_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: HE_MASTER_SYSTEM.md
+  ONBOARDING.md: HE_ONBOARDING.md
+  ARCHITECTURE.md: HE_ARCHITECTURE.md
+  TECH_STACK.md: HE_TECH_STACK.md
+  BUILD_AND_TEST.md: HE_BUILD_AND_TEST.md
+  DEPENDENCIES.md: HE_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: HE_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: HE_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: HE_PROJECT_MEMORY.md
+  DECISIONS.md: HE_DECISIONS.md
+  STYLE_GUIDE.md: HE_STYLE_GUIDE.md
+  SECURITY_RULES.md: HE_SECURITY_RULES.md
+  RISK_REGISTER.md: HE_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: HE_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: HE_ERROR_PATTERNS.md
+  TASK_SCOPING.md: HE_TASK_SCOPING.md
+  FRESHNESS.md: HE_FRESHNESS.md
+  AGENT_ROLES.md: HE_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: HE_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: HE_HUMAN_REVIEW_GATES.md
+review_notes:
+  - RTL language uses ASCII-safe filenames for Markdown and tooling stability.
+  - Linguistic filename review is still required.

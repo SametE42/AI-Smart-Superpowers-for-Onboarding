@@ -1,10 +1,12 @@
 # AI Smart Superpowers for Onboarding
 
-**Prepare repositories before AI agents build.**
+**Ein modulares Repository-Preflight-Framework fuer KI-Coding-Agenten.**
 
-This project creates an evidence-first Pre-Development Onboarding layer for AI coding agents. It helps agents understand repository structure, architecture, constraints, risks and project-specific rules before they start planning, coding, testing or reviewing changes.
+**Bereite Repositories vor, bevor KI-Coding-Agenten Code veraendern.**
 
-It turns repository evidence into a persistent `docs/ai/` knowledge base so future AI sessions can work from reviewed project context instead of assumptions.
+This project turns repository evidence into a reviewed, validated and language-adaptive knowledge base with architecture, constraints, risks, project memory, security rules and review checklists before coding agents change files.
+
+It is a modular Repository Preflight Framework for AI coding agents. It prepares repository-specific context; it is not a coding agent, not an SDK, not a runtime package and not a replacement for human review.
 
 <p align="center">
   <a href="https://github.com/SametE42/AI-Smart-Superpowers-for-Onboarding/actions/workflows/validate.yml"><img alt="Validate repository" src="https://github.com/SametE42/AI-Smart-Superpowers-for-Onboarding/actions/workflows/validate.yml/badge.svg"></a>
@@ -36,9 +38,31 @@ It turns repository evidence into a persistent `docs/ai/` knowledge base so futu
   </tr>
 </table>
 
+## Framework Snapshot
+
+AI coding agents work best when they receive stable repository context, explicit boundaries and verifiable documentation instead of scattered files and guesses. This project exists to make that preparation repeatable, reviewable and portable across tools, languages and project stacks.
+
+```text
+AGENTS.md -> AI Smart Superpowers for Onboarding -> docs/ai/ or localized knowledge base -> Skills/Workflows -> Coding Agent -> Human Review
+```
+
+| Question | Short answer |
+|---|---|
+| What is it? | A modular repository-preflight framework for AI coding agents. |
+| Why does it exist? | To turn repository evidence into reusable AI context before implementation work begins. |
+| What problem does it solve? | It reduces assumption-driven coding by making architecture, build/test context, risks, constraints and review boundaries explicit. |
+| What does it produce? | A canonical `docs/ai/` knowledge base or a localized equivalent selected through language-aware mappings. |
+| Where does it fit? | Before coding-agent execution workflows, skills, multi-agent handoffs and human review. |
+
+This project is not a coding agent, SDK or runtime package, and it does not replace human review. Python is only an internal automation option for installer, validation and tests.
+
+The framework is technology-neutral. It is intended for Python, JavaScript, TypeScript, Java, C#, Go, Rust, PHP, Ruby, Kotlin, Swift, C/C++, monorepos, frontend, backend, fullstack, Infrastructure-as-Code and documentation repositories.
+
+All existing languages are intended to reach the same functional output support level. English is the canonical reference language, but not the only complete output language. Translation quality is documented separately from functional support. AGENTS.md stays unchanged by default because many tools expect that entrypoint filename.
+
 ## Contents
 
-[`Overview`](#overview) · [`Where This Fits`](#where-this-fits) · [`Target Output`](#target-output) · [`Quickstart`](#quickstart) · [`Workflow`](#workflow) · [`When To Use`](#when-to-use) · [`Languages`](#multilingual-ai-manual) · [`Validation`](#validation) · [`Security`](#security-model)
+[`Overview`](#overview) · [`Framework Modules`](#framework-modules) · [`Onboarding Modes`](#onboarding-modes) · [`Where This Fits`](#where-this-fits) · [`Target Output`](#target-output) · [`Quickstart`](#quickstart) · [`Languages`](#multilingual-ai-manual) · [`Validation`](#validation) · [`Security`](#security-model)
 
 ## Overview
 
@@ -53,6 +77,36 @@ AI coding agents work best when they receive stable repository context, explicit
 | **Reusable onboarding prompt** | `templates/MASTER_PROMPT.en.md` guides the initial interview, repository pre-check and documentation plan. |
 
 This is not a production app, backend service, SDK, runtime package or replacement for human review. It is a reusable standard for making AI-assisted repository work safer and easier to audit.
+
+## Framework Modules
+
+The repository is intentionally modular because AI-agent onboarding in complex repositories needs more than one instruction file. The framework separates tool entrypoints, persistent knowledge, stack context, build and test context, evidence tracking, governance, tool compatibility, validation, examples, translations and language-dependent output for every existing language.
+
+| Module | Purpose | Start here |
+|---|---|---|
+| Core onboarding | Main process and master prompt | [`templates/MASTER_PROMPT.en.md`](templates/MASTER_PROMPT.en.md) |
+| AI knowledge base | Persistent repository context | [`templates/docs-ai/`](templates/docs-ai/) |
+| Tool entrypoints | Short tool-specific references to the knowledge base | [`templates/tool-entrypoints/`](templates/tool-entrypoints/) |
+| Skill packaging | Portable repeatable workflows | [`skills/repo-onboarding/SKILL.md`](skills/repo-onboarding/SKILL.md) |
+| Integration modes | Minimal, Standard and Enterprise adoption | [`docs/integration-modes.md`](docs/integration-modes.md) |
+| Integration guide | Manual and installer-based setup | [`docs/how-to-integrate.md`](docs/how-to-integrate.md) |
+| Localized output | Canonical or localized target files | [`docs/localized-output.md`](docs/localized-output.md) |
+| Architecture | How this repository is organized | [`docs/architecture-of-this-project.md`](docs/architecture-of-this-project.md) |
+| Localization quality | Review status and terminology rules | [`docs/localization-guidelines.md`](docs/localization-guidelines.md) |
+| File-map schema | Language-specific output naming rules | [`docs/file-map-schema.md`](docs/file-map-schema.md) |
+| Migration | Moving between old, canonical and localized structures | [`docs/migration-guide.md`](docs/migration-guide.md) |
+
+## Onboarding Modes
+
+The current templates define the reusable knowledge base. Planned installer modes are:
+
+| Mode | Use when | Output shape |
+|---|---|---|
+| Minimal | Small projects or quick repository orientation | Essential agent entrypoint and core `docs/ai/` files |
+| Standard | Normal application or library repositories | Architecture, stack, build/test, dependencies, evidence and review context |
+| Enterprise | Larger, regulated or security-sensitive repositories | Standard context plus runtime, risk, safety boundaries and human review gates |
+
+Each mode should be able to generate canonical English structures or localized structures through file maps. The actual language list is derived from repository evidence, not from hard-coded examples.
 
 ## Where This Fits
 
@@ -214,6 +268,7 @@ If localized documentation conflicts with English, the English source wins until
 ├─ ai/                           # Multilingual AI-agent manual
 ├─ docs/                         # Supporting project documentation
 ├─ examples/                     # Minimal, stack-specific and multi-agent examples
+├─ skills/                       # Portable workflow skills
 ├─ scripts/                      # Validation and AI manual refresh scripts
 ├─ tests/                        # Unit tests for maintenance scripts
 ├─ .github/                      # GitHub workflow, issue and PR configuration
@@ -244,6 +299,10 @@ Example use case: A developer wants Codex, Claude Code, Cursor or another AI cod
 | Example | Use when |
 |---|---|
 | [`examples/minimal/`](examples/minimal/) | You want the smallest useful setup before expanding to the full template set. |
+| [`examples/standard/`](examples/standard/) | You want the recommended default onboarding shape. |
+| [`examples/enterprise/`](examples/enterprise/) | You need governance, runtime and human-review boundaries. |
+| [`examples/localized-de/`](examples/localized-de/) | You want to inspect German localized output. |
+| [`examples/stacks/`](examples/stacks/) | You want stack-neutral examples beyond Python. |
 | [`examples/node-typescript/`](examples/node-typescript/) | You are documenting a Node.js or TypeScript repository. |
 | [`examples/python-fastapi/`](examples/python-fastapi/) | You are documenting a Python FastAPI repository. |
 | [`examples/multi-agent/`](examples/multi-agent/) | You want researcher, architect, writer and reviewer roles. |

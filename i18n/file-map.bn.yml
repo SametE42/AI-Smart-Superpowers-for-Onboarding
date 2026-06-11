@@ -1,0 +1,34 @@
+schema_version: 1
+language: bn
+language_name: Bengali
+source_folder: ai/Bengali
+docs_directory: docs/ai-bn
+agents_filename: AGENTS.md
+translation_review_status: machine_generated
+canonical_structure: true
+localized_structure: true
+files:
+  CONTEXT_INDEX.md: BN_CONTEXT_INDEX.md
+  MASTER_SYSTEM.md: BN_MASTER_SYSTEM.md
+  ONBOARDING.md: BN_ONBOARDING.md
+  ARCHITECTURE.md: BN_ARCHITECTURE.md
+  TECH_STACK.md: BN_TECH_STACK.md
+  BUILD_AND_TEST.md: BN_BUILD_AND_TEST.md
+  DEPENDENCIES.md: BN_DEPENDENCIES.md
+  RUNTIME_ENVIRONMENT.md: BN_RUNTIME_ENVIRONMENT.md
+  EVIDENCE_MAP.md: BN_EVIDENCE_MAP.md
+  PROJECT_MEMORY.md: BN_PROJECT_MEMORY.md
+  DECISIONS.md: BN_DECISIONS.md
+  STYLE_GUIDE.md: BN_STYLE_GUIDE.md
+  SECURITY_RULES.md: BN_SECURITY_RULES.md
+  RISK_REGISTER.md: BN_RISK_REGISTER.md
+  REVIEW_CHECKLIST.md: BN_REVIEW_CHECKLIST.md
+  ERROR_PATTERNS.md: BN_ERROR_PATTERNS.md
+  TASK_SCOPING.md: BN_TASK_SCOPING.md
+  FRESHNESS.md: BN_FRESHNESS.md
+  AGENT_ROLES.md: BN_AGENT_ROLES.md
+  SAFETY_BOUNDARIES.md: BN_SAFETY_BOUNDARIES.md
+  HUMAN_REVIEW_GATES.md: BN_HUMAN_REVIEW_GATES.md
+review_notes:
+  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Linguistic filename review is still required.

@@ -167,6 +167,22 @@ File names, folder names, commands, APIs and model names stay unchanged. English
             self.assertEqual(report.summary["markdown_files_without_h1"], 1)
             self.assertGreaterEqual(report.summary["directories_without_readme"], 1)
 
+    def test_yaml_frontmatter_markdown_can_satisfy_h1_rule(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.write(root, "README.md", "# Root\n")
+            self.write(
+                root,
+                "skills/repo-onboarding/SKILL.md",
+                "---\nname: repo-onboarding\ndescription: Test skill.\n---\n\n# Repo Onboarding\n",
+            )
+            self.write(root, "skills/README.md", "# Skills\n")
+            self.write(root, "skills/repo-onboarding/README.md", "# Repo Onboarding\n")
+
+            report = validate_repository(root)
+
+            self.assertEqual(report.summary["markdown_files_without_h1"], 0)
+
     def test_local_heading_anchor_links_are_validated(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
