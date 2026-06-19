@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Изворен јазик: англиски
 > Изворна датотека: ai/English/skills/skill-versioning.md
 > При разлики, англиската датотека има предност.
@@ -24,6 +24,7 @@
 ## Фокус
 
 Пред да ја користиш оваа страница во workflow, дефинирај опсег, потребни докази, проверливи команди и граници на човечко одобрување.
+
 
 ## Проверка на квалитет
 

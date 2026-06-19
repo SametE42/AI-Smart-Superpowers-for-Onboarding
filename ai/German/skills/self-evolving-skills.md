@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Source language: English
 > Source file: ai/English/skills/self-evolving-skills.md
 > Bei Abweichungen ist die englische Datei maßgeblich.
@@ -23,6 +23,7 @@ Diese Seite beschreibt, wie `skills/self-evolving-skills.md` im AI Agent Operati
 ## Fokus
 
 Wiederverwendbare Skills, die begrenzte und testbare Workflows für KI-Agenten definieren.
+
 
 ## Qualitätscheck
 

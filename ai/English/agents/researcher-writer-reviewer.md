@@ -18,6 +18,7 @@ This page explains how `agents/researcher-writer-reviewer.md` fits into the AI A
 
 AI agent roles, collaboration patterns and human handoff boundaries.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

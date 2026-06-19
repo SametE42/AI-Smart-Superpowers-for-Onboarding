@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Brontaal: Engels
 > Bronlêer: ai/English/models/cohere/README.md
 > By verskille bly die Engelse lêer gesaghebbend.
@@ -22,6 +22,7 @@ Gebruik hierdie bladsy as operasionele leiding vir `models`. Dit vervang nie rep
 ## Fokus
 
 Definieer omvang, bewyse, verifieerbare commands en menslike goedkeuringsgrense voordat hierdie bladsy in 'n workflow gebruik word.
+
 
 ## Kwaliteitskontrole
 

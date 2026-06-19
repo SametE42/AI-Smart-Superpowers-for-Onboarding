@@ -18,6 +18,7 @@ This page explains how `safety/memory-safety.md` fits into the AI Agent Operatin
 
 Promote only reviewed, reusable and non-sensitive facts into durable memory.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

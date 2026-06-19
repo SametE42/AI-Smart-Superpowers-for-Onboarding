@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > स्रोत भाषा: इंग्रजी
 > स्रोत फाइल: ai/English/prompts/documentation-update.md
 > फरक असल्यास इंग्रजी फाइलला प्राधान्य.
@@ -22,6 +22,7 @@
 ## फोकस
 
 workflow मध्ये वापरण्यापूर्वी व्याप्ती, पुरावे, पडताळण्याजोगे commands आणि मानवी मंजुरीच्या सीमा ठरवा.
+
 
 ## गुणवत्ता तपासणी
 

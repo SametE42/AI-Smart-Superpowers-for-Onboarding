@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Эх хэл: Англи
 > Эх файл: ai/English/providers/lm-studio.md
 > Зөрүү гарвал англи файл давамгайлна.
@@ -22,6 +22,7 @@
 ## Фокус
 
 workflow-д ашиглахаас өмнө хүрээ, нотолгоо, шалгаж болох commands болон хүний зөвшөөрлийн хил хязгаарыг тодорхойл.
+
 
 ## Чанарын шалгалт
 

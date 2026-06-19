@@ -65,6 +65,17 @@ class Phase4LanguageSupportTests(unittest.TestCase):
             with self.subTest(code=code):
                 self.assertIn(f"      {code}:", glossary)
 
+    def test_standard_docs_contract_matches_language_checker_and_installer_modes(self):
+        from scripts.install_ai_onboarding import MODES
+        from scripts.standard_contract import load_standard_contract
+
+        contract = load_standard_contract(ROOT / "standard-docs.yml")
+
+        self.assertEqual(REQUIRED_FILES, contract.required_files)
+        self.assertEqual(MODES["minimal"], contract.modes["minimal"])
+        self.assertEqual(MODES["standard"], contract.modes["standard"])
+        self.assertEqual(MODES["enterprise"], contract.modes["enterprise"])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Source language: English
 > Source file: ai/English/agents/agent-architecture.md
 > Bei Abweichungen ist die englische Datei maßgeblich.
@@ -23,6 +23,7 @@ Diese Seite beschreibt, wie `agents/agent-architecture.md` im AI Agent Operating
 ## Fokus
 
 Definiere Agent Loop, Rollenabgrenzung, Tool-Zugriff und Eskalationspunkte, bevor Arbeit verteilt wird.
+
 
 ## Qualitätscheck
 

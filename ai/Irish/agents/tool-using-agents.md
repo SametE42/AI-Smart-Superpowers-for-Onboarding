@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Teanga fhoinse: Béarla
 > Comhad foinse: ai/English/agents/tool-using-agents.md
 > Má tá difríochtaí ann, tá an comhad Béarla i réim.
@@ -22,6 +22,7 @@ Míníonn an leathanach seo conas a oireann `agents/tool-using-agents.md` don AI
 ## Fócas
 
 Sula n-úsáidtear i workflow é, sainigh an raon, an fhianaise, commands infhíoraithe agus teorainneacha ceadaithe daonna.
+
 
 ## Seiceáil cáilíochta
 

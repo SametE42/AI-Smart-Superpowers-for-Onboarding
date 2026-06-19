@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Source language: English
 > Source file: ai/English/tools/continue/commands.md
 > Bei Abweichungen ist die englische Datei maßgeblich.
@@ -23,6 +23,7 @@ Diese Seite beschreibt, wie `tools/continue/commands.md` im AI Agent Operating M
 ## Fokus
 
 Tool- und Runtime-Profile für Coding Agents, IDE-Assistenten und CLI-Workflows.
+
 
 ## Qualitätscheck
 

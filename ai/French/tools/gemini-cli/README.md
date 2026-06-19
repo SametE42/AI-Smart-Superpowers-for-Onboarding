@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Langue source : anglais
 > Fichier source: ai/English/tools/gemini-cli/README.md
 > En cas de divergence, le fichier anglais fait autorité.
@@ -24,6 +24,7 @@ Utilise cette page comme repère opérationnel pour le thème `tools`. Elle ne r
 ## Point d'attention
 
 Définis le périmètre, les preuves nécessaires, les commandes vérifiables et les limites d'approbation humaine avant d'utiliser cette page dans un workflow.
+
 
 ## Contrôle qualité
 

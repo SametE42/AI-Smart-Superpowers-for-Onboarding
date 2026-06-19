@@ -174,6 +174,18 @@ class Phase7To10IntegrationValidationTests(unittest.TestCase):
                     self.assertTrue(result.actions)
             self.assertEqual([], list(target.rglob("*")))
 
+    def test_validate_workflow_runs_language_support_and_installer_dry_runs(self):
+        workflow = (ROOT / ".github" / "workflows" / "validate.yml").read_text(encoding="utf-8")
+
+        for command in [
+            "python scripts/check_language_support.py --root .",
+            "python scripts/install_ai_onboarding.py --mode minimal --language en --structure canonical",
+            "python scripts/install_ai_onboarding.py --mode standard --language de --structure localized",
+            "python scripts/install_ai_onboarding.py --mode enterprise --language en --structure canonical",
+        ]:
+            with self.subTest(command=command):
+                self.assertIn(command, workflow)
+
     def test_installer_list_languages_cli_covers_all_supported_languages(self):
         buffer = io.StringIO()
         with redirect_stdout(buffer):

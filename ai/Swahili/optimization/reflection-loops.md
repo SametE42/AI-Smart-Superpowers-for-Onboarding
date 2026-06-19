@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Lugha chanzo: Kiingereza
 > Faili chanzo: ai/English/optimization/reflection-loops.md
 > Kukiwa na tofauti, faili la Kiingereza lina kipaumbele.
@@ -24,6 +24,7 @@ Tumia ukurasa huu kama mwongozo wa uendeshaji kwa mada `optimization`. Hauondoi 
 ## Mkazo
 
 Kabla ya kutumia ukurasa huu kwenye workflow, fafanua wigo, ushahidi unaohitajika, commands zinazoweza kuthibitishwa na mipaka ya idhini ya binadamu.
+
 
 ## Ukaguzi wa ubora
 

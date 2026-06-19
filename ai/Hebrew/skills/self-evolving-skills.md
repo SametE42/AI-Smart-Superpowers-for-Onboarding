@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > שפת מקור: אנגלית
 > קובץ מקור: ai/English/skills/self-evolving-skills.md
 > במקרה של סתירה, הקובץ באנגלית הוא הקובע.
@@ -24,6 +24,7 @@
 ## מיקוד
 
 לפני שימוש בדף זה ב-workflow, הגדר היקף, ראיות נדרשות, commands ניתנים לאימות וגבולות אישור אנושי.
+
 
 ## בדיקת איכות
 

@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Bahasa sumber: Inggeris
 > Fail sumber: ai/English/tools/claude-code/context-files.md
 > Jika terdapat perbezaan, fail Inggeris menjadi rujukan utama.
@@ -24,6 +24,7 @@ Gunakan halaman ini sebagai panduan operasi untuk tema `tools`. Ia tidak menggan
 ## Fokus
 
 Sebelum menggunakan halaman ini dalam workflow, tetapkan skop, bukti yang diperlukan, commands yang boleh disahkan dan sempadan kelulusan manusia.
+
 
 ## Semakan kualiti
 

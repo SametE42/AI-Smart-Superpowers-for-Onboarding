@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Мова джерела: англійська
 > Файл джерела: ai/English/templates/OPTIMIZATION_RUN.md
 > У разі розбіжностей англійський файл має пріоритет.
@@ -24,6 +24,7 @@
 ## Фокус
 
 Перед використанням цієї сторінки у workflow визначте область, потрібні докази, перевірювані команди та межі людського схвалення.
+
 
 ## Перевірка якості
 

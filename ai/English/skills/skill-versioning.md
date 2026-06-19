@@ -18,6 +18,7 @@ This page explains how `skills/skill-versioning.md` fits into the AI Agent Opera
 
 Reusable skills that define bounded, testable workflows for AI agents.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

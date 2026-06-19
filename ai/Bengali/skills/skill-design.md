@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > উৎস ভাষা: ইংরেজি
 > উৎস ফাইল: ai/English/skills/skill-design.md
 > পার্থক্য থাকলে ইংরেজি ফাইল প্রাধান্য পাবে।
@@ -24,6 +24,7 @@
 ## ফোকাস
 
 workflow-তে এই পৃষ্ঠা ব্যবহারের আগে পরিসর, প্রয়োজনীয় প্রমাণ, যাচাইযোগ্য commands এবং মানব অনুমোদনের সীমা নির্ধারণ করুন।
+
 
 ## গুণমান পরীক্ষা
 

@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > මූලාශ්‍ර භාෂාව: ඉංග්‍රීසි
 > මූලාශ්‍ර ගොනුව: ai/English/README.md
 > වෙනසක් තිබේ නම් ඉංග්‍රීසි ගොනුව ප්‍රමුඛ වේ.

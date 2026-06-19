@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Upprunamál: enska
 > Upprunaskrá: ai/English/tools/aider/models.md
 > Ef munur er til staðar gildir enska skráin.
@@ -22,6 +22,7 @@ Notaðu þessa síðu sem rekstrarleiðbeiningu fyrir `tools`. Hún kemur ekki �
 ## Fókus
 
 Áður en síðan er notuð í workflow skaltu skilgreina umfang, sönnunargögn, sannreynanleg commands og mörk mannlegrar samþykktar.
+
 
 ## Gæðaprófun
 

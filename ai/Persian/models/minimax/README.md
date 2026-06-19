@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > زبان مبدأ: انگلیسی
 > فایل مبدأ: ai/English/models/minimax/README.md
 > در صورت اختلاف، فایل انگلیسی مرجع اصلی است.
@@ -24,6 +24,7 @@
 ## تمرکز
 
 پیش از استفاده از این صفحه در workflow، دامنه، شواهد لازم، commands قابل راستی‌آزمایی و مرزهای تأیید انسانی را تعریف کنید.
+
 
 ## کنترل کیفیت
 

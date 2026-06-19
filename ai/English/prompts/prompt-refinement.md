@@ -18,6 +18,7 @@ This page explains how `prompts/prompt-refinement.md` fits into the AI Agent Ope
 
 Prompt design, refinement and review patterns for repository-aware AI work.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

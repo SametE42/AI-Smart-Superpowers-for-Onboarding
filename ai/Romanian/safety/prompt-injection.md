@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Limba sursă: engleză
 > Fișier sursă: ai/English/safety/prompt-injection.md
 > În caz de diferențe, fișierul în engleză rămâne autoritatea.
@@ -24,6 +24,7 @@ Folosește această pagină ca ghid operațional pentru tema `safety`. Nu înloc
 ## Focus
 
 Înainte de a folosi această pagină într-un workflow, definește domeniul, dovezile necesare, comenzile verificabile și limitele aprobării umane.
+
 
 ## Control calitate
 

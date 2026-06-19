@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Brontaal: Engels
 > Bronbestand: ai/English/providers/together-ai.md
 > Bij afwijkingen blijft het Engelse bestand leidend.
@@ -24,6 +24,7 @@ Gebruik deze pagina als operationele leidraad voor het thema `providers`. Ze ver
 ## Focus
 
 Definieer scope, benodigde bewijsstukken, verifieerbare commando's en grenzen voor menselijke goedkeuring voordat je deze pagina in een workflow gebruikt.
+
 
 ## Kwaliteitscontrole
 

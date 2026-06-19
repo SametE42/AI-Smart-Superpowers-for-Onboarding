@@ -18,6 +18,7 @@ This page explains how `context-engineering/context-engineering-overview.md` fit
 
 Package the smallest useful context first, then retrieve deeper evidence only when needed.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

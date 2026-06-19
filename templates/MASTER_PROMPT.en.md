@@ -334,9 +334,9 @@ If files such as `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, `.github/copilot-inst
 
 # OUTPUT CONTRACT
 
-## Primary Knowledge Base: 10 Standard Documents
+## Primary Knowledge Base: 10-Document Prompt Profile
 
-This workflow primarily creates or updates these documents under `/docs/ai/`:
+This prompt primarily creates or updates these core documents under `/docs/ai/`. Installer modes are defined separately in `standard-docs.yml`: Minimal uses 7 files, Standard uses 17 files and Enterprise uses the full 21-file contract.
 
 1. `MASTER_SYSTEM.md`
 2. `ARCHITECTURE.md`
@@ -355,7 +355,7 @@ Small projects may still use all 10 documents. Non-relevant documents receive `S
 
 ## Tool-Specific Agent Entrypoints
 
-The 10 documents under `/docs/ai/` remain the detailed source of truth.
+The core documents under `/docs/ai/` remain the detailed source of truth.
 Within that set, `PROJECT_MEMORY.md` is the continuity and handover anchor for current state, assumptions, decisions, open tasks, problems, risks and next steps.
 
 If the project uses specific coding agents, short entrypoint files may be created after explicit approval:
@@ -591,7 +591,7 @@ Create a chat-only plan. Do not create files yet.
 
 Include:
 
-- relevant documents from the 10 standard docs,
+- relevant documents from the core prompt profile or `standard-docs.yml`,
 - short reason per document,
 - expected status: `expected STABLE`, `expected INCOMPLETE` or `expected DRAFT`,
 - suggestions for extra documents such as ADRs or runbooks,

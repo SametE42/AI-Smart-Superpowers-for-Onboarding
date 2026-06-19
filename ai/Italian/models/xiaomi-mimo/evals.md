@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Lingua sorgente: inglese
 > File sorgente: ai/English/models/xiaomi-mimo/evals.md
 > In caso di divergenze, il file inglese resta la fonte autorevole.
@@ -24,6 +24,7 @@ Usa questa pagina come riferimento operativo per il tema `models`. Non sostituis
 ## Focus
 
 Definisci ambito, prove necessarie, comandi verificabili e limiti di approvazione umana prima di usare questa pagina in un workflow.
+
 
 ## Controllo qualità
 

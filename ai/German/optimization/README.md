@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Source language: English
 > Source file: ai/English/optimization/README.md
 > Bei Abweichungen ist die englische Datei maßgeblich.
@@ -23,6 +23,7 @@ Diese Seite beschreibt, wie `optimization/README.md` im AI Agent Operating Manua
 ## Fokus
 
 Methoden zur Prompt-, Skill- und Workflow-Optimierung mit kontrollierter Einführung.
+
 
 ## Qualitätscheck
 

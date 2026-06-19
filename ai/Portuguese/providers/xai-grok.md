@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Idioma de origem: inglês
 > Arquivo de origem: ai/English/providers/xai-grok.md
 > Em caso de divergência, o arquivo em inglês continua sendo a fonte autoritativa.
@@ -24,6 +24,7 @@ Use esta página como orientação operacional para o tema `providers`. Ela não
 ## Foco
 
 Defina escopo, evidências necessárias, comandos verificáveis e limites de aprovação humana antes de usar esta página em um workflow.
+
 
 ## Controle de qualidade
 

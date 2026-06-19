@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Kildesprog: engelsk
 > Kildefil: ai/English/safety/memory-safety.md
 > Ved afvigelser er den engelske fil gældende.
@@ -24,6 +24,7 @@ Brug siden som operationel vejledning for temaet `safety`. Den erstatter ikke re
 ## Fokus
 
 Definér omfang, nødvendig evidens, verificerbare kommandoer og grænser for menneskelig godkendelse, før siden bruges i et workflow.
+
 
 ## Kvalitetskontrol
 

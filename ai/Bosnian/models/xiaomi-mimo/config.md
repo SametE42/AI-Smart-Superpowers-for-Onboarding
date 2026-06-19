@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Izvorni jezik: engleski
 > Izvorna datoteka: ai/English/models/xiaomi-mimo/config.md
 > Ako postoje odstupanja, engleska datoteka ima prednost.
@@ -24,6 +24,7 @@ Koristi ovu stranicu kao operativni vodič za temu `models`. Ne zamjenjuje dokaz
 ## Fokus
 
 Prije korištenja ove stranice u workflowu definiši opseg, potrebne dokaze, provjerljive komande i granice ljudskog odobrenja.
+
 
 ## Provjera kvaliteta
 

@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Kaynak dil: İngilizce
 > Kaynak dosya: ai/English/models/openai/evals.md
 > Tutarsızlık olduğunda İngilizce dosya esas alınır.
@@ -24,6 +24,7 @@ Bu sayfayı `models` konusu için operasyonel yönlendirme olarak kullan. Depo k
 ## Odak
 
 Bu sayfayı bir workflow içinde kullanmadan önce kapsamı, gerekli kanıtları, doğrulanabilir komutları ve insan onayı sınırlarını tanımla.
+
 
 ## Kalite kontrolü
 

@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Luqadda asalka: Ingiriisi
 > Faylka asalka: ai/English/models/meta-llama/config.md
 > Haddii kala duwanaansho jirto, faylka Ingiriisiga ayaa mudnaanta leh.
@@ -22,6 +22,7 @@ U isticmaal boggan hagitaan hawlgal oo loogu talagalay `models`. Ma beddelayo ca
 ## Diiradda
 
 Ka hor isticmaalka workflow, qeex baaxadda, caddaynta, commands la xaqiijin karo iyo xuduudaha oggolaanshaha bini'aadan.
+
 
 ## Hubinta tayada
 

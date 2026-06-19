@@ -2,78 +2,78 @@
 
 | Language | Structure | Content status |
 |---|---:|---|
-| Afrikaans | yes | AI-translated, AI quality gate passed |
-| Albanian | yes | AI-translated, AI quality gate passed |
-| Amharic | yes | AI-translated, AI quality gate passed |
-| Arabic | yes | AI-translated, AI quality gate passed |
-| Armenian | yes | AI-translated, AI quality gate passed |
-| Azerbaijani | yes | AI-translated, AI quality gate passed |
-| Basque | yes | AI-translated, AI quality gate passed |
-| Bengali | yes | AI-translated, AI quality gate passed |
-| Bosnian | yes | AI-translated, AI quality gate passed |
-| Bulgarian | yes | AI-translated, AI quality gate passed |
-| Burmese | yes | AI-translated, AI quality gate passed |
-| Catalan | yes | AI-translated, AI quality gate passed |
-| Chinese | yes | AI-translated, AI quality gate passed |
-| Croatian | yes | AI-translated, AI quality gate passed |
-| Czech | yes | AI-translated, AI quality gate passed |
-| Danish | yes | AI-translated, AI quality gate passed |
-| Dutch | yes | AI-translated, AI quality gate passed |
+| Afrikaans | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Albanian | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Amharic | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Arabic | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Armenian | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Azerbaijani | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Basque | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Bengali | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Bosnian | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Bulgarian | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Burmese | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Catalan | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Chinese | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Croatian | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Czech | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Danish | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Dutch | yes | AI-translated; structural quality gate passed; human linguistic review required |
 | English | yes | source of truth |
-| Estonian | yes | AI-translated, AI quality gate passed |
-| Finnish | yes | AI-translated, AI quality gate passed |
-| French | yes | AI-translated, AI quality gate passed |
-| Georgian | yes | AI-translated, AI quality gate passed |
-| German | yes | AI-translated, AI quality gate passed |
-| Greek | yes | AI-translated, AI quality gate passed |
-| Gujarati | yes | AI-translated, AI quality gate passed |
-| Hausa | yes | AI-translated, AI quality gate passed |
-| Hebrew | yes | AI-translated, AI quality gate passed |
-| Hindi | yes | AI-translated, AI quality gate passed |
-| Hungarian | yes | AI-translated, AI quality gate passed |
-| Icelandic | yes | AI-translated, AI quality gate passed |
-| Indonesian | yes | AI-translated, AI quality gate passed |
-| Irish | yes | AI-translated, AI quality gate passed |
-| Italian | yes | AI-translated, AI quality gate passed |
-| Japanese | yes | AI-translated, AI quality gate passed |
-| Kannada | yes | AI-translated, AI quality gate passed |
-| Kazakh | yes | AI-translated, AI quality gate passed |
-| Khmer | yes | AI-translated, AI quality gate passed |
-| Korean | yes | AI-translated, AI quality gate passed |
-| Kurdish | yes | AI-translated, AI quality gate passed |
-| Lao | yes | AI-translated, AI quality gate passed |
-| Latvian | yes | AI-translated, AI quality gate passed |
-| Lithuanian | yes | AI-translated, AI quality gate passed |
-| Macedonian | yes | AI-translated, AI quality gate passed |
-| Malay | yes | AI-translated, AI quality gate passed |
-| Malayalam | yes | AI-translated, AI quality gate passed |
-| Marathi | yes | AI-translated, AI quality gate passed |
-| Mongolian | yes | AI-translated, AI quality gate passed |
-| Nepali | yes | AI-translated, AI quality gate passed |
-| Norwegian | yes | AI-translated, AI quality gate passed |
-| Pashto | yes | AI-translated, AI quality gate passed |
-| Persian | yes | AI-translated, AI quality gate passed |
-| Polish | yes | AI-translated, AI quality gate passed |
-| Portuguese | yes | AI-translated, AI quality gate passed |
-| Punjabi | yes | AI-translated, AI quality gate passed |
-| Romanian | yes | AI-translated, AI quality gate passed |
-| Russian | yes | AI-translated, AI quality gate passed |
-| Serbian | yes | AI-translated, AI quality gate passed |
-| Sinhala | yes | AI-translated, AI quality gate passed |
-| Slovak | yes | AI-translated, AI quality gate passed |
-| Slovenian | yes | AI-translated, AI quality gate passed |
-| Somali | yes | AI-translated, AI quality gate passed |
-| Spanish | yes | AI-translated, AI quality gate passed |
-| Swahili | yes | AI-translated, AI quality gate passed |
-| Swedish | yes | AI-translated, AI quality gate passed |
-| Tagalog | yes | AI-translated, AI quality gate passed |
-| Tamil | yes | AI-translated, AI quality gate passed |
-| Telugu | yes | AI-translated, AI quality gate passed |
-| Thai | yes | AI-translated, AI quality gate passed |
-| Tigrinya | yes | AI-translated, AI quality gate passed |
-| Turkish | yes | AI-translated, AI quality gate passed |
-| Ukrainian | yes | AI-translated, AI quality gate passed |
-| Urdu | yes | AI-translated, AI quality gate passed |
-| Uzbek | yes | AI-translated, AI quality gate passed |
-| Vietnamese | yes | AI-translated, AI quality gate passed |
-| Zulu | yes | AI-translated, AI quality gate passed |
+| Estonian | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Finnish | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| French | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Georgian | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| German | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Greek | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Gujarati | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Hausa | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Hebrew | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Hindi | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Hungarian | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Icelandic | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Indonesian | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Irish | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Italian | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Japanese | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Kannada | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Kazakh | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Khmer | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Korean | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Kurdish | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Lao | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Latvian | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Lithuanian | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Macedonian | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Malay | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Malayalam | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Marathi | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Mongolian | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Nepali | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Norwegian | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Pashto | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Persian | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Polish | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Portuguese | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Punjabi | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Romanian | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Russian | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Serbian | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Sinhala | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Slovak | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Slovenian | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Somali | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Spanish | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Swahili | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Swedish | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Tagalog | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Tamil | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Telugu | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Thai | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Tigrinya | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Turkish | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Ukrainian | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Urdu | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Uzbek | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Vietnamese | yes | AI-translated; structural quality gate passed; human linguistic review required |
+| Zulu | yes | AI-translated; structural quality gate passed; human linguistic review required |

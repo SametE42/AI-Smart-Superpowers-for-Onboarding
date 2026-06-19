@@ -18,6 +18,7 @@ This page explains how `memory/three-tier-memory.md` fits into the AI Agent Oper
 
 Hot, warm and cold memory patterns plus safety rules for durable agent knowledge.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

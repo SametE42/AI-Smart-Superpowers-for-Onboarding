@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > ភាសាប្រភព៖ អង់គ្លេស
 > ឯកសារប្រភព: ai/English/models/google-gemini/README.md
 > បើមានភាពខុសគ្នា ឯកសារអង់គ្លេសមានអាទិភាព។
@@ -22,6 +22,7 @@
 ## ការផ្តោត
 
 មុនប្រើក្នុង workflow សូមកំណត់វិសាលភាព ភស្តុតាង commands ដែលអាចផ្ទៀងផ្ទាត់បាន និងព្រំដែនអនុម័តដោយមនុស្ស។
+
 
 ## ពិនិត្យគុណភាព
 

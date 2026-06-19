@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Mənbə dili: İngilis dili
 > Mənbə fayl: ai/English/workflows/security-review.md
 > Fərq olduqda İngilis faylı əsas götürülür.
@@ -22,6 +22,7 @@ Bu səhifəni `workflows` mövzusu üçün əməliyyat bələdçisi kimi istifad
 ## Fokus
 
 Workflow daxilində istifadə etməzdən əvvəl əhatəni, sübutları, yoxlana bilən commands və insan təsdiqi sərhədlərini müəyyən et.
+
 
 ## Keyfiyyət yoxlaması
 

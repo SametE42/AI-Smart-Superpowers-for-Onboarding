@@ -4,6 +4,8 @@ This guide explains how to add AI Smart Superpowers for Onboarding to a target r
 
 Use the installer when you want repeatable output, language selection, backups and a manifest. Use manual integration when a repository needs careful review before any generated files are written.
 
+Installer status: experimental but functional. Use `--dry-run` first, review the planned files, then rerun with write options only after conflicts and sensitive files are understood.
+
 ## Manual Integration
 
 1. Choose an integration mode: Minimal, Standard or Enterprise.

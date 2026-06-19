@@ -100,6 +100,23 @@ class Phase2DocumentationTests(unittest.TestCase):
             with self.subTest(principle=principle):
                 self.assertIn(principle, text)
 
+    def test_readme_states_installer_is_experimental_not_planned(self):
+        text = self.read("README.md")
+
+        self.assertIn("experimental but functional", text)
+        self.assertIn("use `--dry-run` first", text)
+        self.assertNotIn("Planned installer modes", text)
+
+    def test_tool_compatibility_matrix_is_source_backed(self):
+        text = self.read("docs/tool-compatibility.md")
+
+        for header in ["Source", "Verified on", "Confidence"]:
+            with self.subTest(header=header):
+                self.assertIn(header, text)
+        for tool in ["OpenAI Codex", "Claude Code", "GitHub Copilot", "Cursor", "Windsurf"]:
+            with self.subTest(tool=tool):
+                self.assertRegex(text, rf"\| {tool} .* official docs .* \d{{4}}-\d{{2}}-\d{{2}} .* (High|Medium|Low) .* \|")
+
 
 if __name__ == "__main__":
     unittest.main()

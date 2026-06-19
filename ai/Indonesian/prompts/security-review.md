@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Bahasa sumber: Inggris
 > File sumber: ai/English/prompts/security-review.md
 > Jika ada perbedaan, file Inggris menjadi acuan.
@@ -24,6 +24,7 @@ Gunakan halaman ini sebagai panduan operasional untuk tema `prompts`. Ini tidak 
 ## Fokus
 
 Sebelum memakai halaman ini dalam workflow, tetapkan cakupan, bukti yang diperlukan, commands yang dapat diverifikasi, dan batas persetujuan manusia.
+
 
 ## Pemeriksaan kualitas
 

@@ -18,6 +18,7 @@ This page explains how `prompts/translation.md` fits into the AI Agent Operating
 
 Prompt design, refinement and review patterns for repository-aware AI work.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

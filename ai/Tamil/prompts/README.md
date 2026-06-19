@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > மூல மொழி: ஆங்கிலம்
 > மூல கோப்பு: ai/English/prompts/README.md
 > வேறுபாடு இருந்தால் ஆங்கில கோப்பே முன்னுரிமை பெறும்.

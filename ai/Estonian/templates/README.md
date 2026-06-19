@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Lähtekeel: inglise
 > Lähtefail: ai/English/templates/README.md
 > Erinevuste korral on määrav ingliskeelne fail.
@@ -24,6 +24,7 @@ Kasuta seda lehte operatiivse juhisena teema `templates` jaoks. See ei asenda re
 ## Fookus
 
 Enne selle lehe kasutamist workflow's määra ulatus, vajalikud tõendid, kontrollitavad käsud ja inimkinnituse piirid.
+
 
 ## Kvaliteedikontroll
 

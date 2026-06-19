@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > மூல மொழி: ஆங்கிலம்
 > மூல கோப்பு: ai/English/tools/opencode/models.md
 > வேறுபாடு இருந்தால் ஆங்கில கோப்பே முன்னுரிமை பெறும்.
@@ -22,6 +22,7 @@
 ## கவனம்
 
 workflow-இல் பயன்படுத்துவதற்கு முன் வரம்பு, ஆதாரம், சரிபார்க்கக்கூடிய commands மற்றும் மனித ஒப்புதல் எல்லைகளை வரையறுக்கவும்.
+
 
 ## தரச் சரிபார்ப்பு
 

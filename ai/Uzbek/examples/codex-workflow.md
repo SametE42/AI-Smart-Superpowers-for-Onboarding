@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Manba tili: inglizcha
 > Manba fayl: ai/English/examples/codex-workflow.md
 > Farq bo'lsa, inglizcha fayl ustuvor.
@@ -22,6 +22,7 @@ Bu sahifani `examples` uchun operatsion yo'riqnoma sifatida ishlating. U reposit
 ## Fokus
 
 workflow ichida ishlatishdan oldin doira, dalillar, tekshiriladigan commands va inson tasdiqi chegaralarini belgilang.
+
 
 ## Sifat tekshiruvi
 

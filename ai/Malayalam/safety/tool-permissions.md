@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > ഉറവിട ഭാഷ: ഇംഗ്ലീഷ്
 > ഉറവിട ഫയൽ: ai/English/safety/tool-permissions.md
 > വ്യത്യാസമുണ്ടെങ്കിൽ ഇംഗ്ലീഷ് ഫയലിനാണ് മുൻഗണന.
@@ -22,6 +22,7 @@
 ## ഫോകസ്
 
 workflow-യിൽ ഉപയോഗിക്കുന്നതിന് മുമ്പ് പരിധി, തെളിവുകൾ, പരിശോധിക്കാവുന്ന commands, മനുഷ്യ അംഗീകാര അതിർത്തികൾ നിർവ്വചിക്കുക.
+
 
 ## ഗുണനിലവാര പരിശോധന
 

@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Källspråk: engelska
 > Källfil: ai/English/context-engineering/context-engineering-overview.md
 > Vid avvikelser gäller den engelska filen.
@@ -24,6 +24,7 @@ Använd sidan som operativ vägledning för temat `context-engineering`. Den ers
 ## Fokus
 
 Definiera omfattning, nödvändiga bevis, verifierbara kommandon och gränser för mänskligt godkännande innan sidan används i ett workflow.
+
 
 ## Kvalitetskontroll
 

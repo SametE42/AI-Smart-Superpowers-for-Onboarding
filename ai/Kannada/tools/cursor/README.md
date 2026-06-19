@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > ಮೂಲ ಭಾಷೆ: ಇಂಗ್ಲಿಷ್
 > ಮೂಲ ಫೈಲ್: ai/English/tools/cursor/README.md
 > ಭೇದವಿದ್ದರೆ ಇಂಗ್ಲಿಷ್ ಫೈಲ್‌ಗೆ ಆದ್ಯತೆ.
@@ -22,6 +22,7 @@
 ## ಕೇಂದ್ರಬಿಂದು
 
 workflow ನಲ್ಲಿ ಬಳಸುವ ಮೊದಲು ವ್ಯಾಪ್ತಿ, ಸಾಕ್ಷಿ, ಪರಿಶೀಲಿಸಬಹುದಾದ commands ಮತ್ತು ಮಾನವ ಅನುಮೋದನೆ ಗಡಿಗಳನ್ನು ನಿರ್ಧರಿಸಿ.
+
 
 ## ಗುಣಮಟ್ಟ ಪರಿಶೀಲನೆ
 

@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Izvorni jezik: angleščina
 > Izvorna datoteka: ai/English/context-engineering/README.md
 > V primeru odstopanj ima prednost angleška datoteka.
@@ -24,6 +24,7 @@ Uporabi to stran kot operativno vodilo za temo `context-engineering`. Ne nadome�
 ## Fokus
 
 Pred uporabo te strani v workflowu opredeli obseg, potrebne dokaze, preverljive ukaze in meje človeške odobritve.
+
 
 ## Preverjanje kakovosti
 

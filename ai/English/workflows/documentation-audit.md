@@ -18,6 +18,7 @@ This page explains how `workflows/documentation-audit.md` fits into the AI Agent
 
 Check whether documentation is current, linked, scoped and supported by repository evidence.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

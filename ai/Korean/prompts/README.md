@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > 원본 언어: 영어
 > 원본 파일: ai/English/prompts/README.md
 > 차이가 있으면 영어 파일을 기준으로 합니다.

@@ -1,0 +1,93 @@
+schema_version: 1
+documents:
+  CONTEXT_INDEX.md:
+    purpose: Entry map for the generated knowledge base and recommended reading order.
+  MASTER_SYSTEM.md:
+    purpose: Core operating rules, priorities, safety boundaries and conflict handling.
+  ONBOARDING.md:
+    purpose: First-run orientation, setup steps and contributor workflow.
+  ARCHITECTURE.md:
+    purpose: Evidence-based architecture summary, boundaries and system shape.
+  TECH_STACK.md:
+    purpose: Languages, frameworks, tooling and stack evidence.
+  BUILD_AND_TEST.md:
+    purpose: Build, lint, test and verification commands with evidence.
+  DEPENDENCIES.md:
+    purpose: Runtime, development and external dependencies with review notes.
+  RUNTIME_ENVIRONMENT.md:
+    purpose: Runtime services, deployment assumptions and environment constraints.
+  EVIDENCE_MAP.md:
+    purpose: Traceable claims, sources, confidence and review status.
+  PROJECT_MEMORY.md:
+    purpose: Durable project context, decisions, assumptions, risks and next steps.
+  DECISIONS.md:
+    purpose: Architecture and process decisions that future agents must preserve.
+  STYLE_GUIDE.md:
+    purpose: Formatting, naming, code style and documentation conventions.
+  SECURITY_RULES.md:
+    purpose: Security constraints, redaction rules and sensitive-data handling.
+  RISK_REGISTER.md:
+    purpose: Known risks, severity, mitigations and open review items.
+  REVIEW_CHECKLIST.md:
+    purpose: Human and AI review gates before changes are trusted.
+  ERROR_PATTERNS.md:
+    purpose: Known failure modes, diagnostics and safe debugging hints.
+  TASK_SCOPING.md:
+    purpose: Rules for slicing work, non-goals and escalation boundaries.
+  FRESHNESS.md:
+    purpose: Last-reviewed dates, stale-doc triggers and maintenance ownership.
+  AGENT_ROLES.md:
+    purpose: Multi-agent roles, responsibilities and handoff rules.
+  SAFETY_BOUNDARIES.md:
+    purpose: High-impact actions, approval requirements and do-not-cross limits.
+  HUMAN_REVIEW_GATES.md:
+    purpose: Required human approvals for sensitive, risky or irreversible work.
+modes:
+  minimal:
+    - CONTEXT_INDEX.md
+    - MASTER_SYSTEM.md
+    - ARCHITECTURE.md
+    - BUILD_AND_TEST.md
+    - PROJECT_MEMORY.md
+    - SECURITY_RULES.md
+    - REVIEW_CHECKLIST.md
+  standard:
+    - CONTEXT_INDEX.md
+    - MASTER_SYSTEM.md
+    - ONBOARDING.md
+    - ARCHITECTURE.md
+    - TECH_STACK.md
+    - BUILD_AND_TEST.md
+    - DEPENDENCIES.md
+    - EVIDENCE_MAP.md
+    - PROJECT_MEMORY.md
+    - DECISIONS.md
+    - STYLE_GUIDE.md
+    - SECURITY_RULES.md
+    - RISK_REGISTER.md
+    - REVIEW_CHECKLIST.md
+    - ERROR_PATTERNS.md
+    - TASK_SCOPING.md
+    - FRESHNESS.md
+  enterprise:
+    - CONTEXT_INDEX.md
+    - MASTER_SYSTEM.md
+    - ONBOARDING.md
+    - ARCHITECTURE.md
+    - TECH_STACK.md
+    - BUILD_AND_TEST.md
+    - DEPENDENCIES.md
+    - RUNTIME_ENVIRONMENT.md
+    - EVIDENCE_MAP.md
+    - PROJECT_MEMORY.md
+    - DECISIONS.md
+    - STYLE_GUIDE.md
+    - SECURITY_RULES.md
+    - RISK_REGISTER.md
+    - REVIEW_CHECKLIST.md
+    - ERROR_PATTERNS.md
+    - TASK_SCOPING.md
+    - FRESHNESS.md
+    - AGENT_ROLES.md
+    - SAFETY_BOUNDARIES.md
+    - HUMAN_REVIEW_GATES.md

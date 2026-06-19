@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Lähdekieli: englanti
 > Lähdetiedosto: ai/English/agents/tool-using-agents.md
 > Ristiriitatilanteissa englanninkielinen tiedosto on ratkaiseva.
@@ -24,6 +24,7 @@ Käytä tätä sivua operatiivisena ohjeena aiheelle `agents`. Se ei korvaa repo
 ## Fokus
 
 Määritä laajuus, tarvittava näyttö, todennettavat komennot ja ihmisen hyväksynnän rajat ennen sivun käyttöä workflowssa.
+
 
 ## Laatutarkistus
 

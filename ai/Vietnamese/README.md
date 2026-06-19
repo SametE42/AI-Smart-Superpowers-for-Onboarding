@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Ngôn ngữ nguồn: tiếng Anh
 > Tệp nguồn: ai/English/README.md
 > Nếu có khác biệt, tệp tiếng Anh là nguồn ưu tiên.

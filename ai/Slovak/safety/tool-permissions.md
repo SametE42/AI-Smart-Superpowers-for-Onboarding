@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Zdrojový jazyk: angličtina
 > Zdrojový súbor: ai/English/safety/tool-permissions.md
 > Pri rozpore má prednosť anglický súbor.
@@ -24,6 +24,7 @@ Použi túto stránku ako operačné vodidlo pre tému `safety`. Nenahrádza dô
 ## Zameranie
 
 Pred použitím tejto stránky vo workflow definuj rozsah, potrebné dôkazy, overiteľné príkazy a hranice ľudského schválenia.
+
 
 ## Kontrola kvality
 

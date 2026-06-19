@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > स्रोत भाषा: अंग्रेज़ी
 > स्रोत फ़ाइल: ai/English/models/kimi/prompts.md
 > अंतर होने पर अंग्रेज़ी फ़ाइल प्राथमिक मानी जाएगी।
@@ -24,6 +24,7 @@
 ## फ़ोकस
 
 इस पृष्ठ को workflow में उपयोग करने से पहले दायरा, आवश्यक प्रमाण, सत्यापनीय commands और मानवीय स्वीकृति की सीमाएँ परिभाषित करें।
+
 
 ## गुणवत्ता जाँच
 

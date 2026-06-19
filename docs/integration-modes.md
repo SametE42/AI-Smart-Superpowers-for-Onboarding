@@ -1,6 +1,6 @@
 # Integration Modes
 
-The framework supports three integration modes. The same modes work in canonical and localized structure because localized filenames come from File-Maps.
+The framework supports three integration modes. The same modes work in canonical and localized structure because localized filenames come from File-Maps. The machine-readable source of truth is [`../standard-docs.yml`](../standard-docs.yml).
 
 | Modus | Fuer wen | Dateien | Aufwand | Empfehlung |
 | ----- | ------- | ------- | ------- | ---------- |

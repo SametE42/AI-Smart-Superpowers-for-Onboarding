@@ -18,6 +18,7 @@ This page explains how `agents/human-in-the-loop.md` fits into the AI Agent Oper
 
 Define when humans must approve, review, resolve ambiguity or take responsibility for risk.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

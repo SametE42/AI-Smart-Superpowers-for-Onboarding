@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Jatorrizko hizkuntza: ingelesa
 > Jatorrizko fitxategia: ai/English/models/minimax/commands.md
 > Aldeak badaude, ingelesezko fitxategiak du lehentasuna.
@@ -24,6 +24,7 @@ Erabili orrialde hau `models` gaiaren gida operatibo gisa. Ez du ordezkatzen rep
 ## Fokua
 
 Orrialde hau workflow batean erabili aurretik, definitu eremua, beharrezko ebidentzia, egiaztagarriak diren komandoak eta gizakiaren onarpen mugak.
+
 
 ## Kalitate kontrola
 

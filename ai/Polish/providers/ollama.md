@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Język źródłowy: angielski
 > Plik źródłowy: ai/English/providers/ollama.md
 > W przypadku rozbieżności plik angielski pozostaje źródłem rozstrzygającym.
@@ -24,6 +24,7 @@ Używaj tej strony jako operacyjnej wskazówki dla tematu `providers`. Nie zast�
 ## Główne założenie
 
 Zdefiniuj zakres, wymagane dowody, weryfikowalne komendy i granice zatwierdzenia przez człowieka przed użyciem tej strony w workflow.
+
 
 ## Kontrola jakości
 

@@ -18,6 +18,7 @@ This page explains how `providers/moonshot-kimi.md` fits into the AI Agent Opera
 
 Provider-specific notes for APIs, hosting models and compatibility boundaries.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

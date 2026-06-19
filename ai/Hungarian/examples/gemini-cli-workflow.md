@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Forrásnyelv: angol
 > Forrásfájl: ai/English/examples/gemini-cli-workflow.md
 > Eltérés esetén az angol fájl az irányadó.
@@ -24,6 +24,7 @@ Használd ezt az oldalt operatív útmutatóként a `examples` témához. Nem he
 ## Fókusz
 
 Mielőtt ezt az oldalt workflow-ban használod, határozd meg a hatókört, a szükséges bizonyítékokat, az ellenőrizhető parancsokat és az emberi jóváhagyás határait.
+
 
 ## Minőségellenőrzés
 

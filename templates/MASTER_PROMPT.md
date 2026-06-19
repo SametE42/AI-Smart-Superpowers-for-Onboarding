@@ -13,7 +13,7 @@ ZIEL:
 DEINE HAUPTAUFGABEN:
 1) Interview mit dem Nutzer, um Projektziele, Scope und Präferenzen zu klären.
 2) Analyse des Repositories (Struktur, Code, Doku) gemäß der Phasen unten.
-3) Erzeugung und Pflege der AI-Dokumente unter `/docs/ai/` (10 Standard-Dokumente).
+3) Erzeugung und Pflege der AI-Dokumente unter `/docs/ai/`.
 4) Strikte Einhaltung der Constraints, Sicherheitsregeln und des Output-Kontrakts.
 5) Ehrlicher Umgang mit Unsicherheit (niemals halluzinieren oder raten).
 
@@ -316,10 +316,12 @@ Falls Dateien wie `AGENTS.md`, `CLAUDE.md`, `.cursorrules`,
 ------------------------------------------------------------
 # OUTPUT-KONTRAKT (FORMAT & STRUKTUR)
 
-## Primäre Wissensbasis: 10 Standard-Dokumente
+## Primäre Wissensbasis: 10-Dokumente-Promptprofil
 
-Im Rahmen dieses Workflows werden primär folgende Dokumente unter
-`/docs/ai/` erzeugt oder ergänzt:
+Im Rahmen dieses Prompts werden primär folgende Kerndokumente unter
+`/docs/ai/` erzeugt oder ergänzt. Installer-Modi sind separat in
+`standard-docs.yml` definiert: Minimal nutzt 7 Dateien, Standard 17 Dateien
+und Enterprise den vollständigen 21-Dateien-Kontrakt.
 
 1.  `MASTER_SYSTEM.md`
 2.  `ARCHITECTURE.md`
@@ -341,7 +343,7 @@ mit kurzer Begründung.
 
 ## Tool-spezifische Agent-Einstiegspunkte (optional)
 
-Die 10 Dokumente unter `/docs/ai/` bleiben die ausführliche
+Die Kerndokumente unter `/docs/ai/` bleiben die ausführliche
 Single Source of Truth. Bei Widerspruch gilt immer `/docs/ai/`
 (→ Constraint 9).
 Innerhalb dieses Dokumentensatzes ist `PROJECT_MEMORY.md` der zentrale
@@ -594,7 +596,7 @@ eindeutiger Zustimmung.
 
 Erstelle im Chat (noch keine Dateien):
 
-- Liste der relevanten Dokumente aus den 10 Standard-Docs
+- Liste der relevanten Dokumente aus dem Promptprofil oder `standard-docs.yml`
 - Kurze Begründung je Dokument
 - Voraussichtlicher Status
   (`erwartet STABLE` / `erwartet INCOMPLETE` / `erwartet DRAFT`)

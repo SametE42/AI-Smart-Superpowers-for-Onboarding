@@ -7,6 +7,7 @@ from unittest.mock import patch
 
 from scripts.check_language_support import validate_language_support
 from scripts.install_ai_onboarding import (
+    MODES,
     detect_stack,
     install_ai_onboarding,
     load_language_support,
@@ -18,6 +19,40 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class Phase5InstallerTests(unittest.TestCase):
+    def write_minimal_framework(self, root: Path, missing_template: str | None = None) -> None:
+        (root / "templates" / "docs-ai").mkdir(parents=True)
+        (root / "templates" / "AGENTS.md").write_text("# AGENTS\n", encoding="utf-8")
+        (root / "i18n").mkdir()
+        (root / "i18n" / "language-support.yml").write_text(
+            "languages:\n"
+            "  en:\n"
+            "    name: English\n"
+            "    source_folder: English\n"
+            "    output_support: complete\n"
+            "    translation_review_status: reviewed\n"
+            "    canonical_structure: true\n"
+            "    localized_structure: true\n"
+            "    file_map: i18n/file-map.en.yml\n"
+            "    docs_directory: docs/ai\n"
+            "    agents_filename: AGENTS.md\n",
+            encoding="utf-8",
+        )
+        (root / "i18n" / "file-map.en.yml").write_text(
+            "schema_version: 1\n"
+            "language: en\n"
+            "language_name: English\n"
+            "docs_directory: docs/ai\n"
+            "agents_filename: AGENTS.md\n"
+            "translation_review_status: reviewed\n"
+            "files:\n"
+            + "".join(f"  {filename}: {filename}\n" for filename in MODES["minimal"]),
+            encoding="utf-8",
+        )
+        for filename in MODES["minimal"]:
+            if filename == missing_template:
+                continue
+            (root / "templates" / "docs-ai" / filename).write_text(f"# {filename}\n", encoding="utf-8")
+
     def test_list_languages_includes_all_supported_languages(self):
         buffer = io.StringIO()
         with redirect_stdout(buffer):
@@ -144,6 +179,24 @@ class Phase5InstallerTests(unittest.TestCase):
             self.assertEqual([], result.errors)
             self.assertTrue((target / "docs" / "ki" / "CONTEXT_INDEX.md").exists())
             self.assertFalse((target / "docs" / "ki" / "KONTEXT_INDEX.md").exists())
+
+    def test_missing_required_template_aborts_instead_of_generating_unknown_document(self):
+        with tempfile.TemporaryDirectory() as framework_tmp, tempfile.TemporaryDirectory() as target_tmp:
+            framework = Path(framework_tmp)
+            target = Path(target_tmp)
+            self.write_minimal_framework(framework, missing_template="BUILD_AND_TEST.md")
+
+            result = install_ai_onboarding(
+                root=framework,
+                target=target,
+                mode="minimal",
+                language="en",
+                structure="canonical",
+                stack="generic",
+            )
+
+            self.assertIn("Missing required template", "\n".join(result.errors))
+            self.assertEqual([], list(target.rglob("*")))
 
     def test_dry_run_reports_existing_files_without_writing(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -272,6 +325,7 @@ class Phase5InstallerTests(unittest.TestCase):
             ("setup.py", "python"),
             ("pom.xml", "java"),
             ("build.gradle", "java"),
+            ("build.gradle.kts", "kotlin"),
             ("app.csproj", "csharp"),
             ("app.sln", "csharp"),
             ("go.mod", "go"),

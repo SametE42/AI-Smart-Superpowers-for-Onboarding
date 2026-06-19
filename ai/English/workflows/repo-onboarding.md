@@ -18,6 +18,7 @@ This page explains how `workflows/repo-onboarding.md` fits into the AI Agent Ope
 
 Move from repository scan to evidence-based AI documentation without inventing missing facts.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

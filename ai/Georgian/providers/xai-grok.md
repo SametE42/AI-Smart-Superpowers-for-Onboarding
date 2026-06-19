@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > წყარო ენა: ინგლისური
 > წყარო ფაილი: ai/English/providers/xai-grok.md
 > განსხვავების შემთხვევაში უპირატესობა აქვს ინგლისურ ფაილს.
@@ -22,6 +22,7 @@
 ## ფოკუსი
 
 workflow-ში გამოყენებამდე განსაზღვრე ფარგლები, მტკიცებულებები, შემოწმებადი commands და ადამიანის დამტკიცების საზღვრები.
+
 
 ## ხარისხის შემოწმება
 

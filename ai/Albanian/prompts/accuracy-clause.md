@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Gjuha burimore: anglisht
 > Skedari burim: ai/English/prompts/accuracy-clause.md
 > Në rast mospërputhjesh, skedari anglisht ka përparësi.
@@ -24,6 +24,7 @@ Përdore këtë faqe si udhëzim operacional për temën `prompts`. Nuk zëvend�
 ## Fokus
 
 Para se ta përdorësh këtë faqe në workflow, përcakto fushën, provat e nevojshme, komandat e verifikueshme dhe kufijtë e miratimit njerëzor.
+
 
 ## Kontroll cilësie
 

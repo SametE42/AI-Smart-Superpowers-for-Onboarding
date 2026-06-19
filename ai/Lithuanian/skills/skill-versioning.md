@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Šaltinio kalba: anglų
 > Šaltinio failas: ai/English/skills/skill-versioning.md
 > Jei yra neatitikimų, pirmenybė teikiama angliškam failui.
@@ -24,6 +24,7 @@ Naudok šį puslapį kaip operacinę gairę temai `skills`. Jis nepakeičia repo
 ## Fokusas
 
 Prieš naudodamas šį puslapį workflow, apibrėžk apimtį, reikalingus įrodymus, patikrinamas komandas ir žmogaus patvirtinimo ribas.
+
 
 ## Kokybės patikra
 

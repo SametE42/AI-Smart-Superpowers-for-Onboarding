@@ -18,6 +18,7 @@ This page explains how `context-engineering/README.md` fits into the AI Agent Op
 
 How to package repository context, retrieval, memory and working instructions for agents.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > سرچينه ژبه: انګليسي
 > سرچينه فایل: ai/English/tools/windsurf/context-files.md
 > که توپير وي، انګليسي فایل لومړيتوب لري.
@@ -22,6 +22,7 @@
 ## تمرکز
 
 په workflow کې تر کارولو مخکې ساحه، شواهد، د تاييد وړ commands او د انسان منظورۍ پولې وټاکئ.
+
 
 ## د کيفيت کتنه
 

@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Idioma font: anglès
 > Fitxer font: ai/English/tools/gemini-cli/context-files.md
 > Si hi ha diferències, el fitxer en anglès té prioritat.
@@ -24,6 +24,7 @@ Fes servir aquesta pàgina com a guia operativa per al tema `tools`. No substitu
 ## Focus
 
 Abans d'usar aquesta pàgina en un workflow, defineix abast, evidència necessària, ordres verificables i límits d'aprovació humana.
+
 
 ## Control de qualitat
 

@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > మూల భాష: ఆంగ్లం
 > మూల ఫైల్: ai/English/models/openai/evals.md
 > తేడా ఉంటే ఆంగ్ల ఫైల్‌కే ప్రాధాన్యం.
@@ -22,6 +22,7 @@
 ## దృష్టి
 
 workflow లో ఉపయోగించే ముందు పరిధి, ఆధారాలు, ధృవీకరించగల commands మరియు మానవ ఆమోద హద్దులను నిర్వచించండి.
+
 
 ## నాణ్యత తనిఖీ
 

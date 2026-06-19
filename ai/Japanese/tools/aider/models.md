@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > 原文言語: 英語
 > 原文ファイル: ai/English/tools/aider/models.md
 > 差異がある場合は英語ファイルを優先します。
@@ -24,6 +24,7 @@
 ## 焦点
 
 このページを workflow で使う前に、範囲、必要な証拠、検証可能なコマンド、人間の承認境界を定義します。
+
 
 ## 品質チェック
 

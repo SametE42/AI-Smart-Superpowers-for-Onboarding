@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Ngôn ngữ nguồn: tiếng Anh
 > Tệp nguồn: ai/English/prompts/prompt-refinement.md
 > Nếu có khác biệt, tệp tiếng Anh là nguồn ưu tiên.
@@ -24,6 +24,7 @@ Dùng trang này như hướng dẫn vận hành cho chủ đề `prompts`. Nó 
 ## Trọng tâm
 
 Trước khi dùng trang này trong workflow, hãy xác định phạm vi, bằng chứng cần có, commands có thể xác minh và ranh giới phê duyệt của con người.
+
 
 ## Kiểm tra chất lượng
 

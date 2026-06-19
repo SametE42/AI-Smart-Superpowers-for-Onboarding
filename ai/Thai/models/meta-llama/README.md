@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > ภาษาต้นฉบับ: อังกฤษ
 > ไฟล์ต้นฉบับ: ai/English/models/meta-llama/README.md
 > หากมีความแตกต่าง ให้ยึดไฟล์ภาษาอังกฤษเป็นหลัก
@@ -24,6 +24,7 @@
 ## จุดเน้น
 
 ก่อนใช้หน้านี้ใน workflow ให้กำหนดขอบเขต หลักฐานที่ต้องใช้ commands ที่ตรวจสอบได้ และขอบเขตการอนุมัติโดยมนุษย์
+
 
 ## การตรวจคุณภาพ
 

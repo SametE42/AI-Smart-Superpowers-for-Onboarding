@@ -18,6 +18,7 @@ This page explains how `prompts/security-review.md` fits into the AI Agent Opera
 
 Review secrets, permissions, logs, data exposure and production-readiness claims from evidence.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

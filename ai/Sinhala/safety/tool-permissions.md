@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > මූලාශ්‍ර භාෂාව: ඉංග්‍රීසි
 > මූලාශ්‍ර ගොනුව: ai/English/safety/tool-permissions.md
 > වෙනසක් තිබේ නම් ඉංග්‍රීසි ගොනුව ප්‍රමුඛ වේ.
@@ -22,6 +22,7 @@
 ## අවධානය
 
 workflow තුළ භාවිතයට පෙර විෂය පථය, සාක්ෂි, සත්‍යාපනය කළ හැකි commands සහ මිනිස් අනුමැතියේ සීමා නිර්වචනය කරන්න.
+
 
 ## ගුණාත්මක පරීක්ෂාව
 

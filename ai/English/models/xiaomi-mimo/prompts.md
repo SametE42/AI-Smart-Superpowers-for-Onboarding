@@ -18,6 +18,7 @@ This page explains how `models/xiaomi-mimo/prompts.md` fits into the AI Agent Op
 
 Model-family profiles and routing notes for AI-assisted repository work.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

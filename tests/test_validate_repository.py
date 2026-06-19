@@ -448,6 +448,41 @@ File names, folder names, commands, APIs and model names stay unchanged. English
             self.assertEqual(report.summary["translation_mirror_placeholder_files"], 1)
             self.assertEqual(report.summary["missing_ai_translation_marker_files"], 3)
 
+    def test_machine_generated_translation_cannot_claim_no_human_review_required(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.write(root, "README.md", "# Root\n")
+            self.write(root, "ai/README.md", "# AI\n")
+            self.write(root, "i18n/README.md", "# I18n\n")
+            self.write(
+                root,
+                "i18n/language-support.yml",
+                "languages:\n"
+                "  en:\n"
+                "    source_folder: English\n"
+                "    translation_review_status: reviewed\n"
+                "  de:\n"
+                "    source_folder: German\n"
+                "    translation_review_status: machine_generated\n",
+            )
+            self.write(root, "ai/English/README.md", self.complete_language_readme())
+            german_readme = self.complete_language_readme(translated=True).replace(
+                "## Localization notes",
+                "> Translation status: AI-translated from the English source; "
+                "AI quality gate passed; no human review required.\n\n"
+                "## Localization notes",
+            )
+            self.write(root, "ai/German/README.md", german_readme)
+
+            report = validate_repository(root)
+
+            self.assertEqual(report.status, "FAIL")
+            self.assertEqual(report.summary["machine_generated_translation_review_conflicts"], 1)
+            conflict = report.details["machine_generated_translation_review_conflicts"][0]
+            self.assertEqual("ai/German/README.md", conflict["file"])
+            self.assertEqual("de", conflict["language"])
+            self.assertGreater(conflict["line"], 0)
+
     def test_prompt_readme_manual_link_mismatch_fails(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

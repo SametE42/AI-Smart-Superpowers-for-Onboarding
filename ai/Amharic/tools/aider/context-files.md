@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > ምንጭ ቋንቋ፡ እንግሊዝኛ
 > ምንጭ ፋይል: ai/English/tools/aider/context-files.md
 > ልዩነት ካለ የእንግሊዝኛው ፋይል ቅድሚያ ይኖረዋል።
@@ -22,6 +22,7 @@
 ## ትኩረት
 
 በ workflow ውስጥ ከመጠቀም በፊት ክልል፣ ማስረጃ፣ የሚረጋገጡ commands እና የሰው ፈቃድ ገደቦችን ይግለጹ።
+
 
 ## የጥራት ፍተሻ
 

@@ -88,6 +88,7 @@ The repository is intentionally modular because AI-agent onboarding in complex r
 | AI knowledge base | Persistent repository context | [`templates/docs-ai/`](templates/docs-ai/) |
 | Tool entrypoints | Short tool-specific references to the knowledge base | [`templates/tool-entrypoints/`](templates/tool-entrypoints/) |
 | Skill packaging | Portable repeatable workflows | [`skills/repo-onboarding/SKILL.md`](skills/repo-onboarding/SKILL.md) |
+| Standard contract | Single source for Minimal, Standard and Enterprise document sets | [`standard-docs.yml`](standard-docs.yml) |
 | Integration modes | Minimal, Standard and Enterprise adoption | [`docs/integration-modes.md`](docs/integration-modes.md) |
 | Integration guide | Manual and installer-based setup | [`docs/how-to-integrate.md`](docs/how-to-integrate.md) |
 | Localized output | Canonical or localized target files | [`docs/localized-output.md`](docs/localized-output.md) |
@@ -98,13 +99,13 @@ The repository is intentionally modular because AI-agent onboarding in complex r
 
 ## Onboarding Modes
 
-The current templates define the reusable knowledge base. Planned installer modes are:
+The current templates define the reusable knowledge base. The installer is experimental but functional; use `--dry-run` first. Mode membership is defined in [`standard-docs.yml`](standard-docs.yml) and checked by tests, the installer and language-support validation.
 
 | Mode | Use when | Output shape |
 |---|---|---|
-| Minimal | Small projects or quick repository orientation | Essential agent entrypoint and core `docs/ai/` files |
-| Standard | Normal application or library repositories | Architecture, stack, build/test, dependencies, evidence and review context |
-| Enterprise | Larger, regulated or security-sensitive repositories | Standard context plus runtime, risk, safety boundaries and human review gates |
+| Minimal | Small projects or quick repository orientation | `AGENTS.md` plus 7 core knowledge-base files |
+| Standard | Normal application or library repositories | `AGENTS.md` plus 17 knowledge-base files |
+| Enterprise | Larger, regulated or security-sensitive repositories | `AGENTS.md` plus 21 knowledge-base files; optional tool entrypoints can be copied when used |
 
 Each mode should be able to generate canonical English structures or localized structures through file maps. The actual language list is derived from repository evidence, not from hard-coded examples.
 
@@ -120,7 +121,7 @@ Use it before structured coding-agent workflows, Superpowers-style workflows or 
 
 ## Target Output
 
-The standard creates or updates a `docs/ai/` folder inside the target repository:
+The prompt-first quickstart creates or updates the conceptual 10-file `docs/ai/` core inside the target repository:
 
 ```text
 docs/ai/
@@ -148,6 +149,8 @@ Key files:
 
 The README shows the conceptual output. Workflow prompts and templates may use a different creation or update order when that is easier for an agent to execute safely.
 
+The installer modes are more explicit: Minimal uses 7 files, Standard uses 17 files and Enterprise uses the full 21-file contract. See [`standard-docs.yml`](standard-docs.yml) and [`docs/integration-modes.md`](docs/integration-modes.md).
+
 ## Quickstart
 
 1. Open [`templates/MASTER_PROMPT.en.md`](templates/MASTER_PROMPT.en.md).
@@ -168,6 +171,14 @@ Local checks:    python -m unittest discover -s tests
 ```
 
 No package installation is required to use the prompt standard. Python is only needed for this repository's maintenance checks.
+
+Optional installer quickstart:
+
+```bash
+python scripts/install_ai_onboarding.py --mode standard --language en --structure canonical --target ../target-repo --dry-run
+```
+
+Installer status: experimental but functional; use `--dry-run` first and review the planned files before writing.
 
 ## Workflow
 

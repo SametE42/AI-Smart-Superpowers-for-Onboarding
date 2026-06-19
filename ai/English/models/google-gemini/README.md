@@ -18,6 +18,7 @@ This page explains how `models/google-gemini/README.md` fits into the AI Agent O
 
 Model-family profiles and routing notes for AI-assisted repository work.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

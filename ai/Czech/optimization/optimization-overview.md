@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Zdrojový jazyk: angličtina
 > Zdrojový soubor: ai/English/optimization/optimization-overview.md
 > Při rozporu má přednost anglický soubor.
@@ -24,6 +24,7 @@ Použijte tuto stránku jako provozní vodítko pro téma `optimization`. Nenahr
 ## Zaměření
 
 Před použitím této stránky ve workflow definujte rozsah, potřebné důkazy, ověřitelné příkazy a hranice lidského schválení.
+
 
 ## Kontrola kvality
 

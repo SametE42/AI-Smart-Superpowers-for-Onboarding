@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > لغة المصدر: الإنجليزية
 > ملف المصدر: ai/English/models/openrouter/config.md
 > عند وجود تعارض، يكون الملف الإنجليزي هو المرجع.
@@ -24,6 +24,7 @@
 ## التركيز
 
 حدد النطاق والأدلة المطلوبة والأوامر القابلة للتحقق وحدود الموافقة البشرية قبل استخدام هذه الصفحة داخل workflow.
+
 
 ## فحص الجودة
 

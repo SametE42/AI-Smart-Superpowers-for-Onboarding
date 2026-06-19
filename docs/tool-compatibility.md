@@ -12,15 +12,17 @@ Reusable entrypoint templates live in `templates/tool-entrypoints/`. They are co
 
 ## 1. Context files
 
-| Tool / Agent | File | Notes |
-|---|---|---|
-| OpenAI Codex | `AGENTS.md` | Short agent entrypoint; link to `/docs/ai/` |
-| GitHub Copilot | `.github/copilot-instructions.md` | Repo-wide Copilot instructions |
-| GitHub Copilot | `.github/instructions/*.instructions.md` | Path-specific instructions |
-| Claude Code | `CLAUDE.md` | Claude-specific entrypoint |
-| Gemini | `GEMINI.md` | Gemini-specific entrypoint |
-| Cursor | `AGENTS.md` or `.cursor/rules/*.mdc` | Use rules for scoped behavior |
-| Windsurf / Cascade | `AGENTS.md` (root = always active; subdirectory = automatically scoped to files in that folder) or `.windsurf/rules/*.md` | Use scoped placement for monorepos or Rules when more control is needed |
+`Verified on` is the date this repository last checked the linked public documentation, not a vendor support promise.
+
+| Tool / Agent | File | Source | Verified on | Confidence | Notes |
+|---|---|---|---|---|---|
+| OpenAI Codex | `AGENTS.md` | official docs ([OpenAI Codex AGENTS.md](https://developers.openai.com/codex/guides/agents-md)) | 2026-06-19 | High | Short agent entrypoint; link to `/docs/ai/`. |
+| GitHub Copilot | `.github/copilot-instructions.md` | official docs ([GitHub Copilot custom instructions](https://docs.github.com/copilot/customizing-copilot/adding-custom-instructions-for-github-copilot)) | 2026-06-19 | High | Repo-wide Copilot instructions. |
+| GitHub Copilot | `.github/instructions/*.instructions.md` | official docs ([GitHub Copilot custom instructions](https://docs.github.com/copilot/customizing-copilot/adding-custom-instructions-for-github-copilot)) | 2026-06-19 | High | Path-specific instructions. |
+| Claude Code | `CLAUDE.md` | official docs ([Claude Code memory](https://code.claude.com/docs/en/memory)) | 2026-06-19 | High | Claude-specific persistent project instructions. |
+| Gemini | `GEMINI.md` | project template | 2026-06-19 | Medium | Keep as a short entrypoint only where the active Gemini workflow loads it. |
+| Cursor | `AGENTS.md` or `.cursor/rules/*.mdc` | official docs ([Cursor Rules](https://cursor.com/docs/rules)) | 2026-06-19 | High | Use rules for scoped behavior. |
+| Windsurf | `AGENTS.md` or `.windsurf/rules/*.md` | official docs ([Windsurf AGENTS.md](https://docs.windsurf.com/es/windsurf/cascade/agents-md)) | 2026-06-19 | Medium | Use scoped placement for monorepos or Rules when more control is needed. |
 
 ## 2. Agent runtimes and orchestrators
 

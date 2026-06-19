@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Zimanê çavkanî: Îngilîzî
 > Pelê çavkanî: ai/English/tools/windsurf/models.md
 > Ger cudahî hebe, pelê Îngilîzî serdest e.
@@ -22,6 +22,7 @@ Vê rûpelê wek rêbernameya karî ji bo `tools` bi kar bîne. Ew delîlên rep
 ## Fokus
 
 Berî bikaranîna di workflow de, qada kar, delîl, commands yên piştrastbar û sînorên pejirandina mirovî diyar bike.
+
 
 ## Kontrola kalîteyê
 

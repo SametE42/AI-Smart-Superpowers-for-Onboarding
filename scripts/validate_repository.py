@@ -35,6 +35,11 @@ SOURCE_SCAFFOLD_MARKERS = [
 AI_TRANSLATION_MARKERS = [
     "<!-- translation-status: ai-translated; ai-quality-pass -->",
 ]
+TRANSLATION_REVIEW_OVERCLAIM_PATTERNS = [
+    re.compile(r"\bno human review required\b", re.IGNORECASE),
+    re.compile(r"\bhuman review (?:is )?not required\b", re.IGNORECASE),
+    re.compile(r"\bno linguistic review required\b", re.IGNORECASE),
+]
 UNREVIEWED_TRANSLATION_MARKERS = [
     "<!-- translation-status: localized-draft; human-review-required -->",
     "This file mirrors `ai/English/",
@@ -494,6 +499,60 @@ def _localized_language_markdown_files(root: Path, markdown_files: Iterable[Path
     return localized_files
 
 
+def _machine_generated_language_folders(root: Path) -> dict[str, str]:
+    support_path = root / "i18n" / "language-support.yml"
+    if not support_path.exists():
+        return {}
+
+    languages: dict[str, dict[str, str]] = {}
+    current_language: str | None = None
+    for raw_line in support_path.read_text(encoding="utf-8", errors="replace").splitlines():
+        line = raw_line.rstrip()
+        stripped = line.strip()
+        if not stripped or stripped.startswith("#") or stripped == "languages:":
+            continue
+        if line.startswith("  ") and not line.startswith("    ") and stripped.endswith(":"):
+            current_language = stripped[:-1]
+            languages[current_language] = {}
+            continue
+        if current_language and line.startswith("    ") and ":" in stripped:
+            key, value = stripped.split(":", 1)
+            languages[current_language][key.strip()] = value.strip().strip('"').strip("'")
+
+    folders: dict[str, str] = {}
+    for language, info in languages.items():
+        if info.get("translation_review_status") == "machine_generated" and info.get("source_folder"):
+            folders[str(info["source_folder"])] = language
+    return folders
+
+
+def _find_machine_generated_translation_review_conflicts(
+    root: Path,
+    localized_markdown_files: Iterable[Path],
+    text_by_path: dict[Path, str],
+) -> list[dict]:
+    machine_generated_folders = _machine_generated_language_folders(root)
+    if not machine_generated_folders:
+        return []
+
+    conflicts: list[dict] = []
+    for path in localized_markdown_files:
+        relative_parts = path.relative_to(root).parts
+        if len(relative_parts) < 3:
+            continue
+        language_folder = relative_parts[1]
+        language = machine_generated_folders.get(language_folder)
+        if not language:
+            continue
+        text = text_by_path[path]
+        if AI_TRANSLATION_MARKERS[0] not in text:
+            continue
+        for line_number, line in enumerate(text.splitlines(), start=1):
+            if any(pattern.search(line) for pattern in TRANSLATION_REVIEW_OVERCLAIM_PATTERNS):
+                conflicts.append({"file": _relative(path, root), "language": language, "line": line_number})
+    return conflicts
+
+
 def _language_readme_files(root: Path) -> list[Path]:
     ai_dir = root / "ai"
     if not ai_dir.exists():
@@ -681,6 +740,11 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
     english_markdown_files = [path for path in markdown_files if _relative(path, root_path).startswith("ai/English/")]
     localized_markdown_files = _localized_language_markdown_files(root_path, markdown_files)
     language_readmes = _language_readme_files(root_path)
+    machine_generated_translation_review_conflicts = _find_machine_generated_translation_review_conflicts(
+        root_path,
+        localized_markdown_files,
+        text_by_path,
+    )
     english_scaffold_files = _find_files_with_markers(
         english_markdown_files,
         root_path,
@@ -759,6 +823,7 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         "ai_translated_files": len(ai_translated_files),
         "missing_ai_translation_marker_files": len(missing_ai_translation_marker_files),
         "unreviewed_translation_files": len(unreviewed_translation_files),
+        "machine_generated_translation_review_conflicts": len(machine_generated_translation_review_conflicts),
         "translation_mirror_placeholder_files": len(translation_mirror_placeholder_files),
         "scaffold_or_unreviewed_translation_files": len(english_scaffold_files) + len(unreviewed_translation_files),
         "incomplete_language_readmes": len(incomplete_language_readmes),
@@ -785,6 +850,7 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         "ai_translated_files_sample": ai_translated_files[:200],
         "missing_ai_translation_marker_files_sample": missing_ai_translation_marker_files[:200],
         "unreviewed_translation_files_sample": unreviewed_translation_files[:200],
+        "machine_generated_translation_review_conflicts": machine_generated_translation_review_conflicts[:200],
         "translation_mirror_placeholder_files_sample": translation_mirror_placeholder_files[:200],
         "incomplete_language_readmes": incomplete_language_readmes[:200],
         "language_readmes_missing_required_sections": language_readmes_missing_required_sections[:200],
@@ -809,6 +875,7 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         "magical_prompt_improver_unlocalized_files",
         "missing_ai_translation_marker_files",
         "unreviewed_translation_files",
+        "machine_generated_translation_review_conflicts",
         "incomplete_language_readmes",
         "language_readmes_missing_required_sections",
         "language_readme_heading_mismatches",

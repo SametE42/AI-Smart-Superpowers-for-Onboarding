@@ -18,6 +18,7 @@ This page explains how `context-engineering/context-pruning.md` fits into the AI
 
 How to package repository context, retrieval, memory and working instructions for agents.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

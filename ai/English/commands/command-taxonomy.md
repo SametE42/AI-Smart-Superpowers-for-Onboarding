@@ -18,6 +18,7 @@ This page explains how `commands/command-taxonomy.md` fits into the AI Agent Ope
 
 Separate model capabilities from host-tool commands and document only commands the runtime owns.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

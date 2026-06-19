@@ -11,49 +11,20 @@ from typing import Any
 
 try:
     from scripts.check_language_support import (
-        REQUIRED_FILES,
         parse_file_map,
         parse_language_support,
     )
+    from scripts.standard_contract import load_standard_contract
 except ModuleNotFoundError:
     from check_language_support import (  # type: ignore[no-redef]
-        REQUIRED_FILES,
         parse_file_map,
         parse_language_support,
     )
+    from standard_contract import load_standard_contract  # type: ignore[no-redef]
 
 
-MODES = {
-    "minimal": [
-        "CONTEXT_INDEX.md",
-        "MASTER_SYSTEM.md",
-        "ARCHITECTURE.md",
-        "BUILD_AND_TEST.md",
-        "PROJECT_MEMORY.md",
-        "SECURITY_RULES.md",
-        "REVIEW_CHECKLIST.md",
-    ],
-    "standard": [
-        "CONTEXT_INDEX.md",
-        "MASTER_SYSTEM.md",
-        "ONBOARDING.md",
-        "ARCHITECTURE.md",
-        "TECH_STACK.md",
-        "BUILD_AND_TEST.md",
-        "DEPENDENCIES.md",
-        "EVIDENCE_MAP.md",
-        "PROJECT_MEMORY.md",
-        "DECISIONS.md",
-        "STYLE_GUIDE.md",
-        "SECURITY_RULES.md",
-        "RISK_REGISTER.md",
-        "REVIEW_CHECKLIST.md",
-        "ERROR_PATTERNS.md",
-        "TASK_SCOPING.md",
-        "FRESHNESS.md",
-    ],
-    "enterprise": list(REQUIRED_FILES),
-}
+STANDARD_CONTRACT = load_standard_contract(Path(__file__).resolve().parents[1] / "standard-docs.yml")
+MODES = STANDARD_CONTRACT.modes
 
 SUPPORTED_STACKS = {
     "generic",
@@ -141,6 +112,8 @@ def detect_stack(target: str | Path) -> StackHint:
         ("setup.py", "python"),
         ("pom.xml", "java"),
         ("build.gradle", "java"),
+        ("build.gradle.kts", "kotlin"),
+        ("settings.gradle.kts", "kotlin"),
         ("go.mod", "go"),
         ("Cargo.toml", "rust"),
         ("composer.json", "php"),
@@ -215,7 +188,13 @@ def _read_template(root: Path, filename: str) -> str:
     path = root / "templates" / "docs-ai" / filename
     if path.exists():
         return path.read_text(encoding="utf-8")
-    return f"# {filename}\n\n[UNKNOWN]\n"
+    raise FileNotFoundError(path)
+
+
+def _missing_required_templates(root: Path, mode: str) -> list[Path]:
+    required = [root / "templates" / "AGENTS.md"]
+    required.extend(root / "templates" / "docs-ai" / filename for filename in MODES[mode])
+    return [path for path in required if not path.exists()]
 
 
 def _render_doc(root: Path, filename: str, language: str, info: dict[str, Any], structure: str, stack_hint: StackHint) -> str:
@@ -399,6 +378,12 @@ def install_ai_onboarding(
     if structure == "localized" and info.get("localized_structure") is not True:
         result.errors.append(f"Language does not support localized structure: {language}")
     if result.errors:
+        return result
+
+    missing_templates = _missing_required_templates(root_path, mode)
+    if missing_templates:
+        for path in missing_templates:
+            result.errors.append(f"Missing required template: {path.relative_to(root_path).as_posix()}")
         return result
 
     stack_hint = detect_stack(target_path) if detect_stack_flag else StackHint(stack=stack)

@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > स्रोत भाषा: इंग्रजी
 > स्रोत फाइल: ai/English/prompts/README.md
 > फरक असल्यास इंग्रजी फाइलला प्राधान्य.

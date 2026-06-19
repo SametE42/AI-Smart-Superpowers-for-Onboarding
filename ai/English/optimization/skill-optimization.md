@@ -18,6 +18,7 @@ This page explains how `optimization/skill-optimization.md` fits into the AI Age
 
 Prompt, skill and workflow optimization methods with controlled rollout practices.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

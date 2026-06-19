@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Harshen tushe: Turanci
 > Fayil na tushe: ai/English/models/deepseek/config.md
 > Idan akwai bambanci, fayil din Turanci ne zai fi karfi.
@@ -24,6 +24,7 @@ Yi amfani da wannan shafi a matsayin jagorar aiki ga batun `models`. Ba ya maye 
 ## Mayar da hankali
 
 Kafin amfani da wannan shafi a workflow, ayyana iyaka, shaidar da ake bukata, commands da za a iya tabbatarwa da iyakar amincewar mutum.
+
 
 ## Duba inganci
 

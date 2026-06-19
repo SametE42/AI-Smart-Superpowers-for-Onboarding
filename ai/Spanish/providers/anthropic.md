@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > Idioma fuente: inglés
 > Archivo fuente: ai/English/providers/anthropic.md
 > Si hay diferencias, el archivo en inglés tiene prioridad.
@@ -24,6 +24,7 @@ Usa esta página como guía operativa para el tema `providers`. No sustituye la 
 ## Enfoque
 
 Define alcance, evidencia necesaria, comandos verificables y límites de aprobación humana antes de usar esta página en un workflow.
+
 
 ## Control de calidad
 

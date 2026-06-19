@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > မူရင်းဘာသာ: အင်္ဂလိပ်
 > မူရင်းဖိုင်: ai/English/models/cohere/config.md
 > ကွာခြားချက်ရှိပါက အင်္ဂလိပ်ဖိုင်ကို အဓိကယူပါ။
@@ -22,6 +22,7 @@
 ## အာရုံစိုက်ရန်
 
 workflow တွင် အသုံးမပြုမီ အတိုင်းအတာ၊ အထောက်အထား၊ စစ်ဆေးနိုင်သော commands နှင့် လူသားအတည်ပြုမှု အကန့်အသတ်များကို သတ်မှတ်ပါ။
+
 
 ## အရည်အသွေးစစ်ဆေးမှု
 

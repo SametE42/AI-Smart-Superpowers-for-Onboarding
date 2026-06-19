@@ -2,7 +2,7 @@
 
 <!-- translation-status: ai-translated; ai-quality-pass -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Translation status: AI-translated from the English source; structural quality gate passed; human linguistic review still required unless translation_review_status is reviewed.
 > 源语言：英语
 > 源文件: ai/English/evals/multilingual-evals.md
 > 如有差异，以英文文件为准。
@@ -24,6 +24,7 @@
 ## 重点
 
 在 workflow 中使用本页之前，先定义范围、所需证据、可验证命令和人工批准边界。
+
 
 ## 质量检查
 
