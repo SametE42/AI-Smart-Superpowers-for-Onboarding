@@ -48,3 +48,9 @@ jobs:
 
       - name: Check context budget
         run: python scripts/check_context_budget.py --root .
+
+      - name: Regenerate language support report
+        run: python scripts/generate_language_support_report.py --root . --output docs/language-support-report.md
+
+      - name: Check language support report is current
+        run: git diff --exit-code docs/language-support-report.md

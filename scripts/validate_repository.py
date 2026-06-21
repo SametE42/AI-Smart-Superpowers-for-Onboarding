@@ -49,6 +49,34 @@ LEGACY_LOCALIZATION_TERM_PATTERNS = [
         r"no human review required",
     )
 ]
+OVERCLAIM_TERM_PATTERNS = [
+    re.compile(pattern, re.IGNORECASE)
+    for pattern in (
+        r"\breviewed\s+knowledge\s+base\b",
+        r"\breviewed\s+translation(?:s)?\b",
+        r"\bhuman-reviewed\b",
+        r"\bprofessionally\s+reviewed\b",
+        r"\bquality-approved\s+translation\b",
+        r"\bproduction-ready\b",
+        r"\bfully\s+verified\b",
+        r"\ball\s+tests\s+passed\b",
+        r"\bsecure\s+by\s+default\b",
+        r"\bofficial(?:ly)?\s+compatible\b",
+        r"\blatest\s+model\b",
+        r"\bbest\s+model\b",
+        r"\bcheapest\s+model\b",
+        r"\bsupports\s+all\s+features\b",
+        r"\bguaranteed\s+compatible\b",
+    )
+]
+OVERCLAIM_GUARD_PATTERN = re.compile(
+    r"\b("
+    r"do not|don't|must not|should not|not|no claim|no replacement|"
+    r"unless|until|only when|before|cannot|can't|does not|is not|"
+    r"without|avoid|pending|needs?\s+review|requires?|requirement|required|gate|gates"
+    r")\b",
+    re.IGNORECASE,
+)
 UNREVIEWED_TRANSLATION_MARKERS = [
     "<!-- translation-status: localized-draft; human-review-required -->",
     "This file mirrors `ai/English/",
@@ -688,6 +716,44 @@ def _find_legacy_localization_term_hits(
     return hits
 
 
+def _line_has_guarded_overclaim_context(line: str) -> bool:
+    stripped = line.strip()
+    if not stripped:
+        return True
+    if stripped.endswith("?"):
+        return True
+    if stripped.startswith("|") and "Limitations" in stripped:
+        return True
+    if stripped.startswith("- `") and stripped.endswith("`"):
+        return True
+    return bool(OVERCLAIM_GUARD_PATTERN.search(line))
+
+
+def _find_overclaim_term_hits(
+    markdown_files: Iterable[Path],
+    root: Path,
+    text_by_path: dict[Path, str],
+) -> list[dict]:
+    hits: list[dict] = []
+    allowed_paths = {
+        "CHANGELOG.md",
+    }
+    for path in markdown_files:
+        relative = _relative(path, root)
+        if relative in allowed_paths:
+            continue
+        in_fence = False
+        for line_number, line in enumerate(text_by_path[path].splitlines(), start=1):
+            if line.strip().startswith("```"):
+                in_fence = not in_fence
+                continue
+            if in_fence or _line_has_guarded_overclaim_context(line):
+                continue
+            if any(pattern.search(line) for pattern in OVERCLAIM_TERM_PATTERNS):
+                hits.append({"file": relative, "line": line_number})
+    return hits
+
+
 def validate_repository(root: str | Path = ".") -> ValidationReport:
     root_path = Path(root).resolve()
     files = _git_files(root_path) or _filesystem_files(root_path)
@@ -746,6 +812,7 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         if _relative(path, root_path) not in localization_status_file_set
     ]
     legacy_localization_term_hits = _find_legacy_localization_term_hits(markdown_files, root_path, text_by_path)
+    overclaim_term_hits = _find_overclaim_term_hits(markdown_files, root_path, text_by_path)
     (
         language_readmes_missing_required_sections,
         language_readme_heading_mismatches,
@@ -794,6 +861,7 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         "localized_mirror_files": len(localized_mirror_files),
         "missing_localization_status_marker_files": len(missing_localization_status_marker_files),
         "legacy_localization_term_hits": len(legacy_localization_term_hits),
+        "overclaim_term_hits": len(overclaim_term_hits),
         "unreviewed_translation_files": len(unreviewed_translation_files),
         "translation_mirror_placeholder_files": len(translation_mirror_placeholder_files),
         "scaffold_or_unreviewed_translation_files": len(english_scaffold_files) + len(unreviewed_translation_files),
@@ -821,6 +889,7 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         "localized_mirror_files_sample": localized_mirror_files[:200],
         "missing_localization_status_marker_files_sample": missing_localization_status_marker_files[:200],
         "legacy_localization_term_hits": legacy_localization_term_hits[:200],
+        "overclaim_term_hits": overclaim_term_hits[:200],
         "unreviewed_translation_files_sample": unreviewed_translation_files[:200],
         "translation_mirror_placeholder_files_sample": translation_mirror_placeholder_files[:200],
         "incomplete_language_readmes": incomplete_language_readmes[:200],
@@ -846,6 +915,7 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         "magical_prompt_improver_unlocalized_files",
         "missing_localization_status_marker_files",
         "legacy_localization_term_hits",
+        "overclaim_term_hits",
         "unreviewed_translation_files",
         "incomplete_language_readmes",
         "language_readmes_missing_required_sections",

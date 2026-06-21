@@ -4,8 +4,8 @@ Status: **PASS**
 
 ## Summary
 
-- total_files: 19740
-- markdown_files: 19624
+- total_files: 19748
+- markdown_files: 19629
 - language_folders: 75
 - languages_alphabetically_sorted: True
 - english_source_markdown_files: 260
@@ -26,6 +26,7 @@ Status: **PASS**
 - localized_mirror_files: 19240
 - missing_localization_status_marker_files: 0
 - legacy_localization_term_hits: 0
+- overclaim_term_hits: 0
 - unreviewed_translation_files: 0
 - translation_mirror_placeholder_files: 0
 - scaffold_or_unreviewed_translation_files: 0
@@ -54,6 +55,7 @@ Status: **PASS**
 - localized_mirror_files_sample: 200
 - missing_localization_status_marker_files_sample: 0
 - legacy_localization_term_hits: 0
+- overclaim_term_hits: 0
 - unreviewed_translation_files_sample: 0
 - translation_mirror_placeholder_files_sample: 0
 - incomplete_language_readmes: 0

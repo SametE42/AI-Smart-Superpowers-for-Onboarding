@@ -7,6 +7,7 @@ Use this before publishing or releasing the repository.
 - [ ] `README.md` explains purpose, quickstart and limits.
 - [ ] `LICENSE` exists.
 - [ ] `CHANGELOG.md` includes the release-relevant changes.
+- [ ] `docs/release-checklist.md` has been followed for the target release.
 - [ ] `CONTRIBUTING.md` exists.
 - [ ] `SECURITY.md` exists.
 - [ ] Repository-specific progress, session, handover or completion notes are deleted or left untracked before commit and push.

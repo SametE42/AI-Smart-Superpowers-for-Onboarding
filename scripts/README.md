@@ -4,7 +4,7 @@ Repository maintenance scripts live here.
 
 ## Available scripts
 
-- `validate_repository.py` checks release-readiness invariants for Markdown structure, local Markdown links, local HTML links, local heading anchors, mirrored AI language files, empty files, README coverage, language README completeness, optional template README coverage, old public repository references, common secret patterns and localization review markers.
+- `validate_repository.py` checks release-readiness invariants for Markdown structure, local Markdown links, local HTML links, local heading anchors, mirrored AI language files, empty files, README coverage, language README completeness, optional template README coverage, old public repository references, common secret patterns, localization review markers and public overclaim terms.
 - `install_ai_onboarding.py` installs AI onboarding files into a target repository with selectable mode, language, canonical or localized structure, stack hints, dry-run output, overwrite protection, backups and output manifests.
 - `check_context_budget.py` warns about oversized, repetitive or duplicated AI documentation.
 - `check_evidence_map.py` validates evidence-map table columns, confidence values and high-confidence evidence sources.

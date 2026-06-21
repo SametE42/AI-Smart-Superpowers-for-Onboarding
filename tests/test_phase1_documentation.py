@@ -20,10 +20,16 @@ class Phase1DocumentationTests(unittest.TestCase):
             "Python is only an internal automation option for installer, validation and tests.",
             "All existing languages are intended to reach the same functional output support level.",
             "AGENTS.md stays unchanged by default because many tools expect that entrypoint filename.",
+            "## Choose Your Path",
+            "schnell testen",
+            "review-ready",
+            "## Why So Many Files?",
         ]
         for phrase in required_phrases:
             with self.subTest(phrase=phrase):
                 self.assertIn(phrase, readme)
+        self.assertNotIn("reviewed AI knowledge base", readme)
+        self.assertNotIn("reviewed `docs/ai/` folder", readme)
 
     def test_phase1_documentation_files_exist_and_have_expected_focus(self):
         expected_files = {
@@ -63,6 +69,21 @@ class Phase1DocumentationTests(unittest.TestCase):
                 "canonical to localized",
                 "localized to canonical",
                 "Output Manifest",
+            ],
+            "docs/release-checklist.md": [
+                "Release Checklist",
+                "python scripts/check_standard_docs.py --root .",
+                "git diff --check",
+            ],
+            "docs/demo-5-minute-onboarding.md": [
+                "5-Minute Repository Onboarding Demo",
+                "python scripts/install_ai_onboarding.py",
+                "Human review",
+            ],
+            "docs/german-localized-output-demo.md": [
+                "German Localized Output Demo",
+                "docs/ki/",
+                "pending linguistic review",
             ],
         }
 

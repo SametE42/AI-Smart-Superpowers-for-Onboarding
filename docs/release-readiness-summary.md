@@ -10,6 +10,8 @@ This summary captures the outcome of Phases 7 through 10 for review.
 | Output contract | `config/standard-docs.yml` | README and integration docs | Centralize Minimal, Standard and Enterprise file lists. | Complete |
 | Golden fixtures | `examples/golden/` | installer tests | Verify real standard English canonical and German localized installs. | Complete |
 | Governance | none | `docs/publication-checklist.md`, `docs/tool-compatibility.md` | Make release, branch-protection and sourced-compatibility gates explicit. | Complete |
+| Release checklist | `docs/release-checklist.md` | README and publication gates | Define repeatable release commands and human-review boundaries. | Complete |
+| Demo | `docs/demo-5-minute-onboarding.md`, `docs/german-localized-output-demo.md` | README examples | Show practical English canonical and German localized onboarding flows. | Complete |
 | Language support | none | `docs/language-support-report.md` | Keep 75-language support visible and honest. | Complete |
 | Completion | `docs/release-readiness-summary.md` | Tests and docs | Summarize evidence, risks and next steps. | Complete |
 
@@ -32,6 +34,7 @@ This summary captures the outcome of Phases 7 through 10 for review.
 - Examples are intentionally small and illustrative; they are not full applications.
 - Tool entrypoints are templates, not claims of official tool support.
 - German remains pending linguistic review until a qualified human review is documented.
+- Generated output is review-ready, not automatically trusted.
 - GitHub Release and branch protection are repository-setting actions and must be verified on `main`.
 
 ## empfohlene naechste Commits

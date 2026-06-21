@@ -4,7 +4,7 @@
 
 **Bereite Repositories vor, bevor KI-Coding-Agenten Code veraendern.**
 
-This project turns repository evidence into a reviewed, validated and language-adaptive knowledge base with architecture, constraints, risks, project memory, security rules and review checklists before coding agents change files.
+This project turns repository evidence into a review-ready, validated and language-adaptive knowledge base with architecture, constraints, risks, project memory, security rules and review checklists before coding agents change files.
 
 It is a modular Repository Preflight Framework for AI coding agents. It prepares repository-specific context; it is not a coding agent, not an SDK, not a runtime package and not a replacement for human review.
 
@@ -37,6 +37,17 @@ It is a modular Repository Preflight Framework for AI coding agents. It prepares
     <td width="25%"><a href="ai/English/README.md"><strong>AI Manual</strong></a><br>Canonical operating manual.</td>
   </tr>
 </table>
+
+## Choose Your Path
+
+| Du willst ... | Nimm ... |
+|---|---|
+| schnell testen | Minimal mode |
+| normales Projekt vorbereiten | Standard mode |
+| Security, Governance oder Multi-Agent-Kontext | Enterprise mode |
+| deutschsprachige Zielstruktur | `--language de --structure localized` |
+| maximale Tool-Kompatibilitaet | `--structure canonical` with English filenames |
+| nur den Prompt nutzen | `templates/MASTER_PROMPT.en.md` |
 
 ## Framework Snapshot
 
@@ -71,7 +82,7 @@ AI coding agents work best when they receive stable repository context, explicit
 | Standard layer | What it gives you |
 |---|---|
 | **Evidence-first analysis** | Repository facts are gathered from files, tests, configuration and existing documentation. |
-| **Persistent AI knowledge base** | The output is a reviewed `docs/ai/` folder that future AI sessions can load. |
+| **Persistent AI knowledge base** | The output is a review-ready `docs/ai/` folder that future AI sessions can load after human review. |
 | **Short tool entrypoints** | Files such as `AGENTS.md`, `CLAUDE.md`, `GEMINI.md` and Copilot instructions stay compact and point to `docs/ai/`. |
 | **Safety and review boundaries** | Unknowns, assumptions, secrets, production claims and human-review gates stay explicit. |
 | **Reusable onboarding prompt** | `templates/MASTER_PROMPT.en.md` guides the initial interview, repository pre-check and documentation plan. |
@@ -112,7 +123,7 @@ The machine-readable contract for these modes is [`config/standard-docs.yml`](co
 
 AI coding agents do better work when they follow structured workflows. But structured workflows depend on accurate project context.
 
-This repository provides the preparation step before execution workflows begin: it turns repository evidence into a reviewed AI knowledge base before agents start coding work.
+This repository provides the preparation step before execution workflows begin: it turns repository evidence into a reviewable AI knowledge base before agents start coding work.
 
 Use it before structured coding-agent workflows, Superpowers-style workflows or multi-model development setups. Superpowers-style workflows describe how an agent plans, implements, tests and reviews. This repository describes what an agent should know about a concrete repository before those workflows start.
 
@@ -306,7 +317,11 @@ The validator checks local Markdown file targets, local HTML links, local headin
 
 ## Examples
 
-Example use case: A developer wants Codex, Claude Code, Cursor or another AI coding agent to work on an unfamiliar repository. Before the first code change, they run the master prompt, review the evidence-based documentation plan, create or update `docs/ai/`, and use those files as reviewed context for future AI sessions.
+Example use case: A developer wants Codex, Claude Code, Cursor or another AI coding agent to work on an unfamiliar repository. Before the first code change, they run the master prompt, review the evidence-based documentation plan, create or update `docs/ai/`, and use those files as review-ready context for future AI sessions.
+
+## Why So Many Files?
+
+This repository is intentionally large because it contains a canonical AI manual plus localized mirrors for 75 language folders. Most users start with the README, the master prompt or one installer mode; they do not need to read every language folder.
 
 | Example | Use when |
 |---|---|

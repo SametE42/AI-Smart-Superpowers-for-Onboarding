@@ -49,5 +49,11 @@ jobs:
       - name: Regenerate validation reports
         run: python scripts/validate_repository.py --root . --json ai/VALIDATION_REPORT.json --markdown ai/VALIDATION_REPORT.md
 
+      - name: Regenerate language support report
+        run: python scripts/generate_language_support_report.py --root . --output docs/language-support-report.md
+
       - name: Check validation reports are current
         run: git diff --exit-code ai/VALIDATION_REPORT.json ai/VALIDATION_REPORT.md
+
+      - name: Check language support report is current
+        run: git diff --exit-code docs/language-support-report.md
