@@ -15,7 +15,7 @@
 | Data handling | Personal, customer, financial or internal data is touched | Data-flow notes, redaction plan |
 | Public claims | README, docs, website or release claims change | Evidence for the claim |
 | Licensing | License, attribution or dependency license status changes | License evidence |
-| Generated translations | New or changed generated translations are published | Translation status |
+| Localized mirrors | New or changed localized mirrors are published | Localization status |
 | Architecture decisions | Major boundaries, frameworks or data flow change | Decision record |
 | Deleting or moving major files | Major files or folders are removed or renamed | Migration plan |
 | Major dependency upgrades | Runtime, framework or security-sensitive dependencies change | Dependency review |
@@ -24,4 +24,3 @@
 ## Rule
 
 If evidence is incomplete, keep the gate open.
-

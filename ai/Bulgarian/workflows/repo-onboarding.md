@@ -1,8 +1,8 @@
 # Repo Onboarding
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Изходен език: английски
 > Изходен файл: ai/English/workflows/repo-onboarding.md
 > При разминавания английският файл има предимство.
@@ -24,6 +24,7 @@
 ## Фокус
 
 Преди да използвате тази страница в workflow, определете обхвата, нужните доказателства, проверимите команди и границите на човешко одобрение.
+
 
 ## Проверка на качеството
 

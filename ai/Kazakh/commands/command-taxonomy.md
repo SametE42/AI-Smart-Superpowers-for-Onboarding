@@ -1,8 +1,8 @@
 # Command Taxonomy
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Бастапқы тіл: ағылшын
 > Бастапқы файл: ai/English/commands/command-taxonomy.md
 > Айырмашылық болса, ағылшын файлы басым.
@@ -22,6 +22,7 @@
 ## Фокус
 
 workflow ішінде қолданар алдында ауқымды, дәлелдерді, тексерілетін commands және адам мақұлдауы шектерін анықтаңыз.
+
 
 ## Сапа тексерісі
 

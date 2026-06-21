@@ -1,8 +1,8 @@
 # Model Specific Notes
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Zdrojový jazyk: angličtina
 > Zdrojový soubor: ai/English/commands/model-specific-notes.md
 > Při rozporu má přednost anglický soubor.
@@ -24,6 +24,7 @@ Použijte tuto stránku jako provozní vodítko pro téma `commands`. Nenahrazuj
 ## Zaměření
 
 Před použitím této stránky ve workflow definujte rozsah, potřebné důkazy, ověřitelné příkazy a hranice lidského schválení.
+
 
 ## Kontrola kvality
 

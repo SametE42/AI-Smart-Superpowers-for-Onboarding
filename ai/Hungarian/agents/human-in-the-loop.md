@@ -1,8 +1,8 @@
 # Human In The Loop
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Forrásnyelv: angol
 > Forrásfájl: ai/English/agents/human-in-the-loop.md
 > Eltérés esetén az angol fájl az irányadó.
@@ -24,6 +24,7 @@ Használd ezt az oldalt operatív útmutatóként a `agents` témához. Nem hely
 ## Fókusz
 
 Mielőtt ezt az oldalt workflow-ban használod, határozd meg a hatókört, a szükséges bizonyítékokat, az ellenőrizhető parancsokat és az emberi jóváhagyás határait.
+
 
 ## Minőségellenőrzés
 

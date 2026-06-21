@@ -8,6 +8,9 @@ from pathlib import Path
 from scripts.validate_repository import validate_repository
 
 
+LOCALIZATION_STATUS_MARKER = "<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->"
+
+
 class RepositoryValidationTests(unittest.TestCase):
     STANDARD_SUBFOLDERS = (
         "agents/",
@@ -33,7 +36,7 @@ class RepositoryValidationTests(unittest.TestCase):
         path.write_text(content, encoding="utf-8")
 
     def complete_language_readme(self, translated: bool = False) -> str:
-        marker = "<!-- translation-status: ai-translated; ai-quality-pass -->\n\n" if translated else ""
+        marker = f"{LOCALIZATION_STATUS_MARKER}\n\n" if translated else ""
         rows = "\n".join(f"| `{folder}` | Purpose for {folder} |" for folder in self.STANDARD_SUBFOLDERS)
         return f"""# AI Smart Superpowers for Onboarding Manual
 
@@ -137,7 +140,7 @@ File names, folder names, commands, APIs and model names stay unchanged. English
             self.write(root, "ai/English/README.md", self.complete_language_readme())
             self.write(root, "ai/English/tools/README.md", "# Tools\n")
             self.write(root, "ai/German/README.md", self.complete_language_readme(translated=True))
-            self.write(root, "ai/German/tools/README.md", "# Tools\n\n<!-- translation-status: ai-translated; ai-quality-pass -->\n")
+            self.write(root, "ai/German/tools/README.md", f"# Tools\n\n{LOCALIZATION_STATUS_MARKER}\n")
 
             report = validate_repository(root)
 
@@ -276,7 +279,7 @@ File names, folder names, commands, APIs and model names stay unchanged. English
 
             self.assertEqual(report.status, "FAIL")
             self.assertEqual(report.summary["incomplete_language_readmes"], 1)
-            self.assertEqual(report.summary["missing_ai_translation_marker_files"], 1)
+            self.assertEqual(report.summary["missing_localization_status_marker_files"], 1)
 
     def test_language_readme_missing_standard_subfolder_fails(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -301,7 +304,7 @@ File names, folder names, commands, APIs and model names stay unchanged. English
             report = validate_repository(root)
 
             self.assertEqual(report.status, "PASS")
-            self.assertEqual(report.summary["missing_ai_translation_marker_files"], 0)
+            self.assertEqual(report.summary["missing_localization_status_marker_files"], 0)
 
     def test_non_english_language_readme_requires_translation_marker(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -314,7 +317,7 @@ File names, folder names, commands, APIs and model names stay unchanged. English
             report = validate_repository(root)
 
             self.assertEqual(report.status, "FAIL")
-            self.assertEqual(report.summary["missing_ai_translation_marker_files"], 1)
+            self.assertEqual(report.summary["missing_localization_status_marker_files"], 1)
             self.assertEqual(report.summary["incomplete_language_readmes"], 1)
 
     def test_old_repository_url_is_blocking(self) -> None:
@@ -394,7 +397,7 @@ File names, folder names, commands, APIs and model names stay unchanged. English
             self.assertEqual(report.summary["optional_template_files_missing_readme_entries"], 1)
             self.assertEqual(report.details["optional_template_files_missing_readme_entries"], ["templates/optional/UNLISTED.md"])
 
-    def test_separates_source_scaffolds_from_ai_translations(self) -> None:
+    def test_separates_source_scaffolds_from_localized_mirrors(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             self.write(
@@ -405,15 +408,15 @@ File names, folder names, commands, APIs and model names stay unchanged. English
             self.write(
                 root,
                 "ai/French/agents/README.md",
-                "# Agents\n\n<!-- translation-status: ai-translated; ai-quality-pass -->\n",
+                f"# Agents\n\n{LOCALIZATION_STATUS_MARKER}\n",
             )
 
             report = validate_repository(root)
 
             self.assertEqual(report.summary["english_source_scaffold_files"], 1)
-            self.assertEqual(report.summary["ai_translated_files"], 1)
+            self.assertEqual(report.summary["localized_mirror_files"], 1)
             self.assertEqual(report.summary["unreviewed_translation_files"], 0)
-            self.assertEqual(report.summary["missing_ai_translation_marker_files"], 0)
+            self.assertEqual(report.summary["missing_localization_status_marker_files"], 0)
 
     def test_counts_ai_translations_legacy_drafts_and_mirror_placeholders_separately(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -422,7 +425,7 @@ File names, folder names, commands, APIs and model names stay unchanged. English
             self.write(
                 root,
                 "ai/French/agents/README.md",
-                "# Agents\n\n<!-- translation-status: ai-translated; ai-quality-pass -->\n",
+                f"# Agents\n\n{LOCALIZATION_STATUS_MARKER}\n",
             )
             self.write(
                 root,
@@ -443,10 +446,33 @@ File names, folder names, commands, APIs and model names stay unchanged. English
             report = validate_repository(root)
 
             self.assertEqual(report.status, "FAIL")
-            self.assertEqual(report.summary["ai_translated_files"], 1)
+            self.assertEqual(report.summary["localized_mirror_files"], 1)
             self.assertEqual(report.summary["unreviewed_translation_files"], 3)
             self.assertEqual(report.summary["translation_mirror_placeholder_files"], 1)
-            self.assertEqual(report.summary["missing_ai_translation_marker_files"], 3)
+            self.assertEqual(report.summary["missing_localization_status_marker_files"], 3)
+
+    def test_public_legacy_localization_terms_are_blocking(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.write(
+                root,
+                "README.md",
+                "# Root\n\n"
+                "AI-translated\n"
+                "AI quality-pass\n"
+                "ai_translated_files\n"
+                "machine_generated\n"
+                "Translation status\n",
+            )
+
+            report = validate_repository(root)
+
+            self.assertEqual(report.status, "FAIL")
+            self.assertEqual(report.summary["legacy_localization_term_hits"], 5)
+            self.assertEqual(
+                [item["line"] for item in report.details["legacy_localization_term_hits"]],
+                [3, 4, 5, 6, 7],
+            )
 
     def test_prompt_readme_manual_link_mismatch_fails(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -465,7 +491,7 @@ File names, folder names, commands, APIs and model names stay unchanged. English
             self.write(
                 root,
                 "ai/German/prompts/README.md",
-                "# Prompts\n\n<!-- translation-status: ai-translated; ai-quality-pass -->\n\n"
+                f"# Prompts\n\n{LOCALIZATION_STATUS_MARKER}\n\n"
                 "## Manual Pages\n\n"
                 "- [Magical Prompt Improver](magical-prompt-improver.md)\n",
             )
@@ -474,12 +500,12 @@ File names, folder names, commands, APIs and model names stay unchanged. English
             self.write(
                 root,
                 "ai/German/prompts/magical-prompt-improver.md",
-                "# Magical Prompt Improver\n\n<!-- translation-status: ai-translated; ai-quality-pass -->\n",
+                f"# Magical Prompt Improver\n\n{LOCALIZATION_STATUS_MARKER}\n",
             )
             self.write(
                 root,
                 "ai/German/prompts/prompt-refinement.md",
-                "# Prompt Refinement\n\n<!-- translation-status: ai-translated; ai-quality-pass -->\n",
+                f"# Prompt Refinement\n\n{LOCALIZATION_STATUS_MARKER}\n",
             )
 
             report = validate_repository(root)
@@ -503,7 +529,7 @@ File names, folder names, commands, APIs and model names stay unchanged. English
             self.write(
                 root,
                 "ai/German/prompts/README.md",
-                "# Prompts\n\n<!-- translation-status: ai-translated; ai-quality-pass -->\n\n"
+                f"# Prompts\n\n{LOCALIZATION_STATUS_MARKER}\n\n"
                 "## Manual Pages\n\n"
                 "- [Magical Prompt Improver](magical-prompt-improver.md)\n",
             )
@@ -511,7 +537,7 @@ File names, folder names, commands, APIs and model names stay unchanged. English
             self.write(
                 root,
                 "ai/German/prompts/magical-prompt-improver.md",
-                "# Magical Prompt Improver\n\n<!-- translation-status: ai-translated; ai-quality-pass -->\n\n"
+                f"# Magical Prompt Improver\n\n{LOCALIZATION_STATUS_MARKER}\n\n"
                 "Use this page when a user request, reusable prompt or agent handoff needs to become clearer before repository work starts.\n",
             )
 

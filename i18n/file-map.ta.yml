@@ -30,5 +30,5 @@ files:
   SAFETY_BOUNDARIES.md: TA_SAFETY_BOUNDARIES.md
   HUMAN_REVIEW_GATES.md: TA_HUMAN_REVIEW_GATES.md
 review_notes:
-  - Machine-generated ASCII-safe filenames provide functional localized structure.
+  - Structured ASCII-safe filenames provide functional localized output.
   - Linguistic filename review is still required.

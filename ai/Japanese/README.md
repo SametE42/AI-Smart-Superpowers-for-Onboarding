@@ -1,8 +1,8 @@
 # AI Smart Superpowers for Onboarding Manual
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > 原文言語: 英語
 > 原文ファイル: ai/English/README.md
 > 差異がある場合は英語ファイルを優先します。

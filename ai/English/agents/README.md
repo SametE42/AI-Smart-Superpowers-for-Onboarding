@@ -18,6 +18,7 @@ This page explains how `agents/README.md` fits into the AI Agent Operating Manua
 
 AI agent roles, collaboration patterns and human handoff boundaries.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

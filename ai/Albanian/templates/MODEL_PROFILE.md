@@ -1,8 +1,8 @@
 # Model_profile
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Gjuha burimore: anglisht
 > Skedari burim: ai/English/templates/MODEL_PROFILE.md
 > Në rast mospërputhjesh, skedari anglisht ka përparësi.
@@ -24,6 +24,7 @@ Përdore këtë faqe si udhëzim operacional për temën `templates`. Nuk zëven
 ## Fokus
 
 Para se ta përdorësh këtë faqe në workflow, përcakto fushën, provat e nevojshme, komandat e verifikueshme dhe kufijtë e miratimit njerëzor.
+
 
 ## Kontroll cilësie
 

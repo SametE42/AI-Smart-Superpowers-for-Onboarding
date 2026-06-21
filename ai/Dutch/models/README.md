@@ -1,8 +1,8 @@
 # Models
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Brontaal: Engels
 > Bronbestand: ai/English/models/README.md
 > Bij afwijkingen blijft het Engelse bestand leidend.
@@ -24,6 +24,7 @@ Gebruik deze pagina als operationele leidraad voor het thema `models`. Ze vervan
 ## Focus
 
 Definieer scope, benodigde bewijsstukken, verifieerbare commando's en grenzen voor menselijke goedkeuring voordat je deze pagina in een workflow gebruikt.
+
 
 ## Kwaliteitscontrole
 

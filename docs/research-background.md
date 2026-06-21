@@ -12,7 +12,7 @@ Technology and stack context matters because build, test, runtime and dependency
 
 Language-dependent output can improve usability for international teams, and language-dependent output should be treated as a design decision rather than a cosmetic translation layer. Fully localized documentation is most useful when every existing language has the same functional support level: selectable language, canonical structure, localized structure, file map, validation and documentation. Functional multilingual support is separate from language quality; functional multilingual support should not imply human-reviewed prose.
 
-Translation quality must be checked and documented honestly. A language can have complete functional support while its `translation_review_status` remains `machine_generated`, `needs_review` or `unknown`. Human-reviewed translation should be claimed only when a human review is documented.
+Localization quality must be checked and documented honestly. A language can have complete functional support while its review state remains pending linguistic review or unknown. Human-reviewed localization should be claimed only when a human review is documented.
 
 This project addresses the gap through evidence-first documentation, validation, technology-neutral templates and fully localizable output. Its focus is not to replace coding agents, but to prepare the repository knowledge that makes agent work safer and easier to review.
 

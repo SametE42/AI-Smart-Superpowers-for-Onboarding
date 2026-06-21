@@ -1,8 +1,8 @@
 # Evals
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > წყარო ენა: ინგლისური
 > წყარო ფაილი: ai/English/models/xiaomi-mimo/evals.md
 > განსხვავების შემთხვევაში უპირატესობა აქვს ინგლისურ ფაილს.
@@ -22,6 +22,7 @@
 ## ფოკუსი
 
 workflow-ში გამოყენებამდე განსაზღვრე ფარგლები, მტკიცებულებები, შემოწმებადი commands და ადამიანის დამტკიცების საზღვრები.
+
 
 ## ხარისხის შემოწმება
 

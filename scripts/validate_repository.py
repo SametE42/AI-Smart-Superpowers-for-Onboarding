@@ -32,8 +32,22 @@ SOURCE_SCAFFOLD_MARKERS = [
     "## Recommended content",
     "English source kept authoritative",
 ]
-AI_TRANSLATION_MARKERS = [
-    "<!-- translation-status: ai-translated; ai-quality-pass -->",
+LOCALIZATION_STATUS_MARKERS = [
+    "<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->",
+]
+LEGACY_LOCALIZATION_TERM_PATTERNS = [
+    re.compile(pattern, re.IGNORECASE)
+    for pattern in (
+        r"translation-status:\s*ai-translated",
+        r"\bAI-translated\b",
+        r"\bAI translated files\b",
+        r"\bAI\s+quality(?:-| )pass\b",
+        r"AI quality gate passed",
+        r"\bai_translated_files\b",
+        r"\bmachine_generated\b",
+        r"\bTranslation status\b",
+        r"no human review required",
+    )
 ]
 UNREVIEWED_TRANSLATION_MARKERS = [
     "<!-- translation-status: localized-draft; human-review-required -->",
@@ -543,7 +557,7 @@ def _find_language_readme_issues(
             missing_concepts.append({"file": relative, "missing_concepts": concept_gaps})
         if subfolder_gaps:
             missing_subfolders.append({"file": relative, "missing_subfolders": subfolder_gaps})
-        if language != "English" and AI_TRANSLATION_MARKERS[0] not in text:
+        if language != "English" and LOCALIZATION_STATUS_MARKERS[0] not in text:
             missing_translation_markers.append({"file": relative})
 
     return missing_sections, heading_mismatches, missing_concepts, missing_subfolders, missing_translation_markers
@@ -654,6 +668,26 @@ def _find_magical_prompt_improver_unlocalized_files(root: Path, text_by_path: di
     return unlocalized
 
 
+def _find_legacy_localization_term_hits(
+    markdown_files: Iterable[Path],
+    root: Path,
+    text_by_path: dict[Path, str],
+) -> list[dict]:
+    hits: list[dict] = []
+    allowed_paths = {
+        "CHANGELOG.md",
+    }
+    for path in markdown_files:
+        relative = _relative(path, root)
+        if relative in allowed_paths:
+            continue
+        text = text_by_path[path]
+        for line_number, line in enumerate(text.splitlines(), start=1):
+            if any(pattern.search(line) for pattern in LEGACY_LOCALIZATION_TERM_PATTERNS):
+                hits.append({"file": relative, "line": line_number})
+    return hits
+
+
 def validate_repository(root: str | Path = ".") -> ValidationReport:
     root_path = Path(root).resolve()
     files = _git_files(root_path) or _filesystem_files(root_path)
@@ -687,10 +721,10 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         SOURCE_SCAFFOLD_MARKERS,
         text_by_path,
     )
-    ai_translated_files = _find_files_with_markers(
+    localized_mirror_files = _find_files_with_markers(
         localized_markdown_files,
         root_path,
-        AI_TRANSLATION_MARKERS,
+        LOCALIZATION_STATUS_MARKERS,
         text_by_path,
     )
     unreviewed_translation_files = _find_files_with_markers(
@@ -705,12 +739,13 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         TRANSLATION_MIRROR_PLACEHOLDER_MARKERS,
         text_by_path,
     )
-    ai_translated_file_set = set(ai_translated_files)
-    missing_ai_translation_marker_files = [
+    localization_status_file_set = set(localized_mirror_files)
+    missing_localization_status_marker_files = [
         _relative(path, root_path)
         for path in localized_markdown_files
-        if _relative(path, root_path) not in ai_translated_file_set
+        if _relative(path, root_path) not in localization_status_file_set
     ]
+    legacy_localization_term_hits = _find_legacy_localization_term_hits(markdown_files, root_path, text_by_path)
     (
         language_readmes_missing_required_sections,
         language_readme_heading_mismatches,
@@ -756,8 +791,9 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         "prompt_readme_link_mismatches": len(prompt_readme_link_mismatches),
         "magical_prompt_improver_unlocalized_files": len(magical_prompt_improver_unlocalized_files),
         "english_source_scaffold_files": len(english_scaffold_files),
-        "ai_translated_files": len(ai_translated_files),
-        "missing_ai_translation_marker_files": len(missing_ai_translation_marker_files),
+        "localized_mirror_files": len(localized_mirror_files),
+        "missing_localization_status_marker_files": len(missing_localization_status_marker_files),
+        "legacy_localization_term_hits": len(legacy_localization_term_hits),
         "unreviewed_translation_files": len(unreviewed_translation_files),
         "translation_mirror_placeholder_files": len(translation_mirror_placeholder_files),
         "scaffold_or_unreviewed_translation_files": len(english_scaffold_files) + len(unreviewed_translation_files),
@@ -782,8 +818,9 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         "prompt_readme_link_mismatches": prompt_readme_link_mismatches[:200],
         "magical_prompt_improver_unlocalized_files": magical_prompt_improver_unlocalized_files[:200],
         "english_source_scaffold_files_sample": english_scaffold_files[:200],
-        "ai_translated_files_sample": ai_translated_files[:200],
-        "missing_ai_translation_marker_files_sample": missing_ai_translation_marker_files[:200],
+        "localized_mirror_files_sample": localized_mirror_files[:200],
+        "missing_localization_status_marker_files_sample": missing_localization_status_marker_files[:200],
+        "legacy_localization_term_hits": legacy_localization_term_hits[:200],
         "unreviewed_translation_files_sample": unreviewed_translation_files[:200],
         "translation_mirror_placeholder_files_sample": translation_mirror_placeholder_files[:200],
         "incomplete_language_readmes": incomplete_language_readmes[:200],
@@ -807,7 +844,8 @@ def validate_repository(root: str | Path = ".") -> ValidationReport:
         "optional_template_files_missing_readme_entries",
         "prompt_readme_link_mismatches",
         "magical_prompt_improver_unlocalized_files",
-        "missing_ai_translation_marker_files",
+        "missing_localization_status_marker_files",
+        "legacy_localization_term_hits",
         "unreviewed_translation_files",
         "incomplete_language_readmes",
         "language_readmes_missing_required_sections",

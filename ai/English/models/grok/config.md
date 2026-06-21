@@ -18,6 +18,7 @@ This page explains how `models/grok/config.md` fits into the AI Agent Operating 
 
 Model-family profiles and routing notes for AI-assisted repository work.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

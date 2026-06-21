@@ -1,8 +1,8 @@
 # Openrouter
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Harshen tushe: Turanci
 > Fayil na tushe: ai/English/models/openrouter/README.md
 > Idan akwai bambanci, fayil din Turanci ne zai fi karfi.
@@ -24,6 +24,7 @@ Yi amfani da wannan shafi a matsayin jagorar aiki ga batun `models`. Ba ya maye 
 ## Mayar da hankali
 
 Kafin amfani da wannan shafi a workflow, ayyana iyaka, shaidar da ake bukata, commands da za a iya tabbatarwa da iyakar amincewar mutum.
+
 
 ## Duba inganci
 

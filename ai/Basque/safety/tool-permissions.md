@@ -1,8 +1,8 @@
 # Tool Permissions
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Jatorrizko hizkuntza: ingelesa
 > Jatorrizko fitxategia: ai/English/safety/tool-permissions.md
 > Aldeak badaude, ingelesezko fitxategiak du lehentasuna.
@@ -24,6 +24,7 @@ Erabili orrialde hau `safety` gaiaren gida operatibo gisa. Ez du ordezkatzen rep
 ## Fokua
 
 Orrialde hau workflow batean erabili aurretik, definitu eremua, beharrezko ebidentzia, egiaztagarriak diren komandoak eta gizakiaren onarpen mugak.
+
 
 ## Kalitate kontrola
 

@@ -1,8 +1,8 @@
 # Self Evolving Agents
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Source language: English
 > Source file: ai/English/agents/self-evolving-agents.md
 > Bei Abweichungen ist die englische Datei maßgeblich.
@@ -23,6 +23,7 @@ Diese Seite beschreibt, wie `agents/self-evolving-agents.md` im AI Agent Operati
 ## Fokus
 
 KI-Agentenrollen, Kollaborationsmuster und Grenzen für menschliche Übergaben.
+
 
 ## Qualitätscheck
 

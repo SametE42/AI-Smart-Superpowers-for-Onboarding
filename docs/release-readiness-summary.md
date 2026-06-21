@@ -20,12 +20,12 @@ This summary captures the outcome of Phases 7 through 10 for review.
 - Anzahl erkannter vorhandener Sprachen: 75
 - Anzahl funktional vollstaendig unterstuetzter Sprachen: 75
 - Translation-Review-Status-Zusammenfassung:
-  - machine_generated: 74
+  - pending linguistic review: 74
   - reviewed: 1
 
 ## verbleibende Luecken
 
-- Non-English language quality remains mostly machine-generated until human linguistic review is documented.
+- Non-English language quality remains pending linguistic review until human review is documented.
 - Examples are intentionally small and illustrative; they are not full applications.
 - Tool entrypoints are templates, not claims of official tool support.
 

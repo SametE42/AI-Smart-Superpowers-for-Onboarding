@@ -1,8 +1,8 @@
 # Prompts
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > 原文言語: 英語
 > 原文ファイル: ai/English/models/kimi/prompts.md
 > 差異がある場合は英語ファイルを優先します。
@@ -24,6 +24,7 @@
 ## 焦点
 
 このページを workflow で使う前に、範囲、必要な証拠、検証可能なコマンド、人間の承認境界を定義します。
+
 
 ## 品質チェック
 

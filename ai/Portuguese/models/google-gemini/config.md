@@ -1,8 +1,8 @@
 # Config
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Idioma de origem: inglês
 > Arquivo de origem: ai/English/models/google-gemini/config.md
 > Em caso de divergência, o arquivo em inglês continua sendo a fonte autoritativa.
@@ -24,6 +24,7 @@ Use esta página como orientação operacional para o tema `models`. Ela não su
 ## Foco
 
 Defina escopo, evidências necessárias, comandos verificáveis e limites de aprovação humana antes de usar esta página em um workflow.
+
 
 ## Controle de qualidade
 

@@ -18,6 +18,7 @@ This page explains how `safety/tool-permissions.md` fits into the AI Agent Opera
 
 Safety, privacy, prompt-injection, permission and human-approval rules.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

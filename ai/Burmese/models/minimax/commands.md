@@ -1,8 +1,8 @@
 # Commands
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > မူရင်းဘာသာ: အင်္ဂလိပ်
 > မူရင်းဖိုင်: ai/English/models/minimax/commands.md
 > ကွာခြားချက်ရှိပါက အင်္ဂလိပ်ဖိုင်ကို အဓိကယူပါ။
@@ -22,6 +22,7 @@
 ## အာရုံစိုက်ရန်
 
 workflow တွင် အသုံးမပြုမီ အတိုင်းအတာ၊ အထောက်အထား၊ စစ်ဆေးနိုင်သော commands နှင့် လူသားအတည်ပြုမှု အကန့်အသတ်များကို သတ်မှတ်ပါ။
+
 
 ## အရည်အသွေးစစ်ဆေးမှု
 

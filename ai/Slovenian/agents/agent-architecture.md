@@ -1,8 +1,8 @@
 # Agent Architecture
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Izvorni jezik: angleščina
 > Izvorna datoteka: ai/English/agents/agent-architecture.md
 > V primeru odstopanj ima prednost angleška datoteka.
@@ -24,6 +24,7 @@ Uporabi to stran kot operativno vodilo za temo `agents`. Ne nadomešča dokazov 
 ## Fokus
 
 Pred uporabo te strani v workflowu opredeli obseg, potrebne dokaze, preverljive ukaze in meje človeške odobritve.
+
 
 ## Preverjanje kakovosti
 

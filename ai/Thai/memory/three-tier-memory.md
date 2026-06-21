@@ -1,8 +1,8 @@
 # Three Tier Memory
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > ภาษาต้นฉบับ: อังกฤษ
 > ไฟล์ต้นฉบับ: ai/English/memory/three-tier-memory.md
 > หากมีความแตกต่าง ให้ยึดไฟล์ภาษาอังกฤษเป็นหลัก
@@ -24,6 +24,7 @@
 ## จุดเน้น
 
 ก่อนใช้หน้านี้ใน workflow ให้กำหนดขอบเขต หลักฐานที่ต้องใช้ commands ที่ตรวจสอบได้ และขอบเขตการอนุมัติโดยมนุษย์
+
 
 ## การตรวจคุณภาพ
 

@@ -18,6 +18,7 @@ This page explains how `safety/eval-safety.md` fits into the AI Agent Operating 
 
 Safety, privacy, prompt-injection, permission and human-approval rules.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

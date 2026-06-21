@@ -1,8 +1,8 @@
 # Models
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Kaynak dil: İngilizce
 > Kaynak dosya: ai/English/tools/gemini-cli/models.md
 > Tutarsızlık olduğunda İngilizce dosya esas alınır.
@@ -24,6 +24,7 @@ Bu sayfayı `tools` konusu için operasyonel yönlendirme olarak kullan. Depo ka
 ## Odak
 
 Bu sayfayı bir workflow içinde kullanmadan önce kapsamı, gerekli kanıtları, doğrulanabilir komutları ve insan onayı sınırlarını tanımla.
+
 
 ## Kalite kontrolü
 

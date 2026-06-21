@@ -13,7 +13,7 @@ language_name: German
 source_folder: ai/German
 docs_directory: docs/ki
 agents_filename: AGENTS.md
-translation_review_status: machine_generated
+translation_review_status: needs_review
 canonical_structure: true
 localized_structure: true
 files:
@@ -39,14 +39,10 @@ Recommended keys:
 - `localized_structure`
 - `review_notes`
 
-## Allowed Review Values
+## Review Status Values
 
-`translation_review_status` should be one of:
-
-- `reviewed`
-- `needs_review`
-- `machine_generated`
-- `unknown`
+`translation_review_status` uses the machine-readable values defined in `i18n/file-map.schema.yml`.
+Public reports render automated or draft states as `pending linguistic review`.
 
 ## Canonical Keys
 

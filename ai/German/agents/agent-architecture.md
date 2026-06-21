@@ -1,8 +1,8 @@
 # Agent Architecture
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Source language: English
 > Source file: ai/English/agents/agent-architecture.md
 > Bei Abweichungen ist die englische Datei maßgeblich.
@@ -23,6 +23,7 @@ Diese Seite beschreibt, wie `agents/agent-architecture.md` im AI Agent Operating
 ## Fokus
 
 Definiere Agent Loop, Rollenabgrenzung, Tool-Zugriff und Eskalationspunkte, bevor Arbeit verteilt wird.
+
 
 ## Qualitätscheck
 

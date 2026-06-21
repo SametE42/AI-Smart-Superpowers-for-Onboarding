@@ -18,6 +18,7 @@ This page explains how `agents/tool-using-agents.md` fits into the AI Agent Oper
 
 AI agent roles, collaboration patterns and human handoff boundaries.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

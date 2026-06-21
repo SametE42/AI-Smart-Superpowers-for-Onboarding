@@ -1,8 +1,8 @@
 # Self Evolving Skills
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Kildespråk: engelsk
 > Kildefil: ai/English/skills/self-evolving-skills.md
 > Ved avvik gjelder den engelske filen.
@@ -24,6 +24,7 @@ Bruk siden som operativ veiledning for temaet `skills`. Den erstatter ikke repos
 ## Fokus
 
 Definer omfang, nødvendig bevis, verifiserbare kommandoer og grenser for menneskelig godkjenning før siden brukes i en workflow.
+
 
 ## Kvalitetskontroll
 

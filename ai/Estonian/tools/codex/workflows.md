@@ -1,8 +1,8 @@
 # Workflows
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Lähtekeel: inglise
 > Lähtefail: ai/English/tools/codex/workflows.md
 > Erinevuste korral on määrav ingliskeelne fail.
@@ -24,6 +24,7 @@ Kasuta seda lehte operatiivse juhisena teema `tools` jaoks. See ei asenda reposi
 ## Fookus
 
 Enne selle lehe kasutamist workflow's määra ulatus, vajalikud tõendid, kontrollitavad käsud ja inimkinnituse piirid.
+
 
 ## Kvaliteedikontroll
 

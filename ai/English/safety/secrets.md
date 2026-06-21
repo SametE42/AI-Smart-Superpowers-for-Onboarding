@@ -18,6 +18,7 @@ This page explains how `safety/secrets.md` fits into the AI Agent Operating Manu
 
 Never expose secrets; record only redacted locations and required remediation.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

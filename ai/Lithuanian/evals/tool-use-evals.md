@@ -1,8 +1,8 @@
 # Tool Use Evals
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Šaltinio kalba: anglų
 > Šaltinio failas: ai/English/evals/tool-use-evals.md
 > Jei yra neatitikimų, pirmenybė teikiama angliškam failui.
@@ -24,6 +24,7 @@ Naudok šį puslapį kaip operacinę gairę temai `evals`. Jis nepakeičia repos
 ## Fokusas
 
 Prieš naudodamas šį puslapį workflow, apibrėžk apimtį, reikalingus įrodymus, patikrinamas komandas ir žmogaus patvirtinimo ribas.
+
 
 ## Kokybės patikra
 

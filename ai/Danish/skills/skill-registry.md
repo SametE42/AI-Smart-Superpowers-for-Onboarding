@@ -1,8 +1,8 @@
 # Skill Registry
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Kildesprog: engelsk
 > Kildefil: ai/English/skills/skill-registry.md
 > Ved afvigelser er den engelske fil gældende.
@@ -24,6 +24,7 @@ Brug siden som operationel vejledning for temaet `skills`. Den erstatter ikke re
 ## Fokus
 
 Definér omfang, nødvendig evidens, verificerbare kommandoer og grænser for menneskelig godkendelse, før siden bruges i et workflow.
+
 
 ## Kvalitetskontrol
 

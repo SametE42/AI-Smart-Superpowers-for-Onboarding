@@ -5,6 +5,11 @@ from pathlib import Path
 from scripts.refresh_ai_manual import LOCALIZED_LANGUAGE_TEXT, refresh_manual_pair, refresh_scaffold_pages, render_manual_page
 
 
+LOCALIZATION_STATUS_MARKER = "<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->"
+LOCALIZATION_STATUS_TEXT = (
+    "Language status: localized mirror of the English reference. "
+    "Review status is tracked in the language support metadata."
+)
 MAGICAL_PROMPT_ENGLISH_BODY_MARKERS = (
     "Use this page when a user request",
     "Run a short intake check on every user request",
@@ -41,11 +46,12 @@ class RefreshAiManualTests(unittest.TestCase):
         self.assertIn("Repository change request", content)
         self.assertNotIn("This page explains how `prompts/magical-prompt-improver.md` fits", content)
 
-    def test_render_french_magical_prompt_improver_is_localized_and_quality_passed(self) -> None:
+    def test_render_french_magical_prompt_improver_is_localized_with_neutral_status(self) -> None:
         content = render_manual_page("French", Path("prompts/magical-prompt-improver.md"))
 
         self.assertIn("# Magical Prompt Improver", content)
-        self.assertIn("<!-- translation-status: ai-translated; ai-quality-pass -->", content)
+        self.assertIn(LOCALIZATION_STATUS_MARKER, content)
+        self.assertIn(LOCALIZATION_STATUS_TEXT, content)
         self.assertIn("ai/English/prompts/magical-prompt-improver.md", content)
         self.assertIn("## Portée pratique", content)
         self.assertIn("## Consignes de travail", content)
@@ -55,7 +61,8 @@ class RefreshAiManualTests(unittest.TestCase):
         self.assertIn("Full Rewrite Mode", content)
         self.assertIn("Verification Mode", content)
         self.assertIn("Commit/Push Readiness Mode", content)
-        self.assertIn("AI-translated from the English source", content)
+        self.assertNotIn("AI-translated from the English source", content)
+        self.assertNotIn("no human review required", content)
         self.assertNotIn("révision humaine requise", content)
         self.assertNotIn("This file mirrors `ai/English/", content)
         for marker in MAGICAL_PROMPT_ENGLISH_BODY_MARKERS:
@@ -162,7 +169,7 @@ class RefreshAiManualTests(unittest.TestCase):
         self.assertIn("## Manual Pages", content)
         self.assertIn("[Magical Prompt Improver](magical-prompt-improver.md)", content)
         self.assertIn("[Prompt Refinement](prompt-refinement.md)", content)
-        self.assertIn("<!-- translation-status: ai-translated; ai-quality-pass -->", content)
+        self.assertIn(LOCALIZATION_STATUS_MARKER, content)
 
     def test_render_german_page_is_localized_and_keeps_source_note(self) -> None:
         content = render_manual_page("German", Path("agents/agent-architecture.md"))
@@ -173,69 +180,75 @@ class RefreshAiManualTests(unittest.TestCase):
         self.assertIn("englische Datei maßgeblich", content)
         self.assertNotIn("This file gives users a structured, practical reference", content)
 
-    def test_render_french_page_is_localized_and_ai_quality_passed(self) -> None:
+    def test_render_french_page_is_localized_with_neutral_status(self) -> None:
         content = render_manual_page("French", Path("agents/agent-architecture.md"))
 
         self.assertIn("# Agent Architecture", content)
         self.assertIn("## Portée pratique", content)
-        self.assertIn("<!-- translation-status: ai-translated; ai-quality-pass -->", content)
-        self.assertIn("AI-translated from the English source", content)
-        self.assertIn("no human review required", content)
+        self.assertIn(LOCALIZATION_STATUS_MARKER, content)
+        self.assertIn(LOCALIZATION_STATUS_TEXT, content)
+        self.assertNotIn("AI-translated from the English source", content)
+        self.assertNotIn("no human review required", content)
         self.assertNotIn("révision humaine requise", content)
         self.assertIn("ai/English/agents/agent-architecture.md", content)
         self.assertNotIn("This file mirrors `ai/English/", content)
 
-    def test_render_portuguese_page_is_localized_and_ai_quality_passed(self) -> None:
+    def test_render_portuguese_page_is_localized_with_neutral_status(self) -> None:
         content = render_manual_page("Portuguese", Path("agents/agent-architecture.md"))
 
         self.assertIn("# Agent Architecture", content)
-        self.assertIn("<!-- translation-status: ai-translated; ai-quality-pass -->", content)
+        self.assertIn(LOCALIZATION_STATUS_MARKER, content)
         self.assertIn("## Escopo prático", content)
-        self.assertIn("AI-translated from the English source", content)
+        self.assertNotIn("AI-translated from the English source", content)
+        self.assertNotIn("no human review required", content)
         self.assertNotIn("revisão humana necessária", content)
         self.assertIn("ai/English/agents/agent-architecture.md", content)
         self.assertNotIn("This file mirrors `ai/English/", content)
 
-    def test_render_japanese_page_is_localized_and_ai_quality_passed(self) -> None:
+    def test_render_japanese_page_is_localized_with_neutral_status(self) -> None:
         content = render_manual_page("Japanese", Path("agents/agent-architecture.md"))
 
         self.assertIn("# Agent Architecture", content)
-        self.assertIn("<!-- translation-status: ai-translated; ai-quality-pass -->", content)
+        self.assertIn(LOCALIZATION_STATUS_MARKER, content)
         self.assertIn("## 実用範囲", content)
-        self.assertIn("AI-translated from the English source", content)
+        self.assertNotIn("AI-translated from the English source", content)
+        self.assertNotIn("no human review required", content)
         self.assertNotIn("人間によるレビューが必要", content)
         self.assertIn("ai/English/agents/agent-architecture.md", content)
         self.assertNotIn("This file mirrors `ai/English/", content)
 
-    def test_render_latvian_page_is_localized_and_ai_quality_passed(self) -> None:
+    def test_render_latvian_page_is_localized_with_neutral_status(self) -> None:
         content = render_manual_page("Latvian", Path("agents/agent-architecture.md"))
 
         self.assertIn("# Agent Architecture", content)
-        self.assertIn("<!-- translation-status: ai-translated; ai-quality-pass -->", content)
+        self.assertIn(LOCALIZATION_STATUS_MARKER, content)
         self.assertIn("## Praktiskais tvērums", content)
-        self.assertIn("AI-translated from the English source", content)
+        self.assertNotIn("AI-translated from the English source", content)
+        self.assertNotIn("no human review required", content)
         self.assertNotIn("nepieciešama cilvēka pārbaude", content)
         self.assertIn("ai/English/agents/agent-architecture.md", content)
         self.assertNotIn("This file mirrors `ai/English/", content)
 
-    def test_render_hindi_page_is_localized_and_ai_quality_passed(self) -> None:
+    def test_render_hindi_page_is_localized_with_neutral_status(self) -> None:
         content = render_manual_page("Hindi", Path("agents/agent-architecture.md"))
 
         self.assertIn("# Agent Architecture", content)
-        self.assertIn("<!-- translation-status: ai-translated; ai-quality-pass -->", content)
+        self.assertIn(LOCALIZATION_STATUS_MARKER, content)
         self.assertIn("## व्यावहारिक दायरा", content)
-        self.assertIn("AI-translated from the English source", content)
+        self.assertNotIn("AI-translated from the English source", content)
+        self.assertNotIn("no human review required", content)
         self.assertNotIn("मानवीय समीक्षा आवश्यक", content)
         self.assertIn("ai/English/agents/agent-architecture.md", content)
         self.assertNotIn("This file mirrors `ai/English/", content)
 
-    def test_render_zulu_page_is_localized_and_ai_quality_passed(self) -> None:
+    def test_render_zulu_page_is_localized_with_neutral_status(self) -> None:
         content = render_manual_page("Zulu", Path("agents/agent-architecture.md"))
 
         self.assertIn("# Agent Architecture", content)
-        self.assertIn("<!-- translation-status: ai-translated; ai-quality-pass -->", content)
+        self.assertIn(LOCALIZATION_STATUS_MARKER, content)
         self.assertIn("## Ububanzi bokusebenza", content)
-        self.assertIn("AI-translated from the English source", content)
+        self.assertNotIn("AI-translated from the English source", content)
+        self.assertNotIn("no human review required", content)
         self.assertNotIn("ukubuyekezwa ngumuntu kuyadingeka", content)
         self.assertIn("ai/English/agents/agent-architecture.md", content)
         self.assertNotIn("This file mirrors `ai/English/", content)
@@ -295,7 +308,7 @@ class RefreshAiManualTests(unittest.TestCase):
 
             self.assertEqual(changed, 1)
             self.assertTrue(french.exists())
-            self.assertIn("<!-- translation-status: ai-translated; ai-quality-pass -->", french.read_text(encoding="utf-8"))
+            self.assertIn(LOCALIZATION_STATUS_MARKER, french.read_text(encoding="utf-8"))
             self.assertIn("ai/English/prompts/magical-prompt-improver.md", french.read_text(encoding="utf-8"))
 
 

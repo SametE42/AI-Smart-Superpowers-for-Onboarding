@@ -18,6 +18,7 @@ This page explains how `providers/fireworks-ai.md` fits into the AI Agent Operat
 
 Provider-specific notes for APIs, hosting models and compatibility boundaries.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

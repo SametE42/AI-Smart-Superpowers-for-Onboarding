@@ -86,7 +86,8 @@ class Phase5InstallerTests(unittest.TestCase):
             text = (target / "docs" / "ai" / "TECH_STACK.md").read_text(encoding="utf-8")
             self.assertIn("Selected language: de", text)
             self.assertIn("Stack hint: typescript", text)
-            self.assertIn("Translation review status: machine_generated", text)
+            self.assertIn("Review status: pending linguistic review", text)
+            self.assertNotIn("machine_generated", text)
 
     def test_standard_mode_generates_manifest_by_default(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -239,6 +240,55 @@ class Phase5InstallerTests(unittest.TestCase):
             )
             self.assertIn("Unsupported structure", "\n".join(unknown_structure.errors))
 
+    def test_missing_required_template_is_a_clear_error(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            framework_root = Path(tmp) / "framework"
+            target = Path(tmp) / "target"
+            docs_ai = framework_root / "templates" / "docs-ai"
+            i18n = framework_root / "i18n"
+            docs_ai.mkdir(parents=True)
+            i18n.mkdir(parents=True)
+            (framework_root / "templates" / "AGENTS.md").write_text("# Agents\n", encoding="utf-8")
+            (docs_ai / "CONTEXT_INDEX.md").write_text("# Context Index\n", encoding="utf-8")
+            (i18n / "language-support.yml").write_text(
+                "languages:\n"
+                "  en:\n"
+                "    name: English\n"
+                "    source_folder: English\n"
+                "    output_support: complete\n"
+                "    translation_review_status: reviewed\n"
+                "    canonical_structure: true\n"
+                "    localized_structure: true\n"
+                "    file_map: i18n/file-map.en.yml\n"
+                "    docs_directory: docs/ai\n"
+                "    agents_filename: AGENTS.md\n",
+                encoding="utf-8",
+            )
+            file_entries = "\n".join(f"  {name}: {name}" for name in sorted(validate_language_support(ROOT).file_maps["en"]["files"]))
+            (i18n / "file-map.en.yml").write_text(
+                "schema_version: 1\n"
+                "language: en\n"
+                "language_name: English\n"
+                "docs_directory: docs/ai\n"
+                "agents_filename: AGENTS.md\n"
+                "translation_review_status: reviewed\n"
+                "files:\n"
+                f"{file_entries}\n",
+                encoding="utf-8",
+            )
+
+            result = install_ai_onboarding(
+                root=framework_root,
+                target=target,
+                mode="minimal",
+                language="en",
+                structure="canonical",
+                dry_run=True,
+            )
+
+            self.assertFalse(result.ok)
+            self.assertIn("Missing required template", "\n".join(result.errors))
+
     def test_detect_stack_returns_hints_without_overclaiming(self):
         with tempfile.TemporaryDirectory() as tmp:
             target = Path(tmp)
@@ -272,6 +322,8 @@ class Phase5InstallerTests(unittest.TestCase):
             ("setup.py", "python"),
             ("pom.xml", "java"),
             ("build.gradle", "java"),
+            ("settings.gradle.kts", "kotlin"),
+            ("build.gradle.kts", "kotlin"),
             ("app.csproj", "csharp"),
             ("app.sln", "csharp"),
             ("go.mod", "go"),

@@ -1,6 +1,6 @@
 # AI Smart Superpowers for Onboarding
 
-> Translation status: Initial German translation
+> Localization status: Initial German localization
 > Source file: ../../README.md
 > Source language: English
 > Last source review: 2026-05-28

@@ -18,6 +18,7 @@ This page explains how `agents/autonomous-agents.md` fits into the AI Agent Oper
 
 Use autonomy only inside reviewed permissions, clear stop conditions and observable verification.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

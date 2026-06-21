@@ -18,6 +18,7 @@ This page explains how `workflows/self-evolution-loop.md` fits into the AI Agent
 
 Step-by-step procedures for real agent work such as onboarding, review and translation.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

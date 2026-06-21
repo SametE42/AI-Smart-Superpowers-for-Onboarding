@@ -1,8 +1,8 @@
 # AI Smart Superpowers for Onboarding Manual
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > ഉറവിട ഭാഷ: ഇംഗ്ലീഷ്
 > ഉറവിട ഫയൽ: ai/English/README.md
 > വ്യത്യാസമുണ്ടെങ്കിൽ ഇംഗ്ലീഷ് ഫയലിനാണ് മുൻഗണന.

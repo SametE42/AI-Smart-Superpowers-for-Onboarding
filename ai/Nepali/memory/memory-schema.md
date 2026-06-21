@@ -1,8 +1,8 @@
 # Memory Schema
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > स्रोत भाषा: अंग्रेजी
 > स्रोत फाइल: ai/English/memory/memory-schema.md
 > फरक भएमा अंग्रेजी फाइललाई प्राथमिकता दिइन्छ।
@@ -22,6 +22,7 @@
 ## फोकस
 
 workflow मा प्रयोग गर्नु अघि दायरा, प्रमाण, प्रमाणित गर्न सकिने commands र मानव स्वीकृति सीमा परिभाषित गर्नुहोस्।
+
 
 ## गुणस्तर जाँच
 

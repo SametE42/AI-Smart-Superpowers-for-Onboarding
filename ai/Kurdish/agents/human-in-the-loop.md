@@ -1,8 +1,8 @@
 # Human In The Loop
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Zimanê çavkanî: Îngilîzî
 > Pelê çavkanî: ai/English/agents/human-in-the-loop.md
 > Ger cudahî hebe, pelê Îngilîzî serdest e.
@@ -22,6 +22,7 @@ Vê rûpelê wek rêbernameya karî ji bo `agents` bi kar bîne. Ew delîlên re
 ## Fokus
 
 Berî bikaranîna di workflow de, qada kar, delîl, commands yên piştrastbar û sînorên pejirandina mirovî diyar bike.
+
 
 ## Kontrola kalîteyê
 

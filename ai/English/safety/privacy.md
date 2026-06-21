@@ -18,6 +18,7 @@ This page explains how `safety/privacy.md` fits into the AI Agent Operating Manu
 
 Safety, privacy, prompt-injection, permission and human-approval rules.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

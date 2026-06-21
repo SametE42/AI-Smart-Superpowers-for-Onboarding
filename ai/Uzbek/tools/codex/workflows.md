@@ -1,8 +1,8 @@
 # Workflows
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Manba tili: inglizcha
 > Manba fayl: ai/English/tools/codex/workflows.md
 > Farq bo'lsa, inglizcha fayl ustuvor.
@@ -22,6 +22,7 @@ Bu sahifani `tools` uchun operatsion yo'riqnoma sifatida ishlating. U repository
 ## Fokus
 
 workflow ichida ishlatishdan oldin doira, dalillar, tekshiriladigan commands va inson tasdiqi chegaralarini belgilang.
+
 
 ## Sifat tekshiruvi
 

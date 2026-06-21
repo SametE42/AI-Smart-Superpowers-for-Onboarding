@@ -71,7 +71,7 @@ class Phase2DocumentationTests(unittest.TestCase):
             "technology and stack context",
             "language-dependent output",
             "functional multilingual support",
-            "translation_review_status",
+            "pending linguistic review",
             "evidence-first documentation",
             "technology-neutral templates",
         ]

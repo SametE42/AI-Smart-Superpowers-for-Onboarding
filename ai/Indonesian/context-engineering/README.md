@@ -1,8 +1,8 @@
 # Context Engineering
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Bahasa sumber: Inggris
 > File sumber: ai/English/context-engineering/README.md
 > Jika ada perbedaan, file Inggris menjadi acuan.
@@ -24,6 +24,7 @@ Gunakan halaman ini sebagai panduan operasional untuk tema `context-engineering`
 ## Fokus
 
 Sebelum memakai halaman ini dalam workflow, tetapkan cakupan, bukti yang diperlukan, commands yang dapat diverifikasi, dan batas persetujuan manusia.
+
 
 ## Pemeriksaan kualitas
 

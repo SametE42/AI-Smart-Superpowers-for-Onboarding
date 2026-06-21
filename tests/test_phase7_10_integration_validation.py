@@ -193,7 +193,7 @@ class Phase7To10IntegrationValidationTests(unittest.TestCase):
             "geschaetzte Reife vor den Aenderungen",
             "geschaetzte Reife nach den Aenderungen",
             "75",
-            "machine_generated: 74",
+            "pending linguistic review: 74",
             "reviewed: 1",
             "verbleibende Luecken",
             "empfohlene naechste Commits",

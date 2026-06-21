@@ -1,8 +1,8 @@
 # Config
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Limba sursă: engleză
 > Fișier sursă: ai/English/models/kimi/config.md
 > În caz de diferențe, fișierul în engleză rămâne autoritatea.
@@ -24,6 +24,7 @@ Folosește această pagină ca ghid operațional pentru tema `models`. Nu înloc
 ## Focus
 
 Înainte de a folosi această pagină într-un workflow, definește domeniul, dovezile necesare, comenzile verificabile și limitele aprobării umane.
+
 
 ## Control calitate
 

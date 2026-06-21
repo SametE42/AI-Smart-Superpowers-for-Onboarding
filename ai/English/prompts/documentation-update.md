@@ -18,6 +18,7 @@ This page explains how `prompts/documentation-update.md` fits into the AI Agent 
 
 Prompt design, refinement and review patterns for repository-aware AI work.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

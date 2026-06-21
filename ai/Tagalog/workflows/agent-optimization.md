@@ -1,8 +1,8 @@
 # Agent Optimization
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Pinagmulan na wika: Ingles
 > Pinagmulan na file: ai/English/workflows/agent-optimization.md
 > Kapag may pagkakaiba, ang English file ang susundin.
@@ -24,6 +24,7 @@ Gamitin ang pahinang ito bilang operational na gabay para sa paksang `workflows`
 ## Pokus
 
 Bago gamitin ang pahinang ito sa workflow, tukuyin ang saklaw, kinakailangang evidence, verifiable commands at hangganan ng human approval.
+
 
 ## Quality check
 

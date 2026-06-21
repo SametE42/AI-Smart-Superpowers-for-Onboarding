@@ -18,6 +18,7 @@ This page explains how `agents/self-evolving-agents.md` fits into the AI Agent O
 
 AI agent roles, collaboration patterns and human handoff boundaries.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

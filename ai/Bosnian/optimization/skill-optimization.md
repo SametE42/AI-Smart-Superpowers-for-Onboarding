@@ -1,8 +1,8 @@
 # Skill Optimization
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Izvorni jezik: engleski
 > Izvorna datoteka: ai/English/optimization/skill-optimization.md
 > Ako postoje odstupanja, engleska datoteka ima prednost.
@@ -24,6 +24,7 @@ Koristi ovu stranicu kao operativni vodič za temu `optimization`. Ne zamjenjuje
 ## Fokus
 
 Prije korištenja ove stranice u workflowu definiši opseg, potrebne dokaze, provjerljive komande i granice ljudskog odobrenja.
+
 
 ## Provjera kvaliteta
 

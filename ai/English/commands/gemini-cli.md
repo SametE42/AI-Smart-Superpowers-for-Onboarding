@@ -18,6 +18,7 @@ This page explains how `commands/gemini-cli.md` fits into the AI Agent Operating
 
 Command systems, slash commands, file references and repeatable workflow commands.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

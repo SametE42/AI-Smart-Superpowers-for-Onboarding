@@ -12,9 +12,23 @@ from check_language_support import validate_language_support
 RTL_LANGUAGES = {"ar", "fa", "he", "ps", "ur"}
 
 
+def display_review_status(status: str) -> str:
+    labels = {
+        "reviewed": "reviewed",
+        "needs_review": "pending linguistic review",
+        "machine_generated": "pending linguistic review",
+        "unknown": "unknown",
+    }
+    return labels.get(status, status)
+
+
 def render_report(root: str | Path = ".") -> str:
     result = validate_language_support(root)
-    status_counts = result.summary.get("translation_review_status", {})
+    raw_status_counts = result.summary.get("translation_review_status", {})
+    status_counts: dict[str, int] = {}
+    for status, count in raw_status_counts.items():
+        label = display_review_status(str(status))
+        status_counts[label] = status_counts.get(label, 0) + int(count)
     lines = [
         "# Language Support Report",
         "",
@@ -38,7 +52,7 @@ def render_report(root: str | Path = ".") -> str:
         notes = str(info.get("notes", ""))
         lines.append(
             f"| {code} | {info.get('name', '')} | {info.get('output_support', '')} | "
-            f"{info.get('translation_review_status', '')} | `{info.get('file_map', '')}` | {notes} |"
+            f"{display_review_status(str(info.get('translation_review_status', '')))} | `{info.get('file_map', '')}` | {notes} |"
         )
 
     missing_file_maps = [

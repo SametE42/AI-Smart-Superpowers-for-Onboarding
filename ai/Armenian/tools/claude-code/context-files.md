@@ -1,8 +1,8 @@
 # Context Files
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Աղբյուր լեզու՝ անգլերեն
 > Աղբյուր ֆայլ: ai/English/tools/claude-code/context-files.md
 > Տարբերությունների դեպքում առաջնային է անգլերեն ֆայլը։
@@ -22,6 +22,7 @@
 ## Կենտրոնացում
 
 Մինչև workflow-ում օգտագործելը սահմանեք շրջանակը, ապացույցները, ստուգելի commands-ը և մարդկային հաստատման սահմանները։
+
 
 ## Որակի ստուգում
 

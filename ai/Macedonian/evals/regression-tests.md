@@ -1,8 +1,8 @@
 # Regression Tests
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Изворен јазик: англиски
 > Изворна датотека: ai/English/evals/regression-tests.md
 > При разлики, англиската датотека има предност.
@@ -24,6 +24,7 @@
 ## Фокус
 
 Пред да ја користиш оваа страница во workflow, дефинирај опсег, потребни докази, проверливи команди и граници на човечко одобрување.
+
 
 ## Проверка на квалитет
 

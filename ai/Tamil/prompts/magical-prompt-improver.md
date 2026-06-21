@@ -1,8 +1,8 @@
 # Magical Prompt Improver
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > மூல மொழி: ஆங்கிலம்
 > மூல கோப்பு: ai/English/prompts/magical-prompt-improver.md
 > வேறுபாடு இருந்தால் ஆங்கில கோப்பே முன்னுரிமை பெறும்.

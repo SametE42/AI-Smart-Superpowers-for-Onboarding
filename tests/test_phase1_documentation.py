@@ -51,7 +51,7 @@ class Phase1DocumentationTests(unittest.TestCase):
             ],
             "docs/localization-guidelines.md": [
                 "translation_review_status",
-                "machine_generated",
+                "pending linguistic review",
                 "human review",
             ],
             "docs/file-map-schema.md": [

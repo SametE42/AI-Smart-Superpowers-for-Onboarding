@@ -1,8 +1,8 @@
 # Xai Grok
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Kildespråk: engelsk
 > Kildefil: ai/English/providers/xai-grok.md
 > Ved avvik gjelder den engelske filen.
@@ -24,6 +24,7 @@ Bruk siden som operativ veiledning for temaet `providers`. Den erstatter ikke re
 ## Fokus
 
 Definer omfang, nødvendig bevis, verifiserbare kommandoer og grenser for menneskelig godkjenning før siden brukes i en workflow.
+
 
 ## Kvalitetskontroll
 

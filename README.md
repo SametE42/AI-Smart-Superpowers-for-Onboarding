@@ -201,7 +201,7 @@ flowchart LR
 
 <p>
   <img alt="Language folders: 75" src="https://img.shields.io/badge/language%20folders-75-0f766e">
-  <img alt="AI translated files: 19240" src="https://img.shields.io/badge/AI%20translated%20files-19240-2563eb">
+  <img alt="Localized mirror files: 19240" src="https://img.shields.io/badge/localized%20mirror%20files-19240-2563eb">
 </p>
 
 <table>
@@ -210,11 +210,11 @@ flowchart LR
     <td width="20%"><a href="ai/German/README.md"><strong>German</strong></a><br>Localized mirror</td>
     <td width="20%"><a href="ai/LANGUAGE_INDEX.md"><strong>Language Index</strong></a><br>All 75 folders</td>
     <td width="20%"><a href="ai/TRANSLATION_POLICY.md"><strong>Translation Policy</strong></a><br>Rules and invariants</td>
-    <td width="20%"><a href="ai/TRANSLATION_STATUS.md"><strong>Translation Status</strong></a><br>Coverage table</td>
+    <td width="20%"><a href="ai/TRANSLATION_STATUS.md"><strong>Localization Status</strong></a><br>Coverage table</td>
   </tr>
 </table>
 
-The multilingual manual is organized under `ai/`. English is authoritative. Non-English folders mirror the English structure and carry the AI quality-pass status marker.
+The multilingual manual is organized under `ai/`. English is authoritative. Non-English folders mirror the English structure and carry a localization status marker whose review state is tracked in the language metadata.
 
 <details>
 <summary><strong>Browse all language mirrors</strong></summary>
@@ -251,7 +251,7 @@ The multilingual manual is organized under `ai/`. English is authoritative. Non-
 | AI manual source language | [`ai/English/`](ai/English/) |
 | Language index | [`ai/LANGUAGE_INDEX.md`](ai/LANGUAGE_INDEX.md) |
 | Translation rules | [`ai/TRANSLATION_POLICY.md`](ai/TRANSLATION_POLICY.md) |
-| Translation status | [`ai/TRANSLATION_STATUS.md`](ai/TRANSLATION_STATUS.md) |
+| Localization status | [`ai/TRANSLATION_STATUS.md`](ai/TRANSLATION_STATUS.md) |
 | Tool compatibility | [`docs/tool-compatibility.md`](docs/tool-compatibility.md) |
 | Contribution rules | [`CONTRIBUTING.md`](CONTRIBUTING.md) |
 | Security policy | [`SECURITY.md`](SECURITY.md) |
@@ -290,7 +290,7 @@ Generate validation reports:
 python scripts/validate_repository.py --root . --json ai/VALIDATION_REPORT.json --markdown ai/VALIDATION_REPORT.md
 ```
 
-The validator checks local Markdown file targets, local HTML links, local heading anchors, H1 headings, empty files, directory README coverage, mirrored AI language files, language sorting, legacy AI links, old public repository references, optional template README coverage, prompt README link consistency, Magical Prompt Improver localization markers, common secret patterns, translation status markers and language README completeness. It does not currently validate external URLs.
+The validator checks local Markdown file targets, local HTML links, local heading anchors, H1 headings, empty files, directory README coverage, mirrored AI language files, language sorting, legacy AI links, old public repository references, optional template README coverage, prompt README link consistency, Magical Prompt Improver localization markers, common secret patterns, localization review markers and language README completeness. It does not currently validate external URLs.
 
 ## Examples
 

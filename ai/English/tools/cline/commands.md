@@ -18,6 +18,7 @@ This page explains how `tools/cline/commands.md` fits into the AI Agent Operatin
 
 Tool and runtime profiles for coding agents, IDE assistants and CLI workflows.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

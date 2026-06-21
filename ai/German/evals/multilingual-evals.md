@@ -1,8 +1,8 @@
 # Multilingual Evals
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Source language: English
 > Source file: ai/English/evals/multilingual-evals.md
 > Bei Abweichungen ist die englische Datei maßgeblich.
@@ -23,6 +23,7 @@ Diese Seite beschreibt, wie `evals/multilingual-evals.md` im AI Agent Operating 
 ## Fokus
 
 Evaluationsaufgaben, Bewertungsrubriken, Regression Checks und Quality Gates für KI-Workflows.
+
 
 ## Qualitätscheck
 

@@ -18,6 +18,7 @@ This page explains how `agents/agent-loop.md` fits into the AI Agent Operating M
 
 Keep plan, act, observe and revise cycles explicit so agents do not drift from the task.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

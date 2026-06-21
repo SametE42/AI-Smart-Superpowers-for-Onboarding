@@ -1,8 +1,8 @@
 # Evals
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > स्रोत भाषा: इंग्रजी
 > स्रोत फाइल: ai/English/models/google-gemini/evals.md
 > फरक असल्यास इंग्रजी फाइलला प्राधान्य.
@@ -22,6 +22,7 @@
 ## फोकस
 
 workflow मध्ये वापरण्यापूर्वी व्याप्ती, पुरावे, पडताळण्याजोगे commands आणि मानवी मंजुरीच्या सीमा ठरवा.
+
 
 ## गुणवत्ता तपासणी
 

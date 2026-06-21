@@ -1,8 +1,8 @@
 # Prompts
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Pinagmulan na wika: Ingles
 > Pinagmulan na file: ai/English/prompts/README.md
 > Kapag may pagkakaiba, ang English file ang susundin.

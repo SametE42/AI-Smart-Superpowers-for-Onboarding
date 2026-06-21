@@ -1,8 +1,8 @@
 # Skill Testing
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Langue source : anglais
 > Fichier source: ai/English/skills/skill-testing.md
 > En cas de divergence, le fichier anglais fait autorité.
@@ -24,6 +24,7 @@ Utilise cette page comme repère opérationnel pour le thème `skills`. Elle ne 
 ## Point d'attention
 
 Définis le périmètre, les preuves nécessaires, les commandes vérifiables et les limites d'approbation humaine avant d'utiliser cette page dans un workflow.
+
 
 ## Contrôle qualité
 

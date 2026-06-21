@@ -18,6 +18,7 @@ This page explains how `skills/skill-transfer.md` fits into the AI Agent Operati
 
 Reusable skills that define bounded, testable workflows for AI agents.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

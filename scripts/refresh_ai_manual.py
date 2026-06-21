@@ -16,11 +16,13 @@ SCAFFOLD_MARKERS = (
     "Translation status: pending review",
     "Translation status: localized draft, human review required",
     "translation-status: localized-draft; human-review-required",
+    "translation-status: ai-translated; ai-quality-pass",
+    "AI-translated from the English source",
 )
 
 DEFAULT_TARGET_LANGUAGES = ("English", "German")
-AI_TRANSLATION_MARKER = "<!-- translation-status: ai-translated; ai-quality-pass -->"
-AI_TRANSLATION_STATUS = "Translation status: AI-translated from the English source; AI quality gate passed; no human review required."
+LOCALIZATION_STATUS_MARKER = "<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->"
+LOCALIZATION_STATUS = "Language status: localized mirror of the English reference. Review status is tracked in the language support metadata."
 MAGICAL_PROMPT_IMPROVER_PATH = Path("prompts/magical-prompt-improver.md")
 MAGICAL_PROMPT_IMPROVER_TEMPLATE = "templates/optional/MAGICAL_PROMPT_IMPROVER.md"
 
@@ -297,8 +299,8 @@ TOPIC_FOCUS = {
         "de": "Führe vom Repository-Scan zu evidenzbasierter KI-Dokumentation, ohne fehlende Fakten zu erfinden.",
     },
     "translation-update": {
-        "en": "Update English first, mirror paths, preserve technical tokens and mark AI-translated pages with the quality-pass status.",
-        "de": "Aktualisiere zuerst Englisch, spiegele Pfade, bewahre technische Tokens und markiere KI-übersetzte Seiten mit Quality-Pass-Status.",
+        "en": "Update English first, mirror paths, preserve technical tokens and mark localized mirrors with tracked review status.",
+        "de": "Aktualisiere zuerst Englisch, spiegele Pfade, bewahre technische Tokens und markiere lokalisierte Spiegel mit nachverfolgtem Review-Status.",
     },
     "security-review": {
         "en": "Review secrets, permissions, logs, data exposure and production-readiness claims from evidence.",
@@ -2299,9 +2301,9 @@ def _render_profile_page(language: str, relative_path: Path) -> str:
 
     return f"""# {title}
 
-{AI_TRANSLATION_MARKER}
+{LOCALIZATION_STATUS_MARKER}
 
-> {AI_TRANSLATION_STATUS}
+> {LOCALIZATION_STATUS}
 > {profile["source_language"]}
 > {profile["source_file"]}: {source_path}
 > {profile["authority"]}
@@ -2437,7 +2439,7 @@ flowchart LR
         marker = ""
     elif language == "German":
         note = (
-            f"{AI_TRANSLATION_STATUS}\n"
+            f"{LOCALIZATION_STATUS}\n"
             f"Source language: English\n"
             f"Source file: {source_path}\n"
             "Bei Abweichungen ist die englische Datei maßgeblich."
@@ -2466,11 +2468,11 @@ flowchart LR
             "Nutze diesen Ordner, wenn du die Manual-Struktur prüfst, Lokalisierung abgleichst oder wiederverwendbare "
             "Guidance für Prompts, Safety, Tools, Modelle, Workflows und Templates laden willst."
         )
-        marker = f"{AI_TRANSLATION_MARKER}\n\n"
+        marker = f"{LOCALIZATION_STATUS_MARKER}\n\n"
     else:
         profile = LOCALIZED_LANGUAGE_TEXT[language]
         note = (
-            f"{AI_TRANSLATION_STATUS}\n"
+            f"{LOCALIZATION_STATUS}\n"
             f"{profile['source_language']}\n"
             f"{profile['source_file']}: {source_path}\n"
             f"{profile['authority']}"
@@ -2497,7 +2499,7 @@ flowchart LR
             "Use this folder to load the language-specific entrypoint before reading safety guidance, agent patterns, "
             "context engineering notes, prompt templates, tool guidance, workflows and reusable templates."
         )
-        marker = f"{AI_TRANSLATION_MARKER}\n\n"
+        marker = f"{LOCALIZATION_STATUS_MARKER}\n\n"
 
     return f"""# AI Smart Superpowers for Onboarding Manual
 
@@ -2926,7 +2928,7 @@ def _render_magical_prompt_improver_page(language: str) -> str:
     body = _render_localized_magical_prompt_body(language, template_link)
     if language == "German":
         note = (
-            f"{AI_TRANSLATION_STATUS}\n"
+            f"{LOCALIZATION_STATUS}\n"
             "Source language: English\n"
             f"Source file: {source_path}\n"
             "Bei Abweichungen ist die englische Datei maßgeblich."
@@ -2935,14 +2937,14 @@ def _render_magical_prompt_improver_page(language: str) -> str:
         profile = LOCALIZED_LANGUAGE_TEXT.get(language)
         if profile is None:
             note = (
-                f"{AI_TRANSLATION_STATUS}\n"
+                f"{LOCALIZATION_STATUS}\n"
                 "Source language: English\n"
                 f"Source file: {source_path}\n"
                 "If localized content differs from English, the English source is authoritative."
             )
         else:
             note = (
-                f"{AI_TRANSLATION_STATUS}\n"
+                f"{LOCALIZATION_STATUS}\n"
                 f"{profile['source_language']}\n"
                 f"{profile['source_file']}: {source_path}\n"
                 f"{profile['authority']}"
@@ -2950,7 +2952,7 @@ def _render_magical_prompt_improver_page(language: str) -> str:
 
     return f"""# {title}
 
-{AI_TRANSLATION_MARKER}
+{LOCALIZATION_STATUS_MARKER}
 
 > {note.replace(chr(10), chr(10) + '> ')}
 
@@ -2977,9 +2979,9 @@ def render_manual_page(language: str, relative_path: Path) -> str:
         manual_pages = _manual_pages_section(relative_path)
         return f"""# {title}
 
-{AI_TRANSLATION_MARKER}
+{LOCALIZATION_STATUS_MARKER}
 
-> {AI_TRANSLATION_STATUS}
+> {LOCALIZATION_STATUS}
 > Source language: English
 > Source file: {source_path}
 > Bei Abweichungen ist die englische Datei maßgeblich.

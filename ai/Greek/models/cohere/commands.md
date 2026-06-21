@@ -1,8 +1,8 @@
 # Commands
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Γλώσσα πηγής: Αγγλικά
 > Αρχείο πηγής: ai/English/models/cohere/commands.md
 > Σε περίπτωση απόκλισης, υπερισχύει το αγγλικό αρχείο.
@@ -24,6 +24,7 @@
 ## Εστίαση
 
 Πριν χρησιμοποιήσεις αυτή τη σελίδα σε workflow, όρισε πεδίο, απαραίτητα στοιχεία, επαληθεύσιμες εντολές και όρια ανθρώπινης έγκρισης.
+
 
 ## Έλεγχος ποιότητας
 

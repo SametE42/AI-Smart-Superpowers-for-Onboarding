@@ -141,6 +141,8 @@ def detect_stack(target: str | Path) -> StackHint:
         ("setup.py", "python"),
         ("pom.xml", "java"),
         ("build.gradle", "java"),
+        ("settings.gradle.kts", "kotlin"),
+        ("build.gradle.kts", "kotlin"),
         ("go.mod", "go"),
         ("Cargo.toml", "rust"),
         ("composer.json", "php"),
@@ -181,9 +183,19 @@ def detect_stack(target: str | Path) -> StackHint:
     )
 
 
+def _review_status_label(review_status: str) -> str:
+    labels = {
+        "reviewed": "reviewed",
+        "needs_review": "pending linguistic review",
+        "machine_generated": "pending linguistic review",
+        "unknown": "unknown",
+    }
+    return labels.get(review_status, review_status)
+
+
 def _language_notice(language: str, info: dict[str, Any], structure: str, stack_hint: StackHint) -> str:
     language_name = info["name"]
-    review_status = info["translation_review_status"]
+    review_status = _review_status_label(str(info["translation_review_status"]))
     evidence = ", ".join(stack_hint.evidence) if stack_hint.evidence else "[none]"
     if language == "de":
         note = (
@@ -204,7 +216,7 @@ def _language_notice(language: str, info: dict[str, Any], structure: str, stack_
             f"> Structure mode: {structure}",
             f"> Stack hint: {stack_hint.stack}",
             f"> Evidence source: {evidence}",
-            f"> Translation review status: {review_status}",
+            f"> Review status: {review_status}",
             f"> {note}",
             "",
         ]
@@ -215,7 +227,7 @@ def _read_template(root: Path, filename: str) -> str:
     path = root / "templates" / "docs-ai" / filename
     if path.exists():
         return path.read_text(encoding="utf-8")
-    return f"# {filename}\n\n[UNKNOWN]\n"
+    raise FileNotFoundError(f"Missing required template: {path}")
 
 
 def _render_doc(root: Path, filename: str, language: str, info: dict[str, Any], structure: str, stack_hint: StackHint) -> str:
@@ -241,7 +253,7 @@ def _render_agents(root: Path, language: str, info: dict[str, Any], structure: s
             f"> Language name: {info['name']}",
             f"> Structure mode: {structure}",
             f"> Stack hint: {stack_hint.stack}",
-            f"> Translation review status: {info['translation_review_status']}",
+            f"> Review status: {_review_status_label(str(info['translation_review_status']))}",
             f"> Docs directory: {docs_directory}",
             "",
             template.replace("docs/ai/", f"{docs_directory.rstrip('/')}/"),
@@ -267,7 +279,7 @@ def _render_manifest(
         f"structure: {result.structure}",
         f"docs_directory: {docs_directory}",
         "agents_filename: AGENTS.md",
-        f"translation_review_status: {info['translation_review_status']}",
+        f"review_status: {_review_status_label(str(info['translation_review_status']))}",
         f"stack_hint: {stack_hint.stack}",
         "stack_evidence:",
     ]
@@ -303,6 +315,14 @@ def _manifest_name(language: str, structure: str) -> str:
     if structure == "localized" and language == "de":
         return "KI_ONBOARDING_MANIFEST.yml"
     return "AI_ONBOARDING_MANIFEST.yml"
+
+
+def _missing_required_templates(root: Path, mode: str) -> list[Path]:
+    return [
+        root / "templates" / "docs-ai" / filename
+        for filename in MODES[mode]
+        if not (root / "templates" / "docs-ai" / filename).exists()
+    ]
 
 
 def _plan_files(
@@ -403,6 +423,11 @@ def install_ai_onboarding(
 
     stack_hint = detect_stack(target_path) if detect_stack_flag else StackHint(stack=stack)
     result.stack = stack_hint.stack
+
+    for path in _missing_required_templates(root_path, mode):
+        result.errors.append(f"Missing required template: {path}")
+    if result.errors:
+        return result
 
     if interactive:
         answer = input(f"Install {mode} onboarding files into {target_path}? [y/N] ").strip().lower()

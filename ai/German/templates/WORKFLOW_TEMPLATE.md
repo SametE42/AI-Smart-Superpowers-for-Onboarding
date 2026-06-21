@@ -1,8 +1,8 @@
 # Workflow_template
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Source language: English
 > Source file: ai/English/templates/WORKFLOW_TEMPLATE.md
 > Bei Abweichungen ist die englische Datei maßgeblich.
@@ -23,6 +23,7 @@ Diese Seite beschreibt, wie `templates/WORKFLOW_TEMPLATE.md` im AI Agent Operati
 ## Fokus
 
 Schrittweise Verfahren für echte Agentenarbeit wie Onboarding, Review und Übersetzung.
+
 
 ## Qualitätscheck
 

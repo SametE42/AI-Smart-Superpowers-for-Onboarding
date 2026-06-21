@@ -18,6 +18,7 @@ This page explains how `agents/coding-agents.md` fits into the AI Agent Operatin
 
 Make repository rules, test commands, diff review and human approval visible to coding agents.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

@@ -1,8 +1,8 @@
 # Lm Studio
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > ភាសាប្រភព៖ អង់គ្លេស
 > ឯកសារប្រភព: ai/English/providers/lm-studio.md
 > បើមានភាពខុសគ្នា ឯកសារអង់គ្លេសមានអាទិភាព។
@@ -22,6 +22,7 @@
 ## ការផ្តោត
 
 មុនប្រើក្នុង workflow សូមកំណត់វិសាលភាព ភស្តុតាង commands ដែលអាចផ្ទៀងផ្ទាត់បាន និងព្រំដែនអនុម័តដោយមនុស្ស។
+
 
 ## ពិនិត្យគុណភាព
 

@@ -8,7 +8,7 @@ Use these values for `translation_review_status`:
 
 - `reviewed`: a qualified human reviewer has checked the translation.
 - `needs_review`: the translation is usable as a draft but requires human review.
-- `machine_generated`: the translation was produced or refreshed by AI or another automated process.
+- automated draft: public reports should render this as `pending linguistic review`.
 - `unknown`: review provenance is not known.
 
 Do not mark a language as `reviewed` without documented human review.
@@ -35,9 +35,9 @@ Human review should record:
 - date or release reference;
 - whether filenames, terminology and Markdown rendering were checked.
 
-## Machine-Generated Translations
+## Pending Linguistic Review
 
-Machine-generated translations must be marked honestly. They can still be functionally complete, but their language quality is not the same as human-reviewed content.
+Automated or draft localizations must be marked honestly. They can still be functionally complete, but their language quality is not the same as human-reviewed content.
 
 Use `i18n/glossary.yml` for terminology. It includes entries for every supported language code so gaps are explicit instead of hidden. Non-English glossary values are review targets unless a documented human review says otherwise.
 

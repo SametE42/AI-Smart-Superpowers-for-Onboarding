@@ -16,7 +16,8 @@ This page explains how `workflows/translation-update.md` fits into the AI Agent 
 
 ## Focus
 
-Update English first, mirror paths, preserve technical tokens and mark unreviewed translations.
+Update English first, mirror paths, preserve technical tokens and mark localized mirrors with tracked review status.
+
 
 ## Quality Checklist
 

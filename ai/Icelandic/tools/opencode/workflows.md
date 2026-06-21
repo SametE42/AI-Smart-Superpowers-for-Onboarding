@@ -1,8 +1,8 @@
 # Workflows
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Upprunamál: enska
 > Upprunaskrá: ai/English/tools/opencode/workflows.md
 > Ef munur er til staðar gildir enska skráin.
@@ -22,6 +22,7 @@ Notaðu þessa síðu sem rekstrarleiðbeiningu fyrir `tools`. Hún kemur ekki �
 ## Fókus
 
 Áður en síðan er notuð í workflow skaltu skilgreina umfang, sönnunargögn, sannreynanleg commands og mörk mannlegrar samþykktar.
+
 
 ## Gæðaprófun
 

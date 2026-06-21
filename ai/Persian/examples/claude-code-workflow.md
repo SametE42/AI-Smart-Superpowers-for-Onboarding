@@ -1,8 +1,8 @@
 # Claude Code Workflow
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > زبان مبدأ: انگلیسی
 > فایل مبدأ: ai/English/examples/claude-code-workflow.md
 > در صورت اختلاف، فایل انگلیسی مرجع اصلی است.
@@ -24,6 +24,7 @@
 ## تمرکز
 
 پیش از استفاده از این صفحه در workflow، دامنه، شواهد لازم، commands قابل راستی‌آزمایی و مرزهای تأیید انسانی را تعریف کنید.
+
 
 ## کنترل کیفیت
 

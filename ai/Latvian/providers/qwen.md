@@ -1,8 +1,8 @@
 # Qwen
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Avota valoda: angļu
 > Avota fails: ai/English/providers/qwen.md
 > Atšķirību gadījumā noteicošais ir angļu fails.
@@ -24,6 +24,7 @@ Izmanto šo lapu kā operatīvu vadlīniju tēmai `providers`. Tā neaizstāj re
 ## Fokuss
 
 Pirms šīs lapas izmantošanas workflow definē tvērumu, nepieciešamos pierādījumus, pārbaudāmas komandas un cilvēka apstiprinājuma robežas.
+
 
 ## Kvalitātes pārbaude
 

@@ -1,8 +1,8 @@
 # Evals
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Эх хэл: Англи
 > Эх файл: ai/English/models/deepseek/evals.md
 > Зөрүү гарвал англи файл давамгайлна.
@@ -22,6 +22,7 @@
 ## Фокус
 
 workflow-д ашиглахаас өмнө хүрээ, нотолгоо, шалгаж болох commands болон хүний зөвшөөрлийн хил хязгаарыг тодорхойл.
+
 
 ## Чанарын шалгалт
 

@@ -18,6 +18,7 @@ This page explains how `agents/agent-architecture.md` fits into the AI Agent Ope
 
 Define the agent loop, role boundaries, tool access and escalation points before assigning work.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

@@ -10,7 +10,7 @@
   <a href="../LICENSE"><img alt="License: MIT" src="https://img.shields.io/github/license/SametE42/AI-Smart-Superpowers-for-Onboarding"></a>
   <img alt="Master prompt: v12" src="https://img.shields.io/badge/master%20prompt-v12-7c3aed">
   <img alt="Language folders: 75" src="https://img.shields.io/badge/language%20folders-75-0f766e">
-  <img alt="AI translated files: 19240" src="https://img.shields.io/badge/AI%20translated%20files-19240-2563eb">
+  <img alt="Localized mirror files: 19240" src="https://img.shields.io/badge/localized%20mirror%20files-19240-2563eb">
   <img alt="Python: 3.x validation" src="https://img.shields.io/badge/python-3.x%20validation-3776ab">
 </p>
 
@@ -33,7 +33,7 @@
     <td width="20%"><a href="../ai/German/README.md"><strong>German AI Manual</strong></a><br>Localized German mirror.</td>
     <td width="20%"><a href="../ai/LANGUAGE_INDEX.md"><strong>Language Index</strong></a><br>All available language folders.</td>
     <td width="20%"><a href="../ai/TRANSLATION_POLICY.md"><strong>Translation Policy</strong></a><br>Source-of-truth and mirror rules.</td>
-    <td width="20%"><a href="../ai/TRANSLATION_STATUS.md"><strong>Translation Status</strong></a><br>Coverage and quality-pass status.</td>
+    <td width="20%"><a href="../ai/TRANSLATION_STATUS.md"><strong>Localization Status</strong></a><br>Coverage and review status.</td>
   </tr>
 </table>
 
@@ -72,7 +72,7 @@ python scripts/validate_repository.py --root . --json ai/VALIDATION_REPORT.json 
 git diff --exit-code ai/VALIDATION_REPORT.json ai/VALIDATION_REPORT.md
 ```
 
-The validator checks Markdown structure, local Markdown links, local HTML links, local heading anchors, mirrored AI language files, README coverage, language README completeness, optional template README coverage, prompt README link consistency, Magical Prompt Improver localization markers, old public repository references, empty files, common secret patterns and AI translation status markers. It does not currently validate external URLs.
+The validator checks Markdown structure, local Markdown links, local HTML links, local heading anchors, mirrored AI language files, README coverage, language README completeness, optional template README coverage, prompt README link consistency, Magical Prompt Improver localization markers, old public repository references, empty files, common secret patterns and localization review markers. It does not currently validate external URLs.
 
 ## Maintenance Rules
 

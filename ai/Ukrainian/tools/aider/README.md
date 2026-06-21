@@ -1,8 +1,8 @@
 # Aider
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Мова джерела: англійська
 > Файл джерела: ai/English/tools/aider/README.md
 > У разі розбіжностей англійський файл має пріоритет.
@@ -24,6 +24,7 @@
 ## Фокус
 
 Перед використанням цієї сторінки у workflow визначте область, потрібні докази, перевірювані команди та межі людського схвалення.
+
 
 ## Перевірка якості
 

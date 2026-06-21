@@ -1,8 +1,8 @@
 # Anthropic
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Izvorni jezik: engleski
 > Izvorna datoteka: ai/English/models/anthropic/README.md
 > U slučaju odstupanja prednost ima engleska datoteka.
@@ -24,6 +24,7 @@ Koristi ovu stranicu kao operativni vodič za temu `models`. Ne zamjenjuje dokaz
 ## Fokus
 
 Prije korištenja ove stranice u workflowu definiraj opseg, potrebne dokaze, provjerljive naredbe i granice ljudskog odobrenja.
+
 
 ## Provjera kvalitete
 

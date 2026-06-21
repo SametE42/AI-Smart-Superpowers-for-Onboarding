@@ -106,11 +106,11 @@ The current functional target state is complete for all detected languages: ever
 
 ## File Maps
 
-File maps live under `i18n/file-map.<language>.yml`. A file map declares the language, docs directory, `AGENTS.md` entrypoint, translation review status and the mapping from canonical filenames to localized filenames.
+File maps live under `i18n/file-map.<language>.yml`. A file map declares the language, docs directory, `AGENTS.md` entrypoint, localization review status and the mapping from canonical filenames to localized filenames.
 
 File maps should be maintained as source-controlled evidence. Localized filenames must not be guessed at install time.
 
-English maps canonical filenames to themselves. German has a localized example such as `KONTEXT_INDEX.md` and `SYSTEMREGELN.md`, but its language quality remains `machine_generated` until human review is documented. Other non-English languages currently use stable ASCII-safe, language-code-prefixed filenames, for example `FR_CONTEXT_INDEX.md`, to provide complete functional localized structure without pretending that linguistic filename review has happened.
+English maps canonical filenames to themselves. German has a localized example such as `KONTEXT_INDEX.md` and `SYSTEMREGELN.md`, but its language quality remains pending linguistic review until human review is documented. Other non-English languages currently use stable ASCII-safe, language-code-prefixed filenames, for example `FR_CONTEXT_INDEX.md`, to provide complete functional localized structure without pretending that linguistic filename review has happened.
 
 ## Adding A Language
 
@@ -120,19 +120,14 @@ To add a language, maintainers should:
 2. Add the language to `ai/LANGUAGE_INDEX.md` and `ai/TRANSLATION_STATUS.md`.
 3. Add an entry to `i18n/language-support.yml`.
 4. Add `i18n/file-map.<language>.yml`.
-5. Document whether translation quality is human-reviewed, machine-generated or unknown.
+5. Document whether language quality is human-reviewed, pending linguistic review or unknown.
 6. Run language-support validation and repository validation.
 
-## Translation Review Status
+## Localization Review Status
 
-`translation_review_status` tracks language quality separately from functional support. Allowed values should be:
+`translation_review_status` tracks language quality separately from functional support. Public docs and reports should describe automated or draft language states as `pending linguistic review`, while the machine-readable source remains in the language metadata.
 
-- `reviewed`
-- `needs_review`
-- `machine_generated`
-- `unknown`
-
-The current non-English language mirrors are AI-translated according to `ai/TRANSLATION_STATUS.md`; they should not be described as human-reviewed unless a human review is documented. They are therefore marked `machine_generated` in the current matrix.
+The current non-English language mirrors have complete structural coverage according to `ai/TRANSLATION_STATUS.md`; they should not be described as human-reviewed unless a human review is documented. Their machine-readable review state remains tracked in the current matrix.
 
 ## Filename Validation
 

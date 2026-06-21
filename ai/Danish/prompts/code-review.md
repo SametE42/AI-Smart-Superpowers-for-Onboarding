@@ -1,8 +1,8 @@
 # Code Review
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Kildesprog: engelsk
 > Kildefil: ai/English/prompts/code-review.md
 > Ved afvigelser er den engelske fil gældende.
@@ -24,6 +24,7 @@ Brug siden som operationel vejledning for temaet `prompts`. Den erstatter ikke r
 ## Fokus
 
 Definér omfang, nødvendig evidens, verificerbare kommandoer og grænser for menneskelig godkendelse, før siden bruges i et workflow.
+
 
 ## Kvalitetskontrol
 

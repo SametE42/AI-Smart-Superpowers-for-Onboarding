@@ -46,12 +46,12 @@ Expected result:
 - optional template README coverage is complete,
 - old public repository reference hits are `0`.
 
-## Translation status gate
+## Localization status gate
 
 - [ ] `ai/English/` remains the source of truth.
 - [ ] Every non-English language folder mirrors the English structure.
-- [ ] Every localized file includes `<!-- translation-status: ai-translated; ai-quality-pass -->`.
-- [ ] `ai/VALIDATION_REPORT.md` shows `ai_translated_files: 19166`, `missing_ai_translation_marker_files: 0` and `unreviewed_translation_files: 0`.
+- [ ] Every localized file includes `<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->`.
+- [ ] `ai/VALIDATION_REPORT.md` shows `localized_mirror_files` above zero, `missing_localization_status_marker_files: 0`, `legacy_localization_term_hits: 0` and `unreviewed_translation_files: 0`.
 
 ## Optional later
 

@@ -1,8 +1,8 @@
 # Cline
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > स्रोत भाषा: अंग्रेज़ी
 > स्रोत फ़ाइल: ai/English/tools/cline/README.md
 > अंतर होने पर अंग्रेज़ी फ़ाइल प्राथमिक मानी जाएगी।
@@ -24,6 +24,7 @@
 ## फ़ोकस
 
 इस पृष्ठ को workflow में उपयोग करने से पहले दायरा, आवश्यक प्रमाण, सत्यापनीय commands और मानवीय स्वीकृति की सीमाएँ परिभाषित करें।
+
 
 ## गुणवत्ता जाँच
 

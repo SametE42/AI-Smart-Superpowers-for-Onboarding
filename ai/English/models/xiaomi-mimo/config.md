@@ -18,6 +18,7 @@ This page explains how `models/xiaomi-mimo/config.md` fits into the AI Agent Ope
 
 Model-family profiles and routing notes for AI-assisted repository work.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

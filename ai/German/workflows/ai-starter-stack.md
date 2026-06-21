@@ -1,8 +1,8 @@
 # Ai Starter Stack
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Source language: English
 > Source file: ai/English/workflows/ai-starter-stack.md
 > Bei Abweichungen ist die englische Datei maßgeblich.
@@ -23,6 +23,7 @@ Diese Seite beschreibt, wie `workflows/ai-starter-stack.md` im AI Agent Operatin
 ## Fokus
 
 Schrittweise Verfahren für echte Agentenarbeit wie Onboarding, Review und Übersetzung.
+
 
 ## Qualitätscheck
 

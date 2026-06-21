@@ -33,8 +33,8 @@ Open `English/README.md` first. It links the primary master prompt, `docs/ai/` t
 ## Status files
 
 - `LANGUAGE_INDEX.md` lists all language folders.
-- `TRANSLATION_STATUS.md` records structure and AI translation status per language.
+- `TRANSLATION_STATUS.md` records structure and localization review status per language.
 - `TRANSLATION_POLICY.md` defines translation rules.
 - `VALIDATION_REPORT.md` and `VALIDATION_REPORT.json` are generated from `scripts/validate_repository.py`.
 
-Localized AI-translated pages keep the machine-readable `<!-- translation-status: ai-translated; ai-quality-pass -->` status comment. The validator reports any missing AI translation marker or legacy review marker.
+Localized mirror pages keep the machine-readable `<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->` status comment. The validator reports any missing localization status marker, legacy review marker or obsolete public review claim.

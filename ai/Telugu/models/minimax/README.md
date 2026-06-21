@@ -1,8 +1,8 @@
 # Minimax
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > మూల భాష: ఆంగ్లం
 > మూల ఫైల్: ai/English/models/minimax/README.md
 > తేడా ఉంటే ఆంగ్ల ఫైల్‌కే ప్రాధాన్యం.
@@ -22,6 +22,7 @@
 ## దృష్టి
 
 workflow లో ఉపయోగించే ముందు పరిధి, ఆధారాలు, ధృవీకరించగల commands మరియు మానవ ఆమోద హద్దులను నిర్వచించండి.
+
 
 ## నాణ్యత తనిఖీ
 

@@ -1,8 +1,8 @@
 # Safety
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Idioma font: anglès
 > Fitxer font: ai/English/safety/README.md
 > Si hi ha diferències, el fitxer en anglès té prioritat.
@@ -24,6 +24,7 @@ Fes servir aquesta pàgina com a guia operativa per al tema `safety`. No substit
 ## Focus
 
 Abans d'usar aquesta pàgina en un workflow, defineix abast, evidència necessària, ordres verificables i límits d'aprovació humana.
+
 
 ## Control de qualitat
 

@@ -1,8 +1,8 @@
 # Minimax
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Język źródłowy: angielski
 > Plik źródłowy: ai/English/providers/minimax.md
 > W przypadku rozbieżności plik angielski pozostaje źródłem rozstrzygającym.
@@ -24,6 +24,7 @@ Używaj tej strony jako operacyjnej wskazówki dla tematu `providers`. Nie zast�
 ## Główne założenie
 
 Zdefiniuj zakres, wymagane dowody, weryfikowalne komendy i granice zatwierdzenia przez człowieka przed użyciem tej strony w workflow.
+
 
 ## Kontrola jakości
 

@@ -1,8 +1,8 @@
 # Config
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > سرچينه ژبه: انګليسي
 > سرچينه فایل: ai/English/models/grok/config.md
 > که توپير وي، انګليسي فایل لومړيتوب لري.
@@ -22,6 +22,7 @@
 ## تمرکز
 
 په workflow کې تر کارولو مخکې ساحه، شواهد، د تاييد وړ commands او د انسان منظورۍ پولې وټاکئ.
+
 
 ## د کيفيت کتنه
 

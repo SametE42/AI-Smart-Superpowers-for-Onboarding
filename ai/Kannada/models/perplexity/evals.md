@@ -1,8 +1,8 @@
 # Evals
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > ಮೂಲ ಭಾಷೆ: ಇಂಗ್ಲಿಷ್
 > ಮೂಲ ಫೈಲ್: ai/English/models/perplexity/evals.md
 > ಭೇದವಿದ್ದರೆ ಇಂಗ್ಲಿಷ್ ಫೈಲ್‌ಗೆ ಆದ್ಯತೆ.
@@ -22,6 +22,7 @@
 ## ಕೇಂದ್ರಬಿಂದು
 
 workflow ನಲ್ಲಿ ಬಳಸುವ ಮೊದಲು ವ್ಯಾಪ್ತಿ, ಸಾಕ್ಷಿ, ಪರಿಶೀಲಿಸಬಹುದಾದ commands ಮತ್ತು ಮಾನವ ಅನುಮೋದನೆ ಗಡಿಗಳನ್ನು ನಿರ್ಧರಿಸಿ.
+
 
 ## ಗುಣಮಟ್ಟ ಪರಿಶೀಲನೆ
 

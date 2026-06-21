@@ -28,6 +28,21 @@ jobs:
       - name: Validate repository structure
         run: python scripts/validate_repository.py --root .
 
+      - name: Validate language support
+        run: python scripts/check_language_support.py --root .
+
+      - name: Installer dry-run minimal
+        run: python scripts/install_ai_onboarding.py --mode minimal --language en --structure canonical --target /tmp/ai-onboarding-min --dry-run
+
+      - name: Installer dry-run standard
+        run: python scripts/install_ai_onboarding.py --mode standard --language en --structure canonical --target /tmp/ai-onboarding-standard --dry-run
+
+      - name: Installer dry-run enterprise
+        run: python scripts/install_ai_onboarding.py --mode enterprise --language en --structure canonical --target /tmp/ai-onboarding-enterprise --dry-run
+
+      - name: Installer dry-run German localized
+        run: python scripts/install_ai_onboarding.py --mode standard --language de --structure localized --target /tmp/ai-onboarding-de --dry-run
+
       - name: Regenerate validation reports
         run: python scripts/validate_repository.py --root . --json ai/VALIDATION_REPORT.json --markdown ai/VALIDATION_REPORT.md
 

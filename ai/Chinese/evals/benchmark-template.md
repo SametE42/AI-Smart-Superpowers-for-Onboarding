@@ -1,8 +1,8 @@
 # Benchmark Template
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > 源语言：英语
 > 源文件: ai/English/evals/benchmark-template.md
 > 如有差异，以英文文件为准。
@@ -24,6 +24,7 @@
 ## 重点
 
 在 workflow 中使用本页之前，先定义范围、所需证据、可验证命令和人工批准边界。
+
 
 ## 质量检查
 

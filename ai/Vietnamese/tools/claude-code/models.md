@@ -1,8 +1,8 @@
 # Models
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Ngôn ngữ nguồn: tiếng Anh
 > Tệp nguồn: ai/English/tools/claude-code/models.md
 > Nếu có khác biệt, tệp tiếng Anh là nguồn ưu tiên.
@@ -24,6 +24,7 @@ Dùng trang này như hướng dẫn vận hành cho chủ đề `tools`. Nó kh
 ## Trọng tâm
 
 Trước khi dùng trang này trong workflow, hãy xác định phạm vi, bằng chứng cần có, commands có thể xác minh và ranh giới phê duyệt của con người.
+
 
 ## Kiểm tra chất lượng
 

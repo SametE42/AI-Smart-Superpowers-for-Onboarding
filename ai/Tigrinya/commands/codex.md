@@ -1,8 +1,8 @@
 # Codex
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > ቋንቋ ምንጪ፡ እንግሊዝኛ
 > ፋይል ምንጪ: ai/English/commands/codex.md
 > ፍልልይ እንተሃልዩ ፋይል እንግሊዝኛ ይቕድም።
@@ -22,6 +22,7 @@
 ## ትኹረት
 
 ኣብ workflow ቅድሚ ምጥቃምካ ወሰን፣ መርትዖ፣ ዝረጋገጹ commandsን ወሰን ፍቓድ ሰብን ግለጽ።
+
 
 ## ፍተሻ ጽሬት
 

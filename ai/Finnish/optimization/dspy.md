@@ -1,8 +1,8 @@
 # Dspy
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Lähdekieli: englanti
 > Lähdetiedosto: ai/English/optimization/dspy.md
 > Ristiriitatilanteissa englanninkielinen tiedosto on ratkaiseva.
@@ -24,6 +24,7 @@ Käytä tätä sivua operatiivisena ohjeena aiheelle `optimization`. Se ei korva
 ## Fokus
 
 Määritä laajuus, tarvittava näyttö, todennettavat komennot ja ihmisen hyväksynnän rajat ennen sivun käyttöä workflowssa.
+
 
 ## Laatutarkistus
 

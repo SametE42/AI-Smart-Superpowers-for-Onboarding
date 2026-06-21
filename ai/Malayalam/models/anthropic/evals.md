@@ -1,8 +1,8 @@
 # Evals
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > ഉറവിട ഭാഷ: ഇംഗ്ലീഷ്
 > ഉറവിട ഫയൽ: ai/English/models/anthropic/evals.md
 > വ്യത്യാസമുണ്ടെങ്കിൽ ഇംഗ്ലീഷ് ഫയലിനാണ് മുൻഗണന.
@@ -22,6 +22,7 @@
 ## ഫോകസ്
 
 workflow-യിൽ ഉപയോഗിക്കുന്നതിന് മുമ്പ് പരിധി, തെളിവുകൾ, പരിശോധിക്കാവുന്ന commands, മനുഷ്യ അംഗീകാര അതിർത്തികൾ നിർവ്വചിക്കുക.
+
 
 ## ഗുണനിലവാര പരിശോധന
 

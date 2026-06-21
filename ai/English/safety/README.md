@@ -18,6 +18,7 @@ This page explains how `safety/README.md` fits into the AI Agent Operating Manua
 
 Safety, privacy, prompt-injection, permission and human-approval rules.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

@@ -1,6 +1,6 @@
-# Translation Template
+# Localization Template
 
-> Translation status: Community translation
+> Localization status: Community localization
 > Source file: ../PATH/TO/SOURCE.md
 > Source language: English
 > Last source review: YYYY-MM-DD

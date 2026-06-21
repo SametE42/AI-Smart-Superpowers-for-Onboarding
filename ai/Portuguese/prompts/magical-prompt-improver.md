@@ -1,8 +1,8 @@
 # Magical Prompt Improver
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Idioma de origem: inglês
 > Arquivo de origem: ai/English/prompts/magical-prompt-improver.md
 > Em caso de divergência, o arquivo em inglês continua sendo a fonte autoritativa.

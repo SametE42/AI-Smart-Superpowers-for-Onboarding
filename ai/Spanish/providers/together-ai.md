@@ -1,8 +1,8 @@
 # Together Ai
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Idioma fuente: inglés
 > Archivo fuente: ai/English/providers/together-ai.md
 > Si hay diferencias, el archivo en inglés tiene prioridad.
@@ -24,6 +24,7 @@ Usa esta página como guía operativa para el tema `providers`. No sustituye la 
 ## Enfoque
 
 Define alcance, evidencia necesaria, comandos verificables y límites de aprobación humana antes de usar esta página en un workflow.
+
 
 ## Control de calidad
 

@@ -1,8 +1,8 @@
 # Context Files
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > ምንጭ ቋንቋ፡ እንግሊዝኛ
 > ምንጭ ፋይል: ai/English/tools/cursor/context-files.md
 > ልዩነት ካለ የእንግሊዝኛው ፋይል ቅድሚያ ይኖረዋል።
@@ -22,6 +22,7 @@
 ## ትኩረት
 
 በ workflow ውስጥ ከመጠቀም በፊት ክልል፣ ማስረጃ፣ የሚረጋገጡ commands እና የሰው ፈቃድ ገደቦችን ይግለጹ።
+
 
 ## የጥራት ፍተሻ
 

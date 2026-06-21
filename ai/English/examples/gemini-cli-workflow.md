@@ -18,6 +18,7 @@ This page explains how `examples/gemini-cli-workflow.md` fits into the AI Agent 
 
 Reusable examples that show how the operating manual can be applied in practice.
 
+
 ## Quality Checklist
 
 - The purpose is clear to a new repository user.

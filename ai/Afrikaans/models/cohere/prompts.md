@@ -1,8 +1,8 @@
 # Prompts
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Brontaal: Engels
 > Bronlêer: ai/English/models/cohere/prompts.md
 > By verskille bly die Engelse lêer gesaghebbend.
@@ -22,6 +22,7 @@ Gebruik hierdie bladsy as operasionele leiding vir `models`. Dit vervang nie rep
 ## Fokus
 
 Definieer omvang, bewyse, verifieerbare commands en menslike goedkeuringsgrense voordat hierdie bladsy in 'n workflow gebruik word.
+
 
 ## Kwaliteitskontrole
 

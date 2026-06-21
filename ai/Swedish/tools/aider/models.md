@@ -1,8 +1,8 @@
 # Models
 
-<!-- translation-status: ai-translated; ai-quality-pass -->
+<!-- localization-status: localized-mirror; review-status: tracked-in-language-support -->
 
-> Translation status: AI-translated from the English source; AI quality gate passed; no human review required.
+> Language status: localized mirror of the English reference. Review status is tracked in the language support metadata.
 > Källspråk: engelska
 > Källfil: ai/English/tools/aider/models.md
 > Vid avvikelser gäller den engelska filen.
@@ -24,6 +24,7 @@ Använd sidan som operativ vägledning för temat `tools`. Den ersätter inte re
 ## Fokus
 
 Definiera omfattning, nödvändiga bevis, verifierbara kommandon och gränser för mänskligt godkännande innan sidan används i ett workflow.
+
 
 ## Kvalitetskontroll
 
