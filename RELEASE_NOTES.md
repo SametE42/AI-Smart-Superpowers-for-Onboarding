@@ -1,30 +1,37 @@
 # Release Notes
 
-No released version is claimed by this draft. This file records planned release goals so maintainers can review scope without implying that a stable release already exists.
+## v0.1.0 - 2026-06-21
 
-## v1.0.0 draft goals
+AI Smart Superpowers for Onboarding v0.1.0 is the first public release target for the reusable repository-preflight standard.
 
-- Stable framework structure.
-- Complete core templates.
-- Technology- and programming-language-neutral templates.
-- Complete language-dependent output for all existing languages.
-- File-Maps for all existing languages.
-- Language-support matrix.
-- Localization glossary.
-- Translation review status.
-- Output Manifest.
-- Migration guide.
-- Basic validation scripts.
-- Tool-entrypoint templates.
-- Examples.
-- Documented comparison.
-- Documented research background.
-- Installer for Minimal, Standard and Enterprise mode.
+The framework is not a coding agent, SDK or runtime package. The installer is experimental but functional and supports Minimal, Standard and Enterprise modes with canonical or localized output.
 
-## Non-goals For This Draft
+## Highlights
+
+- Clear layered output model: Conceptual Core, Minimal, Standard, Enterprise and localized output.
+- Central output contract in `config/standard-docs.yml`.
+- Installer mode validation through tests and CI.
+- Language-aware output with 75 functionally complete language entries.
+- Source-backed tool compatibility matrix with confidence and limitation notes.
+- Golden E2E installer fixtures for English canonical and German localized standard output.
+- Repository validation reports regenerated from the current tree.
+
+## Verification
+
+Release validation should pass:
+
+```bash
+python -m unittest discover -s tests
+python scripts/check_language_support.py --root .
+python scripts/check_standard_docs.py --root .
+python scripts/validate_repository.py --root . --json ai/VALIDATION_REPORT.json --markdown ai/VALIDATION_REPORT.md
+git diff --exit-code ai/VALIDATION_REPORT.json ai/VALIDATION_REPORT.md
+```
+
+## Non-goals
 
 - No claim of official support by external coding-agent tools.
 - No claim of production SaaS functionality.
 - No claim of adoption metrics, benchmarks or user counts.
 - No replacement for human review.
-
+- No claim that non-English language quality is human-reviewed unless the language metadata says `reviewed`.

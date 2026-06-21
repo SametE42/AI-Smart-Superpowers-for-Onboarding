@@ -98,15 +98,15 @@ The repository is intentionally modular because AI-agent onboarding in complex r
 
 ## Onboarding Modes
 
-The current templates define the reusable knowledge base. Planned installer modes are:
+The current templates define the reusable knowledge base. The installer is experimental but functional and supports three modes:
 
 | Mode | Use when | Output shape |
 |---|---|---|
-| Minimal | Small projects or quick repository orientation | Essential agent entrypoint and core `docs/ai/` files |
-| Standard | Normal application or library repositories | Architecture, stack, build/test, dependencies, evidence and review context |
-| Enterprise | Larger, regulated or security-sensitive repositories | Standard context plus runtime, risk, safety boundaries and human review gates |
+| Minimal | Small projects or quick repository orientation | `AGENTS.md` plus 7 core knowledge-base files |
+| Standard | Normal application or library repositories | `AGENTS.md` plus 17 architecture, stack, evidence and review files |
+| Enterprise | Larger, regulated or security-sensitive repositories | Tool entrypoints plus 21 runtime, role, safety and human-review files |
 
-Each mode should be able to generate canonical English structures or localized structures through file maps. The actual language list is derived from repository evidence, not from hard-coded examples.
+The machine-readable contract for these modes is [`config/standard-docs.yml`](config/standard-docs.yml). Each mode can generate canonical English structures or localized structures through file maps. The actual language list is derived from repository evidence, not from hard-coded examples.
 
 ## Where This Fits
 
@@ -120,7 +120,17 @@ Use it before structured coding-agent workflows, Superpowers-style workflows or 
 
 ## Target Output
 
-The standard creates or updates a `docs/ai/` folder inside the target repository:
+The standard uses a layered output model:
+
+| Layer | Meaning | File count |
+|---|---|---|
+| Conceptual Core | The 10-document mental model used by the master prompt and README overview. | 10 |
+| Minimal | Installable lightweight contract for quick repository orientation. | 7 docs plus `AGENTS.md` |
+| Standard | Installable default contract for normal repositories. | 17 docs plus `AGENTS.md` and manifest |
+| Enterprise | Installable governance contract for regulated, security-sensitive or multi-agent repositories. | 21 docs plus tool entrypoints and manifest |
+| Localized Output | Any installable mode rendered through a language file map. | Same mode count, localized folder and filenames where configured |
+
+The conceptual core is the short view of the knowledge base:
 
 ```text
 docs/ai/
@@ -144,9 +154,9 @@ Key files:
 | `ARCHITECTURE.md` | Evidence-based architecture observations, boundaries and constraints. |
 | `SECURITY_RULES.md` | Security boundaries, risk notes, redaction rules and sensitive-data handling. |
 | `REVIEW_CHECKLIST.md` | Human and AI review checkpoints before work is trusted. |
-| `CHANGELOG_AI.md` | Log of AI-assisted documentation changes and rationale. |
+| `CHANGELOG_AI.md` | Log of AI-assisted documentation changes and rationale in the conceptual prompt model. |
 
-The README shows the conceptual output. Workflow prompts and templates may use a different creation or update order when that is easier for an agent to execute safely.
+Installer modes are stricter than the conceptual view. Minimal, Standard and Enterprise are validated against [`config/standard-docs.yml`](config/standard-docs.yml); localized output keeps the same mode semantics while using `i18n/file-map.<code>.yml` for the target folder and filenames.
 
 ## Quickstart
 
@@ -163,6 +173,7 @@ The README shows the conceptual output. Workflow prompts and templates may use a
 Primary prompt:  templates/MASTER_PROMPT.en.md
 German prompt:   templates/MASTER_PROMPT.md
 Target output:   docs/ai/
+Installer:       python scripts/install_ai_onboarding.py --mode standard --language en --structure canonical
 Local checks:    python -m unittest discover -s tests
                  python scripts/validate_repository.py --root .
 ```
@@ -245,6 +256,7 @@ The multilingual manual is organized under `ai/`. English is authoritative. Non-
 |---|---|
 | Primary onboarding prompt | [`templates/MASTER_PROMPT.en.md`](templates/MASTER_PROMPT.en.md) |
 | German workflow prompt | [`templates/MASTER_PROMPT.md`](templates/MASTER_PROMPT.md) |
+| Output contract | [`config/standard-docs.yml`](config/standard-docs.yml) |
 | Target-repository document templates | [`templates/docs-ai/`](templates/docs-ai/) |
 | Optional prompt-refinement template | [`templates/optional/MAGICAL_PROMPT_IMPROVER.md`](templates/optional/MAGICAL_PROMPT_IMPROVER.md) |
 | Public project overview | [`README.md`](README.md) |

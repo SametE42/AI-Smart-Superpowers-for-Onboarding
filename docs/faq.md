@@ -6,7 +6,7 @@ No. This is a standard for onboarding coding agents into repositories.
 
 ## Does every project need all 10 `/docs/ai/` files?
 
-The standard defines 10 core files for consistency. Small projects may keep some files as `DRAFT` or `INCOMPLETE`.
+The standard has a 10-file Conceptual Core for the prompt model and three installable contracts: Minimal with 7 docs, Standard with 17 docs and Enterprise with 21 docs. `config/standard-docs.yml` is the machine-readable source for the installable contracts.
 
 ## Should I put everything into `AGENTS.md`?
 

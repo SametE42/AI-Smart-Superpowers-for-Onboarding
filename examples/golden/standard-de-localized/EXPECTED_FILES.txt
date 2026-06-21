@@ -1,0 +1,20 @@
+# Expected paths for: --mode standard --language de --structure localized --manifest
+AGENTS.md
+docs/ki/ABHAENGIGKEITEN.md
+docs/ki/AKTUALITAET.md
+docs/ki/ARCHITEKTUR.md
+docs/ki/AUFGABENABGRENZUNG.md
+docs/ki/BUILD_UND_TESTS.md
+docs/ki/EINARBEITUNG.md
+docs/ki/ENTSCHEIDUNGEN.md
+docs/ki/FEHLERMUSTER.md
+docs/ki/KI_ONBOARDING_MANIFEST.yml
+docs/ki/KONTEXT_INDEX.md
+docs/ki/NACHWEISUEBERSICHT.md
+docs/ki/PROJEKTWISSEN.md
+docs/ki/PRUEFCHECKLISTE.md
+docs/ki/RISIKOREGISTER.md
+docs/ki/SICHERHEITSREGELN.md
+docs/ki/STILRICHTLINIEN.md
+docs/ki/SYSTEMREGELN.md
+docs/ki/TECHNOLOGIE_STACK.md

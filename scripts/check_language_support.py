@@ -10,30 +10,13 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
+try:
+    from scripts.standard_docs_contract import enterprise_docs
+except ModuleNotFoundError:
+    from standard_docs_contract import enterprise_docs  # type: ignore[no-redef]
 
-REQUIRED_FILES = [
-    "CONTEXT_INDEX.md",
-    "MASTER_SYSTEM.md",
-    "ONBOARDING.md",
-    "ARCHITECTURE.md",
-    "TECH_STACK.md",
-    "BUILD_AND_TEST.md",
-    "DEPENDENCIES.md",
-    "RUNTIME_ENVIRONMENT.md",
-    "EVIDENCE_MAP.md",
-    "PROJECT_MEMORY.md",
-    "DECISIONS.md",
-    "STYLE_GUIDE.md",
-    "SECURITY_RULES.md",
-    "RISK_REGISTER.md",
-    "REVIEW_CHECKLIST.md",
-    "ERROR_PATTERNS.md",
-    "TASK_SCOPING.md",
-    "FRESHNESS.md",
-    "AGENT_ROLES.md",
-    "SAFETY_BOUNDARIES.md",
-    "HUMAN_REVIEW_GATES.md",
-]
+
+REQUIRED_FILES = enterprise_docs(Path(__file__).resolve().parents[1])
 
 REQUIRED_LANGUAGE_FIELDS = {
     "name",

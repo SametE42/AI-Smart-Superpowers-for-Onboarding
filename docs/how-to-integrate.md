@@ -2,7 +2,7 @@
 
 This guide explains how to add AI Smart Superpowers for Onboarding to a target repository.
 
-Use the installer when you want repeatable output, language selection, backups and a manifest. Use manual integration when a repository needs careful review before any generated files are written.
+Use the installer when you want repeatable output, language selection, backups and a manifest. The installer is experimental but functional; use manual integration when a repository needs careful review before any generated files are written.
 
 ## Manual Integration
 
@@ -38,11 +38,13 @@ Important options:
 
 ## Modes
 
-Minimal is for small projects or quick orientation. It includes the core entrypoint and essential docs.
+Mode file lists are defined in `config/standard-docs.yml`.
 
-Standard is the recommended default. It adds stack, dependency, evidence, decisions, review and freshness context.
+Minimal is for small projects or quick orientation. It includes the core entrypoint and seven essential docs.
 
-Enterprise is for larger, regulated, security-sensitive or multi-agent repositories. It adds runtime, agent roles, safety boundaries and human-review gates.
+Standard is the recommended default. It adds seventeen stack, dependency, evidence, decisions, review and freshness docs.
+
+Enterprise is for larger, regulated, security-sensitive or multi-agent repositories. It adds twenty-one docs including runtime, agent roles, safety boundaries and human-review gates.
 
 ## Language And Structure
 

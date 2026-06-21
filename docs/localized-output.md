@@ -2,7 +2,7 @@
 
 Localized output lets the installer generate AI onboarding files in a selected language while keeping tool compatibility explicit.
 
-The source of truth for supported languages is `i18n/language-support.yml`. Per-language output paths and filenames come from `i18n/file-map.<code>.yml`. The generated language report is `docs/language-support-report.md`.
+The source of truth for supported languages is `i18n/language-support.yml`. Per-language output paths and filenames come from `i18n/file-map.<code>.yml`. Minimal, Standard and Enterprise file lists come from `config/standard-docs.yml`. The generated language report is `docs/language-support-report.md`.
 
 ## Structure Modes
 

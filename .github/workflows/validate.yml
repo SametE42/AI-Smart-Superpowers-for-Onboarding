@@ -31,6 +31,9 @@ jobs:
       - name: Validate language support
         run: python scripts/check_language_support.py --root .
 
+      - name: Validate standard docs contract
+        run: python scripts/check_standard_docs.py --root .
+
       - name: Installer dry-run minimal
         run: python scripts/install_ai_onboarding.py --mode minimal --language en --structure canonical --target /tmp/ai-onboarding-min --dry-run
 

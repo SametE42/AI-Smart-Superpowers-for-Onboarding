@@ -100,6 +100,25 @@ class Phase2DocumentationTests(unittest.TestCase):
             with self.subTest(principle=principle):
                 self.assertIn(principle, text)
 
+    def test_tool_compatibility_matrix_records_sources_and_limits(self):
+        text = self.read("docs/tool-compatibility.md")
+
+        for phrase in [
+            "Do not add a tool-support claim without a source",
+            "Source",
+            "Last checked",
+            "Confidence",
+            "Limitations",
+            "OpenAI Codex",
+            "GitHub Copilot",
+            "Claude Code",
+            "Gemini CLI",
+            "OpenCode",
+            "No primary source recorded in this repository",
+        ]:
+            with self.subTest(phrase=phrase):
+                self.assertIn(phrase, text)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,71 @@
+schema_version: 1
+
+conceptual_core:
+  description: "Conceptual 10-document core used by the master prompt and README overview."
+  files:
+    - MASTER_SYSTEM.md
+    - ARCHITECTURE.md
+    - PROJECT_MEMORY.md
+    - STYLE_GUIDE.md
+    - REVIEW_CHECKLIST.md
+    - DOMAIN_KNOWLEDGE.md
+    - SECURITY_RULES.md
+    - ERROR_PATTERNS.md
+    - CHANGELOG_AI.md
+    - ONBOARDING.md
+
+modes:
+  minimal:
+    description: "Lightweight repository orientation with the agent entrypoint and seven core docs."
+    docs:
+      - CONTEXT_INDEX.md
+      - MASTER_SYSTEM.md
+      - ARCHITECTURE.md
+      - BUILD_AND_TEST.md
+      - PROJECT_MEMORY.md
+      - SECURITY_RULES.md
+      - REVIEW_CHECKLIST.md
+  standard:
+    description: "Default application, library or documentation repository contract with seventeen docs."
+    docs:
+      - CONTEXT_INDEX.md
+      - MASTER_SYSTEM.md
+      - ONBOARDING.md
+      - ARCHITECTURE.md
+      - TECH_STACK.md
+      - BUILD_AND_TEST.md
+      - DEPENDENCIES.md
+      - EVIDENCE_MAP.md
+      - PROJECT_MEMORY.md
+      - DECISIONS.md
+      - STYLE_GUIDE.md
+      - SECURITY_RULES.md
+      - RISK_REGISTER.md
+      - REVIEW_CHECKLIST.md
+      - ERROR_PATTERNS.md
+      - TASK_SCOPING.md
+      - FRESHNESS.md
+  enterprise:
+    description: "Governance-heavy contract with runtime, agent-role, safety and human-review boundaries."
+    docs:
+      - CONTEXT_INDEX.md
+      - MASTER_SYSTEM.md
+      - ONBOARDING.md
+      - ARCHITECTURE.md
+      - TECH_STACK.md
+      - BUILD_AND_TEST.md
+      - DEPENDENCIES.md
+      - RUNTIME_ENVIRONMENT.md
+      - EVIDENCE_MAP.md
+      - PROJECT_MEMORY.md
+      - DECISIONS.md
+      - STYLE_GUIDE.md
+      - SECURITY_RULES.md
+      - RISK_REGISTER.md
+      - REVIEW_CHECKLIST.md
+      - ERROR_PATTERNS.md
+      - TASK_SCOPING.md
+      - FRESHNESS.md
+      - AGENT_ROLES.md
+      - SAFETY_BOUNDARIES.md
+      - HUMAN_REVIEW_GATES.md

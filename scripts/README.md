@@ -16,4 +16,5 @@ Repository maintenance scripts live here.
 - `generate_docs_ai_index.py` generates `templates/docs-ai/INDEX.md`.
 - `refresh_ai_manual.py` replaces scaffold or mirror-placeholder AI manual pages with practical source content or localized mirror pages. Use `--languages` to target specific language directories, for example `python scripts/refresh_ai_manual.py --root . --languages French Spanish Turkish Arabic`.
 - `check_language_support.py` validates `i18n/language-support.yml`, all `i18n/file-map.<code>.yml` files, required canonical keys, review status values, `AGENTS.md` preservation and duplicate localized filenames.
+- `check_standard_docs.py` validates `config/standard-docs.yml` against installer modes, language file-map requirements and referenced templates.
 - `generate_language_support_report.py` generates `docs/language-support-report.md` from the current language-support matrix and file maps.

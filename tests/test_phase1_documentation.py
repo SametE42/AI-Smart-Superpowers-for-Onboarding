@@ -40,8 +40,8 @@ class Phase1DocumentationTests(unittest.TestCase):
                 "Phase 10: Release Readiness",
             ],
             "RELEASE_NOTES.md": [
-                "v1.0.0 draft goals",
-                "No released version is claimed by this draft",
+                "v0.1.0 - 2026-06-21",
+                "experimental but functional",
             ],
             "docs/language-support.md": [
                 "75 language folders",

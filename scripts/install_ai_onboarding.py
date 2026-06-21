@@ -11,49 +11,19 @@ from typing import Any
 
 try:
     from scripts.check_language_support import (
-        REQUIRED_FILES,
         parse_file_map,
         parse_language_support,
     )
+    from scripts.standard_docs_contract import mode_docs
 except ModuleNotFoundError:
     from check_language_support import (  # type: ignore[no-redef]
-        REQUIRED_FILES,
         parse_file_map,
         parse_language_support,
     )
+    from standard_docs_contract import mode_docs  # type: ignore[no-redef]
 
 
-MODES = {
-    "minimal": [
-        "CONTEXT_INDEX.md",
-        "MASTER_SYSTEM.md",
-        "ARCHITECTURE.md",
-        "BUILD_AND_TEST.md",
-        "PROJECT_MEMORY.md",
-        "SECURITY_RULES.md",
-        "REVIEW_CHECKLIST.md",
-    ],
-    "standard": [
-        "CONTEXT_INDEX.md",
-        "MASTER_SYSTEM.md",
-        "ONBOARDING.md",
-        "ARCHITECTURE.md",
-        "TECH_STACK.md",
-        "BUILD_AND_TEST.md",
-        "DEPENDENCIES.md",
-        "EVIDENCE_MAP.md",
-        "PROJECT_MEMORY.md",
-        "DECISIONS.md",
-        "STYLE_GUIDE.md",
-        "SECURITY_RULES.md",
-        "RISK_REGISTER.md",
-        "REVIEW_CHECKLIST.md",
-        "ERROR_PATTERNS.md",
-        "TASK_SCOPING.md",
-        "FRESHNESS.md",
-    ],
-    "enterprise": list(REQUIRED_FILES),
-}
+MODES = mode_docs(Path(__file__).resolve().parents[1])
 
 SUPPORTED_STACKS = {
     "generic",

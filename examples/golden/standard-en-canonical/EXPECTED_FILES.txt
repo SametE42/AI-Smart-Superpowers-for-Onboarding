@@ -1,0 +1,20 @@
+# Expected paths for: --mode standard --language en --structure canonical --manifest
+AGENTS.md
+docs/ai/AI_ONBOARDING_MANIFEST.yml
+docs/ai/ARCHITECTURE.md
+docs/ai/BUILD_AND_TEST.md
+docs/ai/CONTEXT_INDEX.md
+docs/ai/DECISIONS.md
+docs/ai/DEPENDENCIES.md
+docs/ai/ERROR_PATTERNS.md
+docs/ai/EVIDENCE_MAP.md
+docs/ai/FRESHNESS.md
+docs/ai/MASTER_SYSTEM.md
+docs/ai/ONBOARDING.md
+docs/ai/PROJECT_MEMORY.md
+docs/ai/REVIEW_CHECKLIST.md
+docs/ai/RISK_REGISTER.md
+docs/ai/SECURITY_RULES.md
+docs/ai/STYLE_GUIDE.md
+docs/ai/TASK_SCOPING.md
+docs/ai/TECH_STACK.md

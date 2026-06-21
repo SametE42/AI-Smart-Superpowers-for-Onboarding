@@ -2,6 +2,8 @@
 
 The framework supports three integration modes. The same modes work in canonical and localized structure because localized filenames come from File-Maps.
 
+The machine-readable mode contract is `config/standard-docs.yml`. Keep examples, installer behavior, tests and language File-Maps aligned with that file.
+
 | Modus | Fuer wen | Dateien | Aufwand | Empfehlung |
 | ----- | ------- | ------- | ------- | ---------- |
 | Minimal Integration | Small projects or first orientation | `AGENTS.md` plus 7 core knowledge-base files | Low | Use when a repository needs a lightweight start. |

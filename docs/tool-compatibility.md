@@ -10,40 +10,55 @@ This project separates agent support into three layers:
 
 Reusable entrypoint templates live in `templates/tool-entrypoints/`. They are copyable guidance for target repositories, not claims of partnership, endorsement or guaranteed behavior by any tool vendor.
 
-## 1. Context files
+## Source Policy
 
-| Tool / Agent | File | Notes |
-|---|---|---|
-| OpenAI Codex | `AGENTS.md` | Short agent entrypoint; link to `/docs/ai/` |
-| GitHub Copilot | `.github/copilot-instructions.md` | Repo-wide Copilot instructions |
-| GitHub Copilot | `.github/instructions/*.instructions.md` | Path-specific instructions |
-| Claude Code | `CLAUDE.md` | Claude-specific entrypoint |
-| Gemini | `GEMINI.md` | Gemini-specific entrypoint |
-| Cursor | `AGENTS.md` or `.cursor/rules/*.mdc` | Use rules for scoped behavior |
-| Windsurf / Cascade | `AGENTS.md` (root = always active; subdirectory = automatically scoped to files in that folder) or `.windsurf/rules/*.md` | Use scoped placement for monorepos or Rules when more control is needed |
+Compatibility rows must have a primary source or an explicitly documented limitation. Do not add a tool-support claim without a source.
 
-## 2. Agent runtimes and orchestrators
+`Last checked` dates use the date on which the source was reviewed for this repository.
 
-| System | Category | Guidance |
-|---|---|---|
-| OpenAI Codex | Coding agent runtime | Use `AGENTS.md` and short project instructions |
-| Claude Code | Coding agent runtime | Use `CLAUDE.md`; optional skills/subagents where justified |
-| OpenCode | Coding agent runtime | Use short entrypoints and `/docs/ai/` references |
-| OpenClaw | Self-hosted gateway / agent orchestrator | Uses its own agent workspace and workspace-specific context files. Treat `/docs/ai/` as the source of truth and reference it from OpenClaw workspace instructions instead of copying all documentation into the workspace. |
-| Hermes Agent | Persistent self-hosted agent with memory/skills | Do not persist private or unverified facts automatically |
-| Gemini CLI / Gemini agents | Coding agent runtime | Use `GEMINI.md` where applicable |
+## 1. Context Files
 
-## 3. Extension mechanisms
+| Tool / Agent | File or mechanism | Guidance | Source | Last checked | Confidence | Limitations |
+|---|---|---|---|---|---|---|
+| OpenAI Codex | `AGENTS.md` | Keep a short root entrypoint and link to `/docs/ai/`. | [OpenAI Codex AGENTS.md guide](https://developers.openai.com/codex/guides/agents-md) | 2026-06-21 | High | Context behavior is Codex-specific; other runtimes may ignore the file unless they support it. |
+| GitHub Copilot | `.github/copilot-instructions.md` | Use repository custom instructions for repo-wide build, test and style context. | [GitHub Copilot repository instructions](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions) | 2026-06-21 | High | Applies where Copilot custom instructions are enabled and supported by the active surface. |
+| GitHub Copilot | `.github/instructions/*.instructions.md` | Use path-specific instructions only for scoped guidance. | [GitHub Copilot repository instructions](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions) | 2026-06-21 | High | Keep files short; avoid duplicating the full knowledge base. |
+| Claude Code | `CLAUDE.md` | Use `CLAUDE.md`; import `AGENTS.md` with `@AGENTS.md` when sharing common instructions. | [Claude Code memory docs](https://code.claude.com/docs/en/memory) | 2026-06-21 | High | Claude Code treats memory as context, not an enforced policy layer. |
+| Claude Code | `.claude/rules/*.md` | Use project rules for modular or path-scoped Claude guidance. | [Claude Code memory docs](https://code.claude.com/docs/en/memory) | 2026-06-21 | High | Rules still consume context; use skills for task-specific procedures. |
+| Gemini CLI | `GEMINI.md` | Use `GEMINI.md` for instructional context loaded by Gemini CLI. | [Gemini CLI GEMINI.md docs](https://google-gemini.github.io/gemini-cli/docs/cli/gemini-md.html) | 2026-06-21 | High | Verify the active Gemini client uses the same CLI convention. |
+| Cursor | Project rules, `AGENTS.md` | Use Cursor rules for persistent project instructions; keep long context in `/docs/ai/`. | [Cursor rules docs](https://cursor.com/docs/rules) | 2026-06-21 | Medium | Cursor features and file conventions can vary by product version and workspace settings. |
+| Windsurf / Cascade | `.devin/rules/*.md`, `.windsurf/rules/*.md`, legacy `.windsurfrules` | Use workspace rules where supported and point back to `/docs/ai/`. | [Cascade memories and rules docs](https://docs.devin.ai/desktop/cascade/memories) | 2026-06-21 | Medium | Documentation identifies `.devin/rules` as preferred and `.windsurf/rules` as fallback; verify the installed client. |
+| Continue | `.continue/rules/*.md` | Use Continue rules for system-message instructions; link to `/docs/ai/` for durable context. | [Continue rules docs](https://docs.continue.dev/customize/deep-dives/rules) | 2026-06-21 | Medium | Continue docs note active product changes; validate behavior in the selected extension or CLI. |
+| Aider | `CONVENTIONS.md` or `--read <file>` | Load repository conventions as read-only context; point to `/docs/ai/`. | [Aider conventions docs](https://aider.chat/docs/usage/conventions.html) | 2026-06-21 | High | Aider does not require this repository's exact filenames; wire conventions explicitly. |
+| OpenCode | `AGENTS.md` | Initialize or maintain concise project instructions and keep durable context in `/docs/ai/`. | [OpenCode docs](https://opencode.ai/docs/) | 2026-06-21 | High | Behavior depends on the OpenCode client version and selected provider/model. |
 
-| Mechanism | Use when | Do not use when |
-|---|---|---|
-| Skills / `SKILL.md` | A repeatable task-specific workflow exists | It is a one-off task or generic best practice |
-| Subagents | A clear specialized role needs bounded context | A normal task can be handled by one agent |
-| MCP servers | External tool or data integration is necessary | Static documentation is enough |
-| Hooks | Deterministic pre/post action is needed | A checklist is sufficient |
-| Plugins | Reusable installable capability is needed | Local repo guidance is enough |
+## 2. Agent Runtimes And Orchestrators
 
-## Compatibility rule
+| System | Category | Guidance | Source | Last checked | Confidence | Limitations |
+|---|---|---|---|---|---|---|
+| OpenAI Codex | Coding-agent runtime | Use `AGENTS.md` and short project instructions that reference `/docs/ai/`. | [OpenAI Codex AGENTS.md guide](https://developers.openai.com/codex/guides/agents-md) | 2026-06-21 | High | This is a Codex compatibility note, not a claim about other OpenAI surfaces. |
+| Claude Code | Coding-agent runtime | Use `CLAUDE.md`, `.claude/rules/` and optional skills only where justified. | [Claude Code memory docs](https://code.claude.com/docs/en/memory) | 2026-06-21 | High | Human review and hooks remain necessary for enforceable policy. |
+| GitHub Copilot | IDE and GitHub assistant | Use repository and path-specific custom instructions. | [GitHub Copilot repository instructions](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions) | 2026-06-21 | High | Behavior varies by Copilot surface and organization settings. |
+| Gemini CLI | Coding-agent runtime | Use `GEMINI.md` for project context and keep detailed docs separate. | [Gemini CLI GEMINI.md docs](https://google-gemini.github.io/gemini-cli/docs/cli/gemini-md.html) | 2026-06-21 | High | Only applies to Gemini CLI or clients that document the same convention. |
+| Cursor | IDE agent | Use project rules and keep rule files compact. | [Cursor rules docs](https://cursor.com/docs/rules) | 2026-06-21 | Medium | Verify active workspace rule settings before relying on them. |
+| Windsurf / Cascade | IDE agent | Use workspace rules and keep generated memories separate from reviewed repo context. | [Cascade memories and rules docs](https://docs.devin.ai/desktop/cascade/memories) | 2026-06-21 | Medium | Client naming and rule locations have changed over time; prefer current docs. |
+| Continue | CLI / IDE agent | Use `.continue/rules/` or config rules, depending on the selected Continue surface. | [Continue rules docs](https://docs.continue.dev/customize/deep-dives/rules) | 2026-06-21 | Medium | The public docs note a final 2.0.0 release; validate current extension or CLI behavior. |
+| Aider | CLI coding assistant | Load conventions explicitly with `/read` or `--read`. | [Aider conventions docs](https://aider.chat/docs/usage/conventions.html) | 2026-06-21 | High | Aider is not assumed to auto-load this repository's full docs. |
+| OpenCode | Coding-agent runtime | Use `AGENTS.md` created or maintained for the project. | [OpenCode docs](https://opencode.ai/docs/) | 2026-06-21 | High | Provider/model behavior is separate from OpenCode's repo-context convention. |
+| OpenClaw | Self-hosted gateway / orchestrator | Treat `/docs/ai/` as the source of truth and wire it through workspace instructions. | No primary source recorded in this repository. | 2026-06-21 | Low | No official compatibility claim. Document the actual workspace adapter before use. |
+| Hermes Agent | Persistent self-hosted agent with memory/skills | Do not persist private or unverified facts automatically. | No primary source recorded in this repository. | 2026-06-21 | Low | No official compatibility claim. Require project-specific integration evidence. |
+
+## 3. Extension Mechanisms
+
+| Mechanism | Use when | Do not use when | Source | Last checked | Confidence | Limitations |
+|---|---|---|---|---|---|---|
+| Skills / `SKILL.md` | A repeatable task-specific workflow exists. | It is a one-off task or generic best practice. | [OpenAI Codex skills docs](https://developers.openai.com/codex/skills) | 2026-06-21 | Medium | Skill support is runtime-specific; avoid assuming every tool can load skills. |
+| Subagents | A clear specialized role needs bounded context. | A normal task can be handled by one agent. | Runtime-specific documentation required. | 2026-06-21 | Low | No cross-tool support claim. Document the active runtime before adding subagents. |
+| MCP servers | External tool or data integration is necessary. | Static documentation is enough. | Runtime-specific documentation required. | 2026-06-21 | Low | MCP availability depends on the selected tool and security policy. |
+| Hooks | Deterministic pre/post action is needed. | A checklist is sufficient. | [Claude Code memory docs](https://code.claude.com/docs/en/memory) | 2026-06-21 | Medium | Hook semantics are tool-specific and should not be copied blindly. |
+| Plugins | Reusable installable capability is needed. | Local repo guidance is enough. | Runtime-specific documentation required. | 2026-06-21 | Low | No generic plugin compatibility claim. |
+
+## Compatibility Rule
 
 Do not add a tool-specific file unless:
 
@@ -52,9 +67,10 @@ Do not add a tool-specific file unless:
 - the file stays short,
 - it links to `/docs/ai/`,
 - it does not duplicate long documentation,
-- it does not contradict `MASTER_SYSTEM.md`.
+- it does not contradict `MASTER_SYSTEM.md`,
+- the compatibility claim is sourced or explicitly marked as project-specific.
 
-## Source-of-truth rule
+## Source-of-truth Rule
 
 Priority order:
 
@@ -65,7 +81,7 @@ Priority order:
 
 Conflicts must be marked and reviewed by a human.
 
-## Tool contract robustness
+## Tool Contract Robustness
 
 Many apparent model failures are tool-contract failures. Treat invalid tool input as a harness design signal before assuming the model is incapable.
 
@@ -91,20 +107,23 @@ Relational invariants need separate handling. If fields are individually valid b
 
 High-impact tools such as shell, write-file, delete, network and deployment tools require stricter repair rules. Never silently change commands, destructive paths, deployment targets or security-relevant values.
 
-## 4. Model families and provider APIs
+## 4. Model Families And Provider APIs
 
-The following model families can be used with this standard when they are accessed through an agent runtime, IDE assistant, API wrapper or orchestration layer that loads repository context files.
+The following model families can be used with this standard only through an agent runtime, IDE assistant, API wrapper or orchestration layer that actually loads repository context files. These rows are not direct support claims for the model providers themselves.
 
-| Model family / provider | Recommended entrypoint | Notes |
-|---|---|---|
-| DeepSeek | `AGENTS.md` | Treat as a provider/model family unless the active client defines its own context convention. |
-| Qwen / Qwen Code | `AGENTS.md` and Qwen Code project instructions where supported | Use tool-specific instructions only where the runtime supports them. |
-| Kimi / Moonshot | `AGENTS.md` | Useful for long-context workflows when the client supports it. |
-| Mistral | `AGENTS.md` | Keep privacy and deployment assumptions explicit. |
-| Grok / xAI | `AGENTS.md` | Verify current-event or web claims with sources. |
-| Xiaomi MiMo | `AGENTS.md` | Treat as optional provider support unless actively used. |
-| MiniMax | `AGENTS.md` | Separate language-model tasks from multimodal/audio/video tasks. |
-| Other compatible APIs | `AGENTS.md` | Document client/runtime limitations in `MODEL_PROFILES.md`. |
+| Model family / provider | Recommended entrypoint | Source | Last checked | Confidence | Limitations |
+|---|---|---|---|---|---|
+| OpenAI models | Runtime-defined, commonly `AGENTS.md` in Codex | [OpenAI Codex AGENTS.md guide](https://developers.openai.com/codex/guides/agents-md) | 2026-06-21 | High for Codex, Low outside Codex | Provider APIs do not automatically imply repo-context file loading. |
+| Anthropic Claude models | Runtime-defined, commonly `CLAUDE.md` in Claude Code | [Claude Code memory docs](https://code.claude.com/docs/en/memory) | 2026-06-21 | High for Claude Code, Low outside Claude Code | Claude API usage is separate from Claude Code memory behavior. |
+| Google Gemini models | Runtime-defined, commonly `GEMINI.md` in Gemini CLI | [Gemini CLI GEMINI.md docs](https://google-gemini.github.io/gemini-cli/docs/cli/gemini-md.html) | 2026-06-21 | High for Gemini CLI, Low outside Gemini CLI | Verify the client before assuming `GEMINI.md` is loaded. |
+| DeepSeek | Runtime-defined | No primary context-file source recorded in this repository. | 2026-06-21 | Low | Treat as model-provider compatibility through the selected client only. |
+| Qwen / Qwen Code | Runtime-defined | No primary context-file source recorded in this repository. | 2026-06-21 | Low | Add a source before claiming a specific file convention. |
+| Kimi / Moonshot | Runtime-defined | No primary context-file source recorded in this repository. | 2026-06-21 | Low | Long-context capability is not the same as repo-context file support. |
+| Mistral | Runtime-defined | No primary context-file source recorded in this repository. | 2026-06-21 | Low | Use only through a client that documents how it loads context. |
+| Grok / xAI | Runtime-defined | No primary context-file source recorded in this repository. | 2026-06-21 | Low | Verify current-event or web claims with sources. |
+| Xiaomi MiMo | Runtime-defined | No primary context-file source recorded in this repository. | 2026-06-21 | Low | Treat as optional model-family mention until a runtime convention is documented. |
+| MiniMax | Runtime-defined | No primary context-file source recorded in this repository. | 2026-06-21 | Low | Separate language-model tasks from multimodal/audio/video tasks. |
+| Other compatible APIs | Runtime-defined | No primary context-file source recorded in this repository. | 2026-06-21 | Low | Document client/runtime limitations in `MODEL_PROFILES.md`. |
 
 See also:
 

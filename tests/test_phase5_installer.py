@@ -7,6 +7,7 @@ from unittest.mock import patch
 
 from scripts.check_language_support import validate_language_support
 from scripts.install_ai_onboarding import (
+    MODES,
     detect_stack,
     install_ai_onboarding,
     load_language_support,
@@ -18,6 +19,21 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class Phase5InstallerTests(unittest.TestCase):
+    def _expected_fixture_paths(self, fixture_name):
+        path = ROOT / "examples" / "golden" / fixture_name / "EXPECTED_FILES.txt"
+        return {
+            line.strip()
+            for line in path.read_text(encoding="utf-8").splitlines()
+            if line.strip() and not line.startswith("#")
+        }
+
+    def _actual_file_paths(self, target):
+        return {
+            path.relative_to(target).as_posix()
+            for path in target.rglob("*")
+            if path.is_file()
+        }
+
     def test_list_languages_includes_all_supported_languages(self):
         buffer = io.StringIO()
         with redirect_stdout(buffer):
@@ -107,6 +123,52 @@ class Phase5InstallerTests(unittest.TestCase):
             text = manifest.read_text(encoding="utf-8")
             self.assertIn("mode: standard", text)
             self.assertIn("agents_filename: AGENTS.md", text)
+
+    def test_standard_en_canonical_golden_e2e_install(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            target = Path(tmp)
+            result = install_ai_onboarding(
+                root=ROOT,
+                target=target,
+                mode="standard",
+                language="en",
+                structure="canonical",
+                stack="generic",
+                manifest=True,
+            )
+
+            self.assertEqual([], result.errors)
+            self.assertEqual(
+                self._expected_fixture_paths("standard-en-canonical"),
+                self._actual_file_paths(target),
+            )
+            manifest = (target / "docs" / "ai" / "AI_ONBOARDING_MANIFEST.yml").read_text(encoding="utf-8")
+            for filename in MODES["standard"]:
+                self.assertIn(f"docs/ai/{filename}", manifest)
+
+    def test_standard_de_localized_golden_e2e_install(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            target = Path(tmp)
+            support, file_maps = load_language_support(ROOT)
+            result = install_ai_onboarding(
+                root=ROOT,
+                target=target,
+                mode="standard",
+                language="de",
+                structure="localized",
+                stack="generic",
+                manifest=True,
+            )
+
+            self.assertEqual([], result.errors)
+            self.assertEqual(
+                self._expected_fixture_paths("standard-de-localized"),
+                self._actual_file_paths(target),
+            )
+            manifest = (target / "docs" / "ki" / "KI_ONBOARDING_MANIFEST.yml").read_text(encoding="utf-8")
+            self.assertEqual("docs/ki", support["de"]["docs_directory"])
+            for filename in MODES["standard"]:
+                self.assertIn(f"docs/ki/{file_maps['de']['files'][filename]}", manifest)
 
     def test_localized_mode_writes_german_directory_and_filenames(self):
         with tempfile.TemporaryDirectory() as tmp:

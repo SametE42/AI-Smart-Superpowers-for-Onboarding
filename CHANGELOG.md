@@ -6,8 +6,15 @@ This project follows semantic versioning where practical.
 
 ## [Unreleased]
 
+No unreleased changes.
+
+## [v0.1.0] - 2026-06-21
+
 ### Added
 
+- Central machine-readable output contract in `config/standard-docs.yml`.
+- Contract validation through `scripts/check_standard_docs.py`, unit tests and CI.
+- Golden installer E2E fixtures for `standard en canonical` and `standard de localized`.
 - Reproducible repository validation script and GitHub Actions workflow.
 - Local unit tests for validation behavior.
 - Reproducible AI manual scaffold refresh script for English source pages and localized mirror batches.
@@ -20,6 +27,9 @@ This project follows semantic versioning where practical.
 
 ### Changed
 
+- Clarified the README output model: Conceptual Core, Minimal, Standard, Enterprise and localized output.
+- Rebuilt `docs/tool-compatibility.md` as a source-backed compatibility matrix with last-checked dates, confidence and limitations.
+- Expanded publication gates for release checks, branch protection, source-backed compatibility and E2E fixtures.
 - Renamed the public project to AI Smart Superpowers for Onboarding after the GitHub repository rename.
 - Replaced old public repository URLs with `https://github.com/SametE42/AI-Smart-Superpowers-for-Onboarding`.
 - Expanded all language-folder `README.md` files into complete AI manual entrypoints.
@@ -36,12 +46,12 @@ This project follows semantic versioning where practical.
 - Clarified GitHub commit-readiness checks, optional extension paths and AI translation coverage.
 - Replaced personal author-name metadata with the public repository handle.
 - Published the validated initial repository to GitHub.
-- Updated validation workflow actions to current major versions to avoid Node.js 20 deprecation warnings.
+- Updated validation workflow actions to current major versions to avoid Node.js 20 deprecation warnings; workflows keep minimal `contents: read` permissions.
 - Removed repository-specific completion progress notes from the public tracked tree.
 - Linked prompt manual pages from every language's `prompts/README.md` for easier discovery.
 - Localized the Magical Prompt Improver manual body with workflow order, examples and quality gates for language-folder mirrors.
 
-## [0.1.0] - 2026-05-28
+## Pre-release baseline - 2026-05-28
 
 ### Added
 
