@@ -202,6 +202,18 @@ class Phase7To10IntegrationValidationTests(unittest.TestCase):
         ]:
             self.assertIn(term, summary)
 
+    def test_validation_workflow_checks_generated_language_report(self):
+        workflow = (ROOT / ".github" / "workflows" / "validate.yml").read_text(encoding="utf-8")
+
+        self.assertIn("python scripts/generate_language_support_report.py --root . --output docs/language-support-report.md", workflow)
+        self.assertIn("git diff --exit-code docs/language-support-report.md", workflow)
+
+    def test_dependabot_covers_github_actions(self):
+        dependabot = (ROOT / ".github" / "dependabot.yml").read_text(encoding="utf-8")
+
+        self.assertIn("package-ecosystem: \"github-actions\"", dependabot)
+        self.assertIn("directory: \"/\"", dependabot)
+
 
 if __name__ == "__main__":
     unittest.main()

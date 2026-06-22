@@ -1,4 +1,5 @@
 import io
+import shutil
 import tempfile
 import unittest
 from contextlib import redirect_stdout
@@ -169,6 +170,33 @@ class Phase5InstallerTests(unittest.TestCase):
             self.assertEqual("docs/ki", support["de"]["docs_directory"])
             for filename in MODES["standard"]:
                 self.assertIn(f"docs/ki/{file_maps['de']['files'][filename]}", manifest)
+
+    def test_sample_python_repo_e2e_detects_stack_and_preserves_sources(self):
+        fixture = ROOT / "tests" / "fixtures" / "sample-python-repo"
+        with tempfile.TemporaryDirectory() as tmp:
+            target = Path(tmp) / "sample-python-repo"
+            shutil.copytree(fixture, target)
+
+            result = install_ai_onboarding(
+                root=ROOT,
+                target=target,
+                mode="standard",
+                language="en",
+                structure="canonical",
+                detect_stack_flag=True,
+                manifest=True,
+            )
+
+            self.assertEqual([], result.errors)
+            self.assertTrue((target / "AGENTS.md").exists())
+            self.assertTrue((target / "pyproject.toml").exists())
+            self.assertTrue((target / "docs" / "ai" / "CONTEXT_INDEX.md").exists())
+            evidence = (target / "docs" / "ai" / "EVIDENCE_MAP.md").read_text(encoding="utf-8")
+            manifest = (target / "docs" / "ai" / "AI_ONBOARDING_MANIFEST.yml").read_text(encoding="utf-8")
+            self.assertIn("Stack hint: python", evidence)
+            self.assertIn("pyproject.toml", evidence)
+            self.assertIn("stack_hint: python", manifest)
+            self.assertIn("pyproject.toml", manifest)
 
     def test_localized_mode_writes_german_directory_and_filenames(self):
         with tempfile.TemporaryDirectory() as tmp:

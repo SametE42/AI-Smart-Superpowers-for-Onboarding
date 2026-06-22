@@ -474,6 +474,45 @@ File names, folder names, commands, APIs and model names stay unchanged. English
                 [3, 4, 5, 6, 7],
             )
 
+    def test_public_overclaim_terms_are_blocking_when_not_guarded(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.write(
+                root,
+                "README.md",
+                "# Root\n\n"
+                "This project ships human-reviewed translations.\n"
+                "The generated output is production-ready.\n"
+                "This is officially compatible with every agent.\n"
+                "Use the latest model and best model for all tasks.\n",
+            )
+
+            report = validate_repository(root)
+
+            self.assertEqual(report.status, "FAIL")
+            self.assertEqual(report.summary["overclaim_term_hits"], 4)
+            self.assertEqual(
+                [item["line"] for item in report.details["overclaim_term_hits"]],
+                [3, 4, 5, 6],
+            )
+
+    def test_guarded_overclaim_terms_are_allowed_as_policy_text(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.write(
+                root,
+                "README.md",
+                "# Root\n\n"
+                "Do not claim human-reviewed translations unless review evidence exists.\n"
+                "This project is not production-ready.\n"
+                "No claim of official compatibility is made.\n"
+                "Do not call a provider the best model without current evidence.\n",
+            )
+
+            report = validate_repository(root)
+
+            self.assertEqual(0, report.summary["overclaim_term_hits"])
+
     def test_prompt_readme_manual_link_mismatch_fails(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

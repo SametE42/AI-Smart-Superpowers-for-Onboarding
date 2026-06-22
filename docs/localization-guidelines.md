@@ -27,13 +27,15 @@ The current Phase 4 file maps provide functional localized structure for all 75 
 
 ## Human Review
 
-Human review should record:
+A language may be marked `reviewed` only when a qualified human review records:
 
 - reviewer role or qualification, without private personal data;
 - reviewed language;
 - reviewed files or mapping scope;
 - date or release reference;
 - whether filenames, terminology and Markdown rendering were checked.
+
+At minimum, review evidence must cover the language README, standard output filenames, core terminology, commands, paths, model/provider names and Markdown rendering. Automated checks can support this process, but they do not replace the human review decision.
 
 ## Pending Linguistic Review
 
