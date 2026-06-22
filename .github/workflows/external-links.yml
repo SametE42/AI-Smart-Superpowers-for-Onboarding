@@ -1,0 +1,23 @@
+name: Check external links
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  external-links:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.x"
+
+      - name: Check external links with timeout and retry
+        run: python scripts/check_external_links.py --root . --check-network --timeout 8 --retries 1

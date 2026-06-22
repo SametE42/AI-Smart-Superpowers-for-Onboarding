@@ -9,6 +9,8 @@ Human-readable AI manual translations still live under `ai/<Language>/`, with `a
 - `language-support.yml`: complete support matrix for all detected language folders.
 - `file-map.schema.yml`: schema and filename rules for file maps.
 - `file-map.<code>.yml`: per-language canonical-to-localized filename mappings.
+- `review-evidence.schema.yml`: required shape for human review evidence files.
+- `review-evidence.<code>.yml`: evidence for languages whose review status is `reviewed`.
 - `glossary.yml`: terminology inventory for all supported language codes.
 - `de/`: legacy German localization notes retained for compatibility.
 
@@ -18,5 +20,6 @@ Run:
 
 ```bash
 python scripts/check_language_support.py --root .
+python scripts/check_language_review_evidence.py --root .
 python scripts/generate_language_support_report.py --root .
 ```

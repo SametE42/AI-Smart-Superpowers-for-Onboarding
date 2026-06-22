@@ -25,6 +25,10 @@ Use this before publishing or releasing the repository.
 - [ ] GitHub Actions permissions stay minimal; current workflows use `contents: read`.
 - [ ] GitHub Actions versions are either pinned to commit SHAs or deliberately kept on reviewed major versions with this decision documented in `CHANGELOG.md`.
 - [ ] `scripts/check_standard_docs.py --root .` passes.
+- [ ] `scripts/check_tool_compatibility.py --root .` passes.
+- [ ] `scripts/check_language_review_evidence.py --root .` passes.
+- [ ] `scripts/check_external_links.py --root .` passes.
+- [ ] The manual external link workflow or `python scripts/check_external_links.py --root . --check-network --timeout 8 --retries 1` has been run when release-facing external URLs changed.
 - [ ] `ai/VALIDATION_REPORT.md` and `ai/VALIDATION_REPORT.json` are regenerated from the current tree.
 - [ ] `git status --short` was reviewed and every new or modified file is intentionally included or intentionally left out.
 - [ ] All GitHub-critical files are staged and committed before pushing: `.github/`, `AGENTS.md`, `scripts/`, `tests/`, `README.md`, `CHANGELOG.md`, `CONTRIBUTING.md`, `SECURITY.md` and `LICENSE`.
@@ -35,6 +39,7 @@ Use this before publishing or releasing the repository.
 - [ ] Local machine paths are removed or anonymized.
 - [ ] Golden installer E2E fixtures pass for `standard en canonical` and `standard de localized`.
 - [ ] `docs/tool-compatibility.md` has `Source`, `Last checked`, `Confidence` and `Limitations` for every compatibility row.
+- [ ] Every language marked `reviewed` has a matching `i18n/review-evidence.<code>.yml` file.
 - [ ] GitHub branch protection for `main` requires PR review, up-to-date branches, `Validate repository` and `Validate AI docs`, and disallows force pushes.
 - [ ] No open conflict-heavy PR remains visible unless it is intentionally retained with a clear comment.
 - [ ] A GitHub release exists for the intended tag, and `CHANGELOG.md` plus `RELEASE_NOTES.md` match that tag.
@@ -47,6 +52,9 @@ Run before release:
 python -m unittest discover -s tests
 python scripts/check_language_support.py --root .
 python scripts/check_standard_docs.py --root .
+python scripts/check_tool_compatibility.py --root .
+python scripts/check_language_review_evidence.py --root .
+python scripts/check_external_links.py --root .
 python scripts/validate_repository.py --root . --json ai/VALIDATION_REPORT.json --markdown ai/VALIDATION_REPORT.md
 git diff --exit-code ai/VALIDATION_REPORT.json ai/VALIDATION_REPORT.md
 ```
@@ -56,6 +64,7 @@ Expected result:
 - unit tests pass,
 - validator status is `PASS`,
 - generated validation reports reflect the current file counts and findings,
+- deterministic link, compatibility and review-evidence gates pass,
 - optional template README coverage is complete,
 - old public repository reference hits are `0`,
 - `legacy_localization_term_hits` is `0`.
@@ -75,4 +84,3 @@ Expected result:
 - [ ] Additional translation quality audits for high-traffic languages.
 - [ ] Project-specific skills, subagents, hooks, MCP servers or plugins when a repeated workflow justifies them.
 - [ ] More target-repository examples for common stacks.
-- [ ] External link checking with timeout, retry and allowlist.

@@ -54,9 +54,9 @@ Compatibility rows must have a primary source or an explicitly documented limita
 |---|---|---|---|---|---|---|
 | Skills / `SKILL.md` | A repeatable task-specific workflow exists. | It is a one-off task or generic best practice. | [OpenAI Codex skills docs](https://developers.openai.com/codex/skills) | 2026-06-21 | Medium | Skill support is runtime-specific; avoid assuming every tool can load skills. |
 | Subagents | A clear specialized role needs bounded context. | A normal task can be handled by one agent. | Runtime-specific documentation required. | 2026-06-21 | Low | No cross-tool support claim. Document the active runtime before adding subagents. |
-| MCP servers | External tool or data integration is necessary. | Static documentation is enough. | Runtime-specific documentation required. | 2026-06-21 | Low | MCP availability depends on the selected tool and security policy. |
+| MCP servers | External tool or data integration is necessary. | Static documentation is enough. | Runtime-specific documentation required. | 2026-06-21 | Low | No official compatibility claim. MCP availability depends on the selected tool and security policy. |
 | Hooks | Deterministic pre/post action is needed. | A checklist is sufficient. | [Claude Code memory docs](https://code.claude.com/docs/en/memory) | 2026-06-21 | Medium | Hook semantics are tool-specific and should not be copied blindly. |
-| Plugins | Reusable installable capability is needed. | Local repo guidance is enough. | Runtime-specific documentation required. | 2026-06-21 | Low | No generic plugin compatibility claim. |
+| Plugins | Reusable installable capability is needed. | Local repo guidance is enough. | Runtime-specific documentation required. | 2026-06-21 | Low | No official compatibility claim. No generic plugin compatibility claim. |
 
 ## Compatibility Rule
 

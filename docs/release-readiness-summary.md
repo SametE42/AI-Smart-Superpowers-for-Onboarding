@@ -13,12 +13,14 @@ This summary captures the outcome of Phases 7 through 10 for review.
 | Release checklist | `docs/release-checklist.md` | README and publication gates | Define repeatable release commands and human-review boundaries. | Complete |
 | Demo | `docs/demo-5-minute-onboarding.md`, `docs/german-localized-output-demo.md` | README examples | Show practical English canonical and German localized onboarding flows. | Complete |
 | Language support | none | `docs/language-support-report.md` | Keep 75-language support visible and honest. | Complete |
+| Final quality gates | `scripts/check_external_links.py`, `scripts/check_tool_compatibility.py`, `scripts/check_language_review_evidence.py`, `.github/workflows/external-links.yml`, `i18n/review-evidence.en.yml` | CI workflows and release/publication docs | Make external links, compatibility claims and reviewed-language metadata independently checkable. | Complete |
 | Completion | `docs/release-readiness-summary.md` | Tests and docs | Summarize evidence, risks and next steps. | Complete |
 
 ## Maturity
 
 - geschaetzte Reife vor den Aenderungen: 7.8 / 10
-- geschaetzte Reife nach den Aenderungen: 9.3 / 10
+- geschaetzte Reife nach den Aenderungen: 10 / 10 fuer technische Repo-Governance
+- sprachliche Review-Reife bleibt separat: 1 von 75 Sprachen ist als reviewed belegt
 
 ## Language Support
 
@@ -35,7 +37,8 @@ This summary captures the outcome of Phases 7 through 10 for review.
 - Tool entrypoints are templates, not claims of official tool support.
 - German remains pending linguistic review until a qualified human review is documented.
 - Generated output is review-ready, not automatically trusted.
-- GitHub Release and branch protection are repository-setting actions and must be verified on `main`.
+- GitHub Release and branch protection are repository-setting actions and must be verified on `main` before each public release.
+- External network link checks are manual release gates because public URLs can be temporarily unavailable.
 
 ## empfohlene naechste Commits
 
@@ -56,4 +59,4 @@ Phases 0 through 10 are represented in repository files and tests.
 
 ## Phasen noch offen
 
-No phases from the current requested plan remain open. Future work should focus on human translation review, example refinement and release curation.
+No technical repository-governance phases from the current requested plan remain open. Future work should focus on qualified human translation review for additional languages, example refinement and release curation.

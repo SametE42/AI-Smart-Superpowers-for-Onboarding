@@ -1,0 +1,17 @@
+# Human review evidence file shape for i18n/review-evidence.<code>.yml.
+schema_version: 1
+required_fields:
+  - schema_version
+  - language
+  - language_name
+  - review_status
+  - review_date
+  - reviewer_role
+  - review_scope
+  - checked_artifacts
+  - notes
+rules:
+  review_status: reviewed
+  review_date: YYYY-MM-DD
+  checked_artifacts: repository-relative paths that existed during review
+  reviewer_role: role only; do not record private personal data
