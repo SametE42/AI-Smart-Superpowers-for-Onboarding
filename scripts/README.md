@@ -17,4 +17,7 @@ Repository maintenance scripts live here.
 - `refresh_ai_manual.py` replaces scaffold or mirror-placeholder AI manual pages with practical source content or localized mirror pages. Use `--languages` to target specific language directories, for example `python scripts/refresh_ai_manual.py --root . --languages French Spanish Turkish Arabic`.
 - `check_language_support.py` validates `i18n/language-support.yml`, all `i18n/file-map.<code>.yml` files, required canonical keys, review status values, `AGENTS.md` preservation and duplicate localized filenames.
 - `check_standard_docs.py` validates `config/standard-docs.yml` against installer modes, language file-map requirements and referenced templates.
+- `check_tool_compatibility.py` validates that `docs/tool-compatibility.md` keeps source, last-checked date, confidence and limitation columns for compatibility rows.
+- `check_language_review_evidence.py` validates that every language marked `reviewed` has an evidence file under `i18n/review-evidence.<code>.yml`.
+- `check_external_links.py` inventories external Markdown links by default and can run a timeout/retry network check with `--check-network`.
 - `generate_language_support_report.py` generates `docs/language-support-report.md` from the current language-support matrix and file maps.

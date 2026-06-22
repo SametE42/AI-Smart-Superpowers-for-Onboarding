@@ -1,0 +1,6 @@
+# External link checker allowlist.
+#
+# One shell-style URL pattern per line.
+# Keep this file empty unless a specific public URL cannot be checked reliably
+# with timeout/retry based automation and the limitation is documented in the
+# release checklist or pull request.

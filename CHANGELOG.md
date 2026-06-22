@@ -6,7 +6,17 @@ This project follows semantic versioning where practical.
 
 ## [Unreleased]
 
-No unreleased changes.
+### Added
+
+- Deterministic external link inventory check with optional timeout/retry network validation.
+- Manual GitHub Actions workflow for release-time external URL checks.
+- Tool compatibility matrix contract validation.
+- Language review evidence validation for languages marked `reviewed`.
+- Review evidence metadata for the canonical English language source.
+
+### Changed
+
+- Expanded release, publication, workflow, config, i18n and test documentation for the new quality gates.
 
 ## [v0.1.0] - 2026-06-21
 

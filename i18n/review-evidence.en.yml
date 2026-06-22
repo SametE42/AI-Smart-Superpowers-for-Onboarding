@@ -1,0 +1,19 @@
+schema_version: 1
+language: en
+language_name: English
+review_status: reviewed
+review_date: 2026-06-21
+reviewer_role: maintainer
+review_scope:
+  - canonical English AI manual entrypoint
+  - canonical file map for installer output
+  - release-facing README output model
+  - language-support metadata for English
+checked_artifacts:
+  - ai/English/README.md
+  - i18n/file-map.en.yml
+  - i18n/language-support.yml
+  - README.md
+notes:
+  - English is the canonical source language for the multilingual manual.
+  - Non-English language folders remain pending linguistic review unless their own evidence file exists.
